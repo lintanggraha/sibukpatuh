@@ -1,0 +1,150 @@
+[
+  {
+    "id": "REF-01",
+    "type": "Pelaporan Insiden",
+    "article": "Pasal 40",
+    "title": "Notifikasi awal insiden siber",
+    "summary": "Notifikasi awal wajib disampaikan kepada Bank Indonesia paling lama 1 jam setelah insiden siber diketahui oleh penyelenggara.",
+    "timeline": "1 jam sejak insiden diketahui",
+    "owner": "Tim tanggap insiden siber",
+    "deliverables": [
+      "Notifikasi awal insiden siber kepada Bank Indonesia.",
+      "Status awal insiden dan tingkat dampak sementara."
+    ],
+    "linked_requirements": [
+      "PBI.HDL-03"
+    ]
+  },
+  {
+    "id": "REF-02",
+    "type": "Pelaporan Insiden",
+    "article": "Pasal 40",
+    "title": "Laporan insiden siber",
+    "summary": "Laporan insiden siber wajib disampaikan kepada Bank Indonesia paling lama 3 hari kalender setelah insiden terjadi.",
+    "timeline": "3 hari kalender setelah insiden terjadi",
+    "owner": "Tim tanggap insiden siber",
+    "deliverables": [
+      "Laporan insiden siber kepada Bank Indonesia.",
+      "Kronologi, dampak, tindakan mitigasi, dan hasil pendalaman awal."
+    ],
+    "linked_requirements": [
+      "PBI.HDL-03"
+    ]
+  },
+  {
+    "id": "REF-03",
+    "type": "Pelaporan Berkala",
+    "article": "Pasal 54",
+    "title": "Pelaporan tahunan tingkat kematangan KKS",
+    "summary": "Pelaporan tahunan harus memuat tingkat kematangan KKS sebagai bagian dari penyampaian data dan informasi penerapan KKS kepada Bank Indonesia.",
+    "timeline": "Tahunan",
+    "owner": "Fungsi KKS atau kepatuhan regulasi",
+    "deliverables": [
+      "Laporan tingkat kematangan KKS.",
+      "Dokumen pendukung asesmen maturitas."
+    ],
+    "linked_requirements": [
+      "PBI.GOV-05",
+      "PBI.OVS-02"
+    ]
+  },
+  {
+    "id": "REF-04",
+    "type": "Pelaporan Berkala",
+    "article": "Pasal 54",
+    "title": "Pelaporan hasil identifikasi infrastruktur informasi vital",
+    "summary": "Pelaporan tahunan juga mencakup hasil identifikasi infrastruktur informasi vital yang berdampak luas terhadap stabilitas sistem keuangan.",
+    "timeline": "Tahunan",
+    "owner": "Fungsi KKS, TI, dan risk management",
+    "deliverables": [
+      "Daftar infrastruktur informasi vital.",
+      "Dokumen business impact analysis dan prioritas pengendalian."
+    ],
+    "linked_requirements": [
+      "PBI.PRV-03",
+      "PBI.OVS-02"
+    ]
+  },
+  {
+    "id": "REF-05",
+    "type": "Pengawasan",
+    "article": "Pasal 49-52",
+    "title": "Pengawasan tidak langsung dan pengawasan langsung",
+    "summary": "Bank Indonesia melakukan pengawasan tidak langsung melalui laporan/data/informasi dan pengawasan langsung melalui tatap muka atau mekanisme lain.",
+    "timeline": "Sesuai kebutuhan pengawasan",
+    "owner": "Seluruh pemilik kontrol terkait KKS",
+    "deliverables": [
+      "Dokumen, data, dan bukti implementasi KKS yang siap ditelusuri.",
+      "Tindak lanjut atas hasil pengawasan regulator."
+    ],
+    "linked_requirements": [
+      "PBI.OVS-01",
+      "PBI.OVS-02"
+    ]
+  },
+  {
+    "id": "REF-06",
+    "type": "Pengawasan",
+    "article": "Pasal 55",
+    "title": "Konsekuensi ketidakpatuhan pelaporan",
+    "summary": "Ketidakpatuhan atas kewajiban laporan dapat dikenai sanksi administratif berupa teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin atau persetujuan.",
+    "timeline": "Setelah pelanggaran kewajiban laporan",
+    "owner": "Manajemen dan fungsi kepatuhan regulasi",
+    "deliverables": [
+      "Kontrol internal untuk memastikan pelaporan tepat waktu.",
+      "Pemantauan kepatuhan terhadap tenggat laporan regulator."
+    ],
+    "linked_requirements": [
+      "PBI.OVS-02"
+    ]
+  },
+  {
+    "id": "REF-07",
+    "type": "Kolaborasi",
+    "article": "Pasal 57-58",
+    "title": "Pertukaran informasi kerentanan, ancaman, dan insiden",
+    "summary": "Penyelenggara bertukar informasi terkait hasil identifikasi kerentanan siber, ancaman siber, serangan siber, dan insiden siber yang dapat mengganggu stabilitas sistem keuangan.",
+    "timeline": "Sesuai kebutuhan kolaborasi",
+    "owner": "Fungsi keamanan siber dan risk management",
+    "deliverables": [
+      "Informasi sumber dan pola ancaman atau serangan siber.",
+      "Pembelajaran penanganan insiden yang dapat dibagikan."
+    ],
+    "linked_requirements": [
+      "PBI.COL-01"
+    ]
+  },
+  {
+    "id": "REF-08",
+    "type": "Kolaborasi",
+    "article": "Pasal 59-60",
+    "title": "Koordinasi pencegahan insiden dan kesiapan penanganan",
+    "summary": "Bank Indonesia dapat berkolaborasi dan berkoordinasi dengan otoritas, lembaga, dan penyelenggara untuk mencegah insiden siber dan memastikan kesiapan penanganannya.",
+    "timeline": "Sesuai skenario insiden atau exercise",
+    "owner": "Manajemen KKS dan tim tanggap insiden",
+    "deliverables": [
+      "Partisipasi dalam koordinasi atau simulasi lintas otoritas.",
+      "Mekanisme eskalasi eksternal untuk insiden berdampak luas."
+    ],
+    "linked_requirements": [
+      "PBI.COL-02"
+    ]
+  },
+  {
+    "id": "REF-09",
+    "type": "Penerapan",
+    "article": "Pasal 61-62",
+    "title": "Prosedur teknis melalui SRO dan penerapan berdasarkan klasifikasi",
+    "summary": "SRO dapat menyusun prosedur KKS teknis dan spesifik dengan persetujuan Bank Indonesia, sementara penerapan KKS tetap mengikuti klasifikasi penyelenggara.",
+    "timeline": "Sesuai kebutuhan teknis dan klasifikasi entitas",
+    "owner": "Manajemen KKS dan fungsi kepatuhan",
+    "deliverables": [
+      "Rujukan prosedur teknis yang berlaku.",
+      "Pemetaan kontrol sesuai klasifikasi penyelenggara."
+    ],
+    "linked_requirements": [
+      "PBI.COL-02",
+      "PBI.IMP-01"
+    ]
+  }
+]

@@ -1,0 +1,493 @@
+[
+  {
+    "id": "PBI.KRK-01",
+    "chapter": "II",
+    "domain": "Kerangka",
+    "article": "Pasal 3-4",
+    "title": "Sasaran pengaturan dan prinsip dasar pelaksanaan KKS",
+    "summary": "KKS diarahkan untuk mencegah dan menangani dampak serangan siber, meningkatkan manajemen risiko siber, dan memperkuat pengawasan serta kolaborasi.",
+    "focus": [
+      "Menetapkan sasaran penguatan KKS yang selaras dengan tujuan penyelenggara dan tujuan Bank Indonesia.",
+      "Menegaskan kejelasan peran dan tanggung jawab, strategi komprehensif, integrasi enterprise risk management, budaya KKS, dan kesiapan menghadapi insiden.",
+      "Menerjemahkan prinsip dasar ke kebijakan, prosedur, dan forum pengawasan yang berjalan konsisten."
+    ],
+    "evidence": [
+      "Dokumen sasaran program KKS atau security strategy charter.",
+      "Matriks peran dan tanggung jawab lintas unit.",
+      "Notulen komite manajemen atas arah implementasi KKS."
+    ]
+  },
+  {
+    "id": "PBI.KRK-02",
+    "chapter": "II",
+    "domain": "Kerangka",
+    "article": "Pasal 5-6",
+    "title": "Objek pengaturan dan ruang lingkup KKS",
+    "summary": "Pengaturan KKS berlaku bagi PJP, PIP, pelaku PUVA, lembaga pendukung, penyelenggara KUPVA BB, dan pihak lain yang diatur serta diawasi Bank Indonesia.",
+    "focus": [
+      "Memastikan entitas memahami apakah termasuk objek pengaturan KKS Bank Indonesia.",
+      "Memetakan ruang lingkup penerapan pada area tata kelola, pencegahan, penanganan, pengawasan, dan kolaborasi.",
+      "Menetapkan cakupan sistem, layanan, dan pihak ketiga yang masuk dalam perimeter KKS."
+    ],
+    "evidence": [
+      "Dokumen penetapan scope KKS dan perimeter sistem.",
+      "Peta proses bisnis, layanan, dan pihak ketiga yang tercakup.",
+      "Keputusan manajemen tentang klasifikasi entitas atau lini layanan."
+    ]
+  },
+  {
+    "id": "PBI.GOV-01",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 8",
+    "title": "Strategi dan kebijakan KKS",
+    "summary": "Strategi dan kebijakan KKS harus mencakup rencana strategis, kebijakan/standar/prosedur, dan fungsi organisasi KKS.",
+    "focus": [
+      "Menetapkan kerangka strategi dan kebijakan KKS secara formal.",
+      "Menghubungkan strategi KKS dengan sasaran bisnis, risiko, dan prioritas penguatan kapabilitas.",
+      "Menjamin strategi dan kebijakan dilaksanakan untuk memperkuat kondisi KKS organisasi."
+    ],
+    "evidence": [
+      "Dokumen strategi dan kebijakan KKS yang telah disetujui.",
+      "Roadmap implementasi atau program kerja tahunan KKS.",
+      "Mekanisme pelaporan status implementasi kepada manajemen."
+    ]
+  },
+  {
+    "id": "PBI.GOV-02",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 9",
+    "title": "Rencana strategis KKS",
+    "summary": "Rencana strategis KKS paling sedikit memuat arah strategis, peta jalan penguatan, dan perkiraan kebutuhan sumber daya manusia, proses, dan teknologi.",
+    "focus": [
+      "Menetapkan arah strategis penguatan KKS dalam horizon multi-tahun.",
+      "Menyusun peta jalan dan kebutuhan sumber daya untuk manusia, proses, dan teknologi.",
+      "Melakukan evaluasi berkala atas rencana strategis sesuai perkembangan risiko siber."
+    ],
+    "evidence": [
+      "Dokumen roadmap KKS dan business case pendukung.",
+      "Rencana kebutuhan anggaran, kapasitas SDM, dan teknologi.",
+      "Hasil review berkala terhadap capaian roadmap."
+    ]
+  },
+  {
+    "id": "PBI.GOV-03",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 10",
+    "title": "Kebijakan, standar, dan prosedur KKS",
+    "summary": "Kebijakan KKS wajib mencakup pengamanan data, sistem aplikasi, infrastruktur TI, pengamanan pihak ketiga, serta pelindungan konsumen dan manajemen fraud.",
+    "focus": [
+      "Mengatur kebijakan KKS pada aspek manusia, proses, dan teknologi.",
+      "Memastikan ruang lingkup kebijakan mencakup data, aplikasi, infrastruktur, pihak ketiga, dan fraud.",
+      "Melakukan evaluasi berkala atas kecukupan dan efektivitas kebijakan serta prosedur."
+    ],
+    "evidence": [
+      "Kumpulan policy, standard, dan SOP keamanan informasi.",
+      "Kontrol due diligence dan pengamanan pihak ketiga.",
+      "Hasil review kebijakan dan pembaruan dokumen."
+    ]
+  },
+  {
+    "id": "PBI.GOV-04",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 11-13",
+    "title": "Fungsi organisasi dan manajemen KKS",
+    "summary": "Fungsi organisasi KKS mencakup manajemen KKS, manajemen risiko siber, dan audit KKS, dengan akuntabilitas kepada manajemen tertinggi.",
+    "focus": [
+      "Menetapkan fungsi organisasi KKS yang efektif, efisien, dan akuntabel.",
+      "Menempatkan manajemen KKS sebagai penanggung jawab perencanaan, kebijakan, budaya, pencegahan, dan penanganan.",
+      "Memastikan jalur pelaporan fungsi KKS mengarah ke manajemen tertinggi."
+    ],
+    "evidence": [
+      "Struktur organisasi dan job description fungsi KKS.",
+      "Piagam organisasi atau mandat fungsi KKS.",
+      "Laporan berkala manajemen KKS kepada manajemen tertinggi."
+    ]
+  },
+  {
+    "id": "PBI.GOV-05",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 14-15",
+    "title": "Manajemen risiko siber dan pengukuran maturitas KKS",
+    "summary": "Manajemen risiko siber harus mengikuti praktik terbaik, terintegrasi dengan proses manajemen risiko, dan mencakup pengukuran tingkat kematangan KKS secara berkala.",
+    "focus": [
+      "Mengintegrasikan risiko siber ke proses enterprise risk management.",
+      "Melakukan identifikasi, asesmen, mitigasi, dan evaluasi risiko siber terhadap ancaman dan serangan siber.",
+      "Mengukur tingkat kematangan KKS secara berkala dan menindaklanjuti hasilnya."
+    ],
+    "evidence": [
+      "Risk register siber dan metodologi penilaian risiko.",
+      "Hasil asesmen atau maturity assessment KKS.",
+      "Rencana mitigasi dan status tindak lanjut risiko siber."
+    ]
+  },
+  {
+    "id": "PBI.GOV-06",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 16-17",
+    "title": "Audit KKS",
+    "summary": "Audit KKS dilakukan secara berkala oleh pihak internal dan/atau eksternal secara independen untuk memastikan kepatuhan dan efektivitas pengendalian.",
+    "focus": [
+      "Menyusun program audit KKS yang mencakup tata kelola, pencegahan, dan penanganan.",
+      "Memastikan pelaksanaan audit bersifat independen.",
+      "Menindaklanjuti hasil audit untuk memperbaiki efektivitas pengendalian."
+    ],
+    "evidence": [
+      "Rencana audit KKS tahunan atau multi-tahun.",
+      "Laporan hasil audit internal atau eksternal.",
+      "Daftar temuan dan bukti penyelesaian tindak lanjut."
+    ]
+  },
+  {
+    "id": "PBI.GOV-07",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 18",
+    "title": "Budaya KKS",
+    "summary": "Budaya KKS harus meningkatkan kesadaran risiko siber serta perilaku positif dan etika siber bagi pihak internal, pihak ketiga, dan konsumen.",
+    "focus": [
+      "Menjalankan program peningkatan budaya KKS secara berkala.",
+      "Memastikan materi budaya KKS menjangkau pihak internal, pihak ketiga, dan konsumen.",
+      "Melibatkan manajemen tertinggi sebagai teladan dalam program budaya KKS."
+    ],
+    "evidence": [
+      "Program awareness dan budaya KKS.",
+      "Materi sosialisasi, pelatihan, atau kampanye kesadaran.",
+      "Rekaman partisipasi dan evaluasi efektivitas program budaya."
+    ]
+  },
+  {
+    "id": "PBI.PRV-01",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 21",
+    "title": "Penyusunan dan pengkinian profil risiko siber",
+    "summary": "Identifikasi pencegahan dimulai dari penyusunan profil risiko siber melalui identifikasi, asesmen, dan analisis dampak bisnis, serta pengkinian berkala.",
+    "focus": [
+      "Menyusun profil risiko siber yang menggambarkan ancaman, kerentanan, dan eksposur organisasi.",
+      "Memperbarui profil risiko siber secara berkala sesuai perubahan layanan atau ancaman.",
+      "Menggunakan hasil identifikasi untuk prioritisasi pengendalian."
+    ],
+    "evidence": [
+      "Profil risiko siber atau cyber risk profile document.",
+      "Jadwal review berkala atas profil risiko siber.",
+      "Pemetaan prioritas pengendalian berbasis hasil identifikasi."
+    ]
+  },
+  {
+    "id": "PBI.PRV-02",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 23",
+    "title": "Asesmen risiko siber",
+    "summary": "Asesmen risiko siber harus menentukan metodologi yang relevan, menilai dampak kerentanan dan ancaman, serta memprioritaskan mitigasi dari tertinggi hingga terendah.",
+    "focus": [
+      "Menentukan metodologi asesmen risiko siber yang relevan dengan karakteristik layanan.",
+      "Menilai dampak kerentanan dan ancaman terhadap layanan operasional.",
+      "Menyusun prioritas mitigasi berdasarkan tingkat risiko."
+    ],
+    "evidence": [
+      "Metodologi asesmen risiko siber yang terdokumentasi.",
+      "Hasil penilaian risiko terhadap aset atau layanan kritikal.",
+      "Daftar prioritas mitigasi dan penanggung jawabnya."
+    ]
+  },
+  {
+    "id": "PBI.PRV-03",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 24-25",
+    "title": "Analisis dampak bisnis dan identifikasi infrastruktur informasi vital",
+    "summary": "Analisis dampak bisnis harus menilai dampak finansial dan nonfinansial, kritikalitas fungsi bisnis, dan sistem informasi kritikal yang berdampak luas.",
+    "focus": [
+      "Menilai dampak finansial, nonfinansial, dan stabilitas sistem keuangan atas gangguan siber.",
+      "Mengidentifikasi fungsi bisnis kritikal serta prioritas pengendaliannya.",
+      "Menentukan infrastruktur informasi vital yang berdampak luas."
+    ],
+    "evidence": [
+      "Business impact analysis untuk layanan dan sistem kritikal.",
+      "Daftar infrastruktur informasi vital.",
+      "Dokumen prioritas pemulihan layanan kritikal."
+    ]
+  },
+  {
+    "id": "PBI.PRV-04",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 27",
+    "title": "Pembangunan sistem pertahanan",
+    "summary": "Sistem pertahanan KKS pada aspek manusia, proses, dan teknologi harus mengamankan pihak internal/pihak ketiga, proses bisnis, dan konfigurasi pengamanan sistem informasi.",
+    "focus": [
+      "Memastikan keamanan personel dan pihak ketiga sepanjang siklus kerja serta edukasi sesuai peran.",
+      "Menerapkan pengendalian keamanan untuk proses bisnis secara efektif.",
+      "Mengimplementasikan konfigurasi pengamanan terhadap sistem informasi yang digunakan."
+    ],
+    "evidence": [
+      "Kontrol onboarding, offboarding, dan screening personel atau vendor.",
+      "Baseline konfigurasi keamanan dan hardening standard.",
+      "Catatan implementasi endpoint security, patching, atau segmentasi jaringan."
+    ]
+  },
+  {
+    "id": "PBI.PRV-05",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 28",
+    "title": "Pengamanan dan pelindungan data serta informasi",
+    "summary": "Data dan informasi harus diamankan pada setiap tahapan siklus hidup sesuai klasifikasi data dan mematuhi ketentuan pelindungan data pribadi.",
+    "focus": [
+      "Menetapkan klasifikasi data dan pengamanan pada setiap siklus hidup data.",
+      "Mengendalikan akses, penggunaan, penyimpanan, dan pemusnahan data secara aman.",
+      "Memastikan kepatuhan terhadap ketentuan pelindungan data pribadi."
+    ],
+    "evidence": [
+      "Skema klasifikasi data dan kebijakan data handling.",
+      "Kontrol enkripsi, backup, dan access control untuk data sensitif.",
+      "Dokumen kepatuhan atau assessment atas pelindungan data pribadi."
+    ]
+  },
+  {
+    "id": "PBI.PRV-06",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 29-30",
+    "title": "Deteksi, pemantauan, dan sistem peringatan dini",
+    "summary": "Deteksi meliputi pemantauan, analisis hasil, analisis serangan siber, analisis kode jahat, serta pemeliharaan dan pengujian sistem deteksi.",
+    "focus": [
+      "Memantau akses logis dan fisik yang berpotensi menimbulkan serangan siber.",
+      "Menetapkan indikator ambang batas untuk memicu sistem peringatan dini.",
+      "Melakukan pemindaian kerentanan siber secara konsisten dan berkelanjutan."
+    ],
+    "evidence": [
+      "Log monitoring dan dashboard keamanan.",
+      "Definisi threshold alert dan aturan eskalasi.",
+      "Hasil vulnerability scanning atau pemantauan kerentanan."
+    ]
+  },
+  {
+    "id": "PBI.PRV-07",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 31-34",
+    "title": "Analisis hasil pemantauan dan pengujian sistem deteksi",
+    "summary": "Penyelenggara harus menganalisis hasil pemantauan, serangan siber, kode jahat atau kode tidak sah, serta memelihara dan menguji sistem deteksi secara berkala.",
+    "focus": [
+      "Menganalisis hasil pemantauan untuk mengenali pola serangan dan anomali.",
+      "Mengevaluasi indikator serangan siber serta kode jahat atau kode tidak sah.",
+      "Memastikan sistem deteksi selalu mutakhir dan keandalannya teruji."
+    ],
+    "evidence": [
+      "Prosedur analisis alert dan incident triage.",
+      "Hasil malware analysis atau review unauthorized code.",
+      "Bukti pemeliharaan tool deteksi dan hasil pengujiannya."
+    ]
+  },
+  {
+    "id": "PBI.HDL-01",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 37",
+    "title": "Rencana penanganan dan pemulihan insiden siber",
+    "summary": "Rencana penanganan dan pemulihan insiden siber harus memuat status insiden, respons, pembatasan dampak, serta rencana pemulihan yang mempertimbangkan RTO dan RPO.",
+    "focus": [
+      "Menetapkan status insiden dan alur respons yang terdokumentasi.",
+      "Menyusun mekanisme pembatasan dampak dan rencana pemulihan.",
+      "Memastikan rencana memperhitungkan recovery time objective dan recovery point objective."
+    ],
+    "evidence": [
+      "Incident response plan dan cyber recovery plan.",
+      "Penetapan RTO dan RPO untuk layanan kritikal.",
+      "Dokumen business continuity plan yang terintegrasi."
+    ]
+  },
+  {
+    "id": "PBI.HDL-02",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 38-39",
+    "title": "Simulasi, uji coba, dan evaluasi rencana penanganan",
+    "summary": "Simulasi dan uji coba penanganan/pemulihan insiden siber dilakukan secara komprehensif dan berkala, lalu dievaluasi untuk memperbaiki rencana.",
+    "focus": [
+      "Melaksanakan simulasi dan uji coba secara komprehensif dan berkala.",
+      "Melibatkan pihak lain bila diperlukan dalam pelaksanaan simulasi.",
+      "Melakukan evaluasi efektivitas dan memperbaiki rencana berdasarkan hasil uji."
+    ],
+    "evidence": [
+      "Skenario simulasi dan jadwal exercise.",
+      "Berita acara, notulen, atau laporan hasil simulasi.",
+      "Perbaikan rencana penanganan setelah evaluasi exercise."
+    ]
+  },
+  {
+    "id": "PBI.HDL-03",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 40",
+    "title": "Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia",
+    "summary": "Saat insiden terjadi, penyelenggara harus mengaktifkan tim tanggap insiden, melakukan mitigasi dan forensik, serta melaporkan ke Bank Indonesia.",
+    "focus": [
+      "Mengaktifkan tim tanggap insiden siber di level organisasi.",
+      "Menyampaikan notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
+      "Melakukan pendalaman insiden, mitigasi dampak, eskalasi, dan penanganan dengan sumber daya internal dan/atau eksternal."
+    ],
+    "evidence": [
+      "Runbook aktivasi tim tanggap insiden dan daftar kontak darurat.",
+      "Template notifikasi awal dan laporan insiden kepada Bank Indonesia.",
+      "Laporan forensik, kronologi insiden, dan bukti tindakan mitigasi."
+    ],
+    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi."
+  },
+  {
+    "id": "PBI.HDL-04",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 41",
+    "title": "Komunikasi tindakan penanganan insiden siber",
+    "summary": "Penanganan insiden harus didukung strategi dan metode komunikasi kepada pemangku kepentingan, termasuk penyampaian kemajuan penanganan kepada Bank Indonesia.",
+    "focus": [
+      "Menyusun strategi dan metode komunikasi penanganan serta pemulihan insiden.",
+      "Menyampaikan komunikasi yang tepat kepada pemangku kepentingan.",
+      "Mengomunikasikan kemajuan penanganan insiden kepada Bank Indonesia."
+    ],
+    "evidence": [
+      "Crisis communication plan atau komunikasi insiden.",
+      "Daftar pemangku kepentingan dan skema eskalasi komunikasi.",
+      "Bukti penyampaian update penanganan ke regulator."
+    ],
+    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan."
+  },
+  {
+    "id": "PBI.HDL-05",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 42-43",
+    "title": "Pemulihan dan pengembalian layanan ke kondisi normal",
+    "summary": "Pemulihan dilakukan untuk mengembalikan layanan sesuai prioritas, termasuk penetapan lokasi kerja alternatif, pusat data terpisah, dan jaringan komunikasi data alternatif.",
+    "focus": [
+      "Menetapkan prioritas pemulihan dan target pengembalian layanan.",
+      "Menentukan opsi lokasi kerja alternatif, pusat data terpisah, atau jaringan alternatif.",
+      "Menjalankan pemulihan sesuai rencana pemulihan insiden dan prioritas layanan kritikal."
+    ],
+    "evidence": [
+      "Dokumen recovery architecture dan disaster recovery arrangement.",
+      "Hasil uji failover atau aktivasi lokasi alternatif.",
+      "Bukti pemulihan layanan berdasarkan prioritas kritikalitas."
+    ]
+  },
+  {
+    "id": "PBI.HDL-06",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 44-45",
+    "title": "Perbaikan berkelanjutan dan komunikasi pemulihan",
+    "summary": "Setelah insiden, penyelenggara wajib mengevaluasi efektivitas penanganan, memperkuat KKS, dan mengomunikasikan kemajuan pemulihan kepada pemangku kepentingan serta Bank Indonesia.",
+    "focus": [
+      "Melakukan evaluasi efektivitas penanganan dan pemulihan insiden.",
+      "Menerapkan upaya penguatan KKS untuk memitigasi insiden serupa.",
+      "Mengomunikasikan kemajuan pemulihan insiden kepada pihak terkait dan Bank Indonesia."
+    ],
+    "evidence": [
+      "Post-incident review atau lessons learned report.",
+      "Daftar corrective action dan status implementasinya.",
+      "Bukti komunikasi pemulihan kepada regulator dan pemangku kepentingan."
+    ],
+    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan."
+  },
+  {
+    "id": "PBI.OVS-01",
+    "chapter": "VI",
+    "domain": "Pengawasan",
+    "article": "Pasal 47-52",
+    "title": "Mekanisme pengawasan Bank Indonesia",
+    "summary": "Bank Indonesia melakukan pengawasan berbasis risiko dan/atau kepatuhan melalui pengawasan tidak langsung, pengawasan langsung, dan tindak lanjut pengawasan.",
+    "focus": [
+      "Menyiapkan organisasi untuk pengawasan langsung maupun tidak langsung.",
+      "Memastikan dokumen, infrastruktur, sistem informasi, dan objek lain siap diperiksa.",
+      "Menindaklanjuti permintaan regulator untuk melakukan atau tidak melakukan sesuatu, termasuk pembatasan kegiatan atau layanan."
+    ],
+    "evidence": [
+      "Repository dokumen dan bukti implementasi KKS.",
+      "Prosedur persiapan pemeriksaan regulator.",
+      "Bukti tindak lanjut atas hasil pengawasan."
+    ],
+    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan."
+  },
+  {
+    "id": "PBI.OVS-02",
+    "chapter": "VI",
+    "domain": "Pengawasan",
+    "article": "Pasal 54-55",
+    "title": "Penyampaian data, informasi, dan laporan KKS",
+    "summary": "Penyelenggara wajib menyampaikan data dan informasi penerapan KKS pada area tata kelola, pencegahan, dan penanganan melalui pelaporan tahunan dan insidental.",
+    "focus": [
+      "Menyusun data dan informasi KKS dalam bentuk dokumen, data mentah, dan/atau data olahan.",
+      "Menyampaikan pelaporan tahunan untuk tingkat kematangan KKS dan hasil identifikasi infrastruktur informasi vital.",
+      "Menyampaikan pelaporan insidental saat terjadi insiden siber dan memastikan kepatuhan agar terhindar dari sanksi administratif."
+    ],
+    "evidence": [
+      "Template pelaporan tahunan tingkat kematangan KKS.",
+      "Daftar hasil identifikasi infrastruktur informasi vital.",
+      "Bukti penyampaian laporan insidental dan tahunan ke Bank Indonesia."
+    ],
+    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan."
+  },
+  {
+    "id": "PBI.COL-01",
+    "chapter": "VII",
+    "domain": "Kolaborasi",
+    "article": "Pasal 57-58",
+    "title": "Pertukaran informasi ancaman, kerentanan, dan insiden siber",
+    "summary": "Penyelenggara melakukan pertukaran informasi hasil identifikasi kerentanan, ancaman, serangan, dan insiden siber yang dapat mengganggu stabilitas sistem keuangan.",
+    "focus": [
+      "Berbagi informasi sumber dan pola ancaman maupun serangan siber.",
+      "Menyampaikan informasi celah keamanan yang berdampak pada kerentanan siber.",
+      "Mendokumentasikan pembelajaran dari cara penanganan insiden siber."
+    ],
+    "evidence": [
+      "Prosedur threat intelligence sharing.",
+      "Bukti partisipasi pada forum atau sarana berbagi informasi.",
+      "Ringkasan pembelajaran insiden yang dibagikan secara terkendali."
+    ]
+  },
+  {
+    "id": "PBI.COL-02",
+    "chapter": "VII",
+    "domain": "Kolaborasi",
+    "article": "Pasal 59-61",
+    "title": "Koordinasi pencegahan insiden dan kerja sama dengan SRO",
+    "summary": "Kolaborasi mencakup koordinasi pencegahan insiden dan efek penularan, kesiapan penanganan lintas pihak, serta kemungkinan prosedur teknis melalui SRO.",
+    "focus": [
+      "Mendukung koordinasi dengan otoritas, lembaga, dan penyelenggara lain untuk mencegah insiden dan efek penularan.",
+      "Menyiapkan partisipasi dalam simulasi atau koordinasi kesiapan penanganan insiden.",
+      "Mengacu pada prosedur KKS teknis dan spesifik yang dapat disusun melalui SRO dengan persetujuan Bank Indonesia."
+    ],
+    "evidence": [
+      "Notulen koordinasi dengan regulator, SRO, atau lembaga terkait.",
+      "Partisipasi pada simulasi serangan siber sektor keuangan.",
+      "Prosedur teknis atau standar operasional yang dirujuk dari SRO."
+    ]
+  },
+  {
+    "id": "PBI.IMP-01",
+    "chapter": "VIII",
+    "domain": "Penerapan",
+    "article": "Pasal 62",
+    "title": "Penerapan KKS sesuai klasifikasi penyelenggara",
+    "summary": "Penerapan KKS harus menyesuaikan klasifikasi penyelenggara, termasuk referensi klasifikasi bagi PJP, PIP, PUVA, lembaga pendukung, dan pihak lain yang ditetapkan Bank Indonesia.",
+    "focus": [
+      "Mengidentifikasi klasifikasi penyelenggara sesuai ketentuan yang berlaku.",
+      "Menyesuaikan intensitas dan bentuk penerapan KKS dengan profil risiko atau klasifikasi infrastruktur.",
+      "Memastikan kebijakan internal mengacu pada klasifikasi dan ketentuan turunan yang relevan."
+    ],
+    "evidence": [
+      "Dokumen penetapan klasifikasi penyelenggara.",
+      "Pemetaan kontrol KKS berdasarkan klasifikasi atau risk tier.",
+      "Matriks pemenuhan terhadap ketentuan turunan yang relevan."
+    ]
+  }
+]

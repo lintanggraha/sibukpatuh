@@ -1,0 +1,330 @@
+@extends('layouts.frameworks')
+
+@section('title', 'Framework Explorer - SibukPatuh')
+
+@push('styles')
+<style>
+    .frx-shell {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .frx-hero {
+        display: grid;
+        grid-template-columns: 1.45fr 0.95fr;
+        gap: 0.9rem;
+        padding: 1.1rem;
+        border-radius: 24px;
+        background:
+            radial-gradient(circle at top right, rgba(247, 209, 153, 0.9), transparent 32%),
+            radial-gradient(circle at bottom left, rgba(149, 203, 212, 0.72), transparent 30%),
+            linear-gradient(135deg, #17324d 0%, #1d5d73 50%, #eedab7 100%);
+        box-shadow: 0 22px 44px rgba(15, 23, 42, 0.09);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .frx-hero > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .frx-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.32rem 0.64rem;
+        border-radius: 999px;
+        color: rgba(255, 250, 242, 0.92);
+        background: rgba(255, 250, 242, 0.16);
+        font-size: 0.68rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .frx-title {
+        margin: 0.85rem 0 0.55rem;
+        color: #fffaf2;
+        font-size: clamp(1.7rem, 3vw, 2.65rem);
+        font-weight: 800;
+        line-height: 1.08;
+    }
+
+    .frx-copy {
+        margin: 0;
+        max-width: 660px;
+        color: rgba(255, 250, 242, 0.82);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .frx-stat-grid,
+    .frx-note-grid,
+    .frx-card-grid {
+        display: grid;
+        gap: 0.8rem;
+    }
+
+    .frx-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 0.95rem;
+    }
+
+    .frx-stat,
+    .frx-note,
+    .frx-card {
+        border-radius: 18px;
+        border: 1px solid rgba(22, 50, 75, 0.08);
+        background: rgba(255, 255, 255, 0.78);
+        box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    .frx-stat {
+        padding: 0.68rem 0.76rem;
+        background: rgba(255, 250, 242, 0.12);
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .frx-stat label,
+    .frx-note label,
+    .frx-card label {
+        display: block;
+        margin-bottom: 0.24rem;
+        color: rgba(255, 250, 242, 0.7);
+        font-size: 0.68rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .frx-stat strong {
+        display: block;
+        color: #fffaf2;
+        font-size: 1.28rem;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .frx-stat span {
+        display: block;
+        margin-top: 0.3rem;
+        color: rgba(255, 250, 242, 0.74);
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+
+    .frx-note-grid {
+        align-content: start;
+    }
+
+    .frx-note {
+        padding: 0.72rem 0.8rem;
+        background: rgba(255, 250, 242, 0.8);
+        border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .frx-note label {
+        color: #5c6776;
+    }
+
+    .frx-note h3 {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 800;
+    }
+
+    .frx-note p {
+        margin: 0.38rem 0 0;
+        color: #5c6776;
+        line-height: 1.5;
+        font-size: 0.8rem;
+    }
+
+    .frx-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .frx-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.95rem;
+        padding: 1rem;
+        border-radius: 24px;
+    }
+
+    .frx-card-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.8rem;
+    }
+
+    .frx-card-icon {
+        width: 3rem;
+        height: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        color: #fffaf2;
+        background: linear-gradient(135deg, var(--accent) 0%, rgba(22, 50, 75, 0.9) 100%);
+        box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
+    }
+
+    .frx-card-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.28rem 0.54rem;
+        border-radius: 999px;
+        background: rgba(22, 50, 75, 0.08);
+        color: #16324b;
+        font-size: 0.72rem;
+        font-weight: 800;
+    }
+
+    .frx-card h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .frx-card p {
+        margin: 0.3rem 0 0;
+        color: #5c6776;
+        line-height: 1.6;
+        font-size: 0.85rem;
+    }
+
+    .frx-card label {
+        margin-bottom: 0.18rem;
+        color: #5c6776;
+    }
+
+    .frx-card strong {
+        display: block;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--accent);
+    }
+
+    .frx-card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: auto;
+    }
+
+    .frx-card-actions .btn {
+        border-radius: 999px;
+        font-weight: 700;
+    }
+
+    @media (max-width: 1199.98px) {
+        .frx-hero,
+        .frx-card-grid,
+        .frx-stat-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+@endpush
+
+@section('content')
+@php
+    $frameworkCount = count($frameworks);
+    $readyCount = collect($frameworks)->filter(fn ($item) => ! is_null($item['metric_value']))->count();
+    $totalRecords = collect($frameworks)->sum(fn ($item) => (int) ($item['metric_value'] ?? 0));
+@endphp
+
+<div class="frx-shell">
+    <section class="frx-hero">
+        <div>
+            <span class="frx-kicker"><i class="fas fa-compass"></i>SibukPatuh Overview</span>
+            <h1 class="frx-title">SibukPatuh memudahkan eksplorasi framework dan referensi kepatuhan.</h1>
+            <p class="frx-copy">
+                Aplikasi ini membantu tim menelusuri framework, kontrol, dan referensi regulasi dalam satu tempat
+                yang rapi dan mudah dipahami.
+            </p>
+
+            <div class="frx-stat-grid">
+                <div class="frx-stat">
+                    <label>Framework Aktif</label>
+                    <strong>{{ $frameworkCount }}</strong>
+                    <span>Lima katalog utama tersedia langsung dari beranda tanpa autentikasi.</span>
+                </div>
+                <div class="frx-stat">
+                    <label>Dataset Terdeteksi</label>
+                    <strong>{{ $readyCount }}</strong>
+                    <span>Framework yang sudah menemukan sumber data lokal untuk dieksplorasi.</span>
+                </div>
+                <div class="frx-stat">
+                    <label>Total Entri</label>
+                    <strong>{{ number_format($totalRecords) }}</strong>
+                    <span>Akumulasi item JSON yang berhasil dibaca dari seluruh katalog framework.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="frx-note-grid">
+            <article class="frx-note">
+                <label>Tentang Aplikasi</label>
+                <h3>Explorer referensi yang praktis</h3>
+                <p>
+                    SibukPatuh merangkum berbagai framework dan referensi kepatuhan ke dalam tampilan yang lebih
+                    ringkas, jadi tim bisa langsung fokus ke isi yang dibutuhkan.
+                </p>
+            </article>
+            <article class="frx-note">
+                <label>Yang Bisa Dilakukan</label>
+                <p>
+                    Kamu bisa membaca struktur framework, menelusuri kontrol, memahami poin kewajiban, dan menemukan
+                    referensi yang relevan untuk kebutuhan review, diskusi, atau tindak lanjut internal.
+                </p>
+            </article>
+            <article class="frx-note">
+                <label>Cara Pakai</label>
+                <p>
+                    Tinggal pilih katalog yang ingin dibuka, lalu gunakan filter dan detail halaman untuk menelusuri
+                    materinya. Alurnya dibuat sederhana supaya navigasinya tetap ringan dan nyaman dipakai.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="frx-card-grid">
+        @foreach ($frameworks as $framework)
+            <article class="frx-card" style="--accent: {{ $framework['accent'] }};">
+                <div class="frx-card-top">
+                    <span class="frx-card-icon">
+                        <i class="fas {{ $framework['icon'] }}"></i>
+                    </span>
+                    <span class="frx-card-badge">{{ $framework['subtitle'] }}</span>
+                </div>
+
+                <div>
+                    <h3>{{ $framework['name'] }}</h3>
+                    <p>{{ $framework['summary'] }}</p>
+                </div>
+
+                <div>
+                    <label>{{ $framework['metric_label'] }}</label>
+                    <strong>{{ is_null($framework['metric_value']) ? 'N/A' : number_format($framework['metric_value']) }}</strong>
+                    <p class="mb-0">
+                        {{ is_null($framework['metric_value']) ? 'Dataset belum ditemukan, tetapi halaman explorer tetap tersedia.' : 'Jumlah entri berhasil dibaca dari sumber data lokal.' }}
+                    </p>
+                </div>
+
+                <div class="frx-card-actions">
+                    <a href="{{ route($framework['route']) }}" class="btn btn-dark">
+                        Buka Explorer
+                    </a>
+                </div>
+            </article>
+        @endforeach
+    </section>
+</div>
+@endsection
+
+

@@ -1,0 +1,157 @@
+[
+  {
+    "id": "I.a",
+    "title": "Parameter minimum penilaian risiko inheren keamanan siber",
+    "type": "Parameter Minimum",
+    "scope": "Risiko inheren keamanan siber",
+    "summary": "Lampiran ini menjadi baseline parameter atau indikator minimum yang dapat digunakan Bank untuk menilai empat faktor risiko inheren keamanan siber.",
+    "contains": [
+      "Faktor teknologi",
+      "Faktor produk bank",
+      "Karakteristik organisasi",
+      "Rekam jejak insiden siber"
+    ],
+    "used_by": ["II.01", "II.02"]
+  },
+  {
+    "id": "II.a",
+    "title": "Format penilaian risiko inheren keamanan siber",
+    "type": "Format Penilaian",
+    "scope": "Risiko inheren keamanan siber",
+    "summary": "Lampiran ini menyediakan format resmi yang digunakan Bank untuk mendokumentasikan hasil penilaian risiko inheren terkait keamanan siber.",
+    "contains": [
+      "Template penilaian self-assessment",
+      "Kolom justifikasi per faktor",
+      "Rekap hasil penilaian"
+    ],
+    "used_by": ["II.01", "II.02"]
+  },
+  {
+    "id": "III.a",
+    "title": "Definisi peringkat risiko inheren keamanan siber",
+    "type": "Definisi Peringkat",
+    "scope": "Risiko inheren keamanan siber",
+    "summary": "Lampiran ini memuat definisi Peringkat 1 sampai Peringkat 5 untuk penetapan tingkat risiko inheren keamanan siber.",
+    "contains": [
+      "Peringkat 1 (Low)",
+      "Peringkat 2 (Low to Moderate)",
+      "Peringkat 3 (Moderate)",
+      "Peringkat 4 (Moderate to High)",
+      "Peringkat 5 (High)"
+    ],
+    "used_by": ["II.01"]
+  },
+  {
+    "id": "I.b",
+    "title": "Kontrol penerapan manajemen risiko terkait keamanan siber",
+    "type": "Kontrol Minimum",
+    "scope": "Kualitas penerapan manajemen risiko siber",
+    "summary": "Lampiran ini memuat kontrol yang digunakan untuk menilai kualitas penerapan manajemen risiko terkait keamanan siber.",
+    "contains": [
+      "Tata kelola risiko siber",
+      "Kerangka manajemen risiko",
+      "Proses, SDM, dan sistem informasi manajemen risiko",
+      "Pengendalian intern dan kaji ulang"
+    ],
+    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.01", "V.02"]
+  },
+  {
+    "id": "I.c",
+    "title": "Kontrol penerapan proses ketahanan siber",
+    "type": "Kontrol Minimum",
+    "scope": "Kualitas penerapan proses ketahanan siber",
+    "summary": "Lampiran ini menjadi acuan kontrol minimum untuk menilai empat proses ketahanan siber Bank.",
+    "contains": [
+      "Identifikasi aset, ancaman, dan kerentanan",
+      "Pelindungan aset",
+      "Deteksi insiden siber",
+      "Penanggulangan dan pemulihan insiden siber"
+    ],
+    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.01", "V.03"]
+  },
+  {
+    "id": "II.b",
+    "title": "Format penilaian kualitas penerapan manajemen risiko siber",
+    "type": "Format Penilaian",
+    "scope": "Kualitas manajemen risiko siber",
+    "summary": "Lampiran ini menyediakan format penilaian kualitas penerapan manajemen risiko terkait keamanan siber.",
+    "contains": [
+      "Format scoring kualitas penerapan",
+      "Kolom justifikasi kontrol",
+      "Ringkasan hasil penilaian"
+    ],
+    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.01", "V.02"]
+  },
+  {
+    "id": "II.c",
+    "title": "Format penilaian kualitas proses ketahanan siber",
+    "type": "Format Penilaian",
+    "scope": "Kualitas proses ketahanan siber",
+    "summary": "Lampiran ini digunakan untuk mendokumentasikan penilaian kualitas proses ketahanan siber pada empat proses utama.",
+    "contains": [
+      "Format scoring proses ketahanan",
+      "Kolom evaluasi tiap proses",
+      "Ringkasan hasil penilaian"
+    ],
+    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.01", "V.03"]
+  },
+  {
+    "id": "III.b",
+    "title": "Definisi peringkat kualitas penerapan manajemen risiko siber",
+    "type": "Definisi Peringkat",
+    "scope": "Kualitas manajemen risiko siber",
+    "summary": "Lampiran ini memuat definisi peringkat Strong sampai Unsatisfactory untuk kualitas penerapan manajemen risiko keamanan siber.",
+    "contains": [
+      "Strong",
+      "Satisfactory",
+      "Fair",
+      "Marginal",
+      "Unsatisfactory"
+    ],
+    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.02", "V.04"]
+  },
+  {
+    "id": "III.c",
+    "title": "Definisi peringkat kualitas proses ketahanan siber",
+    "type": "Definisi Peringkat",
+    "scope": "Kualitas proses ketahanan siber",
+    "summary": "Lampiran ini memuat definisi peringkat Strong sampai Unsatisfactory untuk kualitas proses ketahanan siber.",
+    "contains": [
+      "Strong",
+      "Satisfactory",
+      "Fair",
+      "Marginal",
+      "Unsatisfactory"
+    ],
+    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.03", "V.04"]
+  },
+  {
+    "id": "III.d",
+    "title": "Definisi tingkat maturitas keamanan siber",
+    "type": "Definisi Tingkat",
+    "scope": "Tingkat maturitas keamanan siber",
+    "summary": "Lampiran ini memuat definisi Tingkat 1 sampai Tingkat 5 untuk penetapan maturitas keamanan siber Bank.",
+    "contains": [
+      "Tingkat 1",
+      "Tingkat 2",
+      "Tingkat 3",
+      "Tingkat 4",
+      "Tingkat 5"
+    ],
+    "used_by": ["V.01", "V.04"]
+  },
+  {
+    "id": "V",
+    "title": "Format pelaporan ke OJK dalam laporan kondisi terkini penyelenggaraan TI",
+    "type": "Format Laporan",
+    "scope": "Pelaporan resmi ke OJK",
+    "summary": "Lampiran ini menjadi format penyampaian hasil risiko inheren, maturitas, dan tingkat risiko keamanan siber sebagai bagian dari laporan kondisi terkini penyelenggaraan TI Bank.",
+    "contains": [
+      "Hasil penilaian risiko inheren keamanan siber",
+      "Hasil penilaian tingkat maturitas keamanan siber",
+      "Tingkat risiko terkait keamanan siber",
+      "Bagian pelaporan kondisi terkini penyelenggaraan TI"
+    ],
+    "used_by": ["II.01", "V.01", "VI.01"]
+  }
+]

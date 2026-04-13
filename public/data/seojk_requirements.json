@@ -1,0 +1,462 @@
+[
+  {
+    "id": "II.01",
+    "chapter": "II",
+    "chapter_title": "Penilaian Risiko Inheren",
+    "pillar": "Assessment",
+    "title": "Lakukan penilaian risiko inheren keamanan siber secara tahunan",
+    "summary": "Bank menilai risiko inheren terkait keamanan siber untuk posisi akhir bulan Desember dan dapat melakukan pengkinian sewaktu-waktu apabila diperlukan.",
+    "cadence": "Tahunan pada posisi akhir Desember",
+    "owner": "Risk management, unit siber, dan Direksi",
+    "scoring": "Peringkat 1-5 (Low sampai High)",
+    "appendices": ["I.a", "II.a", "III.a", "V"],
+    "focus": [
+      "Gunakan posisi akhir Desember sebagai snapshot resmi profil risiko inheren.",
+      "Perbarui penilaian saat ada perubahan signifikan pada profil risiko atau eksposur siber Bank.",
+      "Masukkan hasil penilaian ke laporan kondisi terkini penyelenggaraan TI Bank."
+    ],
+    "evidence": [
+      "Kertas kerja self-assessment risiko inheren keamanan siber.",
+      "Notulen atau memo persetujuan hasil penilaian oleh manajemen.",
+      "Bukti penyampaian laporan ke OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+  },
+  {
+    "id": "II.02",
+    "chapter": "II",
+    "chapter_title": "Penilaian Risiko Inheren",
+    "pillar": "Assessment",
+    "title": "Nilai empat faktor utama risiko inheren keamanan siber",
+    "summary": "Penilaian risiko inheren paling sedikit memperhatikan faktor teknologi, produk bank, karakteristik organisasi, dan rekam jejak insiden siber.",
+    "cadence": "Digunakan pada setiap siklus penilaian inheren",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Parameter minimum dapat ditambah sesuai kompleksitas Bank",
+    "appendices": ["I.a", "II.a"],
+    "focus": [
+      "Gunakan parameter minimum dalam Lampiran I.a sebagai baseline penilaian.",
+      "Tambahkan indikator lain bila karakteristik dan kompleksitas usaha Bank menuntut penilaian lebih detail.",
+      "Pastikan setiap faktor memiliki justifikasi yang terdokumentasi."
+    ],
+    "evidence": [
+      "Worksheet faktor teknologi, produk, organisasi, dan rekam jejak insiden.",
+      "Dokumen metodologi penilaian parameter.",
+      "Profil risiko siber tahunan yang ditandatangani reviewer."
+    ],
+    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber."
+  },
+  {
+    "id": "III.01",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Pastikan pengawasan aktif Direksi dan Dewan Komisaris",
+    "summary": "Tata kelola risiko terkait keamanan siber harus mencakup pengawasan aktif, perumusan risk appetite dan risk tolerance, serta budaya dan kesadaran risiko siber.",
+    "cadence": "Berjalan terus-menerus dan ditinjau berkala",
+    "owner": "Direksi dan Dewan Komisaris",
+    "scoring": "Kualitas penerapan dinilai dalam penilaian maturitas",
+    "appendices": ["I.b", "II.b", "III.b"],
+    "focus": [
+      "Jelaskan peran aktif pengurus dalam menetapkan arah kontrol siber.",
+      "Dokumentasikan risk appetite dan risk tolerance terkait keamanan siber.",
+      "Bangun budaya dan security awareness yang konsisten di seluruh lini."
+    ],
+    "evidence": [
+      "Risalah rapat Direksi atau Komisaris yang membahas risiko siber.",
+      "Pernyataan risk appetite dan risk tolerance siber.",
+      "Program awareness dan pelatihan keamanan siber."
+    ],
+    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas."
+  },
+  {
+    "id": "III.02",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Bangun kerangka manajemen risiko terkait keamanan siber",
+    "summary": "Kerangka manajemen risiko keamanan siber mencakup strategi, kecukupan perangkat organisasi, kebijakan, prosedur, dan penetapan limit risiko.",
+    "cadence": "Ditinjau berkala sesuai perubahan organisasi dan TI",
+    "owner": "Manajemen risiko dan unit siber",
+    "scoring": "Kualitas penerapan dinilai menggunakan definisi peringkat Strong sampai Unsatisfactory",
+    "appendices": ["I.b", "II.b", "III.b"],
+    "focus": [
+      "Selaraskan strategi manajemen risiko siber dengan strategi bisnis dan TI Bank.",
+      "Pastikan struktur organisasi mendukung pelaksanaan kontrol siber secara efektif.",
+      "Tetapkan limit atau parameter batas risiko yang dapat diterima."
+    ],
+    "evidence": [
+      "Strategi manajemen risiko siber.",
+      "Kebijakan dan prosedur keamanan siber yang berlaku.",
+      "Dokumen limit risiko dan eskalasi pelampauannya."
+    ],
+    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber."
+  },
+  {
+    "id": "III.03",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Perkuat proses manajemen risiko, SDM, dan sistem informasi manajemen risiko",
+    "summary": "Bank wajib memastikan proses manajemen risiko, kecukupan SDM, dan sistem informasi manajemen risiko mendukung pengelolaan keamanan siber.",
+    "cadence": "Berjalan harian dan dievaluasi berkala",
+    "owner": "Risk management, SDM, dan unit siber",
+    "scoring": "Masuk ke penilaian kualitas penerapan manajemen risiko",
+    "appendices": ["I.b", "II.b", "III.b"],
+    "focus": [
+      "Pastikan kapasitas dan kompetensi SDM memadai untuk risiko siber yang dihadapi.",
+      "Gunakan sistem informasi manajemen risiko untuk pelaporan dan monitoring eksposur.",
+      "Hubungkan proses pengelolaan risiko siber dengan risk register operasional Bank."
+    ],
+    "evidence": [
+      "Matriks kompetensi personel siber.",
+      "Dashboard atau laporan sistem informasi manajemen risiko.",
+      "Risk register yang memasukkan risiko terkait keamanan siber."
+    ],
+    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas."
+  },
+  {
+    "id": "III.04",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Jalankan sistem pengendalian intern dan kaji ulang yang memadai",
+    "summary": "Sistem pengendalian risiko keamanan siber harus mencakup pengendalian intern yang efektif dan kaji ulang berkelanjutan atas kelemahan yang ditemukan.",
+    "cadence": "Berkala dan berbasis tindak lanjut",
+    "owner": "Internal control, audit intern, dan unit siber",
+    "scoring": "Dinilai dalam kualitas penerapan manajemen risiko siber",
+    "appendices": ["I.b", "II.b", "III.b"],
+    "focus": [
+      "Lakukan pengujian dan kaji ulang atas kontrol yang material.",
+      "Dokumentasikan temuan audit dan tindak lanjutnya secara lengkap.",
+      "Pantau penyelesaian kelemahan material sampai tuntas."
+    ],
+    "evidence": [
+      "Program audit atau review kontrol siber.",
+      "Register temuan dan tindak lanjut hasil audit.",
+      "Laporan verifikasi perbaikan kelemahan material."
+    ],
+    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber."
+  },
+  {
+    "id": "IV.01",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Identifikasi aset, ancaman, dan kerentanan secara menyeluruh",
+    "summary": "Bank menjaga ketahanan siber dengan inventarisasi dan penilaian aset TI, identifikasi kerentanan, pemantauan ancaman siber, dan pengujian keamanan siber secara berkala.",
+    "cadence": "Berjalan terus-menerus dengan review berkala",
+    "owner": "Unit siber dan pengelola aset TI",
+    "scoring": "Menjadi bagian dari kualitas penerapan proses ketahanan siber",
+    "appendices": ["I.c", "II.c", "III.c"],
+    "focus": [
+      "Inventarisasi perangkat keras, perangkat lunak, jaringan, dan infrastruktur disertai konfigurasi yang efektif.",
+      "Pantau perkembangan ancaman siber terkini untuk memperbarui daftar kerentanan.",
+      "Gunakan hasil identifikasi sebagai basis semua kontrol perlindungan."
+    ],
+    "evidence": [
+      "CMDB atau inventaris aset TI.",
+      "Laporan vulnerability identification atau threat monitoring.",
+      "Jadwal pengujian keamanan siber berkala."
+    ],
+    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber."
+  },
+  {
+    "id": "IV.02",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Lindungi aset dengan security control yang komprehensif",
+    "summary": "Bank menerapkan, memelihara, memperbaiki, dan mengkinikan pengendalian keamanan atas aset TI serta mengelola keamanan data dan informasi.",
+    "cadence": "Berkala dan mengikuti hasil identifikasi terbaru",
+    "owner": "Unit siber dan pengelola TI",
+    "scoring": "Masuk ke penilaian kualitas penerapan proses ketahanan siber",
+    "appendices": ["I.c", "II.c", "III.c"],
+    "focus": [
+      "Gunakan security control yang relevan terhadap aset, ancaman, dan kerentanan yang telah diidentifikasi.",
+      "Lakukan maintenance dan update kontrol keamanan secara terjadwal.",
+      "Pastikan data dan informasi dikelola untuk menjaga kerahasiaan, integritas, dan ketersediaan."
+    ],
+    "evidence": [
+      "Baseline kontrol keamanan aset TI.",
+      "Catatan hardening, patching, dan maintenance kontrol.",
+      "Dokumentasi pengelolaan keamanan data dan informasi."
+    ],
+    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber."
+  },
+  {
+    "id": "IV.03",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Deteksi insiden siber secara tepat waktu",
+    "summary": "Bank perlu memiliki proses deteksi insiden siber agar kejadian dapat dikenali, dianalisis, dan diekskalasi sesuai jalur komunikasi yang ditetapkan.",
+    "cadence": "Berjalan terus-menerus",
+    "owner": "SOC, unit siber, dan fungsi operasional terkait",
+    "scoring": "Dinilai sebagai proses deteksi pada maturitas keamanan siber",
+    "appendices": ["I.c", "II.c", "III.c"],
+    "focus": [
+      "Bangun monitoring dan alerting untuk kejadian kritis dan penyalahgunaan.",
+      "Pastikan proses analisis insiden mengarah ke eskalasi yang cepat.",
+      "Hubungkan proses deteksi dengan tim tanggap insiden dan pelaporan."
+    ],
+    "evidence": [
+      "Dashboard monitoring keamanan atau SIEM.",
+      "Prosedur analisis dan eskalasi insiden.",
+      "Log dan tiket penanganan alert keamanan."
+    ],
+    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif."
+  },
+  {
+    "id": "IV.04",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Siapkan penanggulangan dan pemulihan insiden siber",
+    "summary": "Bank menetapkan rencana respons dan pemulihan, peran tim tanggap insiden, prosedur pembatasan dampak, eskalasi, pelaporan, dan lesson learned pascainsiden.",
+    "cadence": "Diaktifkan saat insiden dan diuji secara berkala",
+    "owner": "Tim tanggap insiden siber dan manajemen krisis",
+    "scoring": "Dinilai pada proses ketahanan siber dan pengujian skenario",
+    "appendices": ["I.c", "II.c", "III.c"],
+    "focus": [
+      "Tentukan peran dan tanggung jawab tim tanggap insiden siber.",
+      "Pastikan prosedur pemulihan mencegah penyebaran dampak dengan waktu pemulihan yang tepat.",
+      "Lakukan analisis pascainsiden untuk perbaikan berkelanjutan."
+    ],
+    "evidence": [
+      "Rencana respons dan pemulihan insiden siber.",
+      "Matriks peran tim tanggap insiden siber.",
+      "Laporan lesson learned pascainsiden."
+    ],
+    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan."
+  },
+  {
+    "id": "V.01",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Lakukan penilaian tingkat maturitas keamanan siber setiap tahun",
+    "summary": "Penilaian maturitas keamanan siber mengukur tingkat kematangan yang telah dicapai Bank dan menjadi dasar peningkatan area yang masih lemah.",
+    "cadence": "Tahunan pada posisi akhir Desember",
+    "owner": "Unit siber, risk management, dan manajemen",
+    "scoring": "Tingkat 1-5",
+    "appendices": ["I.b", "I.c", "II.b", "II.c", "III.b", "III.c", "III.d", "V"],
+    "focus": [
+      "Gunakan hasil penilaian untuk melihat kondisi keamanan siber Bank saat ini.",
+      "Identifikasi area dengan kelemahan yang memerlukan perbaikan terukur.",
+      "Sampaikan hasilnya sebagai bagian dari laporan kondisi terkini penyelenggaraan TI."
+    ],
+    "evidence": [
+      "Kertas kerja penilaian maturitas keamanan siber.",
+      "Ringkasan gap dan rencana perbaikan.",
+      "Bukti pelaporan hasil penilaian ke OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+  },
+  {
+    "id": "V.02",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Nilai kualitas penerapan manajemen risiko terkait keamanan siber",
+    "summary": "Maturitas menilai kualitas penerapan manajemen risiko siber pada empat aspek: tata kelola, kerangka, proses beserta SDM dan sistem informasi manajemen risiko, serta pengendalian.",
+    "cadence": "Setiap siklus penilaian maturitas",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
+    "appendices": ["I.b", "II.b", "III.b"],
+    "focus": [
+      "Gunakan kontrol pada Lampiran I.b sebagai dasar analisis kualitas penerapan.",
+      "Dokumentasikan penilaian tiap aspek secara konsisten.",
+      "Jaga keterlacakan antara bukti, skor, dan kesimpulan."
+    ],
+    "evidence": [
+      "Worksheet penilaian kualitas penerapan manajemen risiko siber.",
+      "Daftar kontrol yang diuji terhadap Lampiran I.b.",
+      "Berita acara review hasil penilaian."
+    ],
+    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber."
+  },
+  {
+    "id": "V.03",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Nilai kualitas penerapan proses ketahanan siber",
+    "summary": "Maturitas juga menilai kualitas penerapan empat proses ketahanan siber: identifikasi, pelindungan, deteksi, serta penanggulangan dan pemulihan.",
+    "cadence": "Setiap siklus penilaian maturitas",
+    "owner": "Unit siber dan fungsi operasional keamanan",
+    "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
+    "appendices": ["I.c", "II.c", "III.c"],
+    "focus": [
+      "Gunakan kontrol pada Lampiran I.c sebagai baseline penilaian proses.",
+      "Nilai kualitas implementasi untuk keempat proses ketahanan secara konsisten.",
+      "Hubungkan hasil penilaian dengan area perbaikan prioritas."
+    ],
+    "evidence": [
+      "Checklist kontrol proses ketahanan siber.",
+      "Hasil walkthrough atau uji desain proses.",
+      "Rencana aksi perbaikan atas proses yang lemah."
+    ],
+    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber."
+  },
+  {
+    "id": "V.04",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Gunakan skala kualitas dan tingkat maturitas yang ditetapkan",
+    "summary": "Bank menetapkan tingkat kualitas dengan peringkat Strong sampai Unsatisfactory dan menetapkan tingkat maturitas keamanan siber pada Level 1 sampai Level 5.",
+    "cadence": "Pada setiap penetapan hasil maturitas",
+    "owner": "Unit siber dan reviewer penilaian",
+    "scoring": "Strong sampai Unsatisfactory dan Level 1 sampai Level 5",
+    "appendices": ["III.b", "III.c", "III.d"],
+    "focus": [
+      "Gunakan definisi peringkat yang sama untuk menjaga konsistensi antarperiode.",
+      "Pisahkan penilaian kualitas penerapan dan level maturitas akhir.",
+      "Pastikan keputusan level didukung bukti yang cukup."
+    ],
+    "evidence": [
+      "Dokumen definisi rating yang digunakan assessor.",
+      "Ringkasan scoring justification.",
+      "Peta level maturitas per area penilaian."
+    ],
+    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI."
+  },
+  {
+    "id": "VI.01",
+    "chapter": "VI",
+    "chapter_title": "Tingkat Risiko Keamanan Siber",
+    "pillar": "Reporting",
+    "title": "Tetapkan tingkat risiko keamanan siber dari risiko inheren dan maturitas",
+    "summary": "Tingkat risiko keamanan siber ditetapkan berdasarkan kombinasi penilaian risiko inheren terkait keamanan siber dan tingkat maturitas keamanan siber.",
+    "cadence": "Tahunan setelah penilaian inheren dan maturitas selesai",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Peringkat 1-5 (Low sampai High)",
+    "appendices": ["V"],
+    "focus": [
+      "Gabungkan hasil risiko inheren dan maturitas untuk memperoleh tingkat risiko akhir.",
+      "Gunakan skala peringkat yang sama dari Low sampai High.",
+      "Pastikan hasil akhir disampaikan ke OJK sebagai bagian dari laporan kondisi terkini penyelenggaraan TI."
+    ],
+    "evidence": [
+      "Matriks penetapan tingkat risiko keamanan siber.",
+      "Dokumen keputusan manajemen atas tingkat risiko akhir.",
+      "Bukti pelaporan tingkat risiko ke OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+  },
+  {
+    "id": "VII.01",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Lakukan pengujian keamanan siber secara berkala",
+    "summary": "Bank melakukan pengujian keamanan siber atas jaringan, sistem, dan data untuk memaksimalkan upaya menjaga keamanan siber.",
+    "cadence": "Berkala berdasarkan evaluasi internal",
+    "owner": "Unit siber, teknis keamanan, dan fungsi audit atau review",
+    "scoring": "Frekuensi menyesuaikan kritikalitas sistem dan perubahan eksposur",
+    "appendices": [],
+    "focus": [
+      "Tentukan frekuensi uji berdasarkan tingkat kritikalitas sistem.",
+      "Perhatikan perubahan arsitektur TI atau sistem elektronik yang meningkatkan eksposur risiko.",
+      "Dokumentasikan hasil uji dan amankan kerahasiaannya."
+    ],
+    "evidence": [
+      "Program pengujian keamanan siber tahunan.",
+      "Jadwal pengujian per sistem atau layanan.",
+      "Laporan hasil pengujian dan pengendalian aksesnya."
+    ],
+    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber."
+  },
+  {
+    "id": "VII.02",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Gunakan analisis kerentanan dan penetration test",
+    "summary": "Pengujian berbasis analisis kerentanan melihat titik lemah sistem dan dilanjutkan dengan penetration test pada perangkat lunak maupun perangkat keras yang digunakan Bank.",
+    "cadence": "Berkala sesuai evaluasi internal dan perubahan eksposur",
+    "owner": "Unit siber, red team, atau pihak penguji yang ditunjuk",
+    "scoring": "Wajib mendapat perhatian khusus untuk layanan digital atau daring",
+    "appendices": [],
+    "focus": [
+      "Mulai dari identifikasi kerentanan sebelum melakukan penetration test.",
+      "Uji perangkat lunak, perangkat keras, layanan nasabah, dan koneksi ke pihak ketiga.",
+      "Pastikan layanan perbankan digital atau layanan daring diuji secara berkala."
+    ],
+    "evidence": [
+      "Laporan vulnerability assessment.",
+      "Laporan penetration test beserta severity temuan.",
+      "Rencana remediasi hasil uji."
+    ],
+    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan."
+  },
+  {
+    "id": "VII.03",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Lakukan exercise berbasis skenario untuk respons insiden",
+    "summary": "Pengujian berbasis skenario memvalidasi proses penanggulangan dan pemulihan insiden siber, termasuk rencana komunikasi Bank.",
+    "cadence": "Berkala dan melibatkan fungsi lintas organisasi",
+    "owner": "Tim tanggap insiden, manajemen krisis, komunikasi korporat, dan fungsi bisnis",
+    "scoring": "Dapat berupa tabletop, cyber range, social engineering, atau adversarial attack simulation",
+    "appendices": [],
+    "focus": [
+      "Libatkan pejabat eksekutif, fungsi bisnis, tim teknis, dan penyedia layanan yang relevan.",
+      "Gunakan exercise untuk menguji keputusan, komunikasi, dan koordinasi lintas fungsi.",
+      "Dokumentasikan lesson learned untuk penguatan respons insiden."
+    ],
+    "evidence": [
+      "Skenario exercise dan daftar peserta.",
+      "After action report atau lesson learned.",
+      "Rencana aksi hasil evaluasi exercise."
+    ],
+    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank."
+  },
+  {
+    "id": "VIII.01",
+    "chapter": "VIII",
+    "chapter_title": "Unit atau Fungsi Keamanan Siber",
+    "pillar": "Organization",
+    "title": "Bentuk unit atau fungsi yang menangani ketahanan dan keamanan siber",
+    "summary": "Bank membentuk unit atau fungsi yang mengoordinasikan proses ketahanan siber, penilaian mandiri, penetapan tingkat risiko, dan pengujian keamanan siber.",
+    "cadence": "Struktural dan berjalan terus-menerus",
+    "owner": "Direksi dan manajemen organisasi",
+    "scoring": "Kecukupan peran organisasi memengaruhi kualitas penerapan",
+    "appendices": [],
+    "focus": [
+      "Tegaskan mandat unit atau fungsi siber dalam struktur organisasi Bank.",
+      "Berikan cakupan kerja yang mencakup assessment, resilience, risk rating, dan testing.",
+      "Pastikan unit memiliki kapasitas untuk mengoordinasikan lintas fungsi."
+    ],
+    "evidence": [
+      "Struktur organisasi dan job description fungsi siber.",
+      "SK pembentukan unit atau fungsi keamanan siber.",
+      "Rencana kerja tahunan unit siber."
+    ],
+    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber."
+  },
+  {
+    "id": "VIII.02",
+    "chapter": "VIII",
+    "chapter_title": "Unit atau Fungsi Keamanan Siber",
+    "pillar": "Organization",
+    "title": "Jaga independensi fungsi siber dan koordinasikan tim tanggap insiden",
+    "summary": "Fungsi keamanan siber harus independen dari fungsi pengelolaan TI dan mengoordinasikan tim tanggap insiden siber dengan kapasitas, latihan, dan akses informasi yang memadai.",
+    "cadence": "Berjalan terus-menerus dan diperkuat lewat latihan rutin",
+    "owner": "Unit siber, manajemen, dan tim tanggap insiden",
+    "scoring": "Kesiapan organisasi menjadi fondasi respons insiden yang efektif",
+    "appendices": [],
+    "focus": [
+      "Pisahkan fungsi siber dari aktivitas pengelolaan TI seperti perencanaan, pengembangan, operasi, dan monitoring TI.",
+      "Pastikan tim tanggap insiden memiliki kapasitas, latihan rutin, dan saluran komunikasi yang efektif.",
+      "Bangun kerja sama cepat dengan fungsi hukum, SDM, komunikasi eksternal, bisnis, dan penyedia pihak ketiga."
+    ],
+    "evidence": [
+      "RACI atau matriks independensi fungsi siber terhadap TI.",
+      "Dokumen tim tanggap insiden siber dan agenda latihan rutin.",
+      "Daftar kontak eskalasi lintas fungsi dan pihak ketiga."
+    ],
+    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi."
+  }
+]

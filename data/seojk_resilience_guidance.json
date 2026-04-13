@@ -1,0 +1,80 @@
+[
+  {
+    "id": "DR-01",
+    "title": "Konteks dan Prioritas Ketahanan Digital",
+    "section": "A. Latar Belakang",
+    "summary": "Panduan Resiliensi Digital menempatkan ketahanan digital sebagai respons atas ketergantungan operasional pada layanan digital, eksposur gangguan, dan kebutuhan menjaga kesinambungan layanan perbankan.",
+    "focus": [
+      "Gunakan konteks ancaman dan ketergantungan digital untuk memprioritaskan area pengendalian yang paling material.",
+      "Hubungkan penilaian risiko siber dengan dampaknya terhadap layanan, nasabah, dan operasi inti Bank.",
+      "Lakukan pengkinian analisa ketika terjadi perubahan signifikan pada layanan, teknologi, atau pola ancaman."
+    ],
+    "mapped_pillars": ["Assessment", "Governance", "Reporting"],
+    "related_requirements": ["II.01", "II.02", "VI.01"]
+  },
+  {
+    "id": "DR-02",
+    "title": "Tata Kelola dan Akuntabilitas Ketahanan Digital",
+    "section": "C. Kerangka Ketahanan Digital",
+    "summary": "Panduan menguatkan pentingnya akuntabilitas pengurus, arah kebijakan, pembagian peran lintas fungsi, dan pengawasan berkelanjutan atas ketahanan digital organisasi.",
+    "focus": [
+      "Pastikan Direksi, Dewan Komisaris, dan fungsi pengendalian memiliki mandat yang jelas atas ketahanan digital.",
+      "Selaraskan kebijakan dan kerangka ketahanan digital dengan strategi bisnis, TI, dan manajemen risiko.",
+      "Bangun koordinasi lintas fungsi agar pengambilan keputusan saat gangguan atau insiden dapat berlangsung cepat dan terdokumentasi."
+    ],
+    "mapped_pillars": ["Governance", "Organization"],
+    "related_requirements": ["III.01", "III.02", "III.03", "VIII.01", "VIII.02"]
+  },
+  {
+    "id": "DR-03",
+    "title": "Aset, Layanan Penting, dan Ketergantungan ICT",
+    "section": "B. Ketahanan Digital",
+    "summary": "Analisa ketahanan digital perlu berangkat dari layanan penting, aset, data, proses, dan ketergantungan teknologi maupun pihak pendukung yang memengaruhi kesinambungan operasi.",
+    "focus": [
+      "Pertahankan inventaris aset dan layanan penting beserta dependency internal dan eksternalnya.",
+      "Hubungkan identifikasi ancaman dan kerentanan dengan tingkat kritikalitas layanan dan dampak operasional.",
+      "Gunakan hasil pemetaan dependency untuk menentukan prioritas proteksi, monitoring, dan pemulihan."
+    ],
+    "mapped_pillars": ["Assessment", "Resilience"],
+    "related_requirements": ["II.02", "IV.01", "IV.02", "V.03"]
+  },
+  {
+    "id": "DR-04",
+    "title": "Pencegahan, Deteksi, dan Respons Insiden",
+    "section": "B. Ketahanan Digital",
+    "summary": "Panduan menyoroti perlunya pengamanan preventif, monitoring berkesinambungan, eskalasi insiden, dan koordinasi tindakan respons yang cepat untuk menjaga ketahanan layanan digital.",
+    "focus": [
+      "Pastikan kontrol preventif, monitoring, dan triage insiden saling terhubung dalam alur operasional yang konsisten.",
+      "Tetapkan jalur komunikasi, eskalasi, dan keputusan saat terjadi gangguan atau serangan siber.",
+      "Gunakan lesson learned insiden untuk memperbarui baseline kontrol dan prosedur respons."
+    ],
+    "mapped_pillars": ["Resilience", "Organization"],
+    "related_requirements": ["IV.02", "IV.03", "IV.04", "VIII.02"]
+  },
+  {
+    "id": "DR-05",
+    "title": "Pemulihan Layanan dan Adaptasi",
+    "section": "B. Ketahanan Digital",
+    "summary": "Ketahanan digital tidak berhenti pada containment, tetapi mencakup pemulihan layanan, pemulihan data, dan penyesuaian kontrol setelah gangguan atau insiden terjadi.",
+    "focus": [
+      "Siapkan skenario pemulihan untuk layanan prioritas berikut aset dan data pendukungnya.",
+      "Pastikan proses recovery menghasilkan pembelajaran, pembaruan prosedur, dan penguatan kontrol.",
+      "Ukur keberhasilan pemulihan dari sisi layanan, data, dan kesiapan organisasi untuk kembali beroperasi."
+    ],
+    "mapped_pillars": ["Resilience", "Reporting"],
+    "related_requirements": ["IV.04", "V.01", "VI.01"]
+  },
+  {
+    "id": "DR-06",
+    "title": "Pengujian dan Peningkatan Berkelanjutan",
+    "section": "C. Kerangka Ketahanan Digital",
+    "summary": "Panduan menguatkan pentingnya pengujian teknis, exercise berbasis skenario, evaluasi maturitas, dan tindak lanjut peningkatan berkelanjutan sebagai fondasi penguatan ketahanan digital.",
+    "focus": [
+      "Kombinasikan pengujian teknis, exercise skenario, dan evaluasi maturitas dalam satu siklus peningkatan yang terukur.",
+      "Pastikan hasil pengujian menghasilkan action plan yang dipantau sampai selesai.",
+      "Gunakan hasil evaluasi untuk menyempurnakan prioritas investasi, kompetensi, dan tata kelola ketahanan digital."
+    ],
+    "mapped_pillars": ["Testing", "Assessment", "Governance"],
+    "related_requirements": ["V.01", "V.02", "V.03", "V.04", "VII.01", "VII.02", "VII.03"]
+  }
+]

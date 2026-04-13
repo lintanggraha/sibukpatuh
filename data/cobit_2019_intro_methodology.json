@@ -1,0 +1,779 @@
+{
+  "highlights": [
+    {
+      "id": "HL-01",
+      "title": "Lebih fleksibel dan terbuka",
+      "summary": "COBIT 2019 dibuat supaya mudah dipadukan dengan standar, framework, dan regulasi lain tanpa kehilangan struktur utamanya.",
+      "details": [
+        "Bisa dipakai sebagai payung tata kelola di atas banyak referensi yang sudah dipakai organisasi.",
+        "Membuka ruang penyesuaian tanpa memaksa semua organisasi memakai bentuk yang sama persis."
+      ],
+      "color": "#2563eb"
+    },
+    {
+      "id": "HL-02",
+      "title": "Tetap relevan terhadap perubahan",
+      "summary": "Versi 2019 menekankan isu yang lebih aktual seperti transformasi digital, perubahan model operasi, dan tuntutan stakeholder yang bergerak cepat.",
+      "details": [
+        "Relevan untuk lingkungan bisnis yang berubah cepat dan sangat bergantung pada informasi serta teknologi.",
+        "Membantu organisasi menjaga arah tata kelola tetap nyambung dengan kondisi mutakhir."
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "HL-03",
+      "title": "Penerapan lebih terarah",
+      "summary": "COBIT 2019 menambah design factor dan focus area agar desain tata kelola tidak berhenti di teori, tapi lebih mudah diterjemahkan ke konteks enterprise.",
+      "details": [
+        "Organisasi bisa memulai dari konteks bisnis, profil risiko, dan cara kerja aktualnya sendiri.",
+        "Struktur ini membantu memutuskan prioritas objective yang paling penting lebih dulu."
+      ],
+      "color": "#b45309"
+    },
+    {
+      "id": "HL-04",
+      "title": "Performance management lebih jelas",
+      "summary": "Framework ini memperjelas cara membaca kinerja dan kapabilitas objective sehingga evaluasi perbaikan bisa lebih konsisten.",
+      "details": [
+        "Memudahkan pembacaan target, kondisi saat ini, dan area yang perlu diperkuat.",
+        "Cocok dipakai untuk diskusi roadmap, assurance, dan peningkatan berkelanjutan."
+      ],
+      "color": "#b91c1c"
+    }
+  ],
+  "value_outcomes": [
+    {
+      "id": "VAL-01",
+      "title": "Realisasi manfaat",
+      "summary": "Investasi dan kapabilitas I&T harus benar-benar membantu enterprise mencapai tujuan bisnisnya.",
+      "details": [
+        "Fokusnya bukan sekadar proyek selesai, tapi hasilnya terasa pada operasi dan keputusan bisnis.",
+        "Nilai harus terlihat pada layanan, proses, pengalaman stakeholder, atau pertumbuhan enterprise."
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "VAL-02",
+      "title": "Optimasi risiko",
+      "summary": "COBIT mendorong pengambilan keputusan yang sadar risiko, bukan hanya mengejar kontrol atau kecepatan implementasi.",
+      "details": [
+        "Risiko informasi dan teknologi perlu dikelola sejalan dengan risk appetite enterprise.",
+        "Tata kelola yang baik membantu menyeimbangkan peluang, ancaman, dan ketahanan operasional."
+      ],
+      "color": "#b91c1c"
+    },
+    {
+      "id": "VAL-03",
+      "title": "Optimasi sumber daya",
+      "summary": "Orang, data, aplikasi, infrastruktur, dan anggaran harus dipakai dengan prioritas yang tepat dan bisa dipertanggungjawabkan.",
+      "details": [
+        "Resource optimization menjaga supaya kapasitas penting dipakai di tempat yang paling memberi dampak.",
+        "Hal ini membantu enterprise menghindari duplikasi, pemborosan, dan gap akuntabilitas."
+      ],
+      "color": "#2563eb"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "CH-01",
+      "number": "1",
+      "title": "Pendahuluan",
+      "summary": "Menjelaskan kenapa enterprise governance of information and technology menjadi penting di tengah ketergantungan bisnis pada I&T.",
+      "details": [
+        "Membuka konteks nilai, risiko, dan kebutuhan arahan tata kelola.",
+        "Menempatkan COBIT sebagai kerangka untuk membantu pengambilan keputusan tingkat enterprise."
+      ],
+      "color": "#2563eb"
+    },
+    {
+      "id": "CH-02",
+      "number": "2",
+      "title": "Intended Audience",
+      "summary": "Menggambarkan siapa saja pembaca utama COBIT 2019 dan manfaat yang mereka peroleh dari framework ini.",
+      "details": [
+        "Mencakup board, manajemen eksekutif, pemilik proses, tim I&T, risk, compliance, dan assurance.",
+        "Menegaskan bahwa COBIT dipakai lintas peran, bukan hanya untuk fungsi teknologi."
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "CH-03",
+      "number": "3",
+      "title": "COBIT Principles",
+      "summary": "Memuat prinsip-prinsip inti yang mendasari governance system dan prinsip framework COBIT itu sendiri.",
+      "details": [
+        "Bab ini jadi fondasi cara pikir sebelum masuk ke objective dan desain penerapan.",
+        "Prinsip COBIT membantu menjaga konsistensi antara nilai bisnis dan praktik tata kelola."
+      ],
+      "color": "#b45309"
+    },
+    {
+      "id": "CH-04",
+      "number": "4",
+      "title": "Governance System and Components",
+      "summary": "Menjelaskan konsep dasar governance system, komponennya, goals cascade, dan focus area sebagai cara melihat enterprise secara utuh.",
+      "details": [
+        "Bab ini membantu pembaca memahami bagaimana objective tidak berdiri sendiri.",
+        "Komponen dan goals cascade jadi jembatan antara kebutuhan bisnis dan praktik operasional."
+      ],
+      "color": "#7c3aed"
+    },
+    {
+      "id": "CH-05",
+      "number": "5",
+      "title": "Governance and Management Objectives",
+      "summary": "Memperkenalkan core model COBIT yang terdiri dari objective governance dan management sebagai struktur utama framework.",
+      "details": [
+        "Core model inilah yang nanti dipakai untuk menilai, memprioritaskan, dan merancang governance system.",
+        "Objective dibagi ke domain governance dan management dengan peran yang berbeda."
+      ],
+      "color": "#144e72"
+    },
+    {
+      "id": "CH-06",
+      "number": "6",
+      "title": "Performance Management in COBIT",
+      "summary": "Membahas cara membaca performa, target, dan peningkatan capability pada objective yang dipilih enterprise.",
+      "details": [
+        "Bab ini membantu organisasi melihat progress secara lebih terstruktur.",
+        "Performance management membuat diskusi peningkatan lebih konkret dan tidak kabur."
+      ],
+      "color": "#b91c1c"
+    },
+    {
+      "id": "CH-07",
+      "number": "7",
+      "title": "Designing a Tailored Governance System",
+      "summary": "Menjelaskan bagaimana design factor dipakai untuk menyesuaikan governance system dengan konteks setiap enterprise.",
+      "details": [
+        "Fokusnya adalah desain yang relevan, bukan copy-paste semua objective secara merata.",
+        "Bab ini penting untuk prioritisasi dan penentuan cakupan awal implementasi."
+      ],
+      "color": "#1d4ed8"
+    },
+    {
+      "id": "CH-08",
+      "number": "8",
+      "title": "Implementing Enterprise Governance of I&T",
+      "summary": "Memberi alur implementasi bertahap supaya COBIT dipakai sebagai perjalanan perubahan, bukan sekadar dokumen referensi.",
+      "details": [
+        "Terdapat fase dari memahami driver sampai menjaga momentum perbaikan.",
+        "Bab ini cocok dipakai untuk menyusun roadmap dan change plan."
+      ],
+      "color": "#c2410c"
+    },
+    {
+      "id": "CH-09",
+      "number": "9",
+      "title": "Getting Started: Making the Case",
+      "summary": "Membantu membangun business case dan narasi awal mengapa enterprise perlu bergerak dengan pendekatan COBIT.",
+      "details": [
+        "Berguna untuk sponsor awal, penyelarasan stakeholder, dan penentuan quick wins.",
+        "Menjembatani antara konsep framework dan kebutuhan adopsi nyata."
+      ],
+      "color": "#15803d"
+    },
+    {
+      "id": "CH-10",
+      "number": "10",
+      "title": "Standards, Frameworks, and Regulations",
+      "summary": "Menunjukkan posisi COBIT dalam ekosistem referensi lain dan kenapa framework ini cocok dipakai sebagai penghubung lintas acuan.",
+      "details": [
+        "Bab ini menguatkan peran COBIT sebagai integrator, bukan pengganti tunggal semua standar lain.",
+        "Sangat berguna saat enterprise harus merapikan banyak referensi kepatuhan sekaligus."
+      ],
+      "color": "#475569"
+    }
+  ],
+  "principles_system": [
+    {
+      "id": "GPS-01",
+      "title": "Memberikan nilai kepada pemangku kepentingan",
+      "summary": "Governance system harus menjaga agar manfaat diwujudkan, risiko dioptimalkan, dan sumber daya dipakai secara bertanggung jawab.",
+      "importance": "Prinsip ini memastikan diskusi I&T selalu kembali ke nilai bisnis dan kebutuhan stakeholder.",
+      "focus": [
+        "Hubungkan keputusan I&T dengan tujuan enterprise.",
+        "Jaga keseimbangan antara manfaat, risiko, dan resource.",
+        "Gunakan hasil bisnis sebagai titik ukur utama."
+      ],
+      "group": "Nilai",
+      "color": "#0f766e"
+    },
+    {
+      "id": "GPS-02",
+      "title": "Pendekatan holistik",
+      "summary": "Tata kelola tidak cukup dibangun dari proses saja; ia harus melihat organisasi sebagai sistem yang utuh.",
+      "importance": "Enterprise biasanya gagal bukan karena satu komponen hilang, tetapi karena antar-komponen tidak nyambung.",
+      "focus": [
+        "Lihat proses, struktur, budaya, informasi, dan orang sebagai satu paket.",
+        "Hindari solusi yang hanya memperbaiki satu sisi.",
+        "Pastikan hubungan antar-komponen terlihat jelas."
+      ],
+      "group": "Desain Sistem",
+      "color": "#2563eb"
+    },
+    {
+      "id": "GPS-03",
+      "title": "Governance system bersifat dinamis",
+      "summary": "Governance system perlu mampu merespons perubahan strategi, ancaman, teknologi, dan kebutuhan stakeholder.",
+      "importance": "Framework yang tidak bergerak akan cepat tertinggal dari realitas bisnis dan risiko aktual.",
+      "focus": [
+        "Tinjau ulang desain saat konteks enterprise berubah.",
+        "Masukkan perubahan eksternal ke dalam evaluasi tata kelola.",
+        "Jaga governance system tetap hidup, bukan statis."
+      ],
+      "group": "Adaptasi",
+      "color": "#b45309"
+    },
+    {
+      "id": "GPS-04",
+      "title": "Governance berbeda dari management",
+      "summary": "Governance menetapkan arah, evaluasi, dan pemantauan; management mengeksekusi, merencanakan, membangun, dan mengoperasikan.",
+      "importance": "Pemisahan ini membantu akuntabilitas tetap jelas antara pengarah dan pelaksana.",
+      "focus": [
+        "Board dan manajemen puncak fokus pada evaluasi dan arah.",
+        "Tim management fokus pada perencanaan dan eksekusi.",
+        "Jangan campur peran pengawasan dengan aktivitas operasional harian."
+      ],
+      "group": "Peran",
+      "color": "#b91c1c"
+    },
+    {
+      "id": "GPS-05",
+      "title": "Disesuaikan dengan kebutuhan enterprise",
+      "summary": "COBIT tidak dimaksudkan untuk diterapkan seragam; desainnya perlu disesuaikan dengan konteks, prioritas, dan tingkat kematangan enterprise.",
+      "importance": "Prinsip ini mencegah implementasi yang terlalu generik dan tidak relevan dengan kondisi aktual organisasi.",
+      "focus": [
+        "Gunakan konteks bisnis sebagai titik mulai desain.",
+        "Prioritaskan objective yang paling berdampak lebih dulu.",
+        "Sesuaikan kedalaman penerapan dengan kapasitas enterprise."
+      ],
+      "group": "Tailoring",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "GPS-06",
+      "title": "Mencakup enterprise secara end-to-end",
+      "summary": "Governance system harus melihat seluruh enterprise, bukan hanya fungsi TI atau proyek tertentu.",
+      "importance": "Informasi dan teknologi memengaruhi banyak unit, jadi governance tidak boleh terkotak dalam satu silo.",
+      "focus": [
+        "Lihat I&T sebagai bagian dari operasi enterprise secara menyeluruh.",
+        "Masukkan relasi lintas unit ke dalam desain governance.",
+        "Pastikan objective relevan untuk bisnis, bukan hanya fungsi TI."
+      ],
+      "group": "Cakupan",
+      "color": "#144e72"
+    }
+  ],
+  "principles_framework": [
+    {
+      "id": "GPF-01",
+      "title": "Berbasis model konseptual",
+      "summary": "COBIT dibangun di atas model konseptual yang membantu hubungan antara tujuan, objective, komponen, dan hasil tetap konsisten.",
+      "importance": "Model yang jelas membuat framework lebih mudah dijelaskan, dipetakan, dan dikembangkan.",
+      "focus": [
+        "Jaga keterhubungan antara konsep, objective, dan outcome.",
+        "Gunakan model sebagai alat komunikasi lintas stakeholder.",
+        "Pastikan desain tetap logis saat diperluas."
+      ],
+      "group": "Struktur",
+      "color": "#2563eb"
+    },
+    {
+      "id": "GPF-02",
+      "title": "Terbuka dan fleksibel",
+      "summary": "Framework ini dirancang untuk mudah diperluas, dipadukan, dan disesuaikan dengan kebutuhan enterprise maupun framework lain.",
+      "importance": "Organisasi jarang hanya memakai satu referensi, jadi fleksibilitas menjadi syarat penting.",
+      "focus": [
+        "Padukan COBIT dengan standar yang sudah berjalan.",
+        "Gunakan focus area atau penyesuaian tambahan bila perlu.",
+        "Biarkan framework berkembang mengikuti kebutuhan enterprise."
+      ],
+      "group": "Integrasi",
+      "color": "#0f766e"
+    },
+    {
+      "id": "GPF-03",
+      "title": "Selaras dengan standar, framework, dan regulasi utama",
+      "summary": "COBIT membantu menjembatani kebutuhan tata kelola dengan referensi lain yang lebih teknis, sektoral, atau regulatif.",
+      "importance": "Penyelarasan ini membuat COBIT kuat dipakai sebagai bahasa bersama untuk governance.",
+      "focus": [
+        "Gunakan COBIT sebagai penghubung antar-referensi.",
+        "Permudah pembacaan kepatuhan lintas standar.",
+        "Jaga konsistensi keputusan governance di atas banyak acuan."
+      ],
+      "group": "Penyelarasan",
+      "color": "#15803d"
+    }
+  ],
+  "components": [
+    {
+      "id": "CMP-01",
+      "title": "Processes",
+      "summary": "Proses menjelaskan aktivitas dan alur kerja yang perlu berjalan agar objective governance dan management benar-benar terlaksana.",
+      "importance": "Tanpa proses yang jelas, banyak keputusan governance berhenti di atas kertas.",
+      "focus": [
+        "Tentukan input, output, tanggung jawab, dan pengukuran proses.",
+        "Pastikan proses mendukung objective yang dipilih.",
+        "Gunakan proses sebagai mekanisme kerja, bukan sekadar dokumentasi."
+      ],
+      "group": "Operasi",
+      "color": "#144e72"
+    },
+    {
+      "id": "CMP-02",
+      "title": "Organizational Structures",
+      "summary": "Struktur organisasi menentukan siapa yang mengambil keputusan, siapa yang mengarahkan, dan siapa yang bertanggung jawab.",
+      "importance": "Banyak masalah governance sebenarnya berasal dari peran dan jalur keputusan yang kabur.",
+      "focus": [
+        "Perjelas peran board, komite, dan manajemen.",
+        "Tetapkan escalation path yang masuk akal.",
+        "Pastikan struktur mendukung akuntabilitas lintas unit."
+      ],
+      "group": "Arah dan Akuntabilitas",
+      "color": "#0f766e"
+    },
+    {
+      "id": "CMP-03",
+      "title": "Principles, Policies and Procedures",
+      "summary": "Komponen ini menerjemahkan arah governance menjadi aturan, panduan, dan cara kerja yang bisa diikuti secara konsisten.",
+      "importance": "Kebijakan yang baik membuat keputusan tidak terlalu bergantung pada orang tertentu saja.",
+      "focus": [
+        "Pastikan kebijakan mendukung prioritas enterprise.",
+        "Turunkan kebijakan menjadi prosedur yang bisa dijalankan.",
+        "Jaga dokumentasi tetap relevan dan tidak berlebihan."
+      ],
+      "group": "Arahan",
+      "color": "#2563eb"
+    },
+    {
+      "id": "CMP-04",
+      "title": "Information",
+      "summary": "Informasi menjadi bahan utama pengambilan keputusan, pengawasan, dan evaluasi kinerja dalam governance system.",
+      "importance": "Governance yang baik butuh informasi yang tepat, akurat, relevan, dan tersedia saat dibutuhkan.",
+      "focus": [
+        "Pastikan informasi penting punya kualitas yang cukup.",
+        "Jaga akses, integritas, dan relevansi informasi.",
+        "Gunakan informasi untuk memantau outcome dan risiko."
+      ],
+      "group": "Pengambilan Keputusan",
+      "color": "#b45309"
+    },
+    {
+      "id": "CMP-05",
+      "title": "Culture, Ethics and Behavior",
+      "summary": "Budaya dan perilaku menentukan apakah keputusan governance betul-betul hidup dalam keseharian enterprise.",
+      "importance": "Kontrol yang bagus tetap bisa gagal jika perilaku organisasi bergerak ke arah yang sebaliknya.",
+      "focus": [
+        "Bangun perilaku yang mendukung akuntabilitas dan transparansi.",
+        "Perhatikan insentif, kebiasaan, dan tone from the top.",
+        "Lihat budaya sebagai bagian inti, bukan tempelan."
+      ],
+      "group": "Perilaku",
+      "color": "#b91c1c"
+    },
+    {
+      "id": "CMP-06",
+      "title": "People, Skills and Competencies",
+      "summary": "Orang dan kemampuannya menentukan apakah enterprise mampu menjalankan objective yang sudah dipilih.",
+      "importance": "Desain governance yang rapi akan tersendat jika peran kunci tidak didukung skill yang sesuai.",
+      "focus": [
+        "Pahami kebutuhan skill untuk objective yang diprioritaskan.",
+        "Isi gap kompetensi yang paling kritikal lebih dulu.",
+        "Pastikan kapabilitas orang berkembang bersama kebutuhan enterprise."
+      ],
+      "group": "Kapabilitas",
+      "color": "#15803d"
+    },
+    {
+      "id": "CMP-07",
+      "title": "Services, Infrastructure and Applications",
+      "summary": "Kapabilitas layanan dan platform teknis harus mendukung keputusan governance secara nyata di lapangan.",
+      "importance": "Objective governance perlu ditopang kemampuan operasional yang benar-benar tersedia dan stabil.",
+      "focus": [
+        "Lihat apakah layanan dan platform mendukung outcome yang dituju.",
+        "Pastikan arsitektur dan aset teknis tidak menjadi bottleneck.",
+        "Hubungkan keputusan governance dengan kesiapan layanan nyata."
+      ],
+      "group": "Platform",
+      "color": "#475569"
+    }
+  ],
+  "design_factors": [
+    {
+      "id": "DF-01",
+      "title": "Enterprise Strategy",
+      "summary": "Strategi enterprise memengaruhi objective governance mana yang perlu lebih diprioritaskan.",
+      "importance": "COBIT menekankan bahwa desain governance harus mulai dari arah bisnis, bukan dari daftar kontrol.",
+      "focus": [
+        "Baca objective melalui lensa strategi pertumbuhan, inovasi, stabilitas, atau layanan.",
+        "Selaraskan prioritas governance dengan tujuan strategis enterprise."
+      ],
+      "group": "Strategi",
+      "color": "#2563eb"
+    },
+    {
+      "id": "DF-02",
+      "title": "Enterprise Goals",
+      "summary": "Goal enterprise membantu menentukan outcome apa yang paling perlu dilindungi atau ditingkatkan lewat I&T.",
+      "importance": "Tanpa melihat goal enterprise, objective governance mudah terasa generik dan tidak tajam.",
+      "focus": [
+        "Hubungkan governance dengan sasaran bisnis yang benar-benar sedang dikejar.",
+        "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
+      ],
+      "group": "Nilai",
+      "color": "#0f766e"
+    },
+    {
+      "id": "DF-03",
+      "title": "Risk Profile",
+      "summary": "Profil risiko enterprise membantu menentukan objective yang perlu diperkuat untuk mengendalikan eksposur paling penting.",
+      "importance": "Prioritas governance akan berbeda antara enterprise dengan profil risiko yang berbeda.",
+      "focus": [
+        "Petakan risiko yang paling material bagi enterprise.",
+        "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
+      ],
+      "group": "Risiko",
+      "color": "#b91c1c"
+    },
+    {
+      "id": "DF-04",
+      "title": "I&T-Related Issues",
+      "summary": "Masalah I&T yang sedang terjadi memberi sinyal area governance mana yang paling perlu dibenahi lebih dulu.",
+      "importance": "Design factor ini menjaga agar desain tidak buta terhadap problem nyata yang sedang dirasakan enterprise.",
+      "focus": [
+        "Lihat issue yang berulang, bottleneck, atau kegagalan layanan.",
+        "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
+      ],
+      "group": "Risiko",
+      "color": "#c2410c"
+    },
+    {
+      "id": "DF-05",
+      "title": "Threat Landscape",
+      "summary": "Lingkungan ancaman memengaruhi kebutuhan kontrol, respons, pengawasan, dan tingkat kewaspadaan governance.",
+      "importance": "Ancaman yang berubah cepat menuntut governance system yang tidak kaku.",
+      "focus": [
+        "Perhatikan tren ancaman yang paling relevan bagi enterprise.",
+        "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
+      ],
+      "group": "Risiko",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "DF-06",
+      "title": "Compliance Requirements",
+      "summary": "Kewajiban kepatuhan akan memengaruhi kedalaman dokumentasi, assurance, pelaporan, dan pengendalian yang dibutuhkan.",
+      "importance": "Enterprise yang berada di sektor sangat teregulasi perlu desain governance yang lebih eksplisit dan siap audit.",
+      "focus": [
+        "Petakan regulasi dan kewajiban yang paling membentuk cara kerja enterprise.",
+        "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
+      ],
+      "group": "Kepatuhan",
+      "color": "#144e72"
+    },
+    {
+      "id": "DF-07",
+      "title": "Role of IT",
+      "summary": "Peran I&T di enterprise, apakah sebagai support, factory, turnaround, atau strategic, akan mengubah bobot prioritas objective.",
+      "importance": "Governance di enterprise yang sangat digital tidak bisa disamakan dengan enterprise yang fungsi TI-nya masih terbatas.",
+      "focus": [
+        "Pahami seberapa kritikal I&T dalam model bisnis enterprise.",
+        "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
+      ],
+      "group": "Model Operasi",
+      "color": "#15803d"
+    },
+    {
+      "id": "DF-08",
+      "title": "Sourcing Model for IT",
+      "summary": "Pilihan sourcing, internal, outsourced, cloud, hybrid, memengaruhi kontrol, akuntabilitas, dan mekanisme pengawasan.",
+      "importance": "Model sourcing mengubah siapa yang menjalankan layanan dan siapa yang tetap harus bertanggung jawab.",
+      "focus": [
+        "Jangan anggap risiko governance hilang hanya karena layanan dialihdayakan.",
+        "Perjelas kontrol dan akuntabilitas lintas pihak."
+      ],
+      "group": "Model Operasi",
+      "color": "#475569"
+    },
+    {
+      "id": "DF-09",
+      "title": "Implementation Methods for IT",
+      "summary": "Cara enterprise membangun dan mengubah solusi I&T, tradisional, agile, atau hybrid, perlu tercermin dalam desain governance.",
+      "importance": "Governance yang tidak cocok dengan cara delivery akan mudah ditolak atau diabaikan.",
+      "focus": [
+        "Selaraskan governance dengan metode delivery yang dipakai tim.",
+        "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
+      ],
+      "group": "Delivery",
+      "color": "#1d4ed8"
+    },
+    {
+      "id": "DF-10",
+      "title": "Technology Adoption Strategy",
+      "summary": "Kecepatan adopsi teknologi, apakah konservatif atau agresif, memengaruhi kebutuhan pengawasan dan toleransi eksperimen.",
+      "importance": "Enterprise yang agresif mengadopsi teknologi baru memerlukan governance yang lebih sigap dan sadar risiko.",
+      "focus": [
+        "Pahami gaya adopsi teknologi enterprise sebelum menentukan kontrol.",
+        "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
+      ],
+      "group": "Delivery",
+      "color": "#0ea5e9"
+    },
+    {
+      "id": "DF-11",
+      "title": "Enterprise Size",
+      "summary": "Ukuran enterprise memengaruhi kompleksitas struktur, formalitas proses, dan cara objective dijalankan.",
+      "importance": "Skala organisasi menentukan seberapa ringan atau formal governance system perlu dibentuk.",
+      "focus": [
+        "Sesuaikan tingkat formalitas dengan ukuran dan kompleksitas enterprise.",
+        "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
+      ],
+      "group": "Skala",
+      "color": "#b45309"
+    }
+  ],
+  "domains": [
+    {
+      "id": "EDM",
+      "title": "Evaluate, Direct and Monitor",
+      "summary": "Domain governance yang fokus pada evaluasi, pemberian arah, dan pemantauan hasil pada tingkat enterprise.",
+      "importance": "EDM menjaga agar board dan pimpinan punya titik pijak yang jelas dalam mengarahkan I&T.",
+      "focus": [
+        "Menentukan arah dan ekspektasi tingkat enterprise.",
+        "Memantau apakah hasil yang diinginkan benar-benar tercapai.",
+        "Menjaga akuntabilitas governance tetap kuat."
+      ],
+      "group": "Governance",
+      "metric_label": "Objektif",
+      "count": 5,
+      "color": "#0f766e"
+    },
+    {
+      "id": "APO",
+      "title": "Align, Plan and Organize",
+      "summary": "Domain management yang menata arah, perencanaan, arsitektur, portofolio, dan pengorganisasian kapabilitas I&T.",
+      "importance": "APO membantu menyelaraskan keputusan manajemen dengan arah enterprise dan kebutuhan governance.",
+      "focus": [
+        "Menyusun kebijakan, perencanaan, dan model pengorganisasian.",
+        "Mengelola arah capability dan prioritas I&T."
+      ],
+      "group": "Management",
+      "metric_label": "Objektif",
+      "count": 14,
+      "color": "#2563eb"
+    },
+    {
+      "id": "BAI",
+      "title": "Build, Acquire and Implement",
+      "summary": "Domain management yang mengatur perubahan, pengembangan solusi, akuisisi, dan implementasi capability baru.",
+      "importance": "BAI penting untuk memastikan perubahan I&T tidak lepas dari arah governance dan kebutuhan bisnis.",
+      "focus": [
+        "Mengelola perubahan, delivery, dan kesiapan implementasi.",
+        "Menjaga supaya solusi baru memberi nilai dan tidak menambah kekacauan."
+      ],
+      "group": "Management",
+      "metric_label": "Objektif",
+      "count": 11,
+      "color": "#b45309"
+    },
+    {
+      "id": "DSS",
+      "title": "Deliver, Service and Support",
+      "summary": "Domain management yang berkaitan dengan operasi layanan, support, keamanan, kontinuitas, dan pemrosesan layanan harian.",
+      "importance": "DSS membuat governance terasa nyata dalam operasi sehari-hari dan kualitas layanan yang diterima bisnis.",
+      "focus": [
+        "Menjaga layanan berjalan stabil dan responsif.",
+        "Mengelola operasi, service support, dan kontrol operasional."
+      ],
+      "group": "Management",
+      "metric_label": "Objektif",
+      "count": 6,
+      "color": "#b91c1c"
+    },
+    {
+      "id": "MEA",
+      "title": "Monitor, Evaluate and Assess",
+      "summary": "Domain management yang memastikan kinerja, kontrol internal, kepatuhan, dan efektivitas objective tetap dipantau dan dinilai.",
+      "importance": "MEA memberi ruang refleksi dan assurance agar enterprise tahu apa yang bekerja dan apa yang perlu diperbaiki.",
+      "focus": [
+        "Memantau performa dan kepatuhan secara berkala.",
+        "Menghasilkan insight untuk perbaikan berkelanjutan."
+      ],
+      "group": "Management",
+      "metric_label": "Objektif",
+      "count": 4,
+      "color": "#7c3aed"
+    }
+  ],
+  "goal_cascade": [
+    {
+      "id": "GC-01",
+      "title": "Stakeholder drivers",
+      "summary": "Kebutuhan, tekanan, dan ekspektasi stakeholder menjadi pemicu awal arah governance.",
+      "details": [
+        "Mulai dari apa yang benar-benar diminta, dikhawatirkan, atau diharapkan stakeholder.",
+        "Driver ini menjadi konteks untuk membaca prioritas enterprise."
+      ],
+      "color": "#2563eb"
+    },
+    {
+      "id": "GC-02",
+      "title": "Enterprise goals",
+      "summary": "Driver stakeholder diterjemahkan menjadi tujuan enterprise yang lebih konkret dan bisa diarahkan.",
+      "details": [
+        "Tujuan enterprise membantu memilih outcome yang ingin dicapai.",
+        "Di sinilah bahasa bisnis mulai dipertajam."
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "GC-03",
+      "title": "Alignment goals",
+      "summary": "Enterprise goals kemudian diturunkan menjadi alignment goals agar kebutuhan bisnis bisa dijembatani oleh I&T.",
+      "details": [
+        "Langkah ini menghubungkan tujuan bisnis dengan fokus pengelolaan informasi dan teknologi.",
+        "Alignment goals membantu diskusi prioritas menjadi lebih operasional."
+      ],
+      "color": "#b45309"
+    },
+    {
+      "id": "GC-04",
+      "title": "Governance and management objectives",
+      "summary": "Alignment goals diterjemahkan ke objective COBIT yang menjadi dasar desain, implementasi, dan evaluasi governance system.",
+      "details": [
+        "Pada tahap ini enterprise masuk ke domain dan objective yang lebih spesifik.",
+        "Core model membantu memilih objective yang paling relevan untuk konteks enterprise."
+      ],
+      "color": "#144e72"
+    }
+  ],
+  "implementation_phases": [
+    {
+      "id": "IMP-01",
+      "title": "Apa pendorongnya?",
+      "summary": "Mulai dengan memahami masalah, peluang, tekanan, atau aspirasi yang membuat enterprise perlu bergerak.",
+      "importance": "Tanpa driver yang jelas, implementasi mudah terasa seperti proyek administratif.",
+      "focus": [
+        "Identifikasi alasan bisnis dan risiko yang paling mendesak.",
+        "Bangun urgensi yang bisa dipahami stakeholder."
+      ],
+      "group": "Persiapan",
+      "color": "#2563eb"
+    },
+    {
+      "id": "IMP-02",
+      "title": "Di mana posisi kita sekarang?",
+      "summary": "Nilai kondisi saat ini untuk melihat gap, kendala, dan area yang sudah cukup matang.",
+      "importance": "Baseline yang jujur membantu roadmap menjadi realistis.",
+      "focus": [
+        "Pahami kondisi objektif, bukan asumsi.",
+        "Petakan area kuat dan area yang masih rapuh."
+      ],
+      "group": "Asesmen",
+      "color": "#0f766e"
+    },
+    {
+      "id": "IMP-03",
+      "title": "Kita ingin ke mana?",
+      "summary": "Tetapkan target yang ingin dicapai, objective yang diprioritaskan, dan hasil yang diharapkan.",
+      "importance": "Tahap ini mencegah organisasi bergerak tanpa definisi sukses yang jelas.",
+      "focus": [
+        "Tentukan target yang relevan dengan konteks enterprise.",
+        "Pilih objective dan outcome yang benar-benar dibutuhkan."
+      ],
+      "group": "Arah",
+      "color": "#b45309"
+    },
+    {
+      "id": "IMP-04",
+      "title": "Apa yang harus dilakukan?",
+      "summary": "Susun inisiatif, urutan kerja, resource, dan perubahan yang dibutuhkan untuk menutup gap prioritas.",
+      "importance": "Roadmap yang konkret membuat COBIT bisa ditindaklanjuti lintas fungsi.",
+      "focus": [
+        "Turunkan target menjadi paket kerja yang bisa dikelola.",
+        "Tentukan prioritas dan dependency antar-inisiatif."
+      ],
+      "group": "Perencanaan",
+      "color": "#b91c1c"
+    },
+    {
+      "id": "IMP-05",
+      "title": "Bagaimana kita sampai ke sana?",
+      "summary": "Jalankan program perubahan, kelola stakeholder, dan pastikan implementasi tetap sejalan dengan tujuan awal.",
+      "importance": "Perubahan governance selalu bersinggungan dengan perilaku, bukan cuma dokumen.",
+      "focus": [
+        "Kelola change enablement dan komunikasi.",
+        "Pastikan implementasi diterjemahkan ke praktik kerja."
+      ],
+      "group": "Eksekusi",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "IMP-06",
+      "title": "Apakah kita sudah sampai?",
+      "summary": "Ukur hasil, tinjau pencapaian, dan lihat apakah perubahan benar-benar menghasilkan outcome yang diinginkan.",
+      "importance": "Tahap ini menjaga agar implementasi tidak dianggap selesai hanya karena artefak sudah dibuat.",
+      "focus": [
+        "Bandingkan hasil aktual dengan target.",
+        "Pastikan ada pembacaan manfaat, risiko, dan resource yang lebih baik."
+      ],
+      "group": "Evaluasi",
+      "color": "#15803d"
+    },
+    {
+      "id": "IMP-07",
+      "title": "Bagaimana menjaga momentum?",
+      "summary": "Lanjutkan perbaikan, perbarui prioritas, dan pastikan governance system tetap relevan terhadap perubahan baru.",
+      "importance": "Governance yang baik dijaga sebagai kebiasaan, bukan kegiatan sesaat.",
+      "focus": [
+        "Gunakan hasil evaluasi untuk iterasi berikutnya.",
+        "Jaga governance system tetap hidup dan berkembang."
+      ],
+      "group": "Keberlanjutan",
+      "color": "#475569"
+    }
+  ],
+  "audiences": [
+    {
+      "id": "AUD-01",
+      "title": "Board dan governing body",
+      "summary": "Kelompok ini memakai COBIT untuk memastikan I&T benar-benar diarahkan, dipantau, dan dihubungkan ke nilai enterprise.",
+      "details": [
+        "Membantu melihat apakah arah, pengawasan, dan akuntabilitas sudah cukup kuat.",
+        "Cocok untuk diskusi tingkat strategi dan pengambilan keputusan besar."
+      ],
+      "color": "#0f766e"
+    },
+    {
+      "id": "AUD-02",
+      "title": "Executive management dan pemilik bisnis",
+      "summary": "COBIT memberi bahasa bersama untuk menyelaraskan sasaran bisnis, prioritas teknologi, dan kebutuhan perubahan.",
+      "details": [
+        "Memudahkan penetapan prioritas capability dan portfolio perubahan.",
+        "Membantu menjaga keputusan I&T tetap relevan bagi operasi dan tujuan bisnis."
+      ],
+      "color": "#2563eb"
+    },
+    {
+      "id": "AUD-03",
+      "title": "Risk, compliance, audit, dan assurance",
+      "summary": "Kelompok assurance memakai COBIT sebagai struktur untuk membaca kontrol, akuntabilitas, performa, dan area yang perlu diuji.",
+      "details": [
+        "Berguna untuk menyusun lingkup review dan memberi penilaian yang lebih konsisten.",
+        "Membantu menerjemahkan governance ke dalam assurance yang lebih terarah."
+      ],
+      "color": "#b91c1c"
+    },
+    {
+      "id": "AUD-04",
+      "title": "Pemimpin I&T dan tim implementasi",
+      "summary": "Tim I&T memakai COBIT untuk menyelaraskan delivery, operasi, dan perubahan dengan arah tata kelola enterprise.",
+      "details": [
+        "Bisa dipakai untuk memetakan objective mana yang perlu diperkuat lebih dulu.",
+        "Membantu tim teknis memahami ekspektasi governance dalam bahasa yang lebih sistematis."
+      ],
+      "color": "#b45309"
+    }
+  ]
+}
