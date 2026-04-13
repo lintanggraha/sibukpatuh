@@ -41,7 +41,7 @@
 
       <div class="tab-content sej-grid">
         <!-- Tab 1: Ringkasan Program -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="sej-grid two">
             <article class="sej-panel">
               <div class="sej-head"><h3>Lanskap pilar regulasi</h3><span class="sej-chip">{{ pillarBreakdown.length }} pilar</span></div>
@@ -79,7 +79,7 @@
         </div>
 
         <!-- Tab 2: Explorer Kewajiban -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="sej-workspace">
             <article class="sej-panel">
               <div class="sej-head"><h3>Filter Workspace</h3><span class="sej-chip">{{ totalRequirements }} requirement</span></div>
@@ -116,7 +116,7 @@
         </div>
 
         <!-- Tab 3: Lampiran & Laporan -->
-        <div v-show="activeTab === 'reference'">
+        <div v-if="activeTab === 'reference'" key="reference-tab">
           <div class="sej-refspace">
             <article class="sej-panel">
               <div class="sej-head"><h3>Filter lampiran</h3><span class="sej-chip">{{ totalAppendices }} lampiran</span></div>
@@ -382,9 +382,10 @@ export default {
 .sej-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .sej-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
 .sej-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
-.sej-list{display:grid;gap:.55rem;max-height:720px;overflow-y:auto;scroll-behavior:smooth;padding-right:.12rem}
-.sej-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer}
-.sej-item.active{border-color:rgba(20,78,114,.22);box-shadow:0 10px 20px rgba(20,78,114,.05);background:rgba(255,255,255,.96)}
+.sej-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.sej-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.sej-item:last-child{margin-bottom:0}
+.sej-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
 .sej-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
 .sej-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
 .sej-item-code,.sej-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
@@ -392,7 +393,7 @@ export default {
 .sej-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
 .sej-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
 .sej-pill{padding:.2rem .45rem;font-size:.68rem;background:rgba(20,38,59,.08);color:var(--ink)}
-.sej-inspector{position:sticky;top:1rem;min-height:720px;display:flex;flex-direction:column}
+.sej-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
 .sej-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
 .sej-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
 .sej-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}

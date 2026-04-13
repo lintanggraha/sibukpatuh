@@ -138,7 +138,7 @@
 
       <div class="tab-content pbi-grid">
         <!-- Tab 1: Ringkasan Regulasi -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="pbi-grid two">
             <article class="pbi-panel">
               <div class="pbi-head">
@@ -266,7 +266,7 @@
         </div>
 
         <!-- Tab 2: Explorer Kewajiban -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="pbi-workspace">
             <article class="pbi-panel">
               <div class="pbi-head">
@@ -465,7 +465,7 @@
         </div>
 
         <!-- Tab 3: Pelaporan & Pengawasan -->
-        <div v-show="activeTab === 'reference'">
+        <div v-if="activeTab === 'reference'" key="reference-tab">
           <div class="pbi-refspace">
             <article class="pbi-panel">
               <div class="pbi-head">
@@ -1442,8 +1442,8 @@ export default {
   line-height: 1.5;
 }
 .pbi-list {
-  display: grid;
-  gap: 0.55rem;
+  display: flex;
+  flex-direction: column;
   max-height: 720px;
   overflow-y: auto;
   padding-right: 0.12rem;
@@ -1452,16 +1452,22 @@ export default {
   position: relative;
   width: 100%;
   padding: 0.7rem 0.78rem 0.66rem 0.88rem;
+  margin-bottom: 0.55rem;
   border-radius: 14px;
   border: 1px solid rgba(20, 38, 59, 0.08);
   background: #fff;
   text-align: left;
   cursor: pointer;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 80px;
+}
+.pbi-item:last-child {
+  margin-bottom: 0;
 }
 .pbi-item.active {
-  border-color: rgba(20, 78, 114, 0.22);
-  box-shadow: 0 10px 20px rgba(20, 78, 114, 0.05);
-  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(20, 78, 114, 0.35);
+  border-left-width: 0.28rem;
+  background: rgba(238, 245, 245, 0.6);
 }
 .pbi-item:before {
   content: "";
@@ -1513,8 +1519,8 @@ export default {
   color: var(--ink);
 }
 .pbi-inspector {
-  position: sticky;
-  top: 1rem;
+  position: relative;
+  top: auto;
   min-height: 720px;
   display: flex;
   flex-direction: column;

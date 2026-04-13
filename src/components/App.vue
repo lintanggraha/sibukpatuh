@@ -58,7 +58,9 @@
       <main class="framework-page">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
-            <component :is="Component" />
+            <div :key="$route.fullPath" class="route-wrapper">
+              <component :is="Component" />
+            </div>
           </transition>
         </router-view>
       </main>
@@ -450,11 +452,10 @@ body {
   z-index: 1200 !important;
   min-width: 16.5rem !important;
   padding: 0.45rem !important;
-  border: 1px solid rgba(20, 78, 114, 0.12) !important;
+  border: 1px solid rgba(20, 78, 114, 0.15) !important;
   border-radius: 20px !important;
-  background: rgba(255, 255, 255, 0.92) !important;
-  box-shadow: 0 22px 42px rgba(15, 23, 42, 0.14) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #fff !important;
+  box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12) !important;
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -514,6 +515,11 @@ body {
   background: var(--shell);
   box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(16px);
+}
+
+.route-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 .alert ul {

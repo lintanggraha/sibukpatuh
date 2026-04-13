@@ -41,7 +41,7 @@
 
       <div class="tab-content nst-grid">
         <!-- Tab 1: Ringkasan -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="nst-grid two">
             <article class="nst-panel">
               <div class="nst-head"><h3>Lanskap fungsi</h3><span class="nst-chip">{{ totalFuncs }} area fungsi</span></div>
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Tab 2: Eksplorasi -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="nst-workspace">
             <article class="nst-panel">
               <div class="nst-head"><h3>Filter Tinjauan</h3><span class="nst-chip">{{ totalSubs }} subkategori</span></div>
@@ -107,7 +107,7 @@
         </div>
 
         <!-- Tab 3: Referensi SP 800-53 -->
-        <div v-show="activeTab === 'reference'">
+        <div v-if="activeTab === 'reference'" key="reference-tab">
           <div class="nst-refspace">
             <article class="nst-panel">
               <div class="nst-head"><h3>Filter referensi</h3><span class="nst-chip">{{ sp800Controls.length }} kontrol</span></div>
@@ -382,9 +382,10 @@ export default {
 .nst-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .nst-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
 .nst-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
-.nst-list{display:grid;gap:.55rem;max-height:720px;overflow-y:auto;scroll-behavior:smooth;padding-right:.12rem}
-.nst-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer}
-.nst-item.active{border-color:rgba(20,78,114,.22);box-shadow:0 10px 20px rgba(20,78,114,.05);background:rgba(255,255,255,.96)}
+.nst-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.nst-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.nst-item:last-child{margin-bottom:0}
+.nst-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
 .nst-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
 .nst-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
 .nst-item-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
@@ -392,7 +393,7 @@ export default {
 .nst-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
 .nst-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
 .nst-pill{padding:.2rem .45rem;font-size:.68rem;background:rgba(20,38,59,.08);color:var(--ink)}
-.nst-inspector{position:sticky;top:1rem;min-height:720px;display:flex;flex-direction:column}
+.nst-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
 .nst-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
 .nst-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
 .nst-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}

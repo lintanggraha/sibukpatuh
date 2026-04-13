@@ -118,7 +118,7 @@
 
       <div class="tab-content cob-grid">
         <!-- Tab 1: Ringkasan Framework -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="cob-two">
             <article class="cob-panel">
               <div class="cob-head">
@@ -246,7 +246,7 @@
         </div>
 
         <!-- Tab 2: Explorer Konsep -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="cob-workspace">
             <article class="cob-panel">
               <div class="cob-head">
@@ -395,7 +395,7 @@
         </div>
 
         <!-- Tab 3: Desain & Implementasi -->
-        <div v-show="activeTab === 'journey'">
+        <div v-if="activeTab === 'journey'" key="journey-tab">
           <div class="cob-two">
             <article class="cob-panel">
               <div class="cob-head">
@@ -1100,8 +1100,8 @@ export default {
   line-height: 1.5;
 }
 .cob-list {
-  display: grid;
-  gap: 0.55rem;
+  display: flex;
+  flex-direction: column;
   max-height: 760px;
   overflow-y: auto;
   padding-right: 0.12rem;
@@ -1109,13 +1109,20 @@ export default {
 .cob-item {
   position: relative;
   padding: 0.72rem 0.8rem 0.68rem 0.92rem;
+  margin-bottom: 0.55rem;
   border-radius: 14px;
   background: #fff;
   text-align: left;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 80px;
+}
+.cob-item:last-child {
+  margin-bottom: 0;
 }
 .cob-item.active {
-  border-color: rgba(20, 78, 114, 0.22);
-  box-shadow: 0 10px 20px rgba(20, 78, 114, 0.05);
+  border-color: rgba(20, 78, 114, 0.35);
+  border-left-width: 0.28rem;
+  background: rgba(238, 245, 245, 0.6);
 }
 .cob-item:before {
   content: "";
@@ -1159,8 +1166,8 @@ export default {
   color: var(--ink);
 }
 .cob-inspector {
-  position: sticky;
-  top: 1rem;
+  position: relative;
+  top: auto;
   min-height: 760px;
   display: flex;
   flex-direction: column;

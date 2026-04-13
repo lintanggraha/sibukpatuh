@@ -47,7 +47,7 @@
 
       <div class="tab-content">
         <!-- Tab 1: Ringkasan Program -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="iso-grid two">
             <article class="iso-panel">
               <div class="iso-panel-head"><h3>Distribusi per kategori</h3><span class="iso-chip">Klik kategori untuk filter</span></div>
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Tab 2: Explorer Kontrol -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="iso-workspace">
             <aside class="iso-panel" style="position: sticky; top: 1rem;">
               <div class="iso-panel-head"><h3>Filter Workspace</h3></div>
@@ -134,7 +134,7 @@
         </div>
 
         <!-- Tab 3: Concept Board -->
-        <div v-show="activeTab === 'concept'">
+        <div v-if="activeTab === 'concept'" key="concept-tab">
           <div class="iso-grid">
             <section class="iso-panel">
               <div class="iso-panel-head"><h3>Concept Board</h3><span class="iso-chip">Pick one lens</span></div>
@@ -210,7 +210,7 @@ export default {
       conceptState: { active: null, selectedId: null },
       // Pagination
       currentPage: 1,
-      itemsPerPage: 50,
+      itemsPerPage: 25,
     };
   },
   computed: {
@@ -398,9 +398,10 @@ export default {
 .iso-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
 .iso-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
 .iso-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
-.iso-list{max-height:760px;overflow-y:auto;scroll-behavior:smooth;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(15,118,110,0.3) transparent;padding-right:.2rem}
-.iso-item{position:relative;width:100%;padding:.7rem .8rem .68rem .88rem;border-radius:14px;border:1px solid rgba(19,34,56,.08);background:#fff;text-align:left;cursor:pointer}
-.iso-item.active{border-color:rgba(15,118,110,.22);box-shadow:0 10px 20px rgba(15,118,110,.05);background:rgba(255,255,255,.96)}
+.iso-list{max-height:760px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(15,118,110,0.3) transparent;padding-right:.2rem}
+.iso-item{position:relative;width:100%;padding:.7rem .8rem .68rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(19,34,56,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.iso-item:last-child{margin-bottom:0}
+.iso-item.active{border-color:rgba(15,118,110,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
 .iso-item::before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent)}
 .iso-item-top{display:flex;flex-wrap:wrap;gap:.52rem;align-items:center;justify-content:space-between}
 .iso-item-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.78rem;font-weight:800;color:var(--accent)}
@@ -416,7 +417,7 @@ export default {
 .iso-pill.sky{background:rgba(37,99,235,.12);color:#2563eb}
 .iso-pill.success{background:rgba(21,128,61,.12);color:#15803d}
 .iso-empty{padding:1.3rem;border-radius:20px;border:1px dashed rgba(19,34,56,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.65}
-.iso-inspector-panel{position:sticky;top:1rem;min-height:760px;display:flex;flex-direction:column}
+.iso-inspector-panel{position:relative;top:auto;min-height:760px;display:flex;flex-direction:column}
 .iso-detail-head{padding-bottom:1rem;border-bottom:1px solid var(--line)}
 .iso-detail-head small,.iso-detail-label{display:block;color:var(--muted);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .iso-detail-head strong{display:block;margin-top:.5rem;font-size:1.08rem;font-weight:800;color:#0f766e}

@@ -125,7 +125,7 @@
 
       <div class="tab-content orj-grid">
         <!-- Tab 1: Ringkasan Panduan -->
-        <div v-show="activeTab === 'overview'">
+        <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="orj-grid two">
             <article class="orj-panel">
               <div class="orj-head">
@@ -226,7 +226,7 @@
         </div>
 
         <!-- Tab 2: Explorer Tema -->
-        <div v-show="activeTab === 'explorer'">
+        <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="orj-workspace">
             <article class="orj-panel">
               <div class="orj-head">
@@ -370,7 +370,7 @@
         </div>
 
         <!-- Tab 3: Fokus Implementasi -->
-        <div v-show="activeTab === 'focus'">
+        <div v-if="activeTab === 'focus'" key="focus-tab">
           <div class="orj-theme-groups">
             <article
               v-for="item in sectionBreakdown"
@@ -935,6 +935,8 @@ export default {
   line-height: 1.5;
 }
 .orj-list {
+  display: flex;
+  flex-direction: column;
   max-height: 720px;
   overflow-y: auto;
   padding-right: 0.12rem;
@@ -942,8 +944,14 @@ export default {
 .orj-item {
   position: relative;
   padding: 0.72rem 0.8rem 0.68rem 0.92rem;
+  margin-bottom: 0.55rem;
   border-radius: 14px;
   border-color: rgba(20, 38, 59, 0.08);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 80px;
+}
+.orj-item:last-child {
+  margin-bottom: 0;
 }
 .orj-item::before {
   content: "";
@@ -971,8 +979,8 @@ export default {
   color: var(--accent, #144e72);
 }
 .orj-inspector {
-  position: sticky;
-  top: 1rem;
+  position: relative;
+  top: auto;
   min-height: 720px;
   display: flex;
   flex-direction: column;
