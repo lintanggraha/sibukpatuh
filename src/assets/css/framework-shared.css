@@ -1,0 +1,116 @@
+/**
+ * Shared Framework Styles
+ * Common styles used across all framework view components
+ * Extracted to reduce code duplication and improve maintainability
+ */
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.loading-spinner i {
+  font-size: 2rem;
+  color: #144e72;
+}
+
+/* Error State */
+.error-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.error-message i {
+  font-size: 3rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.error-message h3 {
+  color: #dc3545;
+  margin-bottom: 0.5rem;
+}
+
+.error-message p {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.error-message .btn {
+  margin-top: 0.5rem;
+}
+
+/* Empty State */
+.framework-empty {
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 1px dashed rgba(20, 38, 59, 0.18);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--muted, #5c6776);
+  text-align: center;
+  line-height: 1.55;
+}
+
+/* Tab Transition Animation */
+.tab-content > div {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pagination Styles */
+.framework-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
+.framework-pagination .btn {
+  min-width: 100px;
+}
+
+.framework-page-info {
+  color: var(--muted, #5c6776);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Utility Classes */
+.framework-w-100 {
+  width: 100%;
+}
+
+.framework-mt-2 {
+  margin-top: 0.5rem;
+}
+
+.framework-mt-3 {
+  margin-top: 1rem;
+}
+
+.framework-mb-0 {
+  margin-bottom: 0;
+}
+
+.framework-mb-3 {
+  margin-bottom: 1rem;
+}

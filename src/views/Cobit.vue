@@ -593,71 +593,74 @@ export default {
       }
     },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const response = await fetch("/data/cobit_2019_intro_methodology.json");
+        if (response.ok) {
+          const data = await response.json();
+          this.chapters = data.chapters || [];
+          this.domains = data.domains || [];
+          this.valueOutcomes = data.value_outcomes || [];
+          this.highlights = data.highlights || [];
+          this.audiences = data.audiences || [];
+          this.goalCascade = data.goal_cascade || [];
+          this.implementationPhases = data.implementation_phases || [];
+          this.designFactors = data.design_factors || [];
+
+          // Combine all concept types into concepts array
+          const allConcepts = [
+            ...(data.principles_system || []).map((c) => ({
+              ...c,
+              type: "system_principle",
+              type_label: "Prinsip Sistem",
+            })),
+            ...(data.principles_framework || []).map((c) => ({
+              ...c,
+              type: "framework_principle",
+              type_label: "Prinsip Framework",
+            })),
+            ...(data.components || []).map((c) => ({
+              ...c,
+              type: "component",
+              type_label: "Komponen",
+            })),
+            ...(data.design_factors || []).map((c) => ({
+              ...c,
+              type: "design_factor",
+              type_label: "Design Factor",
+            })),
+            ...(data.domains || []).map((c) => ({
+              ...c,
+              type: "domain",
+              type_label: "Domain Core Model",
+            })),
+            ...(data.implementation_phases || []).map((c) => ({
+              ...c,
+              type: "implementation_phase",
+              type_label: "Fase Implementasi",
+            })),
+          ];
+          this.concepts = allConcepts;
+          if (this.concepts.length > 0) {
+            this.activeConceptId = this.concepts[0].id;
+          }
+        } else {
+          throw new Error(`Failed to load COBIT data: HTTP ${response.status}`);
+        }
+      } catch (error) {
+        console.error("Error loading COBIT 2019 data:", error);
+        this.error = error.message || "Failed to load data";
+      } finally {
+        this.loading = false;
+      }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const response = await fetch("/data/cobit_2019_intro_methodology.json");
-      if (response.ok) {
-        const data = await response.json();
-        this.chapters = data.chapters || [];
-        this.domains = data.domains || [];
-        this.valueOutcomes = data.value_outcomes || [];
-        this.highlights = data.highlights || [];
-        this.audiences = data.audiences || [];
-        this.goalCascade = data.goal_cascade || [];
-        this.implementationPhases = data.implementation_phases || [];
-        this.designFactors = data.design_factors || [];
-
-        // Combine all concept types into concepts array
-        const allConcepts = [
-          ...(data.principles_system || []).map((c) => ({
-            ...c,
-            type: "system_principle",
-            type_label: "Prinsip Sistem",
-          })),
-          ...(data.principles_framework || []).map((c) => ({
-            ...c,
-            type: "framework_principle",
-            type_label: "Prinsip Framework",
-          })),
-          ...(data.components || []).map((c) => ({
-            ...c,
-            type: "component",
-            type_label: "Komponen",
-          })),
-          ...(data.design_factors || []).map((c) => ({
-            ...c,
-            type: "design_factor",
-            type_label: "Design Factor",
-          })),
-          ...(data.domains || []).map((c) => ({
-            ...c,
-            type: "domain",
-            type_label: "Domain Core Model",
-          })),
-          ...(data.implementation_phases || []).map((c) => ({
-            ...c,
-            type: "implementation_phase",
-            type_label: "Fase Implementasi",
-          })),
-        ];
-        this.concepts = allConcepts;
-        if (this.concepts.length > 0) {
-          this.activeConceptId = this.concepts[0].id;
-        }
-      } else {
-        throw new Error(`Failed to load COBIT data: HTTP ${response.status}`);
-      }
-    } catch (error) {
-      console.error("Error loading COBIT 2019 data:", error);
-      this.error = error.message || "Failed to load data";
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -1271,31 +1274,3 @@ export default {
   }
 }
 </style>
-  
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-
-/* Tab transition animation */

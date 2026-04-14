@@ -932,39 +932,42 @@ export default {
       this.activeTab = "reference";
     },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const [reqRes, refRes] = await Promise.all([
+          fetch("/data/pbi_022024_requirements.json"),
+          fetch("/data/pbi_022024_references.json"),
+        ]);
+        if (reqRes.ok) {
+          const data = await reqRes.json();
+          this.requirements = Array.isArray(data)
+            ? data
+            : data.requirements || [];
+          if (this.requirements.length > 0)
+            this.activeRequirementId = this.requirements[0].id;
+        } else {
+          throw new Error(`Failed to load PBI requirements: HTTP ${reqRes.status}`);
+        }
+        if (refRes.ok) {
+          const data = await refRes.json();
+          this.references = Array.isArray(data) ? data : data.references || [];
+        } else {
+          throw new Error(`Failed to load PBI references: HTTP ${refRes.status}`);
+        }
+      } catch (error) {
+        console.error("Error loading PBI data:", error);
+        this.error = error.message || "Failed to load data";
+      } finally {
+        this.loading = false;
+      }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const [reqRes, refRes] = await Promise.all([
-        fetch("/data/pbi_022024_requirements.json"),
-        fetch("/data/pbi_022024_references.json"),
-      ]);
-      if (reqRes.ok) {
-        const data = await reqRes.json();
-        this.requirements = Array.isArray(data)
-          ? data
-          : data.requirements || [];
-        if (this.requirements.length > 0)
-          this.activeRequirementId = this.requirements[0].id;
-      } else {
-        throw new Error(`Failed to load PBI requirements: HTTP ${reqRes.status}`);
-      }
-      if (refRes.ok) {
-        const data = await refRes.json();
-        this.references = Array.isArray(data) ? data : data.references || [];
-      } else {
-        throw new Error(`Failed to load PBI references: HTTP ${refRes.status}`);
-      }
-    } catch (error) {
-      console.error("Error loading PBI data:", error);
-      this.error = error.message || "Failed to load data";
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -1696,31 +1699,3 @@ export default {
   }
 }
 </style>
-  
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-
-/* Tab transition animation */

@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import { useFrameworkStore } from '../stores/frameworkStore';
+
 export default {
   name: "App",
   data() {
@@ -126,6 +128,17 @@ export default {
     },
   },
   methods: {
+    handleClickOutside(event) {
+      const clickedInsideNav = event.target.closest(".framework-nav-group");
+      if (!clickedInsideNav) {
+        this.closeAllGroups();
+      }
+    },
+    handleKeydown(event) {
+      if (event.key === "Escape") {
+        this.closeAllGroups();
+      }
+    },
     isActiveRoute(routeName) {
       return this.$route.name === routeName;
     },
@@ -141,6 +154,9 @@ export default {
       this.frameworkNavGroups.forEach((g) => {
         g.show = false;
       });
+      // Also sync with Pinia store
+      const store = useFrameworkStore();
+      store.closeAllGroups();
     },
     updateActiveGroups() {
       const route = this.$route;
@@ -152,23 +168,20 @@ export default {
         route.name === "iso27001" ||
         route.name === "nist" ||
         route.name === "cobit";
+      
+      // Sync with Pinia store
+      const store = useFrameworkStore();
+      store.updateActiveGroups(route.name);
     },
   },
   mounted() {
     this.updateActiveGroups();
-    document.addEventListener("click", (event) => {
-      const clickedInsideNav = event.target.closest(".framework-nav-group");
-      
-      if (!clickedInsideNav) {
-        this.closeAllGroups();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        this.closeAllGroups();
-      }
-    });
+    document.addEventListener("click", this.handleClickOutside);
+    document.addEventListener("keydown", this.handleKeydown);
+  },
+  beforeUnmount() {
+    document.removeEventListener("click", this.handleClickOutside);
+    document.removeEventListener("keydown", this.handleKeydown);
   },
 };
 </script>

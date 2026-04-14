@@ -538,31 +538,34 @@ export default {
       }
     },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const response = await fetch("/data/seojk_resilience_guidance.json");
+        if (response.ok) {
+          const data = await response.json();
+          this.themes = Array.isArray(data)
+            ? data
+            : data.themes || data.tema || [];
+          if (this.themes.length > 0) {
+            this.activeThemeId = this.themes[0].id;
+          }
+        } else {
+          throw new Error(`Failed to load Resilience data: HTTP ${response.status}`);
+        }
+      } catch (error) {
+        console.error("Error loading Resilience Guide data:", error);
+        this.error = error.message || "Failed to load data";
+      } finally {
+        this.loading = false;
+      }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const response = await fetch("/data/seojk_resilience_guidance.json");
-      if (response.ok) {
-        const data = await response.json();
-        this.themes = Array.isArray(data)
-          ? data
-          : data.themes || data.tema || [];
-        if (this.themes.length > 0) {
-          this.activeThemeId = this.themes[0].id;
-        }
-      } else {
-        throw new Error(`Failed to load Resilience data: HTTP ${response.status}`);
-      }
-    } catch (error) {
-      console.error("Error loading Resilience Guide data:", error);
-      this.error = error.message || "Failed to load data";
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -1083,31 +1086,3 @@ export default {
   }
 }
 </style>
-  
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-
-/* Tab transition animation */

@@ -280,36 +280,39 @@ export default {
       this.showSp800Modal = true;
     },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const [ctrlRes, spRes] = await Promise.all([
+          fetch('/data/nist_csf.json'),
+          fetch('/data/sp800_53.json')
+        ]);
+        if (ctrlRes.ok) {
+          const data = await ctrlRes.json();
+          this.controls = Array.isArray(data) ? data : [];
+          if (this.controls.length > 0) this.activeControlId = this.controls[0].id;
+        } else {
+          throw new Error(`Failed to load NIST CSF: HTTP ${ctrlRes.status}`);
+        }
+        if (spRes.ok) {
+          const data = await spRes.json();
+          this.sp800Controls = Array.isArray(data) ? data : [];
+        } else {
+          throw new Error(`Failed to load SP 800-53: HTTP ${spRes.status}`);
+        }
+      } catch (error) {
+        console.error('Error loading NIST data:', error);
+        this.error = error.message || 'Failed to load data';
+      } finally {
+        this.loading = false;
+      }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const [ctrlRes, spRes] = await Promise.all([
-        fetch('/data/nist_csf.json'),
-        fetch('/data/sp800_53.json')
-      ]);
-      if (ctrlRes.ok) {
-        const data = await ctrlRes.json();
-        this.controls = Array.isArray(data) ? data : [];
-        if (this.controls.length > 0) this.activeControlId = this.controls[0].id;
-      } else {
-        throw new Error(`Failed to load NIST CSF: HTTP ${ctrlRes.status}`);
-      }
-      if (spRes.ok) {
-        const data = await spRes.json();
-        this.sp800Controls = Array.isArray(data) ? data : [];
-      } else {
-        throw new Error(`Failed to load SP 800-53: HTTP ${spRes.status}`);
-      }
-    } catch (error) {
-      console.error('Error loading NIST data:', error);
-      this.error = error.message || 'Failed to load data';
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -409,32 +412,6 @@ export default {
 .nst-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
 .nst-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:9999}
 .modal-content{background:#fff;border-radius:16px;max-width:800px;width:90%;max-height:90vh;overflow:auto}
 .modal-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--line)}
@@ -443,9 +420,3 @@ export default {
 @media (max-width:1199.98px){.nst-hero,.nst-metric,.nst-side{min-height:auto}.nst-hero,.nst-nav,.nst-grid.two,.nst-refspace,.nst-metrics,.nst-mini-row,.nst-cards{grid-template-columns:1fr}.nst-bar,.nst-hotspot,.nst-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.nst-hero,.nst-panel{padding:1.2rem;border-radius:22px}.nst-function-grid{grid-template-columns:1fr}}
 </style>
-  
-  
-/* Tab transition animation */  
-.tab-content > div { animation: fadeIn 0.2s ease-in-out; }  
-  
-@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }  

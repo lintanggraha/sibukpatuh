@@ -145,16 +145,82 @@
   </div>
 
   <!-- Modal Appendix -->
-  <div v-if="showAppendixModal" class="modal-backdrop" @click.self="showAppendixModal = false">
-    <div class="modal-content">
-      <div class="modal-header"><div><div class="text-muted text-uppercase fw-semibold small">{{ selectedAppendix?.id || '-' }} | {{ selectedAppendix?.type || '' }}</div><h5 class="modal-title mt-1">{{ selectedAppendix?.title || 'Detail Lampiran' }}</h5></div><button type="button" class="btn-close" @click="showAppendixModal = false" aria-label="Close"></button></div>
-      <div class="modal-body">
-        <div class="mb-3"><div class="text-muted text-uppercase fw-semibold small mb-2">Ringkasan</div><div>{{ selectedAppendix?.scope || '-' }} - {{ selectedAppendix?.summary || '-' }}</div></div>
-        <div class="mb-3"><div class="text-muted text-uppercase fw-semibold small mb-2">Artefak / Isi Utama</div><ul class="sej-plain"><li v-for="(item, idx) in (selectedAppendix?.contains && selectedAppendix.contains.length ? selectedAppendix.contains : ['Tidak ada artefak yang dipetakan.'])" :key="idx">{{ item }}</li></ul></div>
-        <div><div class="text-muted text-uppercase fw-semibold small mb-2">Requirement yang Menggunakannya</div><div class="d-flex flex-wrap gap-2"><button v-for="reqId in (selectedAppendix?.used_by || [])" :key="reqId" type="button" class="sej-ref" @click="jumpToRequirement(reqId)">{{ reqId }}</button><span v-if="!selectedAppendix?.used_by || !selectedAppendix.used_by.length" class="sej-empty w-100">Belum ada requirement yang dipetakan ke lampiran ini.</span></div></div>
-      </div>
+  <Transition name="modal-fade">
+    <div v-if="showAppendixModal" class="modal-overlay" @click.self="showAppendixModal = false">
+      <Transition name="modal-slide">
+        <div class="modal-dialog" v-if="showAppendixModal">
+          <div class="modal-shell">
+            <div class="modal-sidebar" :style="{ background: `linear-gradient(180deg, ${getAppendixColor(selectedAppendix?.type)} 0%, ${getAppendixColor(selectedAppendix?.type, 0.7)} 100%)` }">
+              <button type="button" class="modal-close" @click="showAppendixModal = false" aria-label="Close">
+                <i class="fas fa-times"></i>
+              </button>
+              <div class="modal-sidebar-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="modal-sidebar-id">{{ selectedAppendix?.id || '-' }}</div>
+              <div class="modal-sidebar-type">{{ selectedAppendix?.type || '' }}</div>
+            </div>
+            <div class="modal-main">
+              <div class="modal-header">
+                <h4 class="modal-title">{{ selectedAppendix?.title || 'Detail Lampiran' }}</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Ringkasan Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Ringkasan</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
+                    <p class="modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
+                  </div>
+                </div>
+
+                <!-- Artefak Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                    <i class="fas fa-list-check"></i>
+                    <span>Artefak / Isi Utama</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(item, idx) in (selectedAppendix?.contains && selectedAppendix.contains.length ? selectedAppendix.contains : [])" :key="idx">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{{ item }}</span>
+                      </li>
+                      <li v-if="!selectedAppendix?.contains || !selectedAppendix.contains.length" class="modal-empty">
+                        Tidak ada artefak yang dipetakan.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Requirements Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                    <i class="fas fa-link"></i>
+                    <span>Requirement yang Menggunakannya</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-requirements">
+                      <button v-for="reqId in (selectedAppendix?.used_by || [])" :key="reqId" type="button" class="modal-req-btn" @click="jumpToRequirement(reqId)">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>{{ reqId }}</span>
+                      </button>
+                      <div v-if="!selectedAppendix?.used_by || !selectedAppendix.used_by.length" class="modal-empty">
+                        Belum ada requirement yang dipetakan ke lampiran ini.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script>
@@ -280,37 +346,49 @@ export default {
       this.setActiveRequirement(id);
       this.activeTab = 'explorer';
     },
+    getAppendixColor(type, opacity = 1) {
+      const baseColor = this.appendixTypePalette[type] || '#144e72';
+      if (opacity === 1) return baseColor;
+      // Convert hex to rgba with opacity
+      const r = parseInt(baseColor.slice(1, 3), 16);
+      const g = parseInt(baseColor.slice(3, 5), 16);
+      const b = parseInt(baseColor.slice(5, 7), 16);
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const [reqRes, appRes] = await Promise.all([
+          fetch('/data/seojk_requirements.json'),
+          fetch('/data/seojk_appendices.json')
+        ]);
+        if (reqRes.ok) {
+          const data = await reqRes.json();
+          this.requirements = Array.isArray(data) ? data : data.requirements || [];
+          if (this.requirements.length > 0) this.activeRequirementId = this.requirements[0].id;
+        } else {
+          throw new Error(`Failed to load requirements: HTTP ${reqRes.status}`);
+        }
+        if (appRes.ok) {
+          const data = await appRes.json();
+          this.appendices = Array.isArray(data) ? data : data.appendices || [];
+        } else {
+          throw new Error(`Failed to load appendices: HTTP ${appRes.status}`);
+        }
+      } catch (error) {
+        console.error('Error loading SEOJK data:', error);
+        this.error = error.message || 'Failed to load data';
+      } finally {
+        this.loading = false;
+      }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const [reqRes, appRes] = await Promise.all([
-        fetch('/data/seojk_requirements.json'),
-        fetch('/data/seojk_appendices.json')
-      ]);
-      if (reqRes.ok) {
-        const data = await reqRes.json();
-        this.requirements = Array.isArray(data) ? data : data.requirements || [];
-        if (this.requirements.length > 0) this.activeRequirementId = this.requirements[0].id;
-      } else {
-        throw new Error(`Failed to load requirements: HTTP ${reqRes.status}`);
-      }
-      if (appRes.ok) {
-        const data = await appRes.json();
-        this.appendices = Array.isArray(data) ? data : data.appendices || [];
-      } else {
-        throw new Error(`Failed to load appendices: HTTP ${appRes.status}`);
-      }
-    } catch (error) {
-      console.error('Error loading SEOJK data:', error);
-      this.error = error.message || 'Failed to load data';
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -409,47 +487,45 @@ export default {
 .sej-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
 .sej-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
+/* Modal Styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.56);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem}
+.modal-dialog{width:100%;max-width:780px;animation:modalSlideIn .25s ease-out}
+.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+.modal-sidebar{position:relative;padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#fffaf2;text-align:center}
+.modal-close{position:absolute;top:.75rem;right:.75rem;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;border:none;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease}
+.modal-close:hover{background:rgba(255,255,255,.28);transform:scale(1.05)}
+.modal-sidebar-icon{width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(255,255,255,.18);font-size:1.25rem;margin-bottom:.25rem}
+.modal-sidebar-id{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:1.15rem;font-weight:800;letter-spacing:.04em}
+.modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
+.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
+.modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
+.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
+.modal-section{margin-bottom:1.25rem}
+.modal-section:last-child{margin-bottom:0}
+.modal-section-header{display:flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.modal-section-header i{font-size:.82rem}
+.modal-section-content{padding-left:.25rem}
+.modal-scope{display:inline-block;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700;margin-bottom:.55rem}
+.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+.modal-artifact-list{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.modal-artifact-list li{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem;color:var(--ink);line-height:1.5}
+.modal-artifact-list li i{color:#0f766e;font-size:.82rem;margin-top:.18rem;flex-shrink:0}
+.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}
+.modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink);font-size:.76rem;font-weight:700;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease}
+.modal-req-btn i{font-size:.68rem;color:var(--muted);transition:transform .15s ease}
+.modal-req-btn:hover{border-color:rgba(20,78,114,.28);background:rgba(238,245,245,.7);transform:translateY(-1px)}
+.modal-req-btn:hover i{transform:translateX(2px)}
+.modal-empty{padding:.9rem 1rem;border-radius:12px;border:1px dashed rgba(20,38,59,.18);background:rgba(245,247,250,.6);color:var(--muted);text-align:center;font-size:.82rem;line-height:1.5}
 
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:9999}
-.modal-content{background:#fff;border-radius:16px;max-width:800px;width:90%;max-height:90vh;overflow:auto}
-.modal-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--line)}
-.modal-body{padding:1rem}
+/* Modal Transitions */
+.modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}
+.modal-fade-enter-from,.modal-fade-leave-to{opacity:0}
+.modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
+.modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
+.modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
+
 @media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
-@media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}}
-
-/* Tab transition */
-.tab-content > div {
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}.modal-shell{grid-template-columns:1fr}.modal-sidebar{flex-direction:row;padding:1rem;gap:1rem}.modal-sidebar-icon{width:2.5rem;height:2.5rem;margin-bottom:0}.modal-close{top:.5rem;right:.5rem}.modal-dialog{max-width:100%}}
 </style>

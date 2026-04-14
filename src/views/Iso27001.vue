@@ -282,7 +282,26 @@ export default {
       this.currentPage = 1; // Reset pagination
     },
     retryLoad() {
-      this.mounted();
+      this.loadData();
+    },
+    async loadData() {
+      try {
+        this.loading = true;
+        this.error = null;
+        const response = await fetch('/data/iso27001.json');
+        if (response.ok) {
+          const data = await response.json();
+          this.controls = Array.isArray(data) ? data : data.controls || [];
+          if (this.controls.length > 0) this.explorerState.selectedId = this.controls[0].id;
+        } else {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        console.error('Error loading ISO 27001 data:', error);
+        this.error = error.message || 'Failed to load data';
+      } finally {
+        this.loading = false;
+      }
     },
   },
   watch: {
@@ -299,24 +318,8 @@ export default {
       }
     },
   },
-  async mounted() {
-    try {
-      this.loading = true;
-      this.error = null;
-      const response = await fetch('/data/iso27001.json');
-      if (response.ok) {
-        const data = await response.json();
-        this.controls = Array.isArray(data) ? data : data.controls || [];
-        if (this.controls.length > 0) this.explorerState.selectedId = this.controls[0].id;
-      } else {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-    } catch (error) {
-      console.error('Error loading ISO 27001 data:', error);
-      this.error = error.message || 'Failed to load data';
-    } finally {
-      this.loading = false;
-    }
+  mounted() {
+    this.loadData();
   },
 };
 </script>
@@ -449,61 +452,8 @@ export default {
 .iso-selected-count span{display:block;margin-top:.15rem;color:rgba(255,250,242,.72);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .iso-concept-workspace{display:grid;grid-template-columns:.9fr 1.1fr;gap:1rem}
 
-/* Loading and Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-.loading-spinner i {
-  font-size: 2rem;
-  color: #144e72;
-}
-.error-message i {
-  font-size: 3rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-}
-.error-message h3 {
-  color: #dc3545;
-  margin-bottom: 0.5rem;
-}
-.error-message p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-}
-
 @media (max-width:1199.98px){.iso-hero,.iso-metric,.iso-side-card{min-height:auto}.iso-hero,.iso-nav,.iso-grid.two,.iso-workspace,.iso-concept-workspace,.iso-metric-grid,.iso-type-grid,.iso-quick-themes{grid-template-columns:1fr}.iso-bar{grid-template-columns:1fr}}
 @media (max-width:1599.98px){.iso-concept-board{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:991.98px){.iso-concept-board{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:767.98px){.iso-hero,.iso-panel{padding:1.2rem;border-radius:22px}.iso-selected{grid-template-columns:1fr}.iso-selected-count{text-align:left}.iso-concept-board{grid-template-columns:1fr}.iso-inspector-panel{min-height:auto;position:static}}
-
-/* Tab transition animation */
-.tab-content > div {
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-/* Pagination styles */
-.iso-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-.iso-page-info {
-  font-size: 0.875rem;
-  color: #6c757d;
-  white-space: nowrap;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 </style>

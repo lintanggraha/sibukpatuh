@@ -38,9 +38,15 @@ const routes = [
     }
 ];
 
+// Use import.meta.env.BASE_URL to sync with Vite's base config
+// This ensures router works correctly in both root and subdirectory deployments
 const router = createRouter({
-    history: createWebHistory('/'),
-    routes
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+      // Scroll to top on route change
+      return { top: 0, behavior: 'smooth' };
+    }
 });
 
 export default router;
