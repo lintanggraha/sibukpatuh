@@ -28,14 +28,14 @@
           </div>
         </div>
         <div class="sej-side-stack">
-          <div class="sej-side"><label>Alur Analisa</label><h3>Pendekatan analisa yang terstruktur dan konsisten</h3><p>Analisa dapat diawali dari peta pilar dan bab untuk memahami cakupan regulasi, kemudian dilanjutkan ke explorer requirement untuk meninjau kewajiban secara rinci, serta ditutup dengan board lampiran untuk melihat format penilaian, artefak pelaporan, dan rujukan dokumentasi yang relevan.</p></div>
+          <div class="sej-side"><label>Alur Analisa</label><h3>Pendekatan analisa yang terstruktur dan konsisten</h3><p>Analisa dapat diawali dari peta pilar dan bab untuk memahami cakupan regulasi, kemudian dilanjutkan ke eksplorasi requirement untuk meninjau kewajiban secara rinci, serta ditutup dengan board lampiran untuk melihat format penilaian, artefak pelaporan, dan rujukan dokumentasi yang relevan.</p></div>
           <div class="sej-side"><label>Catatan Regulasi</label><p>SEOJK ini menekankan penilaian tahunan pada posisi akhir Desember, pelaporan paling lama 15 hari kerja setelah akhir tahun pelaporan, dan penggunaan lampiran resmi untuk scoring serta dokumentasi self-assessment.</p></div>
         </div>
       </section>
 
       <div class="sej-nav nav" role="tablist">
         <button class="sej-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Program</strong><span>Peta pilar, bab regulasi, dan elemen penilaian inti.</span></span></button>
-        <button class="sej-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Explorer Kewajiban</strong><span>Filter requirement, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
+        <button class="sej-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter requirement, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
         <button class="sej-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>Lampiran & Laporan</strong><span>Board referensi lampiran resmi dan format pelaporan ke OJK.</span></span></button>
       </div>
 
@@ -45,7 +45,7 @@
           <div class="sej-grid two">
             <article class="sej-panel">
               <div class="sej-head"><h3>Lanskap pilar regulasi</h3><span class="sej-chip">{{ pillarBreakdown.length }} pilar</span></div>
-              <p class="sej-copy">Pilar ini dipakai sebagai lensa kerja utama untuk membaca SEOJK: assessment, governance, resilience, testing, organization, dan reporting. Klik salah satu bar untuk langsung lompat ke explorer dengan filter yang relevan.</p>
+              <p class="sej-copy">Pilar ini dipakai sebagai lensa kerja utama untuk membaca SEOJK: assessment, governance, resilience, testing, organization, dan reporting. Klik salah satu bar untuk langsung lompat ke eksplorasi dengan filter yang relevan.</p>
               <div class="sej-bars">
                 <button v-for="item in pillarBreakdown" :key="item.key" type="button" class="sej-bar" @click="jumpExplorer(item.key)"><span><strong>{{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="sej-track"><b :style="{ width: (item.count / maxPillarCount) * 100 + '%', background: item.color }"></b></span><span class="sej-num">{{ item.count }}</span></button>
               </div>
@@ -78,7 +78,7 @@
           </div>
         </div>
 
-        <!-- Tab 2: Explorer Kewajiban -->
+        <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="sej-workspace">
             <article class="sej-panel">

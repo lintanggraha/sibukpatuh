@@ -23,7 +23,7 @@
           <h1 class="orj-title">Panduan Resiliensi OJK</h1>
           <p class="orj-lede">
             Halaman ini menyajikan ringkasan Panduan Resiliensi Digital OJK
-            dalam bentuk struktur dokumen, explorer tema, dan fokus implementasi
+            dalam bentuk struktur dokumen, eksplorasi tema, dan fokus implementasi
             untuk membantu pembacaan materi ketahanan digital secara lebih
             terstruktur dan operasional.
           </p>
@@ -61,7 +61,7 @@
         </div>
         <div class="orj-side-stack">
           <div class="orj-side"><label>Cakupan Panduan</label><h3>Fokus pada ketahanan layanan digital</h3><p>Panduan ditempatkan sebagai acuan untuk memahami konteks gangguan digital, kesiapan operasional, tata kelola, dan penguatan berkelanjutan dalam lingkungan layanan perbankan.</p></div>
-          <div class="orj-side"><label>Arah Pemanfaatan</label><p>Pembacaan dapat dimulai dari struktur dokumen, dilanjutkan ke explorer tema untuk menelaah ringkasan dan fokus implementasi, lalu ditutup dengan board lampiran untuk menyusun prioritas tindak lanjut.</p></div>
+          <div class="orj-side"><label>Arah Pemanfaatan</label><p>Pembacaan dapat dimulai dari struktur dokumen, dilanjutkan ke eksplorasi tema untuk menelaah ringkasan dan fokus implementasi, lalu ditutup dengan board lampiran untuk menyusun prioritas tindak lanjut.</p></div>
         </div>
       </section>
 
@@ -88,7 +88,7 @@
         >
           <i class="fas fa-sliders-h"></i>
           <span>
-            <strong>Explorer Tema</strong>
+            <strong>Eksplorasi</strong>
             <span
               >Filter tema, baca ringkasan, dan telaah fokus implementasi.</span
             >
@@ -158,7 +158,7 @@
               </div>
               <p class="orj-copy">
                 Setiap tema merangkum pokok arahan yang dapat dibaca lebih
-                lanjut melalui explorer untuk memahami implikasi implementasi
+                lanjut melalui eksplorasi untuk memahami implikasi implementasi
                 pada ketahanan digital.
               </p>
               <div class="orj-cards">
@@ -193,7 +193,7 @@
             </article>
             <article class="orj-panel">
               <div class="orj-head"><h3>Peta kapabilitas</h3><span class="orj-chip">{{ sectionBreakdown.length }} kapabilitas</span></div>
-              <p class="orj-copy">Kapabilitas ini menjadi lensa kerja utama untuk membaca panduan resiliensi. Klik salah satu bar untuk langsung lompat ke explorer dengan filter yang relevan.</p>
+              <p class="orj-copy">Kapabilitas ini menjadi lensa kerja utama untuk membaca panduan resiliensi. Klik salah satu bar untuk langsung lompat ke eksplorasi dengan filter yang relevan.</p>
               <div class="orj-cards">
                 <button v-for="item in sectionBreakdown" :key="item.key" type="button" class="orj-card" :style="{ '--accent': item.color }" @click="jumpSection(item.key)"><div class="orj-card-top"><span class="orj-icon"><i :class="`fas ${item.icon}`"></i></span><span>{{ item.count }} tema</span></div><strong>{{ item.label }}</strong><p>Klik untuk filter explorer.</p></button>
               </div>
@@ -201,7 +201,7 @@
           </div>
         </div>
 
-        <!-- Tab 2: Explorer Tema -->
+        <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="orj-workspace">
             <article class="orj-panel">

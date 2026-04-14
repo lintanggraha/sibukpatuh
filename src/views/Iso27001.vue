@@ -32,8 +32,8 @@
             <label>Recommended Review Flow</label>
             <div class="iso-bullets">
               <div><i class="fas fa-circle"></i><span>Tinjau ringkasan kontrol untuk mengidentifikasi area fokus berdasarkan kategori dan prioritas.</span></div>
-              <div><i class="fas fa-circle"></i><span>Gunakan Explorer untuk menyaring kontrol dan menganalisa rincian implementasi, bukti audit, serta tingkat kesulitan.</span></div>
-              <div><i class="fas fa-circle"></i><span>Gunakan Concept Board untuk melihat keterkaitan kontrol dengan kapabilitas keamanan siber.</span></div>
+              <div><i class="fas fa-circle"></i><span>Gunakan Eksplorasi untuk menyaring kontrol dan menganalisa rincian implementasi, bukti audit, serta tingkat kesulitan.</span></div>
+              <div><i class="fas fa-circle"></i><span>Gunakan Konsep Keamanan untuk melihat keterkaitan kontrol dengan kapabilitas keamanan siber.</span></div>
             </div>
           </div>
         </div>
@@ -41,8 +41,8 @@
 
       <div class="nav iso-nav" role="tablist">
         <button class="iso-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><div><strong>Ringkasan Program</strong><span>Pulse, distribusi kategori, dan profil prioritas.</span></div></button>
-        <button class="iso-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><div><strong>Explorer Kontrol</strong><span>Filter panel, daftar kontrol, dan inspector detail.</span></div></button>
-        <button class="iso-tab" :class="{ active: activeTab === 'concept' }" type="button" role="tab" @click="activeTab = 'concept'"><i class="fas fa-project-diagram"></i><div><strong>Concept Board</strong><span>Enam konsep keamanan sebagai perspektif pembacaan alternatif.</span></div></button>
+        <button class="iso-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><div><strong>Eksplorasi</strong><span>Filter panel, daftar kontrol, dan inspector detail.</span></div></button>
+        <button class="iso-tab" :class="{ active: activeTab === 'concept' }" type="button" role="tab" @click="activeTab = 'concept'"><i class="fas fa-project-diagram"></i><div><strong>Konsep Keamanan</strong><span>Enam konsep keamanan sebagai perspektif pembacaan alternatif.</span></div></button>
       </div>
 
       <div class="tab-content">
@@ -67,7 +67,7 @@
               </div>
             </article>
             <article class="iso-panel">
-              <div class="iso-panel-head"><h3>Landscape konsep keamanan</h3><span class="iso-chip">Snapshot</span></div>
+              <div class="iso-panel-head"><h3>Konsep keamanan</h3><span class="iso-chip">Snapshot</span></div>
               <p class="iso-panel-copy">Pemetaan konsep keamanan disajikan sebagai board terpisah agar dapat digunakan sebagai perspektif analisis tambahan tanpa mengganggu pembacaan struktur utama Annex A.</p>
               <div class="iso-concept-board">
                 <div v-for="concept in conceptBreakdown" :key="concept.name" class="iso-mini" :style="{ '--accent': concept.color }"><label><i :class="`fas ${concept.icon} me-1`"></i>{{ concept.key }}</label><strong>{{ concept.count }}</strong><span>{{ concept.name }}</span></div>
@@ -77,12 +77,12 @@
               <div class="iso-panel-head"><h3>Cara pakai halaman ini</h3><span class="iso-chip">Workflow</span></div>
               <p class="iso-panel-copy"><strong>Mulai dari overview.</strong> Identifikasi kategori dengan kepadatan kontrol tertinggi dan prioritas implementasi yang paling menonjol.</p>
               <p class="iso-panel-copy"><strong>Pindah ke explorer.</strong> Filter kontrol yang relevan, lalu baca detail untuk bukti audit dan tips implementasi.</p>
-              <p class="iso-panel-copy mb-0"><strong>Validasi dengan concept board.</strong> Saat butuh narasi yang lebih dekat ke bahasa cyber security, gunakan lens Identify, Protect, Detect, Respond, Recover, atau Govern.</p>
+              <p class="iso-panel-copy mb-0"><strong>Validasi dengan konsep keamanan.</strong> Saat butuh narasi yang lebih dekat ke bahasa cyber security, gunakan lens Identify, Protect, Detect, Respond, Recover, atau Govern.</p>
             </article>
           </div>
         </div>
 
-        <!-- Tab 2: Explorer Kontrol -->
+        <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="iso-workspace">
             <aside class="iso-panel" style="position: sticky; top: 1rem;">
@@ -133,17 +133,17 @@
           </div>
         </div>
 
-        <!-- Tab 3: Concept Board -->
+        <!-- Tab 3: Konsep Keamanan -->
         <div v-if="activeTab === 'concept'" key="concept-tab">
           <div class="iso-grid">
             <section class="iso-panel">
-              <div class="iso-panel-head"><h3>Concept Board</h3><span class="iso-chip">Pick one lens</span></div>
+              <div class="iso-panel-head"><h3>Konsep Keamanan</h3><span class="iso-chip">Pilih lensa</span></div>
               <p class="iso-panel-copy">Enam konsep keamanan ini disediakan sebagai lensa pembacaan alternatif untuk menghubungkan kontrol ISO 27001 dengan kapabilitas keamanan siber secara lebih jelas dan sistematis.</p>
               <div class="iso-concept-board">
                 <button v-for="concept in conceptBreakdown" :key="concept.name" type="button" class="iso-tile" :class="{ active: conceptState.active === concept.name }" :style="{ '--accent': concept.color }" @click="conceptState.active = conceptState.active === concept.name ? null : concept.name; conceptState.selectedId = null;"><div class="iso-tile-top"><span class="iso-tile-icon"><i :class="`fas ${concept.icon}`"></i></span><span>{{ getConceptControlCount(concept.name) }} controls</span></div><strong>{{ concept.name }}</strong><p>{{ concept.summary }}</p></button>
               </div>
             </section>
-            <div v-if="!conceptState.active" class="iso-empty">Pilih salah satu concept lane di atas untuk menampilkan kontrol terkait dan inspector detailnya.</div>
+            <div v-if="!conceptState.active" class="iso-empty">Pilih salah satu konsep di atas untuk menampilkan kontrol terkait dan inspector detailnya.</div>
             <div v-else>
               <div class="iso-grid">
                 <div class="iso-selected" :style="{ '--accent': getConceptColor(conceptState.active) }"><div class="iso-selected-mark"><i :class="`fas ${getConceptIcon(conceptState.active)}`"></i></div><div><small>{{ getConceptKey(conceptState.active) }}</small><h3>{{ conceptState.active }}</h3><p>{{ getConceptSummary(conceptState.active) }}</p></div><div class="iso-selected-count"><strong>{{ conceptFilteredControls.length }}</strong><span>mapped controls</span></div></div>
@@ -152,11 +152,11 @@
                     <div class="iso-panel-head"><h3>Kontrol terkait</h3><span class="iso-chip">Auto-filterd by concept</span></div>
                     <div class="iso-list">
                       <button v-for="ctrl in conceptFilteredControls" :key="ctrl.id" type="button" class="iso-item" :class="{ active: conceptState.selectedId === ctrl.id }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="conceptState.selectedId = ctrl.id"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
-                      <div v-if="conceptFilteredControls.length === 0" class="iso-empty">Belum ada kontrol yang dipetakan ke concept lane ini.</div>
+                      <div v-if="conceptFilteredControls.length === 0" class="iso-empty">Belum ada kontrol yang dipetakan ke konsep ini.</div>
                     </div>
                   </section>
                   <section class="iso-panel">
-                    <div class="iso-detail-head"><small>Concept Inspector</small><strong>{{ selectedConceptControl?.id || 'Pilih sebuah kontrol' }}</strong><span>{{ selectedConceptControl?.name || 'Klik kontrol dari concept lane yang dipilih untuk membaca detail lengkap.' }}</span></div>
+                    <div class="iso-detail-head"><small>Inspektor Konsep</small><strong>{{ selectedConceptControl?.id || 'Pilih sebuah kontrol' }}</strong><span>{{ selectedConceptControl?.name || 'Klik kontrol dari konsep yang dipilih untuk membaca detail lengkap.' }}</span></div>
                     <div class="iso-detail-body" v-if="selectedConceptControl">
                       <div class="iso-detail-meta"><span class="iso-detail-meta-item"><small>Kategori</small><strong>{{ selectedConceptControl.domain || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Jenis</small><strong>{{ selectedConceptControl.type || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Prioritas</small><strong>{{ selectedConceptControl.priority || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Kesulitan</small><strong>{{ selectedConceptControl.difficulty || '-' }}</strong></span></div>
                       <div><span class="iso-detail-label">Deskripsi kontrol</span><div class="iso-callout">{{ selectedConceptControl.description || '-' }}</div></div>

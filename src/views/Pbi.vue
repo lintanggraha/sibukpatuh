@@ -67,7 +67,7 @@
             <h3>Pendekatan analisa regulasi yang terstruktur</h3>
             <p>
               Analisa dapat diawali dari peta bab dan domain kewajiban untuk
-              memahami struktur regulasi, dilanjutkan ke explorer kewajiban
+              memahami struktur regulasi, dilanjutkan ke eksplorasi kewajiban
               untuk meninjau requirement inti secara rinci, lalu ditutup dengan
               board pelaporan dan pengawasan untuk menyiapkan artefak regulator
               yang relevan.
@@ -111,7 +111,7 @@
         >
           <i class="fas fa-sliders-h"></i
           ><span
-            ><strong>Explorer Kewajiban</strong
+            ><strong>Eksplorasi</strong
             ><span
               >Filter requirement, baca interpretasi, dan telusuri kebutuhan
               bukti.</span
@@ -265,7 +265,7 @@
           </div>
         </div>
 
-        <!-- Tab 2: Explorer Kewajiban -->
+        <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="pbi-workspace">
             <article class="pbi-panel">

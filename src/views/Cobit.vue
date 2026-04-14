@@ -92,7 +92,7 @@
         >
           <i class="fas fa-sliders-h"></i
           ><span
-            ><strong>Explorer Konsep</strong
+            ><strong>Eksplorasi</strong
             ><span
               >Filter prinsip, komponen, design factor, domain, dan fase
               implementasi.</span
@@ -245,7 +245,7 @@
           </div>
         </div>
 
-        <!-- Tab 2: Explorer Konsep -->
+        <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="cob-workspace">
             <article class="cob-panel">

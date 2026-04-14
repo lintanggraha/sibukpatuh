@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # SibukPatuh - Sistem Informasi Biar Update Kepatuhan
 
 ## 📖 Tentang Aplikasi
