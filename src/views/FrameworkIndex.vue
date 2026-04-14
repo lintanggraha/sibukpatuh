@@ -2,114 +2,34 @@
   <div class="frx-shell">
     <section class="frx-hero">
       <div>
-        <span class="frx-kicker"
-          ><i class="fas fa-compass"></i>SibukPatuh Overview</span
-        >
-        <h1 class="frx-title">
-          SibukPatuh memudahkan eksplorasi framework dan referensi kepatuhan.
-        </h1>
+        <span class="frx-kicker"><i class="fas fa-compass"></i>SibukPatuh</span>
+        <h1 class="frx-title">Framework & Regulasi Kepatuhan</h1>
         <p class="frx-copy">
-          Aplikasi ini membantu tim menelusuri framework, kontrol, dan referensi
-          regulasi dalam satu tempat yang rapi dan mudah dipahami.
+          <strong>SibukPatuh</strong> adalah aplikasi explorer framework dan regulasi kepatuhan yang membantu tim IT, auditor, dan risk officer menelusuri standar keamanan siber — mulai dari <strong>ISO 27001, NIST CSF, COBIT 2019</strong> hingga regulasi nasional seperti <strong>SEOJK, Panduan Resiliensi OJK, dan PBI 02/2024</strong> — dalam satu tempat yang terstruktur.
         </p>
-
-        <div class="frx-stat-grid">
-          <div class="frx-stat">
-            <label>Framework Aktif</label>
-            <strong>{{ frameworkCount }}</strong>
-            <span
-              >Lima katalog utama tersedia langsung dari beranda tanpa
-              autentikasi.</span
-            >
-          </div>
-          <div class="frx-stat">
-            <label>Dataset Terdeteksi</label>
-            <strong>{{ readyCount }}</strong>
-            <span
-              >Framework yang sudah menemukan sumber data lokal untuk
-              dieksplorasi.</span
-            >
-          </div>
-          <div class="frx-stat">
-            <label>Total Entri</label>
-            <strong>{{ formatNumber(totalRecords) }}</strong>
-            <span
-              >Akumulasi item JSON yang berhasil dibaca dari seluruh katalog
-              framework.</span
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="frx-note-grid">
-        <article class="frx-note">
-          <label>Tentang Aplikasi</label>
-          <h3>Explorer referensi yang praktis</h3>
-          <p>
-            SibukPatuh merangkum berbagai framework dan referensi kepatuhan ke
-            dalam tampilan yang lebih ringkas, jadi tim bisa langsung fokus ke
-            isi yang dibutuhkan.
-          </p>
-        </article>
-        <article class="frx-note">
-          <label>Yang Bisa Dilakukan</label>
-          <p>
-            Kamu bisa membaca struktur framework, menelusuri kontrol, memahami
-            poin kewajiban, dan menemukan referensi yang relevan untuk kebutuhan
-            review, diskusi, atau tindak lanjut internal.
-          </p>
-        </article>
-        <article class="frx-note">
-          <label>Cara Pakai</label>
-          <p>
-            Tinggal pilih katalog yang ingin dibuka, lalu gunakan filter dan
-            detail halaman untuk menelusuri materinya. Alurnya dibuat sederhana
-            supaya navigasinya tetap ringan dan nyaman dipakai.
-          </p>
-        </article>
+        <p class="frx-features">
+          <span><i class="fas fa-check-circle"></i>Jelajahi kontrol & kewajiban per framework</span>
+          <span><i class="fas fa-check-circle"></i>Filter berdasarkan kategori, domain, dan prioritas</span>
+          <span><i class="fas fa-check-circle"></i>Lihat interpretasi, bukti audit, dan referensi</span>
+        </p>
       </div>
     </section>
 
     <section class="frx-card-grid">
-      <article
-        v-for="framework in frameworks"
-        :key="framework.route"
-        class="frx-card"
-        :style="{ '--accent': framework.accent }"
-      >
-        <div class="frx-card-top">
-          <span class="frx-card-icon">
-            <i :class="`fas ${framework.icon}`"></i>
-          </span>
-          <span class="frx-card-badge">{{ framework.subtitle }}</span>
-        </div>
-
-        <div>
-          <h3>{{ framework.name }}</h3>
-          <p>{{ framework.summary }}</p>
-        </div>
-
-        <div>
-          <label>{{ framework.metric_label }}</label>
-          <strong>{{
-            framework.metric_value === null
-              ? "N/A"
-              : formatNumber(framework.metric_value)
-          }}</strong>
-          <p class="mb-0">
-            {{
-              framework.metric_value === null
-                ? "Dataset belum ditemukan, tetapi halaman explorer tetap tersedia."
-                : "Jumlah entri berhasil dibaca dari sumber data lokal."
-            }}
-          </p>
-        </div>
-
-        <div class="frx-card-actions">
-          <router-link :to="{ name: framework.routeName }" class="btn btn-dark">
-            Buka Explorer
-          </router-link>
-        </div>
+      <article v-for="fw in frameworks" :key="fw.routeName" class="frx-card" :style="{ '--accent': fw.accent }">
+        <router-link :to="{ name: fw.routeName }" class="frx-card-link">
+          <div class="frx-card-top">
+            <span class="frx-card-icon"><i :class="`fas ${fw.icon}`"></i></span>
+            <div class="frx-card-info">
+              <h3>{{ fw.name }}</h3>
+              <p>{{ fw.summary }}</p>
+            </div>
+          </div>
+          <div class="frx-card-metric">
+            <span class="frx-card-count">{{ fw.metric_value !== null ? formatNumber(fw.metric_value) : '-' }}</span>
+            <span class="frx-card-label">{{ fw.metric_label }}</span>
+          </div>
+        </router-link>
       </article>
     </section>
   </div>
@@ -124,9 +44,8 @@ export default {
         {
           routeName: "iso27001",
           name: "ISO 27001:2022",
-          subtitle: "Kontrol keamanan informasi modern",
-          summary:
-            "Eksplorasi Annex A lengkap dengan domain kontrol, tipe pengendalian, dan interpretasi implementasi.",
+          subtitle: "Kontrol keamanan informasi",
+          summary: "Annex A lengkap dengan domain, tipe, dan interpretasi implementasi.",
           metric_label: "Kontrol",
           metric_value: 93,
           accent: "#0f766e",
@@ -135,9 +54,8 @@ export default {
         {
           routeName: "nist",
           name: "NIST CSF 2.0",
-          subtitle: "Pemetaan fungsi, kategori, dan SP 800-53",
-          summary:
-            "Menjelajahi GOVERN sampai RECOVER dengan filter subkategori dan referensi kontrol pendukung.",
+          subtitle: "Pemetaan fungsi & SP 800-53",
+          summary: "GOVERN hingga RECOVER dengan filter subkategori dan referensi.",
           metric_label: "Subkategori",
           metric_value: 106,
           accent: "#144e72",
@@ -147,19 +65,17 @@ export default {
           routeName: "cobit",
           name: "COBIT 2019",
           subtitle: "Governance of enterprise I&T",
-          summary:
-            "Navigator pengantar dan metodologi COBIT 2019: prinsip, design factor, core model, dan roadmap implementasi.",
-          metric_label: "Objektif Inti",
+          summary: "Prinsip, design factor, core model, dan roadmap implementasi.",
+          metric_label: "Objektif",
           metric_value: 40,
           accent: "#15803d",
           icon: "fa-project-diagram",
         },
         {
           routeName: "seojk",
-          name: "SEOJK 29/SEOJK.03/2022",
+          name: "SEOJK 29/2022",
           subtitle: "Ketahanan siber perbankan",
-          summary:
-            "Peta kewajiban, lampiran penilaian, dan ringkasan pelaporan regulator untuk kebutuhan self-assessment.",
+          summary: "Peta kewajiban, lampiran penilaian, dan format pelaporan regulator.",
           metric_label: "Kewajiban",
           metric_value: null,
           accent: "#b45309",
@@ -167,14 +83,23 @@ export default {
         },
         {
           routeName: "resilience",
-          name: "Panduan Resiliensi OJK",
+          name: "Resiliensi OJK",
           subtitle: "Digital resilience framework",
-          summary:
-            "Referensi tematik untuk membangun ketahanan digital di bidang tata kelola, teknologi, dan operasional bisnis.",
-          metric_label: "Tema",
+          summary: "Referensi tematik untuk ketahanan digital tata kelola dan operasional.",
+          metric_label: "Kewajiban",
           metric_value: null,
           accent: "#7c3aed",
           icon: "fa-layer-group",
+        },
+        {
+          routeName: "pbi",
+          name: "PBI 02/2024",
+          subtitle: "KKS & ketahanan siber BI",
+          summary: "Kewajiban KKS, pelaporan insiden, dan pengawasan Bank Indonesia.",
+          metric_label: "Kewajiban",
+          metric_value: null,
+          accent: "#b91c1c",
+          icon: "fa-university",
         },
       ],
     };
@@ -197,11 +122,24 @@ export default {
   },
   async mounted() {
     // Load real metrics from JSON files
-    const loadData = async (url) => {
+    const loadData = async (url, keyPath) => {
       try {
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
+          // Support nested data structures
+          if (keyPath) {
+            const parts = keyPath.split('.');
+            let result = data;
+            for (const part of parts) {
+              if (result && result[part] !== undefined) {
+                result = result[part];
+              } else {
+                return 0;
+              }
+            }
+            return Array.isArray(result) ? result.length : 0;
+          }
           return Array.isArray(data) ? data.length : data.total || 0;
         }
       } catch (e) {
@@ -210,254 +148,55 @@ export default {
       return 0;
     };
 
-    const [isoCount, nistCount, cobitCount] = await Promise.all([
+    const [
+      isoCount,
+      nistCount,
+      cobitCount,
+      seojkCount,
+      resilienceCount,
+      pbiCount,
+    ] = await Promise.all([
       loadData("/data/iso27001.json"),
       loadData("/data/nist_csf.json"),
-      loadData("/data/cobit_2019_intro_methodology.json"),
+      loadData("/data/cobit_2019_intro_methodology.json", "principles_system"),
+      loadData("/data/seojk_requirements.json"),
+      loadData("/data/seojk_resilience_guidance.json"),
+      loadData("/data/pbi_022024_requirements.json"),
     ]);
 
     this.frameworks[0].metric_value = isoCount || 93;
     this.frameworks[1].metric_value = nistCount || 106;
     this.frameworks[2].metric_value = cobitCount || 40;
+    this.frameworks[3].metric_value = seojkCount || 0;
+    this.frameworks[4].metric_value = resilienceCount || 0;
+    this.frameworks[5].metric_value = pbiCount || 0;
   },
 };
 </script>
 
 <style scoped>
-.frx-shell {
-  display: grid;
-  gap: 1rem;
-}
-
-.frx-hero {
-  display: grid;
-  grid-template-columns: 1.45fr 0.95fr;
-  gap: 0.9rem;
-  padding: 1.1rem;
-  border-radius: 24px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(247, 209, 153, 0.9),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(149, 203, 212, 0.72),
-      transparent 30%
-    ),
-    linear-gradient(135deg, #17324d 0%, #1d5d73 50%, #eedab7 100%);
-  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.09);
-  overflow: hidden;
-  position: relative;
-}
-
-.frx-hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-.frx-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.32rem 0.64rem;
-  border-radius: 999px;
-  color: rgba(255, 250, 242, 0.92);
-  background: rgba(255, 250, 242, 0.16);
-  font-size: 0.68rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.frx-title {
-  margin: 0.85rem 0 0.55rem;
-  color: #fffaf2;
-  font-size: clamp(1.7rem, 3vw, 2.65rem);
-  font-weight: 800;
-  line-height: 1.08;
-}
-
-.frx-copy {
-  margin: 0;
-  max-width: 660px;
-  color: rgba(255, 250, 242, 0.82);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.frx-stat-grid,
-.frx-note-grid,
-.frx-card-grid {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.frx-stat-grid {
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 0.95rem;
-}
-
-.frx-stat,
-.frx-note,
-.frx-card {
-  border-radius: 18px;
-  border: 1px solid rgba(22, 50, 75, 0.08);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
-}
-
-.frx-stat {
-  padding: 0.68rem 0.76rem;
-  background: rgba(255, 250, 242, 0.12);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-.frx-stat label,
-.frx-note label,
-.frx-card label {
-  display: block;
-  margin-bottom: 0.24rem;
-  color: rgba(255, 250, 242, 0.7);
-  font-size: 0.68rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.frx-stat strong {
-  display: block;
-  color: #fffaf2;
-  font-size: 1.28rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.frx-stat span {
-  display: block;
-  margin-top: 0.3rem;
-  color: rgba(255, 250, 242, 0.74);
-  font-size: 0.72rem;
-  line-height: 1.4;
-}
-
-.frx-note-grid {
-  align-content: start;
-}
-
-.frx-note {
-  padding: 0.72rem 0.8rem;
-  background: rgba(255, 250, 242, 0.8);
-  border-color: rgba(255, 255, 255, 0.24);
-}
-
-.frx-note label {
-  color: #5c6776;
-}
-
-.frx-note h3 {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-
-.frx-note p {
-  margin: 0.38rem 0 0;
-  color: #5c6776;
-  line-height: 1.5;
-  font-size: 0.8rem;
-}
-
-.frx-card-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.frx-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.95rem;
-  padding: 1rem;
-  border-radius: 24px;
-}
-
-.frx-card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.8rem;
-}
-
-.frx-card-icon {
-  width: 3rem;
-  height: 3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  color: #fffaf2;
-  background: linear-gradient(
-    135deg,
-    var(--accent) 0%,
-    rgba(22, 50, 75, 0.9) 100%
-  );
-  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
-}
-
-.frx-card-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.28rem 0.54rem;
-  border-radius: 999px;
-  background: rgba(22, 50, 75, 0.08);
-  color: #16324b;
-  font-size: 0.72rem;
-  font-weight: 800;
-}
-
-.frx-card h3 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.frx-card p {
-  margin: 0.3rem 0 0;
-  color: #5c6776;
-  line-height: 1.6;
-  font-size: 0.85rem;
-}
-
-.frx-card label {
-  margin-bottom: 0.18rem;
-  color: #5c6776;
-}
-
-.frx-card strong {
-  display: block;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--accent);
-}
-
-.frx-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: auto;
-}
-
-.frx-card-actions .btn {
-  border-radius: 999px;
-  font-weight: 700;
-}
-
-@media (max-width: 1199.98px) {
-  .frx-hero,
-  .frx-card-grid,
-  .frx-stat-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.frx-shell{display:grid;gap:1rem}
+.frx-hero{padding:.8rem 1rem;border-radius:18px;background:radial-gradient(circle at top right,rgba(247,209,153,.9),transparent 32%),radial-gradient(circle at bottom left,rgba(149,203,212,.72),transparent 30%),linear-gradient(135deg,#17324d 0%,#1d5d73 50%,#eedab7 100%);box-shadow:0 18px 36px rgba(15,23,42,.08);overflow:hidden;position:relative}
+.frx-hero>*{position:relative;z-index:1}
+.frx-kicker{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .55rem;border-radius:999px;color:rgba(255,250,242,.92);background:rgba(255,250,242,.16);font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.frx-title{margin:.5rem 0 .25rem;color:#fffaf2;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;line-height:1.1}
+.frx-copy{margin:0;color:rgba(255,250,242,.8);font-size:.85rem;line-height:1.6}
+.frx-copy strong{color:#fffaf2}
+.frx-features{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.65rem;padding-top:.55rem;border-top:1px solid rgba(255,255,255,.15)}
+.frx-features span{display:inline-flex;align-items:center;gap:.3rem;color:rgba(255,250,242,.75);font-size:.76rem;font-weight:600}
+.frx-features i{color:rgba(255,250,242,.5);font-size:.7rem}
+.frx-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.frx-card{border-radius:14px;border:1px solid rgba(22,50,75,.08);background:rgba(255,255,255,.85);box-shadow:0 8px 18px rgba(15,23,42,.04);transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.frx-card:hover{border-color:rgba(22,50,75,.18);box-shadow:0 12px 24px rgba(15,23,42,.08);transform:translateY(-2px)}
+.frx-card-link{display:block;padding:.7rem .85rem;text-decoration:none;color:inherit}
+.frx-card-top{display:flex;align-items:center;gap:.65rem}
+.frx-card-icon{width:2.2rem;height:2.2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;color:#fffaf2;background:linear-gradient(135deg,var(--accent) 0%,rgba(22,50,75,.9) 100%);box-shadow:0 8px 14px rgba(15,23,42,.1);flex-shrink:0;font-size:.85rem}
+.frx-card-info{flex:1;min-width:0}
+.frx-card-info h3{margin:0;font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frx-card-info p{margin:.15rem 0 0;color:#5c6776;line-height:1.45;font-size:.75rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.frx-card-metric{display:flex;align-items:baseline;gap:.35rem;margin-top:.55rem;padding-top:.55rem;border-top:1px solid rgba(22,50,75,.06)}
+.frx-card-count{font-size:1.15rem;font-weight:800;color:var(--accent);line-height:1}
+.frx-card-label{font-size:.68rem;font-weight:700;color:#5c6776;text-transform:uppercase;letter-spacing:.06em}
+@media (max-width:1199.98px){.frx-card-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:.9rem}}
 </style>

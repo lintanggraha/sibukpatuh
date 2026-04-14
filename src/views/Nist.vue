@@ -89,8 +89,14 @@
             <article class="nst-panel">
               <div class="nst-head"><h3>Daftar subkategori</h3><span class="nst-chip">{{ filteredControls.length }} entri</span></div>
               <div class="nst-list">
-                <button v-for="ctrl in filteredControls" :key="ctrl.id" type="button" class="nst-item" :class="{ active: activeControlId === ctrl.id }" :style="{ '--accent': getFunctionColor(ctrl.function) }" @click="setActiveControl(ctrl.id)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ getFunctionLabel(ctrl.function) }}</span></div><div class="nst-item-name">{{ ctrl.title || '-' }}</div><div class="nst-item-meta"><span>{{ ctrl.category || '-' }}</span><span>{{ (ctrl.sp80053 || []).length }} referensi</span></div></button>
-                <div v-if="filteredControls.length === 0" class="nst-empty">Tidak ada subkategori yang cocok dengan filter saat ini.</div>
+                <button v-for="ctrl in paginatedControls" :key="ctrl.id" type="button" class="nst-item" :class="{ active: activeControlId === ctrl.id }" :style="{ '--accent': getFunctionColor(ctrl.function) }" @click="setActiveControl(ctrl.id)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ getFunctionLabel(ctrl.function) }}</span></div><div class="nst-item-name">{{ ctrl.title || '-' }}</div><div class="nst-item-meta"><span>{{ ctrl.category || '-' }}</span><span>{{ (ctrl.sp80053 || []).length }} referensi</span></div></button>
+                <div v-if="paginatedControls.length === 0" class="nst-empty">Tidak ada subkategori yang cocok dengan filter saat ini.</div>
+                <!-- Pagination Controls -->
+                <div v-if="totalPages > 1" class="nst-pagination">
+                  <button @click="currentPage = Math.max(1, currentPage - 1)" :disabled="currentPage === 1" class="btn btn-sm btn-outline-secondary me-2"><i class="fas fa-chevron-left"></i> Previous</button>
+                  <span class="nst-page-info">Page {{ currentPage }} of {{ totalPages }} ({{ filteredControls.length }} total)</span>
+                  <button @click="currentPage = Math.min(totalPages, currentPage + 1)" :disabled="currentPage === totalPages" class="btn btn-sm btn-outline-secondary ms-2">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
               </div>
             </article>
             <article class="nst-panel nst-inspector">
@@ -98,7 +104,8 @@
               <div class="nst-inspector-body">
                 <div class="nst-meta"><span>{{ activeControl ? getFunctionLabel(activeControl.function) : '-' }}</span><span>{{ activeControl ? activeControl.category : '-' }}</span><span>{{ activeControl ? (activeControl.sp80053 || []).length + ' referensi' : '0 referensi' }}</span></div>
                 <div class="nst-callout"><span class="nst-label">Deskripsi</span><div class="mt-2">{{ activeControl ? activeControl.description : 'Pilih subkategori untuk membaca deskripsi.' }}</div></div>
-                <div class="nst-note"><span class="nst-label">Interpretasi Kontrol</span><div class="mt-2">{{ activeControl ? activeControl.interpretation : '-' }}</div></div>
+                <div class="nst-note"><span class="nst-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeControl ? activeControl.analogy : '-' }}</div></div>
+                <div class="nst-callout"><span class="nst-label"><i class="fas fa-bullseye me-1"></i>Fokus Implementasi</span><ul class="nst-plain"><li v-for="(item, idx) in (activeControl?.fokus || [])" :key="idx">{{ item }}</li><li v-if="!activeControl?.fokus?.length" class="text-muted">Tidak ada fokus implementasi tambahan.</li></ul></div>
                 <div class="nst-callout"><span class="nst-label">Contoh Bukti Audit</span><ul class="nst-plain"><li v-for="(item, idx) in (activeControl && activeControl.evidence && activeControl.evidence.length ? activeControl.evidence : ['Tidak ada contoh bukti audit.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="nst-callout"><span class="nst-label">Referensi SP 800-53</span><div class="nst-refs"><button v-for="ref in (activeControl?.sp80053 || [])" :key="ref" type="button" class="nst-ref" @click="jumpReference(ref)">{{ ref }}</button><span v-if="!activeControl || !activeControl.sp80053 || !activeControl.sp80053.length" class="nst-empty w-100">Belum ada referensi SP 800-53 yang ditautkan.</span></div></div>
               </div>
@@ -135,13 +142,46 @@
   </div>
 
   <!-- Modal SP 800-53 -->
-  <div v-if="showSp800Modal" class="modal-backdrop" @click.self="showSp800Modal = false">
-    <div class="modal-content">
-      <div class="modal-header"><div><div class="text-muted text-uppercase fw-semibold small">{{ selectedSp800?.id || '-' }}</div><h5 class="modal-title mt-1">{{ selectedSp800?.family || '' }} - {{ selectedSp800?.family_name || 'Detail SP 800-53' }}</h5></div><button type="button" class="btn-close" @click="showSp800Modal = false" aria-label="Close"></button></div>
-      <div class="modal-body">
-        <div class="mb-3"><div class="text-muted text-uppercase fw-semibold small mb-2">Deskripsi Kontrol</div><div>{{ selectedSp800?.description || '-' }}</div></div>
-        <div class="mb-3"><div class="text-muted text-uppercase fw-semibold small mb-2">Contoh Bukti Audit</div><ul class="nst-plain"><li v-for="(item, idx) in (selectedSp800?.bukti_audit && selectedSp800.bukti_audit.length ? selectedSp800.bukti_audit : ['Tidak ada contoh bukti audit.'])" :key="idx">{{ item }}</li></ul></div>
-        <div><div class="text-muted text-uppercase fw-semibold small mb-2">Referensi NIST CSF</div><div class="d-flex flex-wrap gap-2"><span v-for="ref in (selectedSp800?.nist_references || [])" :key="ref" class="badge bg-light text-dark border">{{ ref }}</span></div></div>
+  <div v-if="showSp800Modal" class="modal-overlay" @click.self="showSp800Modal = false">
+    <div class="modal-dialog">
+      <div class="modal-shell">
+        <div class="modal-sidebar" style="background: linear-gradient(180deg, #144e72 0%, rgba(20,78,114,.7) 100%)">
+          <button type="button" class="modal-close" @click="showSp800Modal = false" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="modal-sidebar-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="modal-sidebar-id">{{ selectedSp800?.id || '-' }}</div>
+          <div class="modal-sidebar-type">{{ selectedSp800?.family || '' }}</div>
+        </div>
+        <div class="modal-main">
+          <div class="modal-header">
+            <h4 class="modal-title">{{ selectedSp800?.family_name || 'Detail SP 800-53' }}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-info-circle"></i><span>Deskripsi Kontrol</span></div>
+              <div class="modal-section-content"><p class="modal-summary">{{ selectedSp800?.description || '-' }}</p></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-list-check"></i><span>Contoh Bukti Audit</span></div>
+              <div class="modal-section-content">
+                <ul class="modal-artifact-list">
+                  <li v-for="(item, idx) in (selectedSp800?.bukti_audit && selectedSp800.bukti_audit.length ? selectedSp800.bukti_audit : [])" :key="idx"><i class="fas fa-check-circle"></i><span>{{ item }}</span></li>
+                  <li v-if="!selectedSp800?.bukti_audit || !selectedSp800.bukti_audit.length" class="modal-empty">Tidak ada contoh bukti audit.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-link"></i><span>Referensi NIST CSF</span></div>
+              <div class="modal-section-content">
+                <div class="modal-requirements">
+                  <span v-for="ref in (selectedSp800?.nist_references || [])" :key="ref" class="modal-req-badge">{{ ref }}</span>
+                  <div v-if="!selectedSp800?.nist_references || !selectedSp800.nist_references.length" class="modal-empty">Belum ada referensi NIST CSF yang ditautkan.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -173,6 +213,9 @@ export default {
       sp800Search: '',
       showSp800Modal: false,
       selectedSp800: null,
+      // Pagination
+      currentPage: 1,
+      itemsPerPage: 25,
     };
   },
   computed: {
@@ -258,11 +301,26 @@ export default {
     activeControl() {
       return this.controls.find(c => c.id === this.activeControlId) || null;
     },
+    // Pagination computed properties
+    totalPages() { return Math.ceil(this.filteredControls.length / this.itemsPerPage); },
+    paginatedControls() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.filteredControls.slice(start, end);
+    },
+  },
+  watch: {
+    filteredControls() {
+      this.currentPage = 1;
+      if (this.paginatedControls.length && !this.paginatedControls.find(c => c.id === this.activeControlId)) {
+        this.activeControlId = this.paginatedControls[0]?.id || null;
+      }
+    },
   },
   methods: {
     getFunctionColor(func) { return this.functionMeta[func]?.color || '#144e72'; },
     getFunctionLabel(func) { return this.functionMeta[func]?.label || func || '-'; },
-    resetFilters() { this.functionFilter = ''; this.categoryFilter = ''; this.controlSearch = ''; },
+    resetFilters() { this.functionFilter = ''; this.categoryFilter = ''; this.controlSearch = ''; this.currentPage = 1; },
     resetSp800Filters() { this.familyFilter = ''; this.sp800Search = ''; },
     setActiveControl(id) { this.activeControlId = id; },
     jumpExplorer(fn = '', category = '') {
@@ -339,7 +397,7 @@ export default {
 .nst-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
 .nst-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
 .nst-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
-.nst-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
+.nst-tab.active{border-color:rgba(15,118,110,.24);box-shadow:0 18px 30px rgba(15,118,110,.1)}
 .nst-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
 .nst-tab strong{display:block;font-size:.9rem;font-weight:800}
 .nst-tab span{display:block;margin-top:.14rem;color:var(--muted);font-size:.76rem;line-height:1.4}
@@ -385,20 +443,20 @@ export default {
 .nst-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .nst-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
 .nst-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
-.nst-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.nst-list{display:flex;flex-direction:column;max-height:760px;overflow-y:auto;padding-right:.12rem}
 .nst-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
 .nst-item:last-child{margin-bottom:0}
-.nst-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
-.nst-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
+.nst-item.active{border-color:rgba(15,118,110,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
+.nst-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#0f766e)}
 .nst-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
-.nst-item-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
+.nst-item-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#0f766e)}
 .nst-item-name{margin:.28rem 0 .2rem;font-size:.88rem;font-weight:700;line-height:1.38;color:var(--ink)}
 .nst-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
 .nst-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
 .nst-pill{padding:.2rem .45rem;font-size:.68rem;background:rgba(20,38,59,.08);color:var(--ink)}
-.nst-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
+.nst-inspector{position:relative;top:auto;min-height:760px;display:flex;flex-direction:column}
 .nst-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
-.nst-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
+.nst-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#0f766e}
 .nst-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}
 .nst-inspector-body{display:grid;gap:.75rem;padding-top:.85rem;flex:1;min-height:0;overflow:auto;align-content:start}
 .nst-meta{display:flex;flex-wrap:wrap;gap:.45rem}
@@ -419,4 +477,44 @@ export default {
 @media (max-width:1399.98px){.nst-workspace,.nst-refspace{grid-template-columns:1fr}.nst-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.nst-hero,.nst-metric,.nst-side{min-height:auto}.nst-hero,.nst-nav,.nst-grid.two,.nst-refspace,.nst-metrics,.nst-mini-row,.nst-cards{grid-template-columns:1fr}.nst-bar,.nst-hotspot,.nst-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.nst-hero,.nst-panel{padding:1.2rem;border-radius:22px}.nst-function-grid{grid-template-columns:1fr}}
+
+/* Pagination styles */
+.nst-pagination{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem;padding:1rem;border-top:1px solid var(--line)}
+.nst-page-info{font-size:.875rem;color:var(--muted);white-space:nowrap}
+
+/* Modal SP 800-53 Styles */
+.modal-req-badge{display:inline-flex;align-items:center;padding:.35rem .65rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace}
+
+/* Shared Modal Overlay Styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.56);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem}
+.modal-dialog{width:100%;max-width:780px}
+.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+.modal-sidebar{position:relative;padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#fffaf2;text-align:center}
+.modal-close{position:absolute;top:.75rem;right:.75rem;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;border:none;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease}
+.modal-close:hover{background:rgba(255,255,255,.28);transform:scale(1.05)}
+.modal-sidebar-icon{width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(255,255,255,.18);font-size:1.25rem;margin-bottom:.25rem}
+.modal-sidebar-id{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:1.15rem;font-weight:800;letter-spacing:.04em}
+.modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
+.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
+.modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
+.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
+.modal-section{margin-bottom:1.25rem}
+.modal-section:last-child{margin-bottom:0}
+.modal-section-header{display:flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.modal-section-header i{font-size:.82rem}
+.modal-section-content{padding-left:.25rem}
+.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+.modal-artifact-list{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.modal-artifact-list li{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem;color:var(--ink);line-height:1.5}
+.modal-artifact-list li i{color:#0f766e;font-size:.82rem;margin-top:.18rem;flex-shrink:0}
+.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}
+.modal-empty{padding:.9rem 1rem;border-radius:12px;border:1px dashed rgba(20,38,59,.18);background:rgba(245,247,250,.6);color:var(--muted);text-align:center;font-size:.82rem;line-height:1.5}
+
+/* Modal Transitions */
+.modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}
+.modal-fade-enter-from,.modal-fade-leave-to{opacity:0}
+.modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
+.modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
+.modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
 </style>

@@ -304,12 +304,12 @@
               </div>
               <div class="cob-list">
                 <button
-                  v-for="concept in filteredConcepts"
+                  v-for="concept in paginatedConcepts"
                   :key="concept.id"
                   type="button"
                   class="cob-item"
                   :class="{ active: activeConceptId === concept.id }"
-                  :style="{ '--accent': concept.color || '#144e72' }"
+                  :style="{ '--accent': concept.color || '#0f766e' }"
                   @click="setActiveConcept(concept.id)"
                 >
                   <div class="cob-item-top">
@@ -329,8 +329,14 @@
                     }}
                   </div>
                 </button>
-                <div v-if="filteredConcepts.length === 0" class="cob-empty">
+                <div v-if="paginatedConcepts.length === 0" class="cob-empty">
                   Tidak ada konsep yang cocok dengan filter saat ini.
+                </div>
+                <!-- Pagination Controls -->
+                <div v-if="totalPages > 1" class="cob-pagination">
+                  <button @click="currentPage = Math.max(1, currentPage - 1)" :disabled="currentPage === 1" class="btn btn-sm btn-outline-secondary me-2"><i class="fas fa-chevron-left"></i> Previous</button>
+                  <span class="cob-page-info">Page {{ currentPage }} of {{ totalPages }} ({{ filteredConcepts.length }} total)</span>
+                  <button @click="currentPage = Math.min(totalPages, currentPage + 1)" :disabled="currentPage === totalPages" class="btn btn-sm btn-outline-secondary ms-2">Next <i class="fas fa-chevron-right"></i></button>
                 </div>
               </div>
             </article>
@@ -514,6 +520,9 @@ export default {
       activeType: "",
       conceptSearch: "",
       activeConceptId: null,
+      // Pagination
+      currentPage: 1,
+      itemsPerPage: 25,
     };
   },
   computed: {
@@ -568,6 +577,21 @@ export default {
     activeConcept() {
       return this.concepts.find((c) => c.id === this.activeConceptId) || null;
     },
+    // Pagination computed properties
+    totalPages() { return Math.ceil(this.filteredConcepts.length / this.itemsPerPage); },
+    paginatedConcepts() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.filteredConcepts.slice(start, end);
+    },
+  },
+  watch: {
+    filteredConcepts() {
+      this.currentPage = 1;
+      if (this.paginatedConcepts.length && !this.paginatedConcepts.find(c => c.id === this.activeConceptId)) {
+        this.activeConceptId = this.paginatedConcepts[0]?.id || null;
+      }
+    },
   },
   methods: {
     toggleType(type) {
@@ -576,6 +600,7 @@ export default {
     resetConceptFilters() {
       this.activeType = "";
       this.conceptSearch = "";
+      this.currentPage = 1;
       if (this.concepts.length > 0) {
         this.activeConceptId =
           this.filteredConcepts[0]?.id || this.concepts[0]?.id;
@@ -682,10 +707,12 @@ export default {
 }
 .cob-hero {
   display: grid;
-  grid-template-columns: 1.45fr 0.95fr;
+  grid-template-columns: 1.6fr 0.9fr;
   gap: 1rem;
+  align-items: stretch;
+  min-height: 368px;
   padding: 1.15rem;
-  border-radius: 26px;
+  border-radius: 28px;
   background:
     radial-gradient(
       circle at top right,
@@ -855,8 +882,8 @@ export default {
   cursor: pointer;
 }
 .cob-tab.active {
-  border-color: rgba(20, 78, 114, 0.24);
-  box-shadow: 0 18px 30px rgba(20, 78, 114, 0.1);
+  border-color: rgba(15, 118, 110, 0.24);
+  box-shadow: 0 18px 30px rgba(15, 118, 110, 0.1);
 }
 .cob-tab i {
   width: 2.3rem;
@@ -1123,7 +1150,7 @@ export default {
   margin-bottom: 0;
 }
 .cob-item.active {
-  border-color: rgba(20, 78, 114, 0.35);
+  border-color: rgba(15, 118, 110, 0.35);
   border-left-width: 0.28rem;
   background: rgba(238, 245, 245, 0.6);
 }
@@ -1135,7 +1162,7 @@ export default {
   bottom: 0.7rem;
   width: 0.18rem;
   border-radius: 999px;
-  background: var(--accent, #144e72);
+  background: var(--accent, #0f766e);
 }
 .cob-item-top {
   display: flex;
@@ -1150,7 +1177,7 @@ export default {
     monospace;
   font-size: 0.76rem;
   font-weight: 800;
-  color: var(--accent, #144e72);
+  color: var(--accent, #0f766e);
 }
 .cob-item-name {
   margin: 0.28rem 0 0.18rem;
@@ -1184,7 +1211,7 @@ export default {
   margin-top: 0.35rem;
   font-size: 1rem;
   font-weight: 800;
-  color: #144e72;
+  color: #0f766e;
 }
 .cob-inspector-head span {
   display: block;
@@ -1272,5 +1299,21 @@ export default {
     padding: 1rem;
     border-radius: 22px;
   }
+}
+
+/* Pagination styles */
+.cob-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid var(--line);
+}
+.cob-page-info {
+  font-size: 0.875rem;
+  color: var(--muted);
+  white-space: nowrap;
 }
 </style>

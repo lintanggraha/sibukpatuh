@@ -411,10 +411,10 @@
                   </div>
                 </div>
                 <div class="pbi-note">
-                  <strong>Interpretasi Implementasi</strong>
+                  <strong><i class="fas fa-lightbulb me-1"></i>Analogi</strong>
                   <div class="mt-2">
                     {{
-                      activeRequirement ? activeRequirement.interpretation : "-"
+                      activeRequirement ? activeRequirement.analogy : "-"
                     }}
                   </div>
                 </div>
@@ -1329,7 +1329,7 @@ export default {
 }
 .pbi-mini-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.65rem;
 }
 .pbi-mini {

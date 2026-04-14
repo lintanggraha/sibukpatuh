@@ -15,7 +15,8 @@
       "Dokumen sasaran program KKS atau security strategy charter.",
       "Matriks peran dan tanggung jawab lintas unit.",
       "Notulen komite manajemen atas arah implementasi KKS."
-    ]
+    ],
+    "analogy": "Seperti konstitusi yang jadi dasar negara, kerangka KKS jadi fondasi kebijakan keamanan sistem informasi perusahaan."
   },
   {
     "id": "PBI.KRK-02",
@@ -33,7 +34,8 @@
       "Dokumen penetapan scope KKS dan perimeter sistem.",
       "Peta proses bisnis, layanan, dan pihak ketiga yang tercakup.",
       "Keputusan manajemen tentang klasifikasi entitas atau lini layanan."
-    ]
+    ],
+    "analogy": "Seperti peta yang menunjukkan rute perjalanan, kerangka KKS memberi panduan arah untuk mencapai keamanan sistem informasi."
   },
   {
     "id": "PBI.GOV-01",
@@ -51,7 +53,8 @@
       "Dokumen strategi dan kebijakan KKS yang telah disetujui.",
       "Roadmap implementasi atau program kerja tahunan KKS.",
       "Mekanisme pelaporan status implementasi kepada manajemen."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.GOV-02",
@@ -69,7 +72,8 @@
       "Dokumen roadmap KKS dan business case pendukung.",
       "Rencana kebutuhan anggaran, kapasitas SDM, dan teknologi.",
       "Hasil review berkala terhadap capaian roadmap."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.GOV-03",
@@ -87,7 +91,8 @@
       "Kumpulan policy, standard, dan SOP keamanan informasi.",
       "Kontrol due diligence dan pengamanan pihak ketiga.",
       "Hasil review kebijakan dan pembaruan dokumen."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.GOV-04",
@@ -105,7 +110,8 @@
       "Struktur organisasi dan job description fungsi KKS.",
       "Piagam organisasi atau mandat fungsi KKS.",
       "Laporan berkala manajemen KKS kepada manajemen tertinggi."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.GOV-05",
@@ -123,7 +129,8 @@
       "Risk register siber dan metodologi penilaian risiko.",
       "Hasil asesmen atau maturity assessment KKS.",
       "Rencana mitigasi dan status tindak lanjut risiko siber."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.GOV-06",
@@ -141,7 +148,8 @@
       "Rencana audit KKS tahunan atau multi-tahun.",
       "Laporan hasil audit internal atau eksternal.",
       "Daftar temuan dan bukti penyelesaian tindak lanjut."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.GOV-07",
@@ -159,7 +167,8 @@
       "Program awareness dan budaya KKS.",
       "Materi sosialisasi, pelatihan, atau kampanye kesadaran.",
       "Rekaman partisipasi dan evaluasi efektivitas program budaya."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.PRV-01",
@@ -177,7 +186,8 @@
       "Profil risiko siber atau cyber risk profile document.",
       "Jadwal review berkala atas profil risiko siber.",
       "Pemetaan prioritas pengendalian berbasis hasil identifikasi."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.PRV-02",
@@ -195,7 +205,8 @@
       "Metodologi asesmen risiko siber yang terdokumentasi.",
       "Hasil penilaian risiko terhadap aset atau layanan kritikal.",
       "Daftar prioritas mitigasi dan penanggung jawabnya."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.PRV-03",
@@ -213,7 +224,8 @@
       "Business impact analysis untuk layanan dan sistem kritikal.",
       "Daftar infrastruktur informasi vital.",
       "Dokumen prioritas pemulihan layanan kritikal."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.PRV-04",
@@ -231,7 +243,8 @@
       "Kontrol onboarding, offboarding, dan screening personel atau vendor.",
       "Baseline konfigurasi keamanan dan hardening standard.",
       "Catatan implementasi endpoint security, patching, atau segmentasi jaringan."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.PRV-05",
@@ -249,7 +262,8 @@
       "Skema klasifikasi data dan kebijakan data handling.",
       "Kontrol enkripsi, backup, dan access control untuk data sensitif.",
       "Dokumen kepatuhan atau assessment atas pelindungan data pribadi."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.PRV-06",
@@ -267,7 +281,8 @@
       "Log monitoring dan dashboard keamanan.",
       "Definisi threshold alert dan aturan eskalasi.",
       "Hasil vulnerability scanning atau pemantauan kerentanan."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.PRV-07",
@@ -285,7 +300,8 @@
       "Prosedur analisis alert dan incident triage.",
       "Hasil malware analysis atau review unauthorized code.",
       "Bukti pemeliharaan tool deteksi dan hasil pengujiannya."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.HDL-01",
@@ -303,7 +319,8 @@
       "Incident response plan dan cyber recovery plan.",
       "Penetapan RTO dan RPO untuk layanan kritikal.",
       "Dokumen business continuity plan yang terintegrasi."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.HDL-02",
@@ -321,7 +338,8 @@
       "Skenario simulasi dan jadwal exercise.",
       "Berita acara, notulen, atau laporan hasil simulasi.",
       "Perbaikan rencana penanganan setelah evaluasi exercise."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.HDL-03",
@@ -340,7 +358,8 @@
       "Template notifikasi awal dan laporan insiden kepada Bank Indonesia.",
       "Laporan forensik, kronologi insiden, dan bukti tindakan mitigasi."
     ],
-    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi."
+    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.HDL-04",
@@ -359,7 +378,8 @@
       "Daftar pemangku kepentingan dan skema eskalasi komunikasi.",
       "Bukti penyampaian update penanganan ke regulator."
     ],
-    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan."
+    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan.",
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.HDL-05",
@@ -377,7 +397,8 @@
       "Dokumen recovery architecture dan disaster recovery arrangement.",
       "Hasil uji failover atau aktivasi lokasi alternatif.",
       "Bukti pemulihan layanan berdasarkan prioritas kritikalitas."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.HDL-06",
@@ -396,7 +417,8 @@
       "Daftar corrective action dan status implementasinya.",
       "Bukti komunikasi pemulihan kepada regulator dan pemangku kepentingan."
     ],
-    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan."
+    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan.",
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.OVS-01",
@@ -415,7 +437,8 @@
       "Prosedur persiapan pemeriksaan regulator.",
       "Bukti tindak lanjut atas hasil pengawasan."
     ],
-    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan."
+    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan.",
+    "analogy": "Seperti auditor yang memeriksa kepatuhan perusahaan, pengawasan BI memastikan perusahaan mematuhi ketentuan KKS."
   },
   {
     "id": "PBI.OVS-02",
@@ -434,7 +457,8 @@
       "Daftar hasil identifikasi infrastruktur informasi vital.",
       "Bukti penyampaian laporan insidental dan tahunan ke Bank Indonesia."
     ],
-    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan."
+    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan.",
+    "analogy": "Seperti ujian sekolah yang mengukur pemahaman siswa, pengawasan mengukur tingkat kepatuhan perusahaan terhadap regulasi."
   },
   {
     "id": "PBI.COL-01",
@@ -452,7 +476,8 @@
       "Prosedur threat intelligence sharing.",
       "Bukti partisipasi pada forum atau sarana berbagi informasi.",
       "Ringkasan pembelajaran insiden yang dibagikan secara terkendali."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   },
   {
     "id": "PBI.COL-02",
@@ -470,7 +495,8 @@
       "Notulen koordinasi dengan regulator, SRO, atau lembaga terkait.",
       "Partisipasi pada simulasi serangan siber sektor keuangan.",
       "Prosedur teknis atau standar operasional yang dirujuk dari SRO."
-    ]
+    ],
+    "analogy": "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
   },
   {
     "id": "PBI.IMP-01",
@@ -488,6 +514,7 @@
       "Dokumen penetapan klasifikasi penyelenggara.",
       "Pemetaan kontrol KKS berdasarkan klasifikasi atau risk tier.",
       "Matriks pemenuhan terhadap ketentuan turunan yang relevan."
-    ]
+    ],
+    "analogy": "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya."
   }
 ]

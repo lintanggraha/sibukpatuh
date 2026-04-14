@@ -52,27 +52,16 @@
                 explorer.</span
               >
             </div>
+            <div class="orj-metric">
+              <label>Kapabilitas Ketahanan</label>
+              <strong>{{ sectionBreakdown.length }}</strong>
+              <span>Area kapabilitas dari latar belakang hingga kerangka.</span>
+            </div>
           </div>
         </div>
-        <div class="orj-grid">
-          <div class="orj-side">
-            <label>Cakupan Panduan</label>
-            <h3>Fokus pada ketahanan layanan digital</h3>
-            <p>
-              Panduan ditempatkan sebagai acuan untuk memahami konteks gangguan
-              digital, kesiapan operasional, tata kelola, dan penguatan
-              berkelanjutan dalam lingkungan layanan perbankan.
-            </p>
-          </div>
-          <div class="orj-side">
-            <label>Arah Pemanfaatan</label>
-            <p>
-              Pembacaan dapat dimulai dari struktur dokumen, dilanjutkan ke
-              explorer tema untuk menelaah ringkasan dan fokus implementasi,
-              lalu ditutup dengan board fokus per bagian untuk menyusun
-              prioritas tindak lanjut.
-            </p>
-          </div>
+        <div class="orj-side-stack">
+          <div class="orj-side"><label>Cakupan Panduan</label><h3>Fokus pada ketahanan layanan digital</h3><p>Panduan ditempatkan sebagai acuan untuk memahami konteks gangguan digital, kesiapan operasional, tata kelola, dan penguatan berkelanjutan dalam lingkungan layanan perbankan.</p></div>
+          <div class="orj-side"><label>Arah Pemanfaatan</label><p>Pembacaan dapat dimulai dari struktur dokumen, dilanjutkan ke explorer tema untuk menelaah ringkasan dan fokus implementasi, lalu ditutup dengan board lampiran untuk menyusun prioritas tindak lanjut.</p></div>
         </div>
       </section>
 
@@ -194,32 +183,19 @@
           </div>
           <div class="orj-grid two">
             <article class="orj-panel">
-              <div class="orj-head">
-                <h3>Sorotan implementasi</h3>
-                <span class="orj-chip">Prioritas pembacaan</span>
+              <div class="orj-head"><h3>Elemen penilaian inti</h3><span class="orj-chip">Assessment model</span></div>
+              <div class="orj-mini-row">
+                <div class="orj-mini"><label>3 Bagian Dokumen</label><strong>Latar hingga Kerangka</strong><span>Struktur dokumen dari konteks hingga tata kelola ketahanan.</span></div>
+                <div class="orj-mini"><label>Ketahanan Digital</label><strong>Prevent to Recover</strong><span>Mencegah, mendeteksi, merespons, dan memulihkan gangguan digital.</span></div>
+                <div class="orj-mini"><label>Penguatan Berkelanjutan</label><strong>Test & Improve</strong><span>Pengujian berkala dan peningkatan kapabilitas ketahanan.</span></div>
               </div>
-              <div class="orj-note">
-                Panduan Resiliensi OJK menekankan pemahaman konteks layanan
-                digital, pengelolaan gangguan, pemulihan layanan, dan penguatan
-                tata kelola sebagai satu rangkaian ketahanan yang saling
-                terhubung.
-              </div>
+              <div class="orj-note">Panduan Resiliensi OJK menekankan pemahaman konteks layanan digital, pengelolaan gangguan, pemulihan layanan, dan penguatan tata kelola sebagai satu rangkaian ketahanan yang saling terhubung.</div>
             </article>
             <article class="orj-panel">
-              <div class="orj-head">
-                <h3>Arah pemanfaatan</h3>
-                <span class="orj-chip">Pendekatan kerja</span>
-              </div>
-              <p class="orj-copy">
-                Halaman ini dirancang untuk membantu pembacaan tematik ketika
-                organisasi perlu memahami fokus prioritas, menyusun agenda
-                penguatan, atau menelaah area kesiapan ketahanan digital secara
-                lebih sistematis.
-              </p>
-              <div class="orj-note">
-                Klik salah satu bagian atau tema untuk langsung berpindah ke
-                explorer dan membaca detail fokus implementasi dari tema yang
-                dipilih.
+              <div class="orj-head"><h3>Peta kapabilitas</h3><span class="orj-chip">{{ sectionBreakdown.length }} kapabilitas</span></div>
+              <p class="orj-copy">Kapabilitas ini menjadi lensa kerja utama untuk membaca panduan resiliensi. Klik salah satu bar untuk langsung lompat ke explorer dengan filter yang relevan.</p>
+              <div class="orj-cards">
+                <button v-for="item in sectionBreakdown" :key="item.key" type="button" class="orj-card" :style="{ '--accent': item.color }" @click="jumpSection(item.key)"><div class="orj-card-top"><span class="orj-icon"><i :class="`fas ${item.icon}`"></i></span><span>{{ item.count }} tema</span></div><strong>{{ item.label }}</strong><p>Klik untuk filter explorer.</p></button>
               </div>
             </article>
           </div>
@@ -344,9 +320,9 @@
                   </div>
                 </div>
                 <div class="orj-note">
-                  <strong>Interpretasi Implementasi</strong>
+                  <strong><i class="fas fa-lightbulb me-1"></i>Analogi</strong>
                   <div class="mt-2">
-                    {{ activeTheme ? activeTheme.interpretation : "-" }}
+                    {{ activeTheme ? activeTheme.analogy : "-" }}
                   </div>
                 </div>
                 <div class="orj-callout">
@@ -371,28 +347,25 @@
 
         <!-- Tab 3: Fokus Implementasi -->
         <div v-if="activeTab === 'focus'" key="focus-tab">
-          <div class="orj-theme-groups">
-            <article
-              v-for="item in sectionBreakdown"
-              :key="item.key"
-              class="orj-panel"
-            >
-              <div class="orj-head">
-                <h3>{{ item.key }}</h3>
-                <span class="orj-chip">{{ item.count }} tema</span>
+          <div class="orj-refspace">
+            <article class="orj-panel">
+              <div class="orj-head"><h3>Filter kapabilitas</h3><span class="orj-chip">{{ totalThemes }} tema</span></div>
+              <div class="orj-form">
+                <div><label for="focusSectionFilter">Bagian Dokumen</label><select id="focusSectionFilter" v-model="focusSectionFilter" class="form-select"><option value="">Semua bagian</option><option v-for="section in sectionOptions" :key="section" :value="section">{{ section }}</option></select></div>
+                <div><label for="focusSearch">Cari tema</label><input id="focusSearch" v-model="focusSearch" type="search" class="form-control" placeholder="Cari ID, judul, atau fokus implementasi"></div>
+                <button type="button" class="btn btn-outline-secondary" @click="resetFocusFilters">Atur ulang filter</button>
               </div>
-              <p class="orj-copy">{{ item.summary }}</p>
-              <div class="orj-bars">
-                <button
-                  v-for="theme in themesBySection[item.key] || []"
-                  :key="theme.id"
-                  type="button"
-                  class="orj-theme-link"
-                  @click="jumpTheme(theme.id)"
-                >
-                  <strong>{{ theme.title }}</strong>
-                  <em>{{ (theme.focus || []).length }} fokus implementasi</em>
-                </button>
+              <div class="orj-summary"><small>Tema Ditampilkan</small><strong>{{ filteredFocusThemes.length }}</strong><span>{{ filteredFocusThemes.length ? `Menampilkan ${filteredFocusThemes.length} tema sesuai filter aktif.` : 'Tidak ada tema yang cocok dengan filter saat ini.' }}</span></div>
+              <div class="orj-families mt-3">
+                <button v-for="item in sectionBreakdown" :key="item.key" type="button" class="orj-family" :class="{ active: focusSectionFilter === item.key }" :style="{ '--accent': item.color }" @click="focusSectionFilter = focusSectionFilter === item.key ? '' : item.key"><span><strong>{{ item.label }}</strong><em>{{ item.count }} tema</em></span><span class="orj-num">{{ item.count }}</span></button>
+              </div>
+              <div class="orj-note mt-3"><span class="orj-label">Catatan Implementasi</span>Hasil fokus implementasi seluruhnya bermuara ke penguatan kapabilitas ketahanan digital sesuai bagian dokumen panduan yang relevan.</div>
+            </article>
+            <article class="orj-panel">
+              <div class="orj-head"><h3>Board fokus implementasi</h3><span class="orj-chip">{{ filteredFocusThemes.length }} entri</span></div>
+              <div class="orj-list">
+                <button v-for="theme in filteredFocusThemes" :key="theme.id" type="button" class="orj-item" @click="jumpThemeFromFocus(theme.id)"><div class="orj-item-top"><span class="orj-item-code">{{ theme.id }}</span><span class="orj-pill">{{ getSectionLabel(theme.section) }}</span></div><div class="orj-item-name">{{ theme.title || '-' }}</div><div class="orj-item-meta"><span>{{ (theme.focus || []).length }} fokus</span></div></button>
+                <div v-if="filteredFocusThemes.length === 0" class="orj-empty">Tidak ada tema yang cocok dengan filter saat ini.</div>
               </div>
             </article>
           </div>
@@ -414,6 +387,9 @@ export default {
       sectionFilter: "",
       themeSearch: "",
       activeThemeId: null,
+      // Tab 3 focus filters
+      focusSectionFilter: "",
+      focusSearch: "",
       sectionMeta: {
         "A. Latar Belakang": {
           label: "Latar Belakang",
@@ -503,6 +479,14 @@ export default {
     activeTheme() {
       return this.themes.find((t) => t.id === this.activeThemeId) || null;
     },
+    filteredFocusThemes() {
+      const query = (this.focusSearch || "").trim().toLowerCase();
+      return this.themes.filter((theme) => {
+        if (this.focusSectionFilter && theme.section !== this.focusSectionFilter) return false;
+        if (!query) return true;
+        return [theme.id, theme.title, theme.section, theme.summary, ...(theme.focus || [])].join(" ").toLowerCase().includes(query);
+      });
+    },
   },
   methods: {
     getSectionColor(section) {
@@ -536,6 +520,16 @@ export default {
       if (this.themes.length > 0) {
         this.activeThemeId = this.filteredThemes[0]?.id || this.themes[0]?.id;
       }
+    },
+    resetFocusFilters() {
+      this.focusSectionFilter = "";
+      this.focusSearch = "";
+    },
+    jumpThemeFromFocus(id) {
+      this.sectionFilter = "";
+      this.themeSearch = "";
+      this.activeTab = "explorer";
+      this.setActiveTheme(id);
     },
     retryLoad() {
       this.loadData();
@@ -571,518 +565,91 @@ export default {
 </script>
 
 <style scoped>
-.orj-page {
-  --ink: #17324a;
-  --muted: #5b6774;
-  --line: rgba(23, 50, 74, 0.1);
-  background: linear-gradient(180deg, #f5efe3 0%, #eef4f5 100%);
-  border-radius: 28px;
-  padding: 0.25rem;
-  color: var(--ink);
-}
-.orj-shell {
-  display: grid;
-  gap: 1rem;
-}
-.orj-hero {
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 1rem;
-  align-items: stretch;
-  min-height: 368px;
-  padding: 1.45rem;
-  border-radius: 24px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(241, 214, 168, 0.9),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(149, 202, 213, 0.68),
-      transparent 28%
-    ),
-    linear-gradient(135deg, #14314a 0%, #1f5e72 48%, #ead7b1 100%);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-}
-.orj-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.18);
-  color: #fffaf2;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.orj-title {
-  margin: 1rem 0 0.7rem;
-  color: #fffaf2;
-  font-size: clamp(2rem, 3.7vw, 3rem);
-  font-weight: 800;
-  line-height: 1.05;
-}
-.orj-lede {
-  margin: 0;
-  max-width: 760px;
-  color: rgba(255, 250, 242, 0.84);
-  line-height: 1.72;
-}
-.orj-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-  margin-top: 1.1rem;
-}
-.orj-metric,
-.orj-panel,
-.orj-side {
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 251, 245, 0.98) 0%,
-    rgba(246, 251, 252, 0.98) 100%
-  );
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
-}
-.orj-metric {
-  padding: 0.68rem 0.74rem;
-  border-radius: 16px;
-  background: rgba(255, 250, 242, 0.14);
-  border-color: rgba(255, 255, 255, 0.18);
-  min-height: 96px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.orj-metric label,
-.orj-side label,
-.orj-form label,
-.orj-inspector small {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.orj-metric label {
-  color: rgba(255, 250, 242, 0.74);
-}
-.orj-metric strong {
-  display: block;
-  margin-top: 0.25rem;
-  color: #fffaf2;
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-.orj-metric span {
-  display: block;
-  margin-top: 0.25rem;
-  color: rgba(255, 250, 242, 0.74);
-  font-size: 0.76rem;
-  line-height: 1.45;
-}
-.orj-side {
-  padding: 0.8rem 0.86rem;
-  border-radius: 18px;
-  background: rgba(255, 250, 242, 0.82);
-  min-height: 142px;
-}
-.orj-side label {
-  color: var(--muted);
-  margin-bottom: 0.35rem;
-}
-.orj-side h3 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 800;
-}
-.orj-side p {
-  margin: 0.5rem 0 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.58;
-}
-.orj-nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-.orj-tab {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.7rem;
-  align-items: center;
-  padding: 0.82rem 0.88rem;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 250, 242, 0.94) 0%,
-    rgba(239, 245, 246, 0.94) 100%
-  );
-  text-align: left;
-  color: var(--ink);
-  cursor: pointer;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
-}
-.orj-tab.active {
-  border-color: rgba(20, 78, 114, 0.24);
-  box-shadow: 0 16px 28px rgba(20, 78, 114, 0.08);
-}
-.orj-tab i {
-  width: 2.25rem;
-  height: 2.25rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: rgba(20, 38, 59, 0.06);
-}
-.orj-tab strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-.orj-tab span {
-  display: block;
-  margin-top: 0.12rem;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.4;
-}
-.orj-grid {
-  display: grid;
-  gap: 1rem;
-}
-.orj-grid.two {
-  grid-template-columns: 1.04fr 0.96fr;
-}
-.orj-panel {
-  padding: 1rem;
-  border-radius: 20px;
-}
-.orj-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  margin-bottom: 0.75rem;
-}
-.orj-head h3 {
-  margin: 0;
-  font-size: 0.98rem;
-  font-weight: 800;
-}
-.orj-chip,
-.orj-pill,
-.orj-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.24rem 0.52rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.08);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-.orj-copy {
-  margin: 0 0 0.8rem;
-  color: var(--muted);
-  line-height: 1.62;
-  font-size: 0.84rem;
-}
-.orj-bars,
-.orj-cards,
-.orj-theme-groups,
-.orj-list {
-  display: grid;
-  gap: 0.65rem;
-}
-.orj-bar,
-.orj-card,
-.orj-theme-link,
-.orj-item {
-  width: 100%;
-  text-align: left;
-  border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.74);
-  cursor: pointer;
-}
-.orj-bar {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(160px, 1fr) auto;
-  gap: 0.65rem;
-  align-items: center;
-  padding: 0.66rem 0.74rem;
-  border-radius: 16px;
-}
-.orj-bar:hover,
-.orj-bar.active,
-.orj-card:hover,
-.orj-theme-link:hover,
-.orj-item.active {
-  border-color: rgba(20, 78, 114, 0.22);
-  box-shadow: 0 12px 24px rgba(20, 78, 114, 0.08);
-}
-.orj-bar strong,
-.orj-card strong,
-.orj-theme-link strong,
-.orj-item-name {
-  display: block;
-  font-size: 0.86rem;
-  font-weight: 800;
-}
-.orj-bar em,
-.orj-card p,
-.orj-theme-link em,
-.orj-item-meta {
-  display: block;
-  margin-top: 0.14rem;
-  color: var(--muted);
-  font-size: 0.74rem;
-  font-style: normal;
-  line-height: 1.45;
-}
-.orj-track {
-  height: 0.42rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.08);
-  overflow: hidden;
-}
-.orj-track b {
-  display: block;
-  height: 100%;
-}
-.orj-num {
-  min-width: 2rem;
-  text-align: right;
-  font-weight: 800;
-}
-.orj-cards {
-  grid-template-columns: repeat(2, 1fr);
-}
-.orj-card,
-.orj-theme-link {
-  padding: 0.8rem;
-  border-radius: 16px;
-  border-color: var(--line);
-}
-.orj-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--muted);
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-}
-.orj-icon {
-  width: 1.85rem;
-  height: 1.85rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: rgba(20, 78, 114, 0.12);
-  color: #144e72;
-}
-.orj-workspace {
-  display: grid;
-  grid-template-columns: 0.74fr 0.98fr 0.94fr;
-  gap: 1rem;
-}
-.orj-form {
-  display: grid;
-  gap: 0.75rem;
-}
-.orj-form label {
-  margin-bottom: 0.3rem;
-  color: var(--muted);
-}
-.orj-summary {
-  margin-top: 0.85rem;
-  padding: 0.82rem 0.88rem;
-  border-radius: 18px;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 61, 87, 0.95) 0%,
-    rgba(20, 78, 114, 0.95) 100%
-  );
-  color: #fffaf2;
-}
-.orj-summary small {
-  display: block;
-  color: rgba(255, 250, 242, 0.7);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.orj-summary strong {
-  display: block;
-  margin-top: 0.28rem;
-  font-size: 1.72rem;
-  font-weight: 800;
-}
-.orj-summary span {
-  display: block;
-  margin-top: 0.4rem;
-  color: rgba(255, 250, 242, 0.78);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-.orj-list {
-  display: flex;
-  flex-direction: column;
-  max-height: 720px;
-  overflow-y: auto;
-  padding-right: 0.12rem;
-}
-.orj-item {
-  position: relative;
-  padding: 0.72rem 0.8rem 0.68rem 0.92rem;
-  margin-bottom: 0.55rem;
-  border-radius: 14px;
-  border-color: rgba(20, 38, 59, 0.08);
-  content-visibility: auto;
-  contain-intrinsic-size: auto 80px;
-}
-.orj-item:last-child {
-  margin-bottom: 0;
-}
-.orj-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.68rem;
-  bottom: 0.68rem;
-  width: 0.18rem;
-  border-radius: 999px;
-  background: var(--accent, #144e72);
-}
-.orj-item-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.orj-item-code {
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: var(--accent, #144e72);
-}
-.orj-inspector {
-  position: relative;
-  top: auto;
-  min-height: 720px;
-  display: flex;
-  flex-direction: column;
-}
-.orj-inspector-head {
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--line);
-}
-.orj-inspector-head strong {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #144e72;
-}
-.orj-inspector-head span {
-  display: block;
-  margin-top: 0.28rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  line-height: 1.4;
-}
-.orj-inspector-body {
-  display: grid;
-  gap: 0.75rem;
-  padding-top: 0.85rem;
-  flex: 1;
-  overflow: auto;
-  align-content: start;
-}
-.orj-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-.orj-callout,
-.orj-note {
-  padding: 0.76rem 0.84rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  line-height: 1.62;
-}
-.orj-callout {
-  background: rgba(255, 255, 255, 0.76);
-}
-.orj-note {
-  background: rgba(238, 245, 245, 0.84);
-}
-.orj-plain {
-  margin: 0.15rem 0 0;
-  padding-left: 1rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-.orj-plain li {
-  margin-bottom: 0.18rem;
-}
-.orj-empty {
-  padding: 0.9rem;
-  border-radius: 16px;
-  border: 1px dashed rgba(20, 38, 59, 0.18);
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--muted);
-  text-align: center;
-  line-height: 1.55;
-}
-@media (max-width: 1399.98px) {
-  .orj-workspace {
-    grid-template-columns: 1fr;
-  }
-  .orj-inspector {
-    position: static;
-    min-height: auto;
-  }
-}
-@media (max-width: 1199.98px) {
-  .orj-hero,
-  .orj-metric,
-  .orj-side {
-    min-height: auto;
-  }
-  .orj-hero,
-  .orj-nav,
-  .orj-grid.two,
-  .orj-metrics,
-  .orj-cards,
-  .orj-theme-groups {
-    grid-template-columns: 1fr;
-  }
-  .orj-bar {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 767.98px) {
-  .orj-hero,
-  .orj-panel {
-    padding: 1.2rem;
-    border-radius: 22px;
-  }
-}
+.orj-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
+.orj-shell{display:grid;gap:1rem}
+.orj-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}
+.orj-hero>*{position:relative;z-index:1}
+.orj-kicker{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:rgba(255,250,242,.18);color:rgba(255,250,242,.92);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.orj-title{margin:1rem 0 .7rem;color:#fffaf2;font-size:clamp(2rem,3.8vw,3rem);font-weight:800;line-height:1.04}
+.orj-lede{margin:0;max-width:720px;color:rgba(255,250,242,.82);line-height:1.7}
+.orj-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.1rem}
+.orj-metric,.orj-side,.orj-panel,.orj-mini{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,251,245,.98) 0%,rgba(246,251,252,.98) 100%);box-shadow:0 14px 28px rgba(15,23,42,.05)}
+.orj-metric{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.12);border-color:rgba(255,255,255,.18);min-height:96px;display:flex;flex-direction:column;justify-content:flex-start}
+.orj-metric label,.orj-side label,.orj-mini label,.orj-form label,.orj-inspector small,.orj-label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.orj-metric label{color:rgba(255,250,242,.7);margin-bottom:.35rem}
+.orj-metric strong{display:block;color:#fffaf2;font-size:1.5rem;font-weight:800;line-height:1}
+.orj-metric span{display:block;margin-top:.34rem;color:rgba(255,250,242,.72);font-size:.76rem}
+.orj-side-stack{display:grid;gap:.85rem}
+.orj-side{padding:.8rem .86rem;border-radius:18px;background:rgba(255,250,242,.78);border-color:rgba(255,255,255,.24);min-height:142px}
+.orj-side label{color:var(--muted);margin-bottom:.4rem}
+.orj-side h3{margin:0;font-size:1rem;font-weight:800}
+.orj-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
+.orj-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.orj-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
+.orj-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
+.orj-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
+.orj-tab strong{display:block;font-size:.9rem;font-weight:800}
+.orj-tab span{display:block;margin-top:.14rem;color:var(--muted);font-size:.76rem;line-height:1.4}
+.orj-grid{display:grid;gap:1rem}
+.orj-grid.two{grid-template-columns:1.06fr .94fr}
+.orj-panel{padding:1rem;border-radius:20px}
+.orj-head{display:flex;align-items:center;justify-content:space-between;gap:.85rem;margin-bottom:.7rem}
+.orj-head h3{margin:0;font-size:.98rem;font-weight:800}
+.orj-chip,.orj-pill,.orj-meta span,.orj-ref{display:inline-flex;align-items:center;gap:.3rem;padding:.24rem .52rem;border-radius:999px;font-size:.7rem;font-weight:700;line-height:1.2}
+.orj-chip{background:rgba(20,38,59,.08);color:var(--ink)}
+.orj-copy{margin:0 0 .85rem;color:var(--muted);line-height:1.6;font-size:.84rem}
+.orj-bars,.orj-cards,.orj-families,.orj-list{display:grid;gap:.65rem}
+.orj-bar,.orj-family{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(180px,1fr) auto;gap:.68rem;align-items:center;padding:.62rem .72rem;border-radius:16px;border:1px solid transparent;background:rgba(255,255,255,.55);text-align:left;cursor:pointer;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.orj-family{grid-template-columns:1fr auto}
+.orj-bar:hover,.orj-family:hover,.orj-bar.active,.orj-family.active{transform:translateY(-1px);border-color:rgba(20,78,114,.22);box-shadow:0 12px 22px rgba(20,78,114,.08)}
+.orj-bar strong,.orj-family strong{display:block;font-size:.86rem}
+.orj-bar em,.orj-family em{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem;font-style:normal}
+.orj-track{height:.44rem;border-radius:999px;background:rgba(20,38,59,.08);overflow:hidden}
+.orj-track b{display:block;height:100%;border-radius:inherit}
+.orj-num{min-width:2.2rem;text-align:right;font-weight:800}
+.orj-cards{grid-template-columns:repeat(3,1fr)}
+.orj-card{width:100%;padding:.76rem .8rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.orj-card-top{display:flex;align-items:center;justify-content:space-between;gap:.55rem;color:var(--muted);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.orj-icon{width:1.9rem;height:1.9rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(20,78,114,.12);color:var(--accent);font-size:.8rem}
+.orj-card strong{display:block;margin-top:.42rem;font-size:.86rem;font-weight:800}
+.orj-card p{margin:.22rem 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}
+.orj-mini-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:.8rem}
+.orj-mini{padding:.72rem .78rem;border-radius:16px}
+.orj-mini label{color:var(--muted)}
+.orj-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
+.orj-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
+.orj-workspace{display:grid;grid-template-columns:.76fr 1.03fr .91fr;gap:1rem}
+.orj-refspace{display:grid;grid-template-columns:.82fr 1.18fr;gap:1rem}
+.orj-form{display:grid;gap:.75rem}
+.orj-form label{margin-bottom:.3rem;color:var(--muted)}
+.orj-summary{margin-top:.85rem;padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(20,78,114,.95) 100%);color:#fffaf2}
+.orj-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.orj-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
+.orj-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
+.orj-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.orj-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.orj-item:last-child{margin-bottom:0}
+.orj-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
+.orj-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
+.orj-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
+.orj-item-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
+.orj-item-name{margin:.28rem 0 .2rem;font-size:.88rem;font-weight:700;line-height:1.38;color:var(--ink)}
+.orj-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
+.orj-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
+.orj-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
+.orj-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
+.orj-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
+.orj-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}
+.orj-inspector-body{display:grid;gap:.75rem;padding-top:.85rem;flex:1;min-height:0;overflow:auto;align-content:start}
+.orj-meta{display:flex;flex-wrap:wrap;gap:.45rem}
+.orj-callout,.orj-note{padding:.76rem .84rem;border-radius:16px;border:1px solid var(--line);line-height:1.62}
+.orj-callout{background:rgba(255,255,255,.75)}
+.orj-note{background:rgba(238,245,245,.84)}
+.orj-plain{margin:.15rem 0 0;padding-left:1rem;color:var(--muted);font-size:.78rem;line-height:1.6}
+.orj-plain li{margin-bottom:.16rem}
+.orj-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
+.orj-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
+@media (max-width:1399.98px){.orj-workspace,.orj-refspace{grid-template-columns:1fr}.orj-inspector{position:static;min-height:auto}}
+@media (max-width:1199.98px){.orj-hero,.orj-metric,.orj-side{min-height:auto}.orj-hero,.orj-nav,.orj-grid.two,.orj-refspace,.orj-metrics,.orj-mini-row,.orj-cards{grid-template-columns:1fr}.orj-bar,.orj-family{grid-template-columns:1fr}}
+@media (max-width:767.98px){.orj-hero,.orj-panel{padding:1.2rem;border-radius:22px}}
 </style>

@@ -8,7 +8,8 @@
         "Bisa dipakai sebagai payung tata kelola di atas banyak referensi yang sudah dipakai organisasi.",
         "Membuka ruang penyesuaian tanpa memaksa semua organisasi memakai bentuk yang sama persis."
       ],
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "HL-02",
@@ -18,7 +19,8 @@
         "Relevan untuk lingkungan bisnis yang berubah cepat dan sangat bergantung pada informasi serta teknologi.",
         "Membantu organisasi menjaga arah tata kelola tetap nyambung dengan kondisi mutakhir."
       ],
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "HL-03",
@@ -28,7 +30,8 @@
         "Organisasi bisa memulai dari konteks bisnis, profil risiko, dan cara kerja aktualnya sendiri.",
         "Struktur ini membantu memutuskan prioritas objective yang paling penting lebih dulu."
       ],
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "HL-04",
@@ -38,7 +41,8 @@
         "Memudahkan pembacaan target, kondisi saat ini, dan area yang perlu diperkuat.",
         "Cocok dipakai untuk diskusi roadmap, assurance, dan peningkatan berkelanjutan."
       ],
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     }
   ],
   "value_outcomes": [
@@ -50,7 +54,8 @@
         "Fokusnya bukan sekadar proyek selesai, tapi hasilnya terasa pada operasi dan keputusan bisnis.",
         "Nilai harus terlihat pada layanan, proses, pengalaman stakeholder, atau pertumbuhan enterprise."
       ],
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "VAL-02",
@@ -60,7 +65,8 @@
         "Risiko informasi dan teknologi perlu dikelola sejalan dengan risk appetite enterprise.",
         "Tata kelola yang baik membantu menyeimbangkan peluang, ancaman, dan ketahanan operasional."
       ],
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "VAL-03",
@@ -70,7 +76,8 @@
         "Resource optimization menjaga supaya kapasitas penting dipakai di tempat yang paling memberi dampak.",
         "Hal ini membantu enterprise menghindari duplikasi, pemborosan, dan gap akuntabilitas."
       ],
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "chapters": [
@@ -83,7 +90,8 @@
         "Membuka konteks nilai, risiko, dan kebutuhan arahan tata kelola.",
         "Menempatkan COBIT sebagai kerangka untuk membantu pengambilan keputusan tingkat enterprise."
       ],
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CH-02",
@@ -94,7 +102,8 @@
         "Mencakup board, manajemen eksekutif, pemilik proses, tim I&T, risk, compliance, dan assurance.",
         "Menegaskan bahwa COBIT dipakai lintas peran, bukan hanya untuk fungsi teknologi."
       ],
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CH-03",
@@ -105,7 +114,8 @@
         "Bab ini jadi fondasi cara pikir sebelum masuk ke objective dan desain penerapan.",
         "Prinsip COBIT membantu menjaga konsistensi antara nilai bisnis dan praktik tata kelola."
       ],
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CH-04",
@@ -116,7 +126,8 @@
         "Bab ini membantu pembaca memahami bagaimana objective tidak berdiri sendiri.",
         "Komponen dan goals cascade jadi jembatan antara kebutuhan bisnis dan praktik operasional."
       ],
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CH-05",
@@ -127,7 +138,8 @@
         "Core model inilah yang nanti dipakai untuk menilai, memprioritaskan, dan merancang governance system.",
         "Objective dibagi ke domain governance dan management dengan peran yang berbeda."
       ],
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CH-06",
@@ -138,7 +150,8 @@
         "Bab ini membantu organisasi melihat progress secara lebih terstruktur.",
         "Performance management membuat diskusi peningkatan lebih konkret dan tidak kabur."
       ],
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CH-07",
@@ -149,7 +162,8 @@
         "Fokusnya adalah desain yang relevan, bukan copy-paste semua objective secara merata.",
         "Bab ini penting untuk prioritisasi dan penentuan cakupan awal implementasi."
       ],
-      "color": "#1d4ed8"
+      "color": "#1d4ed8",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CH-08",
@@ -160,7 +174,8 @@
         "Terdapat fase dari memahami driver sampai menjaga momentum perbaikan.",
         "Bab ini cocok dipakai untuk menyusun roadmap dan change plan."
       ],
-      "color": "#c2410c"
+      "color": "#c2410c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CH-09",
@@ -171,7 +186,8 @@
         "Berguna untuk sponsor awal, penyelarasan stakeholder, dan penentuan quick wins.",
         "Menjembatani antara konsep framework dan kebutuhan adopsi nyata."
       ],
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CH-10",
@@ -182,7 +198,8 @@
         "Bab ini menguatkan peran COBIT sebagai integrator, bukan pengganti tunggal semua standar lain.",
         "Sangat berguna saat enterprise harus merapikan banyak referensi kepatuhan sekaligus."
       ],
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     }
   ],
   "principles_system": [
@@ -197,7 +214,8 @@
         "Gunakan hasil bisnis sebagai titik ukur utama."
       ],
       "group": "Nilai",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GPS-02",
@@ -210,7 +228,8 @@
         "Pastikan hubungan antar-komponen terlihat jelas."
       ],
       "group": "Desain Sistem",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "GPS-03",
@@ -223,7 +242,8 @@
         "Jaga governance system tetap hidup, bukan statis."
       ],
       "group": "Adaptasi",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GPS-04",
@@ -236,7 +256,8 @@
         "Jangan campur peran pengawasan dengan aktivitas operasional harian."
       ],
       "group": "Peran",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "GPS-05",
@@ -249,7 +270,8 @@
         "Sesuaikan kedalaman penerapan dengan kapasitas enterprise."
       ],
       "group": "Tailoring",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GPS-06",
@@ -262,7 +284,8 @@
         "Pastikan objective relevan untuk bisnis, bukan hanya fungsi TI."
       ],
       "group": "Cakupan",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     }
   ],
   "principles_framework": [
@@ -277,7 +300,8 @@
         "Pastikan desain tetap logis saat diperluas."
       ],
       "group": "Struktur",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GPF-02",
@@ -290,7 +314,8 @@
         "Biarkan framework berkembang mengikuti kebutuhan enterprise."
       ],
       "group": "Integrasi",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "GPF-03",
@@ -303,7 +328,8 @@
         "Jaga konsistensi keputusan governance di atas banyak acuan."
       ],
       "group": "Penyelarasan",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "components": [
@@ -318,7 +344,8 @@
         "Gunakan proses sebagai mekanisme kerja, bukan sekadar dokumentasi."
       ],
       "group": "Operasi",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CMP-02",
@@ -331,7 +358,8 @@
         "Pastikan struktur mendukung akuntabilitas lintas unit."
       ],
       "group": "Arah dan Akuntabilitas",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CMP-03",
@@ -344,7 +372,8 @@
         "Jaga dokumentasi tetap relevan dan tidak berlebihan."
       ],
       "group": "Arahan",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CMP-04",
@@ -357,7 +386,8 @@
         "Gunakan informasi untuk memantau outcome dan risiko."
       ],
       "group": "Pengambilan Keputusan",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CMP-05",
@@ -370,7 +400,8 @@
         "Lihat budaya sebagai bagian inti, bukan tempelan."
       ],
       "group": "Perilaku",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "CMP-06",
@@ -383,7 +414,8 @@
         "Pastikan kapabilitas orang berkembang bersama kebutuhan enterprise."
       ],
       "group": "Kapabilitas",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "CMP-07",
@@ -396,7 +428,8 @@
         "Hubungkan keputusan governance dengan kesiapan layanan nyata."
       ],
       "group": "Platform",
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "design_factors": [
@@ -410,7 +443,8 @@
         "Selaraskan prioritas governance dengan tujuan strategis enterprise."
       ],
       "group": "Strategi",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DF-02",
@@ -422,7 +456,8 @@
         "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
       ],
       "group": "Nilai",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "DF-03",
@@ -434,7 +469,8 @@
         "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
       ],
       "group": "Risiko",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DF-04",
@@ -446,7 +482,8 @@
         "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
       ],
       "group": "Risiko",
-      "color": "#c2410c"
+      "color": "#c2410c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "DF-05",
@@ -458,7 +495,8 @@
         "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
       ],
       "group": "Risiko",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DF-06",
@@ -470,7 +508,8 @@
         "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
       ],
       "group": "Kepatuhan",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "DF-07",
@@ -482,7 +521,8 @@
         "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
       ],
       "group": "Model Operasi",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DF-08",
@@ -494,7 +534,8 @@
         "Perjelas kontrol dan akuntabilitas lintas pihak."
       ],
       "group": "Model Operasi",
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "DF-09",
@@ -506,7 +547,8 @@
         "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
       ],
       "group": "Delivery",
-      "color": "#1d4ed8"
+      "color": "#1d4ed8",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DF-10",
@@ -518,7 +560,8 @@
         "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
       ],
       "group": "Delivery",
-      "color": "#0ea5e9"
+      "color": "#0ea5e9",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "DF-11",
@@ -530,7 +573,8 @@
         "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
       ],
       "group": "Skala",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "domains": [
@@ -547,7 +591,8 @@
       "group": "Governance",
       "metric_label": "Objektif",
       "count": 5,
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "APO",
@@ -561,7 +606,8 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 14,
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "BAI",
@@ -575,7 +621,8 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 11,
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "DSS",
@@ -589,7 +636,8 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 6,
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "MEA",
@@ -603,7 +651,8 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 4,
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "goal_cascade": [
@@ -615,7 +664,8 @@
         "Mulai dari apa yang benar-benar diminta, dikhawatirkan, atau diharapkan stakeholder.",
         "Driver ini menjadi konteks untuk membaca prioritas enterprise."
       ],
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GC-02",
@@ -625,7 +675,8 @@
         "Tujuan enterprise membantu memilih outcome yang ingin dicapai.",
         "Di sinilah bahasa bisnis mulai dipertajam."
       ],
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "GC-03",
@@ -635,7 +686,8 @@
         "Langkah ini menghubungkan tujuan bisnis dengan fokus pengelolaan informasi dan teknologi.",
         "Alignment goals membantu diskusi prioritas menjadi lebih operasional."
       ],
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "GC-04",
@@ -645,7 +697,8 @@
         "Pada tahap ini enterprise masuk ke domain dan objective yang lebih spesifik.",
         "Core model membantu memilih objective yang paling relevan untuk konteks enterprise."
       ],
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     }
   ],
   "implementation_phases": [
@@ -659,7 +712,8 @@
         "Bangun urgensi yang bisa dipahami stakeholder."
       ],
       "group": "Persiapan",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "IMP-02",
@@ -671,7 +725,8 @@
         "Petakan area kuat dan area yang masih rapuh."
       ],
       "group": "Asesmen",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "IMP-03",
@@ -683,7 +738,8 @@
         "Pilih objective dan outcome yang benar-benar dibutuhkan."
       ],
       "group": "Arah",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "IMP-04",
@@ -695,7 +751,8 @@
         "Tentukan prioritas dan dependency antar-inisiatif."
       ],
       "group": "Perencanaan",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "IMP-05",
@@ -707,7 +764,8 @@
         "Pastikan implementasi diterjemahkan ke praktik kerja."
       ],
       "group": "Eksekusi",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "IMP-06",
@@ -719,7 +777,8 @@
         "Pastikan ada pembacaan manfaat, risiko, dan resource yang lebih baik."
       ],
       "group": "Evaluasi",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "IMP-07",
@@ -731,7 +790,8 @@
         "Jaga governance system tetap hidup dan berkembang."
       ],
       "group": "Keberlanjutan",
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     }
   ],
   "audiences": [
@@ -743,7 +803,8 @@
         "Membantu melihat apakah arah, pengawasan, dan akuntabilitas sudah cukup kuat.",
         "Cocok untuk diskusi tingkat strategi dan pengambilan keputusan besar."
       ],
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "AUD-02",
@@ -753,7 +814,8 @@
         "Memudahkan penetapan prioritas capability dan portfolio perubahan.",
         "Membantu menjaga keputusan I&T tetap relevan bagi operasi dan tujuan bisnis."
       ],
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     },
     {
       "id": "AUD-03",
@@ -763,7 +825,8 @@
         "Berguna untuk menyusun lingkup review dan memberi penilaian yang lebih konsisten.",
         "Membantu menerjemahkan governance ke dalam assurance yang lebih terarah."
       ],
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti kompas yang memberi arah saat tersesat, framework tata kelola memberi panduan saat organisasi menghadapi kompleksitas IT."
     },
     {
       "id": "AUD-04",
@@ -773,7 +836,8 @@
         "Bisa dipakai untuk memetakan objective mana yang perlu diperkuat lebih dulu.",
         "Membantu tim teknis memahami ekspektasi governance dalam bahasa yang lebih sistematis."
       ],
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti GPS yang merekomendasikan rute terbaik, COBIT membantu organisasi memilih jalur tata kelola yang paling efektif."
     }
   ]
 }

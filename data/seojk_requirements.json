@@ -9,7 +9,12 @@
     "cadence": "Tahunan pada posisi akhir Desember",
     "owner": "Risk management, unit siber, dan Direksi",
     "scoring": "Peringkat 1-5 (Low sampai High)",
-    "appendices": ["I.a", "II.a", "III.a", "V"],
+    "appendices": [
+      "I.a",
+      "II.a",
+      "III.a",
+      "V"
+    ],
     "focus": [
       "Gunakan posisi akhir Desember sebagai snapshot resmi profil risiko inheren.",
       "Perbarui penilaian saat ada perubahan signifikan pada profil risiko atau eksposur siber Bank.",
@@ -20,7 +25,8 @@
       "Notulen atau memo persetujuan hasil penilaian oleh manajemen.",
       "Bukti penyampaian laporan ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Seperti dokter yang menilai kondisi pasien sebelum memberi obat, penilaian risiko inheren memahami eksposur sebelum menentukan kontrol."
   },
   {
     "id": "II.02",
@@ -32,7 +38,10 @@
     "cadence": "Digunakan pada setiap siklus penilaian inheren",
     "owner": "Risk management dan unit siber",
     "scoring": "Parameter minimum dapat ditambah sesuai kompleksitas Bank",
-    "appendices": ["I.a", "II.a"],
+    "appendices": [
+      "I.a",
+      "II.a"
+    ],
     "focus": [
       "Gunakan parameter minimum dalam Lampiran I.a sebagai baseline penilaian.",
       "Tambahkan indikator lain bila karakteristik dan kompleksitas usaha Bank menuntut penilaian lebih detail.",
@@ -43,7 +52,8 @@
       "Dokumen metodologi penilaian parameter.",
       "Profil risiko siber tahunan yang ditandatangani reviewer."
     ],
-    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber."
+    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber.",
+    "analogy": "Seperti peta yang menunjukkan area rawan longsor, penilaian risiko inheren mengidentifikasi area yang paling rentan terhadap ancaman."
   },
   {
     "id": "III.01",
@@ -55,7 +65,11 @@
     "cadence": "Berjalan terus-menerus dan ditinjau berkala",
     "owner": "Direksi dan Dewan Komisaris",
     "scoring": "Kualitas penerapan dinilai dalam penilaian maturitas",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Jelaskan peran aktif pengurus dalam menetapkan arah kontrol siber.",
       "Dokumentasikan risk appetite dan risk tolerance terkait keamanan siber.",
@@ -66,7 +80,8 @@
       "Pernyataan risk appetite dan risk tolerance siber.",
       "Program awareness dan pelatihan keamanan siber."
     ],
-    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas."
+    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas.",
+    "analogy": "Seperti kapten kapal yang memantau cuaca dan kondisi laut, manajemen risiko siber memantau ancaman dan menyesuaikan strategi."
   },
   {
     "id": "III.02",
@@ -78,7 +93,11 @@
     "cadence": "Ditinjau berkala sesuai perubahan organisasi dan TI",
     "owner": "Manajemen risiko dan unit siber",
     "scoring": "Kualitas penerapan dinilai menggunakan definisi peringkat Strong sampai Unsatisfactory",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Selaraskan strategi manajemen risiko siber dengan strategi bisnis dan TI Bank.",
       "Pastikan struktur organisasi mendukung pelaksanaan kontrol siber secara efektif.",
@@ -89,7 +108,8 @@
       "Kebijakan dan prosedur keamanan siber yang berlaku.",
       "Dokumen limit risiko dan eskalasi pelampauannya."
     ],
-    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber."
+    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber.",
+    "analogy": "Seperti sistem rem mobil yang mencegah kecelakaan, kontrol manajemen risiko mencegah insiden siber sebelum terjadi."
   },
   {
     "id": "III.03",
@@ -101,7 +121,11 @@
     "cadence": "Berjalan harian dan dievaluasi berkala",
     "owner": "Risk management, SDM, dan unit siber",
     "scoring": "Masuk ke penilaian kualitas penerapan manajemen risiko",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Pastikan kapasitas dan kompetensi SDM memadai untuk risiko siber yang dihadapi.",
       "Gunakan sistem informasi manajemen risiko untuk pelaporan dan monitoring eksposur.",
@@ -112,7 +136,8 @@
       "Dashboard atau laporan sistem informasi manajemen risiko.",
       "Risk register yang memasukkan risiko terkait keamanan siber."
     ],
-    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas."
+    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas.",
+    "analogy": "Seperti kapten kapal yang memantau cuaca dan kondisi laut, manajemen risiko siber memantau ancaman dan menyesuaikan strategi."
   },
   {
     "id": "III.04",
@@ -124,7 +149,11 @@
     "cadence": "Berkala dan berbasis tindak lanjut",
     "owner": "Internal control, audit intern, dan unit siber",
     "scoring": "Dinilai dalam kualitas penerapan manajemen risiko siber",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Lakukan pengujian dan kaji ulang atas kontrol yang material.",
       "Dokumentasikan temuan audit dan tindak lanjutnya secara lengkap.",
@@ -135,7 +164,8 @@
       "Register temuan dan tindak lanjut hasil audit.",
       "Laporan verifikasi perbaikan kelemahan material."
     ],
-    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber."
+    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber.",
+    "analogy": "Seperti sistem rem mobil yang mencegah kecelakaan, kontrol manajemen risiko mencegah insiden siber sebelum terjadi."
   },
   {
     "id": "IV.01",
@@ -147,7 +177,11 @@
     "cadence": "Berjalan terus-menerus dengan review berkala",
     "owner": "Unit siber dan pengelola aset TI",
     "scoring": "Menjadi bagian dari kualitas penerapan proses ketahanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Inventarisasi perangkat keras, perangkat lunak, jaringan, dan infrastruktur disertai konfigurasi yang efektif.",
       "Pantau perkembangan ancaman siber terkini untuk memperbarui daftar kerentanan.",
@@ -158,7 +192,8 @@
       "Laporan vulnerability identification atau threat monitoring.",
       "Jadwal pengujian keamanan siber berkala."
     ],
-    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber."
+    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber.",
+    "analogy": "Seperti sistem kekebalan tubuh yang mendeteksi, merespons, dan pulih dari penyakit, ketahanan siber melindungi dari serangan dan pulih dengan cepat."
   },
   {
     "id": "IV.02",
@@ -170,7 +205,11 @@
     "cadence": "Berkala dan mengikuti hasil identifikasi terbaru",
     "owner": "Unit siber dan pengelola TI",
     "scoring": "Masuk ke penilaian kualitas penerapan proses ketahanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Gunakan security control yang relevan terhadap aset, ancaman, dan kerentanan yang telah diidentifikasi.",
       "Lakukan maintenance dan update kontrol keamanan secara terjadwal.",
@@ -181,7 +220,8 @@
       "Catatan hardening, patching, dan maintenance kontrol.",
       "Dokumentasi pengelolaan keamanan data dan informasi."
     ],
-    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber."
+    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber.",
+    "analogy": "Seperti benteng yang punya dinding, penjaga, dan rencana evakuasi, ketahanan siber berlapis untuk menghadapi berbagai skenario ancaman."
   },
   {
     "id": "IV.03",
@@ -193,7 +233,11 @@
     "cadence": "Berjalan terus-menerus",
     "owner": "SOC, unit siber, dan fungsi operasional terkait",
     "scoring": "Dinilai sebagai proses deteksi pada maturitas keamanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Bangun monitoring dan alerting untuk kejadian kritis dan penyalahgunaan.",
       "Pastikan proses analisis insiden mengarah ke eskalasi yang cepat.",
@@ -204,7 +248,8 @@
       "Prosedur analisis dan eskalasi insiden.",
       "Log dan tiket penanganan alert keamanan."
     ],
-    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif."
+    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif.",
+    "analogy": "Seperti sistem kekebalan tubuh yang mendeteksi, merespons, dan pulih dari penyakit, ketahanan siber melindungi dari serangan dan pulih dengan cepat."
   },
   {
     "id": "IV.04",
@@ -216,7 +261,11 @@
     "cadence": "Diaktifkan saat insiden dan diuji secara berkala",
     "owner": "Tim tanggap insiden siber dan manajemen krisis",
     "scoring": "Dinilai pada proses ketahanan siber dan pengujian skenario",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Tentukan peran dan tanggung jawab tim tanggap insiden siber.",
       "Pastikan prosedur pemulihan mencegah penyebaran dampak dengan waktu pemulihan yang tepat.",
@@ -227,7 +276,8 @@
       "Matriks peran tim tanggap insiden siber.",
       "Laporan lesson learned pascainsiden."
     ],
-    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan."
+    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan.",
+    "analogy": "Seperti benteng yang punya dinding, penjaga, dan rencana evakuasi, ketahanan siber berlapis untuk menghadapi berbagai skenario ancaman."
   },
   {
     "id": "V.01",
@@ -239,7 +289,16 @@
     "cadence": "Tahunan pada posisi akhir Desember",
     "owner": "Unit siber, risk management, dan manajemen",
     "scoring": "Tingkat 1-5",
-    "appendices": ["I.b", "I.c", "II.b", "II.c", "III.b", "III.c", "III.d", "V"],
+    "appendices": [
+      "I.b",
+      "I.c",
+      "II.b",
+      "II.c",
+      "III.b",
+      "III.c",
+      "III.d",
+      "V"
+    ],
     "focus": [
       "Gunakan hasil penilaian untuk melihat kondisi keamanan siber Bank saat ini.",
       "Identifikasi area dengan kelemahan yang memerlukan perbaikan terukur.",
@@ -250,7 +309,8 @@
       "Ringkasan gap dan rencana perbaikan.",
       "Bukti pelaporan hasil penilaian ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Seperti rapor sekolah yang menunjukkan tingkat penguasaan siswa, penilaian maturitas menunjukkan tingkat kematangan keamanan siber organisasi."
   },
   {
     "id": "V.02",
@@ -262,7 +322,11 @@
     "cadence": "Setiap siklus penilaian maturitas",
     "owner": "Risk management dan unit siber",
     "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Gunakan kontrol pada Lampiran I.b sebagai dasar analisis kualitas penerapan.",
       "Dokumentasikan penilaian tiap aspek secara konsisten.",
@@ -273,7 +337,8 @@
       "Daftar kontrol yang diuji terhadap Lampiran I.b.",
       "Berita acara review hasil penilaian."
     ],
-    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber."
+    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "Seperti ujian kenaikan tingkat dalam bela diri, assessment maturitas mengukur seberapa jauh organisasi telah berkembang dalam keamanan."
   },
   {
     "id": "V.03",
@@ -285,7 +350,11 @@
     "cadence": "Setiap siklus penilaian maturitas",
     "owner": "Unit siber dan fungsi operasional keamanan",
     "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Gunakan kontrol pada Lampiran I.c sebagai baseline penilaian proses.",
       "Nilai kualitas implementasi untuk keempat proses ketahanan secara konsisten.",
@@ -296,7 +365,8 @@
       "Hasil walkthrough atau uji desain proses.",
       "Rencana aksi perbaikan atas proses yang lemah."
     ],
-    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber."
+    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "Seperti rapor sekolah yang menunjukkan tingkat penguasaan siswa, penilaian maturitas menunjukkan tingkat kematangan keamanan siber organisasi."
   },
   {
     "id": "V.04",
@@ -308,7 +378,11 @@
     "cadence": "Pada setiap penetapan hasil maturitas",
     "owner": "Unit siber dan reviewer penilaian",
     "scoring": "Strong sampai Unsatisfactory dan Level 1 sampai Level 5",
-    "appendices": ["III.b", "III.c", "III.d"],
+    "appendices": [
+      "III.b",
+      "III.c",
+      "III.d"
+    ],
     "focus": [
       "Gunakan definisi peringkat yang sama untuk menjaga konsistensi antarperiode.",
       "Pisahkan penilaian kualitas penerapan dan level maturitas akhir.",
@@ -319,7 +393,8 @@
       "Ringkasan scoring justification.",
       "Peta level maturitas per area penilaian."
     ],
-    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI."
+    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI.",
+    "analogy": "Seperti ujian kenaikan tingkat dalam bela diri, assessment maturitas mengukur seberapa jauh organisasi telah berkembang dalam keamanan."
   },
   {
     "id": "VI.01",
@@ -331,7 +406,9 @@
     "cadence": "Tahunan setelah penilaian inheren dan maturitas selesai",
     "owner": "Risk management dan unit siber",
     "scoring": "Peringkat 1-5 (Low sampai High)",
-    "appendices": ["V"],
+    "appendices": [
+      "V"
+    ],
     "focus": [
       "Gabungkan hasil risiko inheren dan maturitas untuk memperoleh tingkat risiko akhir.",
       "Gunakan skala peringkat yang sama dari Low sampai High.",
@@ -342,7 +419,8 @@
       "Dokumen keputusan manajemen atas tingkat risiko akhir.",
       "Bukti pelaporan tingkat risiko ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Seperti kalkulator yang menggabungkan berbagai faktor untuk menghitung skor akhir, penentuan tingkat risiko menggabungkan inherent risk dan maturity."
   },
   {
     "id": "VII.01",
@@ -365,7 +443,8 @@
       "Jadwal pengujian per sistem atau layanan.",
       "Laporan hasil pengujian dan pengendalian aksesnya."
     ],
-    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber."
+    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber.",
+    "analogy": "Seperti stress test pada jembatan yang memastikan kekuatan struktur, penetration test memastikan sistem mampu menahan serangan."
   },
   {
     "id": "VII.02",
@@ -388,7 +467,8 @@
       "Laporan penetration test beserta severity temuan.",
       "Rencana remediasi hasil uji."
     ],
-    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan."
+    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan.",
+    "analogy": "Seperti simulasi kebakaran yang menguji kesiapan gedung, pengujian siber menguji efektivitas kontrol sebelum serangan nyata terjadi."
   },
   {
     "id": "VII.03",
@@ -411,7 +491,8 @@
       "After action report atau lesson learned.",
       "Rencana aksi hasil evaluasi exercise."
     ],
-    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank."
+    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank.",
+    "analogy": "Seperti stress test pada jembatan yang memastikan kekuatan struktur, penetration test memastikan sistem mampu menahan serangan."
   },
   {
     "id": "VIII.01",
@@ -434,7 +515,8 @@
       "SK pembentukan unit atau fungsi keamanan siber.",
       "Rencana kerja tahunan unit siber."
     ],
-    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber."
+    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber.",
+    "analogy": "Seperti tim pemadam kebakaran yang selalu siap siaga, fungsi siber memastikan organisasi siap menghadapi dan merespons insiden."
   },
   {
     "id": "VIII.02",
@@ -457,6 +539,7 @@
       "Dokumen tim tanggap insiden siber dan agenda latihan rutin.",
       "Daftar kontak eskalasi lintas fungsi dan pihak ketiga."
     ],
-    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi."
+    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi.",
+    "analogy": "Seperti departemen darurat di rumah sakit yang terorganisir, unit siber yang independen memastikan respons insiden yang efektif."
   }
 ]
