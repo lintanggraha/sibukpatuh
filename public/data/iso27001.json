@@ -15,8 +15,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya."
+    "implementationTips": "Mulai dengan membuat draft kebijakan yang sederhana dan relevan dengan bisnis. Libatkan C-level untuk approval, lalu sosialisasi ke seluruh karyawan melalui email blast dan briefing. Review kebijakan minimal setahun sekali atau saat ada perubahan regulasi signifikan.",
+    "analogy": "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya.",
+    "focusArea": "Tata Kelola & Kebijakan"
   },
   {
     "id": "5.2",
@@ -34,8 +35,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya tim sepak bola yang punya posisi spesifik—kiper, bek, penyerang—setiap orang di organisasi harus tahu peran mereka dalam menjaga keamanan informasi."
+    "implementationTips": "Buat RACI matrix yang jelas untuk setiap aspek keamanan informasi. Tetapkan CISO atau security champion. Dokumentasikan job description setiap role dan komunikasikan melalui onboarding session.",
+    "analogy": "Layaknya tim sepak bola yang punya posisi spesifik—kiper, bek, penyerang—setiap orang di organisasi harus tahu peran mereka dalam menjaga keamanan informasi.",
+    "focusArea": "Struktur Organisasi"
   },
   {
     "id": "5.3",
@@ -53,8 +55,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti dalam restoran, koki yang memasak tidak sama dengan kasir yang menangani uang—pemisahan ini mencegah kecurangan dan memastikan kualitas."
+    "implementationTips": "Identifikasi fungsi-fungsi yang berpotensi konflik (misal: developer vs deployer, buyer vs payer). Implementasi segregation of duties matrix di sistem. Lakukan review akses berkala setiap 6 bulan.",
+    "analogy": "Seperti dalam restoran, koki yang memasak tidak sama dengan kasir yang menangani uang—pemisahan ini mencegah kecurangan dan memastikan kualitas.",
+    "focusArea": "Pengendalian Internal"
   },
   {
     "id": "5.4",
@@ -72,8 +75,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pelatih tim yang tidak hanya memberi strategi tapi juga memastikan setiap pemain menjalankannya, manajemen harus aktif mendorong penerapan keamanan informasi."
+    "implementationTips": "Manajemen harus memberikan contoh dengan mengikuti training keamanan terlebih dahulu. Sertakan KPI keamanan dalam performance review. Adakan town hall meeting quarterly untuk update progress keamanan.",
+    "analogy": "Seperti pelatih tim yang tidak hanya memberi strategi tapi juga memastikan setiap pemain menjalankannya, manajemen harus aktif mendorong penerapan keamanan informasi.",
+    "focusArea": "Kepemimpinan"
   },
   {
     "id": "5.5",
@@ -91,8 +95,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti memiliki nomor telepon darurat yang siap dihubungi saat terjadi masalah, kontak dengan otoritas membantu organisasi merespons insiden dengan tepat."
+    "implementationTips": "Buat daftar kontak BSSAN, POLRI (unit cybercrime), dan Kominfo. Simpan dalam kontak darurat yang mudah diakses. Lakukan silaturahmi rutin minimal setahun sekali untuk membangun relasi.",
+    "analogy": "Seperti memiliki nomor telepon darurat yang siap dihubungi saat terjadi masalah, kontak dengan otoritas membantu organisasi merespons insiden dengan tepat.",
+    "focusArea": "Hubungan Eksternal"
   },
   {
     "id": "5.6",
@@ -110,8 +115,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya bergabung dengan komunitas dokter untuk update metode pengobatan terbaru, bergabung dengan forum keamanan membantu organisasi tetap update ancaman terkini."
+    "implementationTips": "Gabung dengan ID-SIRTII, MALSPINDO, atau komunitas CISO Indonesia. Aktif di forum sharing ancaman siber. Hadiri minimal 2 event keamanan informasi per tahun untuk update best practices.",
+    "analogy": "Layaknya bergabung dengan komunitas dokter untuk update metode pengobatan terbaru, bergabung dengan forum keamanan membantu organisasi tetap update ancaman terkini.",
+    "focusArea": "Networking & Komunitas"
   },
   {
     "id": "5.7",
@@ -129,8 +135,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti badan meteorologi yang memonitor cuaca untuk memprediksi badai, intelijen ancaman membantu organisasi mengantisipasi serangan sebelum terjadi."
+    "implementationTips": "Subscribe ke feed threat intelligence gratis seperti MISP atau AlienVault OTB. Tetapkan tim kecil yang bertugas menganalisis threat feed mingguan. Buat briefing bulanan tentang ancaman terbaru yang relevan dengan industri.",
+    "analogy": "Seperti badan meteorologi yang memonitor cuaca untuk memprediksi badai, intelijen ancaman membantu organisasi mengantisipasi serangan sebelum terjadi.",
+    "focusArea": "Threat Intelligence"
   },
   {
     "id": "5.8",
@@ -148,8 +155,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sabuk pengaman yang harus dipakai di mobil manapun, keamanan informasi harus menjadi bagian dari setiap proyek, apapun jenisnya."
+    "implementationTips": "Tambahkan checklist keamanan di project charter setiap proyek. Libatkan tim security di kick-off meeting. Sertakan security review sebagai gate di stage-gate process proyek.",
+    "analogy": "Seperti sabuk pengaman yang harus dipakai di mobil manapun, keamanan informasi harus menjadi bagian dari setiap proyek, apapun jenisnya.",
+    "focusArea": "Integrasi Proyek"
   },
   {
     "id": "5.9",
@@ -170,8 +178,9 @@
       "Output alat manajemen aset perangkat lunak",
       "Inventaris aset Cloud"
     ],
-    "implementationTips": "Mulai dengan spreadsheet sederhana. Beri kolom: Nama Aset, Tipe, Klasifikasi, Pemilik, Lokasi, Nilai Bisnis, Tanggal Tinjauan. Gunakan alat otomatis jika memungkinkan. Lakukan peninjauan triwulanan dan fokuslah pada aset paling kritis di tahap awal.",
-    "analogy": "Seperti daftar isi dalam buku yang membantu Anda menemukan halaman tertentu, inventaris aset membantu organisasi tahu apa yang harus dilindungi dan di mana lokasinya."
+    "implementationTips": "Mulai dengan spreadsheet sederhana: nama aset, owner, lokasi, klasifikasi, criticality. Lakukan stock opname aset IT quarterly. Gunakan tools seperti Snipe-IT jika aset sudah ratusan.",
+    "analogy": "Seperti daftar isi dalam buku yang membantu Anda menemukan halaman tertentu, inventaris aset membantu organisasi tahu apa yang harus dilindungi dan di mana lokasinya.",
+    "focusArea": "Manajemen Aset"
   },
   {
     "id": "5.10",
@@ -189,8 +198,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan pemakaian kendaraan perusahaan—boleh untuk dinas saja, bukan liburan pribadi—aset IT juga perlu batasan penggunaan yang jelas."
+    "implementationTips": "Buat AUP yang jelas menyebutkan apa yang boleh dan tidak boleh dilakukan dengan aset IT. Minta karyawan tanda tangan AUP saat onboarding. Sosialisasikan dengan contoh kasus pelanggaran yang sering terjadi.",
+    "analogy": "Seperti aturan pemakaian kendaraan perusahaan—boleh untuk dinas saja, bukan liburan pribadi—aset IT juga perlu batasan penggunaan yang jelas.",
+    "focusArea": "Acceptable Use Policy"
   },
   {
     "id": "5.11",
@@ -208,8 +218,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti mengembalikan kunci apartemen saat check-out, semua aset organisasi harus dikembalikan saat karyawan keluar atau selesai bertugas."
+    "implementationTips": "Buat checklist exit clearance yang mencakup pengembalian laptop, ID card, token, dan akses sistem. Integrasikan dengan proses HR saat resign. Tetapkan timeline 1-3 hari kerja untuk pengembalian semua aset.",
+    "analogy": "Seperti mengembalikan kunci apartemen saat check-out, semua aset organisasi harus dikembalikan saat karyawan keluar atau selesai bertugas.",
+    "focusArea": "Offboarding"
   },
   {
     "id": "5.12",
@@ -227,8 +238,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem triase di rumah sakit yang memprioritaskan pasien berdasarkan tingkat kegawatan, klasifikasi informasi membantu memprioritaskan perlindungan data."
+    "implementationTips": "Definisikan 3-4 level klasifikasi: Public, Internal, Confidential, Restricted. Buat kriteria yang jelas untuk setiap level. Mulai klasifikasi dari data paling kritis dulu, lalu ekspansi bertahap.",
+    "analogy": "Seperti sistem triase di rumah sakit yang memprioritaskan pasien berdasarkan tingkat kegawatan, klasifikasi informasi membantu memprioritaskan perlindungan data.",
+    "focusArea": "Data Classification"
   },
   {
     "id": "5.13",
@@ -246,8 +258,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya label 'mudah pecah' pada paket yang mengingatkan kurir untuk berhati-hati, label klasifikasi memberi tahu karyawan cara menangani informasi."
+    "implementationTips": "Implementasikan label digital (header/footer dokumen, email subject tag) dan fisik (stiker pada dokumen kertas). Gunakan watermark untuk dokumen confidential. Otomatisasi labeling dengan DLP jika memungkinkan.",
+    "analogy": "Layaknya label 'mudah pecah' pada paket yang mengingatkan kurir untuk berhati-hati, label klasifikasi memberi tahu karyawan cara menangani informasi.",
+    "focusArea": "Labeling"
   },
   {
     "id": "5.14",
@@ -265,8 +278,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pengiriman uang dengan brankas anti-maling, transfer informasi butuh perlindungan khusus agar tidak dicuri di tengah jalan."
+    "implementationTips": "Tetapkan metode transfer aman: SFTP untuk file besar, encrypted email untuk data sensitif, secure portal untuk sharing eksternal. Larang penggunaan personal email atau USB untuk transfer data perusahaan.",
+    "analogy": "Seperti pengiriman uang dengan brankas anti-maling, transfer informasi butuh perlindungan khusus agar tidak dicuri di tengah jalan.",
+    "focusArea": "Data Transfer"
   },
   {
     "id": "5.15",
@@ -284,8 +298,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kartu akses di hotel—tamu hanya bisa masuk kamar mereka sendiri, bukan kamar orang lain—akses harus berdasarkan kebutuhan."
+    "implementationTips": "Terapkan prinsip least privilege dari awal. Buat workflow approval untuk request akses baru. Review akses user setiap 3-6 bulan, terutama untuk sistem kritis.",
+    "analogy": "Seperti sistem kartu akses di hotel—tamu hanya bisa masuk kamar mereka sendiri, bukan kamar orang lain—akses harus berdasarkan kebutuhan.",
+    "focusArea": "Access Control"
   },
   {
     "id": "5.16",
@@ -303,8 +318,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya pembuatan KTP baru, perpanjangan, dan pencabutan saat pindah kota, identitas digital juga perlu dikelola dari awal sampai akhir."
+    "implementationTips": "Integrasikan sistem HR dengan Active Directory untuk automate provisioning/deprovisioning. Pastikan proses join-mover-leaver berjalan lancar. Audit identitas user yang tidak aktif setiap bulan.",
+    "analogy": "Layaknya pembuatan KTP baru, perpanjangan, dan pencabutan saat pindah kota, identitas digital juga perlu dikelola dari awal sampai akhir.",
+    "focusArea": "Identity Lifecycle"
   },
   {
     "id": "5.17",
@@ -322,8 +338,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti password ATM yang harus dirahasiakan dan diganti berkala, informasi autentikasi perlu dikelola dengan ketat untuk mencegah penyalahgunaan."
+    "implementationTips": "Wajibkan password minimal 12 karakter dengan kompleksitas. Implementasi MFA untuk semua sistem critical. Gunakan password manager enterprise. Rotasi password setiap 90 hari untuk akun privileged.",
+    "analogy": "Seperti password ATM yang harus dirahasiakan dan diganti berkala, informasi autentikasi perlu dikelola dengan ketat untuk mencegah penyalahgunaan.",
+    "focusArea": "Authentication Management"
   },
   {
     "id": "5.18",
@@ -341,8 +358,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci yang harus diambil kembali saat karyawan resign, hak akses juga harus segera dicabut agar tidak disalahgunakan."
+    "implementationTips": "Buat prosedur formal untuk grant, modify, dan revoke access. Implementasi role-based access control (RBAC). Lakukan recertification akses quarterly untuk sistem yang mengandung data sensitif.",
+    "analogy": "Seperti kunci yang harus diambil kembali saat karyawan resign, hak akses juga harus segera dicabut agar tidak disalahgunakan.",
+    "focusArea": "Access Rights"
   },
   {
     "id": "5.19",
@@ -360,8 +378,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti Anda mengecek reputasi kontraktor sebelum mempekerjakan mereka, risiko keamanan pemasok harus dievaluasi sebelum bekerja sama."
+    "implementationTips": "Buat questionnaire security assessment untuk vendor baru. Sertakan klausul keamanan di kontrak. Lakukan audit atau request bukti compliance vendor sebelum onboard.",
+    "analogy": "Seperti Anda mengecek reputasi kontraktor sebelum mempekerjakan mereka, risiko keamanan pemasok harus dievaluasi sebelum bekerja sama.",
+    "focusArea": "Supplier Risk"
   },
   {
     "id": "5.20",
@@ -379,8 +398,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti menyewa brankas di bank—Anda harus percaya bank menjaganya, tapi juga pastikan apa yang Anda simpan memang boleh di sana."
+    "implementationTips": "Pahami shared responsibility model untuk setiap cloud provider. Konfigurasi security group dan IAM dengan benar dari awal. Enable logging dan monitoring untuk semua layanan cloud.",
+    "analogy": "Seperti menyewa brankas di bank—Anda harus percaya bank menjaganya, tapi juga pastikan apa yang Anda simpan memang boleh di sana.",
+    "focusArea": "Cloud Security"
   },
   {
     "id": "5.21",
@@ -398,8 +418,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya restoran yang harus memastikan supplier makanannya aman, organisasi harus memastikan rantai pasokan TI tidak menjadi titik lemah keamanan."
+    "implementationTips": "Map seluruh supply chain TI dan identifikasi single point of failure. Request business continuity plan dari vendor kritis. Diversifikasi vendor untuk mengurangi risiko ketergantungan.",
+    "analogy": "Layaknya restoran yang harus memastikan supplier makanannya aman, organisasi harus memastikan rantai pasokan TI tidak menjadi titik lemah keamanan.",
+    "focusArea": "Supply Chain Security"
   },
   {
     "id": "5.22",
@@ -417,8 +438,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti uji kelayakan kendaraan tahunan, tinjauan kepatuhan berkala memastikan keamanan organisasi masih berjalan di jalur yang benar."
+    "implementationTips": "Buat compliance checklist berdasarkan kebijakan internal. Lakukan self-assessment berkala setiap quarter. Track remediation plan untuk temuan yang belum ditutup.",
+    "analogy": "Seperti uji kelayakan kendaraan tahunan, tinjauan kepatuhan berkala memastikan keamanan organisasi masih berjalan di jalur yang benar.",
+    "focusArea": "Compliance Monitoring"
   },
   {
     "id": "5.23",
@@ -436,8 +458,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem RT yang saling berbagi info keamanan lingkungan, komunitas keamanan membantu organisasi saling berbagi info ancaman."
+    "implementationTips": "Aktif berpartisipasi di ISAC (Information Sharing and Analysis Center) sektor industri Anda. Share anonymized threat data untuk membantu komunitas. Manfaatkan intelligence yang didapat untuk improve defense.",
+    "analogy": "Seperti sistem RT yang saling berbagi info keamanan lingkungan, komunitas keamanan membantu organisasi saling berbagi info ancaman.",
+    "focusArea": "Information Sharing"
   },
   {
     "id": "5.24",
@@ -455,8 +478,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti演习 kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis."
+    "implementationTips": "Identifikasi business process kritis dan Maximum Tolerable Downtime. Buat BCP yang mencakup skenario worst-case. Lakukan tabletop exercise minimal setahun sekali untuk uji kesiapan.",
+    "analogy": "Seperti演习 kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis.",
+    "focusArea": "Business Continuity"
   },
   {
     "id": "5.25",
@@ -474,8 +498,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya cek kesehatan sebelum mulai gym, penilaian awal kepatuhan memastikan organisasi siap memenuhi semua kewajiban keamanan."
+    "implementationTips": "Inventory semua kewajiban hukum yang berlaku (UU PDP, PP 71/2019, dll). Buat compliance matrix dan assign PIC untuk setiap requirement. Review legal compliance saat ada regulasi baru.",
+    "analogy": "Layaknya cek kesehatan sebelum mulai gym, penilaian awal kepatuhan memastikan organisasi siap memenuhi semua kewajiban keamanan.",
+    "focusArea": "Legal Compliance"
   },
   {
     "id": "5.26",
@@ -493,8 +518,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti daftar aturan lalu lintas yang harus dipatuhi pengemudi, persyaratan hukum keamanan harus diketahui dan dipatuhi organisasi."
+    "implementationTips": "Subscribe ke update regulasi dari OJK, Kominfo, atau BSSN. Buat legal register yang diupdate quarterly. Konsultasi dengan legal counsel untuk interpretasi requirement yang ambigu.",
+    "analogy": "Seperti daftar aturan lalu lintas yang harus dipatuhi pengemudi, persyaratan hukum keamanan harus diketahui dan dipatuhi organisasi.",
+    "focusArea": "Regulatory Requirements"
   },
   {
     "id": "5.27",
@@ -512,8 +538,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti arsip penting yang disimpan dalam lemari tahan api, rekaman informasi harus dilindungi agar tidak hilang atau diubah sembarangan."
+    "implementationTips": "Definisikan retention period untuk setiap jenis dokumen berdasarkan hukum dan bisnis. Implementasi automated retention di DMS. Pastikan proses disposal dilakukan dengan secure destruction.",
+    "analogy": "Seperti arsip penting yang disimpan dalam lemari tahan api, rekaman informasi harus dilindungi agar tidak hilang atau diubah sembarangan.",
+    "focusArea": "Record Retention"
   },
   {
     "id": "5.28",
@@ -531,8 +558,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya dokter yang menjaga rahasia pasien, organisasi wajib melindungi data pribadi yang dipercayakan kepadanya."
+    "implementationTips": "Lakukan data mapping untuk tahu di mana PII disimpan. Implementasi privacy by design di setiap sistem baru. Tunjuk DPO jika volume PII yang diproses besar.",
+    "analogy": "Layaknya dokter yang menjaga rahasia pasien, organisasi wajib melindungi data pribadi yang dipercayakan kepadanya.",
+    "focusArea": "Privacy & PII Protection"
   },
   {
     "id": "5.29",
@@ -550,8 +578,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti audit keuangan oleh akuntan eksternal, penilaian independen memberi pandangan objektif tentang efektivitas keamanan."
+    "implementationTips": "Jadwalkan audit internal minimal setahun sekali oleh tim independen. Gunakan framework audit yang recognized (ISO 27001, NIST). Tindak lanjuti temuan dengan remediation plan yang terukur.",
+    "analogy": "Seperti audit keuangan oleh akuntan eksternal, penilaian independen memberi pandangan objektif tentang efektivitas keamanan.",
+    "focusArea": "Independent Review"
   },
   {
     "id": "5.30",
@@ -569,8 +598,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti fondasi bangunan yang harus kuat sejak awal, keamanan harus dibangun dari awal dalam pengembangan sistem, bukan ditambahkan belakangan."
+    "implementationTips": "Integrasikan security checkpoint di SDLC. Wajibkan threat modeling untuk setiap fitur baru. Lakukan code review dan security testing sebelum release.",
+    "analogy": "Seperti fondasi bangunan yang harus kuat sejak awal, keamanan harus dibangun dari awal dalam pengembangan sistem, bukan ditambahkan belakangan.",
+    "focusArea": "ICT Development Security"
   },
   {
     "id": "5.31",
@@ -588,8 +618,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya izin mendirikan bangunan yang harus dipenuhi sebelum membangun, aspek legal harus dikendalikan sebelum mengimplementasikan sistem."
+    "implementationTips": "Review semua kontrak dan perjanjian dari aspek keamanan informasi. Pastikan ada klausul right-to-audit untuk vendor. Konsultasi legal sebelum implementasi kontrol yang berdampak ke karyawan.",
+    "analogy": "Layaknya izin mendirikan bangunan yang harus dipenuhi sebelum membangun, aspek legal harus dikendalikan sebelum mengimplementasikan sistem.",
+    "focusArea": "Legal Controls"
   },
   {
     "id": "5.32",
@@ -607,8 +638,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti menghargai hak cipta musisi dengan membeli lagu asli, organisasi harus menghormati lisensi perangkat lunak yang digunakan."
+    "implementationTips": "Inventory semua software yang digunakan dan cek lisensinya. Gunakan software asset management tool untuk track license compliance. Lakukan audit software internal setiap 6 bulan.",
+    "analogy": "Seperti menghargai hak cipta musisi dengan membeli lagu asli, organisasi harus menghormati lisensi perangkat lunak yang digunakan.",
+    "focusArea": "Intellectual Property"
   },
   {
     "id": "5.33",
@@ -626,8 +658,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rekaman CCTV yang disimpan di ruang terkunci, rekaman sistem harus dilindungi agar tidak dimanipulasi."
+    "implementationTips": "Identifikasi records yang wajib dilindungi berdasarkan hukum. Implementasi access control dan encryption untuk records sensitif. Buat backup terpisah untuk records penting.",
+    "analogy": "Seperti rekaman CCTV yang disimpan di ruang terkunci, rekaman sistem harus dilindungi agar tidak dimanipulasi.",
+    "focusArea": "Records Protection"
   },
   {
     "id": "5.34",
@@ -645,8 +678,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya surat pribadi yang tidak boleh dibaca orang lain, data pribadi juga harus dijaga kerahasiaannya."
+    "implementationTips": "Buat privacy notice yang jelas untuk data subject. Implementasi consent management system. Pastikan ada prosedur untuk handle request hak data subject (akses, hapus, rectifikasi).",
+    "analogy": "Layaknya surat pribadi yang tidak boleh dibaca orang lain, data pribadi juga harus dijaga kerahasiaannya.",
+    "focusArea": "Privacy Compliance"
   },
   {
     "id": "5.35",
@@ -664,8 +698,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti second opinion dari dokter spesialis, tinjauan independen memberi perspektif baru tentang efektivitas keamanan."
+    "implementationTips": "Lakukan gap analysis terhadap ISO 27001 secara berkala. Gunakan assessor bersertifikasi untuk audit eksternal. Benchmark dengan organisasi sejenis untuk improve maturity.",
+    "analogy": "Seperti second opinion dari dokter spesialis, tinjauan independen memberi perspektif baru tentang efektivitas keamanan.",
+    "focusArea": "Security Assessment"
   },
   {
     "id": "5.36",
@@ -683,8 +718,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti cek rutin kendaraan yang memastikan semua sistem berfungsi, tinjauan kepatuhan memastikan keamanan tetap efektif."
+    "implementationTips": "Buat metrics untuk track compliance (misal: % user yang sudah training). Implementasi automated compliance checking di mana memungkinkan. Report compliance status ke management secara berkala.",
+    "analogy": "Seperti cek rutin kendaraan yang memastikan semua sistem berfungsi, tinjauan kepatuhan memastikan keamanan tetap efektif.",
+    "focusArea": "Policy Compliance"
   },
   {
     "id": "5.37",
@@ -702,8 +738,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti buku manual pesawat yang harus selalu update dan terkontrol, dokumentasi keamanan harus dikelola dengan baik."
+    "implementationTips": "Gunakan Document Management System dengan version control. Tetapkan document owner untuk setiap prosedur. Review dan update dokumen saat ada perubahan proses atau insiden.",
+    "analogy": "Seperti buku manual pesawat yang harus selalu update dan terkontrol, dokumentasi keamanan harus dikelola dengan baik.",
+    "focusArea": "Documentation Management"
   },
   {
     "id": "6.1",
@@ -721,8 +758,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya pengecekan referensi sebelum mempekerjakan pengasuh anak, penyaringan latar belakang memastikan orang yang kita pekerjakan dapat dipercaya."
+    "implementationTips": "Lakukan background check sesuai hukum ketenagakerjaan: cek identitas, pendidikan, dan riwayat kerja. Untuk posisi sensitif, tambah cek kriminal dan kredit. Dokumentasikan hasil screening dan simpan secara confidential.",
+    "analogy": "Layaknya pengecekan referensi sebelum mempekerjakan pengasuh anak, penyaringan latar belakang memastikan orang yang kita pekerjakan dapat dipercaya.",
+    "focusArea": "Background Verification"
   },
   {
     "id": "6.2",
@@ -740,8 +778,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kontrak sewa yang menyebutkan aturan penggunaan properti, kontrak kerja harus menyebutkan kewajiban keamanan informasi."
+    "implementationTips": "Sertakan klausul keamanan informasi di employment contract: kewajiban menjaga kerahasiaan, larangan penggunaan aset untuk pribadi, dan konsekuensi pelanggaran. Review kontrak saat ada perubahan regulasi.",
+    "analogy": "Seperti kontrak sewa yang menyebutkan aturan penggunaan properti, kontrak kerja harus menyebutkan kewajiban keamanan informasi.",
+    "focusArea": "Employment Terms"
   },
   {
     "id": "6.3",
@@ -759,8 +798,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pelatihan pemadaman api yang mempersiapkan karyawan menghadapi kebakaran, pelatihan keamanan mempersiapkan mereka menghadapi ancaman siber."
+    "implementationTips": "Buat program awareness berlapis: onboarding training untuk karyawan baru, monthly newsletter, annual refresher, dan targeted training untuk role spesifik. Ukur efektivitas dengan phishing simulation.",
+    "analogy": "Seperti pelatihan pemadaman api yang mempersiapkan karyawan menghadapi kebakaran, pelatihan keamanan mempersiapkan mereka menghadapi ancaman siber.",
+    "focusArea": "Security Awareness"
   },
   {
     "id": "6.4",
@@ -778,8 +818,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya tilang untuk pelanggar lalu lintas, proses disipliner memberi konsekuensi bagi yang melanggar aturan keamanan."
+    "implementationTips": "Definisikan gradasi sanksi sesuai severity pelanggaran: warning pertama, kedua, hingga PHD. Sosialisasikan konsekuensi di employee handbook. Pastikan proses disipliner sesuai hukum ketenagakerjaan.",
+    "analogy": "Layaknya tilang untuk pelanggar lalu lintas, proses disipliner memberi konsekuensi bagi yang melanggar aturan keamanan.",
+    "focusArea": "Disciplinary Process"
   },
   {
     "id": "6.5",
@@ -797,8 +838,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kewajiban menjaga rahasia perusahaan meskipun sudah resign, tanggung jawab keamanan tidak berakhir saat karyawan keluar."
+    "implementationTips": "Sertakan klausa non-disclosure yang tetap berlaku setelah resign. Lakukan exit interview yang mengingatkan kewajiban kerahasiaan. Untuk posisi kritis, pertimbangkan garden leave.",
+    "analogy": "Seperti kewajiban menjaga rahasia perusahaan meskipun sudah resign, tanggung jawab keamanan tidak berakhir saat karyawan keluar.",
+    "focusArea": "Post-Employment Obligations"
   },
   {
     "id": "6.6",
@@ -816,8 +858,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti janji untuk tidak membocorkan resep rahasia restoran, NDA melindungi informasi sensitif dari kebocoran."
+    "implementationTips": "Buat NDA yang spesifik menyebutkan scope informasi yang dilindungi, durasi, dan sanksi pelanggaran. Minta tanda tangan NDA untuk karyawan, kontraktor, dan visitor yang akses informasi sensitif.",
+    "analogy": "Seperti janji untuk tidak membocorkan resep rahasia restoran, NDA melindungi informasi sensitif dari kebocoran.",
+    "focusArea": "Confidentiality Agreements"
   },
   {
     "id": "6.7",
@@ -835,8 +878,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya membawa brankas mini saat kerja di cafe, kerja remote membutuhkan perlindungan ekstra untuk data perusahaan."
+    "implementationTips": "Buat WFH policy yang mencakup: wajib VPN, larangan pakai public WiFi untuk kerja, secure home network setup, dan clear desk policy di rumah. Provide security guidelines untuk setup home office.",
+    "analogy": "Layaknya membawa brankas mini saat kerja di cafe, kerja remote membutuhkan perlindungan ekstra untuk data perusahaan.",
+    "focusArea": "Remote Work Security"
   },
   {
     "id": "6.8",
@@ -854,8 +898,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti nomor darurat 112 yang mudah dihubungi, mekanisme pelaporan keamanan harus mudah diakses oleh semua karyawan."
+    "implementationTips": "Sediakan multiple channel pelaporan: email khusus, hotline, dan ticketing system. Pastikan proses pelaporan mudah dan tidak menghakimi. Reward karyawan yang report insiden untuk encourage culture.",
+    "analogy": "Seperti nomor darurat 112 yang mudah dihubungi, mekanisme pelaporan keamanan harus mudah diakses oleh semua karyawan.",
+    "focusArea": "Incident Reporting"
   },
   {
     "id": "7.1",
@@ -873,8 +918,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar pabrik yang membatasi siapa yang boleh masuk, batas fisik melindungi aset dari akses yang tidak berwenang."
+    "implementationTips": "Identifikasi dan map physical boundary: pagar, dinding, atau barrier lainnya. Install fencing untuk area kritis. Pastikan tidak ada blind spot yang bisa dilewati tanpa terdeteksi.",
+    "analogy": "Seperti pagar pabrik yang membatasi siapa yang boleh masuk, batas fisik melindungi aset dari akses yang tidak berwenang.",
+    "focusArea": "Physical Perimeter"
   },
   {
     "id": "7.2",
@@ -892,8 +938,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya security di gedung yang mengecek ID sebelum mengizinkan masuk, kontrol akses fisik menyaring siapa yang boleh masuk."
+    "implementationTips": "Implementasi access card atau biometric di semua entry point. Buat visitor management system dengan log buku tamu dan escort policy. Review access log secara berkala.",
+    "analogy": "Layaknya security di gedung yang mengecek ID sebelum mengizinkan masuk, kontrol akses fisik menyaring siapa yang boleh masuk.",
+    "focusArea": "Physical Access Control"
   },
   {
     "id": "7.3",
@@ -911,8 +958,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya gembok, alarm, dan pagar, kantor juga butuh lapisan keamanan yang sesuai ancaman."
+    "implementationTips": "Lakukan risk assessment untuk identifikasi vulnerability fisik. Reinforce door, window, dan wall untuk ruang server. Install secure lock dan alarm untuk area sensitif.",
+    "analogy": "Seperti rumah yang punya gembok, alarm, dan pagar, kantor juga butuh lapisan keamanan yang sesuai ancaman.",
+    "focusArea": "Facility Security"
   },
   {
     "id": "7.4",
@@ -930,8 +978,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya satpam yang patroli keliling area, pemantauan kontinu mendeteksi ancaman sebelum mereka bertindak."
+    "implementationTips": "Install CCTV di strategic points: entry, exit, corridor, dan area kritis. Pastikan coverage 24/7 dengan retention minimal 30 hari. Monitor CCTV oleh security team secara real-time.",
+    "analogy": "Layaknya satpam yang patroli keliling area, pemantauan kontinu mendeteksi ancaman sebelum mereka bertindak.",
+    "focusArea": "Physical Monitoring"
   },
   {
     "id": "7.5",
@@ -949,8 +998,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti bangunan tahan gempa di zona rawan, fasilitas harus dilindungi dari ancaman lingkungan dan fisik."
+    "implementationTips": "Identifikasi risiko lingkungan: banjir, gempa, kebakaran. Install fire suppression system, water detection, dan lightning arrester. Buat mitigation plan untuk setiap risiko yang teridentifikasi.",
+    "analogy": "Seperti bangunan tahan gempa di zona rawan, fasilitas harus dilindungi dari ancaman lingkungan dan fisik.",
+    "focusArea": "Environmental Protection"
   },
   {
     "id": "7.6",
@@ -968,8 +1018,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya aturan steril di ruang operasi rumah sakit, area aman punya persyaratan khusus yang harus dipatuhi semua orang."
+    "implementationTips": "Tetapkan aturan untuk kerja di secure area: wajib badge, tidak boleh bawa device pribadi, tidak boleh foto. Implementasi clean desk policy. Audit kepatuhan secara berkala.",
+    "analogy": "Layaknya aturan steril di ruang operasi rumah sakit, area aman punya persyaratan khusus yang harus dipatuhi semua orang.",
+    "focusArea": "Secure Area Working"
   },
   {
     "id": "7.7",
@@ -987,8 +1038,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti generator cadangan yang siap saat listrik PLN mati, utilitas harus punya backup untuk menjaga operasional."
+    "implementationTips": "Identifikasi semua utility yang critical: listrik, air, internet, AC. Setup redundancy untuk critical utility: UPS, generator, dual ISP. Buat maintenance schedule untuk semua utility.",
+    "analogy": "Seperti generator cadangan yang siap saat listrik PLN mati, utilitas harus punya backup untuk menjaga operasional.",
+    "focusArea": "Utility Support"
   },
   {
     "id": "7.8",
@@ -1006,8 +1058,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya servis mobil berkala yang mencegah mogok di jalan, pemeliharaan peralatan mencegah kegagalan sistem."
+    "implementationTips": "Buat maintenance schedule untuk semua equipment keamanan: CCTV, access control, fire suppression. Track maintenance log dan set reminder untuk preventive maintenance. Gunakan vendor terpercaya untuk service.",
+    "analogy": "Layaknya servis mobil berkala yang mencegah mogok di jalan, pemeliharaan peralatan mencegah kegagalan sistem.",
+    "focusArea": "Equipment Maintenance"
   },
   {
     "id": "7.9",
@@ -1025,8 +1078,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti asuransi dan GPS tracker untuk laptop yang dibawa travel, aset di luar kantor tetap butuh perlindungan."
+    "implementationTips": "Buat policy untuk kerja di luar kantor: wajib encrypt laptop, tidak boleh akses dari public computer, wajib lock screen saat meninggalkan device. Track aset mobile dengan GPS jika memungkinkan.",
+    "analogy": "Seperti asuransi dan GPS tracker untuk laptop yang dibawa travel, aset di luar kantor tetap butuh perlindungan.",
+    "focusArea": "Off-site Asset Security"
   },
   {
     "id": "7.10",
@@ -1044,8 +1098,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan sebelum dibuang, media penyimpanan perlu diamankan atau dimusnahkan dengan benar."
+    "implementationTips": "Batasi penggunaan USB drive dengan policy GPO. Untuk yang necessary, wajib encrypt. Buat prosedur disposal media yang aman: physical destruction atau degaussing untuk media yang berisi data sensitif.",
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan sebelum dibuang, media penyimpanan perlu diamankan atau dimusnahkan dengan benar.",
+    "focusArea": "Removable Media Security"
   },
   {
     "id": "7.11",
@@ -1063,8 +1118,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti jalur evakuasi dan assembly point yang siap pakai, rencana darurat butuh infrastruktur yang mendukung."
+    "implementationTips": "Buat emergency response plan yang mencakup: evakuasi, assembly point, emergency contact. Install emergency lighting dan exit sign. Lakukan drill minimal 2 kali setahun.",
+    "analogy": "Seperti jalur evakuasi dan assembly point yang siap pakai, rencana darurat butuh infrastruktur yang mendukung.",
+    "focusArea": "Emergency Planning"
   },
   {
     "id": "7.12",
@@ -1082,8 +1138,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya kabel listrik yang ditanam dalam tembok agar tidak digigit tikus, kabel data juga harus dilindungi."
+    "implementationTips": "Route kabel power dan data melalui conduit atau raised floor. Pisahkan kabel power dan data untuk hindari interference. Install surge protector dan lightning protection.",
+    "analogy": "Layaknya kabel listrik yang ditanam dalam tembok agar tidak digigit tikus, kabel data juga harus dilindungi.",
+    "focusArea": "Cable & Power Security"
   },
   {
     "id": "7.13",
@@ -1101,8 +1158,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti inspeksi gedung tahunan yang memastikan struktur masih kuat, pemeriksaan fasilitas memastikan keamanan tetap terjaga."
+    "implementationTips": "Buat checklist inspeksi facility: structural integrity, fire safety, access control functionality. Lakukan inspeksi berkala: monthly untuk area kritis, quarterly untuk area lain. Track temuan dan remediation.",
+    "analogy": "Seperti inspeksi gedung tahunan yang memastikan struktur masih kuat, pemeriksaan fasilitas memastikan keamanan tetap terjaga.",
+    "focusArea": "Facility Inspection"
   },
   {
     "id": "7.14",
@@ -1120,8 +1178,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya pindah rumah yang butuh pengawasan ekstra, relokasi kantor juga butuh pengamanan ketat."
+    "implementationTips": "Buat relocation plan yang mencakup: packing aman, transport dengan kendaraan secure, setup security di lokasi baru. Pastikan tidak ada downtime untuk security monitoring selama transisi.",
+    "analogy": "Layaknya pindah rumah yang butuh pengawasan ekstra, relokasi kantor juga butuh pengamanan ketat.",
+    "focusArea": "Physical Security During Relocation"
   },
   {
     "id": "8.1",
@@ -1139,8 +1198,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti smartphone yang punya PIN, enkripsi, dan remote wipe, perangkat endpoint harus punya perlindungan berlapis."
+    "implementationTips": "Install EDR (Endpoint Detection & Response) di semua device. Wajibkan full disk encryption. Enable remote wipe capability untuk mobile device. Patch OS dan aplikasi secara berkala.",
+    "analogy": "Seperti smartphone yang punya PIN, enkripsi, dan remote wipe, perangkat endpoint harus punya perlindungan berlapis.",
+    "focusArea": "Endpoint Security"
   },
   {
     "id": "8.2",
@@ -1158,8 +1218,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya kunci master yang hanya dipegang kepala security, hak admin harus dibatasi agar tidak disalahgunakan."
+    "implementationTips": "Implementasi PAM solution untuk manage privileged account. Wajibkan approval untuk setiap penggunaan privileged access. Record session privileged access untuk audit trail.",
+    "analogy": "Layaknya kunci master yang hanya dipegang kepala security, hak admin harus dibatasi agar tidak disalahgunakan.",
+    "focusArea": "Privileged Access Management"
   },
   {
     "id": "8.3",
@@ -1177,8 +1238,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti VIP lounge yang hanya untuk tamu undangan, informasi sensitif hanya boleh diakses yang berwenang."
+    "implementationTips": "Implementasi access control list (ACL) berdasarkan need-to-know. Review permission secara berkala. Remove default account atau guest access yang tidak diperlukan.",
+    "analogy": "Seperti VIP lounge yang hanya untuk tamu undangan, informasi sensitif hanya boleh diakses yang berwenang.",
+    "focusArea": "Information Access Restriction"
   },
   {
     "id": "8.4",
@@ -1196,8 +1258,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya resep rahasia Coca-Cola yang hanya diketahui beberapa orang, kode sumber harus dibatasi aksesnya."
+    "implementationTips": "Gunakan version control system (Git) dengan branch protection. Batasi access ke production code. Require code review dan approval sebelum merge ke main branch.",
+    "analogy": "Layaknya resep rahasia Coca-Cola yang hanya diketahui beberapa orang, kode sumber harus dibatasi aksesnya.",
+    "focusArea": "Source Code Access"
   },
   {
     "id": "8.5",
@@ -1215,8 +1278,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sidik jari yang unik untuk setiap orang, autentikasi memastikan hanya identitas valid yang bisa masuk."
+    "implementationTips": "Implementasi MFA untuk semua sistem. Gunakan passwordless authentication jika memungkinkan. Monitor failed login attempt untuk deteksi brute force attack.",
+    "analogy": "Seperti sidik jari yang unik untuk setiap orang, autentikasi memastikan hanya identitas valid yang bisa masuk.",
+    "focusArea": "Secure Authentication"
   },
   {
     "id": "8.6",
@@ -1234,8 +1298,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya monitoring lalu lintas untuk prediksi kemacetan, manajemen kapasitas mengantisipasi beban sistem sebelum overload."
+    "implementationTips": "Monitor resource utilization: CPU, memory, disk, network. Setup threshold alerting (80% usage). Buat capacity plan untuk 6-12 bulan ke depan berdasarkan growth trend.",
+    "analogy": "Layaknya monitoring lalu lintas untuk prediksi kemacetan, manajemen kapasitas mengantisipasi beban sistem sebelum overload.",
+    "focusArea": "Capacity Management"
   },
   {
     "id": "8.7",
@@ -1253,8 +1318,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang melawan virus, proteksi malware melindungi sistem dari ancaman perangkat lunak berbahaya."
+    "implementationTips": "Install antivirus/anti-malware di semua endpoint dan server. Update signature daily. Enable real-time scanning. Lakukan scan full system weekly. Educate user untuk tidak click suspicious link.",
+    "analogy": "Seperti sistem kekebalan tubuh yang melawan virus, proteksi malware melindungi sistem dari ancaman perangkat lunak berbahaya.",
+    "focusArea": "Malware Protection"
   },
   {
     "id": "8.8",
@@ -1272,8 +1338,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya体检 kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi."
+    "implementationTips": "Run vulnerability scan monthly untuk semua sistem. Prioritize remediation berdasarkan risk score. Patch critical vulnerability dalam 7 hari. Retest setelah patch untuk verify fix.",
+    "analogy": "Layaknya体检 kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi.",
+    "focusArea": "Vulnerability Management"
   },
   {
     "id": "8.9",
@@ -1291,8 +1358,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti setting pabrik yang optimal untuk perangkat elektronik, konfigurasi hardware harus distandarkan dan diamankan."
+    "implementationTips": "Buat baseline configuration untuk semua hardware. Disable unnecessary service dan port. Document semua konfigurasi dan track perubahan. Audit konfigurasi secara berkala.",
+    "analogy": "Seperti setting pabrik yang optimal untuk perangkat elektronik, konfigurasi hardware harus distandarkan dan diamankan.",
+    "focusArea": "Hardware Configuration"
   },
   {
     "id": "8.10",
@@ -1310,8 +1378,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan dengan shredder, penghapusan data harus dilakukan secara aman."
+    "implementationTips": "Buat prosedur secure deletion: overwrite untuk HDD, crypto-shred untuk SSD. Document proses deletion dan buat destruction certificate. Gunakan third-party certified disposal vendor untuk media besar.",
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan dengan shredder, penghapusan data harus dilakukan secara aman.",
+    "focusArea": "Information Deletion"
   },
   {
     "id": "8.11",
@@ -1329,8 +1398,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti nomor KTP yang ditampilkan sebagian saja (XXX-XXX-1234), masking data menyembunyikan informasi sensitif."
+    "implementationTips": "Implementasi data masking untuk testing environment: scramble atau substitute sensitive data. Gunakan dynamic data masking untuk production query. Mask PII, financial data, dan confidential information.",
+    "analogy": "Seperti nomor KTP yang ditampilkan sebagian saja (XXX-XXX-1234), masking data menyembunyikan informasi sensitif.",
+    "focusArea": "Data Masking"
   },
   {
     "id": "8.12",
@@ -1348,8 +1418,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya alarm di toko yang berbunyi jika barang dibawa keluar tanpa bayar, DLP mendeteksi data yang keluar tanpa izin."
+    "implementationTips": "Deploy DLP solution untuk monitor dan block unauthorized data transfer. Define policy untuk classified data. Monitor email, web upload, dan USB transfer. Alert dan block jika ada violation.",
+    "analogy": "Layaknya alarm di toko yang berbunyi jika barang dibawa keluar tanpa bayar, DLP mendeteksi data yang keluar tanpa izin.",
+    "focusArea": "Data Leak Prevention"
   },
   {
     "id": "8.13",
@@ -1367,8 +1438,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti ban cadangan yang siap digunakan saat ban utama bocor, backup memastikan data bisa dipulihkan saat terjadi masalah."
+    "implementationTips": "Implementasi 3-2-1 backup rule: 3 copies, 2 media types, 1 offsite. Test restore quarterly untuk verify backup integrity. Encrypt backup data. Monitor backup job daily.",
+    "analogy": "Seperti ban cadangan yang siap digunakan saat ban utama bocor, backup memastikan data bisa dipulihkan saat terjadi masalah.",
+    "focusArea": "Information Backup"
   },
   {
     "id": "8.14",
@@ -1386,8 +1458,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya punya dua generator yang bisa saling backup, redundansi memastikan sistem tetap berjalan walau satu komponen gagal."
+    "implementationTips": "Setup redundant server di lokasi berbeda. Implementasi load balancing untuk distribute traffic. Test failover secara berkala. Pastikan RPO dan RTO sesuai business requirement.",
+    "analogy": "Layaknya punya dua generator yang bisa saling backup, redundansi memastikan sistem tetap berjalan walau satu komponen gagal.",
+    "focusArea": "Processing Facility Redundancy"
   },
   {
     "id": "8.15",
@@ -1405,8 +1478,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti black box pesawat yang merekam semua aktivitas, log mencatat setiap kejadian untuk investigasi jika terjadi masalah."
+    "implementationTips": "Enable logging untuk semua sistem critical: OS, aplikasi, network device. Centralize log ke SIEM. Retain log minimal 1 tahun. Monitor log untuk anomali daily.",
+    "analogy": "Seperti black box pesawat yang merekam semua aktivitas, log mencatat setiap kejadian untuk investigasi jika terjadi masalah.",
+    "focusArea": "Logging"
   },
   {
     "id": "8.16",
@@ -1424,8 +1498,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya CCTV yang monitor area 24/7, pemantauan aktivitas mendeteksi keanehan sebelum jadi insiden besar."
+    "implementationTips": "Implementasi monitoring untuk deteksi anomali: unusual login time, volume data access tinggi, privilege escalation. Setup alert untuk suspicious activity. Review alert daily oleh SOC team.",
+    "analogy": "Layaknya CCTV yang monitor area 24/7, pemantauan aktivitas mendeteksi keanehan sebelum jadi insiden besar.",
+    "focusArea": "Activity Monitoring"
   },
   {
     "id": "8.17",
@@ -1443,8 +1518,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti semua jam di bandara harus sinkron untuk jadwal penerbangan, waktu sistem harus konsisten untuk analisis yang akurat."
+    "implementationTips": "Setup NTP server internal yang sync ke sumber waktu terpercaya. Pastikan semua sistem sync ke NTP server yang sama. Monitor clock drift dan alert jika ada deviasi signifikan.",
+    "analogy": "Seperti semua jam di bandara harus sinkron untuk jadwal penerbangan, waktu sistem harus konsisten untuk analisis yang akurat.",
+    "focusArea": "Clock Synchronization"
   },
   {
     "id": "8.18",
@@ -1462,8 +1538,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya kunci inggris yang bisa membongkar apa saja tapi hanya untuk teknisi resmi, program utilitas harus dikontrol ketat."
+    "implementationTips": "Inventory semua utility program yang bisa bypass control. Batasi akses utility ke admin saja. Log penggunaan utility. Review necessity utility secara berkala.",
+    "analogy": "Layaknya kunci inggris yang bisa membongkar apa saja tapi hanya untuk teknisi resmi, program utilitas harus dikontrol ketat.",
+    "focusArea": "Utility Program Control"
   },
   {
     "id": "8.19",
@@ -1481,8 +1558,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti renovasi rumah yang tidak boleh mengganggu penghuni, instalasi software harus dilakukan tanpa ganggu operasional."
+    "implementationTips": "Implementasi whitelisting untuk software yang boleh diinstall. Require approval untuk software baru. Test software di staging sebelum production install. Block unauthorized software installation.",
+    "analogy": "Seperti renovasi rumah yang tidak boleh mengganggu penghuni, instalasi software harus dilakukan tanpa ganggu operasional.",
+    "focusArea": "Software Installation Control"
   },
   {
     "id": "8.20",
@@ -1500,8 +1578,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya jalan tol yang punya gerbang, rambu, dan patrol keamanan, jaringan butuh perlindungan berlapis."
+    "implementationTips": "Segmentasi network berdasarkan function dan sensitivity. Deploy firewall di perimeter dan internal. Monitor network traffic untuk anomaly. Update firewall rule secara berkala.",
+    "analogy": "Layaknya jalan tol yang punya gerbang, rambu, dan patrol keamanan, jaringan butuh perlindungan berlapis.",
+    "focusArea": "Network Security"
   },
   {
     "id": "8.21",
@@ -1519,8 +1598,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti standar pelayanan bank yang harus aman dan cepat, layanan jaringan juga butuh SLA keamanan yang jelas."
+    "implementationTips": "Define SLA untuk setiap network service: availability, latency, security. Encrypt network traffic dengan TLS. Monitor network performance. Review security control network service annually.",
+    "analogy": "Seperti standar pelayanan bank yang harus aman dan cepat, layanan jaringan juga butuh SLA keamanan yang jelas.",
+    "focusArea": "Network Service Security"
   },
   {
     "id": "8.22",
@@ -1538,8 +1618,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya sekat kapal yang mencegah kebocoran menyebar ke seluruh kapal, segmentasi jaringan membatasi penyebaran serangan."
+    "implementationTips": "Segregasi network: production, staging, development, guest. Implementasi VLAN dan firewall rule antar segment. Batasi cross-segment communication ke yang necessary saja.",
+    "analogy": "Layaknya sekat kapal yang mencegah kebocoran menyebar ke seluruh kapal, segmentasi jaringan membatasi penyebaran serangan.",
+    "focusArea": "Network Segregation"
   },
   {
     "id": "8.23",
@@ -1557,8 +1638,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti saringan air yang membuang kotoran, web filter menyaring situs berbahaya sebelum diakses karyawan."
+    "implementationTips": "Deploy web proxy dengan filtering capability. Block kategori situs berbahaya: malware, phishing, gambling. Log web traffic untuk monitoring. Update web filter policy monthly.",
+    "analogy": "Seperti saringan air yang membuang kotoran, web filter menyaring situs berbahaya sebelum diakses karyawan.",
+    "focusArea": "Web Filtering"
   },
   {
     "id": "8.24",
@@ -1576,8 +1658,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya insinyur yang menghitung keamanan bangunan dari desain, keamanan aplikasi harus dimulai dari awal pengembangan."
+    "implementationTips": "Integrasikan security di SDLC: threat modeling, secure coding guideline, code review, penetration testing. Gunakan SAST dan DAST tool. Fix critical vulnerability sebelum release.",
+    "analogy": "Layaknya insinyur yang menghitung keamanan bangunan dari desain, keamanan aplikasi harus dimulai dari awal pengembangan.",
+    "focusArea": "Application Security"
   },
   {
     "id": "8.25",
@@ -1595,8 +1678,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti arsitek yang mendesain bangunan tahan gempa, engineer sistem harus membangun dengan prinsip keamanan."
+    "implementationTips": "Apply secure design principle: defense in depth, least privilege, fail safe. Document security architecture. Review design sebelum implementasi. Use security pattern dan framework.",
+    "analogy": "Seperti arsitek yang mendesain bangunan tahan gempa, engineer sistem harus membangun dengan prinsip keamanan.",
+    "focusArea": "Secure Engineering"
   },
   {
     "id": "8.26",
@@ -1614,8 +1698,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya spesifikasi mobil yang berbeda untuk city car vs SUV, kebutuhan keamanan aplikasi berbeda berdasarkan sensitivitas data."
+    "implementationTips": "Define security requirement untuk setiap aplikasi berdasarkan data yang diproses. Include requirement: authentication, authorization, encryption, logging. Review requirement sebelum development mulai.",
+    "analogy": "Layaknya spesifikasi mobil yang berbeda untuk city car vs SUV, kebutuhan keamanan aplikasi berbeda berdasarkan sensitivitas data.",
+    "focusArea": "Application Security Requirements"
   },
   {
     "id": "8.27",
@@ -1633,8 +1718,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti tukang las yang mengikuti standar keamanan untuk mencegah kebocoran, developer harus coding aman untuk mencegah bug."
+    "implementationTips": "Training developer secure coding: OWASP Top 10, input validation, output encoding. Gunakan secure coding guideline. Implementasi code review dengan security checklist.",
+    "analogy": "Seperti tukang las yang mengikuti standar keamanan untuk mencegah kebocoran, developer harus coding aman untuk mencegah bug.",
+    "focusArea": "Secure Coding"
   },
   {
     "id": "8.28",
@@ -1652,8 +1738,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya uji crash test mobil sebelum dijual, aplikasi harus diuji keamanannya sebelum dirilis."
+    "implementationTips": "Integrasikan automated security testing di CI/CD pipeline: SAST, SCA, secret scanning. Require security gate sebelum deploy. Track vulnerability metrics.",
+    "analogy": "Layaknya uji crash test mobil sebelum dijual, aplikasi harus diuji keamanannya sebelum dirilis.",
+    "focusArea": "Security Testing in Development"
   },
   {
     "id": "8.29",
@@ -1671,8 +1758,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti ujian akhir yang menguji pemahaman siswa, testing sistem memverifikasi apakah kontrol keamanan sudah efektif."
+    "implementationTips": "Lakukan penetration testing annually atau setelah major change. Test semua aplikasi critical. Retest setelah remediation. Document finding dan track remediation.",
+    "analogy": "Seperti ujian akhir yang menguji pemahaman siswa, testing sistem memverifikasi apakah kontrol keamanan sudah efektif.",
+    "focusArea": "System Security Testing"
   },
   {
     "id": "8.30",
@@ -1690,8 +1778,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya Anda tetap mengawasi kontraktor yang membangun rumah, outsourcing development tetap butuh pengawasan keamanan."
+    "implementationTips": "Sertakan security requirement di kontrak outsourcing. Require secure development process dari vendor. Request evidence security testing. Audit vendor development process secara berkala.",
+    "analogy": "Layaknya Anda tetap mengawasi kontraktor yang membangun rumah, outsourcing development tetap butuh pengawasan keamanan.",
+    "focusArea": "Outsourced Development"
   },
   {
     "id": "8.31",
@@ -1709,8 +1798,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti dapur restoran yang terpisah dari area makan, environment development dan production harus dipisahkan."
+    "implementationTips": "Separate environment: development, testing, UAT, production. Batasi akses antar environment. Gunakan different credential untuk setiap environment. Promote code melalui pipeline, tidak langsung ke production.",
+    "analogy": "Seperti dapur restoran yang terpisah dari area makan, environment development dan production harus dipisahkan.",
+    "focusArea": "Environment Separation"
   },
   {
     "id": "8.32",
@@ -1728,8 +1818,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya proses persetujuan renovasi di apartemen yang harus melalui manajemen, perubahan sistem butuh approval terkontrol."
+    "implementationTips": "Implementasi change management process: request, assess, approve, implement, review. Document semua perubahan. Test change di staging sebelum production. Schedule change di maintenance window.",
+    "analogy": "Layaknya proses persetujuan renovasi di apartemen yang harus melalui manajemen, perubahan sistem butuh approval terkontrol.",
+    "focusArea": "Change Management"
   },
   {
     "id": "8.33",
@@ -1747,8 +1838,9 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti manajer proyek yang mengawasi timeline dan budget, manajemen informasi proyek mengawasi aspek keamanan."
+    "implementationTips": "Track project artifact dengan version control. Protect project document dengan access control. Share project information berdasarkan need-to-know. Backup project data secara berkala.",
+    "analogy": "Seperti manajer proyek yang mengawasi timeline dan budget, manajemen informasi proyek mengawasi aspek keamanan.",
+    "focusArea": "Project Information Management"
   },
   {
     "id": "8.34",
@@ -1766,7 +1858,8 @@
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Layaknya sampel makanan yang diuji di lab tanpa mencemari stok utama, audit harus dilakukan tanpa risiko ke sistem produksi."
+    "implementationTips": "Gunakan test data atau anonymized data untuk audit. Protect production data saat audit. Monitor aktivitas auditor. Batasi akses auditor ke yang necessary saja.",
+    "analogy": "Layaknya sampel makanan yang diuji di lab tanpa mencemari stok utama, audit harus dilakukan tanpa risiko ke sistem produksi.",
+    "focusArea": "Audit Testing Protection"
   }
 ]
