@@ -1,21 +1,22 @@
 [
   {
     "id": "5.1",
-    "name": "Kebijakan untuk keamanan informasi",
+    "name": "Kebijakan keamanan informasi",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk kebijakan untuk keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kebijakan keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel dan pihak berkepentingan terkait.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kebijakan untuk keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya."
   },
   {
     "id": "5.2",
@@ -26,14 +27,15 @@
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk peran dan tanggung jawab keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Peran dan tanggung jawab untuk keamanan informasi harus didefinisikan dan dialokasikan sesuai dengan kebutuhan organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk peran dan tanggung jawab keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya tim sepak bola yang punya posisi spesifik—kiper, bek, penyerang—setiap orang di organisasi harus tahu peran mereka dalam menjaga keamanan informasi."
   },
   {
     "id": "5.3",
@@ -44,14 +46,15 @@
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk pemisahan tugas harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Tugas dan area tanggung jawab yang saling bertentangan harus dipisahkan untuk mengurangi risiko penyalahgunaan atau modifikasi tidak sah terhadap aset organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan tugas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti dalam restoran, koki yang memasak tidak sama dengan kasir yang menangani uang—pemisahan ini mencegah kecurangan dan memastikan kualitas."
   },
   {
     "id": "5.4",
@@ -62,50 +65,53 @@
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk tanggung jawab manajemen harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Manajemen harus menuntut semua personel untuk menerapkan keamanan informasi sesuai dengan kerangka kerja keamanan informasi yang telah ditetapkan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tanggung jawab manajemen! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti pelatih tim yang tidak hanya memberi strategi tapi juga memastikan setiap pemain menjalankannya, manajemen harus aktif mendorong penerapan keamanan informasi."
   },
   {
     "id": "5.5",
-    "name": "Kontak dengan pihak berwenang",
+    "name": "Kontak dengan otoritas yang berwenang",
     "type": "Koreksi",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk kontak dengan pihak berwenang harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus menjalin dan memelihara kontak dengan otoritas yang berwenang sesuai dengan ketentuan hukum dan peraturan yang berlaku.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontak dengan pihak berwenang! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti memiliki nomor telepon darurat yang siap dihubungi saat terjadi masalah, kontak dengan otoritas membantu organisasi merespons insiden dengan tepat."
   },
   {
     "id": "5.6",
-    "name": "Kontak dengan kelompok kepentingan khusus",
+    "name": "Kontak dengan grup kepentingan khusus",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk kontak dengan kelompok kepentingan khusus harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus menjalin dan memelihara kontak dengan grup kepentingan khusus atau forum profesional lainnya untuk mendapatkan informasi tentang perkembangan keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontak dengan kelompok kepentingan khusus! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya bergabung dengan komunitas dokter untuk update metode pengobatan terbaru, bergabung dengan forum keamanan membantu organisasi tetap update ancaman terkini."
   },
   {
     "id": "5.7",
@@ -116,14 +122,15 @@
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk intelijen ancaman harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi terkait ancaman keamanan informasi harus dikumpulkan dan dianalisis untuk menghasilkan intelijen ancaman yang dapat ditindaklanjuti.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk intelijen ancaman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti badan meteorologi yang memonitor cuaca untuk memprediksi badai, intelijen ancaman membantu organisasi mengantisipasi serangan sebelum terjadi."
   },
   {
     "id": "5.8",
@@ -134,14 +141,15 @@
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan informasi dalam manajemen proyek harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Aspek keamanan informasi harus diintegrasikan ke dalam manajemen proyek terlepas dari jenis proyek yang sedang dilaksanakan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi dalam manajemen proyek! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sabuk pengaman yang harus dipakai di mobil manapun, keamanan informasi harus menjadi bagian dari setiap proyek, apapun jenisnya."
   },
   {
     "id": "5.9",
@@ -152,7 +160,7 @@
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk inventarisasi informasi dan aset terkait lainnya harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Aset yang terkait dengan proses informasi harus diidentifikasi, didefinisikan dengan jelas, dan inventarisasinya harus dipelihara.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk inventarisasi informasi dan aset terkait lainnya! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Spreadsheet inventaris aset atau CMDB",
@@ -162,7 +170,8 @@
       "Output alat manajemen aset perangkat lunak",
       "Inventaris aset Cloud"
     ],
-    "implementationTips": "Mulai dengan spreadsheet sederhana. Beri kolom: Nama Aset, Tipe, Klasifikasi, Pemilik, Lokasi, Nilai Bisnis, Tanggal Tinjauan. Gunakan alat otomatis jika memungkinkan. Lakukan peninjauan triwulanan dan fokuslah pada aset paling kritis di tahap awal."
+    "implementationTips": "Mulai dengan spreadsheet sederhana. Beri kolom: Nama Aset, Tipe, Klasifikasi, Pemilik, Lokasi, Nilai Bisnis, Tanggal Tinjauan. Gunakan alat otomatis jika memungkinkan. Lakukan peninjauan triwulanan dan fokuslah pada aset paling kritis di tahap awal.",
+    "analogy": "Seperti daftar isi dalam buku yang membantu Anda menemukan halaman tertentu, inventaris aset membantu organisasi tahu apa yang harus dilindungi dan di mana lokasinya."
   },
   {
     "id": "5.10",
@@ -173,14 +182,15 @@
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk penggunaan aset yang dapat diterima harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Aturan untuk penggunaan aset yang dapat diterima dan prosedur penggunaan informasi dan aset yang terkait dengan proses informasi harus diidentifikasi, didokumentasikan, dan diimplementasikan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan aset yang dapat diterima! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti aturan pemakaian kendaraan perusahaan—boleh untuk dinas saja, bukan liburan pribadi—aset IT juga perlu batasan penggunaan yang jelas."
   },
   {
     "id": "5.11",
@@ -191,14 +201,15 @@
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk pengembalian aset harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Semua aset yang dipinjamkan kepada personel dan pihak eksternal harus dikembalikan saat mereka keluar dari organisasi atau ketika sudah tidak dibutuhkan lagi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengembalian aset! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti mengembalikan kunci apartemen saat check-out, semua aset organisasi harus dikembalikan saat karyawan keluar atau selesai bertugas."
   },
   {
     "id": "5.12",
@@ -209,14 +220,15 @@
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk klasifikasi informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi harus diklasifikasikan berdasarkan persyaratan keamanan informasi, kebutuhan berbagi informasi, dan pembatasan akses.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk klasifikasi informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sistem triase di rumah sakit yang memprioritaskan pasien berdasarkan tingkat kegawatan, klasifikasi informasi membantu memprioritaskan perlindungan data."
   },
   {
     "id": "5.13",
@@ -227,14 +239,15 @@
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk pelabelan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses pelabelan yang sesuai harus diterapkan untuk mengidentifikasi klasifikasi informasi berdasarkan klasifikasi yang telah ditetapkan oleh organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pelabelan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya label 'mudah pecah' pada paket yang mengingatkan kurir untuk berhati-hati, label klasifikasi memberi tahu karyawan cara menangani informasi."
   },
   {
     "id": "5.14",
@@ -245,32 +258,34 @@
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk transfer informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi harus dilindungi saat ditransfer, diterima, atau dikomunikasikan dalam berbagai bentuk sesuai dengan kebijakan klasifikasi informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk transfer informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti pengiriman uang dengan brankas anti-maling, transfer informasi butuh perlindungan khusus agar tidak dicuri di tengah jalan."
   },
   {
     "id": "5.15",
-    "name": "Kontrol akses",
+    "name": "Manajemen akses",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk kontrol akses harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Aturan untuk mengontrol akses fisik dan logis ke informasi dan aset lainnya harus ditetapkan berdasarkan kebutuhan bisnis dan keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontrol akses! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sistem kartu akses di hotel—tamu hanya bisa masuk kamar mereka sendiri, bukan kamar orang lain—akses harus berdasarkan kebutuhan."
   },
   {
     "id": "5.16",
@@ -281,14 +296,15 @@
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk manajemen identitas harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Siklus hidup lengkap identitas digital untuk personel, pengguna eksternal, dan perangkat harus dikelola termasuk proses pendaftaran, penghentian, dan perubahan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen identitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya pembuatan KTP baru, perpanjangan, dan pencabutan saat pindah kota, identitas digital juga perlu dikelola dari awal sampai akhir."
   },
   {
     "id": "5.17",
@@ -299,14 +315,15 @@
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk informasi autentikasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi autentikasi untuk personel dan perangkat harus dialokasikan, dikelola, dan didistribusikan sesuai dengan kebijakan akses organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk informasi autentikasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti password ATM yang harus dirahasiakan dan diganti berkala, informasi autentikasi perlu dikelola dengan ketat untuk mencegah penyalahgunaan."
   },
   {
     "id": "5.18",
@@ -317,284 +334,300 @@
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk hak akses harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Hak akses ke informasi dan aset lainnya harus disediakan, ditinjau, dimodifikasi, dan dihapus sesuai dengan kebijakan manajemen akses organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak akses! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti kunci yang harus diambil kembali saat karyawan resign, hak akses juga harus segera dicabut agar tidak disalahgunakan."
   },
   {
     "id": "5.19",
-    "name": "Keamanan informasi dalam hubungan pemasok",
+    "name": "Keamanan informasi dalam hubungan dengan pemasok",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan informasi dalam hubungan pemasok harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses dan prosedur harus ditetapkan dan diimplementasikan untuk mengelola risiko keamanan informasi yang terkait dengan penggunaan produk atau layanan dari pemasok.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi dalam hubungan pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti Anda mengecek reputasi kontraktor sebelum mempekerjakan mereka, risiko keamanan pemasok harus dievaluasi sebelum bekerja sama."
   },
   {
     "id": "5.20",
-    "name": "Penanganan keamanan informasi dalam perjanjian pemasok",
+    "name": "Pengelolaan keamanan informasi untuk layanan cloud",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk penanganan keamanan informasi dalam perjanjian pemasok harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses pengelolaan keamanan informasi harus ditetapkan untuk penggunaan layanan cloud sesuai dengan persyaratan keamanan organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penanganan keamanan informasi dalam perjanjian pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti menyewa brankas di bank—Anda harus percaya bank menjaganya, tapi juga pastikan apa yang Anda simpan memang boleh di sana."
   },
   {
     "id": "5.21",
-    "name": "Mengelola keamanan informasi dalam rantai pasokan TIK",
+    "name": "Keamanan informasi dalam rantai pasokan TI",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk mengelola keamanan informasi dalam rantai pasokan tik harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses dan prosedur harus ditetapkan untuk mengelola risiko keamanan informasi dalam rantai pasokan teknologi informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk mengelola keamanan informasi dalam rantai pasokan tik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya restoran yang harus memastikan supplier makanannya aman, organisasi harus memastikan rantai pasokan TI tidak menjadi titik lemah keamanan."
   },
   {
     "id": "5.22",
-    "name": "Pemantauan, tinjauan, dan manajemen perubahan layanan pemasok",
+    "name": "Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi",
     "type": "Deteksi",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk pemantauan, tinjauan, dan manajemen perubahan layanan pemasok harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kepatuhan terhadap kebijakan keamanan informasi, aturan, prosedur, dan standar organisasi harus ditinjau secara berkala.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan, tinjauan, dan manajemen perubahan layanan pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti uji kelayakan kendaraan tahunan, tinjauan kepatuhan berkala memastikan keamanan organisasi masih berjalan di jalur yang benar."
   },
   {
     "id": "5.23",
-    "name": "Keamanan informasi untuk penggunaan layanan cloud",
+    "name": "Hubungan dengan komunitas informasi dan keamanan",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan informasi untuk penggunaan layanan cloud harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus berpartisipasi dalam komunitas informasi dan keamanan untuk berbagi pengetahuan dan informasi tentang ancaman keamanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi untuk penggunaan layanan cloud! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sistem RT yang saling berbagi info keamanan lingkungan, komunitas keamanan membantu organisasi saling berbagi info ancaman."
   },
   {
     "id": "5.24",
-    "name": "Perencanaan dan persiapan manajemen insiden keamanan informasi",
+    "name": "Perencanaan dan persiapan keamanan informasi kontinuitas bisnis",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk perencanaan dan persiapan manajemen insiden keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus merencanakan dan mempersiapkan keamanan informasi untuk mendukung kontinuitas bisnis dalam situasi krisis.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perencanaan dan persiapan manajemen insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti演习 kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis."
   },
   {
     "id": "5.25",
-    "name": "Penilaian dan keputusan tentang peristiwa keamanan informasi",
+    "name": "Penilaian dan keputusan kepatuhan awal",
     "type": "Deteksi",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk penilaian dan keputusan tentang peristiwa keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Penilaian kepatuhan harus dilakukan terhadap semua persyaratan hukum, peraturan, dan kontraktual yang relevan dengan keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penilaian dan keputusan tentang peristiwa keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya cek kesehatan sebelum mulai gym, penilaian awal kepatuhan memastikan organisasi siap memenuhi semua kewajiban keamanan."
   },
   {
     "id": "5.26",
-    "name": "Respons terhadap insiden keamanan informasi",
+    "name": "Persyaratan hukum, peraturan, dan kontraktual",
     "type": "Koreksi",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk respons terhadap insiden keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Persyaratan hukum, peraturan, dan kontraktual yang relevan dengan keamanan informasi harus diidentifikasi, didokumentasikan, dan dipelihara.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk respons terhadap insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti daftar aturan lalu lintas yang harus dipatuhi pengemudi, persyaratan hukum keamanan harus diketahui dan dipatuhi organisasi."
   },
   {
     "id": "5.27",
-    "name": "Belajar dari insiden keamanan informasi",
+    "name": "Kekekalan dan disposisi rekaman informasi",
     "type": "Koreksi",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk belajar dari insiden keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Rekaman informasi harus dilindungi dari penghapusan, kerusakan, atau modifikasi yang tidak sah sesuai dengan persyaratan hukum dan bisnis.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk belajar dari insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti arsip penting yang disimpan dalam lemari tahan api, rekaman informasi harus dilindungi agar tidak hilang atau diubah sembarangan."
   },
   {
     "id": "5.28",
-    "name": "Pengumpulan bukti",
+    "name": "Penjaminan privasi dan perlindungan PII",
     "type": "Koreksi",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk pengumpulan bukti harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus mengidentifikasi dan memenuhi persyaratan privasi dan perlindungan informasi pribadi yang dapat diidentifikasi (PII).",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengumpulan bukti! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya dokter yang menjaga rahasia pasien, organisasi wajib melindungi data pribadi yang dipercayakan kepadanya."
   },
   {
     "id": "5.29",
-    "name": "Keamanan informasi selama gangguan",
+    "name": "Penilaian independen keamanan informasi",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan informasi selama gangguan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Keamanan informasi organisasi harus ditinjau secara independen pada interval yang telah direncanakan atau ketika terjadi perubahan signifikan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi selama gangguan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti audit keuangan oleh akuntan eksternal, penilaian independen memberi pandangan objektif tentang efektivitas keamanan."
   },
   {
     "id": "5.30",
-    "name": "Kesiapan TIK untuk kelangsungan bisnis",
+    "name": "Persyaratan keamanan informasi dalam proses pengembangan ICT",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk kesiapan tik untuk kelangsungan bisnis harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Persyaratan keamanan informasi harus diidentifikasi dan diimplementasikan dalam proses pengembangan teknologi informasi dan komunikasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kesiapan tik untuk kelangsungan bisnis! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti fondasi bangunan yang harus kuat sejak awal, keamanan harus dibangun dari awal dalam pengembangan sistem, bukan ditambahkan belakangan."
   },
   {
     "id": "5.31",
-    "name": "Persyaratan hukum, statutori, regulasi, dan kontrak",
+    "name": "Pengembangan dan pengendalian legal",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk persyaratan hukum, statutori, regulasi, dan kontrak harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Pengembangan dan pengendalian legal harus diterapkan untuk memastikan kepatuhan terhadap persyaratan hukum dan peraturan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk persyaratan hukum, statutori, regulasi, dan kontrak! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya izin mendirikan bangunan yang harus dipenuhi sebelum membangun, aspek legal harus dikendalikan sebelum mengimplementasikan sistem."
   },
   {
     "id": "5.32",
-    "name": "Hak kekayaan intelektual",
+    "name": "Pengelolaan hak kekayaan intelektual",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk hak kekayaan intelektual harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Prosedur harus ditetapkan untuk mengelola hak kekayaan intelektual dan memastikan kepatuhan terhadap lisensi perangkat lunak.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak kekayaan intelektual! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti menghargai hak cipta musisi dengan membeli lagu asli, organisasi harus menghormati lisensi perangkat lunak yang digunakan."
   },
   {
     "id": "5.33",
-    "name": "Perlindungan catatan",
+    "name": "Perlindungan rekaman",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk perlindungan catatan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Rekaman harus dilindungi dari akses tidak sah, modifikasi, atau penghapusan sesuai dengan persyaratan hukum dan bisnis.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan catatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti rekaman CCTV yang disimpan di ruang terkunci, rekaman sistem harus dilindungi agar tidak dimanipulasi."
   },
   {
     "id": "5.34",
@@ -605,86 +638,91 @@
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk privasi dan perlindungan pii harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Privasi dan informasi pribadi yang dapat diidentifikasi harus dilindungi sesuai dengan persyaratan hukum dan peraturan yang berlaku.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk privasi dan perlindungan pii! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya surat pribadi yang tidak boleh dibaca orang lain, data pribadi juga harus dijaga kerahasiaannya."
   },
   {
     "id": "5.35",
-    "name": "Tinjauan independen atas keamanan informasi",
+    "name": "Tinjauan independen keamanan informasi",
     "type": "Deteksi",
     "domain": "Organisasional",
     "difficulty": "Sedang",
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk tinjauan independen atas keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Pendekatan keamanan informasi organisasi harus ditinjau secara independen pada interval yang telah direncanakan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tinjauan independen atas keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti second opinion dari dokter spesialis, tinjauan independen memberi perspektif baru tentang efektivitas keamanan."
   },
   {
     "id": "5.36",
-    "name": "Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi",
+    "name": "Kepatuhan terhadap kebijakan dan standar keamanan informasi",
     "type": "Deteksi",
     "domain": "Organisasional",
     "difficulty": "Tinggi",
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kepatuhan terhadap kebijakan keamanan informasi, aturan, prosedur, dan standar harus ditinjau secara berkala.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti cek rutin kendaraan yang memastikan semua sistem berfungsi, tinjauan kepatuhan memastikan keamanan tetap efektif."
   },
   {
     "id": "5.37",
-    "name": "Prosedur operasi yang didokumentasikan",
+    "name": "Prosedur operasi dokumen",
     "type": "Pencegahan",
     "domain": "Organisasional",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk prosedur operasi yang didokumentasikan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Prosedur dokumentasi dan pengendalian harus ditetapkan untuk mengelola dokumen operasional keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk prosedur operasi yang didokumentasikan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti buku manual pesawat yang harus selalu update dan terkontrol, dokumentasi keamanan harus dikelola dengan baik."
   },
   {
     "id": "6.1",
-    "name": "Penyaringan latar belakang (Screening)",
+    "name": "Penyaringan latar belakang",
     "type": "Pencegahan",
     "domain": "Orang",
     "difficulty": "Sedang",
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk penyaringan latar belakang (screening) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Verifikasi latar belakang harus dilakukan untuk semua kandidat personel sesuai dengan hukum, peraturan, dan etika yang berlaku serta berdasarkan risiko bisnis dan klasifikasi informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penyaringan latar belakang (screening)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya pengecekan referensi sebelum mempekerjakan pengasuh anak, penyaringan latar belakang memastikan orang yang kita pekerjakan dapat dipercaya."
   },
   {
     "id": "6.2",
@@ -695,32 +733,34 @@
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk syarat dan ketentuan pekerjaan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Syarat dan ketentuan pekerjaan harus menyatakan tanggung jawab personel dan organisasi untuk keamanan informasi sejak awal pekerjaan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk syarat dan ketentuan pekerjaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti kontrak sewa yang menyebutkan aturan penggunaan properti, kontrak kerja harus menyebutkan kewajiban keamanan informasi."
   },
   {
     "id": "6.3",
-    "name": "Kesadaran, pendidikan, dan pelatihan keamanan informasi",
+    "name": "Kesadaran keamanan informasi, pelatihan, dan pendidikan",
     "type": "Pencegahan",
     "domain": "Orang",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk kesadaran, pendidikan, dan pelatihan keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Personel dan pihak berkepentingan terkait harus menerima kesadaran keamanan informasi, pelatihan, dan pendidikan yang sesuai dengan peran dan tanggung jawab mereka.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kesadaran, pendidikan, dan pelatihan keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti pelatihan pemadaman api yang mempersiapkan karyawan menghadapi kebakaran, pelatihan keamanan mempersiapkan mereka menghadapi ancaman siber."
   },
   {
     "id": "6.4",
@@ -731,14 +771,15 @@
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk proses disipliner harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses disipliner harus ada untuk mengambil tindakan terhadap personel dan pihak berkepentingan lainnya yang telah melakukan pelanggaran keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk proses disipliner! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya tilang untuk pelanggar lalu lintas, proses disipliner memberi konsekuensi bagi yang melanggar aturan keamanan."
   },
   {
     "id": "6.5",
@@ -749,14 +790,15 @@
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk tanggung jawab setelah penghentian atau perubahan pekerjaan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Tanggung jawab dan kewajiban keamanan informasi yang berlaku setelah penghentian atau perubahan pekerjaan harus didefinisikan, ditegakkan, dan dikomunikasikan kepada personel.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tanggung jawab setelah penghentian atau perubahan pekerjaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti kewajiban menjaga rahasia perusahaan meskipun sudah resign, tanggung jawab keamanan tidak berakhir saat karyawan keluar."
   },
   {
     "id": "6.6",
@@ -767,50 +809,53 @@
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk perjanjian kerahasiaan atau non-disclosure harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Persyaratan kerahasiaan atau non-disclosure yang mencerminkan kebutuhan organisasi untuk perlindungan informasi harus diidentifikasi, didokumentasikan, dan ditinjau secara berkala.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perjanjian kerahasiaan atau non-disclosure! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti janji untuk tidak membocorkan resep rahasia restoran, NDA melindungi informasi sensitif dari kebocoran."
   },
   {
     "id": "6.7",
-    "name": "Bekerja jarak jauh (Remote working)",
+    "name": "Kerja jarak jauh",
     "type": "Pencegahan",
     "domain": "Orang",
     "difficulty": "Sedang",
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk bekerja jarak jauh (remote working) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kebijakan dan prosedur harus ditetapkan untuk mendukung kerja jarak jauh dan melindungi aset organisasi di luar lokasi fisik organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk bekerja jarak jauh (remote working)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya membawa brankas mini saat kerja di cafe, kerja remote membutuhkan perlindungan ekstra untuk data perusahaan."
   },
   {
     "id": "6.8",
-    "name": "Pelaporan peristiwa keamanan informasi",
+    "name": "Pelaporan kejadian keamanan informasi",
     "type": "Deteksi",
     "domain": "Orang",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk pelaporan peristiwa keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Organisasi harus menyediakan mekanisme bagi personel untuk melaporkan kejadian atau kelemahan keamanan informasi yang diamati melalui saluran yang tepat.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pelaporan peristiwa keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti nomor darurat 112 yang mudah dihubungi, mekanisme pelaporan keamanan harus mudah diakses oleh semua karyawan."
   },
   {
     "id": "7.1",
@@ -821,32 +866,34 @@
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk batas keamanan fisik harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Batas keamanan fisik harus didefinisikan dan digunakan untuk melindungi area yang berisi informasi dan aset lainnya dari ancaman fisik, lingkungan, dan bahaya lainnya.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk batas keamanan fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti pagar pabrik yang membatasi siapa yang boleh masuk, batas fisik melindungi aset dari akses yang tidak berwenang."
   },
   {
     "id": "7.2",
-    "name": "Masuk secara fisik",
+    "name": "Entri fisik",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk masuk secara fisik harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Area keamanan harus dilindungi oleh kontrol akses yang sesuai dan titik entri fisik harus diamankan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk masuk secara fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya security di gedung yang mengecek ID sebelum mengizinkan masuk, kontrol akses fisik menyaring siapa yang boleh masuk."
   },
   {
     "id": "7.3",
@@ -857,14 +904,15 @@
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk mengamankan kantor, ruangan, dan fasilitas harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Keamanan fisik untuk kantor, ruangan, dan fasilitas harus dirancang dan diimplementasikan sesuai dengan risiko keamanan yang relevan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk mengamankan kantor, ruangan, dan fasilitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti rumah yang punya gembok, alarm, dan pagar, kantor juga butuh lapisan keamanan yang sesuai ancaman."
   },
   {
     "id": "7.4",
@@ -875,32 +923,34 @@
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk pemantauan keamanan fisik harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Premis organisasi harus dipantau secara terus-menerus untuk mendeteksi akses fisik yang tidak sah dan aktivitas yang mencurigakan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan keamanan fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya satpam yang patroli keliling area, pemantauan kontinu mendeteksi ancaman sebelum mereka bertindak."
   },
   {
     "id": "7.5",
-    "name": "Melindungi dari ancaman eksternal dan lingkungan",
+    "name": "Perlindungan terhadap ancaman fisik dan lingkungan",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Rendah",
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk melindungi dari ancaman eksternal dan lingkungan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Perlindungan harus dirancang dan diimplementasikan terhadap ancaman fisik dan lingkungan seperti bencana alam, sabotase, dan serangan yang disengaja.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk melindungi dari ancaman eksternal dan lingkungan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti bangunan tahan gempa di zona rawan, fasilitas harus dilindungi dari ancaman lingkungan dan fisik."
   },
   {
     "id": "7.6",
@@ -911,50 +961,53 @@
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk bekerja di area aman harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Personel dan kontraktor harus mematuhi persyaratan keamanan saat bekerja di area aman organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk bekerja di area aman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya aturan steril di ruang operasi rumah sakit, area aman punya persyaratan khusus yang harus dipatuhi semua orang."
   },
   {
     "id": "7.7",
-    "name": "Meja bersih dan layar bersih",
+    "name": "Dukungan utilitas",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk meja bersih dan layar bersih harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Utilitas pendukung seperti listrik, telekomunikasi, air, dan gas harus tersedia dan dilindungi sesuai dengan persyaratan keamanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk meja bersih dan layar bersih! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti generator cadangan yang siap saat listrik PLN mati, utilitas harus punya backup untuk menjaga operasional."
   },
   {
     "id": "7.8",
-    "name": "Pemasangan dan perlindungan peralatan",
+    "name": "Pemeliharaan peralatan",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Rendah",
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk pemasangan dan perlindungan peralatan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Peralatan harus dipelihara secara berkala untuk memastikan ketersediaan, integritas, dan keamanan operasional yang berkelanjutan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemasangan dan perlindungan peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya servis mobil berkala yang mencegah mogok di jalan, pemeliharaan peralatan mencegah kegagalan sistem."
   },
   {
     "id": "7.9",
@@ -965,140 +1018,148 @@
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan aset di luar lokasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Aset yang berada di luar lokasi organisasi harus dilindungi dengan kontrol keamanan yang sesuai.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan aset di luar lokasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti asuransi dan GPS tracker untuk laptop yang dibawa travel, aset di luar kantor tetap butuh perlindungan."
   },
   {
     "id": "7.10",
-    "name": "Media penyimpanan",
+    "name": "Media penyimpanan yang dapat dihapus dan media transmisi",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Tinggi",
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk media penyimpanan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Media yang dapat dihapus dan media transmisi harus diamankan dari akses tidak sah, penyalahgunaan, atau pencurian.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk media penyimpanan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan sebelum dibuang, media penyimpanan perlu diamankan atau dimusnahkan dengan benar."
   },
   {
     "id": "7.11",
-    "name": "Utilitas pendukung",
+    "name": "Dukungan untuk rencana darurat",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk utilitas pendukung harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Rencana darurat harus didukung oleh fasilitas dan utilitas yang memadai untuk memastikan kelangsungan operasional.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk utilitas pendukung! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti jalur evakuasi dan assembly point yang siap pakai, rencana darurat butuh infrastruktur yang mendukung."
   },
   {
     "id": "7.12",
-    "name": "Keamanan kabel",
+    "name": "Kabel dan daya",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Sedang",
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan kabel harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kabel untuk daya dan telekomunikasi harus diamankan dari gangguan, penyadapan, atau kerusakan yang disengaja atau tidak sengaja.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan kabel! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya kabel listrik yang ditanam dalam tembok agar tidak digigit tikus, kabel data juga harus dilindungi."
   },
   {
     "id": "7.13",
-    "name": "Pemeliharaan peralatan",
+    "name": "Pemeliharaan dan inspeksi fasilitas",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Tinggi",
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk pemeliharaan peralatan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Fasilitas harus dipelihara dan diperiksa secara berkala untuk memastikan integritas dan keamanan fisik yang berkelanjutan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemeliharaan peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti inspeksi gedung tahunan yang memastikan struktur masih kuat, pemeriksaan fasilitas memastikan keamanan tetap terjaga."
   },
   {
     "id": "7.14",
-    "name": "Pembuangan aman atau penggunaan kembali peralatan",
+    "name": "Keamanan fisik saat penghentian atau relokasi",
     "type": "Pencegahan",
     "domain": "Fisik",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk pembuangan aman atau penggunaan kembali peralatan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Keamanan fisik harus dipertahankan saat penghentian atau relokasi fasilitas dan aset organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pembuangan aman atau penggunaan kembali peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya pindah rumah yang butuh pengawasan ekstra, relokasi kantor juga butuh pengamanan ketat."
   },
   {
     "id": "8.1",
-    "name": "Perangkat ujung pengguna (Endpoint devices)",
+    "name": "Perangkat pengguna akhir",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk perangkat ujung pengguna (endpoint devices) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi yang disimpan, diproses, atau diakses oleh perangkat pengguna akhir harus dilindungi sesuai dengan klasifikasi informasi dan persyaratan keamanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perangkat ujung pengguna (endpoint devices)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti smartphone yang punya PIN, enkripsi, dan remote wipe, perangkat endpoint harus punya perlindungan berlapis."
   },
   {
     "id": "8.2",
-    "name": "Hak akses hak istimewa (Privileged access)",
+    "name": "Hak istimewa akses",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk hak akses hak istimewa (privileged access) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Alokasi dan penggunaan hak istimewa akses harus dibatasi dan dikelola untuk mengurangi risiko keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak akses hak istimewa (privileged access)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya kunci master yang hanya dipegang kepala security, hak admin harus dibatasi agar tidak disalahgunakan."
   },
   {
     "id": "8.3",
@@ -1109,14 +1170,15 @@
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk pembatasan akses informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Akses ke informasi dan aset lainnya harus dibatasi sesuai dengan kebijakan manajemen akses dan klasifikasi informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pembatasan akses informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti VIP lounge yang hanya untuk tamu undangan, informasi sensitif hanya boleh diakses yang berwenang."
   },
   {
     "id": "8.4",
@@ -1127,14 +1189,15 @@
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk akses ke kode sumber harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Akses baca ke kode sumber, skrip, atau file konfigurasi harus dibatasi untuk mencegah modifikasi yang tidak sah.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk akses ke kode sumber! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya resep rahasia Coca-Cola yang hanya diketahui beberapa orang, kode sumber harus dibatasi aksesnya."
   },
   {
     "id": "8.5",
@@ -1145,14 +1208,15 @@
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk autentikasi aman harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Mekanisme autentikasi yang aman harus diimplementasikan untuk memverifikasi identitas pengguna dan perangkat yang mengakses sistem informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk autentikasi aman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sidik jari yang unik untuk setiap orang, autentikasi memastikan hanya identitas valid yang bisa masuk."
   },
   {
     "id": "8.6",
@@ -1163,32 +1227,34 @@
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk manajemen kapasitas harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Penggunaan sumber daya sistem harus dipantau dan dianalisis untuk memastikan kapasitas yang memadai dan mengidentifikasi potensi bottleneck.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen kapasitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya monitoring lalu lintas untuk prediksi kemacetan, manajemen kapasitas mengantisipasi beban sistem sebelum overload."
   },
   {
     "id": "8.7",
-    "name": "Perlindungan terhadap malware",
+    "name": "Proteksi terhadap malware",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk perlindungan terhadap malware harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Perlindungan terhadap malware harus diimplementasikan dan didukung oleh kesadaran pengguna, deteksi, pencegahan, dan pemulihan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan terhadap malware! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti sistem kekebalan tubuh yang melawan virus, proteksi malware melindungi sistem dari ancaman perangkat lunak berbahaya."
   },
   {
     "id": "8.8",
@@ -1199,32 +1265,34 @@
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk manajemen kerentanan teknis harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kerentanan teknis dari aset informasi harus dikelola melalui identifikasi, penilaian risiko, dan pengobatan yang tepat.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen kerentanan teknis! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya体检 kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi."
   },
   {
     "id": "8.9",
-    "name": "Manajemen konfigurasi",
+    "name": "Konfigurasi perangkat keras",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk manajemen konfigurasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Konfigurasi perangkat keras harus diamankan dan dikelola sesuai dengan kebijakan keamanan informasi organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen konfigurasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti setting pabrik yang optimal untuk perangkat elektronik, konfigurasi hardware harus distandarkan dan diamankan."
   },
   {
     "id": "8.10",
@@ -1235,14 +1303,15 @@
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk penghapusan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Informasi yang disimpan dalam sistem informasi dan penyimpanan harus dihapus dengan aman ketika sudah tidak dibutuhkan lagi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penghapusan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan dengan shredder, penghapusan data harus dilakukan secara aman."
   },
   {
     "id": "8.11",
@@ -1253,68 +1322,72 @@
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk masking data harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Data harus ditutup atau disembunyikan sesuai dengan kebijakan klasifikasi informasi dan persyaratan akses.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk masking data! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti nomor KTP yang ditampilkan sebagian saja (XXX-XXX-1234), masking data menyembunyikan informasi sensitif."
   },
   {
     "id": "8.12",
-    "name": "Pencegahan kebocoran data (DLP)",
+    "name": "Pencegahan kebocoran data",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk pencegahan kebocoran data (dlp) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Mekanisme pencegahan kebocoran data harus diimplementasikan untuk mendeteksi dan mencegah transmisi informasi yang tidak sah.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pencegahan kebocoran data (dlp)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya alarm di toko yang berbunyi jika barang dibawa keluar tanpa bayar, DLP mendeteksi data yang keluar tanpa izin."
   },
   {
     "id": "8.13",
-    "name": "Cadangan informasi (Backup)",
+    "name": "Pencadangan informasi",
     "type": "Koreksi",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk cadangan informasi (backup) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Salinan cadangan informasi, perangkat lunak, dan sistem harus dipelihara dan diuji secara berkala sesuai dengan kebijakan pencadangan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk cadangan informasi (backup)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti ban cadangan yang siap digunakan saat ban utama bocor, backup memastikan data bisa dipulihkan saat terjadi masalah."
   },
   {
     "id": "8.14",
-    "name": "Redundansi fasilitas pemrosesan informasi",
+    "name": "Keberagaman fasilitas pemrosesan informasi",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk redundansi fasilitas pemrosesan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Fasilitas pemrosesan informasi harus memiliki tingkat keberagaman dan redundansi yang cukup untuk memenuhi persyaratan ketersediaan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk redundansi fasilitas pemrosesan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya punya dua generator yang bisa saling backup, redundansi memastikan sistem tetap berjalan walau satu komponen gagal."
   },
   {
     "id": "8.15",
@@ -1325,104 +1398,110 @@
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk pencatatan log (logging) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Log aktivitas harus dihasilkan, disimpan, dilindungi, dan ditinjau secara berkala untuk mendeteksi kejadian dan perilaku yang mencurigakan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pencatatan log (logging)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti black box pesawat yang merekam semua aktivitas, log mencatat setiap kejadian untuk investigasi jika terjadi masalah."
   },
   {
     "id": "8.16",
-    "name": "Pemantauan aktivitas",
+    "name": "Aktivitas pemantauan",
     "type": "Deteksi",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk pemantauan aktivitas harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Jaringan, sistem, dan aplikasi harus dipantau untuk mendeteksi anomali dan potensi insiden keamanan informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan aktivitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya CCTV yang monitor area 24/7, pemantauan aktivitas mendeteksi keanehan sebelum jadi insiden besar."
   },
   {
     "id": "8.17",
-    "name": "Sinkronisasi jam (Clock synchronization)",
+    "name": "Sinkronisasi jam",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk sinkronisasi jam (clock synchronization) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Jam semua sistem pemrosesan informasi yang relevan harus disinkronisasi dengan sumber waktu yang terpercaya untuk mendukung analisis log.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk sinkronisasi jam (clock synchronization)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti semua jam di bandara harus sinkron untuk jadwal penerbangan, waktu sistem harus konsisten untuk analisis yang akurat."
   },
   {
     "id": "8.18",
-    "name": "Penggunaan program utilitas berhak istimewa",
+    "name": "Penggunaan program utilitas",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk penggunaan program utilitas berhak istimewa harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Penggunaan program utilitas yang dapat mengabaikan kontrol sistem harus dibatasi dan diamankan untuk mencegah penyalahgunaan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan program utilitas berhak istimewa! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya kunci inggris yang bisa membongkar apa saja tapi hanya untuk teknisi resmi, program utilitas harus dikontrol ketat."
   },
   {
     "id": "8.19",
-    "name": "Pemasangan perangkat lunak pada sistem operasional",
+    "name": "Instalasi perangkat lunak pada sistem operasional",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk pemasangan perangkat lunak pada sistem operasional harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Prosedur harus ditetapkan untuk menginstalasi perangkat lunak pada sistem operasional tanpa mengganggu operasional bisnis.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemasangan perangkat lunak pada sistem operasional! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti renovasi rumah yang tidak boleh mengganggu penghuni, instalasi software harus dilakukan tanpa ganggu operasional."
   },
   {
     "id": "8.20",
-    "name": "Keamanan jaringan",
+    "name": "Jaringan dan keamanan",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan jaringan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Jaringan harus diamankan, dikelola, dan dipantau untuk mencegah akses tidak sah dan memastikan integritas data.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan jaringan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya jalan tol yang punya gerbang, rambu, dan patrol keamanan, jaringan butuh perlindungan berlapis."
   },
   {
     "id": "8.21",
@@ -1433,86 +1512,91 @@
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk keamanan layanan jaringan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Mekanisme keamanan, tingkat layanan, dan persyaratan layanan harus diidentifikasi dan diimplementasikan untuk semua layanan jaringan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan layanan jaringan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti standar pelayanan bank yang harus aman dan cepat, layanan jaringan juga butuh SLA keamanan yang jelas."
   },
   {
     "id": "8.22",
-    "name": "Pemisahan jaringan (Segregation)",
+    "name": "Pemisahan jaringan",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk pemisahan jaringan (segregation) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Jaringan harus dipisahkan untuk mengurangi risiko penyebaran insiden keamanan dan melindungi area jaringan yang sensitif.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan jaringan (segregation)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya sekat kapal yang mencegah kebocoran menyebar ke seluruh kapal, segmentasi jaringan membatasi penyebaran serangan."
   },
   {
     "id": "8.23",
-    "name": "Penyaringan web (Web filtering)",
+    "name": "Penapisan web (Web filtering)",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Rendah",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk penyaringan web (web filtering) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Penapisan web harus diterapkan untuk mencegah akses ke situs web berbahaya dan mengurangi risiko serangan berbasis web.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penyaringan web (web filtering)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti saringan air yang membuang kotoran, web filter menyaring situs berbahaya sebelum diakses karyawan."
   },
   {
     "id": "8.24",
-    "name": "Penggunaan kriptografi",
+    "name": "Keamanan pengembangan aplikasi",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Kritis",
     "concept": "Mendeteksi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk penggunaan kriptografi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Kontrol keamanan harus diintegrasikan ke dalam siklus hidup pengembangan aplikasi dari tahap perencanaan hingga implementasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan kriptografi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya insinyur yang menghitung keamanan bangunan dari desain, keamanan aplikasi harus dimulai dari awal pengembangan."
   },
   {
     "id": "8.25",
-    "name": "Siklus hidup pengembangan aman (SDLC)",
+    "name": "Prinsip rekayasa sistem aman",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Tinggi",
     "concept": "Memulihkan",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk siklus hidup pengembangan aman (sdlc) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Prinsip rekayasa sistem aman harus diterapkan dalam pengembangan dan implementasi sistem informasi organisasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk siklus hidup pengembangan aman (sdlc)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti arsitek yang mendesain bangunan tahan gempa, engineer sistem harus membangun dengan prinsip keamanan."
   },
   {
     "id": "8.26",
@@ -1523,86 +1607,91 @@
     "priority": "Sedang",
     "concept": "Merespons",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk persyaratan keamanan aplikasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Persyaratan keamanan informasi harus diidentifikasi dan ditentukan untuk setiap aplikasi berdasarkan klasifikasi informasi.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk persyaratan keamanan aplikasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya spesifikasi mobil yang berbeda untuk city car vs SUV, kebutuhan keamanan aplikasi berbeda berdasarkan sensitivitas data."
   },
   {
     "id": "8.27",
-    "name": "Arsitektur sistem aman dan prinsip rekayasa",
+    "name": "Pengkodean aman (Secure coding)",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Rendah",
     "concept": "Mengatur",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk arsitektur sistem aman dan prinsip rekayasa harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Prinsip dan praktik pengkodean aman harus diterapkan dalam pengembangan aplikasi untuk mengurangi kerentanan keamanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk arsitektur sistem aman dan prinsip rekayasa! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti tukang las yang mengikuti standar keamanan untuk mencegah kebocoran, developer harus coding aman untuk mencegah bug."
   },
   {
     "id": "8.28",
-    "name": "Pemrograman aman (Secure coding)",
+    "name": "Pengujian keamanan dalam pengembangan",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Kritis",
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk pemrograman aman (secure coding) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Proses pengujian keamanan harus diterapkan dalam siklus hidup pengembangan untuk mengidentifikasi dan memperbaiki kerentanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemrograman aman (secure coding)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya uji crash test mobil sebelum dijual, aplikasi harus diuji keamanannya sebelum dirilis."
   },
   {
     "id": "8.29",
-    "name": "Pengujian keamanan dalam pengembangan dan penerimaan",
+    "name": "Pengujian keamanan sistem",
     "type": "Deteksi",
     "domain": "Teknologi",
     "difficulty": "Sedang",
     "priority": "Tinggi",
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk pengujian keamanan dalam pengembangan dan penerimaan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Pengujian keamanan harus dilakukan pada sistem yang telah dikembangkan untuk memverifikasi efektivitas kontrol keamanan.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengujian keamanan dalam pengembangan dan penerimaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti ujian akhir yang menguji pemahaman siswa, testing sistem memverifikasi apakah kontrol keamanan sudah efektif."
   },
   {
     "id": "8.30",
-    "name": "Pengembangan pihak ketiga (Outsourced)",
+    "name": "Pengembangan outsourcing",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Sedang",
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
-    "description": "Informasi dan aset relevan lainnya untuk pengembangan pihak ketiga (outsourced) harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Persyaratan keamanan informasi harus diidentifikasi dan diawasi dalam pengembangan yang di-outsource kepada pihak ketiga.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengembangan pihak ketiga (outsourced)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya Anda tetap mengawasi kontraktor yang membangun rumah, outsourcing development tetap butuh pengawasan keamanan."
   },
   {
     "id": "8.31",
@@ -1613,14 +1702,15 @@
     "priority": "Rendah",
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
-    "description": "Informasi dan aset relevan lainnya untuk pemisahan lingkungan pengembangan, pengujian, dan produksi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Lingkungan pengembangan, pengujian, dan produksi harus dipisahkan untuk mengurangi risiko gangguan operasional dan akses tidak sah.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan lingkungan pengembangan, pengujian, dan produksi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti dapur restoran yang terpisah dari area makan, environment development dan production harus dipisahkan."
   },
   {
     "id": "8.32",
@@ -1631,49 +1721,52 @@
     "priority": "Kritis",
     "concept": "Merespons",
     "capability": "Manajemen aset",
-    "description": "Informasi dan aset relevan lainnya untuk manajemen perubahan harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Perubahan pada aset informasi, fasilitas pemrosesan data, dan layanan harus dikelola dan dikendalikan melalui proses perubahan yang terstruktur.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen perubahan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya proses persetujuan renovasi di apartemen yang harus melalui manajemen, perubahan sistem butuh approval terkontrol."
   },
   {
     "id": "8.33",
-    "name": "Informasi pengujian",
+    "name": "Informasi manajemen proyek",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Tinggi",
     "priority": "Tinggi",
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
-    "description": "Informasi dan aset relevan lainnya untuk informasi pengujian harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Manajemen informasi proyek harus diterapkan untuk memastikan keamanan informasi selama siklus hidup proyek.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk informasi pengujian! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Seperti manajer proyek yang mengawasi timeline dan budget, manajemen informasi proyek mengawasi aspek keamanan."
   },
   {
     "id": "8.34",
-    "name": "Perlindungan sistem informasi selama audit",
+    "name": "Perlindungan sistem informasi selama pengujian audit",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Rendah",
     "priority": "Sedang",
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
-    "description": "Informasi dan aset relevan lainnya untuk perlindungan sistem informasi selama audit harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel serta pihak berkepentingan lainnya.",
+    "description": "Sistem informasi harus dilindungi selama pengujian audit dan kegiatan verifikasi keamanan lainnya.",
     "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan sistem informasi selama audit! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
       "Notulen rapat pengesahan oleh manajemen"
     ],
-    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise."
+    "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
+    "analogy": "Layaknya sampel makanan yang diuji di lab tanpa mencemari stok utama, audit harus dilakukan tanpa risiko ke sistem produksi."
   }
 ]

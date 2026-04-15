@@ -16,7 +16,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya."
   },
   {
     "id": "5.2",
@@ -35,7 +35,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Layaknya tim sepak bola yang punya posisi spesifik—kiper, bek, penyerang—setiap orang di organisasi harus tahu peran mereka dalam menjaga keamanan informasi."
   },
   {
     "id": "5.3",
@@ -54,7 +54,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti dalam restoran, koki yang memasak tidak sama dengan kasir yang menangani uang—pemisahan ini mencegah kecurangan dan memastikan kualitas."
   },
   {
     "id": "5.4",
@@ -73,7 +73,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti pelatih tim yang tidak hanya memberi strategi tapi juga memastikan setiap pemain menjalankannya, manajemen harus aktif mendorong penerapan keamanan informasi."
   },
   {
     "id": "5.5",
@@ -92,7 +92,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti memiliki nomor telepon darurat yang siap dihubungi saat terjadi masalah, kontak dengan otoritas membantu organisasi merespons insiden dengan tepat."
   },
   {
     "id": "5.6",
@@ -111,7 +111,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Layaknya bergabung dengan komunitas dokter untuk update metode pengobatan terbaru, bergabung dengan forum keamanan membantu organisasi tetap update ancaman terkini."
   },
   {
     "id": "5.7",
@@ -130,7 +130,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti badan meteorologi yang memonitor cuaca untuk memprediksi badai, intelijen ancaman membantu organisasi mengantisipasi serangan sebelum terjadi."
   },
   {
     "id": "5.8",
@@ -149,7 +149,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti sabuk pengaman yang harus dipakai di mobil manapun, keamanan informasi harus menjadi bagian dari setiap proyek, apapun jenisnya."
   },
   {
     "id": "5.9",
@@ -171,7 +171,7 @@
       "Inventaris aset Cloud"
     ],
     "implementationTips": "Mulai dengan spreadsheet sederhana. Beri kolom: Nama Aset, Tipe, Klasifikasi, Pemilik, Lokasi, Nilai Bisnis, Tanggal Tinjauan. Gunakan alat otomatis jika memungkinkan. Lakukan peninjauan triwulanan dan fokuslah pada aset paling kritis di tahap awal.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti daftar isi dalam buku yang membantu Anda menemukan halaman tertentu, inventaris aset membantu organisasi tahu apa yang harus dilindungi dan di mana lokasinya."
   },
   {
     "id": "5.10",
@@ -190,7 +190,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti aturan pemakaian kendaraan perusahaan—boleh untuk dinas saja, bukan liburan pribadi—aset IT juga perlu batasan penggunaan yang jelas."
   },
   {
     "id": "5.11",
@@ -209,7 +209,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti mengembalikan kunci apartemen saat check-out, semua aset organisasi harus dikembalikan saat karyawan keluar atau selesai bertugas."
   },
   {
     "id": "5.12",
@@ -228,7 +228,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti sistem triase di rumah sakit yang memprioritaskan pasien berdasarkan tingkat kegawatan, klasifikasi informasi membantu memprioritaskan perlindungan data."
   },
   {
     "id": "5.13",
@@ -247,7 +247,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya label 'mudah pecah' pada paket yang mengingatkan kurir untuk berhati-hati, label klasifikasi memberi tahu karyawan cara menangani informasi."
   },
   {
     "id": "5.14",
@@ -266,7 +266,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti pengiriman uang dengan brankas anti-maling, transfer informasi butuh perlindungan khusus agar tidak dicuri di tengah jalan."
   },
   {
     "id": "5.15",
@@ -285,7 +285,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti sistem kartu akses di hotel—tamu hanya bisa masuk kamar mereka sendiri, bukan kamar orang lain—akses harus berdasarkan kebutuhan."
   },
   {
     "id": "5.16",
@@ -304,7 +304,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya pembuatan KTP baru, perpanjangan, dan pencabutan saat pindah kota, identitas digital juga perlu dikelola dari awal sampai akhir."
   },
   {
     "id": "5.17",
@@ -323,7 +323,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti password ATM yang harus dirahasiakan dan diganti berkala, informasi autentikasi perlu dikelola dengan ketat untuk mencegah penyalahgunaan."
   },
   {
     "id": "5.18",
@@ -342,7 +342,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti kunci yang harus diambil kembali saat karyawan resign, hak akses juga harus segera dicabut agar tidak disalahgunakan."
   },
   {
     "id": "5.19",
@@ -361,7 +361,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti Anda mengecek reputasi kontraktor sebelum mempekerjakan mereka, risiko keamanan pemasok harus dievaluasi sebelum bekerja sama."
   },
   {
     "id": "5.20",
@@ -380,7 +380,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti menyewa brankas di bank—Anda harus percaya bank menjaganya, tapi juga pastikan apa yang Anda simpan memang boleh di sana."
   },
   {
     "id": "5.21",
@@ -399,7 +399,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Layaknya restoran yang harus memastikan supplier makanannya aman, organisasi harus memastikan rantai pasokan TI tidak menjadi titik lemah keamanan."
   },
   {
     "id": "5.22",
@@ -418,7 +418,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti uji kelayakan kendaraan tahunan, tinjauan kepatuhan berkala memastikan keamanan organisasi masih berjalan di jalur yang benar."
   },
   {
     "id": "5.23",
@@ -437,7 +437,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti sistem RT yang saling berbagi info keamanan lingkungan, komunitas keamanan membantu organisasi saling berbagi info ancaman."
   },
   {
     "id": "5.24",
@@ -456,7 +456,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti演习 kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis."
   },
   {
     "id": "5.25",
@@ -475,7 +475,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya cek kesehatan sebelum mulai gym, penilaian awal kepatuhan memastikan organisasi siap memenuhi semua kewajiban keamanan."
   },
   {
     "id": "5.26",
@@ -494,7 +494,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti daftar aturan lalu lintas yang harus dipatuhi pengemudi, persyaratan hukum keamanan harus diketahui dan dipatuhi organisasi."
   },
   {
     "id": "5.27",
@@ -513,7 +513,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti arsip penting yang disimpan dalam lemari tahan api, rekaman informasi harus dilindungi agar tidak hilang atau diubah sembarangan."
   },
   {
     "id": "5.28",
@@ -532,7 +532,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya dokter yang menjaga rahasia pasien, organisasi wajib melindungi data pribadi yang dipercayakan kepadanya."
   },
   {
     "id": "5.29",
@@ -551,7 +551,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti audit keuangan oleh akuntan eksternal, penilaian independen memberi pandangan objektif tentang efektivitas keamanan."
   },
   {
     "id": "5.30",
@@ -570,7 +570,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti fondasi bangunan yang harus kuat sejak awal, keamanan harus dibangun dari awal dalam pengembangan sistem, bukan ditambahkan belakangan."
   },
   {
     "id": "5.31",
@@ -589,7 +589,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya izin mendirikan bangunan yang harus dipenuhi sebelum membangun, aspek legal harus dikendalikan sebelum mengimplementasikan sistem."
   },
   {
     "id": "5.32",
@@ -608,7 +608,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti menghargai hak cipta musisi dengan membeli lagu asli, organisasi harus menghormati lisensi perangkat lunak yang digunakan."
   },
   {
     "id": "5.33",
@@ -627,7 +627,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti rekaman CCTV yang disimpan di ruang terkunci, rekaman sistem harus dilindungi agar tidak dimanipulasi."
   },
   {
     "id": "5.34",
@@ -646,7 +646,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Layaknya surat pribadi yang tidak boleh dibaca orang lain, data pribadi juga harus dijaga kerahasiaannya."
   },
   {
     "id": "5.35",
@@ -665,7 +665,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti konstitusi negara yang jadi dasar hukum, framework tata kelola IT jadi fondasi keputusan keamanan perusahaan."
+    "analogy": "Seperti second opinion dari dokter spesialis, tinjauan independen memberi perspektif baru tentang efektivitas keamanan."
   },
   {
     "id": "5.36",
@@ -684,7 +684,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti struktur organisasi perusahaan yang menentukan siapa lapor ke siapa, kontrol organisasi menentukan alur tanggung jawab keamanan."
+    "analogy": "Seperti cek rutin kendaraan yang memastikan semua sistem berfungsi, tinjauan kepatuhan memastikan keamanan tetap efektif."
   },
   {
     "id": "5.37",
@@ -703,7 +703,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti aturan main dalam olahraga tim, kebijakan keamanan organisasi memberi panduan jelas agar semua pemain bergerak ke arah yang sama."
+    "analogy": "Seperti buku manual pesawat yang harus selalu update dan terkontrol, dokumentasi keamanan harus dikelola dengan baik."
   },
   {
     "id": "6.1",
@@ -722,7 +722,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti budaya antre yang terbentuk dari kebiasaan baik, budaya keamanan siber terbentuk dari kesadaran dan pelatihan yang konsisten."
+    "analogy": "Layaknya pengecekan referensi sebelum mempekerjakan pengasuh anak, penyaringan latar belakang memastikan orang yang kita pekerjakan dapat dipercaya."
   },
   {
     "id": "6.2",
@@ -741,7 +741,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti guru yang membekali murid dengan pengetahuan, organisasi perlu membekali karyawan dengan kesadaran keamanan."
+    "analogy": "Seperti kontrak sewa yang menyebutkan aturan penggunaan properti, kontrak kerja harus menyebutkan kewajiban keamanan informasi."
   },
   {
     "id": "6.3",
@@ -760,7 +760,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti warga negara yang perlu tahu hukum agar tidak melanggar, karyawan perlu pelatihan keamanan agar tidak jadi celah keamanan."
+    "analogy": "Seperti pelatihan pemadaman api yang mempersiapkan karyawan menghadapi kebakaran, pelatihan keamanan mempersiapkan mereka menghadapi ancaman siber."
   },
   {
     "id": "6.4",
@@ -779,7 +779,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti budaya antre yang terbentuk dari kebiasaan baik, budaya keamanan siber terbentuk dari kesadaran dan pelatihan yang konsisten."
+    "analogy": "Layaknya tilang untuk pelanggar lalu lintas, proses disipliner memberi konsekuensi bagi yang melanggar aturan keamanan."
   },
   {
     "id": "6.5",
@@ -798,7 +798,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti guru yang membekali murid dengan pengetahuan, organisasi perlu membekali karyawan dengan kesadaran keamanan."
+    "analogy": "Seperti kewajiban menjaga rahasia perusahaan meskipun sudah resign, tanggung jawab keamanan tidak berakhir saat karyawan keluar."
   },
   {
     "id": "6.6",
@@ -817,7 +817,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti warga negara yang perlu tahu hukum agar tidak melanggar, karyawan perlu pelatihan keamanan agar tidak jadi celah keamanan."
+    "analogy": "Seperti janji untuk tidak membocorkan resep rahasia restoran, NDA melindungi informasi sensitif dari kebocoran."
   },
   {
     "id": "6.7",
@@ -836,7 +836,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti budaya antre yang terbentuk dari kebiasaan baik, budaya keamanan siber terbentuk dari kesadaran dan pelatihan yang konsisten."
+    "analogy": "Layaknya membawa brankas mini saat kerja di cafe, kerja remote membutuhkan perlindungan ekstra untuk data perusahaan."
   },
   {
     "id": "6.8",
@@ -855,7 +855,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti guru yang membekali murid dengan pengetahuan, organisasi perlu membekali karyawan dengan kesadaran keamanan."
+    "analogy": "Seperti nomor darurat 112 yang mudah dihubungi, mekanisme pelaporan keamanan harus mudah diakses oleh semua karyawan."
   },
   {
     "id": "7.1",
@@ -874,7 +874,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar, CCTV, dan satpam yang melindungi gedung fisik, kontrol keamanan fisik melindungi server dan infrastruktur IT."
+    "analogy": "Seperti pagar pabrik yang membatasi siapa yang boleh masuk, batas fisik melindungi aset dari akses yang tidak berwenang."
   },
   {
     "id": "7.2",
@@ -893,7 +893,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya pintu terkunci dan alarm, ruang server perlu perlindungan fisik berlapis dari akses tidak sah."
+    "analogy": "Layaknya security di gedung yang mengecek ID sebelum mengizinkan masuk, kontrol akses fisik menyaring siapa yang boleh masuk."
   },
   {
     "id": "7.3",
@@ -912,7 +912,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti brankas bank yang melindungi aset berharga, ruang data center dirancang untuk melindungi aset digital paling kritis."
+    "analogy": "Seperti rumah yang punya gembok, alarm, dan pagar, kantor juga butuh lapisan keamanan yang sesuai ancaman."
   },
   {
     "id": "7.4",
@@ -931,7 +931,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar, CCTV, dan satpam yang melindungi gedung fisik, kontrol keamanan fisik melindungi server dan infrastruktur IT."
+    "analogy": "Layaknya satpam yang patroli keliling area, pemantauan kontinu mendeteksi ancaman sebelum mereka bertindak."
   },
   {
     "id": "7.5",
@@ -950,7 +950,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya pintu terkunci dan alarm, ruang server perlu perlindungan fisik berlapis dari akses tidak sah."
+    "analogy": "Seperti bangunan tahan gempa di zona rawan, fasilitas harus dilindungi dari ancaman lingkungan dan fisik."
   },
   {
     "id": "7.6",
@@ -969,7 +969,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti brankas bank yang melindungi aset berharga, ruang data center dirancang untuk melindungi aset digital paling kritis."
+    "analogy": "Layaknya aturan steril di ruang operasi rumah sakit, area aman punya persyaratan khusus yang harus dipatuhi semua orang."
   },
   {
     "id": "7.7",
@@ -988,7 +988,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar, CCTV, dan satpam yang melindungi gedung fisik, kontrol keamanan fisik melindungi server dan infrastruktur IT."
+    "analogy": "Seperti generator cadangan yang siap saat listrik PLN mati, utilitas harus punya backup untuk menjaga operasional."
   },
   {
     "id": "7.8",
@@ -1007,7 +1007,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya pintu terkunci dan alarm, ruang server perlu perlindungan fisik berlapis dari akses tidak sah."
+    "analogy": "Layaknya servis mobil berkala yang mencegah mogok di jalan, pemeliharaan peralatan mencegah kegagalan sistem."
   },
   {
     "id": "7.9",
@@ -1026,7 +1026,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti brankas bank yang melindungi aset berharga, ruang data center dirancang untuk melindungi aset digital paling kritis."
+    "analogy": "Seperti asuransi dan GPS tracker untuk laptop yang dibawa travel, aset di luar kantor tetap butuh perlindungan."
   },
   {
     "id": "7.10",
@@ -1045,7 +1045,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar, CCTV, dan satpam yang melindungi gedung fisik, kontrol keamanan fisik melindungi server dan infrastruktur IT."
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan sebelum dibuang, media penyimpanan perlu diamankan atau dimusnahkan dengan benar."
   },
   {
     "id": "7.11",
@@ -1064,7 +1064,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya pintu terkunci dan alarm, ruang server perlu perlindungan fisik berlapis dari akses tidak sah."
+    "analogy": "Seperti jalur evakuasi dan assembly point yang siap pakai, rencana darurat butuh infrastruktur yang mendukung."
   },
   {
     "id": "7.12",
@@ -1083,7 +1083,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti brankas bank yang melindungi aset berharga, ruang data center dirancang untuk melindungi aset digital paling kritis."
+    "analogy": "Layaknya kabel listrik yang ditanam dalam tembok agar tidak digigit tikus, kabel data juga harus dilindungi."
   },
   {
     "id": "7.13",
@@ -1102,7 +1102,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti pagar, CCTV, dan satpam yang melindungi gedung fisik, kontrol keamanan fisik melindungi server dan infrastruktur IT."
+    "analogy": "Seperti inspeksi gedung tahunan yang memastikan struktur masih kuat, pemeriksaan fasilitas memastikan keamanan tetap terjaga."
   },
   {
     "id": "7.14",
@@ -1121,7 +1121,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti rumah yang punya pintu terkunci dan alarm, ruang server perlu perlindungan fisik berlapis dari akses tidak sah."
+    "analogy": "Layaknya pindah rumah yang butuh pengawasan ekstra, relokasi kantor juga butuh pengamanan ketat."
   },
   {
     "id": "8.1",
@@ -1140,7 +1140,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti smartphone yang punya PIN, enkripsi, dan remote wipe, perangkat endpoint harus punya perlindungan berlapis."
   },
   {
     "id": "8.2",
@@ -1159,7 +1159,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya kunci master yang hanya dipegang kepala security, hak admin harus dibatasi agar tidak disalahgunakan."
   },
   {
     "id": "8.3",
@@ -1178,7 +1178,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti VIP lounge yang hanya untuk tamu undangan, informasi sensitif hanya boleh diakses yang berwenang."
   },
   {
     "id": "8.4",
@@ -1197,7 +1197,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya resep rahasia Coca-Cola yang hanya diketahui beberapa orang, kode sumber harus dibatasi aksesnya."
   },
   {
     "id": "8.5",
@@ -1216,7 +1216,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Seperti sidik jari yang unik untuk setiap orang, autentikasi memastikan hanya identitas valid yang bisa masuk."
   },
   {
     "id": "8.6",
@@ -1235,7 +1235,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Layaknya monitoring lalu lintas untuk prediksi kemacetan, manajemen kapasitas mengantisipasi beban sistem sebelum overload."
   },
   {
     "id": "8.7",
@@ -1254,7 +1254,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti sistem kekebalan tubuh yang melawan virus, proteksi malware melindungi sistem dari ancaman perangkat lunak berbahaya."
   },
   {
     "id": "8.8",
@@ -1273,7 +1273,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya体检 kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi."
   },
   {
     "id": "8.9",
@@ -1292,7 +1292,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti setting pabrik yang optimal untuk perangkat elektronik, konfigurasi hardware harus distandarkan dan diamankan."
   },
   {
     "id": "8.10",
@@ -1311,7 +1311,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya dokumen rahasia yang harus dihancurkan dengan shredder, penghapusan data harus dilakukan secara aman."
   },
   {
     "id": "8.11",
@@ -1330,7 +1330,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Seperti nomor KTP yang ditampilkan sebagian saja (XXX-XXX-1234), masking data menyembunyikan informasi sensitif."
   },
   {
     "id": "8.12",
@@ -1349,7 +1349,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Layaknya alarm di toko yang berbunyi jika barang dibawa keluar tanpa bayar, DLP mendeteksi data yang keluar tanpa izin."
   },
   {
     "id": "8.13",
@@ -1368,11 +1368,11 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti ban cadangan yang siap digunakan saat ban utama bocor, backup memastikan data bisa dipulihkan saat terjadi masalah."
   },
   {
     "id": "8.14",
-    "name": "Keberlebihan fasilitas pemrosesan informasi",
+    "name": "Keberagaman fasilitas pemrosesan informasi",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
@@ -1387,7 +1387,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya punya dua generator yang bisa saling backup, redundansi memastikan sistem tetap berjalan walau satu komponen gagal."
   },
   {
     "id": "8.15",
@@ -1406,7 +1406,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti black box pesawat yang merekam semua aktivitas, log mencatat setiap kejadian untuk investigasi jika terjadi masalah."
   },
   {
     "id": "8.16",
@@ -1425,7 +1425,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya CCTV yang monitor area 24/7, pemantauan aktivitas mendeteksi keanehan sebelum jadi insiden besar."
   },
   {
     "id": "8.17",
@@ -1444,7 +1444,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Seperti semua jam di bandara harus sinkron untuk jadwal penerbangan, waktu sistem harus konsisten untuk analisis yang akurat."
   },
   {
     "id": "8.18",
@@ -1463,7 +1463,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Layaknya kunci inggris yang bisa membongkar apa saja tapi hanya untuk teknisi resmi, program utilitas harus dikontrol ketat."
   },
   {
     "id": "8.19",
@@ -1482,7 +1482,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti renovasi rumah yang tidak boleh mengganggu penghuni, instalasi software harus dilakukan tanpa ganggu operasional."
   },
   {
     "id": "8.20",
@@ -1501,7 +1501,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya jalan tol yang punya gerbang, rambu, dan patrol keamanan, jaringan butuh perlindungan berlapis."
   },
   {
     "id": "8.21",
@@ -1520,7 +1520,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti standar pelayanan bank yang harus aman dan cepat, layanan jaringan juga butuh SLA keamanan yang jelas."
   },
   {
     "id": "8.22",
@@ -1539,7 +1539,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya sekat kapal yang mencegah kebocoran menyebar ke seluruh kapal, segmentasi jaringan membatasi penyebaran serangan."
   },
   {
     "id": "8.23",
@@ -1558,7 +1558,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Seperti saringan air yang membuang kotoran, web filter menyaring situs berbahaya sebelum diakses karyawan."
   },
   {
     "id": "8.24",
@@ -1577,7 +1577,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Layaknya insinyur yang menghitung keamanan bangunan dari desain, keamanan aplikasi harus dimulai dari awal pengembangan."
   },
   {
     "id": "8.25",
@@ -1596,7 +1596,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti arsitek yang mendesain bangunan tahan gempa, engineer sistem harus membangun dengan prinsip keamanan."
   },
   {
     "id": "8.26",
@@ -1615,7 +1615,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya spesifikasi mobil yang berbeda untuk city car vs SUV, kebutuhan keamanan aplikasi berbeda berdasarkan sensitivitas data."
   },
   {
     "id": "8.27",
@@ -1634,7 +1634,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti tukang las yang mengikuti standar keamanan untuk mencegah kebocoran, developer harus coding aman untuk mencegah bug."
   },
   {
     "id": "8.28",
@@ -1653,7 +1653,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya uji crash test mobil sebelum dijual, aplikasi harus diuji keamanannya sebelum dirilis."
   },
   {
     "id": "8.29",
@@ -1672,7 +1672,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Seperti ujian akhir yang menguji pemahaman siswa, testing sistem memverifikasi apakah kontrol keamanan sudah efektif."
   },
   {
     "id": "8.30",
@@ -1691,7 +1691,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Layaknya Anda tetap mengawasi kontraktor yang membangun rumah, outsourcing development tetap butuh pengawasan keamanan."
   },
   {
     "id": "8.31",
@@ -1710,11 +1710,11 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Seperti dapur restoran yang terpisah dari area makan, environment development dan production harus dipisahkan."
   },
   {
     "id": "8.32",
-    "name": "Perubahan manajemen",
+    "name": "Manajemen perubahan",
     "type": "Pencegahan",
     "domain": "Teknologi",
     "difficulty": "Sedang",
@@ -1729,7 +1729,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti sistem kekebalan tubuh yang terus waspada terhadap virus, kontrol teknologi melindungi sistem dari serangan siber."
+    "analogy": "Layaknya proses persetujuan renovasi di apartemen yang harus melalui manajemen, perubahan sistem butuh approval terkontrol."
   },
   {
     "id": "8.33",
@@ -1748,7 +1748,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti gardu listrik yang punya circuit breaker untuk mencegah kebakaran, firewall dan IDS/IPS mencegah serangan menyebar di jaringan."
+    "analogy": "Seperti manajer proyek yang mengawasi timeline dan budget, manajemen informasi proyek mengawasi aspek keamanan."
   },
   {
     "id": "8.34",
@@ -1767,6 +1767,6 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Mulai implementasi dengan perlahan menggunakan standar dokumen internal. Libatkan pemangku kepentingan dalam penyusunannya. Gunakan sistem otomasi pengelolaan apabila cakupannya telah melebar ke ranah enterprise.",
-    "analogy": "Seperti kunci rumah digital yang hanya buka untuk orang berhak, autentikasi memastikan hanya pengguna sah yang bisa akses sistem."
+    "analogy": "Layaknya sampel makanan yang diuji di lab tanpa mencemari stok utama, audit harus dilakukan tanpa risiko ke sistem produksi."
   }
 ]
