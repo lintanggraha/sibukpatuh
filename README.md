@@ -15,14 +15,17 @@
 
 ## 📖 Tentang Aplikasi
 
-**SibukPatuh** adalah aplikasi web untuk mengelola dan memantau kepatuhan terhadap berbagai framework regulasi teknologi informasi — baik nasional maupun internasional.
+**SibukPatuh** adalah platform eksplorasi edukatif untuk mempelajari dan membedah berbagai *framework* regulasi teknologi informasi — baik nasional maupun internasional.
 
-Aplikasi ini dibuat untuk membantu tim IT dan compliance officer dalam:
+Aplikasi ini dibuat murni sebagai sarana pembelajaran interaktif untuk membantu para praktisi IT, analis, dan mahasiswa dalam:
 
-- **Memahami requirement** dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)
-- **Melacak status implementasi** kontrol dan regulasi yang berlaku
-- **Mencari referensi** regulasi dengan cepat tanpa perlu buka dokumen satu per satu
-- **Mapping silang** antar framework untuk efisiensi implementasi
+- **Mempelajari anatomi** dari berbagai *framework* keamanan (SEOJK, PBI, ISO, NIST, COBIT)
+- **Menyimulasikan studi kasus** terhadap pemahaman kontrol dan regulasi yang berlaku
+- **Menelusuri referensi edukasi** secara cepat untuk memahami hubungan antar komponen *framework*
+- **Menjelajahi konsep pemetaan (*cross-mapping*)** antar *framework* sebagai bahan studi komparatif
+
+> **Catatan Penting:**
+> Konten di dalam SibukPatuh disusun murni sebagai **referensi pembelajaran dan edukasi** untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).
 
 ## 📋 Fitur
 

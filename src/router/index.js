@@ -7,6 +7,11 @@ const routes = [
         component: () => import('../views/FrameworkIndex.vue')
     },
     {
+        path: '/about',
+        name: 'about',
+        component: () => import('../views/AboutView.vue')
+    },
+    {
         path: '/frameworks/iso27001',
         name: 'iso27001',
         component: () => import('../views/Iso27001.vue')

@@ -16,6 +16,12 @@
           </div>
           <div class="col-lg-8">
             <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
+              
+              <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
+                 <i class="fas fa-info-circle nav-icon"></i>
+                 <span>Tentang</span>
+              </router-link>
+
               <div
                 v-for="group in frameworkNavGroups"
                 :key="group.label"
