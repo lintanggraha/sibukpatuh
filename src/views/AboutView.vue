@@ -7,28 +7,28 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <h1 class="about-title">Tentang SibukPatuh</h1>
-          <p class="about-subtitle text-muted">Menjadikan Pembelajaran Framework Keamanan Lebih Mudah Diakses</p>
+          <p class="about-subtitle text-muted">Menjadikan pembelajaran framework keamanan lebih mudah diakses</p>
         </div>
 
         <div class="about-card mb-4">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4"><i class="fas fa-book-reader text-primary me-2"></i> Rangkuman Edukatif</h3>
-            
-            <p><strong>SibukPatuh</strong> adalah aplikasi web untuk mengelola dan memantau kepatuhan terhadap berbagai framework regulasi teknologi informasi — baik nasional maupun internasional.</p>
 
-            <p>Aplikasi ini dibuat untuk membantu tim IT dan compliance officer dalam:</p>
+            <p><strong>SibukPatuh</strong> adalah aplikasi web edukatif untuk mempelajari struktur, istilah, dan konteks berbagai framework serta regulasi teknologi informasi, baik nasional maupun internasional.</p>
+
+            <p>Aplikasi ini dibuat untuk membantu tim IT, auditor, dan compliance officer dalam:</p>
             <ul class="feature-list mb-4">
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Memahami requirement</strong> dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Melacak status implementasi</strong> kontrol dan regulasi yang berlaku</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Mencari referensi</strong> regulasi dengan cepat tanpa perlu buka dokumen satu per satu</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Mapping silang</strong> antar framework untuk efisiensi implementasi</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Memahami struktur materi</strong> dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Membaca ringkasan edukatif</strong> tanpa harus membuka dokumen satu per satu di tahap awal</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Menelusuri istilah dan tema utama</strong> per domain, kategori, atau topik</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Membandingkan acuan</strong> sebagai bahan belajar dan diskusi internal</li>
             </ul>
 
             <div class="alert alert-warning d-flex align-items-start shadow-sm border-0 rounded-4" role="alert">
               <i class="fas fa-exclamation-triangle fs-3 me-3 mt-1 text-warning"></i>
               <div>
                 <h5 class="alert-heading fw-bold">Catatan Penting</h5>
-                <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
+                <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong>, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
                 <p class="text-muted lh-lg">
                   Berangkat dari pengalaman sehari-hari dalam menavigasi berbagai persyaratan kepatuhan (<em>compliance</em>) dan manajemen risiko, saya menyadari perlunya sebuah ruang interaktif yang bisa menjembatani antara teori dokumen PDF yang tebal dengan pemahaman praktis di lapangan. SibukPatuh dibangun sebagai wujud dedikasi untuk terus berbagi wawasan seputar <em>cybersecurity</em> dan mempermudah tim untuk menyelaraskan operasi dan kebijakan dengan best practice internasional.
                 </p>
-                
+
                 <div class="contact-links mt-4 d-flex flex-wrap gap-3">
                   <a href="mailto:lintanggraha@gmail.com" class="btn btn-outline-primary rounded-pill px-4 btn-contact">
                     <i class="fas fa-envelope me-2"></i> lintanggraha@gmail.com
@@ -70,8 +70,8 @@
 
 <script>
 export default {
-  name: 'AboutView'
-}
+  name: "AboutView",
+};
 </script>
 
 <style scoped>
@@ -134,7 +134,7 @@ export default {
 }
 
 .header-with-line::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

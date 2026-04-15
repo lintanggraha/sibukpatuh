@@ -3,14 +3,34 @@
     <section class="frx-hero">
       <div>
         <span class="frx-kicker"><i class="fas fa-compass"></i>SibukPatuh</span>
-        <h1 class="frx-title">Framework & Regulasi Kepatuhan</h1>
+        <h1 class="frx-title">Ruang Belajar Framework dan Regulasi Siber</h1>
         <p class="frx-copy">
-          <strong>SibukPatuh</strong> adalah aplikasi explorer framework dan regulasi kepatuhan yang membantu tim IT, auditor, dan risk officer menelusuri standar keamanan siber — mulai dari <strong>ISO 27001, NIST CSF, COBIT 2019</strong> hingga regulasi nasional seperti <strong>SEOJK, Panduan Resiliensi OJK, dan PBI 02/2024</strong> — dalam satu tempat yang terstruktur.
+          <strong>SibukPatuh</strong> adalah aplikasi edukatif untuk membantu tim IT, auditor,
+          risk officer, dan pembelajar keamanan siber memahami struktur, istilah penting, serta
+          gambaran umum berbagai acuan seperti <strong>ISO 27001, NIST CSF, COBIT 2019</strong>
+          hingga regulasi nasional seperti <strong>SEOJK, Panduan Resiliensi OJK, dan PBI 02/2024</strong>
+          dalam satu tempat yang lebih terstruktur.
         </p>
         <p class="frx-features">
-          <span><i class="fas fa-check-circle"></i>Jelajahi kontrol & kewajiban per framework</span>
-          <span><i class="fas fa-check-circle"></i>Filter berdasarkan kategori, domain, dan prioritas</span>
-          <span><i class="fas fa-check-circle"></i>Lihat interpretasi, bukti audit, dan referensi</span>
+          <span><i class="fas fa-check-circle"></i>Pelajari struktur, konsep, dan topik utama tiap acuan</span>
+          <span><i class="fas fa-check-circle"></i>Telusuri ringkasan per domain, kategori, dan tema</span>
+          <span><i class="fas fa-check-circle"></i>Gunakan sebagai bahan belajar awal sebelum baca dokumen resmi</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="frx-disclaimer" aria-label="Disclaimer edukatif">
+      <div class="frx-disclaimer-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <div class="frx-disclaimer-copy">
+        <strong>Disclaimer ISO 27001 dan COBIT 2019</strong>
+        <p>
+          Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun sebagai
+          <strong>ringkasan, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan teks resmi,
+          bukan reproduksi penuh, dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA.
+          Penyebutan nama standar dilakukan hanya untuk mengidentifikasi topik edukasi. Untuk kebutuhan
+          audit, sertifikasi, maupun referensi formal, selalu rujuk dokumen resmi dari penerbit terkait.
         </p>
       </div>
     </section>
@@ -44,8 +64,8 @@ export default {
         {
           routeName: "iso27001",
           name: "ISO 27001:2022",
-          subtitle: "Kontrol keamanan informasi",
-          summary: "Annex A lengkap dengan domain, tipe, dan interpretasi implementasi.",
+          subtitle: "Ringkasan kontrol keamanan informasi",
+          summary: "Ringkasan edukatif Annex A, domain kontrol, dan konteks pembacaan awal.",
           metric_label: "Kontrol",
           metric_value: 93,
           accent: "#0f766e",
@@ -54,8 +74,8 @@ export default {
         {
           routeName: "nist",
           name: "NIST CSF 2.0",
-          subtitle: "Pemetaan fungsi & SP 800-53",
-          summary: "GOVERN hingga RECOVER dengan filter subkategori dan referensi.",
+          subtitle: "Kerangka belajar fungsi dan subkategori",
+          summary: "GOVERN hingga RECOVER untuk membantu membaca struktur dan istilah inti.",
           metric_label: "Subkategori",
           metric_value: 106,
           accent: "#144e72",
@@ -64,8 +84,8 @@ export default {
         {
           routeName: "cobit",
           name: "COBIT 2019",
-          subtitle: "Governance of enterprise I&T",
-          summary: "Prinsip, design factor, core model, dan roadmap implementasi.",
+          subtitle: "Ringkasan governance of enterprise I&T",
+          summary: "Ringkasan edukatif prinsip, design factor, core model, dan alur pembacaan.",
           metric_label: "Objektif",
           metric_value: 40,
           accent: "#15803d",
@@ -74,8 +94,8 @@ export default {
         {
           routeName: "seojk",
           name: "SEOJK 29/2022",
-          subtitle: "Ketahanan siber perbankan",
-          summary: "Peta kewajiban, lampiran penilaian, dan format pelaporan regulator.",
+          subtitle: "Ringkasan ketahanan siber perbankan",
+          summary: "Peta kewajiban, lampiran penilaian, dan konteks pembacaan regulasi.",
           metric_label: "Kewajiban",
           metric_value: null,
           accent: "#b45309",
@@ -84,8 +104,8 @@ export default {
         {
           routeName: "resilience",
           name: "Resiliensi OJK",
-          subtitle: "Digital resilience framework",
-          summary: "Referensi tematik untuk ketahanan digital tata kelola dan operasional.",
+          subtitle: "Panduan belajar digital resilience",
+          summary: "Referensi tematik untuk memahami ketahanan digital tata kelola dan operasional.",
           metric_label: "Kewajiban",
           metric_value: null,
           accent: "#7c3aed",
@@ -94,8 +114,8 @@ export default {
         {
           routeName: "pbi",
           name: "PBI 02/2024",
-          subtitle: "KKS & ketahanan siber BI",
-          summary: "Kewajiban KKS, pelaporan insiden, dan pengawasan Bank Indonesia.",
+          subtitle: "Ringkasan KKS dan ketahanan siber BI",
+          summary: "Kewajiban KKS, pelaporan insiden, dan konteks pembacaan regulasi BI.",
           metric_label: "Kewajiban",
           metric_value: null,
           accent: "#b91c1c",
@@ -129,7 +149,7 @@ export default {
           const data = await response.json();
           // Support nested data structures
           if (keyPath) {
-            const parts = keyPath.split('.');
+            const parts = keyPath.split(".");
             let result = data;
             for (const part of parts) {
               if (result && result[part] !== undefined) {
@@ -185,6 +205,10 @@ export default {
 .frx-features{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.65rem;padding-top:.55rem;border-top:1px solid rgba(255,255,255,.15)}
 .frx-features span{display:inline-flex;align-items:center;gap:.3rem;color:rgba(255,250,242,.75);font-size:.76rem;font-weight:600}
 .frx-features i{color:rgba(255,250,242,.5);font-size:.7rem}
+.frx-disclaimer{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:flex-start;padding:.9rem 1rem;border-radius:18px;border:1px solid rgba(22,50,75,.08);background:rgba(255,251,240,.92);box-shadow:0 10px 24px rgba(15,23,42,.05)}
+.frx-disclaimer-icon{width:2.4rem;height:2.4rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(135deg,#d97706 0%,#b45309 100%);color:#fff7ed;box-shadow:0 10px 18px rgba(180,83,9,.18);font-size:.9rem}
+.frx-disclaimer-copy strong{display:block;margin-bottom:.2rem;color:#7c2d12;font-size:.84rem}
+.frx-disclaimer-copy p{margin:0;color:#6b4f3a;font-size:.78rem;line-height:1.65}
 .frx-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
 .frx-card{border-radius:14px;border:1px solid rgba(22,50,75,.08);background:rgba(255,255,255,.85);box-shadow:0 8px 18px rgba(15,23,42,.04);transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
 .frx-card:hover{border-color:rgba(22,50,75,.18);box-shadow:0 12px 24px rgba(15,23,42,.08);transform:translateY(-2px)}
@@ -198,5 +222,5 @@ export default {
 .frx-card-count{font-size:1.15rem;font-weight:800;color:var(--accent);line-height:1}
 .frx-card-label{font-size:.68rem;font-weight:700;color:#5c6776;text-transform:uppercase;letter-spacing:.06em}
 @media (max-width:1199.98px){.frx-card-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:.9rem}}
+@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:.9rem}.frx-disclaimer{grid-template-columns:1fr}}
 </style>
