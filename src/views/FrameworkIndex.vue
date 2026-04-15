@@ -2,42 +2,22 @@
   <div class="frx-shell">
     <section class="frx-hero">
       <div class="frx-hero-content">
-        <span class="frx-kicker">
-          <span class="pulse-dot"></span>
-          <i class="fas fa-compass"></i> Platform Navigasi Edukatif
-        </span>
+        <span class="frx-kicker"><i class="fas fa-compass"></i> SibukPatuh - Platform Edukatif</span>
         <h1 class="frx-title">Ruang Belajar Framework & Regulasi Siber</h1>
         <p class="frx-copy">
-          <strong>SibukPatuh</strong> hadir sebagai sarana pembelajaran interaktif untuk memahami struktur, istilah, 
-          dan konsep utama berbagai standar keamanan siber internasional serta regulasi nasional dalam satu antarmuka yang modern.
+          Memahami struktur dan konsep acuan keamanan siber (ISO, NIST, COBIT) dan regulasi nasional (OJK, BI) dalam satu antarmuka terintegrasi.
         </p>
-        <div class="frx-hero-stats">
-          <div class="stat-item">
-            <span class="stat-val">{{ readyCount }}/{{ frameworkCount }}</span>
-            <span class="stat-lab">Framework Siap</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-item">
-            <span class="stat-val">{{ formatNumber(totalRecords) }}+</span>
-            <span class="stat-lab">Poin Pembelajaran</span>
-          </div>
-        </div>
       </div>
-      <div class="hero-bg-accent"></div>
+
     </section>
 
     <section class="frx-disclaimer" aria-label="Disclaimer edukatif">
       <div class="frx-disclaimer-icon">
-        <i class="fas fa-exclamation-circle"></i>
+        <i class="fas fa-exclamation-circle text-warning"></i>
       </div>
       <div class="frx-disclaimer-copy">
-        <h5 class="frx-disclaimer-title">Penting: Batasan Materi & Edukasi</h5>
         <p>
-          Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai
-          <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi,
-          bukan reproduksi penuh, dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA.
-          Penyebutan nama standar dilakukan hanya untuk mempermudah identifikasi topik pembelajaran. Untuk kebutuhan
-          audit, sertifikasi, atau referensi formal, harap selalu merujuk pada dokumen standar resmi yang berlaku.
+          <strong>Disclaimer:</strong> Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA. Harap merujuk pada dokumen standar resmi yang berlaku untuk keperluan formal.
         </p>
       </div>
     </section>
@@ -202,37 +182,27 @@ export default {
 </script>
 
 <style scoped>
-.frx-shell{display:grid;gap:1.5rem}
-.frx-hero{padding:2.5rem 2rem;border-radius:28px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);box-shadow:0 20px 50px rgba(0,0,0,0.15);overflow:hidden;position:relative}
-.frx-hero-content{position:relative;z-index:2;max-width:800px}
-.frx-kicker{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .8rem;border-radius:999px;color:rgba(255,255,255,.9);background:rgba(255,255,255,0.08);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(255,255,255,0.1)}
-.pulse-dot{width:6px;height:6px;background:#10b981;border-radius:50%;box-shadow:0 0 0 0 rgba(16,185,129,.4);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
-.frx-title{margin:1rem 0 .75rem;color:#fff;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;line-height:1.2;letter-spacing:-0.5px}
-.frx-copy{margin:0;color:rgba(255,255,255,.7);font-size:1rem;line-height:1.6}
-.frx-hero-stats{display:flex;align-items:center;gap:1.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1)}
-.stat-item{display:flex;flex-direction:column}
-.stat-val{color:#fff;font-size:1.4rem;font-weight:800;line-height:1}
-.stat-lab{color:rgba(255,255,255,0.5);font-size:.7rem;font-weight:600;text-transform:uppercase;margin-top:0.25rem}
-.stat-sep{width:1px;height:30px;background:rgba(255,255,255,0.1)}
-.hero-bg-accent{position:absolute;top:-50%;right:-10%;width:60%;height:200%;background:radial-gradient(circle at center, rgba(30,136,229,0.15) 0%, transparent 70%);transform:rotate(-15deg);z-index:1;pointer-events:none}
-.frx-disclaimer{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;border-radius:24px;border:1px solid rgba(245,158,11,.2);background:rgba(255,255,255,0.6);box-shadow:0 10px 30px rgba(0,0,0,0.03);backdrop-filter:blur(15px)}
-.frx-disclaimer-icon{width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 100%);color:#fff;box-shadow:0 10px 20px rgba(245,158,11,.15);font-size:1.2rem;flex-shrink:0}
-.frx-disclaimer-title{margin:0 0 .3rem;color:#92400e;font-size:1rem;font-weight:800}
-.frx-disclaimer-copy p{margin:0;color:#78350f;font-size:.85rem;line-height:1.7}
-.frx-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.frx-card{border-radius:24px;border:1px solid rgba(0,0,0,0.05);background:#fff;box-shadow:0 4px 15px rgba(0,0,0,0.02);transition:all .3s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden}
-.frx-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--accent);opacity:0;transition:opacity .3s}
-.frx-card:hover{box-shadow:0 20px 40px rgba(0,0,0,0.08);transform:translateY(-6px);border-color:rgba(0,0,0,0.1)}
-.frx-card:hover::before{opacity:1}
-.frx-card-link{display:block;padding:1.5rem;text-decoration:none;color:inherit}
-.frx-card-top{display:flex;flex-direction:column;gap:1rem}
-.frx-card-icon{width:3.2rem;height:3.2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:18px;color:#fff;background:var(--accent);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
-.frx-card-info h3{margin:0;font-size:1.1rem;font-weight:800;color:#1e293b}
-.frx-card-info p{margin:.5rem 0 0;color:#64748b;font-size:.85rem;line-height:1.5}
-.frx-card-metric{display:flex;align-items:baseline;gap:.5rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.05)}
-.frx-card-count{font-size:1.5rem;font-weight:800;color:var(--accent)}
-.frx-card-label{font-size:.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.frx-shell{display:grid;gap:0.75rem}
+.frx-hero{padding:1.25rem 1.5rem;border-radius:20px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);box-shadow:0 12px 24px rgba(0,0,0,0.1);overflow:hidden;position:relative}
+.frx-hero-content{position:relative;z-index:2;max-width:900px}
+.frx-kicker{display:inline-flex;align-items:center;gap:.4rem;padding:.2rem .5rem;border-radius:999px;color:rgba(255,255,255,.6);background:rgba(255,255,255,0.05);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.frx-title{margin:.5rem 0 .25rem;color:#fff;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:800;line-height:1.2;letter-spacing:-0.2px}
+.frx-copy{margin:0;color:rgba(255,255,255,.6);font-size:0.9rem;line-height:1.5}
+.frx-disclaimer{display:flex;gap:.75rem;align-items:center;padding:.75rem 1rem;border-radius:18px;border:1px solid rgba(245,158,11,.1);background:rgba(255,255,255,0.5);box-shadow:0 4px 12px rgba(0,0,0,0.02);backdrop-filter:blur(10px)}
+.frx-disclaimer-icon{font-size:1rem;color:#f59e0b;flex-shrink:0}
+.frx-disclaimer-copy p{margin:0;color:#6b4f3a;font-size:.78rem;line-height:1.6}
+.frx-disclaimer-copy p strong{color:#92400e;font-weight:800;display:inline}
+.frx-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
+.frx-card{border-radius:18px;border:1px solid rgba(0,0,0,0.05);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.01);transition:all .2s ease}
+.frx-card:hover{box-shadow:0 8px 16px rgba(0,0,0,0.04);transform:translateY(-2px);border-color:rgba(0,0,0,0.1)}
+.frx-card-link{display:block;padding:1rem;text-decoration:none;color:inherit}
+.frx-card-top{display:flex;align-items:center;gap:.75rem}
+.frx-card-icon{width:2.4rem;height:2.4rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;color:#fff;background:var(--accent);font-size:0.9rem;flex-shrink:0}
+.frx-card-info h3{margin:0;font-size:.9rem;font-weight:800;color:#1e293b}
+.frx-card-info p{margin:.15rem 0 0;color:#64748b;font-size:.75rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.frx-card-metric{display:flex;align-items:baseline;gap:.35rem;margin-top:.75rem;padding-top:.5rem;border-top:1px solid rgba(0,0,0,0.05)}
+.frx-card-count{font-size:1.1rem;font-weight:800;color:var(--accent)}
+.frx-card-label{font-size:.65rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
 @media (max-width:1199.98px){.frx-card-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:2rem 1.5rem}.frx-disclaimer{flex-direction:column;gap:1rem}.frx-disclaimer-icon{width:2.5rem;height:2.5rem;font-size:1rem}}
+@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:1.25rem}.frx-disclaimer{padding:.75rem}}
 </style>
