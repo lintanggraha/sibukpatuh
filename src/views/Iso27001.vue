@@ -20,6 +20,13 @@
           <span class="iso-kicker"><i class="fas fa-compass"></i>Framework Studio</span>
           <h1 class="iso-title">ISO 27001:2022 Control Studio</h1>
           <p class="iso-lede">Halaman ini menyajikan kontrol Annex A dalam tampilan yang mendukung analisa kebijakan, penentuan prioritas implementasi, dan identifikasi kebutuhan bukti audit.</p>
+          <div class="iso-disclaimer-banner">
+            <div class="iso-disclaimer-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="iso-disclaimer-content">
+              <strong>Disclaimer:</strong>
+              <span>Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari standar ISO 27001:2022. Ini <b>bukan</b> teks resmi ISO dan tidak boleh dianggap sebagai pengganti standar asli. Untuk teks otoritatif dan lisensi resmi, silakan kunjungi <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener noreferrer">ISO.org</a> atau <a href="https://www.bsn.go.id" target="_blank" rel="noopener noreferrer">BSN</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan persiapan audit internal.</span>
+            </div>
+          </div>
           <div class="iso-metric-grid">
             <div class="iso-metric"><label>Annex A Controls</label><strong>{{ totalControls }}</strong><span>Kontrol inti yang bisa ditelusuri end-to-end.</span></div>
             <div class="iso-metric"><label>Categories</label><strong>{{ domainBreakdown.length }}</strong><span>Organisasional, Orang, Fisik, dan Teknologi.</span></div>
@@ -332,6 +339,12 @@ export default {
 .iso-kicker{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:rgba(255,250,242,.18);color:rgba(255,250,242,.92);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .iso-title{margin:1rem 0 .7rem;color:#fffaf2;font-size:clamp(2rem,3.8vw,3rem);font-weight:800;line-height:1.04}
 .iso-lede{margin:0;max-width:680px;color:rgba(255,250,242,.82);line-height:1.7}
+.iso-disclaimer-banner{margin-top:1.25rem;padding:1rem 1.25rem;border-radius:16px;background:rgba(255,250,242,.92);border:1px solid rgba(255,255,255,.4);display:flex;gap:1rem;align-items:flex-start}
+.iso-disclaimer-icon{color:#f59e0b;font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.iso-disclaimer-content{color:#1e293b;font-size:.88rem;line-height:1.65}
+.iso-disclaimer-content strong{display:block;margin-bottom:.35rem;color:#b45309;font-size:.9rem}
+.iso-disclaimer-content a{color:#0284c7;text-decoration:underline;font-weight:600}
+.iso-disclaimer-content a:hover{color:#0369a1}
 .iso-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.15rem}
 .iso-metric{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);min-height:96px;display:flex;flex-direction:column;justify-content:flex-start}
 .iso-metric label,.iso-side-card label,.iso-panel-copy strong{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}

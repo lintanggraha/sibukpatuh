@@ -27,6 +27,13 @@
             Ringkasan berbahasa Indonesia untuk membaca prinsip, design factor,
             core model, dan alur implementasi COBIT 2019 dengan lebih cepat.
           </p>
+          <div class="cob-disclaimer-banner">
+            <div class="cob-disclaimer-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="cob-disclaimer-content">
+              <strong>Disclaimer:</strong>
+              <span>Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari framework COBIT 2019 yang diterbitkan oleh ISACA. Ini <b>bukan</b> teks resmi COBIT dan tidak boleh dianggap sebagai pengganti standar asli. Untuk akses lengkap dan lisensi resmi, silakan kunjungi <a href="https://www.isaca.org/resources/cobit" target="_blank" rel="noopener noreferrer">ISACA.org</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan referensi internal.</span>
+            </div>
+          </div>
           <div class="cob-metrics">
             <div class="cob-metric">
               <label>Bab Utama</label><strong>{{ totalChapters }}</strong
@@ -753,6 +760,41 @@ export default {
   color: rgba(255, 250, 242, 0.95);
   font-size: 0.95rem;
   line-height: 1.62;
+}
+.cob-disclaimer-banner {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 250, 242, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.cob-disclaimer-icon {
+  color: #f59e0b;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.cob-disclaimer-content {
+  color: #1e293b;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.cob-disclaimer-content strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #b45309;
+  font-size: 0.9rem;
+}
+.cob-disclaimer-content a {
+  color: #0284c7;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.cob-disclaimer-content a:hover {
+  color: #0369a1;
 }
 .cob-metrics,
 .cob-cards,
