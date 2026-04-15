@@ -9,7 +9,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Pastikan organisasi punya dokumen resmi yang menjelaskan bagaimana keamanan informasi dijalankan. Dokumen ini perlu mendapat persetujuan pimpinan, dibagikan ke seluruh tim, dan rutin dicek agar tetap relevan dengan perkembangan bisnis.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kebijakan untuk keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -29,7 +28,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Jelaskan dengan jelas siapa yang bertanggung jawab atas aspek keamanan apa. Setiap peran harus punya tugas spesifik yang tercatat rapi, sehingga tidak ada tumpang tindih atau celah tanggung jawab.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk peran dan tanggung jawab keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -49,7 +47,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Pisahkan tugas-tugas yang jika dipegang satu orang bisa berpotensi konflik kepentingan. Misalnya, orang yang membuat sistem tidak boleh sama dengan yang memverifikasi keamanannya. Ini membantu mencegah penyalahgunaan wewenang.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan tugas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -69,7 +66,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Pimpinan organisasi harus aktif memastikan bahwa semua karyawan mengikuti aturan keamanan yang sudah ditetapkan. Bukan cuma bikin aturan, tapi juga menagih implementasinya secara konsisten.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tanggung jawab manajemen! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -89,7 +85,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Siapkan daftar kontak penting seperti BSSN, kepolisian (unit cybercrime), atau lembaga regulator terkait. Hubungan baik ini sangat berguna saat organisasi membutuhkan bantuan atau pelaporan insiden.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontak dengan pihak berwenang! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -109,7 +104,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Bergabunglah dengan komunitas profesional keamanan siber seperti ID-SIRTII atau forum CISO Indonesia. Dari sini, tim bisa mendapat update ancaman terbaru dan berbagi pengalaman dengan praktisi lain.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontak dengan kelompok kepentingan khusus! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -129,7 +123,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Kumpulkan informasi tentang ancaman siber yang sedang aktif, lalu analisis dampaknya untuk organisasi. Intelijen ancaman membantu tim bersiap sebelum serangan benar-benar terjadi.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk intelijen ancaman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -149,7 +142,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Setiap proyek—apapun jenisnya—harus memasukkan aspek keamanan informasi sejak perencanaan. Jangan tunggu sampai proyek selesai baru memikirkan keamanan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi dalam manajemen proyek! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -169,7 +161,6 @@
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
     "description": "Buat daftar lengkap semua aset informasi yang dimiliki: laptop, server, database, aplikasi, bahkan data di cloud. Setiap aset harus jelas pemiliknya dan nilai bisnisnya.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk inventarisasi informasi dan aset terkait lainnya! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Spreadsheet inventaris aset atau CMDB",
       "Register klasifikasi data",
@@ -192,7 +183,6 @@
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
     "description": "Buat aturan yang jelas tentang bagaimana karyawan boleh menggunakan aset IT perusahaan. Misalnya, laptop kantor boleh dipakai kerja remote, tapi tidak untuk mining cryptocurrency.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan aset yang dapat diterima! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -212,7 +202,6 @@
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
     "description": "Saat karyawan resign atau pindah divisi, pastikan semua aset yang dipinjamkan—laptop, akses sistem, ID card—dikembalikan. Buat checklist yang terintegrasi dengan proses HR.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengembalian aset! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -232,7 +221,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Klasifikasikan data berdasarkan sensitivitasnya: mana yang boleh publik, mana yang internal, mana yang confidential. Klasifikasi ini jadi dasar untuk menentukan level perlindungan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk klasifikasi informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -252,7 +240,6 @@
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Beri label atau tanda pada setiap dokumen atau file sesuai klasifikasinya. Label ini mengingatkan siapa saja yang menangani tentang level kehati-hatian yang dibutuhkan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pelabelan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -272,7 +259,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
     "description": "Saat mengirim data—entah via email, USB, atau cloud—gunakan metode yang aman sesuai dengan tingkat sensitivitas data. Data rahasia jangan dikirim lewat email biasa tanpa enkripsi.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk transfer informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -292,7 +278,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
     "description": "Atur siapa saja yang boleh mengakses informasi dan aset tertentu. Prinsipnya: berikan akses hanya sejauh yang dibutuhkan untuk menjalankan tugas (least privilege).",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kontrol akses! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -312,7 +297,6 @@
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
     "description": "Kelola identitas digital karyawan dari awal masuk sampai keluar perusahaan. Termasuk pembuatan akun, perubahan role, dan penghapusan akses saat resign.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen identitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -332,7 +316,6 @@
     "concept": "Merespons",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Kelola informasi autentikasi seperti password, token, atau sertifikat digital dengan ketat. Wajibkan penggunaan password yang kuat dan multi-factor authentication untuk sistem-sistem kritis.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk informasi autentikasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -352,7 +335,6 @@
     "concept": "Mengatur",
     "capability": "Manajemen kerentanan teknis",
     "description": "Tentukan hak akses setiap user berdasarkan jabatannya, dan rutin review apakah akses tersebut masih sesuai. Cabut akses yang sudah tidak diperlukan atau saat user pindah peran.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak akses! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -372,7 +354,6 @@
     "concept": "Melindungi",
     "capability": "Kesinambungan bisnis",
     "description": "Evaluasi risiko keamanan yang mungkin timbul dari kerja sama dengan vendor atau pemasok. Pastikan kontrak mencantumkan kewajiban keamanan dan hak audit.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi dalam hubungan pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -392,7 +373,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen aset",
     "description": "Saat menggunakan layanan cloud, pahami model tanggung jawab bersama (shared responsibility). Konfigurasi security setting dengan benar dan monitor aktivitas cloud secara rutin.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penanganan keamanan informasi dalam perjanjian pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -412,7 +392,6 @@
     "concept": "Mendeteksi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Pantau keamanan di sepanjang rantai pasokan TI. Jika ada vendor yang menjadi titik lemah, risiko itu bisa menjalar ke organisasi. Diversifikasi vendor untuk mengurangi risiko.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk mengelola keamanan informasi dalam rantai pasokan tik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -432,7 +411,6 @@
     "concept": "Memulihkan",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Rutin periksa apakah implementasi keamanan sudah sesuai dengan kebijakan dan standar yang ditetapkan. Buat checklist compliance dan track progress remediasi temuan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan, tinjauan, dan manajemen perubahan layanan pemasok! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -452,7 +430,6 @@
     "concept": "Merespons",
     "capability": "Manajemen kerentanan teknis",
     "description": "Aktif berbagi informasi ancaman dengan organisasi lain melalui forum atau ISAC. Kolaborasi ini membantu semua pihak lebih siap menghadapi ancaman yang sama.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi untuk penggunaan layanan cloud! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -472,7 +449,6 @@
     "concept": "Mengatur",
     "capability": "Kesinambungan bisnis",
     "description": "Siapkan rencana keamanan informasi yang mendukung kelangsungan bisnis saat krisis. Identifikasi proses-proses kritis dan tentukan berapa lama sistem boleh down.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perencanaan dan persiapan manajemen insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -492,7 +468,6 @@
     "concept": "Melindungi",
     "capability": "Manajemen aset",
     "description": "Identifikasi semua kewajiban hukum dan regulasi yang berlaku untuk organisasi, seperti UU PDP atau ketentuan OJK. Buat matriks compliance dan assign PIC untuk setiap requirement.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penilaian dan keputusan tentang peristiwa keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -512,7 +487,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Pantau terus perubahan regulasi yang berdampak pada keamanan informasi. Subscribe newsletter BSSN, OJK, atau konsultan hukum untuk tetap update.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk respons terhadap insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -532,7 +506,6 @@
     "concept": "Mendeteksi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Lindungi dokumen-dokumen penting dari penghapusan atau modifikasi yang tidak sah. Tentukan berapa lama dokumen harus disimpan dan bagaimana cara memusnahkannya dengan aman.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk belajar dari insiden keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -552,7 +525,6 @@
     "concept": "Memulihkan",
     "capability": "Manajemen kerentanan teknis",
     "description": "Identifikasi data pribadi yang dikelola organisasi dan pastikan perlindungannya sesuai hukum privasi yang berlaku. Tunjuk DPO jika volume data pribadi yang diproses besar.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengumpulan bukti! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -572,7 +544,6 @@
     "concept": "Merespons",
     "capability": "Kesinambungan bisnis",
     "description": "Ajak pihak independen untuk meninjau efektivitas program keamanan informasi secara berkala. Audit eksternal memberikan perspektif objektif yang mungkin terlewat tim internal.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan informasi selama gangguan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -592,7 +563,6 @@
     "concept": "Mengatur",
     "capability": "Manajemen aset",
     "description": "Integrasikan persyaratan keamanan ke dalam proses pengembangan sistem TI. Lakukan threat modeling dan security review sebelum fitur baru dirilis.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kesiapan tik untuk kelangsungan bisnis! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -612,7 +582,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Pastikan semua aspek legal dari implementasi keamanan sudah dikonsultasikan dengan tim hukum. Termasuk klausul kontrak dengan vendor dan kebijakan internal yang berdampak ke karyawan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk persyaratan hukum, statutori, regulasi, dan kontrak! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -632,7 +601,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Kelola lisensi software dan hak kekayaan intelektual dengan rapi. Gunakan tools untuk tracking usage dan pastikan tidak ada software bajakan yang terinstall.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak kekayaan intelektual! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -652,7 +620,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Lindungi rekaman-rekaman penting seperti log sistem, CCTV, atau backup data dari akses atau modifikasi yang tidak sah. Simpan di tempat yang aman dan terkontrol.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan catatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -672,7 +639,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Pastikan privasi dan perlindungan data pribadi (PII) diimplementasikan sesuai regulasi. Buat prosedur untuk menangani request data subject seperti hak akses atau penghapusan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk privasi dan perlindungan pii! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -692,7 +658,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Lakukan penilaian independen terhadap maturity program keamanan informasi. Gunakan assessor bersertifikasi untuk mendapatkan evaluasi yang kredibel.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tinjauan independen atas keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -712,7 +677,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Monitor kepatuhan terhadap kebijakan keamanan secara berkala. Buat metrics yang mudah dipahami management dan report progress secara rutin.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -732,7 +696,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Kelola dokumentasi keamanan dengan sistem version control yang rapi. Pastikan dokumen yang digunakan tim selalu versi terbaru dan sudah diapprove.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk prosedur operasi yang didokumentasikan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -752,7 +715,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Lakukan pengecekan latar belakang kandidat karyawan sesuai dengan hukum yang berlaku. Cek identitas, pendidikan, dan riwayat kerja. Untuk posisi yang menangani data sensitif, pertimbangkan pengecekan lebih mendalam.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penyaringan latar belakang (screening)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -772,7 +734,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Cantumkan kewajiban keamanan informasi dalam kontrak kerja. Karyawan harus tahu sejak hari pertama bahwa mereka bertanggung jawab menjaga kerahasiaan dan keamanan data perusahaan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk syarat dan ketentuan pekerjaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -792,7 +753,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Adakan program pelatihan keamanan yang berlapis: training onboarding untuk karyawan baru, newsletter bulanan, refreshment tahunan, dan simulasi phishing untuk menguji kewaspadaan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk kesadaran, pendidikan, dan pelatihan keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -812,7 +772,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Buat mekanisme sanksi yang jelas untuk pelanggaran keamanan, mulai dari peringatan lisan hingga tindakan disipliner berat. Sosialisasikan konsekuensi ini agar karyawan paham risikonya.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk proses disipliner! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -832,7 +791,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Ingatkan karyawan yang akan resign tentang kewajiban kerahasiaan yang tetap berlaku meski sudah tidak bekerja di perusahaan. Untuk posisi kritis, pertimbangkan garden leave.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk tanggung jawab setelah penghentian atau perubahan pekerjaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -852,7 +810,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Minta tanda tangan perjanjian kerahasiaan (NDA) dari semua pihak yang akan mengakses informasi sensitif: karyawan, kontraktor, bahkan visitor yang masuk ke area terbatas.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perjanjian kerahasiaan atau non-disclosure! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -872,7 +829,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Buat kebijakan khusus untuk kerja remote yang mencakup kewajiban menggunakan VPN, larangan akses dari WiFi publik, dan panduan setup keamanan di rumah.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk bekerja jarak jauh (remote working)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -892,7 +848,6 @@
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
     "description": "Sediakan saluran pelaporan insiden yang mudah diakses: email khusus, hotline, atau sistem ticketing. Pastikan karyawan tidak ragu melapor karena prosesnya tidak menghakimi.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pelaporan peristiwa keamanan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -912,7 +867,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Tentukan batas fisik area yang perlu dilindungi: pagar gedung, dinding ruang server, atau barrier lainnya. Pastikan tidak ada celah yang bisa dilewati tanpa terdeteksi.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk batas keamanan fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -932,7 +886,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Pasang sistem kontrol akses di semua pintu masuk: access card, biometric, atau security guard. Catat semua pengunjung dan pastikan mereka didampingi saat masuk area sensitif.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk masuk secara fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -952,7 +905,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Perkuat keamanan fisik kantor dan ruang-ruang penting: kunci pintu yang aman, alarm, dan reinforcement untuk dinding atau jendela di area kritis.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk mengamankan kantor, ruangan, dan fasilitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -972,7 +924,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Install CCTV di titik-titik strategis: pintu masuk, koridor, ruang server, dan area parkir. Pastikan rekaman tersimpan minimal 30 hari dan dimonitor secara real-time.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan keamanan fisik! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -992,7 +943,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Identifikasi risiko lingkungan seperti banjir, gempa, atau kebakaran. Pasang fire suppression, water detection, dan lightning arrester sesuai dengan ancaman yang relevan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk melindungi dari ancaman eksternal dan lingkungan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1012,7 +962,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Terapkan aturan ketat untuk siapa saja yang bekerja di area aman: wajib badge, dilarang bawa device pribadi, dilarang foto. Audit kepatuhan secara berkala.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk bekerja di area aman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1032,7 +981,6 @@
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
     "description": "Pastikan utility pendukung seperti listrik, air, internet, dan AC selalu tersedia. Setup redundancy untuk utility kritis: UPS, generator, atau dual ISP.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk meja bersih dan layar bersih! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1052,7 +1000,6 @@
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
     "description": "Jadwalkan perawatan rutin untuk semua peralatan keamanan: CCTV, access control, fire suppression. Track maintenance log dan gunakan vendor yang terpercaya.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemasangan dan perlindungan peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1072,7 +1019,6 @@
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
     "description": "Untuk aset yang dibawa keluar kantor, wajibkan enkripsi dan policy security yang jelas. Track lokasi device mobile dengan GPS jika memungkinkan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan aset di luar lokasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1092,7 +1038,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Batasi penggunaan media penyimpanan eksternal seperti USB flash drive. Jika memang diperlukan, wajibkan enkripsi dan buat prosedur disposal yang aman.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk media penyimpanan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1112,7 +1057,6 @@
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Buat rencana tanggap darurat yang mencakup jalur evakuasi, assembly point, dan kontak darurat. Lakukan drill minimal 2 kali setahun untuk memastikan kesiapan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk utilitas pendukung! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1132,7 +1076,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
     "description": "Lindungi kabel power dan data dari gangguan atau penyadapan: gunakan conduit, raised floor, atau cable tray yang terkunci. Install surge protector untuk perlindungan ekstra.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan kabel! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1152,7 +1095,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
     "description": "Inspeksi fasilitas secara berkala: cek integritas struktur, sistem keamanan api, dan fungsi access control. Track temuan dan pastikan remediasi dilakukan tepat waktu.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemeliharaan peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1172,7 +1114,6 @@
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
     "description": "Saat relokasi kantor atau peralatan, buat plan yang mencakup packing aman, transportasi dengan kendaraan secure, dan setup security di lokasi baru tanpa downtime.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pembuangan aman atau penggunaan kembali peralatan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1192,7 +1133,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Proteksi semua device pengguna akhir—laptop, HP, tablet—dengan EDR (Endpoint Detection & Response). Wajibkan full disk encryption dan remote wipe capability.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perangkat ujung pengguna (endpoint devices)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1212,7 +1152,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Kelola akun-akun dengan hak istimewa (admin, root) dengan ketat. Gunakan PAM (Privileged Access Management) solution dan wajibkan approval untuk setiap penggunaan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk hak akses hak istimewa (privileged access)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1232,7 +1171,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Batasi akses informasi berdasarkan prinsip need-to-know. Review permission secara berkala dan hapus akses default atau guest yang tidak diperlukan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pembatasan akses informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1252,7 +1190,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Batasi akses ke source code hanya untuk developer yang berwenang. Gunakan version control dengan branch protection dan wajibkan code review sebelum merge.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk akses ke kode sumber! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1272,7 +1209,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Implementasi mekanisme autentikasi yang kuat: MFA untuk semua sistem, password policy yang ketat, dan monitoring failed login attempt untuk deteksi brute force.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk autentikasi aman! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1292,7 +1228,6 @@
     "concept": "Mendeteksi",
     "capability": "Kesinambungan bisnis",
     "description": "Monitor penggunaan resource sistem—CPU, memory, disk, network—dan setup alerting jika mendekati kapasitas penuh. Buat capacity plan untuk 6-12 bulan ke depan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen kapasitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1312,7 +1247,6 @@
     "concept": "Memulihkan",
     "capability": "Manajemen aset",
     "description": "Pasang antivirus/anti-malware di semua endpoint dan server. Update signature secara harian, enable real-time scanning, dan educate user tentang bahaya klik link mencurigakan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan terhadap malware! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1332,7 +1266,6 @@
     "concept": "Merespons",
     "capability": "Keamanan sumber daya manusia",
     "description": "Jalankan vulnerability scan secara rutin (minimal bulanan) untuk semua sistem. Prioritaskan remediasi berdasarkan risk score dan patch critical vulnerability dalam 7 hari.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen kerentanan teknis! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1352,7 +1285,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Buat baseline konfigurasi untuk semua perangkat keras. Disable service dan port yang tidak diperlukan, dokumentasikan konfigurasi, dan audit secara berkala.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen konfigurasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1372,7 +1304,6 @@
     "concept": "Melindungi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Buat prosedur penghapusan data yang aman: overwrite untuk HDD, crypto-shred untuk SSD. Gunakan vendor tersertifikasi untuk disposal media dalam jumlah besar.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penghapusan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1392,7 +1323,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Kesinambungan bisnis",
     "description": "Implementasi data masking untuk menyembunyikan informasi sensitif: gunakan teknik scramble atau substitute untuk data testing, dan dynamic data masking untuk query production.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk masking data! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1412,7 +1342,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen aset",
     "description": "Deploy solusi DLP (Data Leak Prevention) untuk mendeteksi dan mencegah transfer data yang tidak sah. Monitor email, upload web, dan transfer USB untuk mendeteksi pelanggaran.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pencegahan kebocoran data (dlp)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1432,7 +1361,6 @@
     "concept": "Memulihkan",
     "capability": "Keamanan sumber daya manusia",
     "description": "Backup data secara rutin mengikuti aturan 3-2-1: 3 copies, 2 jenis media, 1 offsite. Test restore quarterly untuk memastikan backup bisa dipulihkan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk cadangan informasi (backup)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1452,7 +1380,6 @@
     "concept": "Merespons",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Setup redundant server di lokasi berbeda dan implementasi load balancing. Test failover secara berkala dan pastikan RPO/RTO sesuai kebutuhan bisnis.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk redundansi fasilitas pemrosesan informasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1472,7 +1399,6 @@
     "concept": "Mengatur",
     "capability": "Manajemen kerentanan teknis",
     "description": "Enable logging untuk semua sistem kritis dan centralize ke SIEM. Retain log minimal 1 tahun dan monitor secara harian untuk mendeteksi anomali.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pencatatan log (logging)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1492,7 +1418,6 @@
     "concept": "Melindungi",
     "capability": "Kesinambungan bisnis",
     "description": "Monitor aktivitas sistem dan jaringan untuk mendeteksi perilaku mencurigakan: login di waktu tidak biasa, akses data dalam volume tinggi, atau privilege escalation.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemantauan aktivitas! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1512,7 +1437,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Manajemen aset",
     "description": "Sinkronisasi jam semua sistem ke NTP server yang sama dan terpercaya. Ini penting untuk analisis log yang akurat dan korelasi event dari berbagai sumber.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk sinkronisasi jam (clock synchronization)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1532,7 +1456,6 @@
     "concept": "Mendeteksi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Batasi penggunaan program utilitas yang bisa bypass kontrol keamanan. Inventory semua utility, batasi akses ke admin saja, dan log setiap penggunaan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan program utilitas berhak istimewa! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1552,7 +1475,6 @@
     "concept": "Memulihkan",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Implementasi software whitelisting untuk mengontrol aplikasi yang boleh diinstall. Require approval untuk software baru dan test di staging sebelum production.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemasangan perangkat lunak pada sistem operasional! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1572,7 +1494,6 @@
     "concept": "Merespons",
     "capability": "Manajemen kerentanan teknis",
     "description": "Segmentasi jaringan berdasarkan fungsi dan sensitivitas data. Deploy firewall di perimeter dan internal, monitor traffic untuk anomaly, dan update rule secara berkala.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan jaringan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1592,7 +1513,6 @@
     "concept": "Mengatur",
     "capability": "Kesinambungan bisnis",
     "description": "Tentukan SLA keamanan untuk setiap layanan jaringan: availability, latency, dan mekanisme proteksi. Encrypt network traffic dengan TLS dan monitor performa.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk keamanan layanan jaringan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1612,7 +1532,6 @@
     "concept": "Melindungi",
     "capability": "Manajemen aset",
     "description": "Pisahkan jaringan untuk production, staging, development, dan guest. Implementasi VLAN dan firewall rule antar segment, batasi komunikasi cross-segment ke yang necessary saja.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan jaringan (segregation)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1632,7 +1551,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Deploy web proxy dengan filtering capability untuk memblokir akses ke situs berbahaya: malware, phishing, atau konten ilegal. Log web traffic untuk monitoring.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penyaringan web (web filtering)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1652,7 +1570,6 @@
     "concept": "Mendeteksi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Integrasikan keamanan ke dalam SDLC: threat modeling, secure coding guideline, code review, dan penetration testing. Gunakan tools SAST dan DAST untuk automated scanning.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk penggunaan kriptografi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1672,7 +1589,6 @@
     "concept": "Memulihkan",
     "capability": "Manajemen kerentanan teknis",
     "description": "Terapkan prinsip secure engineering: defense in depth, least privilege, dan fail safe. Dokumentasikan security architecture dan review design sebelum implementasi.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk siklus hidup pengembangan aman (sdlc)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1692,7 +1608,6 @@
     "concept": "Merespons",
     "capability": "Kesinambungan bisnis",
     "description": "Tentukan persyaratan keamanan untuk setiap aplikasi berdasarkan jenis data yang diproses. Include requirement untuk authentication, authorization, encryption, dan logging.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk persyaratan keamanan aplikasi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1712,7 +1627,6 @@
     "concept": "Mengatur",
     "capability": "Manajemen aset",
     "description": "Training developer tentang secure coding: OWASP Top 10, input validation, dan output encoding. Gunakan secure coding guideline dan implementasi code review dengan checklist keamanan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk arsitektur sistem aman dan prinsip rekayasa! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1732,7 +1646,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Integrasikan automated security testing di CI/CD pipeline: SAST, SCA, dan secret scanning. Require security gate sebelum deploy dan track vulnerability metrics.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemrograman aman (secure coding)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1752,7 +1665,6 @@
     "concept": "Mengidentifikasi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Lakukan penetration testing tahunan atau setelah perubahan besar. Test semua aplikasi kritis, retest setelah remediasi, dan dokumentasi finding beserta remediation plan.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengujian keamanan dalam pengembangan dan penerimaan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1772,7 +1684,6 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Sertakan persyaratan keamanan dalam kontrak outsourcing. Require vendor untuk mengikuti secure development process dan request evidence security testing sebelum acceptance.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pengembangan pihak ketiga (outsourced)! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1792,7 +1703,6 @@
     "concept": "Memulihkan",
     "capability": "Kesinambungan bisnis",
     "description": "Pisahkan environment development, testing, UAT, dan production. Batasi akses antar environment, gunakan credential berbeda, dan promote code melalui pipeline bukan langsung ke production.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk pemisahan lingkungan pengembangan, pengujian, dan produksi! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1812,7 +1722,6 @@
     "concept": "Merespons",
     "capability": "Manajemen aset",
     "description": "Implementasi proses change management yang terstruktur: request, assess, approve, implement, dan review. Document semua perubahan dan test di staging sebelum production.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk manajemen perubahan! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1832,7 +1741,6 @@
     "concept": "Mengatur",
     "capability": "Keamanan sumber daya manusia",
     "description": "Kelola informasi proyek dengan version control dan access control. Share informasi berdasarkan need-to-know dan backup data proyek secara berkala.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk informasi pengujian! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -1852,7 +1760,6 @@
     "concept": "Melindungi",
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Gunakan data test atau anonymized data untuk audit, lindungi data production saat proses audit. Monitor aktivitas auditor dan batasi akses ke yang necessary saja.",
-    "pandaExplanation": "Anggap ini sebagai standar utama organisasi Anda untuk perlindungan sistem informasi selama audit! Layaknya seekor panda yang tahu mereka hanya boleh memakan bambu, organisasi Anda butuh batasan tertulis yang disetujui manajemen. Pastikan aturannya dibaca dan ditinjau setiap tahun agar tetap relevan.",
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
