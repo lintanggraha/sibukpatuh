@@ -3,7 +3,7 @@
     {
       "id": "HL-01",
       "title": "Lebih fleksibel dan terbuka",
-      "summary": "COBIT 2019 dibuat supaya mudah dipadukan dengan standar, framework, dan regulasi lain tanpa kehilangan struktur utamanya.",
+      "summary": "COBIT 2019 dirancang agar lebih mudah disesuaikan dengan kebutuhan organisasi. Framework ini bisa jadi payung yang menaungi standar lain yang sudah digunakan, tanpa memaksa perubahan total.",
       "details": [
         "Bisa dipakai sebagai payung tata kelola di atas banyak referensi yang sudah dipakai organisasi.",
         "Membuka ruang penyesuaian tanpa memaksa semua organisasi memakai bentuk yang sama persis."
@@ -13,7 +13,7 @@
     {
       "id": "HL-02",
       "title": "Tetap relevan terhadap perubahan",
-      "summary": "Versi 2019 menekankan isu yang lebih aktual seperti transformasi digital, perubahan model operasi, dan tuntutan stakeholder yang bergerak cepat.",
+      "summary": "Versi terbaru ini lebih responsif terhadap perubahan zaman: transformasi digital, model bisnis baru, dan tuntutan stakeholder yang terus berkembang. Organisasi tetap bisa relevan meski lingkungan berubah cepat.",
       "details": [
         "Relevan untuk lingkungan bisnis yang berubah cepat dan sangat bergantung pada informasi serta teknologi.",
         "Membantu organisasi menjaga arah tata kelola tetap nyambung dengan kondisi mutakhir."
@@ -23,7 +23,7 @@
     {
       "id": "HL-03",
       "title": "Penerapan lebih terarah",
-      "summary": "COBIT 2019 menambah design factor dan focus area agar desain tata kelola tidak berhenti di teori, tapi lebih mudah diterjemahkan ke konteks enterprise.",
+      "summary": "Dengan design factor dan focus area, COBIT 2019 membantu organisasi menerjemahkan teori tata kelola ke praktik yang sesuai konteks bisnis masing-masing.",
       "details": [
         "Organisasi bisa memulai dari konteks bisnis, profil risiko, dan cara kerja aktualnya sendiri.",
         "Struktur ini membantu memutuskan prioritas objective yang paling penting lebih dulu."
@@ -33,7 +33,7 @@
     {
       "id": "HL-04",
       "title": "Performance management lebih jelas",
-      "summary": "Framework ini memperjelas cara membaca kinerja dan kapabilitas objective sehingga evaluasi perbaikan bisa lebih konsisten.",
+      "summary": "COBIT 2019 memperkenalkan governance dan management objectives yang lebih terstruktur, memudahkan organisasi memetakan apa yang perlu dikelola dan siapa yang bertanggung jawab.",
       "details": [
         "Memudahkan pembacaan target, kondisi saat ini, dan area yang perlu diperkuat.",
         "Cocok dipakai untuk diskusi roadmap, assurance, dan peningkatan berkelanjutan."
