@@ -1,6 +1,0 @@
-projectKey=lintang.prasetya_sibukpatuh_AZ2FY1HeIGv5U3GvesNl
-serverUrl=https://devsecops-sonar-sast.collega.co.id
-serverVersion=9.9.3.79811
-dashboardUrl=https://devsecops-sonar-sast.collega.co.id/dashboard?id=lintang.prasetya_sibukpatuh_AZ2FY1HeIGv5U3GvesNl
-ceTaskId=AZ2GCYNoIGv5U3GvesPq
-ceTaskUrl=https://devsecops-sonar-sast.collega.co.id/api/ce/task?id=AZ2GCYNoIGv5U3GvesPq
