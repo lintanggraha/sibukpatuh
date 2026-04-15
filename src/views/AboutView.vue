@@ -19,12 +19,36 @@
             <p><strong>SibukPatuh</strong> adalah aplikasi web edukatif untuk mempelajari struktur, istilah, dan konteks berbagai framework serta regulasi teknologi informasi, baik nasional maupun internasional.</p>
 
             <p>Aplikasi ini dibuat untuk membantu tim IT, auditor, dan compliance officer dalam:</p>
-            <ul class="feature-list mb-4">
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Memahami struktur materi</strong> dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Membaca ringkasan edukatif</strong> tanpa harus membuka dokumen satu per satu di tahap awal</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Menelusuri istilah dan tema utama</strong> per domain, kategori, atau topik</li>
-              <li><i class="fas fa-check-circle text-success me-2"></i> <strong>Membandingkan acuan</strong> sebagai bahan belajar dan diskusi internal</li>
-            </ul>
+            <div class="feature-grid mb-5">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="feature-content">
+                  <h5 class="fw-bold mb-1">Memahami struktur materi</h5>
+                  <p class="mb-0 text-muted small">Dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="feature-content">
+                  <h5 class="fw-bold mb-1">Membaca ringkasan edukatif</h5>
+                  <p class="mb-0 text-muted small">Tanpa harus membuka dokumen satu per satu di tahap awal pencarian referensi</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="feature-content">
+                  <h5 class="fw-bold mb-1">Menelusuri istilah utama</h5>
+                  <p class="mb-0 text-muted small">Per domain, kategori, atau topik untuk mempermudah pemahaman tim</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="feature-content">
+                  <h5 class="fw-bold mb-1">Membandingkan acuan</h5>
+                  <p class="mb-0 text-muted small">Sebagai bahan belajar kros-mapping dan diskusi internal manajemen risiko</p>
+                </div>
+              </div>
+            </div>
 
             <div class="alert alert-warning d-flex align-items-start shadow-sm border-0 rounded-4" role="alert">
               <i class="fas fa-exclamation-triangle fs-3 me-3 mt-1 text-warning"></i>
@@ -85,9 +109,12 @@ export default {
 .about-subtitle{color:#64748b;font-size:1.1rem;font-weight:500}
 .about-card{background:rgba(255,255,255,0.7);border-radius:32px;border:1px solid rgba(255,255,255,0.4);box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);backdrop-filter:blur(20px);overflow:hidden;transition:transform .3s ease}
 .about-card:hover{transform:translateY(-4px)}
-.feature-list{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
-.feature-list li{background:rgba(255,255,255,0.5);padding:1rem;border-radius:18px;border:1px solid rgba(0,0,0,0.03);display:flex;align-items:center;gap:.75rem;font-size:.95rem;color:#334155;transition:all .2s}
-.feature-list li:hover{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.02);transform:translateX(4px)}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.feature-item{background:rgba(255,255,255,0.4);padding:1.25rem;border-radius:20px;border:1px solid rgba(0,0,0,0.02);display:flex;align-items:flex-start;gap:1rem;transition:all .3s ease}
+.feature-item:hover{background:#fff;transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.03)}
+.feature-icon{color:#10b981;font-size:1.2rem;margin-top:2px}
+.feature-content h5{font-size:.95rem;color:#0f172a}
+.feature-content p{font-size:.8rem;line-height:1.5}
 .header-with-line{position:relative;padding-bottom:1rem;margin-bottom:2rem}
 .header-with-line::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:4px;background:#0f172a;border-radius:2px}
 .avatar-circle{width:100px;height:100px;border-radius:30px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);color:#0f172a;display:flex;align-items:center;justify-content:center;font-size:3rem;box-shadow:0 10px 25px rgba(0,0,0,0.05)}
