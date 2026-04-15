@@ -1,5 +1,18 @@
 # SibukPatuh - Sistem Informasi Biar Update Kepatuhan
 
+## ⚠️ Disclaimer Penting
+
+**Konten edukatif — bukan pengganti standar resmi:**
+
+- Data untuk **ISO 27001:2022** dan **COBIT 2019** yang tersedia di repositori ini adalah **ringkasan edukatif** berdasarkan interpretasi kami, **bukan** teks resmi dari ISO atau ISACA.
+- Untuk standar asli dan lisensi resmi, silakan kunjungi:
+  - ISO 27001: [https://www.iso.org/isoiec-27001-information-security.html](https://www.iso.org/isoiec-27001-information-security.html) atau [BSN](https://www.bsn.go.id)
+  - COBIT 2019: [https://www.isaca.org/resources/cobit](https://www.isaca.org/resources/cobit)
+- Repositori ini dibuat untuk tujuan **edukasi dan pembelajaran**, bukan untuk penggunaan komersial yang mengklaim sebagai pengganti standar resmi.
+- Penggunaan konten ini sepenuhnya menjadi tanggung jawab pengguna.
+
+---
+
 ## 📖 Tentang Aplikasi
 
 **SibukPatuh** adalah aplikasi web untuk mengelola dan memantau kepatuhan terhadap berbagai framework regulasi teknologi informasi — baik nasional maupun internasional.
