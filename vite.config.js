@@ -18,7 +18,7 @@ function copyDataFiles() {
         
         const files = [
           'nist_csf.json',
-          'cobit_2019_intro_methodology.json',
+          'cobit_2019.json',
           'seojk_requirements.json',
           'seojk_resilience_guidance.json',
           'pbi_022024_requirements.json',

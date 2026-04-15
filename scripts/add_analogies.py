@@ -183,7 +183,7 @@ def get_resilience_analogy(i, theme):
 
 files_config = [
     ('iso27001.json', get_iso_analogy, 'controls'),
-    ('cobit_2019_intro_methodology.json', get_cobit_analogy, None),  # nested structure
+    ('cobit_2019.json', get_cobit_analogy, None),  # nested structure
     ('seojk_requirements.json', get_seojk_analogy, 'requirements'),
     ('pbi_022024_requirements.json', get_pbi_analogy, 'requirements'),
     ('seojk_resilience_guidance.json', get_resilience_analogy, None),  # flat array

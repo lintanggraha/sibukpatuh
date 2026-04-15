@@ -1,12 +1,14 @@
 import fs from 'fs';
 
-// Proper translations for ISO 27001:2022 controls with unique analogies
+// Proper translations for ISO 27001:2022 controls with unique analogies, focus areas, and implementation tips
 const translations = {
   // Theme 5: Organizational Controls (5.1 - 5.37)
   "5.1": {
     name: "Kebijakan keamanan informasi",
     description: "Kebijakan keamanan informasi harus didefinisikan, disetujui oleh manajemen, dipublikasikan, dan dikomunikasikan kepada personel dan pihak berkepentingan terkait.",
-    analogy: "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya."
+    analogy: "Seperti kompas yang memberi arah dalam perjalanan, kebijakan keamanan memberi panduan jelas bagi seluruh organisasi tentang apa yang harus dilindungi dan bagaimana caranya.",
+    focusArea: "Tata Kelola & Kebijakan",
+    implementationTips: "Mulai dengan membuat draft kebijakan yang sederhana dan relevan dengan bisnis. Libatkan C-level untuk approval, lalu sosialisasi ke seluruh karyawan melalui email blast dan briefing. Review kebijakan minimal setahun sekali atau saat ada perubahan regulasi signifikan."
   },
   "5.2": {
     name: "Peran dan tanggung jawab keamanan informasi",

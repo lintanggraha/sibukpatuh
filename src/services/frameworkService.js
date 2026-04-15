@@ -90,7 +90,7 @@ export const nistService = {
  */
 export const cobitService = {
   async getData() {
-    return fetchData('cobit_2019_intro_methodology.json', 'Failed to load COBIT 2019 data');
+    return fetchData('cobit_2019.json', 'Failed to load COBIT 2019 data');
   },
 };
 

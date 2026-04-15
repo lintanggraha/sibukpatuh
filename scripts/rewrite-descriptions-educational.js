@@ -151,7 +151,7 @@ isoData.forEach(control => {
 fs.writeFileSync('./public/data/iso27001.json', JSON.stringify(isoData, null, 2), 'utf8');
 
 // Update COBIT 2019
-const cobitData = JSON.parse(fs.readFileSync('./public/data/cobit_2019_intro_methodology.json', 'utf8'));
+const cobitData = JSON.parse(fs.readFileSync('./public/data/cobit_2019.json', 'utf8'));
 
 // Update highlights summaries
 if (cobitData.highlights && cobitData.highlights.length > 0) {
@@ -180,7 +180,7 @@ if (cobitData.designFactors) {
   });
 }
 
-fs.writeFileSync('./public/data/cobit_2019_intro_methodology.json', JSON.stringify(cobitData, null, 2), 'utf8');
+fs.writeFileSync('./public/data/cobit_2019.json', JSON.stringify(cobitData, null, 2), 'utf8');
 
 console.log('✅ ISO 27001: Updated descriptions for', Object.keys(isoDescriptions).length, 'controls');
 console.log('✅ COBIT 2019: Updated highlights, principles, and design factors');

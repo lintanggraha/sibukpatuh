@@ -158,7 +158,7 @@ export default {
     ] = await Promise.all([
       loadData("/data/iso27001.json"),
       loadData("/data/nist_csf.json"),
-      loadData("/data/cobit_2019_intro_methodology.json", "principles_system"),
+      loadData("/data/cobit_2019.json", "principles_system"),
       loadData("/data/seojk_requirements.json"),
       loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
