@@ -1,36 +1,43 @@
 <template>
   <div class="frx-shell">
     <section class="frx-hero">
-      <div>
-        <span class="frx-kicker"><i class="fas fa-compass"></i>SibukPatuh</span>
-        <h1 class="frx-title">Ruang Belajar Framework dan Regulasi Siber</h1>
+      <div class="frx-hero-content">
+        <span class="frx-kicker">
+          <span class="pulse-dot"></span>
+          <i class="fas fa-compass"></i> Platform Navigasi Edukatif
+        </span>
+        <h1 class="frx-title">Ruang Belajar Framework & Regulasi Siber</h1>
         <p class="frx-copy">
-          <strong>SibukPatuh</strong> adalah aplikasi edukatif untuk membantu tim IT, auditor,
-          risk officer, dan pembelajar keamanan siber memahami struktur, istilah penting, serta
-          gambaran umum berbagai acuan seperti <strong>ISO 27001, NIST CSF, COBIT 2019</strong>
-          hingga regulasi nasional seperti <strong>SEOJK, Panduan Resiliensi OJK, dan PBI 02/2024</strong>
-          dalam satu tempat yang lebih terstruktur.
+          <strong>SibukPatuh</strong> hadir sebagai sarana pembelajaran interaktif untuk memahami struktur, istilah, 
+          dan konsep utama berbagai standar keamanan siber internasional serta regulasi nasional dalam satu antarmuka yang modern.
         </p>
-        <p class="frx-features">
-          <span><i class="fas fa-check-circle"></i>Pelajari struktur, konsep, dan topik utama tiap acuan</span>
-          <span><i class="fas fa-check-circle"></i>Telusuri ringkasan per domain, kategori, dan tema</span>
-          <span><i class="fas fa-check-circle"></i>Gunakan sebagai bahan belajar awal sebelum baca dokumen resmi</span>
-        </p>
+        <div class="frx-hero-stats">
+          <div class="stat-item">
+            <span class="stat-val">{{ readyCount }}/{{ frameworkCount }}</span>
+            <span class="stat-lab">Framework Siap</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-val">{{ formatNumber(totalRecords) }}+</span>
+            <span class="stat-lab">Poin Pembelajaran</span>
+          </div>
+        </div>
       </div>
+      <div class="hero-bg-accent"></div>
     </section>
 
     <section class="frx-disclaimer" aria-label="Disclaimer edukatif">
       <div class="frx-disclaimer-icon">
-        <i class="fas fa-exclamation-triangle"></i>
+        <i class="fas fa-exclamation-circle"></i>
       </div>
       <div class="frx-disclaimer-copy">
-        <strong>Disclaimer ISO 27001 dan COBIT 2019</strong>
+        <h5 class="frx-disclaimer-title">Penting: Batasan Materi & Edukasi</h5>
         <p>
-          Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun sebagai
-          <strong>ringkasan, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan teks resmi,
+          Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai
+          <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi,
           bukan reproduksi penuh, dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA.
-          Penyebutan nama standar dilakukan hanya untuk mengidentifikasi topik edukasi. Untuk kebutuhan
-          audit, sertifikasi, maupun referensi formal, selalu rujuk dokumen resmi dari penerbit terkait.
+          Penyebutan nama standar dilakukan hanya untuk mempermudah identifikasi topik pembelajaran. Untuk kebutuhan
+          audit, sertifikasi, atau referensi formal, harap selalu merujuk pada dokumen standar resmi yang berlaku.
         </p>
       </div>
     </section>
@@ -195,32 +202,37 @@ export default {
 </script>
 
 <style scoped>
-.frx-shell{display:grid;gap:1rem}
-.frx-hero{padding:.8rem 1rem;border-radius:18px;background:radial-gradient(circle at top right,rgba(247,209,153,.9),transparent 32%),radial-gradient(circle at bottom left,rgba(149,203,212,.72),transparent 30%),linear-gradient(135deg,#17324d 0%,#1d5d73 50%,#eedab7 100%);box-shadow:0 18px 36px rgba(15,23,42,.08);overflow:hidden;position:relative}
-.frx-hero>*{position:relative;z-index:1}
-.frx-kicker{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .55rem;border-radius:999px;color:rgba(255,250,242,.92);background:rgba(255,250,242,.16);font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-.frx-title{margin:.5rem 0 .25rem;color:#fffaf2;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;line-height:1.1}
-.frx-copy{margin:0;color:rgba(255,250,242,.8);font-size:.85rem;line-height:1.6}
-.frx-copy strong{color:#fffaf2}
-.frx-features{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.65rem;padding-top:.55rem;border-top:1px solid rgba(255,255,255,.15)}
-.frx-features span{display:inline-flex;align-items:center;gap:.3rem;color:rgba(255,250,242,.75);font-size:.76rem;font-weight:600}
-.frx-features i{color:rgba(255,250,242,.5);font-size:.7rem}
-.frx-disclaimer{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:flex-start;padding:.9rem 1rem;border-radius:18px;border:1px solid rgba(22,50,75,.08);background:rgba(255,251,240,.92);box-shadow:0 10px 24px rgba(15,23,42,.05)}
-.frx-disclaimer-icon{width:2.4rem;height:2.4rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(135deg,#d97706 0%,#b45309 100%);color:#fff7ed;box-shadow:0 10px 18px rgba(180,83,9,.18);font-size:.9rem}
-.frx-disclaimer-copy strong{display:block;margin-bottom:.2rem;color:#7c2d12;font-size:.84rem}
-.frx-disclaimer-copy p{margin:0;color:#6b4f3a;font-size:.78rem;line-height:1.65}
-.frx-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
-.frx-card{border-radius:14px;border:1px solid rgba(22,50,75,.08);background:rgba(255,255,255,.85);box-shadow:0 8px 18px rgba(15,23,42,.04);transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
-.frx-card:hover{border-color:rgba(22,50,75,.18);box-shadow:0 12px 24px rgba(15,23,42,.08);transform:translateY(-2px)}
-.frx-card-link{display:block;padding:.7rem .85rem;text-decoration:none;color:inherit}
-.frx-card-top{display:flex;align-items:center;gap:.65rem}
-.frx-card-icon{width:2.2rem;height:2.2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;color:#fffaf2;background:linear-gradient(135deg,var(--accent) 0%,rgba(22,50,75,.9) 100%);box-shadow:0 8px 14px rgba(15,23,42,.1);flex-shrink:0;font-size:.85rem}
-.frx-card-info{flex:1;min-width:0}
-.frx-card-info h3{margin:0;font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.frx-card-info p{margin:.15rem 0 0;color:#5c6776;line-height:1.45;font-size:.75rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.frx-card-metric{display:flex;align-items:baseline;gap:.35rem;margin-top:.55rem;padding-top:.55rem;border-top:1px solid rgba(22,50,75,.06)}
-.frx-card-count{font-size:1.15rem;font-weight:800;color:var(--accent);line-height:1}
-.frx-card-label{font-size:.68rem;font-weight:700;color:#5c6776;text-transform:uppercase;letter-spacing:.06em}
+.frx-shell{display:grid;gap:1.5rem}
+.frx-hero{padding:2.5rem 2rem;border-radius:28px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);box-shadow:0 20px 50px rgba(0,0,0,0.15);overflow:hidden;position:relative}
+.frx-hero-content{position:relative;z-index:2;max-width:800px}
+.frx-kicker{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .8rem;border-radius:999px;color:rgba(255,255,255,.9);background:rgba(255,255,255,0.08);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(255,255,255,0.1)}
+.pulse-dot{width:6px;height:6px;background:#10b981;border-radius:50%;box-shadow:0 0 0 0 rgba(16,185,129,.4);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+.frx-title{margin:1rem 0 .75rem;color:#fff;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;line-height:1.2;letter-spacing:-0.5px}
+.frx-copy{margin:0;color:rgba(255,255,255,.7);font-size:1rem;line-height:1.6}
+.frx-hero-stats{display:flex;align-items:center;gap:1.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1)}
+.stat-item{display:flex;flex-direction:column}
+.stat-val{color:#fff;font-size:1.4rem;font-weight:800;line-height:1}
+.stat-lab{color:rgba(255,255,255,0.5);font-size:.7rem;font-weight:600;text-transform:uppercase;margin-top:0.25rem}
+.stat-sep{width:1px;height:30px;background:rgba(255,255,255,0.1)}
+.hero-bg-accent{position:absolute;top:-50%;right:-10%;width:60%;height:200%;background:radial-gradient(circle at center, rgba(30,136,229,0.15) 0%, transparent 70%);transform:rotate(-15deg);z-index:1;pointer-events:none}
+.frx-disclaimer{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;border-radius:24px;border:1px solid rgba(245,158,11,.2);background:rgba(255,255,255,0.6);box-shadow:0 10px 30px rgba(0,0,0,0.03);backdrop-filter:blur(15px)}
+.frx-disclaimer-icon{width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 100%);color:#fff;box-shadow:0 10px 20px rgba(245,158,11,.15);font-size:1.2rem;flex-shrink:0}
+.frx-disclaimer-title{margin:0 0 .3rem;color:#92400e;font-size:1rem;font-weight:800}
+.frx-disclaimer-copy p{margin:0;color:#78350f;font-size:.85rem;line-height:1.7}
+.frx-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.frx-card{border-radius:24px;border:1px solid rgba(0,0,0,0.05);background:#fff;box-shadow:0 4px 15px rgba(0,0,0,0.02);transition:all .3s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden}
+.frx-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--accent);opacity:0;transition:opacity .3s}
+.frx-card:hover{box-shadow:0 20px 40px rgba(0,0,0,0.08);transform:translateY(-6px);border-color:rgba(0,0,0,0.1)}
+.frx-card:hover::before{opacity:1}
+.frx-card-link{display:block;padding:1.5rem;text-decoration:none;color:inherit}
+.frx-card-top{display:flex;flex-direction:column;gap:1rem}
+.frx-card-icon{width:3.2rem;height:3.2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:18px;color:#fff;background:var(--accent);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+.frx-card-info h3{margin:0;font-size:1.1rem;font-weight:800;color:#1e293b}
+.frx-card-info p{margin:.5rem 0 0;color:#64748b;font-size:.85rem;line-height:1.5}
+.frx-card-metric{display:flex;align-items:baseline;gap:.5rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.05)}
+.frx-card-count{font-size:1.5rem;font-weight:800;color:var(--accent)}
+.frx-card-label{font-size:.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
 @media (max-width:1199.98px){.frx-card-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:.9rem}.frx-disclaimer{grid-template-columns:1fr}}
+@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:2rem 1.5rem}.frx-disclaimer{flex-direction:column;gap:1rem}.frx-disclaimer-icon{width:2.5rem;height:2.5rem;font-size:1rem}}
 </style>

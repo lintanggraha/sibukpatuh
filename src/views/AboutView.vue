@@ -3,11 +3,13 @@
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="about-header text-center mb-5">
-          <div class="about-icon mb-3">
-            <i class="fas fa-graduation-cap"></i>
+          <div class="about-icon-wrapper mb-3">
+            <div class="about-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
           </div>
           <h1 class="about-title">Tentang SibukPatuh</h1>
-          <p class="about-subtitle text-muted">Menjadikan pembelajaran framework keamanan lebih mudah diakses</p>
+          <p class="about-subtitle">Platform Navigasi & Eksplorasi Framework Keamanan Siber</p>
         </div>
 
         <div class="about-card mb-4">
@@ -75,122 +77,24 @@ export default {
 </script>
 
 <style scoped>
-.about-container {
-  padding: 1rem 0 3rem;
-  animation: fadeIn 0.4s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.about-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #16324b 0%, #1f6f78 100%);
-  color: white;
-  font-size: 2rem;
-  box-shadow: 0 10px 25px rgba(22, 50, 75, 0.2);
-}
-
-.about-title {
-  color: var(--ink);
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.about-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.04);
-  backdrop-filter: blur(12px);
-  overflow: hidden;
-}
-
-.bg-light-gradient {
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.95), rgba(245, 248, 250, 0.9));
-}
-
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.feature-list li {
-  margin-bottom: 0.8rem;
-  font-size: 1.05rem;
-  color: #3b424d;
-}
-
-.header-with-line {
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.header-with-line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--active);
-  border-radius: 3px;
-}
-
-.avatar-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--active-soft);
-  color: var(--active);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  box-shadow: inset 0 0 0 2px rgba(20, 78, 114, 0.1);
-}
-
-.btn-contact {
-  font-weight: 600;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  transition: all 0.2s;
-}
-
-.btn-contact:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(20, 78, 114, 0.15);
-}
-
-.btn-primary {
-  background-color: var(--active);
-  border-color: var(--active);
-}
-
-.btn-outline-primary {
-  color: var(--active);
-  border-color: var(--active);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--active);
-  border-color: var(--active);
-  color: white;
-}
-
-.alert-warning {
-  background-color: rgba(255, 193, 7, 0.1) !important;
-  border-left: 4px solid #ffc107 !important;
-}
-
-.alert-heading {
-  color: #b38600;
-}
+.about-container{padding:2rem 0 4rem;animation:fadeInUp .6s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.about-icon-wrapper{display:flex;justify-content:center}
+.about-icon{width:4.5rem;height:4.5rem;display:inline-flex;align-items:center;justify-content:center;border-radius:22px;background:linear-gradient(135deg,#0f172a 0%,#334155 100%);color:#fff;font-size:2rem;box-shadow:0 15px 35px rgba(15,23,42,0.15)}
+.about-title{color:#0f172a;font-weight:900;font-size:2.5rem;letter-spacing:-1px;margin-bottom:.5rem}
+.about-subtitle{color:#64748b;font-size:1.1rem;font-weight:500}
+.about-card{background:rgba(255,255,255,0.7);border-radius:32px;border:1px solid rgba(255,255,255,0.4);box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);backdrop-filter:blur(20px);overflow:hidden;transition:transform .3s ease}
+.about-card:hover{transform:translateY(-4px)}
+.feature-list{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.feature-list li{background:rgba(255,255,255,0.5);padding:1rem;border-radius:18px;border:1px solid rgba(0,0,0,0.03);display:flex;align-items:center;gap:.75rem;font-size:.95rem;color:#334155;transition:all .2s}
+.feature-list li:hover{background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.02);transform:translateX(4px)}
+.header-with-line{position:relative;padding-bottom:1rem;margin-bottom:2rem}
+.header-with-line::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:4px;background:#0f172a;border-radius:2px}
+.avatar-circle{width:100px;height:100px;border-radius:30px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);color:#0f172a;display:flex;align-items:center;justify-content:center;font-size:3rem;box-shadow:0 10px 25px rgba(0,0,0,0.05)}
+.btn-contact{font-weight:700;padding:.8rem 1.6rem;letter-spacing:-0.2px;transition:all .3s cubic-bezier(0.4,0,0.2,1)}
+.btn-contact:hover{transform:translateY(-3px);box-shadow:0 12px 20px rgba(15,23,42,0.1)}
+.btn-primary{background:#0f172a;border-color:#0f172a}
+.btn-outline-primary{color:#0f172a;border-color:#0f172a}
+.alert-warning{background:rgba(251,191,36,0.1) !important;border:1px solid rgba(251,191,36,0.2) !important;border-radius:20px !important}
+.alert-heading{color:#92400e;font-size:1rem}
 </style>
