@@ -118,6 +118,16 @@ export default {
               label: "COBIT 2019",
               icon: "fa-project-diagram",
             },
+            {
+              routeName: "owasp_top10",
+              label: "OWASP Top 10",
+              icon: "fa-bug",
+            },
+            {
+              routeName: "owasp_asvs",
+              label: "OWASP ASVS",
+              icon: "fa-check-double",
+            },
           ],
         },
       ],
@@ -173,7 +183,9 @@ export default {
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||
         route.name === "nist" ||
-        route.name === "cobit";
+        route.name === "cobit" ||
+        route.name === "owasp_top10" ||
+        route.name === "owasp_asvs";
       
       // Sync with Pinia store
       const store = useFrameworkStore();

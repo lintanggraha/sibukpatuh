@@ -1,0 +1,194 @@
+[
+  {
+    "id": "V1",
+    "chapter": "V1",
+    "chapter_title": "Architecture, Design and Threat Modeling",
+    "pillar": "Architecture",
+    "title": "Dokumentasikan arsitektur berdasar profil risiko",
+    "summary": "Bab ini berfokus pada langkah-langkah tata kelola keamanan perangkat lunak sebelum pengkodean dimulai, termasuk threat modeling dan perancangan layer akses.",
+    "cadence": "Di awal perancangan dan saat ada rilis besar",
+    "owner": "Security Architect, Product Owner",
+    "scoring": "Kriteria Utama Level 1-3",
+    "appendices": ["L1", "L2", "L3"],
+    "focus": [
+      "Lakukan modeling ancaman terstruktur (Threat Modeling) sebelum rilis.",
+      "Pisahkan komponen backend berdasarkan level kepercayaan.",
+      "Gunakan library dan framework keamanan standar alih-alih membangun sendiri."
+    ],
+    "evidence": [
+      "Dokumen arsitektur dan threat model diagram.",
+      "Daftar keputusan manajemen risiko produk.",
+      "Bukti tinjauan penggunaan library kriptografi standar."
+    ],
+    "reporting": "Prasyarat wajib sebelum fase deployment.",
+    "analogy": "Seperti menggambar denah rumah dengan memisahkan area tamu dan area perhiasan pribadi."
+  },
+  {
+    "id": "V2",
+    "chapter": "V2",
+    "chapter_title": "Authentication",
+    "pillar": "Authentication",
+    "title": "Verifikasi identitas pengguna secara ketat",
+    "summary": "Menjamin verifikasi identitas (otentikasi) yang mencakup pengelolaan kata sandi, biometrik, pengelolaan integrasi pihak ketiga, dan perlindungan dari brute-force.",
+    "cadence": "Tinjauan berkala dan PenTest",
+    "owner": "IAM Team, Developer",
+    "scoring": "Syarat Mutlak Level 2",
+    "appendices": ["L1", "L2", "L3"],
+    "focus": [
+      "Gunakan standar pembatasan rate-limiting untuk semua endpoint login.",
+      "Terapkan keamanan kredensial Multi-Factor (MFA) untuk data di level L2 ke atas.",
+      "Tolak password yang telah bocor (breached password list)."
+    ],
+    "evidence": [
+      "Validasi logika login yang mencegah timing-attacks.",
+      "Log monitoring pembatasan percobaan login.",
+      "Syarat MFA diaktifkan di sisi IAM portal."
+    ],
+    "reporting": "Titik kritis penilaian akses data.",
+    "analogy": "Pengecekan KTP dan sidik jari sebelum masuk ruang brankas bank."
+  },
+  {
+    "id": "V3",
+    "chapter": "V3",
+    "chapter_title": "Session Management",
+    "pillar": "Authentication",
+    "title": "Kelola siklus hidup sesi pengguna",
+    "summary": "Sesi menyediakan stateful interaction lewat HTTP. Verifikasi yang lemah membuka peluang pembajakan sesi (Session Hijacking).",
+    "cadence": "Pengujian fungsionalitas Logout & Inactivity",
+    "owner": "Developer",
+    "scoring": "Wajib di semua Level",
+    "appendices": ["L1", "L2", "L3"],
+    "focus": [
+      "Gunakan cookie dengan atribut HttpOnly, Secure, dan SameSite.",
+      "Inisialisasi ulang token sesi setelah otentikasi berhasil (mencegah Session Fixation).",
+      "Tetapkan waktu kedaluwarsa absolut dan waktu inaktif."
+    ],
+    "evidence": [
+      "Set-Cookie headers diperiksa via scanner DAST.",
+      "Token sesi ditarik (revoked) di sisi server pasca logout.",
+      "Token sesi memiliki entropi minimal 128 bit."
+    ],
+    "reporting": "Kerentanan sering muncul di area ini menyebabkan ATO (Account Take Over).",
+    "analogy": "Memberikan karcis parkir sementara yang otomatis hangus saat mobil telah keluar gerbang."
+  },
+  {
+    "id": "V4",
+    "chapter": "V4",
+    "chapter_title": "Access Control",
+    "pillar": "Authentication",
+    "title": "Otorisasi tindakan via kontrol hak akses terpusat",
+    "summary": "Memastikan pengguna tidak dapat mengakses data di luar wewenangnya (BOLA/IDOR dan Vertical Privilege Escalation).",
+    "cadence": "Tinjauan di tiap fitur/endpoint baru",
+    "owner": "Security Tester, Developer",
+    "scoring": "Risiko Ekstrem bila gagal",
+    "appendices": ["L1", "L2", "L3"],
+    "focus": [
+      "Verifikasi setiap permintaan terhadap matriks izin sisi server, bukan dari filter klien.",
+      "Terapkan pemisahan tegas antara API Panel Admin dan User Publik.",
+      "Cegah Path Traversal di endpoint otorisasi file."
+    ],
+    "evidence": [
+      "Matrix Access Control terdokumentasi dan diuji via Unit Tests.",
+      "Kegagalan manipulasi UUID milik user lain dalam merubah state.",
+      "Log pelaporan bypass akses ke panel admin."
+    ],
+    "reporting": "Kewajiban paling krusial di OWASP Top 10.",
+    "analogy": "Walau punya tiket menonton kelas ekonomi, satpam memastikan Anda tak bisa loncat ke kursi VIP."
+  },
+  {
+    "id": "V5",
+    "chapter": "V5",
+    "chapter_title": "Validation, Sanitization and Encoding",
+    "pillar": "Validation",
+    "title": "Kendali data masukan dari eksternal",
+    "summary": "Melindungi sistem dari injeksi kueri, XSS, dan deserialisasi. Data eksternal yang tidak dipercaya harus dipandang berisiko tinggi.",
+    "cadence": "Validasi input pada level library dan middleware",
+    "owner": "Developer",
+    "scoring": "Syarat Pokok Level 1",
+    "appendices": ["L1", "L2", "L3"],
+    "focus": [
+      "Terapkan validasi allow-list (positive validation) baik tipe data maupun batas format.",
+      "Encode (sanitize) data saat dirender kembali sebagai output (mencegah XSS).",
+      "Ganti metode insecure deserialization dengan tipe primitif JSON murni bila memungkinkan."
+    ],
+    "evidence": [
+      "Fuzzing test pada parameter string tidak memicu fatal error di server.",
+      "Penggunaan framework modern (ex: Vue/React) yang melindungi DOM XSS bawaan.",
+      "Pengaturan query db berbasis ORM/Prepared Statements."
+    ],
+    "reporting": "Lolos pengujian Dynamic Application Security Testing (DAST).",
+    "analogy": "Detektor logam di pintu bandara untuk menolak dan menyita barang berbahaya yang coba diselundupkan."
+  },
+  {
+    "id": "V6",
+    "chapter": "V6",
+    "chapter_title": "Stored Cryptography",
+    "pillar": "Data Protection",
+    "title": "Lindungi keberadaan data sensitif secara offline",
+    "summary": "Tata cara pengamanan data sandi, rahasia, finansial, dan kesehatan yang ditulis di dalam database atau diska (Data at Rest).",
+    "cadence": "Audit kriptologi tahunan",
+    "owner": "Security Architect, DBA",
+    "scoring": "Tingkat jaminan tinggi (Level 2 & 3)",
+    "appendices": ["L2", "L3"],
+    "focus": [
+      "Lindungi password user menggunakan algoritma Hashing berbasis GPU-resistant (Argon2id, PBKDF2).",
+      "Kelola kunci Kriptografi (Key Management) secara terpisah lewat KMS atau Vault.",
+      "Jangan buat rutinitas enkripsi buatan sendiri (Roll-Your-Own)."
+    ],
+    "evidence": [
+      "Bukti parameter key-wrapping (KEK/DEK) pada data pelanggan.",
+      "Salt unik untuk setiap hash password.",
+      "Daftar masa aktif (Key Rotation) algoritma secara periodik."
+    ],
+    "reporting": "Evaluasi sesuai batas kepatuhan privasi data (GDPR/PDP).",
+    "analogy": "Uang disimpan di bank dibrankas berbaja dan kuncinya disimpan terpisah oleh dua manajer berbeda."
+  },
+  {
+    "id": "V12",
+    "chapter": "V12",
+    "chapter_title": "Secure Communication",
+    "pillar": "Communication",
+    "title": "Jaga kerahasiaan komunikasi jaringan server klien",
+    "summary": "Aspek keamanan perpindahan data (Data in Transit) dengan penerapan TLS (Transport Layer Security) secara standar dan modern.",
+    "cadence": "Tinjauan sertifikat rutin",
+    "owner": "DevOps, SysAdmin",
+    "scoring": "Wajib di Level 1-3",
+    "appendices": ["L1", "L2"],
+    "focus": [
+      "Minimal TLS 1.2 diaktifkan dan versi rentan sebelumnya dinonaktifkan.",
+      "HSTS (HTTP Strict Transport Security) wajib diterapkan minimal durasi 6 bulan.",
+      "Segala bentuk Cipher yang lemah atau tanpa Perfect Forward Secrecy harus ditolak."
+    ],
+    "evidence": [
+      "Laporan perolehan TLS Grade 'A' atau 'A+'.",
+      "Lalu lintas trafik backend tersertifikasi Certificate Pinning/mTLS.",
+      "Penghentian dukungan server terhadap SSLv3/TLS 1.0."
+    ],
+    "reporting": "Pelaporan perpanjangan standar sertifikasi infrastruktur.",
+    "analogy": "Surat rahasia dikirim hanya melalui kurir utusan resmi dalam amplop tersegel anti-tembus pandang."
+  },
+  {
+    "id": "V14",
+    "chapter": "V14",
+    "chapter_title": "Configuration",
+    "pillar": "Architecture",
+    "title": "Tinjau pengerasan konfigurasi dan sistem dependensi",
+    "summary": "Bab pengujian ketergantungan paket/library pada sistem yang menyokong layanan web tersebut, maupun parameter server konfigurasi yang fatal.",
+    "cadence": "Continuous Scanning otomatis (SCA)",
+    "owner": "DevOps",
+    "scoring": "Risiko Infrastruktur",
+    "appendices": ["L1", "L2"],
+    "focus": [
+      "Security Response Headers disetel memadai (X-Frame-Options, CSP, dan Referrer).",
+      "Identifikasi dan matikan method HTTP berbahaya seperti TRACE atau TRACK.",
+      "Ketersediaan audit daftar Bill of Material perangkat lunak komponen terkait (SBOM)."
+    ],
+    "evidence": [
+      "Penilaian tools Software Composition Analysis tanpa temuan kerentanan tier High.",
+      "File setup HTTPD/Nginx yang menutup banner identitas rilis server.",
+      "Tidak ditemukannya direktori admin default misal `/phpmyadmin`."
+    ],
+    "reporting": "Pencapaian profil postur yang konsisten dengan SOP Infrastruktur.",
+    "analogy": "Mencabut instruksi tata letak rahasia bangunan sebelum pintu masuk gedung dibuka untuk publik."
+  }
+]

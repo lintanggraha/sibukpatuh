@@ -25,7 +25,7 @@ export const useFrameworkStore = defineStore('framework', {
         icon: 'fa-globe-asia',
         active: false,
         show: false,
-        items: ['iso27001', 'nist', 'cobit'],
+        items: ['iso27001', 'nist', 'cobit', 'owasp_top10', 'owasp_asvs'],
       },
     ],
     
@@ -56,7 +56,7 @@ export const useFrameworkStore = defineStore('framework', {
      */
     updateActiveGroups(routeName) {
       this.navGroups[0].active = ['seojk', 'resilience', 'pbi'].includes(routeName);
-      this.navGroups[1].active = ['iso27001', 'nist', 'cobit'].includes(routeName);
+      this.navGroups[1].active = ['iso27001', 'nist', 'cobit', 'owasp_top10', 'owasp_asvs'].includes(routeName);
       
       if (this.navGroups[0].active) {
         this.activeFrameworkGroup = 'nasional';

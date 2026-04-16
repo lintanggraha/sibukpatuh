@@ -1,0 +1,156 @@
+[
+  {
+    "id": "Mitigasi Ekstensif",
+    "type": "Implementation Guide",
+    "title": "Pedoman Mitigasi Akses Ekstensif dari OWASP",
+    "scope": "Role-Based Access Control, Attribute-Based Access Control",
+    "summary": "Panduan mendalam tentang bagaimana merancang model RBAC atau ABAC untuk mencapai arsitektur otorisasi berpusat dan dapat digunakan ulang.",
+    "contains": [
+      "Prinsip Least Privilege",
+      "Perancangan Access Control Matrix",
+      "Mitigasi Insecure Direct Object Reference"
+    ],
+    "used_by": ["A01"]
+  },
+  {
+    "id": "Panduan Kripto",
+    "type": "Cheat Sheet",
+    "title": "OWASP Cryptographic Storage Cheat Sheet",
+    "scope": "Algoritma Hash, Enkripsi, Manajemen Kunci",
+    "summary": "Referensi cepat menentukan algoritma kuat saat ini (seperti Argon2 untuk password, AES-GCM untuk data) dan rekomendasi panjang kunci minimum.",
+    "contains": [
+      "Seleksi Algoritma Hashing Modern",
+      "Penyimpanan Kata Sandi yang Tepat",
+      "Pengamanan Salt dan Key"
+    ],
+    "used_by": ["A02"]
+  },
+  {
+    "id": "Defense Cheat Sheet",
+    "type": "Cheat Sheet",
+    "title": "OWASP Injection Prevention & SSRF Prevention Cheat Sheet",
+    "scope": "SQLi, NoSQLi, SSRF",
+    "summary": "Daftar langkah preventif harian untuk developer dalam menangkal serangan injeksi lintas bahasa pemrograman dan kerentanan server fetching.",
+    "contains": [
+      "Penggunaan Prepared Statements",
+      "Validasi Allow-list vs Deny-list",
+      "Isolasi Jaringan Internal"
+    ],
+    "used_by": ["A03", "A10"]
+  },
+  {
+    "id": "Threat Modeling",
+    "type": "Implementation Guide",
+    "title": "OWASP Threat Modeling Initiative",
+    "scope": "Desain Sistem, Arsitektur Topologi",
+    "summary": "Dokumen metodologi STRIDE atau DREAD dalam merancang skenario ancaman siber sejak fase awal cetak biru sistem perangkat lunak untuk menghindari Insecure Design.",
+    "contains": [
+      "Pemetaan Data Flow Diagram",
+      "Analisis Dampak Perancangan Sistem Lintas Kepercayaan",
+      "Matriks Perbaikan Cacat Logis"
+    ],
+    "used_by": ["A04"]
+  },
+  {
+    "id": "SDLC",
+    "type": "Implementation Guide",
+    "title": "Secure Software Development Lifecycle",
+    "scope": "CI/CD Pipeline, DevSecOps",
+    "summary": "Integrasi alat keamanan (SAST, DAST, SCA) ke dalam rantai pasok rilis aplikasi agar setiap update atau pengadaan komponen tetap tersertifikasi integritasnya.",
+    "contains": [
+      "Penyerapan SCA dalam Build Process",
+      "Penanda Tangan Digital Pustaka Artefak",
+      "Kode Terbuka vs Pustaka Pihak Ketiga"
+    ],
+    "used_by": ["A04", "A08"]
+  },
+  {
+    "id": "Hardening Guide",
+    "type": "Cheat Sheet",
+    "title": "Infrastructure Security Hardening",
+    "scope": "Cloud, Server, Framework Default",
+    "summary": "Langkah-langkah spesifik mematikan fungsionalitas default, merubah port standar, menghapus direktori testing, dan mempersempit permukaan serangan di OS maupun Middleware.",
+    "contains": [
+      "Pengaturan Security Headers",
+      "Konfigurasi CORS (Cross Origin Resource Sharing) yang Ketat",
+      "Proteksi Stack Trace dan Error Message"
+    ],
+    "used_by": ["A05"]
+  },
+  {
+    "id": "Monitoring Guide",
+    "type": "Implementation Guide",
+    "title": "OWASP Logging Vocabulary and Guidelines",
+    "scope": "Log Analytics, SIEM",
+    "summary": "Daftar acuan metadata apa saja yang perlu dilog untuk mempermudah deteksi ancaman berulang tanpa menyentuh penyebaran data rahasia user (no-PII logging).",
+    "contains": [
+      "Pengayaan Format Log (JSON base)",
+      "Redaksi Otomatis Token/Password dari Log",
+      "Aturan Anomali Peringatan (Alarm Tuning)"
+    ],
+    "used_by": ["A09"]
+  },
+  {
+    "id": "ASVS V2",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 2: Authentication",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Titik temu OWASP Top 10 A07 dengan standar verifikasi formal ASVS terkait kegagalan Otentikasi.",
+    "contains": ["Verifikasi Kompleksitas Identitas", "Validasi Biometrik"],
+    "used_by": ["A07"]
+  },
+  {
+    "id": "ASVS V3",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 3: Session Management",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Titik temu OWASP Top 10 A07 dengan standar verifikasi formal ASVS terkait pengelolaan manajemen sesi dan proteksi token identitas.",
+    "contains": ["Penetapan Durasi Sesi Inaktif", "Proteksi Cookie (HttpOnly & Secure)"],
+    "used_by": ["A07"]
+  },
+  {
+    "id": "ASVS V4",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 4: Access Control",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Titik temu OWASP Top 10 A01 dengan standar verifikasi ASVS guna memvalidasi efektivitas filter pengguna.",
+    "contains": ["Pemisahan Layanan Admin dari Publik"],
+    "used_by": ["A01"]
+  },
+  {
+    "id": "ASVS V5",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 5: Validation, Sanitization, Encoding",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Titik temu OWASP Top 10 A03 & A10 untuk pengujian formal atas mekanisme filter input karakter.",
+    "contains": ["Pengujian SSRF", "Filter Input Injection"],
+    "used_by": ["A03", "A10"]
+  },
+  {
+    "id": "ASVS V6",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 6: Stored Cryptography",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Korelasi OWASP Top 10 A02 yang menjelaskan detail pengujian algoritma.",
+    "contains": ["Daftar Algoritma Diizinkan"],
+    "used_by": ["A02"]
+  },
+  {
+    "id": "ASVS V7",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 7: Error Handling and Logging",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Korelasi OWASP Top 10 A09 terkait logging event spesifik.",
+    "contains": ["Pengujian Integritas Audit Trail"],
+    "used_by": ["A09"]
+  },
+  {
+    "id": "ASVS V14",
+    "type": "Standard Mapping",
+    "title": "ASVS Bab 14: Configuration",
+    "scope": "Standard Verifikasi ASVS L1-L3",
+    "summary": "Korelasi OWASP Top 10 A05 & A06 menguji lingkungan produksi terkait komponen versi kuno dan salah konfigurasi server.",
+    "contains": ["Audit Dependensi"],
+    "used_by": ["A05", "A06"]
+  }
+]

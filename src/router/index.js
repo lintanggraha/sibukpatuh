@@ -40,6 +40,16 @@ const routes = [
         path: '/frameworks/pbi-02-2024',
         name: 'pbi',
         component: () => import('../views/Pbi.vue')
+    },
+    {
+        path: '/frameworks/owasp-top-10',
+        name: 'owasp_top10',
+        component: () => import('../views/OwaspTop10.vue')
+    },
+    {
+        path: '/frameworks/owasp-asvs',
+        name: 'owasp_asvs',
+        component: () => import('../views/OwaspAsvs.vue')
     }
 ];
 

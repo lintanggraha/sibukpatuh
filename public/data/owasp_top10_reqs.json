@@ -1,0 +1,242 @@
+[
+  {
+    "id": "A01",
+    "chapter": "A01",
+    "chapter_title": "Broken Access Control",
+    "pillar": "Access",
+    "title": "Kendalikan akses dan batasi privilege pengguna secara ketat",
+    "summary": "Menduduki peringkat pertama, masalah kegagalan akses kontrol menjadi ancaman terbesar web modern. Dampaknya adalah informasi tidak sah terungkap atau data dipalsukan.",
+    "cadence": "Diperiksa setiap rilis atau perubahan hak akses",
+    "owner": "Developer, Security Tester",
+    "scoring": "Risiko Tinggi - Dampak Signifikan",
+    "appendices": ["Mitigasi Ekstensif", "ASVS V4"],
+    "focus": [
+      "Secara default, nish akses ke fungsionalitas aplikasi kecuali ditetapkan publik.",
+      "Terapkan kontrol akses sekali (centralized) dan gunakan ulang.",
+      "Log semua kegagalan kontrol akses."
+    ],
+    "evidence": [
+      "Bukti gagalnya akses horizontal/vertikal (BOLA/IDOR).",
+      "Pemeriksaan default-deny policy di router gateway.",
+      "Bukti log peringatan saat terjadi upaya bypass akses."
+    ],
+    "reporting": "Kategorisasi sebagai temuan akses prioritas 1",
+    "analogy": "Seperti petugas pos penjagaan yang tidak memeriksa kartu identitas siapa pun yang masuk."
+  },
+  {
+    "id": "A02",
+    "chapter": "A02",
+    "chapter_title": "Cryptographic Failures",
+    "pillar": "Cryptography",
+    "title": "Gunakan kriptografi kuat untuk melindungi data sensitif",
+    "summary": "Kesalahan kriptografi mencakup kegagalan dalam mengamankan data sensitif baik diam (at rest) maupun bergerak (in transit), seperti sandi, nomor kartu kredit, atau rekam medis.",
+    "cadence": "Audit kriptografi berkala",
+    "owner": "Security Architect, Developer",
+    "scoring": "Risiko Sangat Tinggi",
+    "appendices": ["Panduan Kripto", "ASVS V6"],
+    "focus": [
+      "Klasifikasikan data yang diproses atau disimpan aplikasi (Sensitif/Publik).",
+      "Jangan gunakan algoritma usang seperti MD5 atau SHA1.",
+      "Gunakan koneksi otentik dan terenkripsi seperti TLS."
+    ],
+    "evidence": [
+      "Traffic tidak terenkripsi menangkap kredensial.",
+      "Penggunaan fungsi hash yang lemah dapat diretas.",
+      "Penggunaan kunci default atau weak keys."
+    ],
+    "reporting": "Temuan audit standar enkripsi data perusahaan",
+    "analogy": "Seperti mengirimkan surat rahasia negara menggunakan kartu pos terbuka."
+  },
+  {
+    "id": "A03",
+    "chapter": "A03",
+    "chapter_title": "Injection",
+    "pillar": "Implementation",
+    "title": "Pisahkan data (payload) dengan logika komando",
+    "summary": "Injeksi termasuk injeksi SQL, NoSQL, OS command, dan LDAP, dapat terjadi saat data yang tidak tepercaya dikirim ke interpreter sebagai bagian dari query.",
+    "cadence": "Diuji pada setiap pipeline CI/CD (SAST/DAST)",
+    "owner": "Developer",
+    "scoring": "Risiko Tinggi",
+    "appendices": ["ASVS V5", "Defense Cheat Sheet"],
+    "focus": [
+      "Gunakan API yang aman yang menghindari interpreter sepenuhnya atau menyediakan antarmuka paramaterized.",
+      "Terapkan validasi input server-side yang positif atau allow-list.",
+      "Escape karakter rentan khusus untuk interpreter yang dituju."
+    ],
+    "evidence": [
+      "Kemampuan mengeksekusi payload di input kotak pencarian (SQLi).",
+      "Mengeksekusi OS Code via parameter.",
+      "Review log WAF yang memblokir percobaan injeksi."
+    ],
+    "reporting": "Temuan krusial dalam laporan Vulnerability Assessment.",
+    "analogy": "Penerjemah buta yang sekadar meneruskan perintah mematikan dari orang asing ke jenderal."
+  },
+  {
+    "id": "A04",
+    "chapter": "A04",
+    "chapter_title": "Insecure Design",
+    "pillar": "Architecture",
+    "title": "Terapkan perlindungan sejak fase awal rancangan arsitektur keamanan",
+    "summary": "Kategori baru ini berfokus pada cacat desain. 'Shift Left' dan penerapan threat modeling diperlukan untuk menemukan kerentanan pada fase desain dan arsitektur logikal.",
+    "cadence": "Fase SDLC awal (Design Phase)",
+    "owner": "Product Owner, Architect",
+    "scoring": "Risiko Desain Menengah/Tinggi",
+    "appendices": ["Threat Modeling", "SDLC"],
+    "focus": [
+      "Lakukan threat modeling untuk pengadaan teknologi atau rancangan sistem baru.",
+      "Gunakan pola desain yang aman dan komponen referensi yang telah teruji.",
+      "Pisahkan layer berdasarkan kepercayaan dan segmentasi network."
+    ],
+    "evidence": [
+      "Tidak adanya dokumen analisa risiko desain (Risk Profile).",
+      "Diagram arsitektur yang tidak menunjukkan layer keamanan.",
+      "Review arsitektur menunjukkan single point of failure keamanan."
+    ],
+    "reporting": "Termasuk dalam approval design readiness perusahaan",
+    "analogy": "Membangun lemari besi namun menempatkan gemboknya di bagian dalam ruangan kaca."
+  },
+  {
+    "id": "A05",
+    "chapter": "A05",
+    "chapter_title": "Security Misconfiguration",
+    "pillar": "Operations",
+    "title": "Hindari kesalahan konfigurasi dengan pengerasan sistem dan otomasi",
+    "summary": "Terjadi ketika kontrol keamanan tidak dikonfigurasikan dengan aman, atau pada instalasi default. Terjadi di level apa saja dari platform, aplikasi, hingga framework.",
+    "cadence": "Check harian / DevSecOps Scanning",
+    "owner": "DevOps, SysAdmin",
+    "scoring": "Risiko Tinggi dan meluas",
+    "appendices": ["Hardening Guide", "ASVS V14"],
+    "focus": [
+      "Otomatiskan proses instalasi dengan lingkungan yang dikeraskan (hardening).",
+      "Hapus atau jangan pasang fitur/framework/fitur yang tidak perlu.",
+      "Perbarui dan amankan konfigurasi CORS, Headers, dan server log."
+    ],
+    "evidence": [
+      "Tampilan direktori (directory listing) aktif.",
+      "Halaman error default menampilkan stack trace lengkap.",
+      "Akses password admin default belum diganti."
+    ],
+    "reporting": "Laporan pengujian postur infrastruktur / CSA.",
+    "analogy": "Meninggalkan dokumen penting di laci tanpa menguncinya padahal laci memiliki kunci yang bagus."
+  },
+  {
+    "id": "A06",
+    "chapter": "A06",
+    "chapter_title": "Vulnerable and Outdated Components",
+    "pillar": "Operations",
+    "title": "Kelola siklus hidup patch dan monitoring komponen rentan",
+    "summary": "Komponen seperti pustaka, kerangka kerja, atau dependensi luncuran lain dapat memiliki kerentanan parah yang sering kali memakan seluruh sistem jika disusupi.",
+    "cadence": "Otomatis menggunakan SCA Scanning pada SDLC",
+    "owner": "DevOps, Developer",
+    "scoring": "Risiko Kritikal - Cenderung eksploitasi mudah",
+    "appendices": ["ASVS V14"],
+    "focus": [
+      "Pelihara daftar material perangkat lunak (SBOM).",
+      "Pantau versi komponen baru atau CVE secara berkala.",
+      "Hapus dependensi yang tiak terpakai."
+    ],
+    "evidence": [
+      "Sistem memuat versi jQuery atau Log4J usang dengan CVE aktif.",
+      "OS tidak di patch selama satu tahun berjalan.",
+      "Penggunaan pustaka tidak lagi didukung oleh vendor."
+    ],
+    "reporting": "Laporan Software Composition Analysis",
+    "analogy": "Menambal kebocoran kapal namun membiarkan lubang fondasi di bawah dek membusuk."
+  },
+  {
+    "id": "A07",
+    "chapter": "A07",
+    "chapter_title": "Identification and Authentication Failures",
+    "pillar": "Access",
+    "title": "Verifikasi dan lindungi kredensial manajemen sesi pengguna",
+    "summary": "Kegagalan otentikasi dapat memungkinkan penyerang berkompromi terhadap kata sandi, kunci atau token sesi dan menggunakan identitas pengguna lain untuk sementara/selamanya.",
+    "cadence": "Sistem rilis otentikasi baru, Penetration Testing rutin",
+    "owner": "Developer, IAM Team",
+    "scoring": "Risiko Tinggi",
+    "appendices": ["ASVS V2", "ASVS V3"],
+    "focus": [
+      "Implementasikan MFA (Multi-Factor Authentication).",
+      "Gunakan kebijakan panjang & kompleksitas kata sandi yang sesuai.",
+      "Invalidate session IDs pada server setelah pengguna logout."
+    ],
+    "evidence": [
+      "Bypass otentikasi rentan menggunakan brute force.",
+      "Token sesi terpapar pada url (URL rewrite).",
+      "Aplikasi mengijinkan kata sandi '123456'."
+    ],
+    "reporting": "Sering menjadi root cause take-over account (ATO).",
+    "analogy": "Menjaga rumah dengan kunci sangat rumit, tapi gampang memberikan duplikat kunci jika orang lain pura-pura kehilangan kuncinya."
+  },
+  {
+    "id": "A08",
+    "chapter": "A08",
+    "chapter_title": "Software and Data Integrity Failures",
+    "pillar": "Architecture",
+    "title": "Pastikan integritas kode, pembaruan, dan CI/CD pipeline",
+    "summary": "Berfokus pada pembuatan asumsi tanpa verifikasi validitas perangkat lunak. Aplikasi yang bergantung pada modul usang/tak terverifikasi rawan supply chain attack.",
+    "cadence": "Setiap build process / deployment",
+    "owner": "DevOps, Security Architect",
+    "scoring": "Risiko Supply Chain Tinggi",
+    "appendices": ["SDLC"],
+    "focus": [
+      "Verifikasi integritas modul yang diunduh (misalnya dengan checksum/hash).",
+      "Gunakan tempat penyimpanan/registry paket aman dan internal yang diawasi.",
+      "Tinjauan proses CI/CD untuk menjamin bahwa modul tidak dimodifikasi penyerang."
+    ],
+    "evidence": [
+      "Pembaruan auto-update tidak memiliki validasi tanda tangan digital.",
+      "Objek diserialisasi tanpa verifikasi melahirkan eksekusi remot kode (Insecure Deserialization).",
+      "Integrasi 3rd-party CDN yang rentan diinject attacker."
+    ],
+    "reporting": "Berdampak pada keseluruhan kepercayaan publik atas perangkat lunak/layanan.",
+    "analogy": "Menerima paket barang secara buta padahal prangkonya telah sobek dan dilakban ulang orang tak dikenal."
+  },
+  {
+    "id": "A09",
+    "chapter": "A09",
+    "chapter_title": "Security Logging and Monitoring Failures",
+    "pillar": "Operations",
+    "title": "Pelihara visibilitas sistem lewat log keamanan yang lengkap",
+    "summary": "Tanpa pencatatan (logging) dan monitoring, pelanggaran data tidak mungkin terdeteksi. Kebanyakan pelanggaran memakan waktu ~200 hari untuk terdeteksi, biasanya dari pihak ketiga.",
+    "cadence": "Realtime, SOC monitoring",
+    "owner": "SOC, SysAdmin, DevOps",
+    "scoring": "Meningkatkan Risk Impact",
+    "appendices": ["ASVS V7", "Monitoring Guide"],
+    "focus": [
+      "Log kegagalan login dan kegagalan akses untuk deteksi anomali.",
+      "Pastikan format log jelas dan dapat diurai SIEM sentral log management.",
+      "Menetapkan respons peringatan berdasar ambang batas aktivitas ancaman."
+    ],
+    "evidence": [
+      "Serangan Brute-force berjalan 12 jam tanpa alarm peringatan.",
+      "Log tidak menyertakan user ID dari transaksi manipulatif.",
+      "Log aplikasi hanya tersimpan secara lokal dan dapat dimodifikasi attacker."
+    ],
+    "reporting": "Dituangkan pada laporan insiden dan respons waktu penanganan.",
+    "analogy": "Gedung dengan brankas mahal tetapi tidak memasang kamera CCTV dan sistem deteksi suhu panas ruangan."
+  },
+  {
+    "id": "A10",
+    "chapter": "A10",
+    "chapter_title": "Server-Side Request Forgery",
+    "pillar": "Implementation",
+    "title": "Disiplinkan fungsionalitas fetch permintaan antarmuka server",
+    "summary": "Cacat SSRF muncul bila aplikasi web menarik sumber daya jarak jauh (remote resource) tanpa memvalidasi URI pasokan pengguna, membuat server membaca koneksi internal belakang layar.",
+    "cadence": "DAST/SAST pada fitur webhook/metadata parsing",
+    "owner": "Developer, Architect",
+    "scoring": "Risiko Menengah ke Tinggi pada infrastruktur Cloud",
+    "appendices": ["Defense Cheat Sheet", "ASVS V5"],
+    "focus": [
+      "Isolasi fungsi resource fetching di jaringan terpisah untuk kurangi impak.",
+      "Gunakan kebijakan penolakan (deny-by-default) untuk akses URL intranet/lokal (e.g. 169.254.169.254 AWS metadata).",
+      "Nonaktifkan pengalihan rediksi klien secara implisit di perpustakaan HTTP."
+    ],
+    "evidence": [
+      "Layanan ekspor PDF dapat digunakan mengunduh file /etc/passwd pada server lokal host.",
+      "Bot internal mengambil token AWS metadata dari cloud instans.",
+      "Payload injeksi memicu panggilan ke IP private internal bank."
+    ],
+    "reporting": "Penemuan dari BlackBox / GreyBox Testing.",
+    "analogy": "Seperti pengawal pribadi yang disuruh bosnya menelepon nomor aneh tanpa tahu nomor tersebut dapat mengaktivasi tagihan pada rekening si pengawal."
+  }
+]

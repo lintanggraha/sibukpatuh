@@ -1,0 +1,41 @@
+[
+  {
+    "id": "L1",
+    "type": "Tingkat Keamanan",
+    "title": "Level 1 (Fundamental Defense)",
+    "scope": "Aplikasi Pemula dan Sistem Internal Rendah Risiko",
+    "summary": "ASVS Level 1 dikhususkan bagi pertahanan mendasar. Ini mencakup perlindungan berlapis pertama terhadap serangan absolut (seperti Injection atau Broken Auth) yang relatif mudah ditemukan oleh alat analisa otomatis (DAST/SAST) tanpa modifikasi mendalam.",
+    "contains": [
+      "Mengamankan Endpoint Akses Default",
+      "Memastikan Standar Penyadapan Minimal",
+      "Cakupan Mayoritas Pengujian Otomatis"
+    ],
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V12", "V14"]
+  },
+  {
+    "id": "L2",
+    "type": "Tingkat Keamanan",
+    "title": "Level 2 (Standard Enterprise)",
+    "scope": "Perangkat Lunak Komersil B to B dan Pemrosesan Sensitif Biasa",
+    "summary": "Level keamanan standar (default) yang harus diusahakan oleh mayoritas aplikasi enterprise masa kini. Ini memuat ~70% dari kumulasi kendali ASVS dan mengandalkan verifikasi manual logika bisnis selain alat otomatis.",
+    "contains": [
+      "Kewajiban Penggunaan Kriptografi yang Disetujui",
+      "Penilaian Risiko Ekosistem (Dependency Analysis)",
+      "Verifikasi Logika Cacat Akses Vertikal/Horizontal"
+    ],
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V12", "V14"]
+  },
+  {
+    "id": "L3",
+    "type": "Tingkat Keamanan",
+    "title": "Level 3 (High Assurance)",
+    "scope": "Aplikasi Finansial, Medis, Pemerintah, dan Infrastruktur Kritikal",
+    "summary": "Tingkat jaminan paling ketat (Highest Level) bagi aplikasi yang wajib tahan ledakan maupun retasan terpusat (Targeted Attacks). Membutuhkan audit review lapisan arsitektur secara manual di luar kendali pengujian permukaan.",
+    "contains": [
+      "Verifikasi Mekanisme Deteksi Fraud Intrinsik",
+      "Perlindungan Anti-Tampering Berlapis Tinggi",
+      "Pemenuhan Regulasi Super Spesifik (mis. PCI-DSS, HIPAA compliance)"
+    ],
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6"]
+  }
+]
