@@ -1,5 +1,5 @@
 <template>
-  <div class="cob-page">
+  <div class="sej-page">
     <div v-if="loading" class="loading-state">
       <div class="loading-spinner">
         <i class="fas fa-spinner fa-spin"></i>
@@ -14,49 +14,48 @@
         <button @click="retryLoad" class="btn btn-primary">Retry</button>
       </div>
     </div>
-    <div v-else class="cob-shell">
-      <section class="cob-hero">
+    <div v-else class="sej-shell">
+      <section class="sej-hero">
         <div>
-          <span class="cob-kicker"
+          <span class="sej-kicker"
             ><i class="fas fa-project-diagram"></i>Framework Studio</span
           >
-          <h1 class="cob-title">
+          <h1 class="sej-title">
             COBIT 2019 Introduction & Methodology Navigator
           </h1>
-          <p class="cob-lede">
+          <p class="sej-lede">
             Ringkasan berbahasa Indonesia untuk membaca prinsip, design factor,
             core model, dan alur implementasi COBIT 2019 dengan lebih cepat.
           </p>
-          <div class="cob-disclaimer-banner">
-            <div class="cob-disclaimer-icon"><i class="fas fa-info-circle"></i></div>
-            <div class="cob-disclaimer-content">
-              <strong>Disclaimer:</strong>
-              <span>Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari framework COBIT 2019 yang diterbitkan oleh ISACA. Ini <b>bukan</b> teks resmi COBIT dan tidak boleh dianggap sebagai pengganti standar asli. Untuk akses lengkap dan lisensi resmi, silakan kunjungi <a href="https://www.isaca.org/resources/cobit" target="_blank" rel="noopener noreferrer">ISACA.org</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan referensi internal.</span>
+          <div class="sej-note" style="margin-top: 1.1rem; border-left: 4px solid #f59e0b;">
+            <strong style="color: #b45309;"><i class="fas fa-info-circle me-1"></i> Disclaimer</strong>
+            <div class="mt-1" style="font-size: 0.82rem; line-height: 1.6;">
+              Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari framework COBIT 2019 yang diterbitkan oleh ISACA. Ini <b>bukan</b> teks resmi COBIT dan tidak boleh dianggap sebagai pengganti standar asli. Untuk akses lengkap dan lisensi resmi, silakan kunjungi <a href="https://www.isaca.org/resources/cobit" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 600; text-decoration: underline;">ISACA.org</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan referensi internal.
             </div>
           </div>
-          <div class="cob-metrics">
-            <div class="cob-metric">
+          <div class="sej-metrics">
+            <div class="sej-metric">
               <label>Bab Utama</label><strong>{{ totalChapters }}</strong
               ><span>Fondasi, objective, tailoring, dan implementasi.</span>
             </div>
-            <div class="cob-metric">
+            <div class="sej-metric">
               <label>Prinsip</label><strong>{{ totalPrinciples }}</strong
               ><span>Prinsip sistem dan prinsip framework.</span>
             </div>
-            <div class="cob-metric">
+            <div class="sej-metric">
               <label>Design Factor</label
               ><strong>{{ totalDesignFactors }}</strong
               ><span>Variabel konteks untuk desain governance.</span>
             </div>
-            <div class="cob-metric">
+            <div class="sej-metric">
               <label>Objektif Core Model</label
               ><strong>{{ totalObjectives }}</strong
               ><span>1 domain governance dan 4 domain management.</span>
             </div>
           </div>
         </div>
-        <div class="cob-grid">
-          <div class="cob-side">
+        <div class="sej-grid">
+          <div class="sej-side">
             <label>Cara Baca</label>
             <h3>Mulai dari konteks, lalu masuk ke objective</h3>
             <p>
@@ -65,7 +64,7 @@
               enterprise.
             </p>
           </div>
-          <div class="cob-side">
+          <div class="sej-side">
             <label>Nilai Utama</label>
             <p>
               COBIT membantu memastikan informasi dan teknologi tetap nyambung
@@ -76,9 +75,9 @@
         </div>
       </section>
 
-      <div class="cob-nav nav" role="tablist">
+      <div class="sej-nav nav" role="tablist">
         <button
-          class="cob-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'overview' }"
           type="button"
           role="tab"
@@ -91,7 +90,7 @@
           >
         </button>
         <button
-          class="cob-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'explorer' }"
           type="button"
           role="tab"
@@ -107,7 +106,7 @@
           >
         </button>
         <button
-          class="cob-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'journey' }"
           type="button"
           role="tab"
@@ -123,31 +122,31 @@
         </button>
       </div>
 
-      <div class="tab-content cob-grid">
+      <div class="tab-content sej-grid">
         <!-- Tab 1: Ringkasan Framework -->
         <div v-if="activeTab === 'overview'" key="overview-tab">
-          <div class="cob-two">
-            <article class="cob-panel">
-              <div class="cob-head">
+          <div class="sej-grid two">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Roadmap isi dokumen</h3>
-                <span class="cob-chip">{{ totalChapters }} bab</span>
+                <span class="sej-chip">{{ totalChapters }} bab</span>
               </div>
-              <p class="cob-copy">
+              <p class="sej-copy">
                 Urutan dokumen bergerak dari fondasi konsep, ke objective inti,
                 lalu ke desain dan implementasi governance system.
               </p>
-              <div class="cob-grid">
+              <div class="sej-grid">
                 <div
                   v-for="chapter in chapters"
                   :key="chapter.number"
-                  class="cob-bar"
+                  class="sej-bar"
                 >
                   <span
                     ><strong
                       >Bab {{ chapter.number }} - {{ chapter.title }}</strong
                     ><em>{{ chapter.summary }}</em></span
                   >
-                  <span class="cob-track"
+                  <span class="sej-track"
                     ><b
                       :style="{
                         width:
@@ -157,33 +156,33 @@
                       }"
                     ></b
                   ></span>
-                  <span class="cob-num">{{ chapter.number }}</span>
+                  <span class="sej-num">{{ chapter.number }}</span>
                 </div>
               </div>
             </article>
-            <article class="cob-panel">
-              <div class="cob-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Core model per domain</h3>
-                <span class="cob-chip">{{ totalObjectives }} objective</span>
+                <span class="sej-chip">{{ totalObjectives }} objective</span>
               </div>
-              <p class="cob-copy">
+              <p class="sej-copy">
                 Klik domain untuk membuka penjelasannya langsung di explorer.
               </p>
-              <div class="cob-domains">
+              <div class="sej-hotspots">
                 <button
                   v-for="domain in domains"
                   :key="domain.id"
                   type="button"
-                  class="cob-card clickable"
+                  class="sej-card clickable"
                   @click="jumpExplorer('domain', domain.id)"
                 >
-                  <div class="cob-card-top">
+                  <div class="sej-card-top">
                     <span>{{ domain.group }}</span
                     ><span>{{ domain.count }} objective</span>
                   </div>
                   <strong>{{ domain.id }} - {{ domain.title }}</strong>
                   <p>{{ domain.summary }}</p>
-                  <span class="cob-track mt-2"
+                  <span class="sej-track mt-2"
                     ><b
                       :style="{
                         width: (domain.count / maxObjectiveCount) * 100 + '%',
@@ -195,28 +194,28 @@
               </div>
             </article>
           </div>
-          <div class="cob-two">
-            <article class="cob-panel">
-              <div class="cob-head">
+          <div class="sej-grid two">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Value outcome</h3>
-                <span class="cob-chip">{{ valueOutcomes.length }} outcome</span>
+                <span class="sej-chip">{{ valueOutcomes.length }} outcome</span>
               </div>
-              <p class="cob-copy">
+              <p class="sej-copy">
                 COBIT menjaga tiga hasil utama tetap seimbang: manfaat, risiko,
                 dan resource.
               </p>
-              <div class="cob-mini">
+              <div class="sej-mini">
                 <div
                   v-for="item in valueOutcomes"
                   :key="item.id"
-                  class="cob-step"
+                  class="sej-mini"
                 >
                   <label>{{ item.id }}</label
                   ><strong>{{ item.title }}</strong>
                   <p>{{ item.summary }}</p>
                 </div>
               </div>
-              <div class="cob-note mt-3">
+              <div class="sej-note mt-3">
                 <strong>Governance vs management</strong>
                 <div class="mt-2">
                   Governance fokus pada evaluasi, pengarahan, dan pemantauan.
@@ -225,23 +224,23 @@
                 </div>
               </div>
             </article>
-            <article class="cob-panel">
-              <div class="cob-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Sorotan COBIT 2019</h3>
-                <span class="cob-chip">{{ highlights.length }} poin</span>
+                <span class="sej-chip">{{ highlights.length }} poin</span>
               </div>
-              <div class="cob-cards">
-                <div v-for="item in highlights" :key="item.id" class="cob-card">
-                  <div class="cob-card-top">
+              <div class="sej-cards">
+                <div v-for="item in highlights" :key="item.id" class="sej-card">
+                  <div class="sej-card-top">
                     <span>Highlight</span><span>{{ item.id }}</span>
                   </div>
                   <strong>{{ item.title }}</strong>
                   <p>{{ item.summary }}</p>
                 </div>
               </div>
-              <div class="cob-cards mt-3">
-                <div v-for="item in audiences" :key="item.id" class="cob-card">
-                  <div class="cob-card-top">
+              <div class="sej-cards mt-3">
+                <div v-for="item in audiences" :key="item.id" class="sej-card">
+                  <div class="sej-card-top">
                     <span>Audience</span><span>{{ item.id }}</span>
                   </div>
                   <strong>{{ item.title }}</strong>
@@ -254,18 +253,18 @@
 
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
-          <div class="cob-workspace">
-            <article class="cob-panel">
-              <div class="cob-head">
+          <div class="sej-workspace">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Filter Konsep</h3>
-                <span class="cob-chip">{{ concepts.length }} entri</span>
+                <span class="sej-chip">{{ concepts.length }} entri</span>
               </div>
-              <div class="cob-type-grid">
+              <div class="sej-pillar-grid">
                 <button
                   v-for="item in typeBreakdown"
                   :key="item.type"
                   type="button"
-                  class="cob-type-card"
+                  class="sej-pillar"
                   :class="{ active: activeType === item.type }"
                   @click="toggleType(item.type)"
                 >
@@ -273,7 +272,7 @@
                   ><span>{{ item.count }} entri - {{ item.summary }}</span>
                 </button>
               </div>
-              <div class="cob-form">
+              <div class="sej-form">
                 <div>
                   <label for="conceptSearch">Cari konsep</label
                   ><input
@@ -292,7 +291,7 @@
                   Atur ulang filter
                 </button>
               </div>
-              <div class="cob-summary">
+              <div class="sej-summary">
                 <small>Konsep Ditampilkan</small
                 ><strong>{{ filteredConcepts.length }}</strong
                 ><span>{{
@@ -302,31 +301,31 @@
                 }}</span>
               </div>
             </article>
-            <article class="cob-panel">
-              <div class="cob-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Daftar konsep</h3>
-                <span class="cob-chip"
+                <span class="sej-chip"
                   >{{ filteredConcepts.length }} entri</span
                 >
               </div>
-              <div class="cob-list">
+              <div class="sej-list">
                 <button
-                  v-for="concept in paginatedConcepts"
+                  v-for="concept in filteredConcepts"
                   :key="concept.id"
                   type="button"
-                  class="cob-item"
+                  class="sej-item"
                   :class="{ active: activeConceptId === concept.id }"
                   :style="{ '--accent': concept.color || '#0f766e' }"
                   @click="setActiveConcept(concept.id)"
                 >
-                  <div class="cob-item-top">
-                    <span class="cob-code">{{ concept.id }}</span
-                    ><span class="cob-pill">{{
+                  <div class="sej-item-top">
+                    <span class="sej-code">{{ concept.id }}</span
+                    ><span class="sej-pill">{{
                       concept.type_label || "-"
                     }}</span>
                   </div>
-                  <div class="cob-item-name">{{ concept.title || "-" }}</div>
-                  <div class="cob-item-meta">
+                  <div class="sej-item-name">{{ concept.title || "-" }}</div>
+                  <div class="sej-item-meta">
                     {{ concept.group || "-"
                     }}{{
                       concept.metric_value !== null &&
@@ -336,19 +335,13 @@
                     }}
                   </div>
                 </button>
-                <div v-if="paginatedConcepts.length === 0" class="cob-empty">
+                <div v-if="filteredConcepts.length === 0" class="sej-empty">
                   Tidak ada konsep yang cocok dengan filter saat ini.
-                </div>
-                <!-- Pagination Controls -->
-                <div v-if="totalPages > 1" class="cob-pagination">
-                  <button @click="currentPage = Math.max(1, currentPage - 1)" :disabled="currentPage === 1" class="btn btn-sm btn-outline-secondary me-2"><i class="fas fa-chevron-left"></i> Previous</button>
-                  <span class="cob-page-info">Page {{ currentPage }} of {{ totalPages }} ({{ filteredConcepts.length }} total)</span>
-                  <button @click="currentPage = Math.min(totalPages, currentPage + 1)" :disabled="currentPage === totalPages" class="btn btn-sm btn-outline-secondary ms-2">Next <i class="fas fa-chevron-right"></i></button>
                 </div>
               </div>
             </article>
-            <article class="cob-panel cob-inspector">
-              <div class="cob-inspector-head">
+            <article class="sej-panel sej-inspector">
+              <div class="sej-inspector-head">
                 <small>Concept Inspector</small>
                 <strong>{{ activeConcept ? activeConcept.id : "-" }}</strong>
                 <span>{{
@@ -357,8 +350,8 @@
                     : "Pilih konsep untuk membaca detail."
                 }}</span>
               </div>
-              <div class="cob-inspector-body">
-                <div class="cob-meta">
+              <div class="sej-inspector-body">
+                <div class="sej-meta">
                   <span>{{
                     activeConcept ? activeConcept.type_label : "-"
                   }}</span>
@@ -371,7 +364,7 @@
                       : "Ringkasan Konseptual"
                   }}</span>
                 </div>
-                <div class="cob-callout">
+                <div class="sej-callout">
                   <strong>Ringkasan</strong>
                   <div class="mt-2">
                     {{
@@ -381,15 +374,15 @@
                     }}
                   </div>
                 </div>
-                <div class="cob-note">
+                <div class="sej-note">
                   <strong>Kenapa Penting</strong>
                   <div class="mt-2">
                     {{ activeConcept ? activeConcept.importance : "-" }}
                   </div>
                 </div>
-                <div class="cob-callout">
+                <div class="sej-callout">
                   <strong>Fokus Utama</strong>
-                  <ul class="cob-plain">
+                  <ul class="sej-plain">
                     <li
                       v-for="(item, idx) in activeConcept &&
                       activeConcept.focus &&
@@ -409,17 +402,17 @@
 
         <!-- Tab 3: Desain & Implementasi -->
         <div v-if="activeTab === 'journey'" key="journey-tab">
-          <div class="cob-two">
-            <article class="cob-panel">
-              <div class="cob-head">
+          <div class="sej-grid two">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Goals cascade</h3>
-                <span class="cob-chip">{{ goalCascade.length }} langkah</span>
+                <span class="sej-chip">{{ goalCascade.length }} langkah</span>
               </div>
-              <div class="cob-cards">
+              <div class="sej-cards">
                 <div
                   v-for="item in goalCascade"
                   :key="item.id"
-                  class="cob-step"
+                  class="sej-mini"
                 >
                   <label>{{ item.id }}</label
                   ><strong>{{ item.title }}</strong>
@@ -427,19 +420,19 @@
                 </div>
               </div>
             </article>
-            <article class="cob-panel">
-              <div class="cob-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Fase implementasi</h3>
-                <span class="cob-chip"
+                <span class="sej-chip"
                   >{{ implementationPhases.length }} fase</span
                 >
               </div>
-              <div class="cob-grid">
+              <div class="sej-grid">
                 <button
                   v-for="item in implementationPhases"
                   :key="item.id"
                   type="button"
-                  class="cob-step"
+                  class="sej-mini"
                   @click="jumpExplorer('implementation_phase', item.id)"
                 >
                   <label>{{ item.group }}</label
@@ -449,24 +442,24 @@
               </div>
             </article>
           </div>
-          <article class="cob-panel">
-            <div class="cob-head">
+          <article class="sej-panel">
+            <div class="sej-head">
               <h3>Design factor untuk tailoring governance</h3>
-              <span class="cob-chip">{{ designFactors.length }} faktor</span>
+              <span class="sej-chip">{{ designFactors.length }} faktor</span>
             </div>
-            <p class="cob-copy">
+            <p class="sej-copy">
               Klik salah satu design factor untuk membuka penjelasannya langsung
               di explorer.
             </p>
-            <div class="cob-factor-grid">
+            <div class="sej-cards">
               <button
                 v-for="item in designFactors"
                 :key="item.id"
                 type="button"
-                class="cob-card clickable"
+                class="sej-card clickable"
                 @click="jumpExplorer('design_factor', item.id)"
               >
-                <div class="cob-card-top">
+                <div class="sej-card-top">
                   <span>{{ item.group }}</span
                   ><span>{{ item.id }}</span>
                 </div>
@@ -527,9 +520,6 @@ export default {
       activeType: "",
       conceptSearch: "",
       activeConceptId: null,
-      // Pagination
-      currentPage: 1,
-      itemsPerPage: 25,
     };
   },
   computed: {
@@ -584,19 +574,11 @@ export default {
     activeConcept() {
       return this.concepts.find((c) => c.id === this.activeConceptId) || null;
     },
-    // Pagination computed properties
-    totalPages() { return Math.ceil(this.filteredConcepts.length / this.itemsPerPage); },
-    paginatedConcepts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = start + this.itemsPerPage;
-      return this.filteredConcepts.slice(start, end);
-    },
   },
   watch: {
     filteredConcepts() {
-      this.currentPage = 1;
-      if (this.paginatedConcepts.length && !this.paginatedConcepts.find(c => c.id === this.activeConceptId)) {
-        this.activeConceptId = this.paginatedConcepts[0]?.id || null;
+      if (this.filteredConcepts.length && !this.filteredConcepts.find(c => c.id === this.activeConceptId)) {
+        this.activeConceptId = this.filteredConcepts[0]?.id || null;
       }
     },
   },
@@ -607,7 +589,6 @@ export default {
     resetConceptFilters() {
       this.activeType = "";
       this.conceptSearch = "";
-      this.currentPage = 1;
       if (this.concepts.length > 0) {
         this.activeConceptId =
           this.filteredConcepts[0]?.id || this.concepts[0]?.id;
@@ -698,664 +679,138 @@ export default {
 </script>
 
 <style scoped>
-.cob-page {
-  --ink: #14263b;
-  --muted: #5c6776;
-  --line: rgba(20, 38, 59, 0.1);
-  background: linear-gradient(180deg, #f6efe4 0%, #edf5f6 100%);
-  padding: 0.25rem;
-  border-radius: 32px;
-  color: var(--ink);
-}
-.cob-shell,
-.cob-grid {
-  display: grid;
-  gap: 1rem;
-}
-.cob-hero {
-  display: grid;
-  grid-template-columns: 1.6fr 0.9fr;
-  gap: 1rem;
-  align-items: stretch;
-  min-height: 368px;
-  padding: 1.15rem;
-  border-radius: 28px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(248, 214, 161, 0.88),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(156, 210, 219, 0.7),
-      transparent 28%
-    ),
-    linear-gradient(135deg, #132a43 0%, #1d5671 46%, #f2debb 100%);
-  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.09);
-}
-.cob-kicker {
-  display: inline-flex;
-  gap: 0.42rem;
-  align-items: center;
-  padding: 0.33rem 0.66rem;
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.18);
-  color: rgba(255, 250, 242, 0.92);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.cob-title {
-  margin: 0.9rem 0 0.55rem;
-  color: #fffaf2;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.08;
-}
-.cob-lede {
-  margin: 0;
-  max-width: 760px;
-  color: rgba(255, 250, 242, 0.95);
-  font-size: 0.95rem;
-  line-height: 1.62;
-}
-.cob-disclaimer-banner {
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  border-radius: 16px;
-  background: rgba(255, 250, 242, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.cob-disclaimer-icon {
-  color: #f59e0b;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.cob-disclaimer-content {
-  color: #1e293b;
-  font-size: 0.88rem;
-  line-height: 1.65;
-}
-.cob-disclaimer-content strong {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: #b45309;
-  font-size: 0.9rem;
-}
-.cob-disclaimer-content a {
-  color: #0284c7;
-  text-decoration: underline;
-  font-weight: 600;
-}
-.cob-disclaimer-content a:hover {
-  color: #0369a1;
-}
-.cob-metrics,
-.cob-cards,
-.cob-domains,
-.cob-mini,
-.cob-type-grid,
-.cob-factor-grid {
-  display: grid;
-  gap: 0.7rem;
-}
-.cob-metrics {
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 1rem;
-}
-.cob-cards {
-  grid-template-columns: repeat(2, 1fr);
-}
-.cob-domains {
-  grid-template-columns: repeat(2, 1fr);
-}
-.cob-mini {
-  grid-template-columns: repeat(3, 1fr);
-}
-.cob-type-grid,
-.cob-factor-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-.cob-card,
-.cob-panel,
-.cob-side,
-.cob-metric,
-.cob-step,
-.cob-item {
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 251, 245, 0.98) 0%,
-    rgba(246, 251, 252, 0.98) 100%
-  );
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
-}
-.cob-side,
-.cob-panel,
-.cob-step {
-  padding: 0.82rem 0.88rem;
-  border-radius: 18px;
-}
-.cob-panel {
-  padding: 1rem;
-  border-radius: 20px;
-}
-.cob-metric {
-  padding: 0.7rem 0.76rem;
-  border-radius: 16px;
-  background: rgba(19, 42, 67, 0.15);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-.cob-metric label,
-.cob-side label,
-.cob-panel label,
-.cob-form label,
-.cob-inspector small {
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.cob-metric label {
-  color: rgba(19, 42, 67, 0.8);
-  margin-bottom: 0.34rem;
-}
-.cob-metric strong {
-  display: block;
-  color: #132a43;
-  font-size: 1.42rem;
-  font-weight: 800;
-  line-height: 1;
-}
-.cob-metric span {
-  display: block;
-  margin-top: 0.28rem;
-  color: #fff;
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-.cob-copy,
-.cob-side p,
-.cob-step p,
-.cob-card p {
-  display: block;
-  margin-top: 0.28rem;
-  color: #14263b;
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-.cob-side label {
-  color: #14263b;
-}
-.cob-side h3,
-.cob-head h3 {
-  margin: 0;
-  font-size: 0.98rem;
-  font-weight: 800;
-}
-.cob-nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-.cob-tab {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.65rem;
-  align-items: center;
-  padding: 0.8rem 0.86rem;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 250, 242, 0.94) 0%,
-    rgba(239, 245, 246, 0.94) 100%
-  );
-  text-align: left;
-  color: var(--ink);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.04);
-  cursor: pointer;
-}
-.cob-tab.active {
-  border-color: rgba(15, 118, 110, 0.24);
-  box-shadow: 0 18px 30px rgba(15, 118, 110, 0.1);
-}
-.cob-tab i {
-  width: 2.3rem;
-  height: 2.3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: rgba(20, 38, 59, 0.06);
-}
-.cob-tab strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-.cob-tab span {
-  display: block;
-  margin-top: 0.12rem;
-  color: #14263b;
-  font-size: 0.76rem;
-  line-height: 1.4;
-}
-.cob-two {
-  display: grid;
-  grid-template-columns: 1.04fr 0.96fr;
-  gap: 1rem;
-}
-.cob-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  margin-bottom: 0.7rem;
-}
-.cob-chip,
-.cob-pill,
-.cob-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.28rem;
-  padding: 0.24rem 0.5rem;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.cob-chip {
-  background: rgba(20, 38, 59, 0.08);
-  color: var(--ink);
-}
-.cob-bar {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(160px, 1fr) auto;
-  gap: 0.68rem;
-  align-items: center;
-  padding: 0.62rem 0.72rem;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.85);
-}
-.cob-bar strong,
-.cob-card strong,
-.cob-step strong {
-  display: block;
-  font-size: 0.86rem;
-}
-.cob-bar em,
-.cob-card p {
-  display: block;
-  margin-top: 0.12rem;
-  color: #14263b;
-  font-size: 0.74rem;
-  font-style: normal;
-  line-height: 1.45;
-}
-.cob-track {
-  height: 0.44rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.08);
-  overflow: hidden;
-}
-.cob-track b {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-}
-.cob-num {
-  min-width: 2.1rem;
-  text-align: right;
-  font-weight: 800;
-}
-.cob-card {
-  width: 100%;
-  padding: 0.76rem 0.8rem;
-  border-radius: 16px;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 251, 245, 0.98) 0%, rgba(246, 251, 252, 0.98) 100%);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
-  overflow: visible;
-}
+.sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
+.sej-shell{display:grid;gap:1rem}
+.sej-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}
+.sej-hero>*{position:relative;z-index:1}
+.sej-kicker{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:rgba(255,250,242,.18);color:rgba(255,250,242,.92);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-title{margin:1rem 0 .7rem;color:#fffaf2;font-size:clamp(2rem,3.8vw,3rem);font-weight:800;line-height:1.04}
+.sej-lede{margin:0;max-width:720px;color:rgba(255,250,242,.82);line-height:1.7}
+.sej-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.1rem}
+.sej-metric,.sej-side,.sej-panel,.sej-mini{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,251,245,.98) 0%,rgba(246,251,252,.98) 100%);box-shadow:0 14px 28px rgba(15,23,42,.05)}
+.sej-metric{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.12);border-color:rgba(255,255,255,.18);min-height:96px;display:flex;flex-direction:column;justify-content:flex-start}
+.sej-metric label,.sej-side label,.sej-mini label,.sej-form label,.sej-inspector small,.sej-label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-metric label{color:rgba(255,250,242,.7);margin-bottom:.35rem}
+.sej-metric strong{display:block;color:#fffaf2;font-size:1.5rem;font-weight:800;line-height:1}
+.sej-metric span{display:block;margin-top:.34rem;color:rgba(255,250,242,.72);font-size:.76rem}
+.sej-side-stack{display:grid;gap:.85rem}
+.sej-side{padding:.8rem .86rem;border-radius:18px;background:rgba(255,250,242,.78);border-color:rgba(255,255,255,.24);min-height:142px}
+.sej-side label{color:var(--muted);margin-bottom:.4rem}
+.sej-side h3{margin:0;font-size:1rem;font-weight:800}
+.sej-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
+.sej-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.sej-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
+.sej-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
+.sej-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
+.sej-tab strong{display:block;font-size:.9rem;font-weight:800}
+.sej-tab span{display:block;margin-top:.14rem;color:var(--muted);font-size:.76rem;line-height:1.4}
+.sej-grid{display:grid;gap:1rem}
+.sej-grid.two{grid-template-columns:1.06fr .94fr}
+.sej-panel{padding:1rem;border-radius:20px}
+.sej-head{display:flex;align-items:center;justify-content:space-between;gap:.85rem;margin-bottom:.7rem}
+.sej-head h3{margin:0;font-size:.98rem;font-weight:800}
+.sej-chip,.sej-pill,.sej-meta span,.sej-ref{display:inline-flex;align-items:center;gap:.3rem;padding:.24rem .52rem;border-radius:999px;font-size:.7rem;font-weight:700;line-height:1.2}
+.sej-chip{background:rgba(20,38,59,.08);color:var(--ink)}
+.sej-copy{margin:0 0 .85rem;color:var(--muted);line-height:1.6;font-size:.84rem}
+.sej-bars,.sej-cards,.sej-hotspots,.sej-families{display:grid;gap:.65rem}
+.sej-bar,.sej-hotspot,.sej-family{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(180px,1fr) auto;gap:.68rem;align-items:center;padding:.62rem .72rem;border-radius:16px;border:1px solid transparent;background:rgba(255,255,255,.55);text-align:left;cursor:pointer;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.sej-family{grid-template-columns:1fr auto}
+.sej-bar:hover,.sej-hotspot:hover,.sej-family:hover,.sej-bar.active,.sej-hotspot.active,.sej-family.active{transform:translateY(-1px);border-color:rgba(20,78,114,.22);box-shadow:0 12px 22px rgba(20,78,114,.08)}
+.sej-bar strong,.sej-hotspot strong,.sej-family strong{display:block;font-size:.86rem}
+.sej-bar em,.sej-hotspot em,.sej-family em{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem;font-style:normal}
+.sej-track{height:.44rem;border-radius:999px;background:rgba(20,38,59,.08);overflow:hidden}
+.sej-track b{display:block;height:100%;border-radius:inherit}
+.sej-num{min-width:2.2rem;text-align:right;font-weight:800}
+.sej-cards{grid-template-columns:repeat(3,1fr)}
+.sej-card{width:100%;padding:.76rem .8rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.sej-card-top{display:flex;align-items:center;justify-content:space-between;gap:.55rem;color:var(--muted);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.sej-icon{width:1.9rem;height:1.9rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(20,78,114,.12);color:var(--accent);font-size:.8rem}
+.sej-card strong{display:block;margin-top:.42rem;font-size:.86rem;font-weight:800}
+.sej-card p{margin:.22rem 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}
+.sej-mini-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:.8rem}
+.sej-mini{padding:.72rem .78rem;border-radius:16px}
+.sej-mini label{color:var(--muted)}
+.sej-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
+.sej-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
+.sej-workspace{display:grid;grid-template-columns:.76fr 1.03fr .91fr;gap:1rem}
+.sej-refspace{display:grid;grid-template-columns:.82fr 1.18fr;gap:1rem}
+.sej-pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem;margin-bottom:.8rem}
+.sej-pillar{width:100%;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.sej-pillar.active{border-color:rgba(20,78,114,.24);background:rgba(238,245,245,.72);box-shadow:0 12px 24px rgba(20,78,114,.08)}
+.sej-pillar strong{display:block;font-size:.82rem;font-weight:800;color:var(--accent)}
+.sej-pillar span{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem}
+.sej-form{display:grid;gap:.75rem}
+.sej-form label{margin-bottom:.3rem;color:var(--muted)}
+.sej-summary{margin-top:.85rem;padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(20,78,114,.95) 100%);color:#fffaf2}
+.sej-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
+.sej-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
+.sej-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.sej-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.sej-item:last-child{margin-bottom:0}
+.sej-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
+.sej-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
+.sej-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
+.sej-item-code,.sej-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
+.sej-item-name{margin:.28rem 0 .2rem;font-size:.88rem;font-weight:700;line-height:1.38;color:var(--ink)}
+.sej-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
+.sej-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
+.sej-pill{padding:.2rem .45rem;font-size:.68rem;background:rgba(20,38,59,.08);color:var(--ink)}
+.sej-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
+.sej-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
+.sej-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
+.sej-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}
+.sej-inspector-body{display:grid;gap:.75rem;padding-top:.85rem;flex:1;min-height:0;overflow:auto;align-content:start}
+.sej-meta{display:flex;flex-wrap:wrap;gap:.45rem}
+.sej-meta span{background:rgba(20,38,59,.06);color:var(--ink);font-size:.72rem}
+.sej-callout,.sej-note{padding:.76rem .84rem;border-radius:16px;border:1px solid var(--line);line-height:1.62}
+.sej-callout{background:rgba(255,255,255,.75)}
+.sej-note{background:rgba(238,245,245,.84)}
+.sej-plain{margin:.15rem 0 0;padding-left:1rem;color:var(--muted);font-size:.78rem;line-height:1.6}
+.sej-plain li{margin-bottom:.16rem}
+.sej-refs{display:flex;flex-wrap:wrap;gap:.4rem}
+.sej-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
+.sej-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
-/* Remove any decorative circles/pseudo-elements from cards */
-.cob-card::before,
-.cob-card::after,
-.cob-card *::before,
-.cob-card *::after,
-.cob-domains::before,
-.cob-domains::after,
-.cob-domains *::before,
-.cob-domains *::after {
-  display: none !important;
-  content: none !important;
-}
+/* Modal Styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.56);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem}
+.modal-dialog{width:100%;max-width:780px;animation:modalSlideIn .25s ease-out}
+.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+.modal-sidebar{position:relative;padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#fffaf2;text-align:center}
+.modal-close{position:absolute;top:.75rem;right:.75rem;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;border:none;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease}
+.modal-close:hover{background:rgba(255,255,255,.28);transform:scale(1.05)}
+.modal-sidebar-icon{width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(255,255,255,.18);font-size:1.25rem;margin-bottom:.25rem}
+.modal-sidebar-id{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:1.15rem;font-weight:800;letter-spacing:.04em}
+.modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
+.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
+.modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
+.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
+.modal-section{margin-bottom:1.25rem}
+.modal-section:last-child{margin-bottom:0}
+.modal-section-header{display:flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.modal-section-header i{font-size:.82rem}
+.modal-section-content{padding-left:.25rem}
+.modal-scope{display:inline-block;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700;margin-bottom:.55rem}
+.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+.modal-artifact-list{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.modal-artifact-list li{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem;color:var(--ink);line-height:1.5}
+.modal-artifact-list li i{color:#0f766e;font-size:.82rem;margin-top:.18rem;flex-shrink:0}
+.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}
+.modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink);font-size:.76rem;font-weight:700;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease}
+.modal-req-btn i{font-size:.68rem;color:var(--muted);transition:transform .15s ease}
+.modal-req-btn:hover{border-color:rgba(20,78,114,.28);background:rgba(238,245,245,.7);transform:translateY(-1px)}
+.modal-req-btn:hover i{transform:translateX(2px)}
+.modal-empty{padding:.9rem 1rem;border-radius:12px;border:1px dashed rgba(20,38,59,.18);background:rgba(245,247,250,.6);color:var(--muted);text-align:center;font-size:.82rem;line-height:1.5}
 
-.cob-card strong {
-  display: block;
-  font-size: 0.86rem;
-  margin-top: 0.2rem;
-  color: var(--ink);
-  line-height: 1.3;
-  position: relative;
-  z-index: 2;
-}
+/* Modal Transitions */
+.modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}
+.modal-fade-enter-from,.modal-fade-leave-to{opacity:0}
+.modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
+.modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
+.modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
 
-.cob-card p {
-  display: block;
-  margin-top: 0.12rem;
-  color: #14263b;
-  font-size: 0.74rem;
-  font-style: normal;
-  line-height: 1.45;
-  position: relative;
-  z-index: 2;
-}
-
-.cob-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.55rem;
-  color: #14263b;
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  position: relative;
-  z-index: 2;
-}
-
-.cob-track {
-  display: block;
-  height: 0.44rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.08);
-  overflow: hidden;
-  margin-top: 0.5rem;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-.cob-track b {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  width: auto;
-}
-.cob-card.clickable,
-.cob-type-card,
-.cob-item {
-  cursor: pointer;
-}
-.cob-card.clickable:hover,
-.cob-type-card:hover,
-.cob-item:hover {
-  transform: translateY(-1px);
-  border-color: rgba(20, 78, 114, 0.22);
-  box-shadow: 0 12px 22px rgba(20, 78, 114, 0.08);
-}
-.cob-workspace {
-  display: grid;
-  grid-template-columns: 0.78fr 1.02fr 0.92fr;
-  gap: 1rem;
-}
-.cob-type-card {
-  padding: 0.68rem 0.72rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.9);
-  text-align: left;
-}
-.cob-type-card.active {
-  border-color: rgba(20, 78, 114, 0.24);
-  background: rgba(238, 245, 245, 0.72);
-}
-.cob-type-card strong {
-  display: block;
-  font-size: 0.84rem;
-}
-.cob-type-card span {
-  display: block;
-  margin-top: 0.14rem;
-  color: #14263b;
-  font-size: 0.74rem;
-  line-height: 1.45;
-}
-.cob-form {
-  display: grid;
-  gap: 0.75rem;
-}
-.cob-summary {
-  margin-top: 0.85rem;
-  padding: 0.8rem 0.86rem;
-  border-radius: 18px;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 61, 87, 0.95) 0%,
-    rgba(20, 78, 114, 0.95) 100%
-  );
-  color: #fffaf2;
-}
-.cob-summary small {
-  display: block;
-  color: rgba(255, 250, 242, 0.9);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.cob-summary strong {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 1.62rem;
-  font-weight: 800;
-  line-height: 1;
-}
-.cob-summary span {
-  display: block;
-  margin-top: 0.38rem;
-  color: rgba(255, 250, 242, 0.95);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-.cob-list {
-  display: flex;
-  flex-direction: column;
-  max-height: 760px;
-  overflow-y: auto;
-  padding-right: 0.12rem;
-}
-.cob-item {
-  position: relative;
-  padding: 0.72rem 0.8rem 0.68rem 0.92rem;
-  margin-bottom: 0.55rem;
-  border-radius: 14px;
-  background: #fff;
-  text-align: left;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 80px;
-}
-.cob-item:last-child {
-  margin-bottom: 0;
-}
-.cob-item.active {
-  border-color: rgba(15, 118, 110, 0.35);
-  border-left-width: 0.28rem;
-  background: rgba(238, 245, 245, 0.6);
-}
-.cob-item:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7rem;
-  bottom: 0.7rem;
-  width: 0.18rem;
-  border-radius: 999px;
-  background: var(--accent, #0f766e);
-}
-.cob-item-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.cob-code {
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: var(--accent, #0f766e);
-}
-.cob-item-name {
-  margin: 0.28rem 0 0.18rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  line-height: 1.38;
-  color: var(--ink);
-}
-.cob-item-meta {
-  color: #14263b;
-  font-size: 0.74rem;
-  line-height: 1.42;
-}
-.cob-pill {
-  background: rgba(20, 38, 59, 0.08);
-  color: var(--ink);
-}
-.cob-inspector {
-  position: relative;
-  top: auto;
-  min-height: 760px;
-  display: flex;
-  flex-direction: column;
-}
-.cob-inspector-head {
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--line);
-}
-.cob-inspector-head strong {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #0f766e;
-}
-.cob-inspector-head span {
-  display: block;
-  margin-top: 0.26rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  line-height: 1.4;
-}
-.cob-inspector-body {
-  display: grid;
-  gap: 0.75rem;
-  padding-top: 0.85rem;
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  align-content: start;
-}
-.cob-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-.cob-meta span {
-  background: rgba(20, 38, 59, 0.06);
-  color: var(--ink);
-  font-size: 0.72rem;
-}
-.cob-callout,
-.cob-note {
-  padding: 0.76rem 0.84rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  line-height: 1.6;
-}
-.cob-callout {
-  background: rgba(255, 255, 255, 0.95);
-}
-.cob-note {
-  background: rgba(238, 245, 245, 0.95);
-}
-.cob-plain {
-  margin: 0.15rem 0 0;
-  padding-left: 1rem;
-  color: #14263b;
-  font-size: 0.78rem;
-  line-height: 1.58;
-}
-.cob-empty {
-  padding: 0.9rem;
-  border-radius: 16px;
-  border: 1px dashed rgba(20, 38, 59, 0.18);
-  background: rgba(255, 255, 255, 0.8);
-  color: #14263b;
-  text-align: center;
-  line-height: 1.55;
-}
-@media (max-width: 1399.98px) {
-  .cob-workspace {
-    grid-template-columns: 1fr;
-  }
-  .cob-inspector {
-    position: static;
-    min-height: auto;
-  }
-}
-@media (max-width: 1199.98px) {
-  .cob-hero,
-  .cob-nav,
-  .cob-two,
-  .cob-metrics,
-  .cob-cards,
-  .cob-domains,
-  .cob-mini,
-  .cob-type-grid,
-  .cob-factor-grid {
-    grid-template-columns: 1fr;
-  }
-  .cob-bar {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 767.98px) {
-  .cob-hero,
-  .cob-panel {
-    padding: 1rem;
-    border-radius: 22px;
-  }
-}
-
-/* Pagination styles */
-.cob-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-top: 1px solid var(--line);
-}
-.cob-page-info {
-  font-size: 0.875rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
+@media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
+@media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
+@media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}.modal-shell{grid-template-columns:1fr}.modal-sidebar{flex-direction:row;padding:1rem;gap:1rem}.modal-sidebar-icon{width:2.5rem;height:2.5rem;margin-bottom:0}.modal-close{top:.5rem;right:.5rem}.modal-dialog{max-width:100%}}
 </style>

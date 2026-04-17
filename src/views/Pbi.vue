@@ -1,5 +1,5 @@
 <template>
-  <div class="pbi-page">
+  <div class="sej-page">
     <div v-if="loading" class="loading-state">
       <div class="loading-spinner">
         <i class="fas fa-spinner fa-spin"></i>
@@ -14,29 +14,29 @@
         <button @click="retryLoad" class="btn btn-primary">Retry</button>
       </div>
     </div>
-    <div v-else class="pbi-shell">
-      <section class="pbi-hero">
+    <div v-else class="sej-shell">
+      <section class="sej-hero">
         <div>
-          <span class="pbi-kicker"
+          <span class="sej-kicker"
             ><i class="fas fa-landmark"></i>Framework Studio</span
           >
-          <h1 class="pbi-title">PBI 02/2024 KKS Navigator</h1>
-          <p class="pbi-lede">
+          <h1 class="sej-title">PBI 02/2024 KKS Navigator</h1>
+          <p class="sej-lede">
             Halaman ini menyajikan ringkasan Peraturan Bank Indonesia Nomor 2
             Tahun 2024 mengenai keamanan sistem informasi dan ketahanan siber
             bagi penyelenggara yang diatur dan diawasi Bank Indonesia, termasuk
             peta kewajiban inti, analisa implementasi, serta rujukan pelaporan
             dan pengawasan.
           </p>
-          <div class="pbi-metrics">
-            <div class="pbi-metric">
+          <div class="sej-metrics">
+            <div class="sej-metric">
               <label>Bab Substantif</label><strong>{{ totalChapters }}</strong
               ><span
                 >Mulai dari kerangka KKS sampai penerapan berdasarkan
                 klasifikasi penyelenggara.</span
               >
             </div>
-            <div class="pbi-metric">
+            <div class="sej-metric">
               <label>Kewajiban Inti</label
               ><strong>{{ totalRequirements }}</strong
               ><span
@@ -44,7 +44,7 @@
                 dalam explorer.</span
               >
             </div>
-            <div class="pbi-metric">
+            <div class="sej-metric">
               <label>Rujukan Operasional</label
               ><strong>{{ totalReferences }}</strong
               ><span
@@ -52,7 +52,7 @@
                 perlu disiapkan.</span
               >
             </div>
-            <div class="pbi-metric">
+            <div class="sej-metric">
               <label>Tenggat Insiden</label><strong>{{ incidentClock }}</strong
               ><span
                 >Notifikasi awal 1 jam dan laporan insiden 3 hari kalender ke
@@ -61,8 +61,8 @@
             </div>
           </div>
         </div>
-        <div class="pbi-side-stack">
-          <div class="pbi-side">
+        <div class="sej-side-stack">
+          <div class="sej-side">
             <label>Alur Analisa</label>
             <h3>Pendekatan analisa regulasi yang terstruktur</h3>
             <p>
@@ -73,7 +73,7 @@
               yang relevan.
             </p>
           </div>
-          <div class="pbi-side">
+          <div class="sej-side">
             <label>Catatan Pengawasan</label>
             <p>
               PBI ini menekankan pelaporan insiden yang sangat cepat, pelaporan
@@ -85,9 +85,9 @@
         </div>
       </section>
 
-      <div class="pbi-nav nav" role="tablist">
+      <div class="sej-nav nav" role="tablist">
         <button
-          class="pbi-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'overview' }"
           type="button"
           role="tab"
@@ -103,7 +103,7 @@
           >
         </button>
         <button
-          class="pbi-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'explorer' }"
           type="button"
           role="tab"
@@ -119,7 +119,7 @@
           >
         </button>
         <button
-          class="pbi-tab"
+          class="sej-tab"
           :class="{ active: activeTab === 'reference' }"
           type="button"
           role="tab"
@@ -136,66 +136,66 @@
         </button>
       </div>
 
-      <div class="tab-content pbi-grid">
+      <div class="tab-content sej-grid">
         <!-- Tab 1: Ringkasan Regulasi -->
         <div v-if="activeTab === 'overview'" key="overview-tab">
-          <div class="pbi-grid two">
-            <article class="pbi-panel">
-              <div class="pbi-head">
+          <div class="sej-grid two">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Peta bab pengaturan</h3>
-                <span class="pbi-chip">{{ totalChapters }} bab</span>
+                <span class="sej-chip">{{ totalChapters }} bab</span>
               </div>
-              <p class="pbi-copy">
+              <p class="sej-copy">
                 Pembacaan dapat dimulai dari struktur bab berikut untuk memahami
                 urutan pengaturan mulai dari fondasi KKS, kontrol preventif,
                 penanganan insiden, sampai kewajiban pelaporan.
               </p>
-              <div class="pbi-bars">
+              <div class="sej-bars">
                 <button
                   v-for="item in chapterBreakdown"
                   :key="item.key"
                   type="button"
-                  class="pbi-bar"
+                  class="sej-bar"
                   :class="{ active: chapterFilter === item.key }"
                   @click="jumpExplorer('', item.key)"
                 >
                   <span
                     ><strong>{{ item.key }} - {{ item.label }}</strong
                     ><em>{{ item.summary }}</em></span
-                  ><span class="pbi-track"
+                  ><span class="sej-track"
                     ><b
                       :style="{
                         width: (item.count / maxChapterCount) * 100 + '%',
                         background: item.color,
                       }"
                     ></b></span
-                  ><span class="pbi-num">{{ item.count }}</span>
+                  ><span class="sej-num">{{ item.count }}</span>
                 </button>
               </div>
             </article>
-            <article class="pbi-panel">
-              <div class="pbi-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Domain kewajiban inti</h3>
-                <span class="pbi-chip"
+                <span class="sej-chip"
                   >{{ domainBreakdown.length }} domain</span
                 >
               </div>
-              <p class="pbi-copy">
+              <p class="sej-copy">
                 Domain berikut membantu memetakan requirement utama yang perlu
                 dilihat sebagai satu rangkaian penguatan KKS, bukan sebagai
                 kontrol yang berdiri sendiri.
               </p>
-              <div class="pbi-cards">
+              <div class="sej-cards">
                 <button
                   v-for="item in domainBreakdown"
                   :key="item.key"
                   type="button"
-                  class="pbi-card"
+                  class="sej-card"
                   @click="jumpExplorer(item.key, '')"
                 >
-                  <div class="pbi-card-top">
+                  <div class="sej-card-top">
                     <span
-                      class="pbi-icon"
+                      class="sej-icon"
                       :style="{ '--accent': item.color, color: item.color }"
                       ><i :class="`fas ${item.icon}`"></i></span
                     ><span>{{ item.count }} entri</span>
@@ -206,45 +206,45 @@
               </div>
             </article>
           </div>
-          <div class="pbi-grid two">
-            <article class="pbi-panel">
-              <div class="pbi-head">
+          <div class="sej-grid two">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Cakupan subjek pengaturan</h3>
-                <span class="pbi-chip"
+                <span class="sej-chip"
                   >{{ subjectScopes.length }} kelompok</span
                 >
               </div>
-              <p class="pbi-copy">
+              <p class="sej-copy">
                 PBI 02/2024 berlaku pada kelompok penyelenggara berikut sebagai
                 objek pengaturan dan pengawasan KKS Bank Indonesia.
               </p>
-              <div class="pbi-scope-grid">
+              <div class="sej-mini-row">
                 <div
                   v-for="scope in subjectScopes"
                   :key="scope.code"
-                  class="pbi-scope"
+                  class="sej-mini"
                 >
                   <strong>{{ scope.code }}</strong
                   ><span>{{ scope.name }}</span>
                 </div>
               </div>
             </article>
-            <article class="pbi-panel">
-              <div class="pbi-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Sorotan pelaporan dan pengawasan</h3>
-                <span class="pbi-chip">Prioritas awal</span>
+                <span class="sej-chip">Prioritas awal</span>
               </div>
-              <p class="pbi-copy">
+              <p class="sej-copy">
                 Area berikut biasanya menjadi perhatian awal dalam penerapan PBI
                 karena langsung terkait dengan respons insiden, kewajiban
                 pelaporan, dan kesiapan saat pengawasan berlangsung.
               </p>
-              <div class="pbi-mini-row">
+              <div class="sej-mini-row">
                 <button
                   v-for="item in reportingHighlights"
                   :key="item.id"
                   type="button"
-                  class="pbi-mini"
+                  class="sej-mini"
                   @click="jumpReference('', item.id)"
                 >
                   <label>{{ item.article }}</label
@@ -252,7 +252,7 @@
                   ><span>{{ item.timeline }}</span>
                 </button>
               </div>
-              <div class="pbi-note">
+              <div class="sej-note">
                 <strong>Catatan kepatuhan</strong>
                 <div class="mt-2">
                   Pasal 55 menegaskan bahwa ketidakpatuhan atas kewajiban
@@ -267,18 +267,18 @@
 
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
-          <div class="pbi-workspace">
-            <article class="pbi-panel">
-              <div class="pbi-head">
+          <div class="sej-workspace">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Filter Kewajiban</h3>
-                <span class="pbi-chip">{{ totalRequirements }} entri</span>
+                <span class="sej-chip">{{ totalRequirements }} entri</span>
               </div>
-              <div class="pbi-domain-grid">
+              <div class="sej-pillar-grid">
                 <button
                   v-for="item in domainBreakdown"
                   :key="item.key"
                   type="button"
-                  class="pbi-domain"
+                  class="sej-pillar"
                   :class="{ active: activeDomain === item.key }"
                   :style="{ '--accent': item.color }"
                   @click="toggleDomain(item.key)"
@@ -287,7 +287,7 @@
                   ><span>{{ item.count }} kewajiban</span>
                 </button>
               </div>
-              <div class="pbi-form">
+              <div class="sej-form">
                 <div>
                   <label for="chapterFilter">Bab Regulasi</label
                   ><select
@@ -323,7 +323,7 @@
                   Atur ulang filter
                 </button>
               </div>
-              <div class="pbi-summary">
+              <div class="sej-summary">
                 <small>Kewajiban Ditampilkan</small
                 ><strong>{{ filteredRequirements.length }}</strong
                 ><span>{{
@@ -333,43 +333,43 @@
                 }}</span>
               </div>
             </article>
-            <article class="pbi-panel">
-              <div class="pbi-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Daftar kewajiban</h3>
-                <span class="pbi-chip"
+                <span class="sej-chip"
                   >{{ filteredRequirements.length }} entri</span
                 >
               </div>
-              <div class="pbi-list">
+              <div class="sej-list">
                 <button
                   v-for="req in filteredRequirements"
                   :key="req.id"
                   type="button"
-                  class="pbi-item"
+                  class="sej-item"
                   :class="{ active: activeRequirementId === req.id }"
                   :style="{ '--accent': getDomainColor(req.domain) }"
                   @click="setActiveRequirement(req.id)"
                 >
-                  <div class="pbi-item-top">
-                    <span class="pbi-item-code">{{ req.id }}</span
-                    ><span class="pbi-pill">{{
+                  <div class="sej-item-top">
+                    <span class="sej-item-code">{{ req.id }}</span
+                    ><span class="sej-pill">{{
                       getDomainLabel(req.domain)
                     }}</span>
                   </div>
-                  <div class="pbi-item-name">{{ req.title || "-" }}</div>
-                  <div class="pbi-item-meta">
+                  <div class="sej-item-name">{{ req.title || "-" }}</div>
+                  <div class="sej-item-meta">
                     <span>{{ req.article || "-" }}</span
                     ><span>Bab {{ req.chapter || "-" }}</span
                     ><span>{{ (req.focus || []).length }} fokus</span>
                   </div>
                 </button>
-                <div v-if="filteredRequirements.length === 0" class="pbi-empty">
+                <div v-if="filteredRequirements.length === 0" class="sej-empty">
                   Tidak ada kewajiban yang cocok dengan filter saat ini.
                 </div>
               </div>
             </article>
-            <article class="pbi-panel pbi-inspector">
-              <div class="pbi-inspector-head">
+            <article class="sej-panel sej-inspector">
+              <div class="sej-inspector-head">
                 <small>Requirement Inspector</small
                 ><strong>{{
                   activeRequirement ? activeRequirement.id : "-"
@@ -380,8 +380,8 @@
                     : "Pilih kewajiban untuk membaca detail."
                 }}</span>
               </div>
-              <div class="pbi-inspector-body">
-                <div class="pbi-meta">
+              <div class="sej-inspector-body">
+                <div class="sej-meta">
                   <span>{{
                     activeRequirement ? activeRequirement.article : "-"
                   }}</span
@@ -400,7 +400,7 @@
                       : "0 bukti"
                   }}</span>
                 </div>
-                <div class="pbi-callout">
+                <div class="sej-callout">
                   <strong>Ringkasan Kewajiban</strong>
                   <div class="mt-2">
                     {{
@@ -410,7 +410,7 @@
                     }}
                   </div>
                 </div>
-                <div class="pbi-note">
+                <div class="sej-note">
                   <strong><i class="fas fa-lightbulb me-1"></i>Analogi</strong>
                   <div class="mt-2">
                     {{
@@ -418,9 +418,9 @@
                     }}
                   </div>
                 </div>
-                <div class="pbi-callout">
+                <div class="sej-callout">
                   <strong>Fokus Pelaksanaan</strong>
-                  <ul class="pbi-plain">
+                  <ul class="sej-plain">
                     <li
                       v-for="(item, idx) in activeRequirement &&
                       activeRequirement.focus &&
@@ -433,9 +433,9 @@
                     </li>
                   </ul>
                 </div>
-                <div class="pbi-callout">
+                <div class="sej-callout">
                   <strong>Contoh Bukti</strong>
-                  <ul class="pbi-plain">
+                  <ul class="sej-plain">
                     <li
                       v-for="(item, idx) in activeRequirement &&
                       activeRequirement.evidence &&
@@ -448,7 +448,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="pbi-note">
+                <div class="sej-note">
                   <strong>Catatan Pelaporan/Pengawasan</strong>
                   <div class="mt-2">
                     {{
@@ -466,32 +466,32 @@
 
         <!-- Tab 3: Pelaporan & Pengawasan -->
         <div v-if="activeTab === 'reference'" key="reference-tab">
-          <div class="pbi-refspace">
-            <article class="pbi-panel">
-              <div class="pbi-head">
+          <div class="sej-refspace">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Filter Board Rujukan</h3>
-                <span class="pbi-chip">{{ totalReferences }} entri</span>
+                <span class="sej-chip">{{ totalReferences }} entri</span>
               </div>
-              <div class="pbi-bars">
+              <div class="sej-bars">
                 <button
                   v-for="item in referenceTypeBreakdown"
                   :key="item.type"
                   type="button"
-                  class="pbi-bar"
+                  class="sej-bar"
                   :class="{ active: referenceTypeFilter === item.type }"
                   @click="jumpReference(item.type)"
                 >
                   <span
                     ><strong>{{ item.label }}</strong
                     ><em>{{ item.summary }}</em></span
-                  ><span class="pbi-track"
+                  ><span class="sej-track"
                     ><b
                       style="width: 100%; background: {{ item.color }}"
                     ></b></span
-                  ><span class="pbi-num">{{ item.count }}</span>
+                  ><span class="sej-num">{{ item.count }}</span>
                 </button>
               </div>
-              <div class="pbi-form mt-3">
+              <div class="sej-form mt-3">
                 <div>
                   <label for="referenceTypeFilter">Jenis Rujukan</label
                   ><select
@@ -527,7 +527,7 @@
                   Atur ulang filter
                 </button>
               </div>
-              <div class="pbi-summary">
+              <div class="sej-summary">
                 <small>Rujukan Ditampilkan</small
                 ><strong>{{ filteredReferences.length }}</strong
                 ><span>{{
@@ -537,36 +537,36 @@
                 }}</span>
               </div>
             </article>
-            <article class="pbi-panel">
-              <div class="pbi-head">
+            <article class="sej-panel">
+              <div class="sej-head">
                 <h3>Board pelaporan, pengawasan, dan kolaborasi</h3>
-                <span class="pbi-chip"
+                <span class="sej-chip"
                   >{{ filteredReferences.length }} entri</span
                 >
               </div>
-              <p class="pbi-copy">
+              <p class="sej-copy">
                 Board ini merangkum tenggat regulator, kebutuhan deliverable,
                 dan rujukan kewajiban inti yang perlu disiapkan saat organisasi
                 menata kepatuhan terhadap PBI 02/2024.
               </p>
-              <div class="pbi-board">
+              <div class="sej-cards">
                 <article
                   v-for="ref in filteredReferences"
                   :key="ref.id"
-                  class="pbi-refcard"
+                  class="sej-card"
                   :style="{ '--accent': getRefTypeColor(ref.type) }"
                 >
-                  <div class="pbi-ref-top">
-                    <span class="pbi-pill">{{ getRefTypeLabel(ref.type) }}</span
-                    ><span class="pbi-code">{{ ref.article || "-" }}</span>
+                  <div class="sej-card-top">
+                    <span class="sej-pill" style="margin-left: -0.2rem;">{{ getRefTypeLabel(ref.type) }}</span>
+                    <span class="sej-code">{{ ref.article || "-" }}</span>
                   </div>
                   <strong>{{ ref.title || "-" }}</strong>
                   <p>{{ ref.summary || "-" }}</p>
-                  <div class="pbi-ref-meta">
+                  <div class="sej-item-meta mt-2">
                     <span>{{ ref.timeline || "-" }}</span
                     ><span>{{ ref.owner || "-" }}</span>
                   </div>
-                  <ul class="pbi-plain">
+                  <ul class="sej-plain">
                     <li
                       v-for="(d, idx) in (ref.deliverables || []).slice(0, 3)"
                       :key="idx"
@@ -577,12 +577,12 @@
                       Tidak ada deliverable tambahan.
                     </li>
                   </ul>
-                  <div class="pbi-refs">
+                  <div class="sej-refs">
                     <button
                       v-for="lr in ref.linked_requirements || []"
                       :key="lr"
                       type="button"
-                      class="pbi-ref"
+                      class="sej-ref"
                       @click="
                         jumpExplorer(
                           requirementMap[lr]?.domain || '',
@@ -597,12 +597,12 @@
                         !ref.linked_requirements ||
                         !ref.linked_requirements.length
                       "
-                      class="pbi-empty w-100"
+                      class="sej-empty w-100"
                       >Belum ada requirement yang dipetakan.</span
                     >
                   </div>
                 </article>
-                <div v-if="filteredReferences.length === 0" class="pbi-empty">
+                <div v-if="filteredReferences.length === 0" class="sej-empty" style="grid-column: 1 / -1;">
                   Tidak ada rujukan yang cocok dengan filter saat ini.
                 </div>
               </div>
@@ -973,729 +973,138 @@ export default {
 </script>
 
 <style scoped>
-.pbi-page {
-  --ink: #14263b;
-  --muted: #5c6776;
-  --line: rgba(20, 38, 59, 0.1);
-  --shell: linear-gradient(180deg, #f6efe4 0%, #edf5f6 100%);
-  color: var(--ink);
-  padding: 0.25rem;
-  border-radius: 32px;
-  background: var(--shell);
-}
-.pbi-shell {
-  display: grid;
-  gap: 1rem;
-}
-.pbi-hero {
-  display: grid;
-  grid-template-columns: 1.55fr 0.92fr;
-  gap: 1.2rem;
-  align-items: stretch;
-  min-height: 368px;
-  padding: 1.45rem;
-  border-radius: 28px;
-  overflow: hidden;
-  position: relative;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(248, 214, 161, 0.88),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(156, 210, 219, 0.7),
-      transparent 28%
-    ),
-    linear-gradient(135deg, #132a43 0%, #1d5671 46%, #f2debb 100%);
-  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.09);
-}
-.pbi-hero > * {
-  position: relative;
-  z-index: 1;
-}
-.pbi-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.18);
-  color: rgba(255, 250, 242, 0.92);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.pbi-title {
-  margin: 1rem 0 0.7rem;
-  color: #fffaf2;
-  font-size: clamp(2rem, 3.8vw, 3rem);
-  font-weight: 800;
-  line-height: 1.04;
-}
-.pbi-lede {
-  margin: 0;
-  max-width: 760px;
-  color: rgba(255, 250, 242, 0.82);
-  line-height: 1.7;
-}
-.pbi-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.65rem;
-  margin-top: 1.1rem;
-}
-.pbi-metric,
-.pbi-side,
-.pbi-panel,
-.pbi-mini,
-.pbi-refcard {
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 251, 245, 0.98) 0%,
-    rgba(246, 251, 252, 0.98) 100%
-  );
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.05);
-}
-.pbi-metric {
-  padding: 0.68rem 0.74rem;
-  border-radius: 16px;
-  background: rgba(255, 250, 242, 0.12);
-  border-color: rgba(255, 255, 255, 0.18);
-  min-height: 96px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.pbi-metric label,
-.pbi-side label,
-.pbi-mini label,
-.pbi-form label,
-.pbi-inspector small,
-.pbi-label {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.pbi-metric label {
-  color: rgba(255, 250, 242, 0.7);
-  margin-bottom: 0.35rem;
-}
-.pbi-metric strong {
-  display: block;
-  color: #fffaf2;
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1;
-}
-.pbi-metric span {
-  display: block;
-  margin-top: 0.34rem;
-  color: rgba(255, 250, 242, 0.72);
-  font-size: 0.76rem;
-  line-height: 1.45;
-}
-.pbi-side-stack {
-  display: grid;
-  gap: 0.85rem;
-}
-.pbi-side {
-  padding: 0.8rem 0.86rem;
-  border-radius: 18px;
-  background: rgba(255, 250, 242, 0.78);
-  border-color: rgba(255, 255, 255, 0.24);
-  min-height: 142px;
-}
-.pbi-side label {
-  color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-.pbi-side h3 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 800;
-}
-.pbi-side p {
-  margin: 0.55rem 0 0;
-  color: var(--muted);
-  line-height: 1.55;
-  font-size: 0.84rem;
-}
-.pbi-nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-.pbi-tab {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.72rem;
-  align-items: center;
-  padding: 0.82rem 0.88rem;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 250, 242, 0.94) 0%,
-    rgba(239, 245, 246, 0.94) 100%
-  );
-  text-align: left;
-  color: var(--ink);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.04);
-  cursor: pointer;
-}
-.pbi-tab.active {
-  border-color: rgba(20, 78, 114, 0.24);
-  box-shadow: 0 18px 30px rgba(20, 78, 114, 0.1);
-}
-.pbi-tab i {
-  width: 2.35rem;
-  height: 2.35rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background: rgba(20, 38, 59, 0.06);
-}
-.pbi-tab strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-.pbi-tab span {
-  display: block;
-  margin-top: 0.14rem;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.4;
-}
-.pbi-grid {
-  display: grid;
-  gap: 1rem;
-}
-.pbi-grid.two {
-  grid-template-columns: 1.06fr 0.94fr;
-}
-.pbi-panel {
-  padding: 1rem;
-  border-radius: 20px;
-}
-.pbi-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.85rem;
-  margin-bottom: 0.7rem;
-}
-.pbi-head h3 {
-  margin: 0;
-  font-size: 0.98rem;
-  font-weight: 800;
-}
-.pbi-chip,
-.pbi-pill,
-.pbi-meta span,
-.pbi-ref {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.24rem 0.52rem;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.pbi-chip {
-  background: rgba(20, 38, 59, 0.08);
-  color: var(--ink);
-}
-.pbi-copy {
-  margin: 0 0 0.85rem;
-  color: var(--muted);
-  line-height: 1.6;
-  font-size: 0.84rem;
-}
-.pbi-bars,
-.pbi-cards,
-.pbi-list,
-.pbi-board,
-.pbi-scope-grid,
-.pbi-domain-grid {
-  display: grid;
-  gap: 0.65rem;
-}
-.pbi-bar {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(180px, 1fr) auto;
-  gap: 0.68rem;
-  align-items: center;
-  padding: 0.62rem 0.72rem;
-  border-radius: 16px;
-  border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.55);
-  text-align: left;
-  cursor: pointer;
-  transition:
-    border-color 0.15s ease,
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-.pbi-bar:hover,
-.pbi-bar.active,
-.pbi-card:hover,
-.pbi-card.active,
-.pbi-domain:hover,
-.pbi-domain.active,
-.pbi-mini:hover,
-.pbi-refcard:hover {
-  transform: translateY(-1px);
-  border-color: rgba(20, 78, 114, 0.22);
-  box-shadow: 0 12px 22px rgba(20, 78, 114, 0.08);
-}
-.pbi-bar strong,
-.pbi-card strong,
-.pbi-domain strong,
-.pbi-mini strong,
-.pbi-refcard strong {
-  display: block;
-  font-size: 0.86rem;
-}
-.pbi-bar em,
-.pbi-card p,
-.pbi-domain span,
-.pbi-mini span,
-.pbi-refcard p {
-  display: block;
-  margin-top: 0.12rem;
-  color: var(--muted);
-  font-size: 0.74rem;
-  font-style: normal;
-  line-height: 1.45;
-}
-.pbi-track {
-  height: 0.44rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.08);
-  overflow: hidden;
-}
-.pbi-track b {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-}
-.pbi-num {
-  min-width: 2.2rem;
-  text-align: right;
-  font-weight: 800;
-}
-.pbi-cards {
-  grid-template-columns: repeat(3, 1fr);
-}
-.pbi-card {
-  width: 100%;
-  padding: 0.76rem 0.8rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.75);
-  text-align: left;
-  cursor: pointer;
-}
-.pbi-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.55rem;
-  color: var(--muted);
-  font-size: 0.64rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-}
-.pbi-icon {
-  width: 1.9rem;
-  height: 1.9rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: rgba(20, 78, 114, 0.12);
-  color: var(--accent);
-  font-size: 0.8rem;
-}
-.pbi-mini-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.65rem;
-}
-.pbi-mini {
-  width: 100%;
-  padding: 0.78rem 0.82rem;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.76);
-  text-align: left;
-  cursor: pointer;
-}
-.pbi-mini label {
-  color: var(--muted);
-}
-.pbi-mini strong {
-  margin-top: 0.25rem;
-  color: #144e72;
-  font-size: 1rem;
-}
-.pbi-mini span {
-  margin-top: 0.2rem;
-}
-.pbi-scope-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-.pbi-scope {
-  padding: 0.78rem 0.82rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
-}
-.pbi-scope strong {
-  display: block;
-  font-size: 0.86rem;
-  font-weight: 800;
-}
-.pbi-scope span {
-  display: block;
-  margin-top: 0.14rem;
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.45;
-}
-.pbi-workspace {
-  display: grid;
-  grid-template-columns: 0.78fr 1.04fr 0.9fr;
-  gap: 1rem;
-}
-.pbi-refspace {
-  display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: 1rem;
-}
-.pbi-domain-grid {
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 0.8rem;
-}
-.pbi-domain {
-  width: 100%;
-  padding: 0.62rem 0.68rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.75);
-  text-align: left;
-  cursor: pointer;
-}
-.pbi-domain strong {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--accent);
-}
-.pbi-domain span {
-  font-size: 0.74rem;
-}
-.pbi-form {
-  display: grid;
-  gap: 0.75rem;
-}
-.pbi-form label {
-  margin-bottom: 0.3rem;
-  color: var(--muted);
-}
-.pbi-summary {
-  margin-top: 0.85rem;
-  padding: 0.82rem 0.88rem;
-  border-radius: 18px;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 61, 87, 0.95) 0%,
-    rgba(20, 78, 114, 0.95) 100%
-  );
-  color: #fffaf2;
-}
-.pbi-summary small {
-  display: block;
-  color: rgba(255, 250, 242, 0.7);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.pbi-summary strong {
-  display: block;
-  margin-top: 0.28rem;
-  font-size: 1.72rem;
-  font-weight: 800;
-  line-height: 1;
-}
-.pbi-summary span {
-  display: block;
-  margin-top: 0.42rem;
-  color: rgba(255, 250, 242, 0.78);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-.pbi-list {
-  display: flex;
-  flex-direction: column;
-  max-height: 720px;
-  overflow-y: auto;
-  padding-right: 0.12rem;
-}
-.pbi-item {
-  position: relative;
-  width: 100%;
-  padding: 0.7rem 0.78rem 0.66rem 0.88rem;
-  margin-bottom: 0.55rem;
-  border-radius: 14px;
-  border: 1px solid rgba(20, 38, 59, 0.08);
-  background: #fff;
-  text-align: left;
-  cursor: pointer;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 80px;
-}
-.pbi-item:last-child {
-  margin-bottom: 0;
-}
-.pbi-item.active {
-  border-color: rgba(20, 78, 114, 0.35);
-  border-left-width: 0.28rem;
-  background: rgba(238, 245, 245, 0.6);
-}
-.pbi-item:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.68rem;
-  bottom: 0.68rem;
-  width: 0.18rem;
-  border-radius: 999px;
-  background: var(--accent, #144e72);
-}
-.pbi-item-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.pbi-item-code,
-.pbi-code {
-  font-family:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: var(--accent, #144e72);
-}
-.pbi-item-name {
-  margin: 0.28rem 0 0.2rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  line-height: 1.38;
-  color: var(--ink);
-}
-.pbi-item-meta {
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.4;
-}
-.pbi-item-meta span + span::before {
-  content: "•";
-  margin: 0 0.4rem;
-  color: rgba(20, 38, 59, 0.35);
-}
-.pbi-pill {
-  padding: 0.2rem 0.45rem;
-  font-size: 0.68rem;
-  background: rgba(20, 38, 59, 0.08);
-  color: var(--ink);
-}
-.pbi-inspector {
-  position: relative;
-  top: auto;
-  min-height: 720px;
-  display: flex;
-  flex-direction: column;
-}
-.pbi-inspector-head {
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--line);
-}
-.pbi-inspector-head strong {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #144e72;
-}
-.pbi-inspector-head span {
-  display: block;
-  margin-top: 0.28rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  line-height: 1.4;
-}
-.pbi-inspector-body {
-  display: grid;
-  gap: 0.75rem;
-  padding-top: 0.85rem;
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  align-content: start;
-}
-.pbi-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-.pbi-meta span {
-  background: rgba(20, 38, 59, 0.06);
-  color: var(--ink);
-  font-size: 0.72rem;
-}
-.pbi-callout,
-.pbi-note {
-  padding: 0.76rem 0.84rem;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  line-height: 1.62;
-}
-.pbi-callout {
-  background: rgba(255, 255, 255, 0.75);
-}
-.pbi-note {
-  background: rgba(238, 245, 245, 0.84);
-}
-.pbi-plain {
-  margin: 0.15rem 0 0;
-  padding-left: 1rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-.pbi-plain li {
-  margin-bottom: 0.16rem;
-}
-.pbi-empty {
-  padding: 0.9rem;
-  border-radius: 16px;
-  border: 1px dashed rgba(20, 38, 59, 0.18);
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--muted);
-  text-align: center;
-  line-height: 1.55;
-}
-.pbi-board {
-  grid-template-columns: repeat(2, 1fr);
-}
-.pbi-refcard {
-  position: relative;
-  padding: 0.88rem 0.92rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.88);
-  border-color: rgba(20, 38, 59, 0.08);
-}
-.pbi-refcard::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.82rem;
-  bottom: 0.82rem;
-  width: 0.2rem;
-  border-radius: 999px;
-  background: var(--accent, #144e72);
-}
-.pbi-ref-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.45rem;
-}
-.pbi-ref-top .pbi-code {
-  font-size: 0.72rem;
-}
-.pbi-ref-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.55rem 0;
-}
-.pbi-ref-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.22rem 0.5rem;
-  border-radius: 999px;
-  background: rgba(20, 38, 59, 0.06);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-.pbi-refs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.6rem;
-}
-.pbi-ref {
-  border: 1px solid rgba(20, 38, 59, 0.12);
-  background: rgba(255, 255, 255, 0.82);
-  color: var(--ink);
-  font-size: 0.7rem;
-  cursor: pointer;
-}
-@media (max-width: 1399.98px) {
-  .pbi-workspace,
-  .pbi-refspace {
-    grid-template-columns: 1fr;
-  }
-  .pbi-inspector {
-    position: static;
-    min-height: auto;
-  }
-}
-@media (max-width: 1199.98px) {
-  .pbi-hero,
-  .pbi-metric,
-  .pbi-side {
-    min-height: auto;
-  }
-  .pbi-hero,
-  .pbi-nav,
-  .pbi-grid.two,
-  .pbi-metrics,
-  .pbi-cards,
-  .pbi-scope-grid,
-  .pbi-mini-row,
-  .pbi-board {
-    grid-template-columns: 1fr;
-  }
-  .pbi-bar {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 767.98px) {
-  .pbi-hero,
-  .pbi-panel {
-    padding: 1.2rem;
-    border-radius: 22px;
-  }
-  .pbi-domain-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
+.sej-shell{display:grid;gap:1rem}
+.sej-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}
+.sej-hero>*{position:relative;z-index:1}
+.sej-kicker{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:rgba(255,250,242,.18);color:rgba(255,250,242,.92);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-title{margin:1rem 0 .7rem;color:#fffaf2;font-size:clamp(2rem,3.8vw,3rem);font-weight:800;line-height:1.04}
+.sej-lede{margin:0;max-width:720px;color:rgba(255,250,242,.82);line-height:1.7}
+.sej-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.1rem}
+.sej-metric,.sej-side,.sej-panel,.sej-mini{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,251,245,.98) 0%,rgba(246,251,252,.98) 100%);box-shadow:0 14px 28px rgba(15,23,42,.05)}
+.sej-metric{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.12);border-color:rgba(255,255,255,.18);min-height:96px;display:flex;flex-direction:column;justify-content:flex-start}
+.sej-metric label,.sej-side label,.sej-mini label,.sej-form label,.sej-inspector small,.sej-label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-metric label{color:rgba(255,250,242,.7);margin-bottom:.35rem}
+.sej-metric strong{display:block;color:#fffaf2;font-size:1.5rem;font-weight:800;line-height:1}
+.sej-metric span{display:block;margin-top:.34rem;color:rgba(255,250,242,.72);font-size:.76rem}
+.sej-side-stack{display:grid;gap:.85rem}
+.sej-side{padding:.8rem .86rem;border-radius:18px;background:rgba(255,250,242,.78);border-color:rgba(255,255,255,.24);min-height:142px}
+.sej-side label{color:var(--muted);margin-bottom:.4rem}
+.sej-side h3{margin:0;font-size:1rem;font-weight:800}
+.sej-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
+.sej-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.sej-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
+.sej-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
+.sej-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
+.sej-tab strong{display:block;font-size:.9rem;font-weight:800}
+.sej-tab span{display:block;margin-top:.14rem;color:var(--muted);font-size:.76rem;line-height:1.4}
+.sej-grid{display:grid;gap:1rem}
+.sej-grid.two{grid-template-columns:1.06fr .94fr}
+.sej-panel{padding:1rem;border-radius:20px}
+.sej-head{display:flex;align-items:center;justify-content:space-between;gap:.85rem;margin-bottom:.7rem}
+.sej-head h3{margin:0;font-size:.98rem;font-weight:800}
+.sej-chip,.sej-pill,.sej-meta span,.sej-ref{display:inline-flex;align-items:center;gap:.3rem;padding:.24rem .52rem;border-radius:999px;font-size:.7rem;font-weight:700;line-height:1.2}
+.sej-chip{background:rgba(20,38,59,.08);color:var(--ink)}
+.sej-copy{margin:0 0 .85rem;color:var(--muted);line-height:1.6;font-size:.84rem}
+.sej-bars,.sej-cards,.sej-hotspots,.sej-families{display:grid;gap:.65rem}
+.sej-bar,.sej-hotspot,.sej-family{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(180px,1fr) auto;gap:.68rem;align-items:center;padding:.62rem .72rem;border-radius:16px;border:1px solid transparent;background:rgba(255,255,255,.55);text-align:left;cursor:pointer;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.sej-family{grid-template-columns:1fr auto}
+.sej-bar:hover,.sej-hotspot:hover,.sej-family:hover,.sej-bar.active,.sej-hotspot.active,.sej-family.active{transform:translateY(-1px);border-color:rgba(20,78,114,.22);box-shadow:0 12px 22px rgba(20,78,114,.08)}
+.sej-bar strong,.sej-hotspot strong,.sej-family strong{display:block;font-size:.86rem}
+.sej-bar em,.sej-hotspot em,.sej-family em{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem;font-style:normal}
+.sej-track{height:.44rem;border-radius:999px;background:rgba(20,38,59,.08);overflow:hidden}
+.sej-track b{display:block;height:100%;border-radius:inherit}
+.sej-num{min-width:2.2rem;text-align:right;font-weight:800}
+.sej-cards{grid-template-columns:repeat(3,1fr)}
+.sej-card{width:100%;padding:.76rem .8rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.sej-card-top{display:flex;align-items:center;justify-content:space-between;gap:.55rem;color:var(--muted);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.sej-icon{width:1.9rem;height:1.9rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(20,78,114,.12);color:var(--accent);font-size:.8rem}
+.sej-card strong{display:block;margin-top:.42rem;font-size:.86rem;font-weight:800}
+.sej-card p{margin:.22rem 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}
+.sej-mini-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:.8rem}
+.sej-mini{padding:.72rem .78rem;border-radius:16px}
+.sej-mini label{color:var(--muted)}
+.sej-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
+.sej-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
+.sej-workspace{display:grid;grid-template-columns:.76fr 1.03fr .91fr;gap:1rem}
+.sej-refspace{display:grid;grid-template-columns:.82fr 1.18fr;gap:1rem}
+.sej-pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem;margin-bottom:.8rem}
+.sej-pillar{width:100%;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.sej-pillar.active{border-color:rgba(20,78,114,.24);background:rgba(238,245,245,.72);box-shadow:0 12px 24px rgba(20,78,114,.08)}
+.sej-pillar strong{display:block;font-size:.82rem;font-weight:800;color:var(--accent)}
+.sej-pillar span{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem}
+.sej-form{display:grid;gap:.75rem}
+.sej-form label{margin-bottom:.3rem;color:var(--muted)}
+.sej-summary{margin-top:.85rem;padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(20,78,114,.95) 100%);color:#fffaf2}
+.sej-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.sej-summary strong{display:block;margin-top:.28rem;font-size:1.72rem;font-weight:800;line-height:1}
+.sej-summary span{display:block;margin-top:.42rem;color:rgba(255,250,242,.78);font-size:.78rem;line-height:1.5}
+.sej-list{display:flex;flex-direction:column;max-height:720px;overflow-y:auto;padding-right:.12rem}
+.sej-item{position:relative;width:100%;padding:.7rem .78rem .66rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(20,38,59,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
+.sej-item:last-child{margin-bottom:0}
+.sej-item.active{border-color:rgba(20,78,114,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
+.sej-item:before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent,#144e72)}
+.sej-item-top{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between}
+.sej-item-code,.sej-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:.76rem;font-weight:800;color:var(--accent,#144e72)}
+.sej-item-name{margin:.28rem 0 .2rem;font-size:.88rem;font-weight:700;line-height:1.38;color:var(--ink)}
+.sej-item-meta{color:var(--muted);font-size:.74rem;line-height:1.4}
+.sej-item-meta span+span::before{content:'•';margin:0 .4rem;color:rgba(20,38,59,.35)}
+.sej-pill{padding:.2rem .45rem;font-size:.68rem;background:rgba(20,38,59,.08);color:var(--ink)}
+.sej-inspector{position:relative;top:auto;min-height:720px;display:flex;flex-direction:column}
+.sej-inspector-head{padding-bottom:.85rem;border-bottom:1px solid var(--line)}
+.sej-inspector-head strong{display:block;margin-top:.35rem;font-size:1rem;font-weight:800;color:#144e72}
+.sej-inspector-head span{display:block;margin-top:.28rem;font-size:.9rem;font-weight:800;line-height:1.4}
+.sej-inspector-body{display:grid;gap:.75rem;padding-top:.85rem;flex:1;min-height:0;overflow:auto;align-content:start}
+.sej-meta{display:flex;flex-wrap:wrap;gap:.45rem}
+.sej-meta span{background:rgba(20,38,59,.06);color:var(--ink);font-size:.72rem}
+.sej-callout,.sej-note{padding:.76rem .84rem;border-radius:16px;border:1px solid var(--line);line-height:1.62}
+.sej-callout{background:rgba(255,255,255,.75)}
+.sej-note{background:rgba(238,245,245,.84)}
+.sej-plain{margin:.15rem 0 0;padding-left:1rem;color:var(--muted);font-size:.78rem;line-height:1.6}
+.sej-plain li{margin-bottom:.16rem}
+.sej-refs{display:flex;flex-wrap:wrap;gap:.4rem}
+.sej-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
+.sej-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
+
+/* Modal Styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.56);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem}
+.modal-dialog{width:100%;max-width:780px;animation:modalSlideIn .25s ease-out}
+.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+.modal-sidebar{position:relative;padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#fffaf2;text-align:center}
+.modal-close{position:absolute;top:.75rem;right:.75rem;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;border:none;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease}
+.modal-close:hover{background:rgba(255,255,255,.28);transform:scale(1.05)}
+.modal-sidebar-icon{width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(255,255,255,.18);font-size:1.25rem;margin-bottom:.25rem}
+.modal-sidebar-id{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:1.15rem;font-weight:800;letter-spacing:.04em}
+.modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
+.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
+.modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
+.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
+.modal-section{margin-bottom:1.25rem}
+.modal-section:last-child{margin-bottom:0}
+.modal-section-header{display:flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.modal-section-header i{font-size:.82rem}
+.modal-section-content{padding-left:.25rem}
+.modal-scope{display:inline-block;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700;margin-bottom:.55rem}
+.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+.modal-artifact-list{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.modal-artifact-list li{display:flex;align-items:flex-start;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem;color:var(--ink);line-height:1.5}
+.modal-artifact-list li i{color:#0f766e;font-size:.82rem;margin-top:.18rem;flex-shrink:0}
+.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}
+.modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.85);color:var(--ink);font-size:.76rem;font-weight:700;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease}
+.modal-req-btn i{font-size:.68rem;color:var(--muted);transition:transform .15s ease}
+.modal-req-btn:hover{border-color:rgba(20,78,114,.28);background:rgba(238,245,245,.7);transform:translateY(-1px)}
+.modal-req-btn:hover i{transform:translateX(2px)}
+.modal-empty{padding:.9rem 1rem;border-radius:12px;border:1px dashed rgba(20,38,59,.18);background:rgba(245,247,250,.6);color:var(--muted);text-align:center;font-size:.82rem;line-height:1.5}
+
+/* Modal Transitions */
+.modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}
+.modal-fade-enter-from,.modal-fade-leave-to{opacity:0}
+.modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
+.modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
+.modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
+
+@media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
+@media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
+@media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}.modal-shell{grid-template-columns:1fr}.modal-sidebar{flex-direction:row;padding:1rem;gap:1rem}.modal-sidebar-icon{width:2.5rem;height:2.5rem;margin-bottom:0}.modal-close{top:.5rem;right:.5rem}.modal-dialog{max-width:100%}}
 </style>
