@@ -10,7 +10,7 @@
       "Memastikan Standar Penyadapan Minimal",
       "Cakupan Mayoritas Pengujian Otomatis"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V12", "V14"]
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
   },
   {
     "id": "L2",
@@ -23,7 +23,7 @@
       "Penilaian Risiko Ekosistem (Dependency Analysis)",
       "Verifikasi Logika Cacat Akses Vertikal/Horizontal"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V12", "V14"]
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
   },
   {
     "id": "L3",
@@ -36,6 +36,6 @@
       "Perlindungan Anti-Tampering Berlapis Tinggi",
       "Pemenuhan Regulasi Super Spesifik (mis. PCI-DSS, HIPAA compliance)"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6"]
+    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
   }
 ]
