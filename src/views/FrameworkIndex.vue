@@ -108,6 +108,26 @@ export default {
           accent: "#b91c1c",
           icon: "fa-university",
         },
+        {
+          routeName: "owasp_top10",
+          name: "OWASP Top 10 2025",
+          subtitle: "10 kerentanan aplikasi web paling kritis",
+          summary: "Eksplorasi kerentanan keamanan web, analogi penyerang, dan spesifikasi mitigasi pengembangan.",
+          metric_label: "Kerentanan",
+          metric_value: null,
+          accent: "#b91c1c",
+          icon: "fa-bug",
+        },
+        {
+          routeName: "owasp_asvs",
+          name: "OWASP ASVS 5.0.0",
+          subtitle: "Standar pengujian & verifikasi keamanan",
+          summary: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.",
+          metric_label: "Kriteria Uji",
+          metric_value: null,
+          accent: "#1d4ed8",
+          icon: "fa-check-double",
+        },
       ],
     };
   },
@@ -162,6 +182,8 @@ export default {
       seojkCount,
       resilienceCount,
       pbiCount,
+      owaspTop10Count,
+      owaspAsvsCount,
     ] = await Promise.all([
       loadData("/data/iso27001.json"),
       loadData("/data/nist_csf.json"),
@@ -169,6 +191,8 @@ export default {
       loadData("/data/seojk_requirements.json"),
       loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
+      loadData("/data/owasp_top10_reqs.json", "requirements"),
+      loadData("/data/owasp_asvs_reqs.json", "requirements"),
     ]);
 
     this.frameworks[0].metric_value = isoCount || 93;
@@ -177,6 +201,8 @@ export default {
     this.frameworks[3].metric_value = seojkCount || 0;
     this.frameworks[4].metric_value = resilienceCount || 0;
     this.frameworks[5].metric_value = pbiCount || 0;
+    this.frameworks[6].metric_value = owaspTop10Count || 10;
+    this.frameworks[7].metric_value = owaspAsvsCount || 280;
   },
 };
 </script>
