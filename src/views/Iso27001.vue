@@ -465,6 +465,8 @@ export default {
 .iso-selected-count span{display:block;margin-top:.15rem;color:rgba(255,250,242,.72);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .iso-concept-workspace{display:grid;grid-template-columns:.9fr 1.1fr;gap:1rem}
 
+@media (max-width:1440px){.iso-hero { min-height: 280px; padding: 1.25rem; } .iso-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .iso-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .iso-metric strong { font-size: 1.35rem; } .iso-list, .iso-inspector-panel { min-height: auto; max-height: 520px; }}
+@media (max-height:850px) and (min-width:1024px){.iso-hero { min-height: 240px; padding: 1.15rem; } .iso-metric-grid { margin-top: 0.6rem; } .iso-list, .iso-inspector-panel { max-height: calc(100vh - 280px); } .iso-detail-body { padding-top: 0.5rem; }}
 @media (max-width:1199.98px){.iso-hero,.iso-metric,.iso-side-card{min-height:auto}.iso-hero,.iso-nav,.iso-grid.two,.iso-workspace,.iso-concept-workspace,.iso-metric-grid,.iso-type-grid,.iso-quick-themes{grid-template-columns:1fr}.iso-bar{grid-template-columns:1fr}}
 @media (max-width:1599.98px){.iso-concept-board{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:991.98px){.iso-concept-board{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -229,6 +229,19 @@ export default {
 .frx-card-metric{display:flex;align-items:baseline;gap:.35rem;margin-top:.75rem;padding-top:.5rem;border-top:1px solid rgba(0,0,0,0.05)}
 .frx-card-count{font-size:1.1rem;font-weight:800;color:var(--accent)}
 .frx-card-label{font-size:.65rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
-@media (max-width:1199.98px){.frx-card-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:767.98px){.frx-card-grid{grid-template-columns:1fr}.frx-hero{padding:1.25rem}.frx-disclaimer{padding:.75rem}}
+@media (max-width: 1440px) {
+  .frx-hero { padding: 1rem 1.25rem; }
+  .frx-title { font-size: 1.5rem; }
+  .frx-copy { font-size: 0.85rem; }
+  .frx-card-link { padding: 0.85rem; }
+  .frx-card-icon { width: 2.2rem; height: 2.2rem; font-size: 0.8rem; }
+}
+@media (max-width: 1199.98px) {
+  .frx-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767.98px) {
+  .frx-card-grid { grid-template-columns: 1fr; }
+  .frx-hero { padding: 1.25rem; }
+  .frx-disclaimer { padding: 0.75rem; }
+}
 </style>

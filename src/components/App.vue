@@ -366,8 +366,8 @@ body {
   position: relative;
   z-index: 20;
   overflow: visible;
-  margin-bottom: 1rem;
-  padding: 1rem 1.05rem;
+  margin-bottom: 0.8rem;
+  padding: 0.85rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
   background: rgba(255, 251, 246, 0.7);
@@ -384,12 +384,12 @@ body {
 }
 
 .framework-brand-mark {
-  width: 3rem;
-  height: 3rem;
+  width: 2.8rem;
+  height: 2.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
+  border-radius: 16px;
   color: #fffaf2;
   background: linear-gradient(135deg, #16324b 0%, #1f6f78 100%);
   box-shadow: 0 12px 22px rgba(22, 50, 75, 0.18);
@@ -555,6 +555,20 @@ body {
 
 .alert ul {
   margin-bottom: 0;
+}
+
+@media (max-width: 1440px) {
+  .framework-nav-toggle {
+    min-width: 9.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.82rem;
+  }
+  .framework-brand-copy strong {
+    font-size: 0.95rem;
+  }
+  .framework-header {
+    margin-bottom: 0.65rem;
+  }
 }
 
 @media (max-width: 991.98px) {

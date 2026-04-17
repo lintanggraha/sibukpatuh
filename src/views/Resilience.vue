@@ -649,6 +649,8 @@ export default {
 .orj-plain li{margin-bottom:.16rem}
 .orj-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
 .orj-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
+@media (max-width:1440px){.orj-hero { min-height: 280px; padding: 1.25rem; } .orj-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .orj-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .orj-metric strong { font-size: 1.35rem; } .orj-list, .orj-inspector { min-height: auto; max-height: 520px; }}
+@media (max-height:850px) and (min-width:1024px){.orj-hero { min-height: 240px; padding: 1.15rem; } .orj-list, .orj-inspector { max-height: calc(100vh - 280px); } .orj-inspector-body { padding-top: 0.5rem; }}
 @media (max-width:1399.98px){.orj-workspace,.orj-refspace{grid-template-columns:1fr}.orj-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.orj-hero,.orj-metric,.orj-side{min-height:auto}.orj-hero,.orj-nav,.orj-grid.two,.orj-refspace,.orj-metrics,.orj-mini-row,.orj-cards{grid-template-columns:1fr}.orj-bar,.orj-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.orj-hero,.orj-panel{padding:1.2rem;border-radius:22px}}
