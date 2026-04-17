@@ -382,82 +382,45 @@
               </div>
               <div class="sej-inspector-body">
                 <div class="sej-meta">
-                  <span>{{
-                    activeRequirement ? activeRequirement.article : "-"
-                  }}</span
-                  ><span>{{
-                    activeRequirement ? activeRequirement.chapter : "-"
-                  }}</span
-                  ><span>{{
-                    activeRequirement
-                      ? getDomainLabel(activeRequirement.domain)
-                      : "-"
-                  }}</span
-                  ><span>{{
-                    activeRequirement
-                      ? (activeRequirement.evidence_count ||
-                          (activeRequirement.evidence || []).length) + " bukti"
-                      : "0 bukti"
-                  }}</span>
+                  <span>{{ activeRequirement ? activeRequirement.article : "-" }}</span>
+                  <span>{{ activeRequirement ? activeRequirement.chapter : "-" }}</span>
+                  <span>{{ activeRequirement ? getDomainLabel(activeRequirement.domain) : "-" }}</span>
+                  <span>{{ activeRequirement ? (activeRequirement.evidence_count || (activeRequirement.evidence || []).length) + " bukti" : "0 bukti" }}</span>
                 </div>
                 <div class="sej-callout">
-                  <strong>Ringkasan Kewajiban</strong>
-                  <div class="mt-2">
-                    {{
-                      activeRequirement
-                        ? activeRequirement.summary
-                        : "Pilih requirement untuk membaca ringkasan."
-                    }}
-                  </div>
+                  <span class="sej-label">Ringkasan Requirement</span>
+                  <div class="mt-2">{{ activeRequirement ? activeRequirement.summary : "Pilih requirement untuk membaca ringkasan." }}</div>
                 </div>
                 <div class="sej-note">
-                  <strong><i class="fas fa-lightbulb me-1"></i>Analogi</strong>
-                  <div class="mt-2">
-                    {{
-                      activeRequirement ? activeRequirement.analogy : "-"
-                    }}
-                  </div>
+                  <span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span>
+                  <div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : "-" }}</div>
                 </div>
                 <div class="sej-callout">
-                  <strong>Fokus Pelaksanaan</strong>
+                  <span class="sej-label">Fokus Implementasi</span>
                   <ul class="sej-plain">
-                    <li
-                      v-for="(item, idx) in activeRequirement &&
-                      activeRequirement.focus &&
-                      activeRequirement.focus.length
-                        ? activeRequirement.focus
-                        : ['Tidak ada fokus tambahan yang dipetakan.']"
-                      :key="idx"
-                    >
+                    <li v-for="(item, idx) in activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.']" :key="idx">
                       {{ item }}
                     </li>
                   </ul>
                 </div>
                 <div class="sej-callout">
-                  <strong>Contoh Bukti</strong>
+                  <span class="sej-label">Contoh Evidence</span>
                   <ul class="sej-plain">
-                    <li
-                      v-for="(item, idx) in activeRequirement &&
-                      activeRequirement.evidence &&
-                      activeRequirement.evidence.length
-                        ? activeRequirement.evidence
-                        : ['Tidak ada contoh bukti yang dipetakan.']"
-                      :key="idx"
-                    >
+                    <li v-for="(item, idx) in activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.']" :key="idx">
                       {{ item }}
                     </li>
                   </ul>
                 </div>
-                <div class="sej-note">
-                  <strong>Catatan Pelaporan/Pengawasan</strong>
-                  <div class="mt-2">
-                    {{
-                      activeRequirement
-                        ? activeRequirement.reporting ||
-                          "Requirement ini tidak memiliki catatan pelaporan khusus, namun tetap perlu didukung bukti implementasi yang siap ditelusuri saat pengawasan."
-                        : "Tidak ada catatan tambahan."
-                    }}
+                <div class="sej-callout">
+                  <span class="sej-label">Lampiran Terkait</span>
+                  <div class="sej-refs">
+                    <button v-for="ref in (activeRequirement?.appendices || [])" :key="ref" type="button" class="sej-ref" @click="jumpReference('', ref)">{{ ref }}</button>
+                    <span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="sej-empty w-100">Requirement ini tidak menunjuk lampiran spesifik.</span>
                   </div>
+                </div>
+                <div class="sej-note">
+                  <span class="sej-label">Pelaporan / Output</span>
+                  <div class="mt-2">{{ activeRequirement ? (activeRequirement.reporting || "-") : "-" }}</div>
                 </div>
               </div>
             </article>
@@ -549,60 +512,26 @@
                 dan rujukan kewajiban inti yang perlu disiapkan saat organisasi
                 menata kepatuhan terhadap PBI 02/2024.
               </p>
-              <div class="sej-cards">
-                <article
+              <div class="sej-list">
+                <button
                   v-for="ref in filteredReferences"
                   :key="ref.id"
-                  class="sej-card"
+                  type="button"
+                  class="sej-item"
                   :style="{ '--accent': getRefTypeColor(ref.type) }"
+                  @click="openReferenceModal(ref)"
                 >
-                  <div class="sej-card-top">
-                    <span class="sej-pill" style="margin-left: -0.2rem;">{{ getRefTypeLabel(ref.type) }}</span>
-                    <span class="sej-code">{{ ref.article || "-" }}</span>
+                  <div class="sej-item-top">
+                    <span class="sej-item-code">{{ ref.article || "-" }}</span>
+                    <span class="sej-pill">{{ getRefTypeLabel(ref.type) }}</span>
                   </div>
-                  <strong>{{ ref.title || "-" }}</strong>
-                  <p>{{ ref.summary || "-" }}</p>
-                  <div class="sej-item-meta mt-2">
-                    <span>{{ ref.timeline || "-" }}</span
-                    ><span>{{ ref.owner || "-" }}</span>
+                  <div class="sej-item-name">{{ ref.title || "-" }}</div>
+                  <div class="sej-item-meta">
+                    <span>{{ ref.timeline || "-" }}</span>
+                    <span>{{ ref.owner || "-" }}</span>
                   </div>
-                  <ul class="sej-plain">
-                    <li
-                      v-for="(d, idx) in (ref.deliverables || []).slice(0, 3)"
-                      :key="idx"
-                    >
-                      {{ d }}
-                    </li>
-                    <li v-if="!ref.deliverables || !ref.deliverables.length">
-                      Tidak ada deliverable tambahan.
-                    </li>
-                  </ul>
-                  <div class="sej-refs">
-                    <button
-                      v-for="lr in ref.linked_requirements || []"
-                      :key="lr"
-                      type="button"
-                      class="sej-ref"
-                      @click="
-                        jumpExplorer(
-                          requirementMap[lr]?.domain || '',
-                          requirementMap[lr]?.chapter || '',
-                          lr,
-                        )
-                      "
-                    >
-                      {{ lr }}</button
-                    ><span
-                      v-if="
-                        !ref.linked_requirements ||
-                        !ref.linked_requirements.length
-                      "
-                      class="sej-empty w-100"
-                      >Belum ada requirement yang dipetakan.</span
-                    >
-                  </div>
-                </article>
-                <div v-if="filteredReferences.length === 0" class="sej-empty" style="grid-column: 1 / -1;">
+                </button>
+                <div v-if="filteredReferences.length === 0" class="sej-empty">
                   Tidak ada rujukan yang cocok dengan filter saat ini.
                 </div>
               </div>
@@ -612,6 +541,83 @@
       </div>
     </div>
   </div>
+  <!-- Modal Reference -->
+  <Transition name="modal-fade">
+    <div v-if="showReferenceModal" class="modal-overlay" @click.self="showReferenceModal = false">
+      <Transition name="modal-slide">
+        <div class="modal-dialog" v-if="showReferenceModal">
+          <div class="modal-shell">
+            <div class="modal-sidebar" :style="{ background: `linear-gradient(180deg, ${getRefTypeColor(selectedReference?.type)} 0%, ${getRefTypeColor(selectedReference?.type, 0.7)} 100%)` }">
+              <button type="button" class="modal-close" @click="showReferenceModal = false" aria-label="Close">
+                <i class="fas fa-times"></i>
+              </button>
+              <div class="modal-sidebar-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="modal-sidebar-id">{{ selectedReference?.article || '-' }}</div>
+              <div class="modal-sidebar-type">{{ getRefTypeLabel(selectedReference?.type) }}</div>
+            </div>
+            <div class="modal-main">
+              <div class="modal-header">
+                <h4 class="modal-title">{{ selectedReference?.title || 'Detail PBI' }}</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Ringkasan Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getRefTypeColor(selectedReference?.type) }">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Ringkasan</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-scope">{{ selectedReference?.timeline || '-' }} — {{ selectedReference?.owner || '-' }}</div>
+                    <p class="modal-summary">{{ selectedReference?.summary || '-' }}</p>
+                  </div>
+                </div>
+
+                <!-- Artefak Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getRefTypeColor(selectedReference?.type) }">
+                    <i class="fas fa-list-check"></i>
+                    <span>Artefak / Isi Utama</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(item, idx) in (selectedReference?.deliverables && selectedReference.deliverables.length ? selectedReference.deliverables : [])" :key="idx">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{{ item }}</span>
+                      </li>
+                      <li v-if="!selectedReference?.deliverables || !selectedReference.deliverables.length" class="modal-empty">
+                        Tidak ada artefak yang dipetakan.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Requirements Section -->
+                <div class="modal-section">
+                  <div class="modal-section-header" :style="{ color: getRefTypeColor(selectedReference?.type) }">
+                    <i class="fas fa-link"></i>
+                    <span>Requirement yang Menggunakannya</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-requirements">
+                      <button v-for="reqId in (selectedReference?.linked_requirements || [])" :key="reqId" type="button" class="modal-req-btn" @click="jumpToRequirement(reqId)">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>{{ reqId }}</span>
+                      </button>
+                      <div v-if="!selectedReference?.linked_requirements || !selectedReference.linked_requirements.length" class="modal-empty">
+                        Belum ada requirement inti yang dipetakan ke tenggat ini.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </div>
+  </Transition>
 </template>
 
 <script>
@@ -630,6 +636,8 @@ export default {
       activeRequirementId: null,
       referenceTypeFilter: "",
       referenceSearch: "",
+      showReferenceModal: false,
+      selectedReference: null,
       incidentClock: "1j/3h",
       domainMeta: {
         Kerangka: {
@@ -893,8 +901,13 @@ export default {
     getDomainLabel(domain) {
       return this.domainMeta[domain]?.label || domain || "-";
     },
-    getRefTypeColor(type) {
-      return this.referenceTypeMeta[type]?.color || "#144e72";
+    getRefTypeColor(type, opacity = 1) {
+      const baseColor = this.referenceTypeMeta[type]?.color || "#144e72";
+      if (opacity === 1) return baseColor;
+      const r = parseInt(baseColor.slice(1, 3), 16);
+      const g = parseInt(baseColor.slice(3, 5), 16);
+      const b = parseInt(baseColor.slice(5, 7), 16);
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
     },
     getRefTypeLabel(type) {
       return this.referenceTypeMeta[type]?.label || type || "-";
@@ -914,22 +927,33 @@ export default {
     setActiveRequirement(id) {
       this.activeRequirementId = id;
     },
-    jumpExplorer(domain = "", chapter = "", requirementId = null) {
+    jumpExplorer(domain = "", chapter = "", id = null) {
       this.activeDomain = domain || "";
       this.chapterFilter = chapter || "";
       this.requirementSearch = "";
       this.activeTab = "explorer";
-      if (requirementId) this.setActiveRequirement(requirementId);
-    },
-    jumpReference(type = "", refId = "") {
-      if (refId) {
-        const ref = this.references.find((r) => r.id === refId);
-        if (ref) this.referenceTypeFilter = ref.type || "";
-      } else {
-        this.referenceTypeFilter = type || "";
+      if (id) {
+        this.setActiveRequirement(id);
       }
-      this.referenceSearch = "";
+    },
+    jumpReference(type = "", id = "") {
+      this.referenceTypeFilter = type || "";
+      this.referenceSearch = id || "";
       this.activeTab = "reference";
+    },
+    openReferenceModal(ref) {
+      this.selectedReference = ref;
+      this.showReferenceModal = true;
+    },
+    jumpToRequirement(id) {
+      const req = this.requirements.find(r => r.id === id);
+      if (!req) return;
+      this.showReferenceModal = false;
+      this.activeDomain = req.domain || '';
+      this.chapterFilter = req.chapter || '';
+      this.requirementSearch = '';
+      this.setActiveRequirement(id);
+      this.activeTab = 'explorer';
     },
     retryLoad() {
       this.loadData();

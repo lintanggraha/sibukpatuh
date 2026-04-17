@@ -364,36 +364,46 @@
                       : "Ringkasan Konseptual"
                   }}</span>
                 </div>
+              <div class="sej-inspector-body">
+                <div class="sej-meta">
+                  <span>{{ activeConcept ? activeConcept.type_label : "-" }}</span>
+                  <span>{{ activeConcept ? activeConcept.group : "-" }}</span>
+                  <span>{{ activeConcept && activeConcept.metric_label && activeConcept.metric_value !== null ? `${activeConcept.metric_label}: ${activeConcept.metric_value}` : "Ringkasan Konseptual" }}</span>
+                  <span>0 lampiran</span>
+                </div>
                 <div class="sej-callout">
-                  <strong>Ringkasan</strong>
-                  <div class="mt-2">
-                    {{
-                      activeConcept
-                        ? activeConcept.summary
-                        : "Pilih konsep untuk membaca ringkasan."
-                    }}
-                  </div>
+                  <span class="sej-label">Ringkasan Requirement</span>
+                  <div class="mt-2">{{ activeConcept ? activeConcept.summary : "Pilih konsep untuk membaca ringkasan." }}</div>
                 </div>
                 <div class="sej-note">
-                  <strong>Kenapa Penting</strong>
-                  <div class="mt-2">
-                    {{ activeConcept ? activeConcept.importance : "-" }}
-                  </div>
+                  <span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span>
+                  <div class="mt-2">{{ activeConcept && (activeConcept.analogy || activeConcept.importance) ? (activeConcept.analogy || activeConcept.importance) : "-" }}</div>
                 </div>
                 <div class="sej-callout">
-                  <strong>Fokus Utama</strong>
+                  <span class="sej-label">Fokus Implementasi</span>
                   <ul class="sej-plain">
-                    <li
-                      v-for="(item, idx) in activeConcept &&
-                      activeConcept.focus &&
-                      activeConcept.focus.length
-                        ? activeConcept.focus
-                        : ['Tidak ada fokus tambahan yang dipetakan.']"
-                      :key="idx"
-                    >
+                    <li v-for="(item, idx) in activeConcept && (activeConcept.focus || activeConcept.details) && (activeConcept.focus || activeConcept.details).length ? (activeConcept.focus || activeConcept.details) : ['Tidak ada fokus implementasi tambahan.']" :key="idx">
                       {{ item }}
                     </li>
                   </ul>
+                </div>
+                <div class="sej-callout">
+                  <span class="sej-label">Contoh Evidence</span>
+                  <ul class="sej-plain">
+                    <li v-for="(item, idx) in activeConcept && activeConcept.evidence && activeConcept.evidence.length ? activeConcept.evidence : ['Tidak ada evidence cue.']" :key="idx">
+                      {{ item }}
+                    </li>
+                  </ul>
+                </div>
+                <div class="sej-callout">
+                  <span class="sej-label">Lampiran Terkait</span>
+                  <div class="sej-refs">
+                    <span class="sej-empty w-100">Requirement ini tidak menunjuk lampiran spesifik.</span>
+                  </div>
+                </div>
+                <div class="sej-note">
+                  <span class="sej-label">Pelaporan / Output</span>
+                  <div class="mt-2">{{ activeConcept && activeConcept.reporting ? activeConcept.reporting : "-" }}</div>
                 </div>
               </div>
             </article>
@@ -433,10 +443,10 @@
                   :key="item.id"
                   type="button"
                   class="sej-mini"
-                  @click="jumpExplorer('implementation_phase', item.id)"
+                  @click="openDetailModal(item, 'Fase Implementasi')"
                 >
-                  <label>{{ item.group }}</label
-                  ><strong>{{ item.title }}</strong>
+                  <label>{{ item.group }}</label>
+                  <strong>{{ item.title }}</strong>
                   <p>{{ item.summary }}</p>
                 </button>
               </div>
@@ -457,11 +467,11 @@
                 :key="item.id"
                 type="button"
                 class="sej-card clickable"
-                @click="jumpExplorer('design_factor', item.id)"
+                @click="openDetailModal(item, 'Design Factor')"
               >
                 <div class="sej-card-top">
-                  <span>{{ item.group }}</span
-                  ><span>{{ item.id }}</span>
+                  <span>{{ item.group }}</span>
+                  <span>{{ item.id }}</span>
                 </div>
                 <strong>{{ item.title }}</strong>
                 <p>{{ item.summary }}</p>
@@ -472,6 +482,75 @@
       </div>
     </div>
   </div>
+  <!-- Modal Detail -->
+  <Transition name="modal-fade">
+    <div v-if="showDetailModal" class="modal-overlay" @click.self="showDetailModal = false">
+      <Transition name="modal-slide">
+        <div class="modal-dialog" v-if="showDetailModal">
+          <div class="modal-shell">
+            <div class="modal-sidebar" style="background: linear-gradient(180deg, #144e72 0%, rgba(20,78,114,0.7) 100%);">
+              <button type="button" class="modal-close" @click="showDetailModal = false" aria-label="Close">
+                <i class="fas fa-times"></i>
+              </button>
+              <div class="modal-sidebar-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div class="modal-sidebar-id">{{ selectedDetail?.id || '-' }}</div>
+              <div class="modal-sidebar-type">{{ selectedDetailType || 'Komponen' }}</div>
+            </div>
+            <div class="modal-main">
+              <div class="modal-header">
+                <h4 class="modal-title">{{ selectedDetail?.title || 'Detail implementasi' }}</h4>
+              </div>
+              <div class="modal-body">
+                <div class="modal-section">
+                  <div class="modal-section-header" style="color: #144e72">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Ringkasan</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-scope">{{ selectedDetail?.group || '-' }}</div>
+                    <p class="modal-summary">{{ selectedDetail?.summary || '-' }}</p>
+                  </div>
+                </div>
+
+                <div class="modal-section" v-if="selectedDetail?.details && selectedDetail.details.length">
+                  <div class="modal-section-header" style="color: #144e72">
+                    <i class="fas fa-list-check"></i>
+                    <span>Artefak / Isi Utama</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(item, idx) in selectedDetail.details" :key="idx">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{{ item }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="modal-section">
+                  <div class="modal-section-header" style="color: #144e72">
+                    <i class="fas fa-link"></i>
+                    <span>Requirement yang Menggunakannya</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <div class="modal-requirements">
+                      <button type="button" class="modal-req-btn" @click="jumpExplorerFromModal()">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Lihat Terkait di Explorer</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </div>
+  </Transition>
 </template>
 
 <script>
@@ -517,9 +596,10 @@ export default {
           summary: "Perjalanan adopsi COBIT.",
         },
       },
-      activeType: "",
-      conceptSearch: "",
       activeConceptId: null,
+      showDetailModal: false,
+      selectedDetail: null,
+      selectedDetailType: "",
     };
   },
   computed: {
@@ -602,8 +682,19 @@ export default {
       this.conceptSearch = "";
       this.activeTab = "explorer";
       if (id) {
-        this.setActiveConcept(id);
+        this.setActiveRequirement ? this.setActiveRequirement(id) : this.setActiveConcept(id);
       }
+    },
+    openDetailModal(item, typeName) {
+      this.selectedDetail = item;
+      this.selectedDetailType = typeName;
+      this.showDetailModal = true;
+    },
+    jumpExplorerFromModal() {
+      if (!this.selectedDetail) return;
+      this.showDetailModal = false;
+      const typeKey = this.selectedDetailType === 'Fase Implementasi' ? 'implementation_phase' : 'design_factor';
+      this.jumpExplorer(typeKey, this.selectedDetail.id);
     },
     retryLoad() {
       this.loadData();

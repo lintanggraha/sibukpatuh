@@ -410,7 +410,12 @@
         "Selaraskan prioritas governance dengan tujuan strategis enterprise."
       ],
       "group": "Strategi",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Baca objective melalui lensa strategi pertumbuhan, inovasi, stabilitas, atau layanan.",
+        "Selaraskan prioritas governance dengan tujuan strategis enterprise."
+      ]
     },
     {
       "id": "DF-02",
@@ -422,7 +427,12 @@
         "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
       ],
       "group": "Nilai",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Hubungkan governance dengan sasaran bisnis yang benar-benar sedang dikejar.",
+        "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
+      ]
     },
     {
       "id": "DF-03",
@@ -434,7 +444,12 @@
         "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
       ],
       "group": "Risiko",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Petakan risiko yang paling material bagi enterprise.",
+        "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
+      ]
     },
     {
       "id": "DF-04",
@@ -446,7 +461,12 @@
         "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
       ],
       "group": "Risiko",
-      "color": "#c2410c"
+      "color": "#c2410c",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Lihat issue yang berulang, bottleneck, atau kegagalan layanan.",
+        "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
+      ]
     },
     {
       "id": "DF-05",
@@ -458,7 +478,12 @@
         "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
       ],
       "group": "Risiko",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Perhatikan tren ancaman yang paling relevan bagi enterprise.",
+        "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
+      ]
     },
     {
       "id": "DF-06",
@@ -470,7 +495,12 @@
         "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
       ],
       "group": "Kepatuhan",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Petakan regulasi dan kewajiban yang paling membentuk cara kerja enterprise.",
+        "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
+      ]
     },
     {
       "id": "DF-07",
@@ -482,7 +512,12 @@
         "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
       ],
       "group": "Model Operasi",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Pahami seberapa kritikal I&T dalam model bisnis enterprise.",
+        "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
+      ]
     },
     {
       "id": "DF-08",
@@ -494,7 +529,12 @@
         "Perjelas kontrol dan akuntabilitas lintas pihak."
       ],
       "group": "Model Operasi",
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Jangan anggap risiko governance hilang hanya karena layanan dialihdayakan.",
+        "Perjelas kontrol dan akuntabilitas lintas pihak."
+      ]
     },
     {
       "id": "DF-09",
@@ -506,7 +546,12 @@
         "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
       ],
       "group": "Delivery",
-      "color": "#1d4ed8"
+      "color": "#1d4ed8",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Selaraskan governance dengan metode delivery yang dipakai tim.",
+        "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
+      ]
     },
     {
       "id": "DF-10",
@@ -518,7 +563,12 @@
         "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
       ],
       "group": "Delivery",
-      "color": "#0ea5e9"
+      "color": "#0ea5e9",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Pahami gaya adopsi teknologi enterprise sebelum menentukan kontrol.",
+        "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
+      ]
     },
     {
       "id": "DF-11",
@@ -530,7 +580,12 @@
         "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
       ],
       "group": "Skala",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "details": [
+        "Sesuaikan tingkat formalitas dengan ukuran dan kompleksitas enterprise.",
+        "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
+      ]
     }
   ],
   "domains": [
@@ -547,7 +602,14 @@
       "group": "Governance",
       "metric_label": "Objektif",
       "count": 5,
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "EDM menjaga agar board dan pimpinan punya titik pijak yang jelas dalam mengarahkan I&T.",
+      "evidence": [
+        "Governance Charter",
+        "Performance Report",
+        "Risk Assessment Result"
+      ],
+      "reporting": "Dashboard kinerja tata kelola TI bulanan."
     },
     {
       "id": "APO",
@@ -561,7 +623,14 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 14,
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "APO membantu menyelaraskan keputusan manajemen dengan arah enterprise dan kebutuhan governance.",
+      "evidence": [
+        "Governance Charter",
+        "Performance Report",
+        "Risk Assessment Result"
+      ],
+      "reporting": "Dashboard kinerja tata kelola TI bulanan."
     },
     {
       "id": "BAI",
@@ -575,7 +644,14 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 11,
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "BAI penting untuk memastikan perubahan I&T tidak lepas dari arah governance dan kebutuhan bisnis.",
+      "evidence": [
+        "Governance Charter",
+        "Performance Report",
+        "Risk Assessment Result"
+      ],
+      "reporting": "Dashboard kinerja tata kelola TI bulanan."
     },
     {
       "id": "DSS",
@@ -589,7 +665,14 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 6,
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "DSS membuat governance terasa nyata dalam operasi sehari-hari dan kualitas layanan yang diterima bisnis.",
+      "evidence": [
+        "Governance Charter",
+        "Performance Report",
+        "Risk Assessment Result"
+      ],
+      "reporting": "Dashboard kinerja tata kelola TI bulanan."
     },
     {
       "id": "MEA",
@@ -603,7 +686,14 @@
       "group": "Management",
       "metric_label": "Objektif",
       "count": 4,
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "MEA memberi ruang refleksi dan assurance agar enterprise tahu apa yang bekerja dan apa yang perlu diperbaiki.",
+      "evidence": [
+        "Governance Charter",
+        "Performance Report",
+        "Risk Assessment Result"
+      ],
+      "reporting": "Dashboard kinerja tata kelola TI bulanan."
     }
   ],
   "goal_cascade": [
@@ -659,7 +749,11 @@
         "Bangun urgensi yang bisa dipahami stakeholder."
       ],
       "group": "Persiapan",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "details": [
+        "Identifikasi alasan bisnis dan risiko yang paling mendesak.",
+        "Bangun urgensi yang bisa dipahami stakeholder."
+      ]
     },
     {
       "id": "IMP-02",
@@ -671,7 +765,11 @@
         "Petakan area kuat dan area yang masih rapuh."
       ],
       "group": "Asesmen",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "details": [
+        "Pahami kondisi objektif, bukan asumsi.",
+        "Petakan area kuat dan area yang masih rapuh."
+      ]
     },
     {
       "id": "IMP-03",
@@ -683,7 +781,11 @@
         "Pilih objective dan outcome yang benar-benar dibutuhkan."
       ],
       "group": "Arah",
-      "color": "#b45309"
+      "color": "#b45309",
+      "details": [
+        "Tentukan target yang relevan dengan konteks enterprise.",
+        "Pilih objective dan outcome yang benar-benar dibutuhkan."
+      ]
     },
     {
       "id": "IMP-04",
@@ -695,7 +797,11 @@
         "Tentukan prioritas dan dependency antar-inisiatif."
       ],
       "group": "Perencanaan",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "details": [
+        "Turunkan target menjadi paket kerja yang bisa dikelola.",
+        "Tentukan prioritas dan dependency antar-inisiatif."
+      ]
     },
     {
       "id": "IMP-05",
@@ -707,7 +813,11 @@
         "Pastikan implementasi diterjemahkan ke praktik kerja."
       ],
       "group": "Eksekusi",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "details": [
+        "Kelola change enablement dan komunikasi.",
+        "Pastikan implementasi diterjemahkan ke praktik kerja."
+      ]
     },
     {
       "id": "IMP-06",
@@ -719,7 +829,11 @@
         "Pastikan ada pembacaan manfaat, risiko, dan resource yang lebih baik."
       ],
       "group": "Evaluasi",
-      "color": "#15803d"
+      "color": "#15803d",
+      "details": [
+        "Bandingkan hasil aktual dengan target.",
+        "Pastikan ada pembacaan manfaat, risiko, dan resource yang lebih baik."
+      ]
     },
     {
       "id": "IMP-07",
@@ -731,7 +845,11 @@
         "Jaga governance system tetap hidup dan berkembang."
       ],
       "group": "Keberlanjutan",
-      "color": "#475569"
+      "color": "#475569",
+      "details": [
+        "Gunakan hasil evaluasi untuk iterasi berikutnya.",
+        "Jaga governance system tetap hidup dan berkembang."
+      ]
     }
   ],
   "audiences": [

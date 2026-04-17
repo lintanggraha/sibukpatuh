@@ -6,6 +6,7 @@
     "article": "Pasal 3-4",
     "title": "Sasaran pengaturan dan prinsip dasar pelaksanaan KKS",
     "summary": "KKS diarahkan untuk mencegah dan menangani dampak serangan siber, meningkatkan manajemen risiko siber, dan memperkuat pengawasan serta kolaborasi.",
+    "analogy": "Seperti menetapkan aturan main dasar dalam sebuah kompetisi olahraga agar semua pemain paham batasan dan tujuan fair play.",
     "focus": [
       "Menetapkan sasaran penguatan KKS yang selaras dengan tujuan penyelenggara dan tujuan Bank Indonesia.",
       "Menegaskan kejelasan peran dan tanggung jawab, strategi komprehensif, integrasi enterprise risk management, budaya KKS, dan kesiapan menghadapi insiden.",
@@ -15,6 +16,10 @@
       "Dokumen sasaran program KKS atau security strategy charter.",
       "Matriks peran dan tanggung jawab lintas unit.",
       "Notulen komite manajemen atas arah implementasi KKS."
+    ],
+    "reporting": "Pelaporan status kesiapan prinsip dasar dalam laporan tahunan KKS.",
+    "appendices": [
+      "Pasal 3-4"
     ]
   },
   {
@@ -24,6 +29,7 @@
     "article": "Pasal 5-6",
     "title": "Objek pengaturan dan ruang lingkup KKS",
     "summary": "Pengaturan KKS berlaku bagi PJP, PIP, pelaku PUVA, lembaga pendukung, penyelenggara KUPVA BB, dan pihak lain yang diatur serta diawasi Bank Indonesia.",
+    "analogy": "Seperti menentukan batas pagar rumah; bagian mana yang harus dijaga ketat agar pencuri tidak masuk ke area privasi.",
     "focus": [
       "Memastikan entitas memahami apakah termasuk objek pengaturan KKS Bank Indonesia.",
       "Memetakan ruang lingkup penerapan pada area tata kelola, pencegahan, penanganan, pengawasan, dan kolaborasi.",
@@ -33,6 +39,10 @@
       "Dokumen penetapan scope KKS dan perimeter sistem.",
       "Peta proses bisnis, layanan, dan pihak ketiga yang tercakup.",
       "Keputusan manajemen tentang klasifikasi entitas atau lini layanan."
+    ],
+    "reporting": "Dokumentasi perimeter sistem dalam profil risiko tahunan.",
+    "appendices": [
+      "Pasal 5-6"
     ]
   },
   {
@@ -51,7 +61,12 @@
       "Dokumen strategi dan kebijakan KKS yang telah disetujui.",
       "Roadmap implementasi atau program kerja tahunan KKS.",
       "Mekanisme pelaporan status implementasi kepada manajemen."
-    ]
+    ],
+    "analogy": "Analogi untuk Strategi dan kebijakan KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 8"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-02",
@@ -69,7 +84,12 @@
       "Dokumen roadmap KKS dan business case pendukung.",
       "Rencana kebutuhan anggaran, kapasitas SDM, dan teknologi.",
       "Hasil review berkala terhadap capaian roadmap."
-    ]
+    ],
+    "analogy": "Analogi untuk Rencana strategis KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 9"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-03",
@@ -87,7 +107,12 @@
       "Kumpulan policy, standard, dan SOP keamanan informasi.",
       "Kontrol due diligence dan pengamanan pihak ketiga.",
       "Hasil review kebijakan dan pembaruan dokumen."
-    ]
+    ],
+    "analogy": "Analogi untuk Kebijakan, standar, dan prosedur KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 10"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-04",
@@ -105,7 +130,12 @@
       "Struktur organisasi dan job description fungsi KKS.",
       "Piagam organisasi atau mandat fungsi KKS.",
       "Laporan berkala manajemen KKS kepada manajemen tertinggi."
-    ]
+    ],
+    "analogy": "Analogi untuk Fungsi organisasi dan manajemen KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 11-13"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-05",
@@ -123,7 +153,12 @@
       "Risk register siber dan metodologi penilaian risiko.",
       "Hasil asesmen atau maturity assessment KKS.",
       "Rencana mitigasi dan status tindak lanjut risiko siber."
-    ]
+    ],
+    "analogy": "Analogi untuk Manajemen risiko siber dan pengukuran maturitas KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 14-15"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-06",
@@ -141,7 +176,12 @@
       "Rencana audit KKS tahunan atau multi-tahun.",
       "Laporan hasil audit internal atau eksternal.",
       "Daftar temuan dan bukti penyelesaian tindak lanjut."
-    ]
+    ],
+    "analogy": "Analogi untuk Audit KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 16-17"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.GOV-07",
@@ -159,7 +199,12 @@
       "Program awareness dan budaya KKS.",
       "Materi sosialisasi, pelatihan, atau kampanye kesadaran.",
       "Rekaman partisipasi dan evaluasi efektivitas program budaya."
-    ]
+    ],
+    "analogy": "Analogi untuk Budaya KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 18"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-01",
@@ -177,7 +222,12 @@
       "Profil risiko siber atau cyber risk profile document.",
       "Jadwal review berkala atas profil risiko siber.",
       "Pemetaan prioritas pengendalian berbasis hasil identifikasi."
-    ]
+    ],
+    "analogy": "Analogi untuk Penyusunan dan pengkinian profil risiko siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 21"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-02",
@@ -195,7 +245,12 @@
       "Metodologi asesmen risiko siber yang terdokumentasi.",
       "Hasil penilaian risiko terhadap aset atau layanan kritikal.",
       "Daftar prioritas mitigasi dan penanggung jawabnya."
-    ]
+    ],
+    "analogy": "Analogi untuk Asesmen risiko siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 23"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-03",
@@ -213,7 +268,12 @@
       "Business impact analysis untuk layanan dan sistem kritikal.",
       "Daftar infrastruktur informasi vital.",
       "Dokumen prioritas pemulihan layanan kritikal."
-    ]
+    ],
+    "analogy": "Analogi untuk Analisis dampak bisnis dan identifikasi infrastruktur informasi vital: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 24-25"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-04",
@@ -231,7 +291,12 @@
       "Kontrol onboarding, offboarding, dan screening personel atau vendor.",
       "Baseline konfigurasi keamanan dan hardening standard.",
       "Catatan implementasi endpoint security, patching, atau segmentasi jaringan."
-    ]
+    ],
+    "analogy": "Analogi untuk Pembangunan sistem pertahanan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 27"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-05",
@@ -249,7 +314,12 @@
       "Skema klasifikasi data dan kebijakan data handling.",
       "Kontrol enkripsi, backup, dan access control untuk data sensitif.",
       "Dokumen kepatuhan atau assessment atas pelindungan data pribadi."
-    ]
+    ],
+    "analogy": "Analogi untuk Pengamanan dan pelindungan data serta informasi: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 28"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-06",
@@ -267,7 +337,12 @@
       "Log monitoring dan dashboard keamanan.",
       "Definisi threshold alert dan aturan eskalasi.",
       "Hasil vulnerability scanning atau pemantauan kerentanan."
-    ]
+    ],
+    "analogy": "Analogi untuk Deteksi, pemantauan, dan sistem peringatan dini: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 29-30"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.PRV-07",
@@ -285,7 +360,12 @@
       "Prosedur analisis alert dan incident triage.",
       "Hasil malware analysis atau review unauthorized code.",
       "Bukti pemeliharaan tool deteksi dan hasil pengujiannya."
-    ]
+    ],
+    "analogy": "Analogi untuk Analisis hasil pemantauan dan pengujian sistem deteksi: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 31-34"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.HDL-01",
@@ -303,7 +383,12 @@
       "Incident response plan dan cyber recovery plan.",
       "Penetapan RTO dan RPO untuk layanan kritikal.",
       "Dokumen business continuity plan yang terintegrasi."
-    ]
+    ],
+    "analogy": "Analogi untuk Rencana penanganan dan pemulihan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 37"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.HDL-02",
@@ -321,7 +406,12 @@
       "Skenario simulasi dan jadwal exercise.",
       "Berita acara, notulen, atau laporan hasil simulasi.",
       "Perbaikan rencana penanganan setelah evaluasi exercise."
-    ]
+    ],
+    "analogy": "Analogi untuk Simulasi, uji coba, dan evaluasi rencana penanganan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 38-39"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.HDL-03",
@@ -340,7 +430,11 @@
       "Template notifikasi awal dan laporan insiden kepada Bank Indonesia.",
       "Laporan forensik, kronologi insiden, dan bukti tindakan mitigasi."
     ],
-    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi."
+    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
+    "analogy": "Analogi untuk Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 40"
+    ]
   },
   {
     "id": "PBI.HDL-04",
@@ -359,7 +453,11 @@
       "Daftar pemangku kepentingan dan skema eskalasi komunikasi.",
       "Bukti penyampaian update penanganan ke regulator."
     ],
-    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan."
+    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan.",
+    "analogy": "Analogi untuk Komunikasi tindakan penanganan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 41"
+    ]
   },
   {
     "id": "PBI.HDL-05",
@@ -377,7 +475,12 @@
       "Dokumen recovery architecture dan disaster recovery arrangement.",
       "Hasil uji failover atau aktivasi lokasi alternatif.",
       "Bukti pemulihan layanan berdasarkan prioritas kritikalitas."
-    ]
+    ],
+    "analogy": "Analogi untuk Pemulihan dan pengembalian layanan ke kondisi normal: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 42-43"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.HDL-06",
@@ -396,7 +499,11 @@
       "Daftar corrective action dan status implementasinya.",
       "Bukti komunikasi pemulihan kepada regulator dan pemangku kepentingan."
     ],
-    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan."
+    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan.",
+    "analogy": "Analogi untuk Perbaikan berkelanjutan dan komunikasi pemulihan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 44-45"
+    ]
   },
   {
     "id": "PBI.OVS-01",
@@ -415,7 +522,11 @@
       "Prosedur persiapan pemeriksaan regulator.",
       "Bukti tindak lanjut atas hasil pengawasan."
     ],
-    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan."
+    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan.",
+    "analogy": "Analogi untuk Mekanisme pengawasan Bank Indonesia: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 47-52"
+    ]
   },
   {
     "id": "PBI.OVS-02",
@@ -434,7 +545,11 @@
       "Daftar hasil identifikasi infrastruktur informasi vital.",
       "Bukti penyampaian laporan insidental dan tahunan ke Bank Indonesia."
     ],
-    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan."
+    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan.",
+    "analogy": "Analogi untuk Penyampaian data, informasi, dan laporan KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 54-55"
+    ]
   },
   {
     "id": "PBI.COL-01",
@@ -452,7 +567,12 @@
       "Prosedur threat intelligence sharing.",
       "Bukti partisipasi pada forum atau sarana berbagi informasi.",
       "Ringkasan pembelajaran insiden yang dibagikan secara terkendali."
-    ]
+    ],
+    "analogy": "Analogi untuk Pertukaran informasi ancaman, kerentanan, dan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 57-58"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.COL-02",
@@ -470,7 +590,12 @@
       "Notulen koordinasi dengan regulator, SRO, atau lembaga terkait.",
       "Partisipasi pada simulasi serangan siber sektor keuangan.",
       "Prosedur teknis atau standar operasional yang dirujuk dari SRO."
-    ]
+    ],
+    "analogy": "Analogi untuk Koordinasi pencegahan insiden dan kerja sama dengan SRO: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 59-61"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   },
   {
     "id": "PBI.IMP-01",
@@ -488,6 +613,11 @@
       "Dokumen penetapan klasifikasi penyelenggara.",
       "Pemetaan kontrol KKS berdasarkan klasifikasi atau risk tier.",
       "Matriks pemenuhan terhadap ketentuan turunan yang relevan."
-    ]
+    ],
+    "analogy": "Analogi untuk Penerapan KKS sesuai klasifikasi penyelenggara: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "appendices": [
+      "Pasal 62"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
   }
 ]
