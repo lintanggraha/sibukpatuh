@@ -358,7 +358,7 @@
                   <span>0 lampiran</span>
                 </div>
                 <div class="sej-callout">
-                  <span class="sej-label">Ringkasan Requirement</span>
+                  <span class="sej-label">Ringkasan Konsep</span>
                   <div class="mt-2">{{ activeConcept ? activeConcept.summary : "Pilih konsep untuk membaca ringkasan." }}</div>
                 </div>
                 <div class="sej-note">
@@ -368,7 +368,7 @@
                 <div class="sej-callout">
                   <span class="sej-label">Fokus Implementasi</span>
                   <ul class="sej-plain">
-                    <li v-for="(item, idx) in activeConcept && (activeConcept.focus || activeConcept.details) && (activeConcept.focus || activeConcept.details).length ? (activeConcept.focus || activeConcept.details) : ['Tidak ada fokus implementasi tambahan.']" :key="idx">
+                    <li v-for="(item, idx) in activeConcept && (activeConcept.details || activeConcept.focus) && (activeConcept.details || activeConcept.focus).length ? (activeConcept.details || activeConcept.focus) : ['Tidak ada fokus implementasi tambahan.']" :key="idx">
                       {{ item }}
                     </li>
                   </ul>
@@ -382,14 +382,19 @@
                   </ul>
                 </div>
                 <div class="sej-callout">
-                  <span class="sej-label">Lampiran Terkait</span>
+                  <span class="sej-label">Keterkaitan</span>
                   <div class="sej-refs">
-                    <span class="sej-empty w-100">Requirement ini tidak menunjuk lampiran spesifik.</span>
+                    <span class="sej-empty w-100">Konsep ini tidak memakai lampiran spesifik di halaman ringkasan.</span>
                   </div>
                 </div>
                 <div class="sej-note">
                   <span class="sej-label">Pelaporan / Output</span>
-                  <div class="mt-2">{{ activeConcept && activeConcept.reporting ? activeConcept.reporting : "-" }}</div>
+                  <ul v-if="activeConcept && activeConcept.outputs && activeConcept.outputs.length" class="sej-plain">
+                    <li v-for="(item, idx) in activeConcept.outputs" :key="idx">
+                      {{ item }}
+                    </li>
+                  </ul>
+                  <div v-else class="mt-2">{{ activeConcept && activeConcept.reporting ? activeConcept.reporting : "-" }}</div>
                 </div>
               </div>
             </article>
@@ -404,21 +409,29 @@
                 <h3>Goals cascade</h3>
                 <span class="sej-chip">{{ goalCascade.length }} langkah</span>
               </div>
+              <p class="sej-copy">
+                Di COBIT, goals cascade memang berupa empat lapisan besar.
+                Detailnya ada pada contoh driver, enterprise goal, alignment
+                goal, objective COBIT, dan output analisis di tiap langkah.
+              </p>
               <div class="sej-list">
-                <div
+                <button
                   v-for="item in goalCascade"
                   :key="item.id"
+                  type="button"
                   class="sej-item"
-                  style="cursor: default"
+                  :style="{ '--accent': item.color || '#144e72' }"
+                  @click="openDetailModal(item, 'Goals Cascade')"
                 >
                   <div class="sej-item-top">
                     <span class="sej-item-code">{{ item.id }}</span>
+                    <span class="sej-pill">{{ item.group || 'Cascade' }}</span>
                   </div>
                   <div class="sej-item-name">{{ item.title }}</div>
                   <div class="sej-item-meta">
                     <span>{{ item.summary }}</span>
                   </div>
-                </div>
+                </button>
               </div>
             </article>
             <article class="sej-panel">
@@ -505,15 +518,55 @@
                   </div>
                 </div>
 
-                <div class="modal-section" v-if="selectedDetail?.details && selectedDetail.details.length">
+                <div class="modal-section" v-if="selectedDetail?.importance">
+                  <div class="modal-section-header" style="color: #144e72">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Kenapa Penting</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <p class="modal-summary">{{ selectedDetail.importance }}</p>
+                  </div>
+                </div>
+
+                <div class="modal-section" v-if="selectedDetailActionItems.length">
                   <div class="modal-section-header" style="color: #144e72">
                     <i class="fas fa-list-check"></i>
-                    <span>Artefak / Isi Utama</span>
+                    <span>Aktivitas Utama</span>
                   </div>
                   <div class="modal-section-content">
                     <ul class="modal-artifact-list">
-                      <li v-for="(item, idx) in selectedDetail.details" :key="idx">
+                      <li v-for="(item, idx) in selectedDetailActionItems" :key="idx">
                         <i class="fas fa-check-circle"></i>
+                        <span>{{ item }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="modal-section" v-if="selectedDetail?.examples && selectedDetail.examples.length">
+                  <div class="modal-section-header" style="color: #144e72">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Contoh Penerapan</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(item, idx) in selectedDetail.examples" :key="idx">
+                        <i class="fas fa-circle-dot"></i>
+                        <span>{{ item }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="modal-section" v-if="selectedDetail?.outputs && selectedDetail.outputs.length">
+                  <div class="modal-section-header" style="color: #0f766e">
+                    <i class="fas fa-file-signature"></i>
+                    <span>Contoh Output</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(item, idx) in selectedDetail.outputs" :key="idx" style="background: rgba(15, 118, 110, 0.05); border-color: rgba(15, 118, 110, 0.1);">
+                        <i class="fas fa-file-circle-check" style="color: #0f766e"></i>
                         <span>{{ item }}</span>
                       </li>
                     </ul>
@@ -523,13 +576,13 @@
                 <div class="modal-section">
                   <div class="modal-section-header" style="color: #144e72">
                     <i class="fas fa-link"></i>
-                    <span>Requirement yang Menggunakannya</span>
+                    <span>Kaitkan ke Explorer</span>
                   </div>
                   <div class="modal-section-content">
                     <div class="modal-requirements">
                       <button type="button" class="modal-req-btn" @click="jumpExplorerFromModal()">
                         <i class="fas fa-arrow-right"></i>
-                        <span>Lihat Terkait di Explorer</span>
+                        <span>Buka Konsep Ini di Explorer</span>
                       </button>
                     </div>
                   </div>
@@ -560,6 +613,259 @@
 </template>
 
 <script>
+const goalCascadeEnhancements = {
+  "GC-01": {
+    group: "Driver",
+    importance:
+      "Layer ini menjawab alasan governance perlu bergerak. Isinya bukan sekadar daftar kebutuhan, tetapi tekanan bisnis, risiko, regulasi, peluang digital, dan ekspektasi stakeholder yang harus diprioritaskan.",
+    details: [
+      "Kumpulkan driver dari board, manajemen, regulator, pelanggan, auditor, pemilik layanan, dan tim I&T.",
+      "Pisahkan driver yang sifatnya strategis, regulatif, operasional, risiko, atau transformasi.",
+      "Beri bobot urgency dan dampak supaya tidak semua permintaan diperlakukan sama.",
+      "Terjemahkan driver yang masih abstrak menjadi masalah atau peluang yang bisa dibahas dalam forum governance.",
+    ],
+    examples: [
+      "Regulator meminta bukti tata kelola I&T yang lebih eksplisit dan siap audit.",
+      "Board ingin investasi digital terlihat dampaknya pada layanan, efisiensi, dan risiko.",
+      "Unit bisnis mengalami gangguan layanan berulang sehingga butuh prioritas resilience dan service quality.",
+    ],
+    outputs: [
+      "Daftar stakeholder driver beserta owner, urgency, dan dampaknya.",
+      "Problem statement atau opportunity statement untuk business case COBIT.",
+      "Peta stakeholder yang perlu dilibatkan dalam desain governance.",
+    ],
+    educational_tips: [
+      "Kalau driver belum jelas, goals cascade akan terasa seperti teori. Mulai dari pain point nyata dulu.",
+      "Driver yang baik biasanya bisa dijelaskan dalam bahasa bisnis, bukan hanya bahasa TI.",
+    ],
+  },
+  "GC-02": {
+    group: "Enterprise Goal",
+    importance:
+      "Driver stakeholder harus diterjemahkan ke tujuan enterprise agar diskusi governance tidak berhenti di keluhan atau tekanan eksternal. Di materi COBIT, layer ini memuat tujuan bisnis yang lebih kaya daripada empat kotak cascade yang terlihat di halaman.",
+    details: [
+      "Kelompokkan driver ke sasaran enterprise seperti nilai portofolio layanan, risiko bisnis, kepatuhan, kualitas informasi, kontinuitas layanan, efisiensi proses, kapabilitas SDM, transformasi digital, dan inovasi.",
+      "Pastikan setiap tujuan enterprise punya sponsor bisnis dan indikator keberhasilan yang bisa dipantau.",
+      "Jangan langsung lompat ke kontrol teknis sebelum tahu tujuan bisnis mana yang ingin dilindungi atau ditingkatkan.",
+      "Gunakan tujuan enterprise untuk memilih area governance yang paling material.",
+    ],
+    examples: [
+      "Tekanan regulator diterjemahkan menjadi tujuan enterprise tentang kepatuhan eksternal dan kualitas informasi manajemen.",
+      "Kebutuhan layanan digital diterjemahkan menjadi tujuan enterprise tentang kontinuitas, customer-oriented service, dan program transformasi digital.",
+      "Kebutuhan efisiensi diterjemahkan menjadi tujuan enterprise tentang optimasi proses dan biaya bisnis.",
+    ],
+    outputs: [
+      "Daftar enterprise goals prioritas beserta rationale bisnisnya.",
+      "KPI bisnis atau risk indicator yang dipakai untuk membaca keberhasilan.",
+      "Kesepakatan sponsor bisnis tentang tujuan mana yang masuk scope awal.",
+    ],
+    educational_tips: [
+      "Enterprise goals membuat COBIT tetap nyambung ke bisnis. Tanpa layer ini, objective COBIT bisa terasa seperti checklist audit.",
+      "Satu driver bisa memengaruhi beberapa enterprise goals, jadi mapping tidak harus satu banding satu.",
+    ],
+  },
+  "GC-03": {
+    group: "Alignment Goal",
+    importance:
+      "Alignment goals menjadi jembatan antara tujuan enterprise dan peran informasi serta teknologi. Di sinilah bahasa bisnis mulai diterjemahkan menjadi kebutuhan I&T yang lebih operasional.",
+    details: [
+      "Turunkan enterprise goals menjadi kebutuhan I&T seperti kepatuhan I&T, risiko I&T, manfaat investasi, kualitas layanan, agility delivery, keamanan, integrasi proses, kualitas program, kualitas informasi I&T, skill, dan inovasi.",
+      "Gunakan alignment goals untuk melihat apakah problem utama ada di delivery, operasi, keamanan, data, people, supplier, atau assurance.",
+      "Tentukan indikator yang bisa dibaca oleh bisnis dan I&T bersama-sama.",
+      "Pastikan alignment goals dipakai sebagai filter sebelum memilih objective COBIT.",
+    ],
+    examples: [
+      "Tujuan kontinuitas bisnis biasanya turun ke alignment goal tentang layanan I&T yang andal dan aman.",
+      "Tujuan transformasi digital bisa turun ke agility, program delivery, integrasi aplikasi, dan inovasi.",
+      "Tujuan kepatuhan bisa turun ke kepatuhan I&T, kualitas informasi, kontrol internal, dan kesiapan audit.",
+    ],
+    outputs: [
+      "Peta alignment goals prioritas dan indikator I&T terkait.",
+      "Daftar capability gap yang perlu ditutup oleh governance dan management objective.",
+      "Narasi traceability dari tujuan bisnis ke kebutuhan I&T.",
+    ],
+    educational_tips: [
+      "Alignment goal adalah tempat yang bagus untuk menguji apakah tim bisnis dan tim I&T sedang bicara tentang hal yang sama.",
+      "Kalau alignment goal terlalu banyak, pilih yang paling material untuk cycle implementasi pertama.",
+    ],
+  },
+  "GC-04": {
+    group: "Objective",
+    importance:
+      "Layer terakhir menghubungkan alignment goals ke governance and management objectives COBIT. Inilah titik masuk ke domain EDM, APO, BAI, DSS, dan MEA.",
+    details: [
+      "Pilih objective COBIT yang paling relevan dengan alignment goals prioritas.",
+      "Tentukan owner, target capability, praktik kunci, informasi pendukung, metrik, dan ritme review.",
+      "Bedakan objective yang perlu dibangun segera dari objective yang cukup dimonitor dulu.",
+      "Gunakan hasil mapping sebagai dasar roadmap, assessment, dan assurance.",
+    ],
+    examples: [
+      "Kebutuhan pengawasan nilai investasi bisa mengarah ke objective governance di EDM dan portofolio di APO.",
+      "Kebutuhan keamanan dan kontinuitas bisa mengarah ke objective di APO, BAI, DSS, dan MEA.",
+      "Kebutuhan kontrol dan kepatuhan bisa mengarah ke objective monitoring, internal control, dan compliance.",
+    ],
+    outputs: [
+      "Daftar objective COBIT prioritas lengkap dengan owner dan target capability.",
+      "Roadmap implementasi per objective dan dependency-nya.",
+      "Dashboard metrik untuk memantau nilai, risiko, resource, dan kepatuhan.",
+    ],
+    educational_tips: [
+      "Jangan treat semua 40 objective sama rata. COBIT justru kuat karena bisa diprioritaskan sesuai konteks.",
+      "Objective yang dipilih harus bisa ditelusuri balik ke alignment goal, enterprise goal, dan stakeholder driver.",
+    ],
+  },
+};
+
+const implementationPhaseEnhancements = {
+  "IMP-01": {
+    details: [
+      "Identifikasi pemicu perubahan seperti audit finding, regulasi, insiden, target transformasi, masalah layanan, atau tekanan biaya.",
+      "Tulis case for change dalam bahasa bisnis agar sponsor paham kenapa COBIT perlu dipakai.",
+      "Tentukan stakeholder utama, sponsor, pain point, risiko bila tidak berubah, dan ruang lingkup awal.",
+    ],
+    examples: [
+      "Audit menemukan ownership layanan dan metrik risiko I&T belum jelas.",
+      "Manajemen ingin memastikan program digital punya governance, risk, dan benefit tracking yang konsisten.",
+    ],
+    outputs: [
+      "Case for change atau problem statement.",
+      "Daftar driver dan pain point prioritas.",
+      "Stakeholder map dan sponsor awal.",
+      "Scope awal area governance yang akan ditangani.",
+    ],
+    educational_tips: [
+      "Fase ini sebaiknya menghasilkan alasan yang bisa disetujui bisnis, bukan hanya alasan teknis.",
+      "Kalau sponsor belum jelas, implementasi biasanya berhenti di workshop dan dokumen.",
+    ],
+  },
+  "IMP-02": {
+    details: [
+      "Lakukan current-state assessment untuk objective atau proses yang masuk scope.",
+      "Kumpulkan bukti seperti kebijakan, struktur keputusan, KPI, risk register, audit finding, incident report, dan dokumen layanan.",
+      "Petakan gap antara kondisi aktual, ekspektasi stakeholder, dan praktik governance yang dibutuhkan.",
+    ],
+    examples: [
+      "Menilai apakah komite I&T punya mandat, keputusan, agenda, dan tindak lanjut yang terdokumentasi.",
+      "Membandingkan proses perubahan aplikasi dengan target kontrol, ownership, dan risiko yang disepakati.",
+    ],
+    outputs: [
+      "Baseline capability atau maturity per objective.",
+      "Heatmap gap dan pain point.",
+      "Daftar bukti yang sudah ada dan bukti yang belum tersedia.",
+      "Risiko utama yang muncul dari gap governance.",
+    ],
+    educational_tips: [
+      "Baseline harus jujur. Jangan dibuat terlalu bagus karena roadmap akan menjadi tidak realistis.",
+      "Pisahkan gap dokumen, gap proses, gap peran, dan gap budaya kerja.",
+    ],
+  },
+  "IMP-03": {
+    details: [
+      "Tetapkan target state yang realistis untuk objective prioritas.",
+      "Tentukan target capability, outcome, KPI, risk indicator, dan kriteria sukses.",
+      "Validasi target dengan sponsor bisnis agar tidak menjadi ambisi sepihak dari tim I&T.",
+    ],
+    examples: [
+      "Menetapkan target bahwa portofolio I&T harus punya benefit owner, risk owner, dan review berkala.",
+      "Menentukan target layanan kritikal punya metrik availability, incident trend, recovery readiness, dan ownership yang jelas.",
+    ],
+    outputs: [
+      "Target governance state.",
+      "Daftar objective prioritas dan target capability.",
+      "Kriteria sukses dan indikator pemantauan.",
+      "Keputusan scope mana yang masuk cycle implementasi pertama.",
+    ],
+    educational_tips: [
+      "Target yang baik tidak harus sempurna. Yang penting jelas, terukur, dan disepakati.",
+      "Hindari target yang terlalu luas sampai tim tidak tahu harus mulai dari mana.",
+    ],
+  },
+  "IMP-04": {
+    details: [
+      "Susun inisiatif untuk menutup gap prioritas dengan urutan kerja yang masuk akal.",
+      "Tentukan dependency, owner, resource, timeline, quick win, risiko implementasi, dan mekanisme eskalasi.",
+      "Pastikan roadmap mencakup perubahan proses, struktur, informasi, budaya, skill, dan tooling bila relevan.",
+    ],
+    examples: [
+      "Membuat backlog inisiatif governance: perbaikan RACI, policy update, dashboard KPI, dan forum review.",
+      "Membagi roadmap menjadi quick wins 30 hari, stabilisasi 90 hari, dan peningkatan lanjutan.",
+    ],
+    outputs: [
+      "Roadmap implementasi COBIT.",
+      "Initiative charter atau backlog per objective.",
+      "RACI dan owner tiap paket kerja.",
+      "Change plan, communication plan, dan dependency map.",
+    ],
+    educational_tips: [
+      "Roadmap harus cukup rinci untuk dieksekusi, tapi tidak perlu berubah menjadi dokumen raksasa.",
+      "Quick win penting untuk menjaga sponsor percaya bahwa program ini bergerak.",
+    ],
+  },
+  "IMP-05": {
+    details: [
+      "Eksekusi roadmap dengan governance cadence yang jelas.",
+      "Kelola komunikasi, pelatihan, resistensi, perubahan peran, dan adopsi praktik kerja.",
+      "Pastikan artefak tidak hanya dibuat, tetapi dipakai dalam keputusan harian.",
+    ],
+    examples: [
+      "Menjalankan pilot dashboard portofolio I&T di satu direktorat sebelum diperluas.",
+      "Mengubah agenda komite supaya pembahasan nilai, risiko, dan resource muncul secara rutin.",
+    ],
+    outputs: [
+      "Kebijakan, prosedur, RACI, dashboard, dan template yang sudah dipakai.",
+      "Catatan keputusan governance dan tindak lanjutnya.",
+      "Training record atau bukti sosialisasi.",
+      "Adoption metrics dan issue log implementasi.",
+    ],
+    educational_tips: [
+      "Governance berubah lewat kebiasaan rapat, keputusan, eskalasi, dan evidence. Bukan cuma lewat dokumen.",
+      "Pantau resistensi karena perubahan peran sering lebih sulit daripada perubahan template.",
+    ],
+  },
+  "IMP-06": {
+    details: [
+      "Ukur apakah hasil implementasi benar-benar menjawab driver awal.",
+      "Bandingkan baseline dengan kondisi setelah implementasi menggunakan KPI, KRI, audit result, service metric, dan feedback stakeholder.",
+      "Identifikasi apa yang berhasil, apa yang belum, dan apa yang perlu diperbaiki di cycle berikutnya.",
+    ],
+    examples: [
+      "Menguji apakah risiko layanan kritikal lebih terlihat dan dibahas dalam forum governance.",
+      "Mengecek apakah benefit investasi digital dipantau oleh owner bisnis, bukan hanya oleh project manager.",
+    ],
+    outputs: [
+      "Benefit realization atau outcome review.",
+      "Dashboard pencapaian target capability dan KPI.",
+      "Lessons learned dan daftar gap tersisa.",
+      "Rekomendasi perbaikan untuk cycle berikutnya.",
+    ],
+    educational_tips: [
+      "Jangan menilai sukses hanya dari jumlah dokumen selesai. Nilai dari perubahan keputusan dan outcome.",
+      "Review hasil sebaiknya melibatkan bisnis, risk, audit, dan I&T bersama-sama.",
+    ],
+  },
+  "IMP-07": {
+    details: [
+      "Masukkan hasil evaluasi ke backlog perbaikan berkelanjutan.",
+      "Perbarui prioritas saat strategi, risiko, regulasi, teknologi, atau organisasi berubah.",
+      "Jaga governance cadence supaya perbaikan tidak berhenti setelah proyek awal selesai.",
+    ],
+    examples: [
+      "Menjadwalkan review triwulanan untuk objective prioritas dan design factor yang berubah.",
+      "Mengubah roadmap setelah ada regulasi baru, insiden besar, atau perubahan strategi digital.",
+    ],
+    outputs: [
+      "Continual improvement backlog.",
+      "Governance review calendar.",
+      "Updated risk and issue register.",
+      "Roadmap versi berikutnya dan keputusan prioritas baru.",
+    ],
+    educational_tips: [
+      "COBIT lebih sehat dipakai sebagai siklus peningkatan, bukan proyek sekali jalan.",
+      "Momentum dijaga lewat ritme review, ownership, dan bukti keputusan yang konsisten.",
+    ],
+  },
+};
+
 export default {
   name: "Cobit",
   data() {
@@ -576,7 +882,13 @@ export default {
       goalCascade: [],
       implementationPhases: [],
       designFactors: [],
+      activeType: "",
+      conceptSearch: "",
       typeMeta: {
+        goal_cascade: {
+          label: "Goals Cascade",
+          summary: "Jembatan dari driver bisnis ke objective COBIT.",
+        },
         system_principle: {
           label: "Prinsip Sistem",
           summary: "Fondasi governance system.",
@@ -651,6 +963,8 @@ export default {
           concept.importance,
           ...(concept.focus || []),
           ...(concept.details || []),
+          ...(concept.examples || []),
+          ...(concept.outputs || []),
         ]
           .join(" ")
           .toLowerCase()
@@ -659,6 +973,10 @@ export default {
     },
     activeConcept() {
       return this.concepts.find((c) => c.id === this.activeConceptId) || null;
+    },
+    selectedDetailActionItems() {
+      if (!this.selectedDetail) return [];
+      return this.selectedDetail.details || this.selectedDetail.focus || [];
     },
   },
   watch: {
@@ -688,7 +1006,10 @@ export default {
       this.conceptSearch = "";
       this.activeTab = "explorer";
       if (id) {
-        this.setActiveRequirement ? this.setActiveRequirement(id) : this.setActiveConcept(id);
+        const target = this.concepts.find((concept) => concept.id === id);
+        if (target) {
+          this.setActiveConcept(id);
+        }
       }
     },
     openDetailModal(item, typeName) {
@@ -698,9 +1019,15 @@ export default {
     },
     jumpExplorerFromModal() {
       if (!this.selectedDetail) return;
+      const typeMap = {
+        "Goals Cascade": "goal_cascade",
+        "Fase Implementasi": "implementation_phase",
+        "Design Factor": "design_factor",
+      };
+      const typeKey = typeMap[this.selectedDetailType] || this.selectedDetail.type || "";
+      const selectedId = this.selectedDetail.id;
       this.showDetailModal = false;
-      const typeKey = this.selectedDetailType === 'Fase Implementasi' ? 'implementation_phase' : 'design_factor';
-      this.jumpExplorer(typeKey, this.selectedDetail.id);
+      this.jumpExplorer(typeKey, selectedId);
     },
     retryLoad() {
       this.loadData();
@@ -717,12 +1044,23 @@ export default {
           this.valueOutcomes = data.value_outcomes || [];
           this.highlights = data.highlights || [];
           this.audiences = data.audiences || [];
-          this.goalCascade = data.goal_cascade || [];
-          this.implementationPhases = data.implementation_phases || [];
+          this.goalCascade = (data.goal_cascade || []).map((item) => ({
+            ...item,
+            ...(goalCascadeEnhancements[item.id] || {}),
+          }));
+          this.implementationPhases = (data.implementation_phases || []).map((item) => ({
+            ...item,
+            ...(implementationPhaseEnhancements[item.id] || {}),
+          }));
           this.designFactors = data.design_factors || [];
 
           // Combine all concept types into concepts array
           const allConcepts = [
+            ...this.goalCascade.map((c) => ({
+              ...c,
+              type: "goal_cascade",
+              type_label: "Goals Cascade",
+            })),
             ...(data.principles_system || []).map((c) => ({
               ...c,
               type: "system_principle",
@@ -748,7 +1086,7 @@ export default {
               type: "domain",
               type_label: "Domain Core Model",
             })),
-            ...(data.implementation_phases || []).map((c) => ({
+            ...this.implementationPhases.map((c) => ({
               ...c,
               type: "implementation_phase",
               type_label: "Fase Implementasi",
