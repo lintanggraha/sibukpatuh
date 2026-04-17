@@ -44,8 +44,8 @@
         <div v-if="activeTab === 'overview'" key="overview-tab">
           <div class="sej-grid two">
             <article class="sej-panel">
-              <div class="sej-head"><h3>Lanskap pilar regulasi</h3><span class="sej-chip">{{ pillarBreakdown.length }} pilar</span></div>
-              <p class="sej-copy">Pilar ini dipakai sebagai lensa kerja utama untuk membaca SEOJK: assessment, governance, resilience, testing, organization, dan reporting. Klik salah satu bar untuk langsung lompat ke eksplorasi dengan filter yang relevan.</p>
+              <div class="sej-head"><h3>Kategori pilar keamanan</h3><span class="sej-chip">{{ pillarBreakdown.length }} pilar</span></div>
+              <p class="sej-copy">Pilar ini dipakai sebagai panduan utama untuk mengkategorikan kerentanan aplikasi web menurut OWASP. Klik salah satu bar untuk langsung lompat ke eksplorasi dengan filter yang relevan.</p>
               <div class="sej-bars">
                 <button v-for="item in pillarBreakdown" :key="item.key" type="button" class="sej-bar" @click="jumpExplorer(item.key)"><span><strong>{{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="sej-track"><b :style="{ width: (item.count / maxPillarCount) * 100 + '%', background: item.color }"></b></span><span class="sej-num">{{ item.count }}</span></button>
               </div>
@@ -60,17 +60,17 @@
           </div>
           <div class="sej-grid two">
             <article class="sej-panel">
-              <div class="sej-head"><h3>Elemen penilaian inti</h3><span class="sej-chip">Assessment model</span></div>
+              <div class="sej-head"><h3>Fokus mitigasi utama</h3><span class="sej-chip">Mitigation focus</span></div>
               <div class="sej-mini-row">
-                <div class="sej-mini"><label>4 Faktor Risiko Inheren</label><strong>Teknologi</strong><span>Produk bank, karakteristik organisasi, dan rekam jejak insiden siber.</span></div>
-                <div class="sej-mini"><label>4 Proses Ketahanan</label><strong>Identify to Recover</strong><span>Identifikasi, pelindungan, deteksi, penanggulangan, dan pemulihan.</span></div>
-                <div class="sej-mini"><label>2 Metode Uji</label><strong>Technical + Scenario</strong><span>Analisis kerentanan serta exercise berbasis skenario lintas fungsi.</span></div>
+                <div class="sej-mini"><label>Shift Left</label><strong>Desain</strong><span>Menerapkan keamanan sejak awal fase arsitektur dan rancangan.</span></div>
+                <div class="sej-mini"><label>Zero Trust</label><strong>Akses & Identitas</strong><span>Validasi ketat pada setiap otentikasi dan kontrol wewenang.</span></div>
+                <div class="sej-mini"><label>Defense in Depth</label><strong>Berlapis</strong><span>Pertahanan ganda dari sisi kode, server, hingga lapisan kriptografi.</span></div>
               </div>
-              <div class="sej-note">Penilaian maturitas memakai dua dimensi besar: kualitas penerapan manajemen risiko siber dan kualitas penerapan proses ketahanan siber. Hasil akhirnya dipakai bersama risiko inheren untuk menetapkan tingkat risiko keamanan siber.</div>
+              <div class="sej-note">OWASP Top 10 mendorong tim pengembang untuk tidak sekadar menambal bug, tetapi mengadopsi budaya keamanan aplikasi yang holistik dari hulu ke hilir.</div>
             </article>
             <article class="sej-panel">
-              <div class="sej-head"><h3>Peta lampiran</h3><span class="sej-chip">{{ totalAppendices }} referensi</span></div>
-              <p class="sej-copy">Lampiran di SEOJK ini bukan sekadar pelengkap. Ia menjadi sumber format resmi, kontrol minimum, dan definisi rating yang dipakai saat Bank menyusun self-assessment dan laporan.</p>
+              <div class="sej-head"><h3>Peta referensi & standar</h3><span class="sej-chip">{{ totalAppendices }} referensi</span></div>
+              <p class="sej-copy">Referensi OWASP membantu memperjelas implementasi mitigasi dengan memetakan setiap risiko Top 10 ke standar ASVS dan panduan spesifik seperti Cheat Sheet Series.</p>
               <div class="sej-cards">
                 <button v-for="item in appendixTypeBreakdown" :key="item.type" type="button" class="sej-card" :style="{ '--accent': item.color }" @click="jumpAppendix('', item.type)"><div class="sej-card-top"><span class="sej-icon"><i class="fas fa-layer-group"></i></span><span>{{ item.count }} lampiran</span></div><strong>{{ item.type }}</strong><p>Lompat ke board lampiran dengan filter jenis ini.</p></button>
               </div>
@@ -125,11 +125,11 @@
                 <div><label for="appendixSearch">Cari lampiran</label><input id="appendixSearch" v-model="appendixSearch" type="search" class="form-control" placeholder="Cari ID, judul, jenis, atau scope"></div>
                 <button type="button" class="btn btn-outline-secondary" @click="resetAppendixFilters">Atur ulang filter</button>
               </div>
-              <div class="sej-summary"><small>Lampiran Ditampilkan</small><strong>{{ filteredAppendices.length }}</strong><span>{{ filteredAppendices.length ? `Menampilkan ${filteredAppendices.length} lampiran SEOJK sesuai filter aktif.` : 'Tidak ada lampiran yang cocok dengan filter saat ini.' }}</span></div>
+              <div class="sej-summary"><small>Lampiran Ditampilkan</small><strong>{{ filteredAppendices.length }}</strong><span>{{ filteredAppendices.length ? `Menampilkan ${filteredAppendices.length} referensi perlindungan sesuai filter aktif.` : 'Tidak ada referensi yang cocok dengan filter saat ini.' }}</span></div>
               <div class="sej-families mt-3">
                 <button v-for="item in appendixTypeBreakdown" :key="item.type" type="button" class="sej-family" :class="{ active: appendixTypeFilter === item.type }" :style="{ '--accent': item.color }" @click="appendixTypeFilter = appendixTypeFilter === item.type ? '' : item.type"><span><strong>{{ item.type }}</strong><em>{{ item.count }} lampiran</em></span><span class="sej-num">{{ item.count }}</span></button>
               </div>
-              <div class="sej-note mt-3"><span class="sej-label">Keluaran Pelaporan</span>Hasil risiko inheren, penilaian maturitas, dan tingkat risiko keamanan siber seluruhnya bermuara ke laporan kondisi terkini penyelenggaraan TI Bank menggunakan Lampiran V.</div>
+              <div class="sej-note mt-3"><span class="sej-label">Hubungan dengan Standar</span>Daftar referensi ini menghubungkan kerentanan tingkat tinggi (Top 10) dengan persyaratan kontrol yang lebih granular agar tim security dapat melakukan remediasi secara terukur.</div>
             </article>
             <article class="sej-panel">
               <div class="sej-head"><h3>Board lampiran</h3><span class="sej-chip">{{ filteredAppendices.length }} entri</span></div>
@@ -379,7 +379,7 @@ export default {
           throw new Error(`Failed to load appendices: HTTP ${appRes.status}`);
         }
       } catch (error) {
-        console.error('Error loading SEOJK data:', error);
+        console.error('Error loading OWASP data:', error);
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
