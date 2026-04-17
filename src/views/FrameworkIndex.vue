@@ -123,7 +123,7 @@ export default {
           name: "OWASP ASVS 5.0.0",
           subtitle: "Standar pengujian & verifikasi keamanan",
           summary: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.",
-          metric_label: "Kriteria Uji",
+          metric_label: "Kategori Uji",
           metric_value: null,
           accent: "#1d4ed8",
           icon: "fa-check-double",
@@ -191,8 +191,8 @@ export default {
       loadData("/data/seojk_requirements.json"),
       loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
-      loadData("/data/owasp_top10_reqs.json", "requirements"),
-      loadData("/data/owasp_asvs_reqs.json", "requirements"),
+      loadData("/data/owasp_top10_reqs.json"),
+      loadData("/data/owasp_asvs_reqs.json"),
     ]);
 
     this.frameworks[0].metric_value = isoCount || 93;
@@ -202,7 +202,7 @@ export default {
     this.frameworks[4].metric_value = resilienceCount || 0;
     this.frameworks[5].metric_value = pbiCount || 0;
     this.frameworks[6].metric_value = owaspTop10Count || 10;
-    this.frameworks[7].metric_value = owaspAsvsCount || 280;
+    this.frameworks[7].metric_value = owaspAsvsCount || 8;
   },
 };
 </script>
