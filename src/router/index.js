@@ -59,8 +59,13 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
     scrollBehavior(to, from, savedPosition) {
-      // Scroll to top on route change
-      return { top: 0, behavior: 'smooth' };
+      if (savedPosition) {
+        return savedPosition;
+      }
+
+      // Keep route changes instant. Smooth scrolling can feel sluggish on
+      // content-heavy pages and forces extra work on Firefox/mobile browsers.
+      return { top: 0 };
     }
 });
 

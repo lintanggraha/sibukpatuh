@@ -20,13 +20,6 @@
           <span class="iso-kicker"><i class="fas fa-compass"></i>Framework Studio</span>
           <h1 class="iso-title">ISO 27001:2022 Control Studio</h1>
           <p class="iso-lede">Halaman ini menyajikan kontrol Annex A dalam tampilan yang mendukung analisa kebijakan, penentuan prioritas implementasi, dan identifikasi kebutuhan bukti audit.</p>
-          <div class="iso-disclaimer-banner">
-            <div class="iso-disclaimer-icon"><i class="fas fa-info-circle"></i></div>
-            <div class="iso-disclaimer-content">
-              <strong>Disclaimer:</strong>
-              <span>Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari standar ISO 27001:2022. Ini <b>bukan</b> teks resmi ISO dan tidak boleh dianggap sebagai pengganti standar asli. Untuk teks otoritatif dan lisensi resmi, silakan kunjungi <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener noreferrer">ISO.org</a> atau <a href="https://www.bsn.go.id" target="_blank" rel="noopener noreferrer">BSN</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan persiapan audit internal.</span>
-            </div>
-          </div>
           <div class="iso-metric-grid">
             <div class="iso-metric"><label>Annex A Controls</label><strong>{{ totalControls }}</strong><span>Kontrol inti yang bisa ditelusuri end-to-end.</span></div>
             <div class="iso-metric"><label>Categories</label><strong>{{ domainBreakdown.length }}</strong><span>Organisasional, Orang, Fisik, dan Teknologi.</span></div>
@@ -41,6 +34,13 @@
               <div><i class="fas fa-circle"></i><span>Tinjau ringkasan kontrol untuk mengidentifikasi area fokus berdasarkan kategori dan prioritas.</span></div>
               <div><i class="fas fa-circle"></i><span>Gunakan Eksplorasi untuk menyaring kontrol dan menganalisa rincian implementasi, bukti audit, serta tingkat kesulitan.</span></div>
               <div><i class="fas fa-circle"></i><span>Gunakan Konsep Keamanan untuk melihat keterkaitan kontrol dengan kapabilitas keamanan siber.</span></div>
+            </div>
+          </div>
+          <div class="iso-disclaimer-banner">
+            <div class="iso-disclaimer-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="iso-disclaimer-content">
+              <strong>Disclaimer:</strong>
+              <span>Konten ini adalah ringkasan edukatif berdasarkan interpretasi dari standar ISO 27001:2022. Ini <b>bukan</b> teks resmi ISO dan tidak boleh dianggap sebagai pengganti standar asli. Untuk teks otoritatif dan lisensi resmi, silakan kunjungi <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener noreferrer">ISO.org</a> atau <a href="https://www.bsn.go.id" target="_blank" rel="noopener noreferrer">BSN</a>. Penggunaan konten ini sepenuhnya untuk tujuan edukasi dan persiapan audit internal.</span>
             </div>
           </div>
         </div>
@@ -334,31 +334,32 @@ export default {
 <style scoped>
 .iso-page{--ink:#132238;--muted:#5c6776;--line:rgba(19,34,56,.1);--soft:rgba(255,250,242,.95);--shell:linear-gradient(180deg,#f7f2e8 0%,#edf5f5 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
 .iso-shell{display:grid;gap:1rem}
-.iso-hero{display:grid;grid-template-columns:1.6fr .9fr;gap:1.25rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(255,226,189,.9),transparent 32%),radial-gradient(circle at bottom left,rgba(173,223,217,.7),transparent 28%),linear-gradient(135deg,#17324d 0%,#215a56 50%,#f4e4c5 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}
+.iso-hero{display:grid;grid-template-columns:1.55fr .9fr;gap:1rem;align-items:start;min-height:300px;padding:1.15rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(255,226,189,.82),transparent 30%),radial-gradient(circle at bottom left,rgba(173,223,217,.62),transparent 26%),linear-gradient(135deg,#17324d 0%,#215a56 50%,#f4e4c5 100%);box-shadow:0 14px 30px rgba(15,23,42,.08)}
 .iso-hero>*{position:relative;z-index:1}
 .iso-kicker{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;background:rgba(255,250,242,.18);color:rgba(255,250,242,.92);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.iso-title{margin:1rem 0 .7rem;color:#fffaf2;font-size:clamp(2rem,3.8vw,3rem);font-weight:800;line-height:1.04}
-.iso-lede{margin:0;max-width:680px;color:rgba(255,250,242,.82);line-height:1.7}
-.iso-disclaimer-banner{margin-top:1.25rem;padding:1rem 1.25rem;border-radius:16px;background:rgba(255,250,242,.92);border:1px solid rgba(255,255,255,.4);display:flex;gap:1rem;align-items:flex-start}
-.iso-disclaimer-icon{color:#f59e0b;font-size:1.4rem;flex-shrink:0;margin-top:2px}
-.iso-disclaimer-content{color:#1e293b;font-size:.88rem;line-height:1.65}
-.iso-disclaimer-content strong{display:block;margin-bottom:.35rem;color:#b45309;font-size:.9rem}
+.iso-title{margin:.8rem 0 .55rem;color:#fffaf2;font-size:clamp(1.85rem,3.2vw,2.6rem);font-weight:800;line-height:1.04}
+.iso-lede{margin:0;max-width:680px;color:rgba(255,250,242,.82);line-height:1.55;font-size:.94rem}
+.iso-disclaimer-banner{padding:.72rem .82rem;border-radius:14px;background:rgba(255,250,242,.9);border:1px solid rgba(255,255,255,.4);display:flex;gap:.7rem;align-items:flex-start}
+.iso-disclaimer-icon{color:#f59e0b;font-size:1rem;flex-shrink:0;margin-top:1px}
+.iso-disclaimer-content{color:#1e293b;font-size:.76rem;line-height:1.5}
+.iso-disclaimer-content strong{display:block;margin-bottom:.18rem;color:#b45309;font-size:.78rem}
 .iso-disclaimer-content a{color:#0284c7;text-decoration:underline;font-weight:600}
 .iso-disclaimer-content a:hover{color:#0369a1}
-.iso-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-top:1.15rem}
-.iso-metric{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);min-height:96px;display:flex;flex-direction:column;justify-content:flex-start}
+.iso-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin-top:.9rem}
+.iso-metric{padding:.58rem .64rem;border-radius:14px;background:rgba(255,250,242,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);min-height:82px;display:flex;flex-direction:column;justify-content:flex-start}
 .iso-metric label,.iso-side-card label,.iso-panel-copy strong{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.iso-metric label{color:rgba(255,250,242,.7);margin-bottom:.35rem}
-.iso-metric strong{display:block;color:#fffaf2;font-size:1.5rem;font-weight:800;line-height:1}
-.iso-metric span{display:block;margin-top:.35rem;color:rgba(255,250,242,.72);font-size:.76rem}
-.iso-side-stack{display:grid;gap:.95rem}
-.iso-side-card{padding:.8rem .86rem;border-radius:18px;background:rgba(255,250,242,.78);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(12px);min-height:142px}
-.iso-side-card label{color:var(--muted);margin-bottom:.45rem}
+.iso-metric label{color:rgba(255,250,242,.7);margin-bottom:.24rem}
+.iso-metric strong{display:block;color:#fffaf2;font-size:1.32rem;font-weight:800;line-height:1}
+.iso-metric span{display:block;margin-top:.26rem;color:rgba(255,250,242,.72);font-size:.72rem;line-height:1.42}
+.iso-side-stack{display:grid;gap:.65rem;align-content:start}
+.iso-side-card{padding:.68rem .74rem;border-radius:16px;background:rgba(255,250,242,.82);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(12px);min-height:auto}
+.iso-side-card label{color:var(--muted);margin-bottom:.3rem;font-size:.66rem}
 .iso-side-card h3{margin:0;font-size:1rem;font-weight:800}
 .iso-side-card p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
-.iso-bullets{display:grid;gap:.7rem;margin-top:.95rem}
-.iso-bullets div{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start}
-.iso-bullets i{color:#c2410c;margin-top:.25rem}
+.iso-bullets{display:grid;gap:.46rem;margin-top:.58rem}
+.iso-bullets div{display:grid;grid-template-columns:auto 1fr;gap:.52rem;align-items:start}
+.iso-bullets i{color:#c2410c;margin-top:.28rem;font-size:.55rem}
+.iso-bullets span{font-size:.82rem;line-height:1.45}
 .iso-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
 .iso-tab{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
 .iso-tab.active{border-color:rgba(15,118,110,.24);box-shadow:0 18px 30px rgba(15,118,110,.1)}
@@ -465,8 +466,8 @@ export default {
 .iso-selected-count span{display:block;margin-top:.15rem;color:rgba(255,250,242,.72);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .iso-concept-workspace{display:grid;grid-template-columns:.9fr 1.1fr;gap:1rem}
 
-@media (max-width:1440px){.iso-hero { min-height: 280px; padding: 1.25rem; } .iso-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .iso-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .iso-metric strong { font-size: 1.35rem; } .iso-list, .iso-inspector-panel { min-height: auto; max-height: 520px; }}
-@media (max-height:850px) and (min-width:1024px){.iso-hero { min-height: 240px; padding: 1.15rem; } .iso-metric-grid { margin-top: 0.6rem; } .iso-list, .iso-inspector-panel { max-height: calc(100vh - 280px); } .iso-detail-body { padding-top: 0.5rem; }}
+@media (max-width:1440px){.iso-hero { min-height: 260px; padding: 1rem; } .iso-title { font-size: clamp(1.75rem, 3vw, 2.35rem); margin: .65rem 0 .42rem; } .iso-lede { font-size: .9rem; } .iso-metric { min-height: 76px; padding: .5rem .58rem; } .iso-metric strong { font-size: 1.22rem; } .iso-list, .iso-inspector-panel { min-height: auto; max-height: 520px; }}
+@media (max-height:850px) and (min-width:1024px){.iso-hero { min-height: 220px; padding: .95rem; } .iso-metric-grid { margin-top: .55rem; } .iso-list, .iso-inspector-panel { max-height: calc(100vh - 280px); } .iso-detail-body { padding-top: .5rem; }}
 @media (max-width:1199.98px){.iso-hero,.iso-metric,.iso-side-card{min-height:auto}.iso-hero,.iso-nav,.iso-grid.two,.iso-workspace,.iso-concept-workspace,.iso-metric-grid,.iso-type-grid,.iso-quick-themes{grid-template-columns:1fr}.iso-bar{grid-template-columns:1fr}}
 @media (max-width:1599.98px){.iso-concept-board{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:991.98px){.iso-concept-board{grid-template-columns:repeat(2,minmax(0,1fr))}}

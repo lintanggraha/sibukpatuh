@@ -213,6 +213,7 @@ export default {
 
 html {
   scroll-padding-top: 1rem;
+  scroll-behavior: auto;
   overflow-x: hidden;
 }
 
@@ -261,6 +262,8 @@ body::-webkit-scrollbar-thumb:active {
 .pbi-list,
 .orj-list {
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: rgba(20, 78, 114, 0.15) transparent;
 }
@@ -310,7 +313,9 @@ body::-webkit-scrollbar-thumb:active {
 .cob-item,
 .pbi-item,
 .orj-item {
-  contain: style paint;
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 84px;
 }
 
 /* Page transition animations - simple and fast */
@@ -344,16 +349,6 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
-    radial-gradient(
-      circle at top right,
-      rgba(242, 206, 145, 0.34),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at left center,
-      rgba(141, 199, 203, 0.24),
-      transparent 24%
-    ),
     linear-gradient(180deg, var(--canvas-top) 0%, var(--canvas-bottom) 100%);
 }
 
@@ -371,8 +366,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
   background: rgba(255, 251, 246, 0.7);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
 }
 
 .framework-brand {
@@ -544,8 +538,7 @@ body {
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: var(--shell);
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
 }
 
 .route-wrapper {
@@ -555,6 +548,137 @@ body {
 
 .alert ul {
   margin-bottom: 0;
+}
+
+/* Scroll performance guardrails.
+   Large backdrop blurs and oversized shadows repaint heavily while scrolling,
+   especially in Firefox and mobile browsers. Keep the visual language, but use
+   cheap translucent surfaces instead of live glass effects. */
+.framework-header,
+.framework-page,
+.framework-dropdown,
+.frx-disclaimer,
+.about-card,
+.iso-metric,
+.iso-side-card,
+.modal-overlay {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.iso-panel,
+.sej-panel,
+.nst-panel,
+.cob-panel,
+.pbi-panel,
+.orj-panel,
+.frx-card,
+.about-card {
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.055) !important;
+}
+
+.iso-detail-body,
+.sej-inspector-body,
+.nst-inspector-body,
+.cob-inspector-body,
+.pbi-inspector-body,
+.orj-inspector-body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 767.98px) {
+  .framework-shell {
+    padding: 0.75rem 0 1rem;
+  }
+
+  .framework-header {
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  }
+
+  .framework-page {
+    padding: 0.65rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.055);
+  }
+
+  .iso-list,
+  .sej-list,
+  .nst-list,
+  .cob-list,
+  .pbi-list,
+  .orj-list,
+  .iso-detail-body,
+  .sej-inspector-body,
+  .nst-inspector-body,
+  .cob-inspector-body,
+  .pbi-inspector-body,
+  .orj-inspector-body {
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .iso-inspector-panel,
+  .sej-inspector,
+  .nst-inspector,
+  .cob-inspector,
+  .pbi-inspector,
+  .orj-inspector {
+    min-height: auto !important;
+    max-height: none !important;
+  }
+
+  .framework-nav-toggle,
+  .iso-tab,
+  .sej-tab,
+  .nst-tab,
+  .cob-tab,
+  .pbi-tab,
+  .orj-tab {
+    transition:
+      background-color 0.12s ease,
+      border-color 0.12s ease,
+      color 0.12s ease !important;
+  }
+
+  .framework-nav-toggle:hover,
+  .framework-nav-toggle:focus,
+  .framework-nav-group.show .framework-nav-toggle,
+  .iso-bar.jump:hover,
+  .sej-bar:hover,
+  .sej-hotspot:hover,
+  .sej-family:hover,
+  .orj-bar:hover,
+  .orj-family:hover,
+  .frx-card:hover,
+  .about-card:hover,
+  .feature-item:hover,
+  .btn-contact:hover {
+    transform: none !important;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.12s ease !important;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @media (max-width: 1440px) {
