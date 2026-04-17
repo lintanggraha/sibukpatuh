@@ -404,15 +404,20 @@
                 <h3>Goals cascade</h3>
                 <span class="sej-chip">{{ goalCascade.length }} langkah</span>
               </div>
-              <div class="sej-cards">
+              <div class="sej-list">
                 <div
                   v-for="item in goalCascade"
                   :key="item.id"
-                  class="sej-mini"
+                  class="sej-item"
+                  style="cursor: default"
                 >
-                  <label>{{ item.id }}</label
-                  ><strong>{{ item.title }}</strong>
-                  <p>{{ item.summary }}</p>
+                  <div class="sej-item-top">
+                    <span class="sej-item-code">{{ item.id }}</span>
+                  </div>
+                  <div class="sej-item-name">{{ item.title }}</div>
+                  <div class="sej-item-meta">
+                    <span>{{ item.summary }}</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -428,7 +433,7 @@
                   v-for="item in implementationPhases"
                   :key="item.id"
                   type="button"
-                  class="sej-mini"
+                  class="sej-mini text-start"
                   @click="openDetailModal(item, 'Fase Implementasi')"
                 >
                   <label>{{ item.group }}</label>
@@ -527,6 +532,21 @@
                         <span>Lihat Terkait di Explorer</span>
                       </button>
                     </div>
+                  </div>
+                </div>
+
+                <div class="modal-section" v-if="selectedDetail?.educational_tips && selectedDetail.educational_tips.length">
+                  <div class="modal-section-header" style="color: #0f766e">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Tips & Edukasi</span>
+                  </div>
+                  <div class="modal-section-content">
+                    <ul class="modal-artifact-list">
+                      <li v-for="(tip, idx) in selectedDetail.educational_tips" :key="idx" style="background: rgba(15, 118, 110, 0.05); border-color: rgba(15, 118, 110, 0.1);">
+                        <i class="fas fa-lightbulb" style="color: #0f766e"></i>
+                        <span style="color: #0f766e; font-weight: 500;">{{ tip }}</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
@@ -805,7 +825,8 @@ export default {
 .sej-card strong{display:block;margin-top:.42rem;font-size:.86rem;font-weight:800}
 .sej-card p{margin:.22rem 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}
 .sej-mini-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:.8rem}
-.sej-mini{padding:.72rem .78rem;border-radius:16px}
+.sej-mini{padding:.72rem .78rem;border-radius:16px;text-align:center}
+.sej-mini.text-start{text-align:left}
 .sej-mini label{color:var(--muted)}
 .sej-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
 .sej-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
@@ -886,6 +907,10 @@ export default {
 .modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
 .modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
 .modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
+@keyframes modalSlideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
 @media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}

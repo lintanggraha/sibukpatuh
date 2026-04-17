@@ -415,6 +415,10 @@
       "details": [
         "Baca objective melalui lensa strategi pertumbuhan, inovasi, stabilitas, atau layanan.",
         "Selaraskan prioritas governance dengan tujuan strategis enterprise."
+      ],
+      "educational_tips": [
+        "Sangat penting! Jika strategi perusahaan adalah Inovasi, maka tata kelola harus fleksibel dan cepat.",
+        "Jangan gunakan kontrol yang terlalu ketat jika bisnis membutuhkan kelincahan tinggi."
       ]
     },
     {
@@ -432,6 +436,10 @@
       "details": [
         "Hubungkan governance dengan sasaran bisnis yang benar-benar sedang dikejar.",
         "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -449,6 +457,10 @@
       "details": [
         "Petakan risiko yang paling material bagi enterprise.",
         "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
+      ],
+      "educational_tips": [
+        "Fokuskan sumber daya pada area dengan 'Risk Exposure' tertinggi.",
+        "Gunakan COBIT untuk memitigasi risiko-risiko kritikal yang teridentifikasi."
       ]
     },
     {
@@ -466,6 +478,10 @@
       "details": [
         "Lihat issue yang berulang, bottleneck, atau kegagalan layanan.",
         "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -483,6 +499,10 @@
       "details": [
         "Perhatikan tren ancaman yang paling relevan bagi enterprise.",
         "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -500,6 +520,10 @@
       "details": [
         "Petakan regulasi dan kewajiban yang paling membentuk cara kerja enterprise.",
         "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -517,6 +541,10 @@
       "details": [
         "Pahami seberapa kritikal I&T dalam model bisnis enterprise.",
         "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -534,6 +562,10 @@
       "details": [
         "Jangan anggap risiko governance hilang hanya karena layanan dialihdayakan.",
         "Perjelas kontrol dan akuntabilitas lintas pihak."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -551,6 +583,10 @@
       "details": [
         "Selaraskan governance dengan metode delivery yang dipakai tim.",
         "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -568,6 +604,10 @@
       "details": [
         "Pahami gaya adopsi teknologi enterprise sebelum menentukan kontrol.",
         "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     },
     {
@@ -585,6 +625,10 @@
       "details": [
         "Sesuaikan tingkat formalitas dengan ukuran dan kompleksitas enterprise.",
         "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
+      ],
+      "educational_tips": [
+        "Lakukan asesmen berkala terhadap faktor ini karena konteks bisnis bisa berubah.",
+        "Libatkan pemilik proses bisnis dalam menentukan bobot faktor ini."
       ]
     }
   ],
@@ -753,6 +797,10 @@
       "details": [
         "Identifikasi alasan bisnis dan risiko yang paling mendesak.",
         "Bangun urgensi yang bisa dipahami stakeholder."
+      ],
+      "educational_tips": [
+        "Pastikan ada 'Sponsor' dari level direksi agar inisiatif tidak berhenti di tengah jalan.",
+        "Identifikasi 'Pain Points' TI yang paling dirasakan oleh unit bisnis saat ini."
       ]
     },
     {
@@ -769,6 +817,10 @@
       "details": [
         "Pahami kondisi objektif, bukan asumsi.",
         "Petakan area kuat dan area yang masih rapuh."
+      ],
+      "educational_tips": [
+        "Lakukan 'Gap Analysis' yang jujur; jangan menutupi kekurangan kapabilitas yang ada.",
+        "Gunakan kriteria penilaian maturitas COBIT yang objektif."
       ]
     },
     {
@@ -785,6 +837,10 @@
       "details": [
         "Tentukan target yang relevan dengan konteks enterprise.",
         "Pilih objective dan outcome yang benar-benar dibutuhkan."
+      ],
+      "educational_tips": [
+        "Target tidak harus langsung Level 5; mulailah dari level yang realistis untuk organisasi.",
+        "Pilih 'Quick Wins' untuk menunjukkan nilai positif tata kelola dalam waktu singkat."
       ]
     },
     {
@@ -801,6 +857,10 @@
       "details": [
         "Turunkan target menjadi paket kerja yang bisa dikelola.",
         "Tentukan prioritas dan dependency antar-inisiatif."
+      ],
+      "educational_tips": [
+        "Detailkan siapa melakukan apa (RACI Chart) untuk setiap langkah perbaikan.",
+        "Alokasikan budget and sumber daya manusia secara konkret."
       ]
     },
     {
@@ -817,6 +877,10 @@
       "details": [
         "Kelola change enablement dan komunikasi.",
         "Pastikan implementasi diterjemahkan ke praktik kerja."
+      ],
+      "educational_tips": [
+        "Fokuslah pada perubahan perilaku, bukan sekadar tumpukan dokumen kebijakan.",
+        "Berikan pelatihan yang relevan bagi personil yang menjalankan proses baru."
       ]
     },
     {
@@ -833,6 +897,10 @@
       "details": [
         "Bandingkan hasil aktual dengan target.",
         "Pastikan ada pembacaan manfaat, risiko, dan resource yang lebih baik."
+      ],
+      "educational_tips": [
+        "Gunakan dashboard dashboard untuk mengomunikasikan capaian kepada stakeholder.",
+        "Evaluasi apakah risiko TI benar-benar berkurang setelah implementasi."
       ]
     },
     {
@@ -849,6 +917,10 @@
       "details": [
         "Gunakan hasil evaluasi untuk iterasi berikutnya.",
         "Jaga governance system tetap hidup dan berkembang."
+      ],
+      "educational_tips": [
+        "Tata kelola adalah perjalanan, bukan tujuan akhir. Jaga agar tetap relevan.",
+        "Lakukan audit berkala untuk memastikan standar tetap dijalankan dengan konsisten."
       ]
     }
   ],
