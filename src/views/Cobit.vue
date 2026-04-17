@@ -352,20 +352,6 @@
               </div>
               <div class="sej-inspector-body">
                 <div class="sej-meta">
-                  <span>{{
-                    activeConcept ? activeConcept.type_label : "-"
-                  }}</span>
-                  <span>{{ activeConcept ? activeConcept.group : "-" }}</span>
-                  <span>{{
-                    activeConcept &&
-                    activeConcept.metric_label &&
-                    activeConcept.metric_value !== null
-                      ? `${activeConcept.metric_label}: ${activeConcept.metric_value}`
-                      : "Ringkasan Konseptual"
-                  }}</span>
-                </div>
-              <div class="sej-inspector-body">
-                <div class="sej-meta">
                   <span>{{ activeConcept ? activeConcept.type_label : "-" }}</span>
                   <span>{{ activeConcept ? activeConcept.group : "-" }}</span>
                   <span>{{ activeConcept && activeConcept.metric_label && activeConcept.metric_value !== null ? `${activeConcept.metric_label}: ${activeConcept.metric_value}` : "Ringkasan Konseptual" }}</span>
