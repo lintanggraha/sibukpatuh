@@ -16,12 +16,6 @@
           </div>
           <div class="col-lg-8">
             <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
-
-              <router-link to="/threat-intelligence-feed" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('threat_feed') }" @click="closeAllGroups">
-                 <i class="fas fa-satellite-dish nav-icon"></i>
-                 <span>Threat Intelligence Feed</span>
-              </router-link>
-
               <div
                 v-for="group in frameworkNavGroups"
                 :key="group.label"

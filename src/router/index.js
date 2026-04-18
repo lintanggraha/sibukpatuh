@@ -12,11 +12,6 @@ const routes = [
         component: () => import('../views/AboutView.vue')
     },
     {
-        path: '/threat-intelligence-feed',
-        name: 'threat_feed',
-        component: () => import('../views/ThreatFeed.vue')
-    },
-    {
         path: '/frameworks/iso27001',
         name: 'iso27001',
         component: () => import('../views/Iso27001.vue')

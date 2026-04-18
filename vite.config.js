@@ -44,46 +44,7 @@ export default defineConfig({
     copyDataFiles()
   ],
   server: {
-    proxy: {
-      '/api/otx': {
-        target: 'https://otx.alienvault.com',
-        changeOrigin: true,
-        secure: true,
-        rewrite: (path) => {
-          const url = new URL(path, 'http://localhost');
-          const mode = (url.searchParams.get('mode') || 'pulses').toLowerCase();
-
-          if (mode === 'indicator') {
-            const indicatorType = url.searchParams.get('indicatorType') || '';
-            const value = url.searchParams.get('value') || '';
-            const section = url.searchParams.get('section') || 'general';
-
-            return `/api/v1/indicators/${encodeURIComponent(indicatorType)}/${encodeURIComponent(value)}/${encodeURIComponent(section)}`;
-          }
-
-          const params = new URLSearchParams(url.searchParams);
-          const feed = (params.get('feed') || 'search').toLowerCase();
-          params.delete('mode');
-          params.delete('feed');
-
-          if (feed === 'subscribed') {
-            return '/api/v1/pulses/subscribed';
-          }
-
-          return `/api/v1/search/pulses?${params.toString()}`;
-        }
-      },
-      '/api/mitre': {
-        target: 'https://attack-taxii.mitre.org',
-        changeOrigin: true,
-        secure: true,
-        rewrite: (path) => {
-          const url = new URL(path, 'http://localhost');
-          const mitrePath = url.searchParams.get('path') || 'taxii2';
-          return `/${mitrePath}`;
-        }
-      }
-    }
+    proxy: {}
   },
   resolve: {
     alias: {
