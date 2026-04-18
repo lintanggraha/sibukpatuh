@@ -78,6 +78,12 @@
             </button>
           </div>
         </div>
+        <div class="tif-year-filter">
+          <span class="filter-label">Year:</span>
+          <select v-model="selectedYear" class="tif-select-mini">
+            <option v-for="y in availableYears" :key="y" :value="y">{{ y }}</option>
+          </select>
+        </div>
       </nav>
 
       <div class="tif-main-layout">
@@ -127,7 +133,7 @@
             <p>Scanning OTX Intel...</p>
           </div>
           <div v-else class="tif-pulse-scroll scroll-y">
-            <article v-for="pulse in pulses" :key="pulse.id" class="tif-pulse-card" :class="{ active: activePulseId === pulse.id }" @click="activePulseId = pulse.id">
+            <article v-for="pulse in displayPulses" :key="pulse.id" class="tif-pulse-card" :class="{ active: activePulseId === pulse.id }" @click="activePulseId = pulse.id">
               <div class="tif-card-header">
                 <span class="tif-tlp" :class="pulse.tlp.toLowerCase()">{{ pulse.tlp }}</span>
                 <span class="tif-ioc-count">{{ pulse.indicatorCount }} Indicators</span>
@@ -211,13 +217,25 @@ export default {
       activePulseId: "",
       loading: false,
       subscribedLoading: false,
-      presets: ["ransomware", "phishing", "APT", "indonesia"]
+      presets: ["ransomware", "phishing", "APT", "indonesia"],
+      selectedYear: "All",
+      availableYears: ["All", "2024", "2023", "2022", "2021", "2020"]
     };
   },
   computed: {
     activePulse() {
       const all = [...this.pulses, ...this.subscribedPulses];
       return all.find(p => p.id === this.activePulseId) || this.pulses[0] || null;
+    },
+    displayPulses() {
+      let f = [...this.pulses];
+      if (this.selectedYear !== "All") {
+        f = f.filter(p => {
+          const year = new Date(p.modified).getFullYear().toString();
+          return year === this.selectedYear;
+        });
+      }
+      return f;
     },
     totalIndicators() { return this.pulses.reduce((t, p) => t + (p.indicatorCount || 0), 0); },
     uniqueTagCount() { return new Set(this.pulses.flatMap(p => p.tags)).size; },
@@ -402,6 +420,11 @@ export default {
 .tif-loading-feed i { font-size: 2rem; color: #0f766e; margin-bottom: 1rem; }
 
 .btn-premium-small { padding: 0.4rem 1rem; border: 2px solid #0f766e; background: white; color: #0f766e; border-radius: 8px; font-weight: 800; font-size: 0.75rem; cursor: pointer; }
+
+.tif-year-filter { display: flex; align-items: center; gap: 0.75rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #e2e8f0; }
+.tif-select-mini { padding: 0.35rem 0.75rem; border: 1px solid #e2e8f0; background: #f8fafc; border-radius: 8px; font-size: 0.75rem; font-weight: 700; color: #1e293b; outline: none; cursor: pointer; transition: all 0.2s; }
+.tif-select-mini:hover { border-color: #0f766e; }
+.tif-select-mini:focus { border-color: #0f766e; box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.1); }
 
 .scroll-y::-webkit-scrollbar { width: 5px; }
 .scroll-y::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
