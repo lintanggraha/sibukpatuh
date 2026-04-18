@@ -402,19 +402,57 @@ export default {
   methods: {
     async loadFeed() {
       this.loading = true;
+      this.error = "";
+      console.log("LeadDev: Fetching OTX pulses with query:", this.query);
       try {
-        const p = new URLSearchParams({ mode: "pulses", feed: this.query ? "search" : "recent", page: this.page, limit: this.limit });
+        const p = new URLSearchParams({ 
+          mode: "pulses", 
+          feed: this.query ? "search" : "recent", 
+          page: String(this.page), 
+          limit: String(this.limit) 
+        });
         if (this.query) p.set("q", this.query);
+        
         const data = await this.requestJson(`/api/otx?${p.toString()}`);
+        console.log("LeadDev: API Raw Data received, pulses count:", data?.results?.length || data?.pulses?.length || 0);
+        
         const normalized = this.normalizePulseFeedPayload(data);
-        const limit = Date.now() - (2 * 365 * 24 * 60 * 60 * 1000);
-        this.pulses = normalized.pulses
-          .filter(x => new Date(x.modified).getTime() >= limit)
-          .sort((a, b) => new Date(b.modified) - new Date(a.modified));
-        this.resultCount = normalized.count;
+        const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
+        const now = Date.now();
+        
+        // Let's be more careful with filtering
+        let filtered = normalized.pulses.filter(x => {
+          if (!x.modified) return true; // Keep it if we don't know the date
+          const modTime = new Date(x.modified).getTime();
+          if (isNaN(modTime)) return true;
+          return (now - modTime) <= TWO_YEARS_MS;
+        });
+
+        // Fallback: If filter is too strict and returns nothing, but we HAVE data, show all
+        if (filtered.length === 0 && normalized.pulses.length > 0) {
+          console.warn("LeadDev: Filter returned 0 but raw had data. Relaxing filter.");
+          filtered = normalized.pulses;
+        }
+
+        this.pulses = filtered.sort((a, b) => {
+          const timeA = new Date(a.modified).getTime();
+          const timeB = new Date(b.modified).getTime();
+          return (timeB || 0) - (timeA || 0);
+        });
+
+        this.resultCount = normalized.count || this.pulses.length;
         this.hasNextPage = normalized.next;
-        if (!this.activePulseId && this.pulses.length) this.activePulseId = this.pulses[0].id;
-      } catch (e) { this.error = e.message; } finally { this.loading = false; }
+        
+        // Auto-select first pulse if none active or current one not in new list
+        if (!this.activePulseId && this.pulses.length) {
+          this.activePulseId = this.pulses[0].id;
+        }
+      } catch (e) { 
+        console.error("LeadDev: LoadFeed Critical Error:", e);
+        this.error = e.message; 
+      } finally { 
+        this.loading = false; 
+      }
     },
     async loadSubscribedFeed() {
       this.subscribedLoading = true;
