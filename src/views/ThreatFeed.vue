@@ -763,46 +763,66 @@ export default {
 .tif-content-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 0.5rem 1rem 0;
-  border-bottom: 2px solid #f1f5f9;
+  align-items: center; /* LeadDev: Ensure vertical symmetry */
+  padding: 0 0 1.25rem 0;
+  border-bottom: 1px solid #e2e8f0;
   margin-bottom: 1.5rem;
+  min-height: 4rem;
+}
+
+.tif-content-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
 }
 
 .tif-content-title {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 900;
   color: #1e293b;
-  margin: 0 0 0.5rem;
+  margin: 0;
   letter-spacing: -0.02em;
+  white-space: nowrap; /* LeadDev: Prevent ugly wrapping */
 }
 
 .tif-meta-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem; /* LeadDev: Tighter, cleaner gap */
 }
 
 .tif-meta-item {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #64748b;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  line-height: 1;
 }
 
-.tif-meta-item i { color: #0f766e; }
-.tif-meta-item.separator { width: 4px; height: 4px; background: #e2e8f0; border-radius: 50%; }
+.tif-meta-item i { 
+  color: #0f766e; 
+  font-size: 0.85rem;
+}
+
+.tif-meta-item.separator { 
+  width: 3px; 
+  height: 3px; 
+  background: #cbd5e1; 
+  border-radius: 50%; 
+}
 
 .tif-pagination-integrated {
   display: flex;
   align-items: center;
   background: white;
-  padding: 0.4rem;
+  padding: 0.35rem;
   border-radius: 10px;
   border: 1px solid #e2e8f0;
-  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-left: 2rem;
 }
 
 .tif-pag-btn {
