@@ -744,9 +744,22 @@ export default {
   border: 1px solid var(--tif-border);
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Added to clip anything bleeding out */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-.tif-ins-header { padding: 1.25rem; border-bottom: 1px solid #f1f5f9; }
+.tif-inspector-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tif-ins-header { 
+  padding: 1.25rem; 
+  border-bottom: 1px solid #f1f5f9; 
+  flex-shrink: 0; /* Keep header size fixed */
+}
 .tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
 .tif-ins-header.white .tif-ins-tlp-bar { background: #94a3b8; }
 .tif-ins-header.green .tif-ins-tlp-bar { background: #22c55e; }
@@ -755,7 +768,12 @@ export default {
 
 .ins-title-scroll { font-size: 1.15rem; font-weight: 900; color: #1e293b; margin: 0.25rem 0 1rem; overflow-wrap: break-word; }
 
-.tif-ins-body { padding: 1.25rem; flex: 1; overflow-y: auto; }
+.tif-ins-body { 
+  padding: 1.25rem; 
+  flex: 1; 
+  overflow-y: auto; /* Ensure only this area scrolls */
+  min-height: 0; /* Important for flex-child scrolling */
+}
 .scroll-y::-webkit-scrollbar { width: 4px; }
 .scroll-y::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
 
