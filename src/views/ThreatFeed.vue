@@ -138,28 +138,30 @@
         </aside>
 
         <main class="tif-content">
-          <div class="tif-feed-header">
-            <div class="tif-feed-title">
-              <h2>Global Threat Signals</h2>
-              <div class="tif-badge-row">
-                <span class="tif-count-badge">{{ formatNumber(resultCount) }} Results Found</span>
-                <span class="tif-fresh-badge"><i class="fas fa-calendar-check"></i> Last 2 Years Only</span>
+          <header class="tif-content-header">
+            <div class="tif-content-title-area">
+              <h2 class="tif-content-title">Global Threat Signals</h2>
+              <div class="tif-meta-info">
+                <span class="tif-meta-item"><i class="fas fa-database"></i> {{ formatNumber(resultCount) }} Intel Reports</span>
+                <span class="tif-meta-item separator"></span>
+                <span class="tif-meta-item"><i class="fas fa-history"></i> Recent Activity</span>
               </div>
             </div>
-            <div class="tif-pagination-new">
-              <button class="btn-nav" :disabled="page <= 1" @click="goPage(page - 1)">
+            
+            <div class="tif-pagination-integrated">
+              <button class="tif-pag-btn" :disabled="page <= 1" @click="goPage(page - 1)" title="Previous Page">
                 <i class="fas fa-chevron-left"></i>
               </button>
-              <div class="tif-page-indicator">
-                <span class="current">{{ page }}</span>
-                <span class="sep">/</span>
-                <span class="total">{{ Math.ceil(resultCount / limit) || 1 }}</span>
+              <div class="tif-pag-info">
+                <span class="tif-pag-current">{{ page }}</span>
+                <span class="tif-pag-sep">of</span>
+                <span class="tif-pag-total">{{ Math.ceil(resultCount / limit) || 1 }}</span>
               </div>
-              <button class="btn-nav" :disabled="!hasNextPage" @click="goPage(page + 1)">
+              <button class="tif-pag-btn" :disabled="!hasNextPage" @click="goPage(page + 1)" title="Next Page">
                 <i class="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
+          </header>
 
           <div v-if="loading" class="tif-loading-feed">
             <div class="tif-loader-box">
@@ -757,9 +759,90 @@ export default {
 .tif-tech-id-badge { font-size: 0.7rem; font-weight: 900; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; }
 .tif-mitre-desc { font-size: 0.85rem; color: #475569; line-height: 1.6; }
 
-.scroll-y::-webkit-scrollbar { width: 5px; }
-.scroll-y::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-.scroll-y::-webkit-scrollbar-track { background: transparent; }
+/* Content Header & Pagination */
+.tif-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0.5rem 1rem 0;
+  border-bottom: 2px solid #f1f5f9;
+  margin-bottom: 1.5rem;
+}
+
+.tif-content-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.tif-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tif-meta-item {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tif-meta-item i { color: #0f766e; }
+.tif-meta-item.separator { width: 4px; height: 4px; background: #e2e8f0; border-radius: 50%; }
+
+.tif-pagination-integrated {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  gap: 0.5rem;
+}
+
+.tif-pag-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tif-pag-btn:hover:not(:disabled) {
+  background: #f1f5f9;
+  color: #0f766e;
+}
+
+.tif-pag-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.tif-pag-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  border-left: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+}
+
+.tif-pag-sep { color: #94a3b8; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; }
+.tif-pag-total { color: #64748b; }
 
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .truncate-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
