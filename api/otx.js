@@ -1,4 +1,8 @@
-const OTX_SEARCH_URL = 'https://otx.alienvault.com/api/v1/search/pulses';
+const OTX_API_ROOT = 'https://otx.alienvault.com/api/v1';
+const PULSE_SEARCH_PATH = '/search/pulses';
+const INDICATOR_ROOT_PATH = '/indicators';
+const SUPPORTED_INDICATOR_TYPES = new Set(['IPv4', 'hostname', 'file']);
+const DEFAULT_MODE = 'pulses';
 
 function readHeaderValue(value) {
   if (Array.isArray(value)) {
@@ -6,6 +10,49 @@ function readHeaderValue(value) {
   }
 
   return String(value || '').trim();
+}
+
+function buildPulseSearchPath(searchParams) {
+  const params = new URLSearchParams();
+  const query = (searchParams.get('q') || 'ransomware').trim() || 'ransomware';
+  const page = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
+  const limit = Math.min(20, Math.max(1, Number.parseInt(searchParams.get('limit') || '10', 10) || 10));
+
+  params.set('q', query);
+  params.set('page', String(page));
+  params.set('limit', String(limit));
+
+  return `${PULSE_SEARCH_PATH}?${params.toString()}`;
+}
+
+function buildIndicatorPath(searchParams) {
+  const indicatorType = readHeaderValue(searchParams.get('indicatorType'));
+  const value = readHeaderValue(searchParams.get('value'));
+  const section = readHeaderValue(searchParams.get('section')) || 'general';
+
+  if (!SUPPORTED_INDICATOR_TYPES.has(indicatorType)) {
+    throw new Error('Unsupported indicatorType. Use IPv4, hostname, or file.');
+  }
+
+  if (!value) {
+    throw new Error('Missing indicator value.');
+  }
+
+  return `${INDICATOR_ROOT_PATH}/${encodeURIComponent(indicatorType)}/${encodeURIComponent(value)}/${encodeURIComponent(section)}`;
+}
+
+function buildUpstreamPath(searchParams) {
+  const mode = (searchParams.get('mode') || DEFAULT_MODE).trim().toLowerCase();
+
+  if (mode === 'pulses') {
+    return buildPulseSearchPath(searchParams);
+  }
+
+  if (mode === 'indicator') {
+    return buildIndicatorPath(searchParams);
+  }
+
+  throw new Error('Unsupported mode. Use pulses or indicator.');
 }
 
 export default async function handler(request, response) {
@@ -16,15 +63,6 @@ export default async function handler(request, response) {
   }
 
   const requestUrl = new URL(request.url, `https://${request.headers.host || 'localhost'}`);
-  const params = new URLSearchParams();
-  const query = (requestUrl.searchParams.get('q') || 'ransomware').trim() || 'ransomware';
-  const page = Math.max(1, Number.parseInt(requestUrl.searchParams.get('page') || '1', 10) || 1);
-  const limit = Math.min(20, Math.max(1, Number.parseInt(requestUrl.searchParams.get('limit') || '10', 10) || 10));
-
-  params.set('q', query);
-  params.set('page', String(page));
-  params.set('limit', String(limit));
-
   const headers = {
     Accept: 'application/json',
   };
@@ -37,7 +75,8 @@ export default async function handler(request, response) {
   }
 
   try {
-    const upstream = await fetch(`${OTX_SEARCH_URL}?${params.toString()}`, { headers });
+    const upstreamPath = buildUpstreamPath(requestUrl.searchParams);
+    const upstream = await fetch(`${OTX_API_ROOT}${upstreamPath}`, { headers });
     const body = await upstream.text();
     const authMode = serverApiKey ? 'server-env' : clientApiKey ? 'client-header' : 'none';
 
@@ -51,7 +90,7 @@ export default async function handler(request, response) {
     response.status(upstream.status).send(body);
   } catch (error) {
     response.setHeader('X-SibukPatuh-Otx-Auth-Mode', serverApiKey ? 'server-env' : clientApiKey ? 'client-header' : 'none');
-    response.status(502).json({
+    response.status(error instanceof Error && /Unsupported|Missing/.test(error.message) ? 400 : 502).json({
       error: 'OTX request failed',
       message: error instanceof Error ? error.message : String(error),
     });

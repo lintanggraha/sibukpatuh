@@ -49,7 +49,22 @@ export default defineConfig({
         target: 'https://otx.alienvault.com',
         changeOrigin: true,
         secure: true,
-        rewrite: (path) => path.replace(/^\/api\/otx/, '/api/v1/search/pulses')
+        rewrite: (path) => {
+          const url = new URL(path, 'http://localhost');
+          const mode = (url.searchParams.get('mode') || 'pulses').toLowerCase();
+
+          if (mode === 'indicator') {
+            const indicatorType = url.searchParams.get('indicatorType') || '';
+            const value = url.searchParams.get('value') || '';
+            const section = url.searchParams.get('section') || 'general';
+
+            return `/api/v1/indicators/${encodeURIComponent(indicatorType)}/${encodeURIComponent(value)}/${encodeURIComponent(section)}`;
+          }
+
+          const params = new URLSearchParams(url.searchParams);
+          params.delete('mode');
+          return `/api/v1/search/pulses?${params.toString()}`;
+        }
       }
     }
   },
