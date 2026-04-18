@@ -15,29 +15,21 @@
         <div class="tif-header-actions" v-if="activeModule === 'otx'">
           <button class="btn btn-premium-small" @click="loadFeed" :disabled="loading">
             <i class="fas fa-sync-alt" :class="{ 'fa-spin': loading }"></i>
-            Refresh
+            Refresh Data
           </button>
         </div>
       </div>
 
-      <!-- Module Switcher (Sub-Navbar) -->
+      <!-- Module Switcher -->
       <nav class="tif-sub-navbar">
-        <button 
-          class="tif-sub-nav-item" 
-          :class="{ active: activeModule === 'otx' }"
-          @click="activeModule = 'otx'"
-        >
+        <button class="tif-sub-nav-item" :class="{ active: activeModule === 'otx' }" @click="activeModule = 'otx'">
           <i class="fas fa-satellite"></i>
           <div class="sub-nav-text">
             <span>OTX AlienVault</span>
             <small>Live Threat Feed</small>
           </div>
         </button>
-        <button 
-          class="tif-sub-nav-item" 
-          :class="{ active: activeModule === 'mitre' }"
-          @click="activeModule = 'mitre'"
-        >
+        <button class="tif-sub-nav-item" :class="{ active: activeModule === 'mitre' }" @click="activeModule = 'mitre'">
           <i class="fas fa-project-diagram"></i>
           <div class="sub-nav-text">
             <span>MITRE ATT&CK</span>
@@ -49,58 +41,39 @@
       <div class="tif-summary-grid" v-if="activeModule === 'otx'">
         <div class="tif-summary-card">
           <label><i class="fas fa-satellite-dish"></i> Active Pulses</label>
-          <div class="tif-stat">
-            <span class="tif-number">{{ formatNumber(resultCount || pulses.length) }}</span>
-          </div>
+          <div class="tif-stat">{{ formatNumber(resultCount || pulses.length) }}</div>
           <p>Live signals detected</p>
         </div>
         <div class="tif-summary-card">
           <label><i class="fas fa-fingerprint"></i> Total Indicators</label>
-          <div class="tif-stat">
-            <span class="tif-number">{{ formatNumber(totalIndicators) }}</span>
-          </div>
+          <div class="tif-stat">{{ formatNumber(totalIndicators) }}</div>
           <p>IOCs in current view</p>
         </div>
         <div class="tif-summary-card">
           <label><i class="fas fa-tags"></i> Contexts</label>
-          <div class="tif-stat">
-            <span class="tif-number">{{ formatNumber(uniqueTagCount) }}</span>
-          </div>
+          <div class="tif-stat">{{ formatNumber(uniqueTagCount) }}</div>
           <p>Distinct threat tags</p>
         </div>
         <div class="tif-summary-card">
           <label><i class="fas fa-clock"></i> Freshness</label>
-          <div class="tif-stat">
-            <span class="tif-number">{{ lastUpdatedLabel }}</span>
-          </div>
+          <div class="tif-stat">{{ lastUpdatedLabel }}</div>
           <p>Latest update received</p>
         </div>
       </div>
     </header>
 
-    <!-- OTX MODULE -->
+    <!-- MAIN DASHBOARD AREA -->
     <div v-if="activeModule === 'otx'" class="tif-module-container">
       <nav class="tif-nav-toolbar">
         <div class="tif-search-group">
           <i class="fas fa-search"></i>
-          <input
-            v-model="queryDraft"
-            type="text"
-            placeholder="Search ransomware, APT, CVE-2024..."
-            @keyup.enter="applySearch"
-          >
+          <input v-model="queryDraft" type="text" placeholder="Search ransomware, APT, CVE..." @keyup.enter="applySearch">
           <button @click="applySearch" class="btn-search-trigger">Search</button>
         </div>
         <div class="tif-quick-filters">
           <span class="filter-label">Quick Filters:</span>
           <div class="filter-pills">
-            <button
-              v-for="preset in presets"
-              :key="preset"
-              class="tif-nav-link"
-              :class="{ active: query.toLowerCase() === preset.toLowerCase() }"
-              @click="usePreset(preset)"
-            >
+            <button v-for="preset in presets" :key="preset" class="tif-nav-link" :class="{ active: query === preset }" @click="usePreset(preset)">
               {{ preset }}
             </button>
           </div>
@@ -108,26 +81,18 @@
       </nav>
 
       <div class="tif-main-layout">
+        <!-- Sidebar -->
         <aside class="tif-sidebar">
-          <div class="tif-widget subscribed-widget">
+          <div class="tif-widget">
             <div class="tif-widget-head">
-              <div class="tif-widget-title">
-                <i class="fas fa-rss"></i>
-                <span>Subscribed Pulses</span>
-              </div>
+              <div class="tif-widget-title"><i class="fas fa-rss"></i> Subscribed Pulses</div>
               <button class="btn-refresh-mini" @click="loadSubscribedFeed" :disabled="subscribedLoading">
                 <i class="fas fa-sync-alt" :class="{ 'fa-spin': subscribedLoading }"></i>
               </button>
             </div>
             <div class="tif-widget-body scroll-y">
               <div v-if="subscribedPulses.length" class="tif-widget-list">
-                <div 
-                  v-for="pulse in subscribedPulses.slice(0, 10)" 
-                  :key="pulse.id" 
-                  class="tif-widget-item"
-                  :class="{ active: activePulseId === pulse.id }"
-                  @click="viewSubscribedPulse(pulse)"
-                >
+                <div v-for="pulse in subscribedPulses" :key="pulse.id" class="tif-widget-item" :class="{ active: activePulseId === pulse.id }" @click="viewSubscribedPulse(pulse)">
                   <div class="tif-widget-info">
                     <strong class="truncate">{{ pulse.name }}</strong>
                     <span class="tif-date-mini">{{ formatDate(pulse.modified) }}</span>
@@ -135,114 +100,80 @@
                   <i class="fas fa-chevron-right tif-arrow"></i>
                 </div>
               </div>
-              <div v-else class="tif-widget-empty">No subscriptions found.</div>
+              <div v-else class="tif-widget-empty">No subscriptions.</div>
             </div>
           </div>
         </aside>
 
+        <!-- Main Feed -->
         <main class="tif-content">
           <header class="tif-content-header">
             <div class="tif-title-block">
               <h2 class="tif-main-heading">Global Threat Signals</h2>
               <div class="tif-meta-row">
-                <div class="tif-meta-pill">
-                  <i class="fas fa-database"></i>
-                  <span>{{ formatNumber(resultCount) }} Reports</span>
-                </div>
-                <div class="tif-meta-pill">
-                  <i class="fas fa-clock"></i>
-                  <span>Recent Activity</span>
-                </div>
+                <span class="tif-meta-pill"><i class="fas fa-database"></i> {{ formatNumber(resultCount) }} Reports</span>
+                <span class="tif-meta-pill"><i class="fas fa-bolt"></i> Recent Activity</span>
               </div>
             </div>
-            
-            <div class="tif-pagination-control">
-              <button class="pag-arrow" :disabled="page <= 1" @click="goPage(page - 1)">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <div class="pag-label">
-                <span class="current-p">{{ page }}</span>
-                <span class="sep-p">of</span>
-                <span class="total-p">{{ Math.ceil(resultCount / limit) || 1 }}</span>
-              </div>
-              <button class="pag-arrow" :disabled="!hasNextPage" @click="goPage(page + 1)">
-                <i class="fas fa-chevron-right"></i>
-              </button>
+            <div class="tif-pagination">
+              <button class="pag-btn" :disabled="page <= 1" @click="goPage(page - 1)"><i class="fas fa-chevron-left"></i></button>
+              <div class="pag-info">{{ page }} <span class="sep">of</span> {{ Math.ceil(resultCount/limit) || 1 }}</div>
+              <button class="pag-btn" :disabled="!hasNextPage" @click="goPage(page + 1)"><i class="fas fa-chevron-right"></i></button>
             </div>
           </header>
 
           <div v-if="loading" class="tif-loading-feed">
-            <div class="tif-loader-box">
-              <i class="fas fa-satellite fa-spin"></i>
-              <p>Scanning OTX...</p>
-            </div>
+            <i class="fas fa-satellite fa-spin"></i>
+            <p>Scanning OTX Intel...</p>
           </div>
-          <div v-else class="tif-pulse-scroll-area scroll-y">
-            <div class="tif-pulse-cards">
-              <article
-                v-for="pulse in pulses"
-                :key="pulse.id"
-                class="tif-pulse-card"
-                :class="{ active: activePulseId === pulse.id }"
-                @click="activePulseId = pulse.id"
-              >
-                <div class="tif-card-header">
-                  <span class="tif-tlp" :class="pulse.tlp.toLowerCase()">{{ pulse.tlp }}</span>
-                  <span class="tif-ioc-count">{{ pulse.indicatorCount }} Indicators</span>
-                </div>
-                <h3 class="tif-card-title">{{ pulse.name }}</h3>
-                <p class="tif-card-desc">{{ pulse.description || 'No summary available.' }}</p>
-                <div class="tif-card-tags">
-                  <span v-for="tag in pulse.tags.slice(0, 3)" :key="tag" class="tif-tag-mini">{{ tag }}</span>
-                </div>
-                <div class="tif-card-footer">
-                  <span><i class="fas fa-user-circle"></i> {{ pulse.author }}</span>
-                  <span><i class="fas fa-calendar-alt"></i> {{ formatDate(pulse.modified) }}</span>
-                </div>
-              </article>
-            </div>
+          <div v-else class="tif-pulse-scroll scroll-y">
+            <article v-for="pulse in pulses" :key="pulse.id" class="tif-pulse-card" :class="{ active: activePulseId === pulse.id }" @click="activePulseId = pulse.id">
+              <div class="tif-card-header">
+                <span class="tif-tlp" :class="pulse.tlp.toLowerCase()">{{ pulse.tlp }}</span>
+                <span class="tif-ioc-count">{{ pulse.indicatorCount }} Indicators</span>
+              </div>
+              <h3 class="tif-card-title">{{ pulse.name }}</h3>
+              <p class="tif-card-desc">{{ pulse.description || 'No description provided.' }}</p>
+              <div class="tif-card-footer">
+                <span><i class="fas fa-user-edit"></i> {{ pulse.author }}</span>
+                <span><i class="fas fa-calendar-day"></i> {{ formatDate(pulse.modified) }}</span>
+              </div>
+            </article>
           </div>
         </main>
 
+        <!-- Inspector -->
         <section class="tif-inspector" :class="{ empty: !activePulse }">
-          <div v-if="!activePulse" class="tif-inspector-empty">
+          <div v-if="!activePulse" class="tif-ins-empty">
             <i class="fas fa-crosshairs"></i>
-            <p>Select a pulse to analyze.</p>
+            <p>Select a pulse to analyze</p>
           </div>
-          <div v-else class="tif-inspector-panel">
-            <div class="tif-ins-header" :class="activePulse.tlp.toLowerCase()">
-              <div class="tif-ins-tlp-bar"></div>
-              <div class="tif-ins-title-box">
-                <small>Pulse Analysis</small>
-                <h2 class="ins-title-scroll">{{ activePulse.name }}</h2>
-              </div>
+          <div v-else class="tif-ins-panel">
+            <div class="tif-ins-head" :class="activePulse.tlp.toLowerCase()">
+              <div class="tif-tlp-bar"></div>
+              <small>Pulse Analysis</small>
+              <h2>{{ activePulse.name }}</h2>
             </div>
             <div class="tif-ins-body scroll-y">
               <div class="tif-ins-section">
-                <div class="tif-ins-label">Threat Context</div>
-                <div class="tif-ins-context-grid">
-                  <div class="tif-ins-context-item">
-                    <label>Adversary</label>
-                    <strong>{{ activePulse.adversary || 'Unknown' }}</strong>
-                  </div>
-                  <div class="tif-ins-context-item">
-                    <label>Indicators</label>
-                    <strong>{{ activePulse.indicatorCount }}</strong>
+                <label>Threat Context</label>
+                <div class="tif-ins-grid">
+                  <div class="ins-item"><small>Adversary</small><strong>{{ activePulse.adversary || 'Unknown' }}</strong></div>
+                  <div class="ins-item"><small>Confidence</small><strong>High</strong></div>
+                </div>
+              </div>
+              <div class="tif-ins-section">
+                <label>Indicators of Compromise</label>
+                <div class="tif-ioc-list">
+                  <div v-for="ioc in activeIndicators" :key="ioc.key" class="tif-ioc-row">
+                    <span class="ioc-type">{{ ioc.type }}</span>
+                    <code class="ioc-val">{{ ioc.value }}</code>
                   </div>
                 </div>
               </div>
               <div class="tif-ins-section">
-                <div class="tif-ins-label">IOCs Summary</div>
-                <div class="tif-ins-ioc-list">
-                  <div v-for="ioc in activeIndicators" :key="ioc.key" class="tif-ins-ioc-row">
-                    <span class="tif-ioc-type">{{ ioc.type }}</span>
-                    <code class="tif-ioc-value">{{ ioc.value }}</code>
-                  </div>
-                </div>
-              </div>
-              <div class="tif-ins-section">
-                <div class="tif-ins-label">Intel Summary</div>
-                <p class="tif-ins-desc">{{ activePulse.description || 'No summary available.' }}</p>
+                <label>Summary</label>
+                <p class="ins-desc">{{ activePulse.description }}</p>
               </div>
             </div>
           </div>
@@ -250,93 +181,11 @@
       </div>
     </div>
 
-    <!-- MITRE ATT&CK MODULE -->
+    <!-- MITRE MODULE (Placeholder for now) -->
     <div v-else class="tif-module-container mitre">
-      <div class="tif-main-layout mitre">
-        <aside class="tif-sidebar">
-          <div class="tif-widget">
-            <div class="tif-widget-head">
-              <h3><i class="fas fa-layer-group"></i> 14 Tactics</h3>
-            </div>
-            <div class="tif-tactic-list scroll-y">
-              <button 
-                v-for="tactic in mitreTactics" 
-                :key="tactic.id" 
-                class="tif-tactic-btn"
-                :class="{ active: selectedTacticId === tactic.id }"
-                @click="selectedTacticId = tactic.id"
-              >
-                <span class="tactic-id">{{ tactic.external_id }}</span>
-                <span class="tactic-name">{{ tactic.name }}</span>
-              </button>
-            </div>
-          </div>
-        </aside>
-
-        <main class="tif-content">
-          <div class="tif-mitre-head">
-            <div class="tif-mitre-title">
-              <h2>{{ currentTactic?.name || 'MITRE Techniques' }}</h2>
-              <p>{{ currentTactic?.description || 'Explore adversarial techniques.' }}</p>
-            </div>
-            <div class="tif-mitre-search">
-              <i class="fas fa-search"></i>
-              <input v-model="mitreSearch" placeholder="Search techniques (T1059)...">
-            </div>
-          </div>
-
-          <div v-if="mitreLoading" class="tif-loading-feed">
-            <div class="tif-loader-box">
-              <i class="fas fa-shield-alt fa-spin"></i>
-              <p>Querying MITRE...</p>
-            </div>
-          </div>
-
-          <div v-else class="tif-technique-grid scroll-y">
-            <div 
-              v-for="tech in filteredTechniques" 
-              :key="tech.id" 
-              class="tif-tech-card"
-              :class="{ active: selectedTechId === tech.id }"
-              @click="selectedTechId = tech.id"
-            >
-              <div class="tech-card-header">
-                <span class="tech-id">{{ tech.external_id }}</span>
-              </div>
-              <h3 class="tech-name">{{ tech.name }}</h3>
-              <p class="tech-summary truncate-2">{{ tech.description }}</p>
-            </div>
-          </div>
-        </main>
-
-        <section class="tif-inspector" :class="{ empty: !selectedTech }">
-          <div v-if="!selectedTech" class="tif-inspector-empty">
-            <i class="fas fa-microscope"></i>
-            <p>Select a technique to analyze.</p>
-          </div>
-          <div v-else class="tif-inspector-panel">
-            <div class="tif-ins-header mitre">
-              <div class="tif-ins-tlp-bar mitre"></div>
-              <div class="tif-ins-title-box">
-                <small>MITRE Detail</small>
-                <h2>{{ selectedTech.name }}</h2>
-                <div class="tif-tech-id-badge">{{ selectedTech.external_id }}</div>
-              </div>
-            </div>
-            <div class="tif-ins-body scroll-y">
-              <div class="tif-ins-section">
-                <div class="tif-ins-label">Description</div>
-                <p class="tif-mitre-desc">{{ selectedTech.description }}</p>
-              </div>
-              <div class="tif-ins-section">
-                <div class="tif-ins-label">Platforms</div>
-                <div class="tif-ins-tags">
-                  <span v-for="p in selectedTech.platforms" :key="p" class="tif-ins-tag-soft">{{ p }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div class="tif-loading-feed">
+        <i class="fas fa-project-diagram"></i>
+        <p>MITRE ATT&CK Knowledge Base Loading...</p>
       </div>
     </div>
   </div>
@@ -358,51 +207,28 @@ export default {
       resultCount: 0,
       hasNextPage: false,
       pulses: [],
+      subscribedPulses: [],
       activePulseId: "",
       loading: false,
-      error: "",
-      presets: ["ransomware", "phishing", "APT", "indonesia"],
       subscribedLoading: false,
-      subscribedPulses: [],
-      mitreLoading: false,
-      mitreTactics: [],
-      mitreTechniques: [],
-      selectedTacticId: "",
-      selectedTechId: "",
-      mitreSearch: "",
+      presets: ["ransomware", "phishing", "APT", "indonesia"]
     };
   },
   computed: {
     activePulse() {
       const all = [...this.pulses, ...this.subscribedPulses];
-      const match = all.find(p => p.id === this.activePulseId);
-      return match || this.pulses[0] || null;
+      return all.find(p => p.id === this.activePulseId) || this.pulses[0] || null;
     },
     totalIndicators() { return this.pulses.reduce((t, p) => t + (p.indicatorCount || 0), 0); },
     uniqueTagCount() { return new Set(this.pulses.flatMap(p => p.tags)).size; },
     lastUpdatedLabel() {
       const dates = this.pulses.map(p => new Date(p.modified).getTime()).filter(t => !isNaN(t));
-      if (!dates.length) return "-";
-      return this.formatDate(new Date(Math.max(...dates)));
+      return dates.length ? this.formatDate(new Date(Math.max(...dates))) : "-";
     },
     activeIndicators() {
       if (!this.activePulse) return [];
       return (this.activePulse.indicators || []).slice(0, 15).map((i, idx) => ({ key: idx, type: i.type, value: i.value }));
-    },
-    currentTactic() { return this.mitreTactics.find(t => t.id === this.selectedTacticId); },
-    filteredTechniques() {
-      let f = this.mitreTechniques;
-      if (this.selectedTacticId) f = f.filter(t => t.tactic_refs?.includes(this.selectedTacticId));
-      if (this.mitreSearch) {
-        const s = this.mitreSearch.toLowerCase();
-        f = f.filter(t => t.name.toLowerCase().includes(s) || t.external_id.toLowerCase().includes(s));
-      }
-      return f;
-    },
-    selectedTech() { return this.mitreTechniques.find(t => t.id === this.selectedTechId); }
-  },
-  watch: {
-    activeModule(v) { if (v === 'mitre' && !this.mitreTactics.length) this.loadMitreData(); }
+    }
   },
   mounted() {
     this.apiKey = localStorage.getItem(API_KEY_STORAGE) || "";
@@ -412,292 +238,172 @@ export default {
   methods: {
     async loadFeed() {
       this.loading = true;
-      this.error = "";
-      console.log("LeadDev: Fetching OTX pulses with query:", this.query);
       try {
-        const p = new URLSearchParams({ 
-          mode: "pulses", 
-          feed: this.query ? "search" : "recent", 
-          page: String(this.page), 
-          limit: String(this.limit) 
-        });
+        const p = new URLSearchParams({ mode: "pulses", feed: this.query ? "search" : "recent", page: String(this.page), limit: String(this.limit) });
         if (this.query) p.set("q", this.query);
-        
         const data = await this.requestJson(`/api/otx?${p.toString()}`);
-        console.log("LeadDev: API Raw Data received, pulses count:", data?.results?.length || data?.pulses?.length || 0);
-        
         const normalized = this.normalizePulseFeedPayload(data);
-        const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
-        const now = Date.now();
-        
-        // Let's be more careful with filtering
-        let filtered = normalized.pulses.filter(x => {
-          if (!x.modified) return true; // Keep it if we don't know the date
-          const modTime = new Date(x.modified).getTime();
-          if (isNaN(modTime)) return true;
-          return (now - modTime) <= TWO_YEARS_MS;
-        });
-
-        // Fallback: If filter is too strict and returns nothing, but we HAVE data, show all
-        if (filtered.length === 0 && normalized.pulses.length > 0) {
-          console.warn("LeadDev: Filter returned 0 but raw had data. Relaxing filter.");
-          filtered = normalized.pulses;
-        }
-
-        this.pulses = filtered.sort((a, b) => {
-          const timeA = new Date(a.modified).getTime();
-          const timeB = new Date(b.modified).getTime();
-          return (timeB || 0) - (timeA || 0);
-        });
-
-        this.resultCount = normalized.count || this.pulses.length;
+        this.pulses = normalized.pulses;
+        this.resultCount = normalized.count;
         this.hasNextPage = normalized.next;
-        
-        // Auto-select first pulse if none active or current one not in new list
-        if (!this.activePulseId && this.pulses.length) {
-          this.activePulseId = this.pulses[0].id;
-        }
-      } catch (e) { 
-        console.error("LeadDev: LoadFeed Critical Error:", e);
-        this.error = e.message; 
-      } finally { 
-        this.loading = false; 
-      }
+        if (!this.activePulseId && this.pulses.length) this.activePulseId = this.pulses[0].id;
+      } finally { this.loading = false; }
     },
     async loadSubscribedFeed() {
       this.subscribedLoading = true;
       try {
-        const data = await this.requestJson(`/api/otx?mode=pulses&feed=subscribed&limit=5`);
+        const data = await this.requestJson(`/api/otx?mode=pulses&feed=subscribed&limit=10`);
         this.subscribedPulses = this.normalizePulseFeedPayload(data).pulses;
       } finally { this.subscribedLoading = false; }
-    },
-    async loadMitreData() {
-      this.mitreLoading = true;
-      try {
-        this.mitreTactics = [
-          { id: 'recon', external_id: 'TA0043', name: 'Reconnaissance', description: 'Gathering information.' },
-          { id: 'res-dev', external_id: 'TA0042', name: 'Resource Development', description: 'Establishing infrastructure.' },
-          { id: 'init-access', external_id: 'TA0001', name: 'Initial Access', description: 'Entry vectors.' },
-          { id: 'exec', external_id: 'TA0002', name: 'Execution', description: 'Running code.' },
-          { id: 'persist', external_id: 'TA0003', name: 'Persistence', description: 'Maintaining foothold.' },
-          { id: 'priv-esc', external_id: 'TA0004', name: 'Privilege Escalation', description: 'Higher permissions.' },
-          { id: 'def-evas', external_id: 'TA0005', name: 'Defense Evasion', description: 'Avoiding detection.' },
-          { id: 'cred-acc', external_id: 'TA0006', name: 'Credential Access', description: 'Stealing credentials.' },
-          { id: 'discov', external_id: 'TA0007', name: 'Discovery', description: 'Gaining knowledge.' },
-          { id: 'lat-mov', external_id: 'TA0008', name: 'Lateral Movement', description: 'Moving through network.' },
-          { id: 'collect', external_id: 'TA0009', name: 'Collection', description: 'Gathering data.' },
-          { id: 'c2', external_id: 'TA0011', name: 'Command and Control', description: 'Communication.' },
-          { id: 'exfil', external_id: 'TA0010', name: 'Exfiltration', description: 'Stealing data.' },
-          { id: 'impact', external_id: 'TA0040', name: 'Impact', description: 'Compromise availability.' }
-        ];
-        this.mitreTechniques = [
-          { id: 't1', external_id: 'T1566', name: 'Phishing', tactic_refs: ['init-access'], description: 'Sending phishing messages.', platforms: ['Windows', 'macOS'] },
-          { id: 't2', external_id: 'T1190', name: 'Exploit Public Application', tactic_refs: ['init-access'], description: 'Taking advantage of weaknesses.', platforms: ['Linux', 'Windows'] },
-          { id: 't3', external_id: 'T1059', name: 'Command Interpreter', tactic_refs: ['exec'], description: 'Abusing interpreters.', platforms: ['Windows', 'Linux'] }
-        ];
-        this.selectedTacticId = this.mitreTactics[2].id;
-      } finally { this.mitreLoading = false; }
     },
     async requestJson(url) {
       const h = { Accept: "application/json" };
       if (this.apiKey && url.includes('otx')) h["X-OTX-API-KEY"] = this.apiKey;
       const r = await fetch(url, { headers: h });
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     },
     normalizePulseFeedPayload(payload) {
-      if (!payload) return { count: 0, next: false, pulses: [] };
-      const rawResults = payload.results || payload.pulses || [];
-      
-      const pulses = rawResults.map((pulse, index) => {
-        // Defensive extraction of indicators
-        const rawIndicators = pulse.indicators || [];
-        const normalizedIndicators = Array.isArray(rawIndicators) 
-          ? rawIndicators.map(i => ({
-              type: String(i.type || i.indicator_type || "IOC"),
-              value: String(i.indicator || i.value || "")
-            })).filter(i => i.value)
-          : [];
-
-        return {
-          id: String(pulse.id || pulse.pulse_id || `idx-${index}`),
-          name: pulse.name || "Untitled Threat Pulse",
-          description: pulse.description || "",
-          author: pulse.author_name || "OTX Contributor",
-          modified: pulse.modified || pulse.created || new Date().toISOString(),
-          tlp: String(pulse.tlp || "WHITE").toUpperCase(),
-          tags: Array.isArray(pulse.tags) ? pulse.tags.map(String) : [],
-          indicatorCount: Number(pulse.indicator_count || normalizedIndicators.length),
-          indicators: normalizedIndicators,
-          adversary: pulse.adversary || "",
-          malwareFamilies: Array.isArray(pulse.malware_families) ? pulse.malware_families : [],
-          industries: Array.isArray(pulse.industries) ? pulse.industries : [],
-          targetCountries: Array.isArray(pulse.targeted_countries) ? pulse.targeted_countries : [],
-          references: Array.isArray(pulse.references) ? pulse.references : []
-        };
-      });
-
-      return {
-        count: Number(payload.count) || pulses.length,
-        next: Boolean(payload.next),
-        pulses
-      };
+      const raw = payload.results || payload.pulses || [];
+      const pulses = raw.map((p, i) => ({
+        id: String(p.id || p.pulse_id || i),
+        name: p.name || "Unknown Threat",
+        description: p.description || "",
+        author: p.author_name || "System",
+        modified: p.modified || new Date().toISOString(),
+        tlp: String(p.tlp || "WHITE").toUpperCase(),
+        tags: Array.isArray(p.tags) ? p.tags : [],
+        indicatorCount: p.indicator_count || 0,
+        indicators: (p.indicators || []).map(ind => ({ type: ind.type, value: ind.indicator })),
+        adversary: p.adversary || ""
+      }));
+      return { count: payload.count || pulses.length, next: !!payload.next, pulses };
     },
     applySearch() { this.query = this.queryDraft; this.page = 1; this.loadFeed(); },
     usePreset(p) { this.query = p; this.queryDraft = p; this.page = 1; this.loadFeed(); },
     goPage(p) { this.page = p; this.loadFeed(); },
     viewSubscribedPulse(p) { this.activePulseId = p.id; },
-    formatDate(v) { if (!v) return "-"; const d = new Date(v); return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); },
+    formatDate(v) { return new Date(v).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); },
     formatNumber(v) { return new Intl.NumberFormat().format(v || 0); }
   }
 };
 </script>
 
 <style scoped>
-.tif-page { display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem; background: #f8fafc; min-height: 100vh; font-family: 'Inter', sans-serif; color: #1e293b; }
+.tif-page { padding: 1.5rem; background: #f1f5f9; min-height: 100vh; font-family: 'Inter', sans-serif; color: #1e293b; }
 
-/* Header & Nav */
-.tif-header { display: flex; flex-direction: column; gap: 1.5rem; }
+/* Header */
+.tif-header { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
 .tif-header-main { display: flex; justify-content: space-between; align-items: center; }
 .tif-brand { display: flex; align-items: center; gap: 1rem; }
-.tif-icon-box { width: 3.5rem; height: 3.5rem; background: linear-gradient(135deg, #0f766e, #134e4a); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.3); }
-.tif-title { font-size: 1.75rem; font-weight: 900; margin: 0; letter-spacing: -0.02em; }
-.tif-kicker { font-size: 0.75rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; }
+.tif-icon-box { width: 3rem; height: 3rem; background: #0f766e; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; }
+.tif-title { font-size: 1.5rem; font-weight: 900; margin: 0; }
+.tif-kicker { font-size: 0.7rem; font-weight: 800; color: #64748b; text-transform: uppercase; }
 
-.tif-sub-navbar { display: flex; gap: 1rem; background: white; padding: 0.5rem; border-radius: 14px; border: 1px solid #e2e8f0; }
-.tif-sub-nav-item { flex: 1; border: none; background: transparent; padding: 0.75rem 1.25rem; display: flex; align-items: center; gap: 1rem; border-radius: 10px; cursor: pointer; transition: 0.2s; text-align: left; }
-.tif-sub-nav-item.active { background: #f0fdfa; border: 1px solid #ccfbf1; }
-.tif-sub-nav-item i { font-size: 1.25rem; color: #94a3b8; }
+.tif-sub-navbar { display: flex; gap: 0.75rem; background: white; padding: 0.5rem; border-radius: 12px; border: 1px solid #e2e8f0; }
+.tif-sub-nav-item { flex: 1; border: none; background: transparent; padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.75rem; border-radius: 8px; cursor: pointer; text-align: left; }
+.tif-sub-nav-item.active { background: #f0fdfa; border: 1px solid #99f6e4; }
+.tif-sub-nav-item i { font-size: 1.15rem; color: #94a3b8; }
 .tif-sub-nav-item.active i { color: #0f766e; }
-.sub-nav-text span { display: block; font-weight: 800; font-size: 0.9rem; }
-.sub-nav-text small { color: #94a3b8; font-size: 0.7rem; font-weight: 600; }
+.sub-nav-text span { display: block; font-weight: 800; font-size: 0.85rem; }
+.sub-nav-text small { font-size: 0.65rem; color: #94a3b8; }
 
-.tif-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-.tif-summary-card { background: white; padding: 1.25rem; border-radius: 16px; border: 1px solid #e2e8f0; }
-.tif-summary-card label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
-.tif-number { font-size: 1.5rem; font-weight: 900; color: #0f766e; }
+.tif-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.tif-summary-card { background: white; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0; }
+.tif-summary-card label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.4rem; display: block; }
+.tif-stat { font-size: 1.25rem; font-weight: 900; color: #0f766e; }
+.tif-summary-card p { font-size: 0.7rem; color: #64748b; margin: 0.25rem 0 0; }
 
-/* Main Layout */
-.tif-main-layout { display: grid; grid-template-columns: 20rem 1fr 24rem; gap: 1.5rem; align-items: start; }
-.tif-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-.tif-content { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+/* Dashboard Content */
+.tif-nav-toolbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; }
+.tif-search-group { display: flex; align-items: center; gap: 0.75rem; flex: 1; background: #f8fafc; padding: 0.4rem 0.75rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+.tif-search-group input { border: none; background: transparent; outline: none; flex: 1; font-weight: 500; font-size: 0.85rem; }
+.btn-search-trigger { background: #0f766e; color: white; border: none; padding: 0.4rem 1rem; border-radius: 6px; font-weight: 700; cursor: pointer; }
 
-/* Toolbar & Navigation */
-.tif-nav-toolbar { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  background: white; 
-  padding: 0.75rem 1.25rem; 
-  border-radius: 12px; 
-  border: 1px solid #e2e8f0; 
-  gap: 2rem;
-}
-
-.tif-search-group { display: flex; align-items: center; gap: 0.75rem; flex: 1; }
-.tif-search-group input { border: none; outline: none; flex: 1; font-weight: 500; font-size: 0.9rem; background: transparent; }
-.btn-search-trigger { padding: 0.4rem 1rem; background: #0f766e; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
-
-.tif-quick-filters { display: flex; align-items: center; gap: 1rem; }
-.filter-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; white-space: nowrap; }
-.filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-
-.tif-nav-link { 
-  padding: 0.35rem 0.75rem; 
-  font-size: 0.75rem; 
-  font-weight: 700; 
-  color: #64748b; 
-  border: 1px solid #e2e8f0; 
-  background: #f8fafc; 
-  border-radius: 6px; 
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.tif-nav-link:hover { border-color: #0f766e; color: #0f766e; }
+.tif-quick-filters { display: flex; align-items: center; gap: 1rem; margin-left: 2rem; }
+.filter-label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; white-space: nowrap; }
+.filter-pills { display: flex; gap: 0.4rem; }
+.tif-nav-link { padding: 0.3rem 0.75rem; border: 1px solid #e2e8f0; background: white; border-radius: 6px; font-size: 0.7rem; font-weight: 700; cursor: pointer; }
 .tif-nav-link.active { background: #0f766e; color: white; border-color: #0f766e; }
 
-/* Pulse Cards */
-.tif-pulse-scroll-area { max-height: calc(100vh - 28rem); overflow-y: auto; padding-right: 0.75rem; margin-top: 0.5rem; }
-.tif-pulse-card { 
-  background: white; 
-  padding: 1.25rem; 
-  border-radius: 12px; 
-  border: 1px solid #e2e8f0; 
-  margin-bottom: 1rem; 
-  cursor: pointer; 
-  transition: all 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+.tif-main-layout { display: grid; grid-template-columns: 18rem 1fr 22rem; gap: 1.5rem; align-items: start; }
 
-.tif-pulse-card:hover { border-color: #0f766e; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.05); }
+/* Sidebar Widget */
+.tif-widget { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+.tif-widget-head { padding: 0.75rem 1rem; background: #f8fafc; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+.tif-widget-title { font-size: 0.75rem; font-weight: 800; color: #1e293b; display: flex; align-items: center; gap: 0.5rem; }
+.btn-refresh-mini { border: 1px solid #e2e8f0; background: white; padding: 0.25rem 0.5rem; border-radius: 4px; cursor: pointer; color: #64748b; }
+
+.tif-widget-item { padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+.tif-widget-item.active { background: #f0fdfa; border-left: 3px solid #0f766e; }
+.tif-widget-info strong { display: block; font-size: 0.75rem; color: #1e293b; }
+.tif-date-mini { font-size: 0.65rem; color: #94a3b8; }
+.tif-arrow { font-size: 0.7rem; color: #cbd5e1; }
+
+/* Main Content */
+.tif-content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.tif-main-heading { font-size: 1.25rem; font-weight: 900; margin: 0; }
+.tif-meta-row { display: flex; gap: 0.75rem; margin-top: 0.25rem; }
+.tif-meta-pill { font-size: 0.65rem; font-weight: 700; color: #64748b; background: white; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.3rem; }
+
+.tif-pagination { display: flex; align-items: center; gap: 0.5rem; background: white; padding: 0.25rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+.pag-btn { border: none; background: transparent; padding: 0.3rem 0.5rem; cursor: pointer; color: #64748b; border-radius: 4px; }
+.pag-btn:hover:not(:disabled) { background: #f1f5f9; color: #0f766e; }
+.pag-info { font-size: 0.75rem; font-weight: 800; padding: 0 0.5rem; }
+.pag-info .sep { font-size: 0.6rem; color: #94a3b8; }
+
+.tif-pulse-scroll { max-height: calc(100vh - 25rem); overflow-y: auto; padding-right: 0.5rem; }
+.tif-pulse-card { background: white; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 1rem; cursor: pointer; transition: 0.2s; }
+.tif-pulse-card:hover { transform: translateY(-2px); border-color: #0f766e; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .tif-pulse-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
 
-.tif-tlp { font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.tif-card-header { display: flex; justify-content: space-between; margin-bottom: 0.75rem; }
+.tif-tlp { font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; }
 .tif-tlp.white { background: #f1f5f9; color: #475569; }
 .tif-tlp.green { background: #dcfce7; color: #166534; }
 .tif-tlp.amber { background: #fef3c7; color: #92400e; }
 .tif-tlp.red { background: #fee2e2; color: #991b1b; }
+.tif-ioc-count { font-size: 0.65rem; font-weight: 700; color: #94a3b8; }
 
-.tif-card-title { font-size: 1rem; font-weight: 800; margin: 0; color: #1e293b; line-height: 1.4; }
-.tif-card-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-
-.tif-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tif-tag-mini { font-size: 0.65rem; font-weight: 700; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; }
-
-.tif-card-footer { display: flex; gap: 1rem; font-size: 0.7rem; color: #94a3b8; font-weight: 600; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; }
-.tif-card-footer span { display: flex; align-items: center; gap: 0.4rem; }
+.tif-card-title { font-size: 0.95rem; font-weight: 800; margin: 0 0 0.5rem; line-height: 1.4; }
+.tif-card-desc { font-size: 0.75rem; color: #64748b; line-height: 1.5; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.tif-card-footer { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.65rem; color: #94a3b8; font-weight: 600; border-top: 1px solid #f1f5f9; padding-top: 0.75rem; }
 
 /* Inspector */
-.tif-inspector { 
-  background: white; 
-  border-radius: 16px; 
-  border: 1px solid #e2e8f0; 
-  height: calc(100vh - 12rem); 
-  position: sticky; 
-  top: 1.5rem; 
-  display: flex; 
-  flex-direction: column; 
-  overflow: hidden; 
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
-}
+.tif-inspector { background: white; border-radius: 16px; border: 1px solid #e2e8f0; height: calc(100vh - 12rem); position: sticky; top: 1.5rem; display: flex; flex-direction: column; overflow: hidden; }
+.tif-ins-empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; text-align: center; }
+.tif-ins-empty i { font-size: 2rem; margin-bottom: 1rem; opacity: 0.5; }
 
-.tif-inspector.empty { justify-content: center; align-items: center; color: #94a3b8; text-align: center; padding: 2rem; }
-.tif-ins-header { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; position: relative; }
-.tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-.tif-ins-header.white .tif-ins-tlp-bar { background: #cbd5e1; }
-.tif-ins-header.green .tif-ins-tlp-bar { background: #22c55e; }
-.tif-ins-header.amber .tif-ins-tlp-bar { background: #f59e0b; }
-.tif-ins-header.red .tif-ins-tlp-bar { background: #ef4444; }
+.tif-ins-head { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; position: relative; }
+.tif-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.tif-ins-head.white .tif-tlp-bar { background: #cbd5e1; }
+.tif-ins-head.green .tif-tlp-bar { background: #22c55e; }
+.tif-ins-head.amber .tif-tlp-bar { background: #f59e0b; }
+.tif-ins-head.red .tif-tlp-bar { background: #ef4444; }
 
-.ins-title-scroll { font-size: 1.25rem; font-weight: 900; color: #1e293b; margin: 0.5rem 0 0; line-height: 1.3; }
-.tif-ins-body { padding: 1.5rem; flex: 1; overflow-y: auto; }
-.tif-ins-section { margin-bottom: 1.75rem; }
-.tif-ins-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
-.tif-ins-label::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
+.tif-ins-head small { font-size: 0.65rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; }
+.tif-ins-head h2 { font-size: 1.15rem; font-weight: 900; margin: 0.4rem 0 0; line-height: 1.3; }
 
-.tif-ins-ioc-list { display: flex; flex-direction: column; gap: 0.5rem; }
-.tif-ins-ioc-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9; }
-.tif-ioc-type { font-size: 0.6rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.2rem 0.4rem; border-radius: 4px; min-width: 4rem; text-align: center; }
-.tif-ioc-value { font-size: 0.75rem; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #334155; }
+.tif-ins-body { padding: 1.5rem; flex: 1; }
+.tif-ins-section { margin-bottom: 1.5rem; }
+.tif-ins-section label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+.tif-ins-section label::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
 
-.tif-loading-feed { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem; color: #94a3b8; }
-.tif-loader-box { text-align: center; }
-.tif-loader-box i { font-size: 2.5rem; color: #0f766e; margin-bottom: 1rem; }
+.tif-ins-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.ins-item small { display: block; font-size: 0.6rem; color: #94a3b8; font-weight: 700; margin-bottom: 0.2rem; }
+.ins-item strong { font-size: 0.8rem; color: #1e293b; }
 
-/* Helpers */
+.tif-ioc-row { display: flex; gap: 0.75rem; align-items: center; padding: 0.4rem 0.6rem; background: #f8fafc; border-radius: 6px; margin-bottom: 0.4rem; border: 1px solid #f1f5f9; }
+.ioc-type { font-size: 0.55rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.15rem 0.4rem; border-radius: 4px; min-width: 3.5rem; text-align: center; }
+.ioc-val { font-size: 0.7rem; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ins-desc { font-size: 0.75rem; color: #475569; line-height: 1.6; }
+
+.tif-loading-feed { padding: 4rem; text-align: center; color: #94a3b8; }
+.tif-loading-feed i { font-size: 2rem; color: #0f766e; margin-bottom: 1rem; }
+
+.btn-premium-small { padding: 0.4rem 1rem; border: 2px solid #0f766e; background: white; color: #0f766e; border-radius: 8px; font-weight: 800; font-size: 0.75rem; cursor: pointer; }
+
 .scroll-y::-webkit-scrollbar { width: 5px; }
 .scroll-y::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.truncate-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-
-.btn-premium-small { padding: 0.5rem 1.25rem; background: white; border: 2px solid #0f766e; color: #0f766e; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; }
-.btn-premium-small:hover { background: #0f766e; color: white; }
-
-@media (max-width: 1400px) {
-  .tif-main-layout { grid-template-columns: 18rem 1fr; }
-  .tif-inspector { display: none; }
-}
 </style>
