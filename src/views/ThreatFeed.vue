@@ -109,55 +109,63 @@
 
       <div class="tif-main-layout">
         <aside class="tif-sidebar">
-          <div class="tif-widget">
+          <div class="tif-widget subscribed-widget">
             <div class="tif-widget-head">
-              <h3><i class="fas fa-rss"></i> Subscribed</h3>
-              <button class="btn-icon-tiny" @click="loadSubscribedFeed" :disabled="subscribedLoading" title="Refresh Subscriptions">
-                <i class="fas fa-redo-alt" :class="{ 'fa-spin': subscribedLoading }"></i>
+              <div class="tif-widget-title">
+                <i class="fas fa-rss"></i>
+                <span>Subscribed Pulses</span>
+              </div>
+              <button class="btn-refresh-mini" @click="loadSubscribedFeed" :disabled="subscribedLoading">
+                <i class="fas fa-sync-alt" :class="{ 'fa-spin': subscribedLoading }"></i>
               </button>
             </div>
-            <div class="tif-widget-body">
+            <div class="tif-widget-body scroll-y">
               <div v-if="subscribedPulses.length" class="tif-widget-list">
                 <div 
-                  v-for="pulse in subscribedPulses.slice(0, 5)" 
+                  v-for="pulse in subscribedPulses.slice(0, 10)" 
                   :key="pulse.id" 
-                  class="tif-widget-item clickable"
+                  class="tif-widget-item"
                   :class="{ active: activePulseId === pulse.id }"
                   @click="viewSubscribedPulse(pulse)"
                 >
-                  <div class="tif-widget-item-main">
+                  <div class="tif-widget-info">
                     <strong class="truncate">{{ pulse.name }}</strong>
-                    <span>{{ formatDate(pulse.modified) }}</span>
+                    <span class="tif-date-mini">{{ formatDate(pulse.modified) }}</span>
                   </div>
-                  <i class="fas fa-chevron-right"></i>
+                  <i class="fas fa-chevron-right tif-arrow"></i>
                 </div>
               </div>
-              <div v-else class="tif-widget-empty">No active subscriptions found.</div>
+              <div v-else class="tif-widget-empty">No subscriptions found.</div>
             </div>
           </div>
         </aside>
 
         <main class="tif-content">
           <header class="tif-content-header">
-            <div class="tif-content-title-area">
-              <h2 class="tif-content-title">Global Threat Signals</h2>
-              <div class="tif-meta-info">
-                <span class="tif-meta-item"><i class="fas fa-database"></i> {{ formatNumber(resultCount) }} Intel Reports</span>
-                <span class="tif-meta-item separator"></span>
-                <span class="tif-meta-item"><i class="fas fa-history"></i> Recent Activity</span>
+            <div class="tif-title-block">
+              <h2 class="tif-main-heading">Global Threat Signals</h2>
+              <div class="tif-meta-row">
+                <div class="tif-meta-pill">
+                  <i class="fas fa-database"></i>
+                  <span>{{ formatNumber(resultCount) }} Reports</span>
+                </div>
+                <div class="tif-meta-pill">
+                  <i class="fas fa-clock"></i>
+                  <span>Recent Activity</span>
+                </div>
               </div>
             </div>
             
-            <div class="tif-pagination-integrated">
-              <button class="tif-pag-btn" :disabled="page <= 1" @click="goPage(page - 1)" title="Previous Page">
+            <div class="tif-pagination-control">
+              <button class="pag-arrow" :disabled="page <= 1" @click="goPage(page - 1)">
                 <i class="fas fa-chevron-left"></i>
               </button>
-              <div class="tif-pag-info">
-                <span class="tif-pag-current">{{ page }}</span>
-                <span class="tif-pag-sep">of</span>
-                <span class="tif-pag-total">{{ Math.ceil(resultCount / limit) || 1 }}</span>
+              <div class="pag-label">
+                <span class="current-p">{{ page }}</span>
+                <span class="sep-p">of</span>
+                <span class="total-p">{{ Math.ceil(resultCount / limit) || 1 }}</span>
               </div>
-              <button class="tif-pag-btn" :disabled="!hasNextPage" @click="goPage(page + 1)" title="Next Page">
+              <button class="pag-arrow" :disabled="!hasNextPage" @click="goPage(page + 1)">
                 <i class="fas fa-chevron-right"></i>
               </button>
             </div>
@@ -569,280 +577,160 @@ export default {
 .tif-summary-card label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
 .tif-number { font-size: 1.5rem; font-weight: 900; color: #0f766e; }
 
-/* Main Layout */
-.tif-main-layout { display: grid; grid-template-columns: 20rem 1fr 24rem; gap: 1.5rem; align-items: start; }
-.tif-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-.tif-widget { background: white; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; }
-.tif-widget-head { padding: 1rem 1.25rem; background: #f8fafc; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-.tif-widget-head h3 { font-size: 0.85rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
+/* Sidebar Widgets */
+.tif-widget { 
+  background: white; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-.tif-widget-item { padding: 1rem; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
-.tif-widget-item.active { background: #f0fdfa; border-left: 4px solid #0f766e; }
-.tif-widget-item-main strong { display: block; font-size: 0.8rem; margin-bottom: 0.2rem; }
-.tif-widget-item-main span { font-size: 0.7rem; color: #94a3b8; }
-
-.tif-content { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
-.tif-nav-toolbar { 
+.tif-widget-head { 
+  padding: 0.85rem 1rem; 
+  background: #f8fafc; 
+  border-bottom: 1px solid #e2e8f0; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  background: white; 
-  padding: 0.75rem 1.25rem; 
-  border-radius: 12px; 
-  border: 1px solid #e2e8f0; 
-  gap: 2rem;
 }
 
-.tif-search-group { 
-  display: flex; 
-  align-items: center; 
-  gap: 0.75rem; 
-  flex: 1; 
+.tif-widget-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e293b;
 }
 
-.tif-search-group input { 
-  border: none; 
-  outline: none; 
-  flex: 1; 
-  font-weight: 500; 
-  font-size: 0.9rem;
-  background: transparent;
-}
+.tif-widget-title i { color: #0f766e; }
 
-.btn-search-trigger { 
-  padding: 0.4rem 1rem; 
-  background: #0f766e; 
-  color: white; 
-  border: none; 
-  border-radius: 6px; 
-  font-weight: 700; 
-  font-size: 0.8rem; 
-  cursor: pointer;
-}
-
-.tif-quick-filters { 
-  display: flex; 
-  align-items: center; 
-  gap: 1rem; 
-}
-
-.filter-label { 
-  font-size: 0.7rem; 
-  font-weight: 800; 
-  color: #94a3b8; 
-  text-transform: uppercase; 
-  white-space: nowrap;
-}
-
-.filter-pills { 
-  display: flex; 
-  gap: 0.5rem; 
-  flex-wrap: wrap; 
-}
-
-.tif-nav-link { 
-  padding: 0.35rem 0.75rem; 
-  font-size: 0.75rem; 
-  font-weight: 700; 
-  color: #64748b; 
-  border: 1px solid #e2e8f0; 
-  background: #f8fafc; 
-  border-radius: 6px; 
+.btn-refresh-mini {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  color: #64748b;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.tif-nav-link:hover { border-color: #0f766e; color: #0f766e; }
-.tif-nav-link.active { background: #0f766e; color: white; border-color: #0f766e; }
+.btn-refresh-mini:hover { color: #0f766e; border-color: #0f766e; background: #f0fdfa; }
 
-/* Cards */
-.tif-pulse-scroll-area { 
-  max-height: calc(100vh - 28rem); 
-  overflow-y: auto; 
-  padding-right: 0.75rem; 
-  margin-top: 0.5rem;
-}
-
-.tif-pulse-card { 
-  background: white; 
-  padding: 1.25rem; 
-  border-radius: 12px; 
-  border: 1px solid #e2e8f0; 
-  margin-bottom: 1rem; 
-  cursor: pointer; 
-  transition: all 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.tif-pulse-card:hover { border-color: #0f766e; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.05); }
-.tif-pulse-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
-
-.tif-card-header { display: flex; justify-content: space-between; align-items: center; }
-.tif-tlp { font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
-.tif-tlp.white { background: #f1f5f9; color: #475569; }
-.tif-tlp.green { background: #dcfce7; color: #166534; }
-.tif-tlp.amber { background: #fef3c7; color: #92400e; }
-.tif-tlp.red { background: #fee2e2; color: #991b1b; }
-
-.tif-ioc-count { font-size: 0.7rem; font-weight: 700; color: #64748b; }
-
-.tif-card-title { font-size: 1rem; font-weight: 800; margin: 0; color: #1e293b; line-height: 1.4; }
-.tif-card-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-
-.tif-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tif-tag-mini { font-size: 0.65rem; font-weight: 700; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; }
-
-.tif-card-footer { display: flex; gap: 1rem; font-size: 0.7rem; color: #94a3b8; font-weight: 600; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; }
-.tif-card-footer span { display: flex; align-items: center; gap: 0.4rem; }
-
-/* Inspector */
-.tif-inspector { 
-  background: white; 
-  border-radius: 16px; 
-  border: 1px solid #e2e8f0; 
-  height: calc(100vh - 12rem); 
-  position: sticky; 
-  top: 1.5rem; 
+.tif-widget-item { 
+  padding: 0.85rem 1rem; 
+  border-bottom: 1px solid #f1f5f9; 
   display: flex; 
-  flex-direction: column; 
-  overflow: hidden; 
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+  align-items: center; 
+  justify-content: space-between; 
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.tif-inspector.empty { justify-content: center; align-items: center; color: #94a3b8; text-align: center; padding: 2rem; }
-.tif-inspector-empty i { font-size: 2rem; margin-bottom: 1rem; opacity: 0.5; }
+.tif-widget-item:hover { background: #f8fafc; }
+.tif-widget-item.active { background: #f0fdfa; border-left: 4px solid #0f766e; }
 
-.tif-ins-header { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; position: relative; }
-.tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-.tif-ins-header.white .tif-ins-tlp-bar { background: #cbd5e1; }
-.tif-ins-header.green .tif-ins-tlp-bar { background: #22c55e; }
-.tif-ins-header.amber .tif-ins-tlp-bar { background: #f59e0b; }
-.tif-ins-header.red .tif-ins-tlp-bar { background: #ef4444; }
+.tif-widget-info { flex: 1; min-width: 0; }
+.tif-widget-info strong { display: block; font-size: 0.8rem; color: #1e293b; margin-bottom: 0.15rem; }
+.tif-date-mini { font-size: 0.7rem; color: #94a3b8; font-weight: 600; }
+.tif-arrow { font-size: 0.7rem; color: #cbd5e1; margin-left: 0.5rem; }
 
-.ins-title-scroll { font-size: 1.25rem; font-weight: 900; color: #1e293b; margin: 0.5rem 0 0; line-height: 1.3; }
-
-.tif-ins-body { padding: 1.5rem; flex: 1; overflow-y: auto; }
-.tif-ins-section { margin-bottom: 1.75rem; }
-.tif-ins-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; letter-spacing: 0.05em; }
-.tif-ins-label::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
-
-.tif-ins-context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.tif-ins-context-item label { font-size: 0.65rem; color: #94a3b8; font-weight: 700; display: block; margin-bottom: 0.25rem; }
-.tif-ins-context-item strong { font-size: 0.85rem; color: #1e293b; }
-
-.tif-ins-ioc-list { display: flex; flex-direction: column; gap: 0.5rem; }
-.tif-ins-ioc-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9; }
-.tif-ioc-type { font-size: 0.6rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.2rem 0.4rem; border-radius: 4px; min-width: 4rem; text-align: center; }
-.tif-ioc-value { font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #334155; }
-
-.tif-ins-desc { font-size: 0.85rem; color: #475569; line-height: 1.6; margin: 0; }
-
-/* MITRE Specific */
-.tif-tactic-btn { width: 100%; border: none; background: transparent; padding: 1rem; text-align: left; border-bottom: 1px solid #f1f5f9; cursor: pointer; display: flex; flex-direction: column; transition: all 0.2s; }
-.tif-tactic-btn:hover:not(.active) { background: #f8fafc; }
-.tif-tactic-btn.active { background: #f0fdfa; border-left: 4px solid #0f766e; }
-.tactic-id { font-size: 0.6rem; font-weight: 800; color: #0f766e; margin-bottom: 0.25rem; }
-.tactic-name { font-weight: 700; font-size: 0.85rem; color: #1e293b; }
-
-.tif-technique-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; max-height: calc(100vh - 22rem); overflow-y: auto; padding-right: 0.5rem; }
-.tif-tech-card { background: white; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
-.tif-tech-card:hover { border-color: #0f766e; transform: translateY(-2px); }
-.tif-tech-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
-
-.tech-id { font-size: 0.65rem; font-weight: 800; color: #94a3b8; }
-.tech-name { font-weight: 800; font-size: 0.9rem; color: #1e293b; margin: 0; }
-.tech-summary { font-size: 0.75rem; color: #64748b; line-height: 1.4; margin: 0; }
-
-.tif-ins-header.mitre .tif-ins-tlp-bar { background: #0f766e; }
-.tif-tech-id-badge { font-size: 0.7rem; font-weight: 900; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; }
-.tif-mitre-desc { font-size: 0.85rem; color: #475569; line-height: 1.6; }
-
-/* Content Header & Pagination */
+/* Dashboard Content Header */
 .tif-content-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* LeadDev: Ensure vertical symmetry */
-  padding: 0 0 1.25rem 0;
+  align-items: center;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid #e2e8f0;
   margin-bottom: 1.5rem;
-  min-height: 4rem;
 }
 
-.tif-content-title-area {
+.tif-title-block {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  flex: 1;
+  gap: 0.4rem;
 }
 
-.tif-content-title {
-  font-size: 1.35rem;
+.tif-main-heading {
+  font-size: 1.4rem;
   font-weight: 900;
   color: #1e293b;
   margin: 0;
   letter-spacing: -0.02em;
-  white-space: nowrap; /* LeadDev: Prevent ugly wrapping */
 }
 
-.tif-meta-info {
+.tif-meta-row {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* LeadDev: Tighter, cleaner gap */
+  gap: 0.75rem;
 }
 
-.tif-meta-item {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #64748b;
+.tif-meta-pill {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  line-height: 1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
 }
 
-.tif-meta-item i { 
-  color: #0f766e; 
-  font-size: 0.85rem;
-}
+.tif-meta-pill i { color: #0f766e; }
 
-.tif-meta-item.separator { 
-  width: 3px; 
-  height: 3px; 
-  background: #cbd5e1; 
-  border-radius: 50%; 
-}
-
-.tif-pagination-integrated {
+/* Pagination Control */
+.tif-pagination-control {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   background: white;
   padding: 0.35rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  margin-left: 2rem;
 }
 
-.tif-pag-btn {
+.pag-arrow {
   width: 2rem;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background: transparent;
+  border: 1px solid #f1f5f9;
+  background: white;
   color: #64748b;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.tif-pag-btn:hover:not(:disabled) {
-  background: #f1f5f9;
+.pag-arrow:hover:not(:disabled) {
+  border-color: #0f766e;
   color: #0f766e;
+  background: #f0fdfa;
 }
+
+.pag-arrow:disabled { opacity: 0.2; cursor: not-allowed; }
+
+.pag-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.sep-p { font-size: 0.65rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; }
+.total-p { color: #64748b; }
 
 .tif-pag-btn:disabled {
   opacity: 0.3;
