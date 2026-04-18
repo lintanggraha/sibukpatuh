@@ -72,6 +72,16 @@ export default defineConfig({
 
           return `/api/v1/search/pulses?${params.toString()}`;
         }
+      },
+      '/api/mitre': {
+        target: 'https://attack-taxii.mitre.org',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => {
+          const url = new URL(path, 'http://localhost');
+          const mitrePath = url.searchParams.get('path') || 'taxii2';
+          return `/${mitrePath}`;
+        }
       }
     }
   },
