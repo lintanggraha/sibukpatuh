@@ -280,8 +280,8 @@ export default {
     return {
       apiKey: "",
       authMode: "unknown",
-      query: "ransomware",
-      queryDraft: "ransomware",
+      query: "",
+      queryDraft: "",
       page: 1,
       limit: 10,
       resultCount: 0,
@@ -344,11 +344,12 @@ export default {
       try {
         const params = new URLSearchParams({
           mode: "pulses",
-          feed: "search",
-          q: this.query,
+          feed: this.query ? "search" : "recent",
           page: String(this.page),
           limit: String(this.limit),
         });
+        if (this.query) params.set("q", this.query);
+        
         const payload = await this.requestJson(`/api/otx?${params.toString()}`);
         const normalized = this.normalizePulseFeedPayload(payload);
         this.resultCount = normalized.count;
