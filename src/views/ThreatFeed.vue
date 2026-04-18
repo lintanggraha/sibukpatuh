@@ -119,7 +119,10 @@
         <div class="tif-feed-header">
           <div class="tif-feed-title">
             <h2>Global Threat Signals</h2>
-            <span v-if="resultCount" class="tif-count-badge">{{ formatNumber(resultCount) }} Results</span>
+            <div class="tif-badge-row">
+              <span v-if="resultCount" class="tif-count-badge">{{ formatNumber(resultCount) }} Results</span>
+              <span class="tif-fresh-badge"><i class="fas fa-history"></i> Last 2 Years Only</span>
+            </div>
           </div>
           
           <div class="tif-pagination-new">
@@ -352,9 +355,20 @@ export default {
         
         const payload = await this.requestJson(`/api/otx?${params.toString()}`);
         const normalized = this.normalizePulseFeedPayload(payload);
+        
+        // Filter and Sort Logic
+        const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
+        const now = Date.now();
+        
+        this.pulses = normalized.pulses
+          .filter(p => {
+            const modDate = new Date(p.modified).getTime();
+            return (now - modDate) <= TWO_YEARS_MS;
+          })
+          .sort((a, b) => new Date(b.modified) - new Date(a.modified));
+
         this.resultCount = normalized.count;
         this.hasNextPage = normalized.next;
-        this.pulses = normalized.pulses;
         if (!this.activePulseId) this.activePulseId = this.pulses[0]?.id || "";
       } catch (error) {
         this.error = error.message || "Failed to fetch pulses.";
@@ -664,7 +678,9 @@ export default {
 }
 
 .tif-feed-title h2 { font-size: 1rem; font-weight: 900; color: #1e293b; margin: 0; }
-.tif-count-badge { font-size: 0.65rem; font-weight: 800; color: #64748b; background: #e2e8f0; padding: 0.1rem 0.4rem; border-radius: 4px; }
+.tif-badge-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
+.tif-count-badge { font-size: 0.6rem; font-weight: 800; color: #64748b; background: #e2e8f0; padding: 0.1rem 0.4rem; border-radius: 4px; }
+.tif-fresh-badge { font-size: 0.6rem; font-weight: 800; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.1rem 0.4rem; border-radius: 4px; }
 
 /* Pagination New */
 .tif-pagination-new {
