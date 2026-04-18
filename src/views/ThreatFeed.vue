@@ -228,12 +228,20 @@ export default {
       return all.find(p => p.id === this.activePulseId) || this.pulses[0] || null;
     },
     displayPulses() {
+      console.log("LeadDev: Total pulses available for filtering:", this.pulses.length);
+      console.log("LeadDev: Current Year Filter:", this.selectedYear);
+      
       let f = [...this.pulses];
       if (this.selectedYear !== "All") {
         f = f.filter(p => {
           const year = new Date(p.modified).getFullYear().toString();
           return year === this.selectedYear;
         });
+      }
+      
+      console.log("LeadDev: Pulses after year filtering:", f.length);
+      if (f.length > 0) {
+        console.log("LeadDev: First pulse year in result:", new Date(f[0].modified).getFullYear());
       }
       return f;
     },
