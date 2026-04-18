@@ -6,9 +6,10 @@
         <h1 class="tif-title">Pantauan Pulse OTX</h1>
         <p class="tif-lede">
           Ikuti sinyal ancaman dari AlienVault OTX untuk membaca ringkasan pulse, indikator kompromi, tag ancaman,
-          dan referensi investigasi, lalu lanjutkan ke lookup IOC, geolokasi IP, hash checking, whois enrichment,
-          dan widget khusus ancaman di Indonesia.
+          referensi investigasi, feed subscription pribadi, lalu lanjutkan ke lookup IOC, enrichment IPv4, hash
+          checker, domain whois, dan widget ancaman di Indonesia.
         </p>
+
         <div class="tif-metrics">
           <div class="tif-metric">
             <label>Pulse</label>
@@ -57,10 +58,10 @@
       <article class="tif-tool-card tif-tool-card-wide">
         <div class="tif-tool-head">
           <div>
-            <span class="tif-tool-kicker">hostname/general + IPv4/general</span>
+            <span class="tif-tool-kicker">Lookup indikator dasar</span>
             <h2>IOC Lookup Tool</h2>
           </div>
-          <span class="tif-chip">Lookup dasar indikator</span>
+          <span class="tif-chip">IPv4 dan hostname</span>
         </div>
 
         <form class="tif-tool-form" @submit.prevent="lookupIoc">
@@ -79,7 +80,8 @@
         </form>
 
         <p class="tif-tool-help">
-          Otomatis mendeteksi indikator IP atau hostname, lalu menampilkan reputasi, pulse count, validasi, dan konteks ancaman.
+          Menggabungkan lookup indikator dasar untuk IPv4 general dan hostname general agar reputasi, validasi, pulse,
+          dan link investigasi cepat bisa langsung terbaca.
         </p>
 
         <div v-if="iocLoading" class="tif-tool-placeholder">
@@ -116,7 +118,7 @@
               class="btn btn-outline-secondary btn-sm"
               @click="useIocForGeo"
             >
-              Bawa ke Peta IP
+              Bawa ke IP Workbench
             </button>
             <button
               v-if="iocResult.typeKey === 'hostname'"
@@ -127,8 +129,8 @@
               Bawa ke Whois
             </button>
             <a
-              v-if="iocResult.whois"
-              :href="iocResult.whois"
+              v-if="iocResult.whoisUrl"
+              :href="iocResult.whoisUrl"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-secondary btn-sm"
@@ -136,8 +138,8 @@
               Whois
             </a>
             <a
-              v-if="iocResult.alexa"
-              :href="iocResult.alexa"
+              v-if="iocResult.alexaUrl"
+              :href="iocResult.alexaUrl"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-outline-secondary btn-sm"
@@ -159,6 +161,10 @@
               <label>Section</label>
               <strong>{{ iocResult.sections.length ? iocResult.sections.join(", ") : "-" }}</strong>
             </div>
+            <div class="tif-field">
+              <label>Sumber</label>
+              <strong>{{ sourceLabel }}</strong>
+            </div>
           </div>
 
           <section v-if="iocResult.validation.length" class="tif-subsection">
@@ -173,7 +179,10 @@
             </div>
           </section>
 
-          <section v-if="iocResult.relatedMalware.length || iocResult.relatedIndustries.length || iocResult.relatedAdversaries.length" class="tif-subsection">
+          <section
+            v-if="iocResult.relatedMalware.length || iocResult.relatedIndustries.length || iocResult.relatedAdversaries.length"
+            class="tif-subsection"
+          >
             <div class="tif-block-head">
               <h3>Konteks Terkait</h3>
               <span>Pulse enrichment</span>
@@ -224,10 +233,10 @@
       <article class="tif-tool-card">
         <div class="tif-tool-head">
           <div>
-            <span class="tif-tool-kicker">IPv4/geo</span>
-            <h2>Peta Asal IP</h2>
+            <span class="tif-tool-kicker">Analisis IPv4 menyeluruh</span>
+            <h2>IPv4 Intelligence Workbench</h2>
           </div>
-          <span class="tif-chip">Geolokasi cepat</span>
+          <span class="tif-chip">General, geo, malware, passive DNS</span>
         </div>
 
         <form class="tif-tool-form" @submit.prevent="lookupGeo">
@@ -240,18 +249,18 @@
             >
             <button type="submit" class="btn btn-primary" :disabled="geoLoading">
               <i class="fas fa-location-dot"></i>
-              Tampilkan
+              Analisis IP
             </button>
           </div>
         </form>
 
         <p class="tif-tool-help">
-          Menampilkan koordinat, negara, ASN, dan peta titik kasar berdasarkan data geolokasi OTX.
+          Menarik general summary, reputation, geo, malware, dan passive DNS dari OTX dalam satu lookup.
         </p>
 
         <div v-if="geoLoading" class="tif-tool-placeholder">
           <i class="fas fa-spinner fa-spin"></i>
-          <span>Mengambil data geolokasi IP...</span>
+          <span>Mengambil enrichment IPv4 dari OTX...</span>
         </div>
 
         <p v-else-if="geoError" class="tif-tool-error">{{ geoError }}</p>
@@ -268,9 +277,24 @@
 
           <div class="tif-tool-metrics compact">
             <div class="tif-tool-stat">
+              <label>Indicator</label>
+              <strong>{{ geoResult.indicator }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Pulse</label>
+              <strong>{{ formatNumber(geoResult.pulseCount) }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Reputasi</label>
+              <strong>{{ geoResult.reputation === null ? "-" : geoResult.reputation }}</strong>
+            </div>
+            <div class="tif-tool-stat">
               <label>Negara</label>
               <strong>{{ geoResult.countryName || "-" }}</strong>
             </div>
+          </div>
+
+          <div class="tif-tool-metrics compact">
             <div class="tif-tool-stat">
               <label>Kota / Region</label>
               <strong>{{ geoResult.locationLabel || "-" }}</strong>
@@ -283,27 +307,91 @@
               <label>ASN</label>
               <strong>{{ geoResult.asn || "-" }}</strong>
             </div>
+            <div class="tif-tool-stat">
+              <label>Passive DNS</label>
+              <strong>{{ formatNumber(geoResult.passiveDnsCount) }}</strong>
+            </div>
           </div>
 
-          <div class="tif-inline-actions" v-if="geoResult.mapUrl">
-            <a :href="geoResult.mapUrl" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm">
+          <div class="tif-inline-actions">
+            <a
+              v-if="geoResult.mapUrl"
+              :href="geoResult.mapUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm"
+            >
               Buka di OpenStreetMap
             </a>
+            <a
+              v-if="geoResult.whoisUrl"
+              :href="geoResult.whoisUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Whois IP
+            </a>
           </div>
+
+          <section v-if="geoResult.validation.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Validasi</h3>
+              <span>{{ geoResult.validation.length }} sinyal</span>
+            </div>
+            <div class="tif-pills">
+              <span v-for="item in geoResult.validation" :key="`${item.name}-${item.message}`" class="tif-chip-soft">
+                {{ item.name }}
+              </span>
+            </div>
+          </section>
+
+          <section v-if="geoResult.malwareItems.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Malware Terkait</h3>
+              <span>{{ geoResult.malwareItems.length }} preview</span>
+            </div>
+            <div class="tif-mini-list">
+              <div v-for="item in geoResult.malwareItems" :key="item.key" class="tif-mini-item">
+                <strong>{{ item.hash }}</strong>
+                <p>{{ item.detection }}</p>
+                <div class="tif-mini-meta">
+                  <span>{{ item.source }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section v-if="geoResult.passiveDnsItems.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Passive DNS</h3>
+              <span>{{ formatNumber(geoResult.passiveDnsCount) }} record</span>
+            </div>
+            <div class="tif-mini-list">
+              <div v-for="item in geoResult.passiveDnsItems" :key="item.key" class="tif-mini-item">
+                <strong>{{ item.hostname }}</strong>
+                <p>{{ item.recordType }} - {{ item.assetType }}</p>
+                <div class="tif-mini-meta">
+                  <span>Pertama: {{ item.firstSeen }}</span>
+                  <span>Terakhir: {{ item.lastSeen }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <p v-else class="tif-empty">
-          Masukkan IP untuk menaruh marker lokasi dan membaca konteks negara asalnya.
+          Masukkan IPv4 untuk melihat reputasi, geolokasi, malware, dan passive DNS dalam satu panel.
         </p>
       </article>
 
       <article class="tif-tool-card">
         <div class="tif-tool-head">
           <div>
-            <span class="tif-tool-kicker">file/{hash}/general</span>
+            <span class="tif-tool-kicker">Intel file hash</span>
             <h2>Hash Checker Malware</h2>
           </div>
-          <span class="tif-chip">MD5 / SHA1 / SHA256</span>
+          <span class="tif-chip">General dan analysis</span>
         </div>
 
         <form class="tif-tool-form" @submit.prevent="lookupHash">
@@ -322,7 +410,8 @@
         </form>
 
         <p class="tif-tool-help">
-          Mengecek apakah hash muncul di pulse OTX, termasuk format hash, sinyal validasi, dan preview pulse terkait.
+          Menggabungkan file general dan analysis untuk membaca fingerprint, metadata file, plugin result, dan pulse
+          terkait dalam satu panel.
         </p>
 
         <div v-if="hashLoading" class="tif-tool-placeholder">
@@ -352,6 +441,44 @@
             </div>
           </div>
 
+          <section v-if="hashResult.analysisSummary.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Fingerprint File</h3>
+              <span>{{ hashResult.analysisSummary.length }} field</span>
+            </div>
+            <div class="tif-field-grid">
+              <div v-for="item in hashResult.analysisSummary" :key="item.label" class="tif-field">
+                <label>{{ item.label }}</label>
+                <strong>{{ item.value }}</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Metadata Analisis</h3>
+              <span>OTX file analysis</span>
+            </div>
+            <div class="tif-context">
+              <div>
+                <label>Dynamic</label>
+                <strong>{{ hashResult.analysisMeta.hasDynamic ? "Ya" : "Tidak" }}</strong>
+              </div>
+              <div>
+                <label>S3 Artifact</label>
+                <strong>{{ hashResult.analysisMeta.hasS3 ? "Ya" : "Tidak" }}</strong>
+              </div>
+              <div>
+                <label>Durasi</label>
+                <strong>{{ hashResult.analysisMeta.analysisTime ? `${formatNumber(hashResult.analysisMeta.analysisTime)} dtk` : "-" }}</strong>
+              </div>
+              <div>
+                <label>TLP</label>
+                <strong>{{ hashResult.analysisMeta.tlp || "-" }}</strong>
+              </div>
+            </div>
+          </section>
+
           <section v-if="hashResult.validation.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Validasi</h3>
@@ -364,7 +491,38 @@
             </div>
           </section>
 
-          <section v-if="hashResult.relatedMalware.length || hashResult.relatedIndustries.length" class="tif-subsection">
+          <section v-if="hashResult.pluginSummary.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Plugin Result</h3>
+              <span>{{ hashResult.pluginSummary.length }} plugin</span>
+            </div>
+            <div class="tif-mini-list">
+              <div v-for="item in hashResult.pluginSummary" :key="item.name" class="tif-mini-item">
+                <strong>{{ item.name }}</strong>
+                <p>{{ item.detection }}</p>
+                <div class="tif-mini-meta">
+                  <span>{{ item.alerts.length ? item.alerts.join(", ") : "Tidak ada alert tambahan" }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section v-if="hashResult.extractedStrings.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Extracted Strings</h3>
+              <span>{{ hashResult.extractedStrings.length }} preview</span>
+            </div>
+            <div class="tif-pills">
+              <span v-for="value in hashResult.extractedStrings" :key="value" class="tif-chip-soft">
+                {{ value }}
+              </span>
+            </div>
+          </section>
+
+          <section
+            v-if="hashResult.relatedMalware.length || hashResult.relatedIndustries.length || hashResult.relatedAdversaries.length"
+            class="tif-subsection"
+          >
             <div class="tif-block-head">
               <h3>Konteks Malware</h3>
               <span>Ringkasan relasi</span>
@@ -415,19 +573,26 @@
       <article class="tif-tool-card">
         <div class="tif-tool-head">
           <div>
-            <span class="tif-tool-kicker">hostname/whois</span>
+            <span class="tif-tool-kicker">Intel domain dan whois</span>
             <h2>Whois Enrichment</h2>
           </div>
-          <span class="tif-chip">Registrasi domain</span>
+          <span class="tif-chip">Hostname general, domain general, whois</span>
         </div>
 
         <form class="tif-tool-form" @submit.prevent="lookupWhois">
+          <div class="tif-select-row">
+            <label for="whoisMode">Mode general summary</label>
+            <select id="whoisMode" v-model="whoisIndicatorType" class="form-select">
+              <option value="hostname">Hostname general</option>
+              <option value="domain">Domain general</option>
+            </select>
+          </div>
           <div class="tif-search-row">
             <input
               v-model="whoisInput"
               type="search"
               class="form-control"
-              placeholder="Masukkan hostname, contoh google.com"
+              placeholder="Masukkan domain atau hostname, contoh google.com"
             >
             <button type="submit" class="btn btn-primary" :disabled="whoisLoading">
               <i class="fas fa-id-card"></i>
@@ -437,96 +602,282 @@
         </form>
 
         <p class="tif-tool-help">
-          Menampilkan registrar, nama server, kontak, status domain, dan domain terkait dari data whois OTX.
+          Menggabungkan hostname atau domain general dengan hostname whois untuk melihat reputasi, registrar, status,
+          kontak, nameserver, dan pulse terkait.
         </p>
 
         <div v-if="whoisLoading" class="tif-tool-placeholder">
           <i class="fas fa-spinner fa-spin"></i>
-          <span>Mengambil data whois domain...</span>
+          <span>Mengambil intel domain dan whois...</span>
         </div>
 
         <p v-else-if="whoisError" class="tif-tool-error">{{ whoisError }}</p>
 
         <div v-else-if="whoisResult" class="tif-tool-stack">
+          <div class="tif-tool-metrics compact">
+            <div class="tif-tool-stat">
+              <label>Indicator</label>
+              <strong>{{ whoisResult.indicator }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Mode</label>
+              <strong>{{ whoisResult.generalIndicatorType === "domain" ? "Domain" : "Hostname" }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Pulse</label>
+              <strong>{{ formatNumber(whoisResult.pulseCount) }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Reputasi</label>
+              <strong>{{ whoisResult.reputation === null ? "-" : whoisResult.reputation }}</strong>
+            </div>
+          </div>
+
           <div class="tif-field-grid">
-            <div v-for="item in whoisResult.summary" :key="item.label" class="tif-field">
+            <div class="tif-field">
+              <label>Lokasi</label>
+              <strong>{{ whoisResult.locationLabel || "-" }}</strong>
+            </div>
+            <div class="tif-field">
+              <label>ASN / Domain</label>
+              <strong>{{ whoisResult.asn || whoisResult.domain || "-" }}</strong>
+            </div>
+            <div class="tif-field">
+              <label>Section</label>
+              <strong>{{ whoisResult.sections.length ? whoisResult.sections.join(", ") : "-" }}</strong>
+            </div>
+            <div class="tif-field">
+              <label>Tipe Dasar</label>
+              <strong>{{ whoisResult.typeTitle || "-" }}</strong>
+            </div>
+          </div>
+
+          <div class="tif-inline-actions">
+            <a
+              v-if="whoisResult.whoisUrl"
+              :href="whoisResult.whoisUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Buka Whois
+            </a>
+            <a
+              v-if="whoisResult.alexaUrl"
+              :href="whoisResult.alexaUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Alexa
+            </a>
+          </div>
+
+          <section v-if="whoisResult.validation.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Validasi</h3>
+              <span>{{ whoisResult.validation.length }} sinyal</span>
+            </div>
+            <div class="tif-pills">
+              <span v-for="item in whoisResult.validation" :key="`${item.name}-${item.message}`" class="tif-chip-soft">
+                {{ item.name }}
+              </span>
+            </div>
+          </section>
+
+          <div class="tif-field-grid" v-if="whoisResult.whoisData.summary.length">
+            <div v-for="item in whoisResult.whoisData.summary" :key="item.label" class="tif-field">
               <label>{{ item.label }}</label>
               <strong>{{ item.value }}</strong>
             </div>
           </div>
 
-          <section v-if="whoisResult.contacts.length" class="tif-subsection">
+          <section v-if="whoisResult.whoisData.contacts.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Kontak</h3>
-              <span>{{ whoisResult.contacts.length }} field</span>
+              <span>{{ whoisResult.whoisData.contacts.length }} field</span>
             </div>
             <div class="tif-field-grid">
-              <div v-for="item in whoisResult.contacts" :key="item.label" class="tif-field">
+              <div v-for="item in whoisResult.whoisData.contacts" :key="item.label" class="tif-field">
                 <label>{{ item.label }}</label>
                 <strong>{{ item.value }}</strong>
               </div>
             </div>
           </section>
 
-          <section v-if="whoisResult.emails.length" class="tif-subsection">
+          <section v-if="whoisResult.whoisData.emails.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Email</h3>
-              <span>{{ whoisResult.emails.length }} alamat</span>
+              <span>{{ whoisResult.whoisData.emails.length }} alamat</span>
             </div>
             <div class="tif-pills">
-              <span v-for="value in whoisResult.emails" :key="value" class="tif-chip-soft">
+              <span v-for="value in whoisResult.whoisData.emails" :key="value" class="tif-chip-soft">
                 {{ value }}
               </span>
             </div>
           </section>
 
-          <section v-if="whoisResult.nameServers.length" class="tif-subsection">
+          <section v-if="whoisResult.whoisData.nameServers.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Name Server</h3>
-              <span>{{ whoisResult.nameServers.length }} NS</span>
+              <span>{{ whoisResult.whoisData.nameServers.length }} NS</span>
             </div>
             <div class="tif-pills">
-              <span v-for="value in whoisResult.nameServers" :key="value" class="tif-chip-soft">
+              <span v-for="value in whoisResult.whoisData.nameServers" :key="value" class="tif-chip-soft">
                 {{ value }}
               </span>
             </div>
           </section>
 
-          <section v-if="whoisResult.statuses.length" class="tif-subsection">
+          <section v-if="whoisResult.whoisData.statuses.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Status Domain</h3>
-              <span>{{ whoisResult.statuses.length }} status</span>
+              <span>{{ whoisResult.whoisData.statuses.length }} status</span>
             </div>
             <div class="tif-pills">
-              <span v-for="value in whoisResult.statuses" :key="value" class="tif-chip-soft">
+              <span v-for="value in whoisResult.whoisData.statuses" :key="value" class="tif-chip-soft">
                 {{ value }}
               </span>
             </div>
           </section>
 
-          <section v-if="whoisResult.related.length" class="tif-subsection">
+          <section
+            v-if="whoisResult.relatedMalware.length || whoisResult.relatedIndustries.length || whoisResult.relatedAdversaries.length"
+            class="tif-subsection"
+          >
+            <div class="tif-block-head">
+              <h3>Konteks Pulse</h3>
+              <span>General enrichment</span>
+            </div>
+            <div class="tif-context">
+              <div>
+                <label>Malware</label>
+                <strong>{{ whoisResult.relatedMalware.length ? whoisResult.relatedMalware.join(", ") : "-" }}</strong>
+              </div>
+              <div>
+                <label>Industri</label>
+                <strong>{{ whoisResult.relatedIndustries.length ? whoisResult.relatedIndustries.join(", ") : "-" }}</strong>
+              </div>
+              <div>
+                <label>Adversary</label>
+                <strong>{{ whoisResult.relatedAdversaries.length ? whoisResult.relatedAdversaries.join(", ") : "-" }}</strong>
+              </div>
+              <div>
+                <label>Sumber</label>
+                <strong>{{ sourceLabel }}</strong>
+              </div>
+            </div>
+          </section>
+
+          <section v-if="whoisResult.whoisData.related.length" class="tif-subsection">
             <div class="tif-block-head">
               <h3>Domain Terkait</h3>
-              <span>{{ whoisResult.related.length }} relasi</span>
+              <span>{{ whoisResult.whoisData.related.length }} relasi</span>
             </div>
             <div class="tif-mini-list">
-              <div v-for="item in whoisResult.related" :key="`${item.domain}-${item.related}`" class="tif-mini-item">
+              <div v-for="item in whoisResult.whoisData.related" :key="`${item.domain}-${item.related}`" class="tif-mini-item">
                 <strong>{{ item.domain }}</strong>
                 <p>{{ item.relatedType }}: {{ item.related }}</p>
+              </div>
+            </div>
+          </section>
+
+          <section v-if="whoisResult.pulses.length" class="tif-subsection">
+            <div class="tif-block-head">
+              <h3>Pulse Terkait</h3>
+              <span>{{ whoisResult.pulses.length }} preview</span>
+            </div>
+            <div class="tif-mini-list">
+              <div v-for="pulse in whoisResult.pulses" :key="pulse.id" class="tif-mini-item">
+                <strong>{{ pulse.name }}</strong>
+                <p>{{ pulse.description || "Belum ada ringkasan." }}</p>
+                <div class="tif-mini-meta">
+                  <span>{{ pulse.author }}</span>
+                  <span>{{ formatDate(pulse.modified) }}</span>
+                </div>
               </div>
             </div>
           </section>
         </div>
 
         <p v-else class="tif-empty">
-          Belum ada whois enrichment. Masukkan hostname untuk membaca registrasi domain dan relasi kontaknya.
+          Belum ada whois enrichment. Masukkan domain atau hostname untuk membaca general summary dan data registrasi.
         </p>
       </article>
 
       <article class="tif-tool-card tif-tool-card-wide">
         <div class="tif-tool-head">
           <div>
-            <span class="tif-tool-kicker">pulses/search?q=indonesia</span>
+            <span class="tif-tool-kicker">Feed subscription pribadi</span>
+            <h2>Subscribed Pulse Feed</h2>
+          </div>
+          <div class="tif-inline-actions">
+            <button type="button" class="btn btn-outline-secondary btn-sm" @click="loadSubscribedFeed" :disabled="subscribedLoading">
+              Refresh
+            </button>
+          </div>
+        </div>
+
+        <p class="tif-tool-help">
+          Menarik feed pulse yang sudah kamu subscribe dari OTX agar key aktif di Vercel atau browser bisa langsung
+          menampilkan intel personal yang kamu ikuti.
+        </p>
+
+        <div v-if="subscribedLoading" class="tif-tool-placeholder">
+          <i class="fas fa-spinner fa-spin"></i>
+          <span>Memuat feed subscription dari OTX...</span>
+        </div>
+
+        <p v-else-if="subscribedError" class="tif-tool-error">{{ subscribedError }}</p>
+
+        <div v-else class="tif-tool-stack">
+          <div class="tif-tool-metrics compact">
+            <div class="tif-tool-stat">
+              <label>Pulse</label>
+              <strong>{{ formatNumber(subscribedCount) }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Preview</label>
+              <strong>{{ formatNumber(subscribedPulses.length) }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Auth</label>
+              <strong>{{ authModeLabel }}</strong>
+            </div>
+            <div class="tif-tool-stat">
+              <label>Sumber</label>
+              <strong>{{ sourceLabel }}</strong>
+            </div>
+          </div>
+
+          <div v-if="subscribedTopTags.length" class="tif-pills">
+            <span v-for="tag in subscribedTopTags" :key="tag.name" class="tif-chip-soft">
+              {{ tag.name }} - {{ tag.count }}
+            </span>
+          </div>
+
+          <div v-if="subscribedPulses.length" class="tif-mini-list">
+            <div v-for="pulse in subscribedPulses" :key="pulse.id" class="tif-mini-item">
+              <strong>{{ pulse.name }}</strong>
+              <p>{{ pulse.description || "Belum ada ringkasan." }}</p>
+              <div class="tif-mini-meta">
+                <span>{{ pulse.author }}</span>
+                <span>{{ formatDate(pulse.modified) }}</span>
+              </div>
+            </div>
+          </div>
+
+          <p v-else class="tif-empty">
+            Belum ada pulse subscription yang tampil. Biasanya karena key aktif belum subscribe pulse apa pun, atau
+            feed pribadi dari akun OTX ini sedang kosong.
+          </p>
+        </div>
+      </article>
+
+      <article class="tif-tool-card tif-tool-card-wide">
+        <div class="tif-tool-head">
+          <div>
+            <span class="tif-tool-kicker">Pantauan regional Indonesia</span>
             <h2>Widget "Ancaman di Indonesia"</h2>
           </div>
           <div class="tif-inline-actions">
@@ -540,7 +891,8 @@
         </div>
 
         <p class="tif-tool-help">
-          Widget ini memantau hasil pencarian pulse bertema Indonesia secara terpisah dari feed utama, supaya ada sudut pandang regional yang selalu siap dilihat.
+          Widget ini memantau hasil pencarian pulse bertema Indonesia secara terpisah dari feed utama, supaya ada sudut
+          pandang regional yang selalu siap dilihat.
         </p>
 
         <div v-if="indonesiaLoading" class="tif-tool-placeholder">
@@ -570,7 +922,7 @@
             </div>
           </div>
 
-          <div class="tif-pills" v-if="indonesiaTopTags.length">
+          <div v-if="indonesiaTopTags.length" class="tif-pills">
             <span v-for="tag in indonesiaTopTags" :key="tag.name" class="tif-chip-soft">
               {{ tag.name }} - {{ tag.count }}
             </span>
@@ -841,11 +1193,17 @@ export default {
       whoisLoading: false,
       whoisError: "",
       whoisResult: null,
+      whoisIndicatorType: "hostname",
 
       indonesiaLoading: false,
       indonesiaError: "",
       indonesiaPulses: [],
       indonesiaCount: 0,
+
+      subscribedLoading: false,
+      subscribedError: "",
+      subscribedPulses: [],
+      subscribedCount: 0,
     };
   },
   computed: {
@@ -863,6 +1221,9 @@ export default {
     },
     indonesiaTopTags() {
       return this.buildTopTags(this.indonesiaPulses).slice(0, 8);
+    },
+    subscribedTopTags() {
+      return this.buildTopTags(this.subscribedPulses).slice(0, 8);
     },
     lastUpdatedLabel() {
       const dates = this.pulses
@@ -897,6 +1258,17 @@ export default {
 
       return "Untuk local/dev, kamu bisa isi key di browser ini. Untuk deploy server, simpan key sebagai environment variable OTX_API_KEY.";
     },
+    authModeLabel() {
+      if (this.authMode === "server-env") {
+        return "OTX_API_KEY server";
+      }
+
+      if (this.authMode === "client-header") {
+        return "Key browser";
+      }
+
+      return "Tanpa auth";
+    },
     geoMarkerStyle() {
       if (!this.geoResult?.hasCoordinates) {
         return {};
@@ -916,6 +1288,7 @@ export default {
     this.apiKeyDraft = this.apiKey;
     this.loadFeed();
     this.loadIndonesiaWidget();
+    this.loadSubscribedFeed();
   },
   methods: {
     async loadFeed() {
@@ -923,7 +1296,8 @@ export default {
       this.error = "";
 
       try {
-        const payload = await this.fetchPulseSearch({
+        const payload = await this.fetchPulseFeed({
+          feed: "search",
           query: this.query,
           page: this.page,
           limit: this.limit,
@@ -931,7 +1305,7 @@ export default {
 
         this.resultCount = Number(payload.count) || 0;
         this.hasNextPage = Boolean(payload.next);
-        this.pulses = this.normalizePulses(payload.results || []);
+        this.pulses = payload.pulses;
         this.activePulseId = this.pulses[0]?.id || "";
       } catch (error) {
         this.error = this.toFriendlyError(error);
@@ -947,14 +1321,15 @@ export default {
       this.indonesiaError = "";
 
       try {
-        const payload = await this.fetchPulseSearch({
+        const payload = await this.fetchPulseFeed({
+          feed: "search",
           query: "indonesia",
           page: 1,
           limit: 4,
         });
 
         this.indonesiaCount = Number(payload.count) || 0;
-        this.indonesiaPulses = this.normalizePulses(payload.results || []);
+        this.indonesiaPulses = payload.pulses;
       } catch (error) {
         this.indonesiaError = this.toFriendlyError(error);
         this.indonesiaCount = 0;
@@ -963,22 +1338,43 @@ export default {
         this.indonesiaLoading = false;
       }
     },
-    async fetchPulseSearch({ query, page, limit }) {
+    async loadSubscribedFeed() {
+      this.subscribedLoading = true;
+      this.subscribedError = "";
+
+      try {
+        const payload = await this.fetchPulseFeed({
+          feed: "subscribed",
+          limit: 6,
+        });
+
+        this.subscribedCount = Number(payload.count) || payload.pulses.length;
+        this.subscribedPulses = payload.pulses.slice(0, 6);
+      } catch (error) {
+        this.subscribedError = this.toFriendlyError(error);
+        this.subscribedCount = 0;
+        this.subscribedPulses = [];
+      } finally {
+        this.subscribedLoading = false;
+      }
+    },
+    async fetchPulseFeed({ feed = "search", query = "", page = 1, limit = 10 } = {}) {
       const params = new URLSearchParams({
         mode: "pulses",
-        q: query,
-        page: String(page),
-        limit: String(limit),
+        feed,
       });
 
-      const payload = await this.requestJson(`/api/otx?${params.toString()}`, this.buildRequestHeaders());
-
-      if (!payload || !Array.isArray(payload.results)) {
-        throw new Error("Respons OTX tidak berisi daftar results.");
+      if (feed === "search") {
+        params.set("q", query || "ransomware");
+        params.set("page", String(page));
+        params.set("limit", String(limit));
       }
 
+      const payload = await this.requestJson(`/api/otx?${params.toString()}`, this.buildRequestHeaders());
+      const normalized = this.normalizePulseFeedPayload(payload);
+
       this.sourceLabel = "OTX API via proxy";
-      return payload;
+      return normalized;
     },
     async fetchIndicator({ indicatorType, value, section }) {
       const params = new URLSearchParams({
@@ -1080,13 +1476,42 @@ export default {
       this.geoInput = value;
 
       try {
-        const payload = await this.fetchIndicator({
-          indicatorType: "IPv4",
-          value,
-          section: "geo",
-        });
+        const [generalPayload, reputationPayload, geoPayload, malwarePayload, passiveDnsPayload] = await Promise.all([
+          this.fetchIndicator({
+            indicatorType: "IPv4",
+            value,
+            section: "general",
+          }),
+          this.fetchIndicator({
+            indicatorType: "IPv4",
+            value,
+            section: "reputation",
+          }),
+          this.fetchIndicator({
+            indicatorType: "IPv4",
+            value,
+            section: "geo",
+          }),
+          this.fetchIndicator({
+            indicatorType: "IPv4",
+            value,
+            section: "malware",
+          }),
+          this.fetchIndicator({
+            indicatorType: "IPv4",
+            value,
+            section: "passive_dns",
+          }),
+        ]);
 
-        this.geoResult = this.normalizeGeo(payload, value);
+        this.geoResult = this.normalizeIpv4Workbench({
+          indicator: value,
+          generalPayload,
+          reputationPayload,
+          geoPayload,
+          malwarePayload,
+          passiveDnsPayload,
+        });
       } catch (error) {
         this.geoResult = null;
         this.geoError = this.toFriendlyError(error);
@@ -1110,13 +1535,24 @@ export default {
       this.hashInput = value;
 
       try {
-        const payload = await this.fetchIndicator({
-          indicatorType: "file",
-          value,
-          section: "general",
-        });
+        const [generalPayload, analysisPayload] = await Promise.all([
+          this.fetchIndicator({
+            indicatorType: "file",
+            value,
+            section: "general",
+          }),
+          this.fetchIndicator({
+            indicatorType: "file",
+            value,
+            section: "analysis",
+          }),
+        ]);
 
-        this.hashResult = this.normalizeGeneralIndicator(payload, hashType);
+        this.hashResult = this.normalizeHashIntel({
+          generalPayload,
+          analysisPayload,
+          fallbackType: hashType,
+        });
       } catch (error) {
         this.hashResult = null;
         this.hashError = this.toFriendlyError(error);
@@ -1131,7 +1567,7 @@ export default {
 
       if (!value || this.detectIocType(value) !== "hostname") {
         this.whoisResult = null;
-        this.whoisError = "Masukkan hostname yang valid untuk whois enrichment.";
+        this.whoisError = "Masukkan domain atau hostname yang valid untuk whois enrichment.";
         return;
       }
 
@@ -1139,13 +1575,25 @@ export default {
       this.whoisInput = value;
 
       try {
-        const payload = await this.fetchIndicator({
-          indicatorType: "hostname",
-          value,
-          section: "whois",
-        });
+        const [generalPayload, whoisPayload] = await Promise.all([
+          this.fetchIndicator({
+            indicatorType: this.whoisIndicatorType,
+            value,
+            section: "general",
+          }),
+          this.fetchIndicator({
+            indicatorType: "hostname",
+            value,
+            section: "whois",
+          }),
+        ]);
 
-        this.whoisResult = this.normalizeWhois(payload);
+        this.whoisResult = this.normalizeDomainIntel({
+          generalPayload,
+          whoisPayload,
+          indicatorType: this.whoisIndicatorType,
+          indicator: value,
+        });
       } catch (error) {
         this.whoisResult = null;
         this.whoisError = this.toFriendlyError(error);
@@ -1166,6 +1614,7 @@ export default {
         return;
       }
 
+      this.whoisIndicatorType = "hostname";
       this.whoisInput = this.iocResult.indicator;
       this.lookupWhois();
     },
@@ -1175,9 +1624,24 @@ export default {
       this.page = 1;
       await this.loadFeed();
     },
+    normalizePulseFeedPayload(payload) {
+      const directItems = Array.isArray(payload)
+        ? payload
+        : this.asArray(payload?.results?.length ? payload.results : payload?.results || payload?.pulses || payload?.items);
+      const pulses = this.normalizePulses(directItems);
+
+      return {
+        count: Number(payload?.count) || pulses.length,
+        next: payload?.next || null,
+        pulses,
+      };
+    },
     normalizeGeneralIndicator(payload, fallbackType) {
       const pulses = this.normalizePulses(this.asArray(payload?.pulse_info?.pulses)).slice(0, 4);
-      const reputation = Number(payload?.reputation);
+      const rawReputation = payload?.reputation;
+      const parsedReputation = rawReputation === null || rawReputation === "" || rawReputation === undefined
+        ? null
+        : Number(rawReputation);
 
       return {
         indicator: String(payload?.indicator || payload?.domain || "").trim() || "-",
@@ -1185,9 +1649,9 @@ export default {
         typeTitle: String(payload?.type_title || payload?.type || fallbackType || "").trim() || "-",
         domain: String(payload?.domain || "").trim(),
         pulseCount: Number(payload?.pulse_info?.count) || pulses.length,
-        reputation: Number.isFinite(reputation) ? reputation : null,
-        whois: String(payload?.whois || "").trim(),
-        alexa: String(payload?.alexa || "").trim(),
+        reputation: Number.isFinite(parsedReputation) ? parsedReputation : null,
+        whoisUrl: String(payload?.whois || "").trim(),
+        alexaUrl: String(payload?.alexa || "").trim(),
         asn: String(payload?.asn || "").trim(),
         locationLabel: [payload?.city, payload?.region, payload?.country_name].filter(Boolean).join(", "),
         sections: this.uniqueStrings(this.asArray(payload?.sections)),
@@ -1227,6 +1691,89 @@ export default {
         mapUrl: hasCoordinates
           ? `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=4/${latitude}/${longitude}`
           : "",
+      };
+    },
+    normalizeIpv4Workbench({ indicator, generalPayload, reputationPayload, geoPayload, malwarePayload, passiveDnsPayload }) {
+      const general = this.normalizeGeneralIndicator(generalPayload, "IPv4");
+      const geo = this.normalizeGeo(geoPayload, indicator);
+      const passiveDnsItems = this.asArray(passiveDnsPayload?.passive_dns).slice(0, 12).map((item, index) => ({
+        key: `${item?.hostname || item?.address || index}`,
+        hostname: String(item?.hostname || "-"),
+        recordType: String(item?.record_type || "-"),
+        firstSeen: this.formatMaybeDate(String(item?.first || "")),
+        lastSeen: this.formatMaybeDate(String(item?.last || "")),
+        assetType: String(item?.asset_type || "-"),
+        asn: String(item?.asn || "-"),
+      }));
+
+      return {
+        ...general,
+        ...geo,
+        reputation: typeof reputationPayload?.reputation === "number" ? reputationPayload.reputation : general.reputation,
+        passiveDnsCount: Number(passiveDnsPayload?.count) || passiveDnsItems.length,
+        passiveDnsItems,
+        malwareCount: Number(malwarePayload?.count) || Number(malwarePayload?.size) || this.asArray(malwarePayload?.data).length,
+        malwareItems: this.asArray(malwarePayload?.data).slice(0, 8).map((item, index) => ({
+          key: `${item?.hash || item?.sha256 || item?.md5 || index}`,
+          hash: String(item?.hash || item?.sha256 || item?.md5 || item?.id || "-"),
+          detection: String(item?.detection || item?.name || item?.analysis || "-"),
+          source: String(item?.source || item?.engine || item?.family || "-"),
+        })),
+      };
+    },
+    normalizeHashIntel({ generalPayload, analysisPayload, fallbackType }) {
+      const general = this.normalizeGeneralIndicator(generalPayload, fallbackType);
+      const info = analysisPayload?.analysis?.info?.results || {};
+      const plugins = analysisPayload?.analysis?.plugins || {};
+      const pluginSummary = Object.entries(plugins)
+        .map(([name, plugin]) => {
+          const resultBlock = plugin?.results || plugin?.result || {};
+          const detectionValue = resultBlock?.detection || resultBlock?.score || resultBlock?.severity || "";
+          const alerts = this.asArray(resultBlock?.alerts).map(String).filter(Boolean);
+
+          if (!detectionValue && !alerts.length) {
+            return null;
+          }
+
+          return {
+            name,
+            detection: String(detectionValue || alerts[0] || "-"),
+            alerts,
+          };
+        })
+        .filter(Boolean)
+        .slice(0, 8);
+
+      return {
+        ...general,
+        analysisSummary: [
+          { label: "MD5", value: String(info?.md5 || "") },
+          { label: "SHA1", value: String(info?.sha1 || "") },
+          { label: "SHA256", value: String(info?.sha256 || "") },
+          { label: "File Type", value: String(info?.file_type || "") },
+          { label: "Ukuran", value: info?.filesize ? `${this.formatNumber(info.filesize)} bytes` : "" },
+          { label: "SSDeep", value: String(info?.ssdeep || "") },
+        ].filter((item) => item.value),
+        analysisMeta: {
+          hasDynamic: Boolean(analysisPayload?.analysis?.has_dynamic),
+          hasS3: Boolean(analysisPayload?.analysis?.has_S3),
+          analysisTime: Number(analysisPayload?.analysis?.analysis_time) || 0,
+          priority: Boolean(analysisPayload?.analysis?.metadata?.priority),
+          tlp: String(analysisPayload?.analysis?.metadata?.tlp || "").trim(),
+        },
+        pluginSummary,
+        extractedStrings: this.asArray(plugins?.strings?.results).slice(0, 6).map(String),
+      };
+    },
+    normalizeDomainIntel({ generalPayload, whoisPayload, indicatorType, indicator }) {
+      const general = this.normalizeGeneralIndicator(generalPayload, indicatorType);
+      const whoisData = this.normalizeWhois(whoisPayload);
+
+      return {
+        ...general,
+        indicator,
+        generalIndicatorType: indicatorType,
+        whoisData,
       };
     },
     normalizeWhois(payload) {
@@ -1374,8 +1921,7 @@ export default {
         return "";
       }
 
-      const hostnameCandidate = this.normalizeHostnameValue(text);
-      return hostnameCandidate;
+      return this.normalizeHostnameValue(text);
     },
     normalizeHostnameValue(value) {
       const text = String(value || "").trim();
@@ -1451,6 +1997,7 @@ export default {
       this.page = 1;
       this.loadFeed();
       this.loadIndonesiaWidget();
+      this.loadSubscribedFeed();
     },
     clearApiKey() {
       this.apiKey = "";
@@ -1459,6 +2006,7 @@ export default {
       this.page = 1;
       this.loadFeed();
       this.loadIndonesiaWidget();
+      this.loadSubscribedFeed();
     },
     formatDate(value, options = {}) {
       if (!value) {
@@ -1535,9 +2083,9 @@ export default {
 .tif-panel,
 .tif-tool-card {
   border: 1px solid rgba(20, 78, 114, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.055);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
 }
 
 .tif-hero {
@@ -1545,38 +2093,37 @@ export default {
   grid-template-columns: minmax(0, 1fr) 24rem;
   gap: 1rem;
   padding: 1rem;
-  overflow: hidden;
 }
 
 .tif-hero-copy {
-  padding: 0.35rem 0.25rem;
+  padding: 0.15rem 0.2rem;
 }
 
 .tif-kicker,
 .tif-tool-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   padding: 0.35rem 0.55rem;
-  border-radius: 8px;
+  border-radius: 999px;
   color: #0f766e;
   background: rgba(15, 118, 110, 0.1);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .tif-title {
-  margin: 0.8rem 0 0.35rem;
+  margin: 0.75rem 0 0.35rem;
   color: #16324b;
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .tif-lede {
-  max-width: 860px;
   margin: 0;
+  max-width: 56rem;
   color: #5c6776;
   font-size: 0.94rem;
   line-height: 1.6;
@@ -1589,11 +2136,11 @@ export default {
   margin-top: 1rem;
 }
 
-.tif-metrics {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.tif-tool-metrics {
+.tif-metrics,
+.tif-tool-metrics,
+.tif-field-grid,
+.tif-meta-grid,
+.tif-context {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -1602,12 +2149,15 @@ export default {
 }
 
 .tif-metric,
-.tif-tool-stat {
+.tif-tool-stat,
+.tif-field,
+.tif-meta-grid span,
+.tif-context div {
   min-width: 0;
   padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid rgba(15, 118, 110, 0.14);
-  background: rgba(240, 253, 250, 0.68);
+  border-radius: 10px;
+  border: 1px solid rgba(20, 78, 114, 0.1);
+  background: rgba(248, 250, 252, 0.84);
 }
 
 .tif-metric label,
@@ -1615,7 +2165,8 @@ export default {
 .tif-search label,
 .tif-context label,
 .tif-tool-stat label,
-.tif-field label {
+.tif-field label,
+.tif-select-row label {
   display: block;
   color: #64748b;
   font-size: 0.72rem;
@@ -1628,25 +2179,25 @@ export default {
 .tif-field strong {
   display: block;
   color: #0f766e;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 900;
-  line-height: 1.25;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
 
 .tif-metric span {
   display: block;
+  margin-top: 0.22rem;
   color: #64748b;
   font-size: 0.76rem;
   line-height: 1.4;
 }
 
 .tif-key-panel {
-  align-self: stretch;
   padding: 0.85rem;
-  border-radius: 8px;
-  border: 1px solid rgba(185, 28, 28, 0.14);
-  background: rgba(255, 247, 237, 0.82);
+  border-radius: 10px;
+  border: 1px solid rgba(185, 28, 28, 0.12);
+  background: rgba(255, 247, 237, 0.84);
 }
 
 .tif-key-input,
@@ -1709,7 +2260,7 @@ export default {
 .tif-tool-head h2,
 .tif-head h2,
 .tif-block h3 {
-  margin: 0.28rem 0 0;
+  margin: 0.25rem 0 0;
   color: #16324b;
   font-size: 1rem;
   font-weight: 900;
@@ -1732,7 +2283,7 @@ export default {
   align-items: center;
   min-height: 2rem;
   padding: 0.32rem 0.55rem;
-  border-radius: 8px;
+  border-radius: 999px;
   color: #0f766e;
   background: rgba(15, 118, 110, 0.1);
   font-size: 0.72rem;
@@ -1750,6 +2301,16 @@ export default {
   margin-top: 0.75rem;
 }
 
+.tif-select-row {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.tif-select-row .form-select {
+  max-width: 14rem;
+}
+
 .tif-tool-placeholder,
 .tif-tool-error {
   display: flex;
@@ -1757,49 +2318,28 @@ export default {
   align-items: center;
   margin-top: 0.85rem;
   padding: 0.75rem;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 0.82rem;
 }
 
 .tif-tool-placeholder {
   color: #16324b;
-  background: rgba(248, 250, 252, 0.86);
+  background: rgba(248, 250, 252, 0.9);
 }
 
 .tif-tool-error {
   color: #991b1b;
-  background: rgba(254, 242, 242, 0.92);
+  background: rgba(254, 242, 242, 0.94);
+}
+
+.tif-tool-stack,
+.tif-subsection {
+  display: grid;
+  gap: 0.75rem;
 }
 
 .tif-tool-stack {
-  display: grid;
-  gap: 0.75rem;
   margin-top: 0.85rem;
-}
-
-.tif-subsection {
-  display: grid;
-  gap: 0.55rem;
-}
-
-.tif-field-grid,
-.tif-meta-grid,
-.tif-context {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
-}
-
-.tif-field,
-.tif-meta-grid span,
-.tif-context div {
-  min-width: 0;
-  padding: 0.65rem;
-  border-radius: 8px;
-  border: 1px solid rgba(20, 78, 114, 0.1);
-  background: rgba(248, 250, 252, 0.78);
-  color: #64748b;
-  font-size: 0.75rem;
 }
 
 .tif-meta-grid strong,
@@ -1813,7 +2353,7 @@ export default {
 
 .tif-geo-map {
   position: relative;
-  min-height: 15rem;
+  min-height: 14rem;
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid rgba(20, 78, 114, 0.1);
@@ -1852,7 +2392,7 @@ export default {
   padding: 0.72rem 0.8rem;
   border-radius: 10px;
   color: #16324b;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
 }
 
@@ -1881,10 +2421,10 @@ export default {
 }
 
 .tif-mini-item {
-  padding: 0.7rem 0.75rem;
-  border-radius: 8px;
+  padding: 0.72rem 0.78rem;
+  border-radius: 10px;
   border: 1px solid rgba(20, 78, 114, 0.1);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .tif-mini-item strong {
@@ -1945,10 +2485,10 @@ export default {
   gap: 0.35rem;
   min-height: 2rem;
   padding: 0.4rem 0.6rem;
-  border-radius: 8px;
+  border-radius: 999px;
   border: 1px solid rgba(20, 78, 114, 0.12);
   color: #16324b;
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   font-size: 0.78rem;
   font-weight: 800;
   text-decoration: none;
@@ -1999,10 +2539,10 @@ export default {
   width: 100%;
   min-width: 0;
   padding: 0.75rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid rgba(20, 78, 114, 0.1);
   color: inherit;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.76);
   text-align: left;
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
@@ -2010,7 +2550,7 @@ export default {
 .tif-item:hover,
 .tif-item.active {
   border-color: rgba(15, 118, 110, 0.34);
-  background: rgba(240, 253, 250, 0.86);
+  background: rgba(240, 253, 250, 0.88);
   transform: translateY(-1px);
 }
 
@@ -2056,14 +2596,14 @@ export default {
 
 .tif-detail-head {
   padding: 0.85rem;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #fff;
   background: linear-gradient(135deg, #0f766e 0%, #365314 100%);
 }
 
 .tif-detail-head small {
   display: block;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.72rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -2092,9 +2632,9 @@ export default {
 
 .tif-block {
   padding: 0.75rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid rgba(20, 78, 114, 0.1);
-  background: rgba(255, 255, 255, 0.64);
+  background: rgba(255, 255, 255, 0.68);
 }
 
 .tif-ioc-list {
@@ -2108,8 +2648,8 @@ export default {
   gap: 0.55rem;
   align-items: center;
   padding: 0.55rem 0.6rem;
-  border-radius: 8px;
-  background: rgba(240, 253, 250, 0.75);
+  border-radius: 10px;
+  background: rgba(240, 253, 250, 0.76);
 }
 
 .tif-ioc span {
@@ -2135,8 +2675,8 @@ export default {
 .error-state {
   padding: 2.1rem 1rem;
   border: 1px solid rgba(20, 78, 114, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.055);
 }
 
@@ -2167,7 +2707,7 @@ export default {
 }
 
 .btn {
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 800;
 }
 
@@ -2180,10 +2720,6 @@ export default {
 
   .tif-tool-card-wide {
     grid-column: auto;
-  }
-
-  .tif-key-panel {
-    max-width: none;
   }
 }
 
@@ -2230,6 +2766,10 @@ export default {
   .tif-key-input,
   .tif-search-row {
     display: grid;
+  }
+
+  .tif-select-row .form-select {
+    max-width: none;
   }
 
   .tif-list {

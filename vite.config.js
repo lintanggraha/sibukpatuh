@@ -62,7 +62,14 @@ export default defineConfig({
           }
 
           const params = new URLSearchParams(url.searchParams);
+          const feed = (params.get('feed') || 'search').toLowerCase();
           params.delete('mode');
+          params.delete('feed');
+
+          if (feed === 'subscribed') {
+            return '/api/v1/pulses/subscribed';
+          }
+
           return `/api/v1/search/pulses?${params.toString()}`;
         }
       }

@@ -1,7 +1,8 @@
 const OTX_API_ROOT = 'https://otx.alienvault.com/api/v1';
 const PULSE_SEARCH_PATH = '/search/pulses';
+const PULSE_SUBSCRIBED_PATH = '/pulses/subscribed';
 const INDICATOR_ROOT_PATH = '/indicators';
-const SUPPORTED_INDICATOR_TYPES = new Set(['IPv4', 'hostname', 'file']);
+const SUPPORTED_INDICATOR_TYPES = new Set(['IPv4', 'hostname', 'domain', 'file']);
 const DEFAULT_MODE = 'pulses';
 
 function readHeaderValue(value) {
@@ -13,6 +14,12 @@ function readHeaderValue(value) {
 }
 
 function buildPulseSearchPath(searchParams) {
+  const feed = (searchParams.get('feed') || 'search').trim().toLowerCase();
+
+  if (feed === 'subscribed') {
+    return PULSE_SUBSCRIBED_PATH;
+  }
+
   const params = new URLSearchParams();
   const query = (searchParams.get('q') || 'ransomware').trim() || 'ransomware';
   const page = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
@@ -31,7 +38,7 @@ function buildIndicatorPath(searchParams) {
   const section = readHeaderValue(searchParams.get('section')) || 'general';
 
   if (!SUPPORTED_INDICATOR_TYPES.has(indicatorType)) {
-    throw new Error('Unsupported indicatorType. Use IPv4, hostname, or file.');
+    throw new Error('Unsupported indicatorType. Use IPv4, hostname, domain, or file.');
   }
 
   if (!value) {
