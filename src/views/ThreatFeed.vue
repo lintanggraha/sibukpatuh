@@ -218,8 +218,7 @@ export default {
       loading: false,
       subscribedLoading: false,
       presets: ["ransomware", "phishing", "APT", "indonesia"],
-      selectedYear: "All",
-      availableYears: ["All", "2026", "2025", "2024", "2023", "2022", "2021", "2020"]
+      selectedYear: "All"
     };
   },
   computed: {
@@ -254,6 +253,10 @@ export default {
     activeIndicators() {
       if (!this.activePulse) return [];
       return (this.activePulse.indicators || []).slice(0, 15).map((i, idx) => ({ key: idx, type: i.type, value: i.value }));
+    },
+    availableYears() {
+      const years = new Set(this.pulses.map(p => new Date(p.modified).getFullYear().toString()));
+      return ["All", ...Array.from(years).sort((a, b) => b - a)];
     }
   },
   mounted() {
