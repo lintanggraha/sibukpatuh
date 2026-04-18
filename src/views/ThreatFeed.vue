@@ -577,181 +577,119 @@ export default {
 .tif-summary-card label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
 .tif-number { font-size: 1.5rem; font-weight: 900; color: #0f766e; }
 
-/* Sidebar Widgets */
-.tif-widget { 
+/* Main Layout */
+.tif-main-layout { display: grid; grid-template-columns: 20rem 1fr 24rem; gap: 1.5rem; align-items: start; }
+.tif-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+.tif-content { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+
+/* Toolbar & Navigation */
+.tif-nav-toolbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
   background: white; 
+  padding: 0.75rem 1.25rem; 
   border-radius: 12px; 
   border: 1px solid #e2e8f0; 
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  gap: 2rem;
 }
 
-.tif-widget-head { 
-  padding: 0.85rem 1rem; 
+.tif-search-group { display: flex; align-items: center; gap: 0.75rem; flex: 1; }
+.tif-search-group input { border: none; outline: none; flex: 1; font-weight: 500; font-size: 0.9rem; background: transparent; }
+.btn-search-trigger { padding: 0.4rem 1rem; background: #0f766e; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+
+.tif-quick-filters { display: flex; align-items: center; gap: 1rem; }
+.filter-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; white-space: nowrap; }
+.filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.tif-nav-link { 
+  padding: 0.35rem 0.75rem; 
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  color: #64748b; 
+  border: 1px solid #e2e8f0; 
   background: #f8fafc; 
-  border-bottom: 1px solid #e2e8f0; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-}
-
-.tif-widget-title {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #1e293b;
-}
-
-.tif-widget-title i { color: #0f766e; }
-
-.btn-refresh-mini {
-  width: 1.75rem;
-  height: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #e2e8f0;
-  background: white;
-  border-radius: 6px;
-  color: #64748b;
+  border-radius: 6px; 
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.btn-refresh-mini:hover { color: #0f766e; border-color: #0f766e; background: #f0fdfa; }
+.tif-nav-link:hover { border-color: #0f766e; color: #0f766e; }
+.tif-nav-link.active { background: #0f766e; color: white; border-color: #0f766e; }
 
-.tif-widget-item { 
-  padding: 0.85rem 1rem; 
-  border-bottom: 1px solid #f1f5f9; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.tif-widget-item:hover { background: #f8fafc; }
-.tif-widget-item.active { background: #f0fdfa; border-left: 4px solid #0f766e; }
-
-.tif-widget-info { flex: 1; min-width: 0; }
-.tif-widget-info strong { display: block; font-size: 0.8rem; color: #1e293b; margin-bottom: 0.15rem; }
-.tif-date-mini { font-size: 0.7rem; color: #94a3b8; font-weight: 600; }
-.tif-arrow { font-size: 0.7rem; color: #cbd5e1; margin-left: 0.5rem; }
-
-/* Dashboard Content Header */
-.tif-content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid #e2e8f0;
-  margin-bottom: 1.5rem;
-}
-
-.tif-title-block {
+/* Pulse Cards */
+.tif-pulse-scroll-area { max-height: calc(100vh - 28rem); overflow-y: auto; padding-right: 0.75rem; margin-top: 0.5rem; }
+.tif-pulse-card { 
+  background: white; 
+  padding: 1.25rem; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  margin-bottom: 1rem; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-}
-
-.tif-main-heading {
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #1e293b;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.tif-meta-row {
-  display: flex;
-  align-items: center;
   gap: 0.75rem;
 }
 
-.tif-meta-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #64748b;
-  background: #f1f5f9;
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
+.tif-pulse-card:hover { border-color: #0f766e; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.05); }
+.tif-pulse-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
+
+.tif-tlp { font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.tif-tlp.white { background: #f1f5f9; color: #475569; }
+.tif-tlp.green { background: #dcfce7; color: #166534; }
+.tif-tlp.amber { background: #fef3c7; color: #92400e; }
+.tif-tlp.red { background: #fee2e2; color: #991b1b; }
+
+.tif-card-title { font-size: 1rem; font-weight: 800; margin: 0; color: #1e293b; line-height: 1.4; }
+.tif-card-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.tif-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tif-tag-mini { font-size: 0.65rem; font-weight: 700; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+.tif-card-footer { display: flex; gap: 1rem; font-size: 0.7rem; color: #94a3b8; font-weight: 600; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; }
+.tif-card-footer span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* Inspector */
+.tif-inspector { 
+  background: white; 
+  border-radius: 16px; 
+  border: 1px solid #e2e8f0; 
+  height: calc(100vh - 12rem); 
+  position: sticky; 
+  top: 1.5rem; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
 }
 
-.tif-meta-pill i { color: #0f766e; }
+.tif-inspector.empty { justify-content: center; align-items: center; color: #94a3b8; text-align: center; padding: 2rem; }
+.tif-ins-header { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; position: relative; }
+.tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.tif-ins-header.white .tif-ins-tlp-bar { background: #cbd5e1; }
+.tif-ins-header.green .tif-ins-tlp-bar { background: #22c55e; }
+.tif-ins-header.amber .tif-ins-tlp-bar { background: #f59e0b; }
+.tif-ins-header.red .tif-ins-tlp-bar { background: #ef4444; }
 
-/* Pagination Control */
-.tif-pagination-control {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  padding: 0.35rem;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-}
+.ins-title-scroll { font-size: 1.25rem; font-weight: 900; color: #1e293b; margin: 0.5rem 0 0; line-height: 1.3; }
+.tif-ins-body { padding: 1.5rem; flex: 1; overflow-y: auto; }
+.tif-ins-section { margin-bottom: 1.75rem; }
+.tif-ins-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.tif-ins-label::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
 
-.pag-arrow {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #f1f5f9;
-  background: white;
-  color: #64748b;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
+.tif-ins-ioc-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.tif-ins-ioc-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9; }
+.tif-ioc-type { font-size: 0.6rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.2rem 0.4rem; border-radius: 4px; min-width: 4rem; text-align: center; }
+.tif-ioc-value { font-size: 0.75rem; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #334155; }
 
-.pag-arrow:hover:not(:disabled) {
-  border-color: #0f766e;
-  color: #0f766e;
-  background: #f0fdfa;
-}
+.tif-loading-feed { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem; color: #94a3b8; }
+.tif-loader-box { text-align: center; }
+.tif-loader-box i { font-size: 2.5rem; color: #0f766e; margin-bottom: 1rem; }
 
-.pag-arrow:disabled { opacity: 0.2; cursor: not-allowed; }
-
-.pag-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0 0.75rem;
-  font-weight: 800;
-  font-size: 0.85rem;
-  color: #1e293b;
-}
-
-.sep-p { font-size: 0.65rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; }
-.total-p { color: #64748b; }
-
-.tif-pag-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.tif-pag-info {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0 0.75rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #1e293b;
-  border-left: 1px solid #f1f5f9;
-  border-right: 1px solid #f1f5f9;
-}
-
-.tif-pag-sep { color: #94a3b8; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; }
-.tif-pag-total { color: #64748b; }
-
+/* Helpers */
+.scroll-y::-webkit-scrollbar { width: 5px; }
+.scroll-y::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .truncate-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
