@@ -48,29 +48,32 @@
 
       <div class="tif-summary-grid" v-if="activeModule === 'otx'">
         <div class="tif-summary-card">
-          <label>Active Pulses</label>
+          <label><i class="fas fa-satellite-dish"></i> Active Pulses</label>
           <div class="tif-stat">
             <span class="tif-number">{{ formatNumber(resultCount || pulses.length) }}</span>
-            <span class="tif-trend up"><i class="fas fa-arrow-up"></i> Live</span>
           </div>
+          <p>Live signals detected</p>
         </div>
         <div class="tif-summary-card">
-          <label>Total Indicators</label>
+          <label><i class="fas fa-fingerprint"></i> Total Indicators</label>
           <div class="tif-stat">
             <span class="tif-number">{{ formatNumber(totalIndicators) }}</span>
           </div>
+          <p>IOCs in current view</p>
         </div>
         <div class="tif-summary-card">
-          <label>Threat Contexts</label>
+          <label><i class="fas fa-tags"></i> Contexts</label>
           <div class="tif-stat">
             <span class="tif-number">{{ formatNumber(uniqueTagCount) }}</span>
           </div>
+          <p>Distinct threat tags</p>
         </div>
         <div class="tif-summary-card">
-          <label>Intel Freshness</label>
+          <label><i class="fas fa-clock"></i> Freshness</label>
           <div class="tif-stat">
             <span class="tif-number">{{ lastUpdatedLabel }}</span>
           </div>
+          <p>Latest update received</p>
         </div>
       </div>
     </header>
@@ -89,15 +92,18 @@
           <button @click="applySearch" class="btn-search-trigger">Search</button>
         </div>
         <div class="tif-quick-filters">
-          <button
-            v-for="preset in presets"
-            :key="preset"
-            class="tif-nav-link"
-            :class="{ active: query.toLowerCase() === preset.toLowerCase() }"
-            @click="usePreset(preset)"
-          >
-            {{ preset }}
-          </button>
+          <span class="filter-label">Quick Filters:</span>
+          <div class="filter-pills">
+            <button
+              v-for="preset in presets"
+              :key="preset"
+              class="tif-nav-link"
+              :class="{ active: query.toLowerCase() === preset.toLowerCase() }"
+              @click="usePreset(preset)"
+            >
+              {{ preset }}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -106,7 +112,7 @@
           <div class="tif-widget">
             <div class="tif-widget-head">
               <h3><i class="fas fa-rss"></i> Subscribed</h3>
-              <button class="btn-icon-tiny" @click="loadSubscribedFeed" :disabled="subscribedLoading">
+              <button class="btn-icon-tiny" @click="loadSubscribedFeed" :disabled="subscribedLoading" title="Refresh Subscriptions">
                 <i class="fas fa-redo-alt" :class="{ 'fa-spin': subscribedLoading }"></i>
               </button>
             </div>
@@ -126,7 +132,7 @@
                   <i class="fas fa-chevron-right"></i>
                 </div>
               </div>
-              <div v-else class="tif-widget-empty">No subscriptions.</div>
+              <div v-else class="tif-widget-empty">No active subscriptions found.</div>
             </div>
           </div>
         </aside>
@@ -136,8 +142,8 @@
             <div class="tif-feed-title">
               <h2>Global Threat Signals</h2>
               <div class="tif-badge-row">
-                <span v-if="resultCount" class="tif-count-badge">{{ formatNumber(resultCount) }} Results</span>
-                <span class="tif-fresh-badge"><i class="fas fa-history"></i> Last 2 Years Only</span>
+                <span class="tif-count-badge">{{ formatNumber(resultCount) }} Results Found</span>
+                <span class="tif-fresh-badge"><i class="fas fa-calendar-check"></i> Last 2 Years Only</span>
               </div>
             </div>
             <div class="tif-pagination-new">
@@ -451,21 +457,43 @@ export default {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
     },
-    normalizePulseFeedPayload(p) {
-      const res = p?.results || p?.pulses || [];
-      const pulses = res.map((x, i) => ({
-        id: String(x.id || x.pulse_id || i),
-        name: x.name || "Untitled",
-        description: x.description || "",
-        author: x.author_name || "OTX",
-        modified: x.modified || x.created || "",
-        tlp: String(x.tlp || "WHITE").toUpperCase(),
-        tags: x.tags || [],
-        indicatorCount: x.indicator_count || x.indicators?.length || 0,
-        indicators: x.indicators?.map(y => ({ type: y.type || y.indicator_type, value: y.indicator || y.value })) || [],
-        adversary: x.adversary || ""
-      }));
-      return { count: p?.count || pulses.length, next: !!p?.next, pulses };
+    normalizePulseFeedPayload(payload) {
+      if (!payload) return { count: 0, next: false, pulses: [] };
+      const rawResults = payload.results || payload.pulses || [];
+      
+      const pulses = rawResults.map((pulse, index) => {
+        // Defensive extraction of indicators
+        const rawIndicators = pulse.indicators || [];
+        const normalizedIndicators = Array.isArray(rawIndicators) 
+          ? rawIndicators.map(i => ({
+              type: String(i.type || i.indicator_type || "IOC"),
+              value: String(i.indicator || i.value || "")
+            })).filter(i => i.value)
+          : [];
+
+        return {
+          id: String(pulse.id || pulse.pulse_id || `idx-${index}`),
+          name: pulse.name || "Untitled Threat Pulse",
+          description: pulse.description || "",
+          author: pulse.author_name || "OTX Contributor",
+          modified: pulse.modified || pulse.created || new Date().toISOString(),
+          tlp: String(pulse.tlp || "WHITE").toUpperCase(),
+          tags: Array.isArray(pulse.tags) ? pulse.tags.map(String) : [],
+          indicatorCount: Number(pulse.indicator_count || normalizedIndicators.length),
+          indicators: normalizedIndicators,
+          adversary: pulse.adversary || "",
+          malwareFamilies: Array.isArray(pulse.malware_families) ? pulse.malware_families : [],
+          industries: Array.isArray(pulse.industries) ? pulse.industries : [],
+          targetCountries: Array.isArray(pulse.targeted_countries) ? pulse.targeted_countries : [],
+          references: Array.isArray(pulse.references) ? pulse.references : []
+        };
+      });
+
+      return {
+        count: Number(payload.count) || pulses.length,
+        next: Boolean(payload.next),
+        pulses
+      };
     },
     applySearch() { this.query = this.queryDraft; this.page = 1; this.loadFeed(); },
     usePreset(p) { this.query = p; this.queryDraft = p; this.page = 1; this.loadFeed(); },
@@ -514,60 +542,192 @@ export default {
 .tif-widget-item-main span { font-size: 0.7rem; color: #94a3b8; }
 
 .tif-content { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
-.tif-nav-toolbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 0.75rem 1.25rem; border-radius: 16px; border: 1px solid #e2e8f0; }
-.tif-search-group { display: flex; align-items: center; gap: 1rem; flex: 1; max-width: 30rem; }
-.tif-search-group input { border: none; outline: none; flex: 1; font-weight: 500; }
-.btn-search-trigger { padding: 0.5rem 1rem; background: #0f766e; color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.8rem; }
+.tif-nav-toolbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: white; 
+  padding: 0.75rem 1.25rem; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  gap: 2rem;
+}
+
+.tif-search-group { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+  flex: 1; 
+}
+
+.tif-search-group input { 
+  border: none; 
+  outline: none; 
+  flex: 1; 
+  font-weight: 500; 
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+.btn-search-trigger { 
+  padding: 0.4rem 1rem; 
+  background: #0f766e; 
+  color: white; 
+  border: none; 
+  border-radius: 6px; 
+  font-weight: 700; 
+  font-size: 0.8rem; 
+  cursor: pointer;
+}
+
+.tif-quick-filters { 
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+}
+
+.filter-label { 
+  font-size: 0.7rem; 
+  font-weight: 800; 
+  color: #94a3b8; 
+  text-transform: uppercase; 
+  white-space: nowrap;
+}
+
+.filter-pills { 
+  display: flex; 
+  gap: 0.5rem; 
+  flex-wrap: wrap; 
+}
+
+.tif-nav-link { 
+  padding: 0.35rem 0.75rem; 
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  color: #64748b; 
+  border: 1px solid #e2e8f0; 
+  background: #f8fafc; 
+  border-radius: 6px; 
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tif-nav-link:hover { border-color: #0f766e; color: #0f766e; }
+.tif-nav-link.active { background: #0f766e; color: white; border-color: #0f766e; }
 
 /* Cards */
-.tif-pulse-scroll-area { max-height: calc(100vh - 25rem); overflow-y: auto; padding-right: 0.5rem; }
-.tif-pulse-card { background: white; padding: 1.5rem; border-radius: 16px; border: 1px solid #e2e8f0; margin-bottom: 1rem; cursor: pointer; transition: 0.2s; }
-.tif-pulse-card:hover { border-color: #0f766e; transform: translateY(-2px); }
-.tif-pulse-card.active { border-color: #0f766e; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.1); }
+.tif-pulse-scroll-area { 
+  max-height: calc(100vh - 28rem); 
+  overflow-y: auto; 
+  padding-right: 0.75rem; 
+  margin-top: 0.5rem;
+}
 
-.tif-card-header { display: flex; justify-content: space-between; margin-bottom: 1rem; }
-.tif-tlp { font-size: 0.65rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 6px; }
+.tif-pulse-card { 
+  background: white; 
+  padding: 1.25rem; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  margin-bottom: 1rem; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tif-pulse-card:hover { border-color: #0f766e; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.05); }
+.tif-pulse-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
+
+.tif-card-header { display: flex; justify-content: space-between; align-items: center; }
+.tif-tlp { font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
 .tif-tlp.white { background: #f1f5f9; color: #475569; }
 .tif-tlp.green { background: #dcfce7; color: #166534; }
 .tif-tlp.amber { background: #fef3c7; color: #92400e; }
 .tif-tlp.red { background: #fee2e2; color: #991b1b; }
 
-.tif-card-title { font-size: 1.1rem; font-weight: 800; margin: 0 0 0.5rem; }
-.tif-card-desc { font-size: 0.85rem; color: #64748b; line-height: 1.5; margin-bottom: 1rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.tif-card-footer { display: flex; gap: 1.5rem; font-size: 0.75rem; color: #94a3b8; font-weight: 600; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
+.tif-ioc-count { font-size: 0.7rem; font-weight: 700; color: #64748b; }
+
+.tif-card-title { font-size: 1rem; font-weight: 800; margin: 0; color: #1e293b; line-height: 1.4; }
+.tif-card-desc { font-size: 0.8rem; color: #64748b; line-height: 1.5; margin: 0; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.tif-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tif-tag-mini { font-size: 0.65rem; font-weight: 700; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+.tif-card-footer { display: flex; gap: 1rem; font-size: 0.7rem; color: #94a3b8; font-weight: 600; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; }
+.tif-card-footer span { display: flex; align-items: center; gap: 0.4rem; }
 
 /* Inspector */
-.tif-inspector { background: white; border-radius: 20px; border: 1px solid #e2e8f0; height: calc(100vh - 4rem); position: sticky; top: 2rem; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+.tif-inspector { 
+  background: white; 
+  border-radius: 16px; 
+  border: 1px solid #e2e8f0; 
+  height: calc(100vh - 12rem); 
+  position: sticky; 
+  top: 1.5rem; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+}
+
+.tif-inspector.empty { justify-content: center; align-items: center; color: #94a3b8; text-align: center; padding: 2rem; }
+.tif-inspector-empty i { font-size: 2rem; margin-bottom: 1rem; opacity: 0.5; }
+
 .tif-ins-header { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; position: relative; }
-.tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; }
+.tif-ins-tlp-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
 .tif-ins-header.white .tif-ins-tlp-bar { background: #cbd5e1; }
 .tif-ins-header.green .tif-ins-tlp-bar { background: #22c55e; }
 .tif-ins-header.amber .tif-ins-tlp-bar { background: #f59e0b; }
 .tif-ins-header.red .tif-ins-tlp-bar { background: #ef4444; }
 
+.ins-title-scroll { font-size: 1.25rem; font-weight: 900; color: #1e293b; margin: 0.5rem 0 0; line-height: 1.3; }
+
 .tif-ins-body { padding: 1.5rem; flex: 1; overflow-y: auto; }
-.tif-ins-section { margin-bottom: 2rem; }
-.tif-ins-label { font-size: 0.75rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.tif-ins-section { margin-bottom: 1.75rem; }
+.tif-ins-label { font-size: 0.7rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; letter-spacing: 0.05em; }
 .tif-ins-label::after { content: ''; flex: 1; height: 1px; background: #f1f5f9; }
 
-.tif-ins-ioc-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; background: #f8fafc; border-radius: 8px; margin-bottom: 0.5rem; }
-.tif-ioc-type { font-size: 0.6rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.2rem 0.4rem; border-radius: 4px; }
-.tif-ioc-value { font-size: 0.75rem; font-family: monospace; overflow: hidden; text-overflow: ellipsis; }
+.tif-ins-context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.tif-ins-context-item label { font-size: 0.65rem; color: #94a3b8; font-weight: 700; display: block; margin-bottom: 0.25rem; }
+.tif-ins-context-item strong { font-size: 0.85rem; color: #1e293b; }
+
+.tif-ins-ioc-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.tif-ins-ioc-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; background: #f8fafc; border-radius: 8px; border: 1px solid #f1f5f9; }
+.tif-ioc-type { font-size: 0.6rem; font-weight: 800; background: #f0fdfa; color: #0f766e; padding: 0.2rem 0.4rem; border-radius: 4px; min-width: 4rem; text-align: center; }
+.tif-ioc-value { font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #334155; }
+
+.tif-ins-desc { font-size: 0.85rem; color: #475569; line-height: 1.6; margin: 0; }
 
 /* MITRE Specific */
-.tif-tactic-btn { width: 100%; border: none; background: transparent; padding: 1rem; text-align: left; border-bottom: 1px solid #f1f5f9; cursor: pointer; display: flex; flex-direction: column; }
+.tif-tactic-btn { width: 100%; border: none; background: transparent; padding: 1rem; text-align: left; border-bottom: 1px solid #f1f5f9; cursor: pointer; display: flex; flex-direction: column; transition: all 0.2s; }
+.tif-tactic-btn:hover:not(.active) { background: #f8fafc; }
 .tif-tactic-btn.active { background: #f0fdfa; border-left: 4px solid #0f766e; }
-.tactic-id { font-size: 0.65rem; font-weight: 800; color: #0f766e; }
-.tactic-name { font-weight: 700; font-size: 0.85rem; }
+.tactic-id { font-size: 0.6rem; font-weight: 800; color: #0f766e; margin-bottom: 0.25rem; }
+.tactic-name { font-weight: 700; font-size: 0.85rem; color: #1e293b; }
 
-.tif-technique-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; max-height: calc(100vh - 25rem); overflow-y: auto; }
-.tif-tech-card { background: white; padding: 1.25rem; border-radius: 16px; border: 1px solid #e2e8f0; cursor: pointer; transition: 0.2s; }
-.tif-tech-card.active { border-color: #0f766e; background: #f0fdfa; }
+.tif-technique-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; max-height: calc(100vh - 22rem); overflow-y: auto; padding-right: 0.5rem; }
+.tif-tech-card { background: white; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+.tif-tech-card:hover { border-color: #0f766e; transform: translateY(-2px); }
+.tif-tech-card.active { border-color: #0f766e; background: #f0fdfa; border-left: 4px solid #0f766e; }
 
-.scroll-y::-webkit-scrollbar { width: 4px; }
-.scroll-y::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+.tech-id { font-size: 0.65rem; font-weight: 800; color: #94a3b8; }
+.tech-name { font-weight: 800; font-size: 0.9rem; color: #1e293b; margin: 0; }
+.tech-summary { font-size: 0.75rem; color: #64748b; line-height: 1.4; margin: 0; }
+
+.tif-ins-header.mitre .tif-ins-tlp-bar { background: #0f766e; }
+.tif-tech-id-badge { font-size: 0.7rem; font-weight: 900; color: #0f766e; background: rgba(15, 118, 110, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; }
+.tif-mitre-desc { font-size: 0.85rem; color: #475569; line-height: 1.6; }
+
+.scroll-y::-webkit-scrollbar { width: 5px; }
+.scroll-y::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+.scroll-y::-webkit-scrollbar-track { background: transparent; }
+
 .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.btn-premium-small { padding: 0.5rem 1rem; background: white; border: 2px solid #0f766e; color: #0f766e; border-radius: 10px; font-weight: 800; font-size: 0.8rem; cursor: pointer; }
+.truncate-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.btn-premium-small { padding: 0.5rem 1.25rem; background: white; border: 2px solid #0f766e; color: #0f766e; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; }
+.btn-premium-small:hover { background: #0f766e; color: white; }
 
 @media (max-width: 1400px) {
   .tif-main-layout { grid-template-columns: 18rem 1fr; }
