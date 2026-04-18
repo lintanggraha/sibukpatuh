@@ -43,6 +43,16 @@ export default defineConfig({
     vue(),
     copyDataFiles()
   ],
+  server: {
+    proxy: {
+      '/api/otx': {
+        target: 'https://otx.alienvault.com',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api\/otx/, '/api/v1/search/pulses')
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
