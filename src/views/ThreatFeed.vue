@@ -218,7 +218,7 @@ export default {
       loading: false,
       subscribedLoading: false,
       presets: ["ransomware", "phishing", "APT", "indonesia"],
-      selectedYear: "All"
+      selectedYear: "Recent (2Y)"
     };
   },
   computed: {
@@ -227,21 +227,16 @@ export default {
       return all.find(p => p.id === this.activePulseId) || this.pulses[0] || null;
     },
     displayPulses() {
-      console.log("LeadDev: Total pulses available for filtering:", this.pulses.length);
-      console.log("LeadDev: Current Year Filter:", this.selectedYear);
-      
       let f = [...this.pulses];
-      if (this.selectedYear !== "All") {
-        f = f.filter(p => {
-          const year = new Date(p.modified).getFullYear().toString();
-          return year === this.selectedYear;
-        });
+      
+      if (this.selectedYear === "Recent (2Y)") {
+        const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
+        const now = Date.now();
+        f = f.filter(p => (now - new Date(p.modified).getTime()) <= TWO_YEARS_MS);
+      } else if (this.selectedYear !== "All") {
+        f = f.filter(p => new Date(p.modified).getFullYear().toString() === this.selectedYear);
       }
       
-      console.log("LeadDev: Pulses after year filtering:", f.length);
-      if (f.length > 0) {
-        console.log("LeadDev: First pulse year in result:", new Date(f[0].modified).getFullYear());
-      }
       return f;
     },
     totalIndicators() { return this.pulses.reduce((t, p) => t + (p.indicatorCount || 0), 0); },
@@ -256,7 +251,7 @@ export default {
     },
     availableYears() {
       const years = new Set(this.pulses.map(p => new Date(p.modified).getFullYear().toString()));
-      return ["All", ...Array.from(years).sort((a, b) => b - a)];
+      return ["Recent (2Y)", "All", ...Array.from(years).sort((a, b) => b - a)];
     }
   },
   mounted() {
