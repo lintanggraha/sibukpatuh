@@ -227,14 +227,28 @@ export default {
       return all.find(p => p.id === this.activePulseId) || this.pulses[0] || null;
     },
     displayPulses() {
+      if (!this.pulses.length) return [];
+      
       let f = [...this.pulses];
+      const now = Date.now();
+      const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
       
       if (this.selectedYear === "Recent (2Y)") {
-        const TWO_YEARS_MS = 2 * 365 * 24 * 60 * 60 * 1000;
-        const now = Date.now();
-        f = f.filter(p => (now - new Date(p.modified).getTime()) <= TWO_YEARS_MS);
+        f = f.filter(p => {
+          const modTime = new Date(p.modified).getTime();
+          return !isNaN(modTime) && (now - modTime) <= TWO_YEARS_MS;
+        });
+        
+        // LeadDev: If recent filter is too strict and kills all results, fallback to ALL
+        if (f.length === 0 && this.pulses.length > 0) {
+          console.warn("LeadDev: No pulses in last 2 years. Falling back to ALL data.");
+          return this.pulses;
+        }
       } else if (this.selectedYear !== "All") {
-        f = f.filter(p => new Date(p.modified).getFullYear().toString() === this.selectedYear);
+        f = f.filter(p => {
+          const year = new Date(p.modified).getFullYear().toString();
+          return year === this.selectedYear;
+        });
       }
       
       return f;
