@@ -50,7 +50,9 @@
                 </div>
               </div>
               
-              <h3 class="cve-card-title">{{ cve.title }}</h3>
+              <div class="cve-card-body">
+                <h3 class="cve-card-title">{{ cve.title }}</h3>
+              </div>
               
               <div class="cve-card-footer">
                 <div class="cve-meta">
@@ -58,7 +60,7 @@
                   <span class="cve-date">{{ cve.date }}</span>
                 </div>
                 <button class="btn btn-ask-ai" @click.stop="askAi(cve)">
-                  Tanya AI <i class="fas fa-external-link-alt ms-1"></i>
+                  Tanya AI <i class="fas fa-chevron-right ms-1"></i>
                 </button>
               </div>
             </div>
@@ -357,9 +359,9 @@ export default {
 .cve-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 1.15rem;
-  margin-bottom: 0.85rem;
+  border-radius: 16px;
+  padding: 0.85rem 1.15rem;
+  margin-bottom: 0.65rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -382,13 +384,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cve-id {
   font-weight: 700;
   color: #3b82f6;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .cve-metrics {
@@ -400,13 +402,13 @@ export default {
 .cve-score {
   font-weight: 800;
   color: #0f172a;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .cve-severity-badge {
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -417,13 +419,13 @@ export default {
 .cve-severity-badge.low { background: #f0fdf4; color: #166534; }
 
 .cve-card-title {
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #1e293b;
-  line-height: 1.45;
-  margin-bottom: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -441,21 +443,21 @@ export default {
 }
 
 .cve-vendor {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: #64748b;
 }
 
 .cve-date {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #94a3b8;
 }
 
 .btn-ask-ai {
   background: #f1f5f9;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #334155;
   transition: all 0.2s ease;
