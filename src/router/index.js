@@ -50,6 +50,11 @@ const routes = [
         path: '/frameworks/owasp-asvs',
         name: 'owasp_asvs',
         component: () => import('../views/OwaspAsvs.vue')
+    },
+    {
+        path: '/intel/cve-intelligence',
+        name: 'cve_intel',
+        component: () => import('../views/CveIntelligence.vue')
     }
 ];
 

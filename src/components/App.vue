@@ -143,6 +143,19 @@ export default {
             },
           ],
         },
+        {
+          label: "Intelijen",
+          icon: "fa-shield-virus",
+          active: false,
+          show: false,
+          items: [
+            {
+              routeName: "cve_intel",
+              label: "CVE Terbaru",
+              icon: "fa-bug",
+            },
+          ],
+        },
       ],
     };
   },
@@ -199,6 +212,8 @@ export default {
         route.name === "cobit" ||
         route.name === "owasp_top10" ||
         route.name === "owasp_asvs";
+      this.frameworkNavGroups[2].active =
+        route.name === "cve_intel";
       
       // Sync with Pinia store
       const store = useFrameworkStore();
