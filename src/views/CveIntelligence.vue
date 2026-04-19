@@ -40,28 +40,25 @@
               :class="{ selected: selectedCve?.id === cve.id }"
               @click="selectCve(cve)"
             >
-              <div class="cve-card-header">
+              <div class="cve-top-row">
                 <span class="cve-id">{{ cve.id }}</span>
-                <div class="cve-metrics">
+                <div class="cve-actions-group">
                   <span class="cve-score">{{ cve.score }}</span>
                   <span :class="['cve-severity-badge', cve.severity.toLowerCase()]">
                     {{ cve.severity }}
                   </span>
+                  <button class="btn btn-ask-ai-sm" @click.stop="askAi(cve)" title="Tanya AI">
+                    <i class="fas fa-robot"></i>
+                  </button>
                 </div>
               </div>
               
-              <div class="cve-card-body">
-                <h3 class="cve-card-title">{{ cve.title }}</h3>
-              </div>
+              <h3 class="cve-card-title">{{ cve.title }}</h3>
               
-              <div class="cve-card-footer">
-                <div class="cve-meta">
-                  <span class="cve-vendor"><strong>{{ cve.vendor }}</strong> · {{ cve.product }}</span>
-                  <span class="cve-date">{{ cve.date }}</span>
-                </div>
-                <button class="btn btn-ask-ai" @click.stop="askAi(cve)">
-                  Tanya AI <i class="fas fa-chevron-right ms-1"></i>
-                </button>
+              <div class="cve-bottom-row">
+                <span class="cve-meta-info">
+                  <strong>{{ cve.vendor }}</strong> · {{ cve.product }} · <span class="text-muted">{{ cve.date }}</span>
+                </span>
               </div>
             </div>
           </transition-group>
@@ -359,28 +356,26 @@ export default {
 .cve-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 0.85rem 1.15rem;
-  margin-bottom: 0.65rem;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .cve-card:hover {
   border-color: #3b82f6;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  background: #f8faff;
 }
 
 .cve-card.selected {
   border-color: #3b82f6;
-  background: #f0f7ff;
+  background: #eff6ff;
   box-shadow: 0 0 0 1px #3b82f6;
 }
 
-.cve-card-header {
+.cve-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -388,28 +383,29 @@ export default {
 }
 
 .cve-id {
-  font-weight: 700;
+  font-weight: 800;
   color: #3b82f6;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  letter-spacing: -0.2px;
 }
 
-.cve-metrics {
+.cve-actions-group {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .cve-score {
   font-weight: 800;
   color: #0f172a;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .cve-severity-badge {
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.65rem;
-  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.6rem;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -418,49 +414,49 @@ export default {
 .cve-severity-badge.medium { background: #fef9c3; color: #854d0e; }
 .cve-severity-badge.low { background: #f0fdf4; color: #166534; }
 
+.btn-ask-ai-sm {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.btn-ask-ai-sm:hover {
+  background: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
 .cve-card-title {
   font-size: 0.88rem;
   font-weight: 700;
   color: #1e293b;
   line-height: 1.4;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.5rem;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.cve-card-footer {
+.cve-bottom-row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.cve-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.cve-vendor {
-  font-size: 0.78rem;
+.cve-meta-info {
+  font-size: 0.72rem;
   color: #64748b;
-}
-
-.cve-date {
-  font-size: 0.75rem;
-  color: #94a3b8;
-}
-
-.btn-ask-ai {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #334155;
-  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-ask-ai:hover {
