@@ -764,22 +764,22 @@ body {
 .trakteer-content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1.5rem;
+  gap: 0.6rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 999px;
   background: linear-gradient(135deg, #FF5E5E 0%, #FF2E63 100%);
   color: white !important;
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   letter-spacing: 0.02em;
-  box-shadow: 0 12px 30px rgba(255, 46, 99, 0.45);
+  box-shadow: 0 10px 25px rgba(255, 46, 99, 0.4);
   position: relative;
   z-index: 2;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .trakteer-content i {
-  font-size: 1.1rem;
+  font-size: 1rem;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 

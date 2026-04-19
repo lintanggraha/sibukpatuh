@@ -9,16 +9,25 @@
             <span class="cve-badge-count">{{ filteredCves.length }} CVE</span>
           </div>
           
-          <div class="cve-filters d-flex flex-wrap gap-2">
-            <button 
-              v-for="filter in filters" 
-              :key="filter"
-              class="btn cve-filter-btn"
-              :class="{ active: activeFilter === filter }"
-              @click="activeFilter = filter"
-            >
-              {{ filter }}
-            </button>
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="cve-filters d-flex flex-wrap gap-2">
+              <button 
+                v-for="filter in filters" 
+                :key="filter"
+                class="btn cve-filter-btn"
+                :class="{ active: activeFilter === filter }"
+                @click="activeFilter = filter"
+              >
+                {{ filter }}
+              </button>
+            </div>
+
+            <div class="cve-limit-selector d-flex align-items-center gap-2">
+              <small class="text-muted fw-bold">Tampilkan:</small>
+              <select v-model="displayLimit" class="form-select form-select-sm limit-select">
+                <option v-for="opt in limitOptions" :key="opt" :value="opt">{{ opt }}</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -69,6 +78,10 @@
               <span class="ai-powered">powered by Gemini</span>
             </div>
 
+            <div class="ai-disclaimer" v-if="!apiKey">
+              <i class="fas fa-info-circle me-2"></i>
+              Prototype ini simulasikan respons AI. Untuk produksi, hubungkan Gemini API key via .env
+            </div>
 
             <div class="ai-body">
               <div class="ai-context mb-4" v-if="selectedCve">
@@ -153,6 +166,8 @@ export default {
         "Apakah ada exploit yang sudah beredar?",
         "Regulasi mana yang terdampak?"
       ],
+      displayLimit: 5,
+      limitOptions: [5, 10, 15, 20],
       cves: [
         {
           id: "CVE-2025-21298",
@@ -231,8 +246,11 @@ export default {
   },
   computed: {
     filteredCves() {
-      if (this.activeFilter === "Semua") return this.cves;
-      return this.cves.filter(cve => cve.severity === this.activeFilter.toUpperCase());
+      let filtered = this.cves;
+      if (this.activeFilter !== "Semua") {
+        filtered = this.cves.filter(cve => cve.severity === this.activeFilter.toUpperCase());
+      }
+      return filtered.slice(0, this.displayLimit);
     }
   },
   methods: {
@@ -343,9 +361,9 @@ export default {
 .cve-card {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  border-radius: 18px;
+  padding: 1.15rem;
+  margin-bottom: 0.85rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -403,11 +421,11 @@ export default {
 .cve-severity-badge.low { background: #f0fdf4; color: #166534; }
 
 .cve-card-title {
-  font-size: 1.05rem;
+  font-size: 0.94rem;
   font-weight: 700;
   color: #1e293b;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  line-height: 1.45;
+  margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -457,7 +475,7 @@ export default {
 .ai-assistant-sticky {
   position: sticky;
   top: 1.5rem;
-  height: calc(100% - 1.5rem);
+  z-index: 10;
 }
 
 .ai-assistant-card {
@@ -466,7 +484,8 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100vh - 180px);
+  min-height: 600px;
 }
 
 .ai-header {
@@ -654,5 +673,18 @@ export default {
     min-height: 500px;
     margin-top: 2rem;
   }
+}
+
+.limit-select {
+  width: 70px;
+  border-radius: 10px;
+  border-color: #e2e8f0;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.limit-select:focus {
+  border-color: #3b82f6;
+  box-shadow: none;
 }
 </style>
