@@ -69,10 +69,6 @@
               <span class="ai-powered">powered by Gemini</span>
             </div>
 
-            <div class="ai-disclaimer" v-if="!apiKey">
-              <i class="fas fa-info-circle me-2"></i>
-              Prototype ini simulasikan respons AI. Untuk produksi, hubungkan Gemini API key via .env
-            </div>
 
             <div class="ai-body">
               <div class="ai-context mb-4" v-if="selectedCve">
@@ -460,7 +456,8 @@ export default {
 /* AI Assistant Styles */
 .ai-assistant-sticky {
   position: sticky;
-  top: 1rem;
+  top: 1.5rem;
+  height: calc(100% - 1.5rem);
 }
 
 .ai-assistant-card {
@@ -469,8 +466,7 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 180px);
-  min-height: 600px;
+  height: 100%;
 }
 
 .ai-header {
