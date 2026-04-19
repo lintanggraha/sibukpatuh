@@ -69,6 +69,20 @@
           </transition>
         </router-view>
       </main>
+      <!-- Trakteer Tip Floating Button -->
+      <a 
+        href="https://trakteer.id/lintanggraha/tip" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="trakteer-fab"
+        aria-label="Dukung saya di Trakteer"
+      >
+        <div class="trakteer-pulse"></div>
+        <div class="trakteer-content">
+          <i class="fas fa-mug-hot"></i>
+          <span>Traktir Kopi</span>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -716,6 +730,93 @@ body {
     right: 0;
     left: 0;
     min-width: 100%;
+  }
+}
+
+/* Trakteer Floating Button Styles */
+.trakteer-fab {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trakteer-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #FF5E5E 0%, #FF2E63 100%);
+  color: white !important;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 30px rgba(255, 46, 99, 0.45);
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.trakteer-content i {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.trakteer-fab:hover {
+  transform: scale(1.08) translateY(-8px) rotate(2deg);
+}
+
+.trakteer-fab:active {
+  transform: scale(0.95) translateY(0);
+}
+
+.trakteer-pulse {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  border-radius: 999px;
+  background: rgba(255, 46, 99, 0.3);
+  z-index: 1;
+  animation: trakteer-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes trakteer-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  75%, 100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .trakteer-fab {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  .trakteer-content span {
+    display: none;
+  }
+  .trakteer-content {
+    padding: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+  .trakteer-content i {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .trakteer-pulse {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>
