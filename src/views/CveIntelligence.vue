@@ -78,10 +78,6 @@
               <span class="ai-powered">powered by Gemini</span>
             </div>
 
-            <div class="ai-disclaimer" v-if="!apiKey">
-              <i class="fas fa-info-circle me-2"></i>
-              Prototype ini simulasikan respons AI. Untuk produksi, hubungkan Gemini API key via .env
-            </div>
 
             <div class="ai-body">
               <div class="ai-context mb-4" v-if="selectedCve">
