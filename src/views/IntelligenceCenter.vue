@@ -414,13 +414,16 @@
     </div>
 
     <!-- Toast Notifications -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
-      <div v-for="toast in toasts" :key="toast.id" class="toast show border-0 shadow" role="alert">
-        <div :class="['toast-header text-white', toast.type === 'error' ? 'bg-danger' : 'bg-primary']">
-          <strong class="me-auto"><i class="fas fa-info-circle me-1"></i> System</strong>
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1200;">
+      <div v-for="toast in toasts" :key="toast.id" class="toast show border-0 shadow-lg mb-2" role="alert" style="min-width: 300px;">
+        <div :class="['toast-header text-white border-0', toast.type === 'error' ? 'bg-danger' : 'bg-primary']">
+          <i class="fas fa-info-circle me-2"></i>
+          <strong class="me-auto">System Notification</strong>
           <button type="button" class="btn-close btn-close-white" @click="removeToast(toast.id)"></button>
         </div>
-        <div class="toast-body bg-white">{{ toast.message }}</div>
+        <div class="toast-body bg-white rounded-bottom">
+          {{ toast.message }}
+        </div>
       </div>
     </div>
 
@@ -633,8 +636,9 @@ export default {
     async fetchCisaKEV() {
       this.isLoadingCves = true;
       try {
-        const response = await fetch('https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json');
-        if (!response.ok) throw new Error('CISA API Error');
+        // Using internal proxy to bypass CORS
+        const response = await fetch('/api/cisa');
+        if (!response.ok) throw new Error('CISA Proxy API Error');
         const data = await response.json();
         
         if (!data.vulnerabilities) throw new Error('Invalid CISA Data');

@@ -25,6 +25,10 @@ export default defineConfig(({ mode }) => {
         '/api/breach': {
           target: 'http://localhost:3000',
           changeOrigin: true,
+        },
+        '/api/cisa': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
         }
       }
     },
