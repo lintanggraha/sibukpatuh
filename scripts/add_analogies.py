@@ -8,6 +8,9 @@ import os
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
+# Constant for repeated analogy to avoid duplication (SonarQube: S1192)
+SEATBELT_ANALOGY = "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi."
+
 # ============================================================
 # ANALOGY TEMPLATES per framework
 # ============================================================
@@ -115,7 +118,7 @@ def get_seojk_analogy(i, req):
         ],
         'default': [
             "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya — keamanan siber juga butuh lapisan perlindungan.",
-            "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi.",
+            SEATBELT_ANALOGY,
         ]
     }
     cat_templates = templates.get(chapter, templates['default'])
@@ -147,7 +150,7 @@ def get_pbi_analogy(i, req):
         ],
         'default': [
             "Seperti menjaga rumah: kunci pintu, pasang alarm, dan tahu tetangga siapa yang bisa dipercaya.",
-            "Seperti sabuk pengaman di mobil: mungkin tidak terasa diperlukan setiap hari, tapi sangat krusial saat hal buruk terjadi.",
+            SEATBELT_ANALOGY,
         ]
     }
     cat_templates = templates.get(domain, templates['default'])

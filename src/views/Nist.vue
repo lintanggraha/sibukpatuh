@@ -470,10 +470,7 @@ export default {
 .nst-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.7rem;cursor:pointer}
 .nst-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:9999}
-.modal-content{background:#fff;border-radius:16px;max-width:800px;width:90%;max-height:90vh;overflow:auto}
-.modal-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--line)}
-.modal-body{padding:1rem}
+.nst-modal-legacy{display:none}/* legacy placeholder removed */
 @media (max-width:1440px){.nst-hero { min-height: 280px; padding: 1.25rem; } .nst-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .nst-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .nst-metric strong { font-size: 1.35rem; } .nst-list, .nst-inspector { min-height: auto; max-height: 520px; }}
 @media (max-height:850px) and (min-width:1024px){.nst-hero { min-height: 240px; padding: 1.15rem; } .nst-metrics { margin-top: 0.6rem; } .nst-list, .nst-inspector { max-height: calc(100vh - 280px); } .nst-inspector-body { padding-top: 0.5rem; }}
 @media (max-width:1399.98px){.nst-workspace,.nst-refspace{grid-template-columns:1fr}.nst-inspector{position:static;min-height:auto}}

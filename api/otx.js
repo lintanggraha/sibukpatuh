@@ -62,6 +62,26 @@ function buildUpstreamPath(searchParams) {
   throw new Error('Unsupported mode. Use pulses or indicator.');
 }
 
+function getAuthMode(serverApiKey, clientApiKey) {
+  if (serverApiKey) return 'server-env';
+  if (clientApiKey) return 'client-header';
+  return 'none';
+}
+
+function getCacheControl(upstreamOk, serverApiKey) {
+  if (upstreamOk && serverApiKey) {
+    return 's-maxage=300, stale-while-revalidate=900';
+  }
+  return 'no-store';
+}
+
+function getErrorStatus(error) {
+  if (error instanceof Error && /Unsupported|Missing/.test(error.message)) {
+    return 400;
+  }
+  return 502;
+}
+
 export default async function handler(request, response) {
   if (request.method !== 'GET') {
     response.setHeader('Allow', 'GET');
@@ -70,9 +90,7 @@ export default async function handler(request, response) {
   }
 
   const requestUrl = new URL(request.url, `https://${request.headers.host || 'localhost'}`);
-  const headers = {
-    Accept: 'application/json',
-  };
+  const headers = { Accept: 'application/json' };
   const serverApiKey = String(process.env.OTX_API_KEY || '').trim();
   const clientApiKey = readHeaderValue(request.headers['x-otx-api-key']);
   const apiKey = serverApiKey || clientApiKey;
@@ -81,25 +99,24 @@ export default async function handler(request, response) {
     headers['X-OTX-API-KEY'] = apiKey;
   }
 
+  const authMode = getAuthMode(serverApiKey, clientApiKey);
+
   try {
     const upstreamPath = buildUpstreamPath(requestUrl.searchParams);
     const upstream = await fetch(`${OTX_API_ROOT}${upstreamPath}`, { headers });
     const body = await upstream.text();
-    const authMode = serverApiKey ? 'server-env' : clientApiKey ? 'client-header' : 'none';
 
     response.setHeader('Content-Type', upstream.headers.get('content-type') || 'application/json');
     response.setHeader('Vary', 'X-OTX-API-KEY');
     response.setHeader('X-SibukPatuh-Otx-Auth-Mode', authMode);
-    response.setHeader(
-      'Cache-Control',
-      upstream.ok && serverApiKey ? 's-maxage=300, stale-while-revalidate=900' : 'no-store',
-    );
+    response.setHeader('Cache-Control', getCacheControl(upstream.ok, serverApiKey));
     response.status(upstream.status).send(body);
   } catch (error) {
-    response.setHeader('X-SibukPatuh-Otx-Auth-Mode', serverApiKey ? 'server-env' : clientApiKey ? 'client-header' : 'none');
-    response.status(error instanceof Error && /Unsupported|Missing/.test(error.message) ? 400 : 502).json({
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    response.setHeader('X-SibukPatuh-Otx-Auth-Mode', authMode);
+    response.status(getErrorStatus(error)).json({
       error: 'OTX request failed',
-      message: error instanceof Error ? error.message : String(error),
+      message: errorMessage,
     });
   }
 }
