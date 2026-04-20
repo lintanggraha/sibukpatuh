@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   if (action === 'feed') {
     // Fetch latest high-risk indicators
-    const feedUrl = `https://pulsedive.com/api/explore.php?q=risk%3Dhigh%2Ccritical&limit=20&pretty=1${PULSEDIVE_KEY ? `&key=${PULSEDIVE_KEY}` : ''}`;
+    const feedUrl = `https://pulsedive.com/api/explore.php?q=risk%3Ahigh%2Ccritical&limit=20&pretty=1${PULSEDIVE_KEY ? `&key=${PULSEDIVE_KEY}` : ''}`;
     try {
       const response = await fetch(feedUrl);
       if (!response.ok) throw new Error("Pulsedive Feed Error");
@@ -24,7 +24,6 @@ export default async function handler(req, res) {
     return res.status(400).json({ success: false, error: "Indicator is required" });
   }
 
-  const PULSEDIVE_KEY = process.env.PULSEDIVE_KEY;
   // Pulsedive allows some unauthenticated requests but with lower limits
   const apiUrl = `https://pulsedive.com/api/info.php?indicator=${encodeURIComponent(indicator)}&pretty=1${PULSEDIVE_KEY ? `&key=${PULSEDIVE_KEY}` : ''}`;
 
