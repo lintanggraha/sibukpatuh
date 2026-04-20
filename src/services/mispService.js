@@ -1,73 +1,61 @@
 import axios from 'axios';
 
-const MISP_URL = import.meta.env.VITE_MISP_URL;
-const MISP_KEY = import.meta.env.VITE_MISP_KEY;
-
-const apiClient = axios.create({
-  baseURL: MISP_URL,
+/**
+ * MISP Service Layer
+ * Now uses the backend proxy (/api/misp) to avoid CORS issues 
+ * and handle SSL certificate verification.
+ */
+const proxy = axios.create({
+  baseURL: '/api/misp',
   headers: {
-    'Authorization': MISP_KEY,
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
+    'Content-Type': 'application/json'
   }
 });
 
 export const mispService = {
-  // 1. Get total events count / index
-  async getEventsIndex(limit = 10, sort = 'date', direction = 'desc') {
+  /**
+   * Universal proxy caller
+   */
+  async callProxy(path, method = 'GET', data = {}) {
     try {
-      const response = await apiClient.get(`/events/index?limit=${limit}&sort=${sort}&direction=${direction}`);
-      // MISP often returns { response: [...] }
-      return response.data.response || response.data;
+      const response = await proxy.post('', { path, method, data });
+      return response.data;
     } catch (error) {
-      console.error('MISP getEventsIndex Error:', error);
+      console.error(`MISP Service Error [${path}]:`, error.response?.data || error.message);
       throw error;
     }
   },
 
-  // 2. Search attributes (IOCs)
-  async searchAttributes(params) {
-    try {
-      const response = await apiClient.post('/attributes/restSearch', {
-        returnFormat: 'json',
-        ...params
-      });
-      // Handle different formats mentioned by user
-      const data = response.data.response || response.data;
-      if (data.Attribute) return data.Attribute;
-      return data;
-    } catch (error) {
-      console.error('MISP searchAttributes Error:', error);
-      throw error;
-    }
+  async getEventsIndex(limit = 10) {
+    const data = await this.callProxy(`/events/index?limit=${limit}`);
+    // MISP index returns an array of { Event: { ... } }
+    return (data || []).map(item => item.Event || item);
   },
 
-  // 3. Get feeds
+  async searchAttributes(filters = {}) {
+    // attributes/restSearch uses POST
+    const data = await this.callProxy('/attributes/restSearch', 'POST', filters);
+    // restSearch usually returns { response: [ ... ] } or just [ ... ]
+    return data.response ? data.response : data;
+  },
+
   async getFeeds() {
-    try {
-      const response = await apiClient.get('/feeds');
-      return response.data.response || response.data;
-    } catch (error) {
-      console.error('MISP getFeeds Error:', error);
-      throw error;
-    }
+    return await this.callProxy('/feeds');
   },
 
-  // 4. Get tags
   async getTags() {
-    try {
-      const response = await apiClient.get('/tags');
-      return response.data.response || response.data;
-    } catch (error) {
-      console.error('MISP getTags Error:', error);
-      throw error;
-    }
+    const data = await this.callProxy('/tags');
+    // Returns { Tag: [ ... ] } or [ ... ]
+    return data.Tag ? data.Tag : data;
+  },
+
+  async getEvent(id) {
+    const data = await this.callProxy(`/events/view/${id}`);
+    return data.Event || data;
   },
 
   // Helper for metrics
   async getMetrics() {
-    const last7Days = Math.floor((Date.now() - 7 * 24 * 60 * 60 * 1000) / 1000);
-    
     const [events, iocs, critical, feeds] = await Promise.all([
       this.getEventsIndex(100), // Larger set for metrics
       this.searchAttributes({ last: '7d', limit: 1 }), // Just to get count if possible or small set
