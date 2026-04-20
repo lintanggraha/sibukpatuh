@@ -34,7 +34,7 @@
         type="button" 
         @click="activeTab = 'otx'"
       >
-        <i class="fas fa-radar"></i>
+        <i class="fas fa-satellite-dish"></i>
         <div>
           <strong>Threat Feed (OTX)</strong>
           <span>Real-time pulses & Breach Checker</span>
@@ -296,7 +296,16 @@
             </div>
 
             <div class="cve-scroll-area">
-              <transition-group name="list" tag="div" class="cve-cards-grid">
+              <div v-if="isLoadingCves" class="text-center py-5">
+                <div class="spinner-border text-primary mb-3"></div>
+                <p class="text-muted">Mengambil data intelijen CISA KEV...</p>
+              </div>
+              <div v-else-if="!filteredCves.length" class="text-center py-5 bg-white rounded-4 border border-dashed">
+                <i class="fas fa-folder-open fs-1 text-muted mb-3 d-block opacity-25"></i>
+                <p class="text-muted">Tidak ada data intelijen yang ditemukan.</p>
+                <button class="btn btn-sm btn-outline-primary" @click="fetchCisaKEV">Coba Lagi</button>
+              </div>
+              <transition-group v-else name="list" tag="div" class="cve-cards-grid">
                 <div 
                   v-for="cve in filteredCves" 
                   :key="cve.id" 
@@ -627,6 +636,9 @@ export default {
         const response = await fetch('https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json');
         if (!response.ok) throw new Error('CISA API Error');
         const data = await response.json();
+        
+        if (!data.vulnerabilities) throw new Error('Invalid CISA Data');
+
         this.cves = data.vulnerabilities.map(item => ({
           id: item.cveID,
           title: item.vulnerabilityName,
@@ -640,12 +652,24 @@ export default {
           fullDescription: null,
           isEnriching: false
         })).sort((a, b) => b.rawDate - a.rawDate);
+        
         if (this.cves.length > 0) this.selectedCve = this.cves[0];
       } catch (err) {
-        console.error("CISA Fetch failed", err);
+        console.error("CISA Fetch failed:", err);
+        this.showToast("Gagal mengambil data CISA KEV. Menggunakan data cadangan.", "error");
+        this.setCisaMockData();
       } finally {
         this.isLoadingCves = false;
       }
+    },
+    setCisaMockData() {
+      this.cves = [
+        { id: "CVE-2026-33827", title: "Windows TCP/IP Remote Code Execution.", shortDescription: "A remote code execution vulnerability exists in Windows TCP/IP.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026", rawDate: new Date("2026-04-14"), requiredAction: "Apply updates per vendor instructions.", isRansomware: true },
+        { id: "CVE-2026-32157", title: "Remote Desktop Client RCE.", shortDescription: "Remote Desktop Client vulnerability allows code execution.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026", rawDate: new Date("2026-04-08"), requiredAction: "Apply updates.", isRansomware: false },
+        { id: "CVE-2025-21298", title: "Windows OLE Remote Code Execution.", shortDescription: "Windows OLE vulnerability allowing remote code execution.", vendor: "Microsoft", product: "Windows", date: "14 Nov 2025", rawDate: new Date("2025-11-14"), requiredAction: "Apply updates.", isRansomware: true },
+        { id: "CVE-2024-38063", title: "Windows TCP/IP IPv6 RCE.", shortDescription: "Critical RCE in Windows TCP/IP IPv6 stack.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024", rawDate: new Date("2024-08-13"), requiredAction: "Apply updates.", isRansomware: false }
+      ];
+      if (this.cves.length > 0) this.selectedCve = this.cves[0];
     },
     toggleCveExpand(cve) {
       if (this.expandedCveId === cve.id) {
