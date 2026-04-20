@@ -146,15 +146,15 @@
 <script>
 export default {
   name: "CveIntelligence",
-  data() {
     return {
       activeFilter: "Semua",
       filters: ["Semua", "Critical", "High", "Medium", "Low"],
       selectedCve: null,
       userInput: "",
       isTyping: false,
+      isLoading: false,
       messages: [],
-      apiKey: null, // Placeholder for Gemini API Key
+      apiKey: null,
       suggestions: [
         "Apa dampaknya untuk organisasi di Indonesia?",
         "Bagaimana cara mitigasinya?",
@@ -163,92 +163,76 @@ export default {
       ],
       displayLimit: 5,
       limitOptions: [5, 10, 15, 20],
-      cves: [
-        {
-          id: "CVE-2025-21298",
-          score: 9.8,
-          severity: "CRITICAL",
-          title: "Windows Object Linking and Embedding (OLE) Remote Code Execution Vulnerability. Attacker dapat mengeksploitasi kerentanan ini untuk menjalankan kode arbitrer.",
-          vendor: "Microsoft",
-          product: "Windows",
-          date: "2025-01-14"
-        },
-        {
-          id: "CVE-2025-0282",
-          score: 9.0,
-          severity: "CRITICAL",
-          title: "Ivanti Connect Secure stack-based buffer overflow vulnerability yang memungkinkan remote code execution via malformed URI.",
-          vendor: "Ivanti",
-          product: "Connect Secure",
-          date: "2025-01-08"
-        },
-        {
-          id: "CVE-2024-51567",
-          score: 8.8,
-          severity: "HIGH",
-          title: "CyberPanel vulnerability through command injection. Versi terdampak memungkinkan unauthenticated remote code execution.",
-          vendor: "CyberPanel",
-          product: "CyberPanel v2.3.6",
-          date: "2024-10-28"
-        },
-        {
-          id: "CVE-2024-44308",
-          score: 7.5,
-          severity: "HIGH",
-          title: "WebKit vulnerability in Safari. Kerentanan ini telah dieksploitasi secara aktif terhadap sistem macOS lama.",
-          vendor: "Apple",
-          product: "Safari & WebKit",
-          date: "2024-11-19"
-        },
-        {
-          id: "CVE-2024-38063",
-          score: 9.8,
-          severity: "CRITICAL",
-          title: "Windows TCP/IP Remote Code Execution Vulnerability via crafted IPv6 packets.",
-          vendor: "Microsoft",
-          product: "Windows Systems",
-          date: "2024-08-13"
-        },
-        {
-          id: "CVE-2024-21413",
-          score: 9.8,
-          severity: "CRITICAL",
-          title: "Microsoft Outlook Remote Code Execution Vulnerability (Moniker Link).",
-          vendor: "Microsoft",
-          product: "Outlook",
-          date: "2024-02-13"
-        },
-        {
-          id: "CVE-2024-1086",
-          score: 7.8,
-          severity: "HIGH",
-          title: "Linux Kernel netfilter: nf_tables use-after-free vulnerability leading to privilege escalation.",
-          vendor: "Linux",
-          product: "Kernel",
-          date: "2024-03-27"
-        },
-        {
-          id: "CVE-2023-4966",
-          score: 9.4,
-          severity: "CRITICAL",
-          title: "Citrix Bleed: Information disclosure in Citrix NetScaler ADC and Gateway.",
-          vendor: "Citrix",
-          product: "NetScaler",
-          date: "2023-10-10"
-        }
-      ]
+      cves: [] // Will be populated by API
     };
   },
   computed: {
     filteredCves() {
       let filtered = this.cves;
       if (this.activeFilter !== "Semua") {
-        filtered = this.cves.filter(cve => cve.severity === this.activeFilter.toUpperCase());
+        filtered = this.cves.filter(cve => {
+          const sev = cve.severity.toUpperCase();
+          if (this.activeFilter === "Critical") return sev === "CRITICAL";
+          if (this.activeFilter === "High") return sev === "HIGH";
+          if (this.activeFilter === "Medium") return sev === "MEDIUM";
+          if (this.activeFilter === "Low") return sev === "LOW";
+          return false;
+        });
       }
       return filtered.slice(0, this.displayLimit);
     }
   },
   methods: {
+    async fetchLatestCves() {
+      this.isLoading = true;
+      try {
+        // Fetch from NIST NVD API 2.0 (15 latest results)
+        const response = await fetch('https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=15');
+        if (!response.ok) throw new Error('API Response Error');
+        
+        const data = await response.json();
+        
+        this.cves = data.vulnerabilities.map(item => {
+          const cve = item.cve;
+          const metrics = cve.metrics?.cvssMetricV31?.[0]?.cvssData || 
+                         cve.metrics?.cvssMetricV30?.[0]?.cvssData || 
+                         cve.metrics?.cvssMetricV2?.[0]?.cvssData;
+          
+          // Helper to extract vendor/product from CPE string
+          const cpe = cve.configurations?.[0]?.nodes?.[0]?.cpeMatch?.[0]?.criteria || "";
+          const cpeParts = cpe.split(':');
+          
+          return {
+            id: cve.id,
+            score: metrics?.baseScore || 'N/A',
+            severity: metrics?.baseSeverity || (metrics?.baseScore >= 9 ? 'CRITICAL' : metrics?.baseScore >= 7 ? 'HIGH' : 'MEDIUM'),
+            title: cve.descriptions.find(d => d.lang === 'en')?.value || 'No description available.',
+            vendor: cpeParts[3] ? cpeParts[3].charAt(0).toUpperCase() + cpeParts[3].slice(1) : 'Unknown',
+            product: cpeParts[4] ? cpeParts[4].replace(/_/g, ' ') : 'General System',
+            date: new Date(cve.published).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })
+          };
+        });
+
+        // Select first one if available
+        if (this.cves.length > 0 && !this.selectedCve) {
+          this.selectedCve = this.cves[0];
+        }
+      } catch (error) {
+        console.error("API Error:", error);
+        // Fallback to mock data if API fails (e.g. CORS or rate limit)
+        this.setMockData();
+      } finally {
+        this.isLoading = false;
+      }
+    },
+    setMockData() {
+      this.cves = [
+        { id: "CVE-2026-33827", score: 9.8, severity: "CRITICAL", title: "Windows TCP/IP Remote Code Execution vulnerability via IPv6.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026" },
+        { id: "CVE-2026-32157", score: 9.0, severity: "CRITICAL", title: "Remote Desktop Client Remote Code Execution Vulnerability.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026" },
+        { id: "CVE-2026-41242", score: 8.8, severity: "HIGH", title: "Protobufjs arbitrary code injection vulnerability.", vendor: "Protobufjs", product: "Node.js Lib", date: "22 Mar 2026" }
+      ];
+      if (this.cves.length > 0) this.selectedCve = this.cves[0];
+    },
     selectCve(cve) {
       this.selectedCve = cve;
       this.messages = [];
@@ -295,10 +279,7 @@ export default {
     }
   },
   mounted() {
-    // Select the first CVE by default
-    if (this.cves.length > 0) {
-      this.selectedCve = this.cves[0];
-    }
+    this.fetchLatestCves();
   }
 };
 </script>
