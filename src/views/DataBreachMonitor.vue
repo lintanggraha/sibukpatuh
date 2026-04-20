@@ -248,7 +248,7 @@
 <script>
 const CONFIG = {
   ITEMS_PER_PAGE: 20,
-  STATIC_DB_URL: 'https://raw.githubusercontent.com/nicowillis/data-breaches/main/breaches.json'
+  STATIC_DB_URL: '/data/breaches.json'
 };
 
 export default {

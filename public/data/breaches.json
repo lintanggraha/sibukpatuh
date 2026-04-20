@@ -1,0 +1,56 @@
+[
+  {
+    "Name": "Tokopedia",
+    "Domain": "tokopedia.com",
+    "BreachDate": "2020-04-17",
+    "PwnCount": 91000000,
+    "Description": "In April 2020, the Indonesian e-commerce giant Tokopedia suffered a massive data breach. The compromised data included user names, emails, and hashed passwords.",
+    "DataClasses": ["Email addresses", "Names", "Passwords", "Phone numbers"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "LinkedIn",
+    "Domain": "linkedin.com",
+    "BreachDate": "2021-06-22",
+    "PwnCount": 700000000,
+    "Description": "LinkedIn suffered a data scrape that affected 700 million users. The data was posted for sale on a popular hacking forum.",
+    "DataClasses": ["Email addresses", "Full names", "Job titles", "Professional profiles"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Bukalapak",
+    "Domain": "bukalapak.com",
+    "BreachDate": "2019-03-01",
+    "PwnCount": 13000000,
+    "Description": "In early 2019, the Indonesian e-commerce site Bukalapak had its database breached by a Pakistani hacker known as Gnosticplayers.",
+    "DataClasses": ["Email addresses", "Usernames", "IP addresses", "Passwords"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Adobe",
+    "Domain": "adobe.com",
+    "BreachDate": "2013-10-04",
+    "PwnCount": 152445165,
+    "Description": "In October 2013, Adobe was breached, resulting in the theft of customer records including encrypted passwords and credit card information.",
+    "DataClasses": ["Email addresses", "Passwords", "Password hints", "Usernames"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Canva",
+    "Domain": "canva.com",
+    "BreachDate": "2019-05-24",
+    "PwnCount": 137000000,
+    "Description": "Graphic design platform Canva suffered a data breach in 2019, exposing the database containing emails and hashed passwords of millions of users.",
+    "DataClasses": ["Email addresses", "Names", "Passwords", "Usernames"],
+    "Country": "Global"
+  },
+  {
+    "Name": "BSI (Bank Syariah Indonesia)",
+    "Domain": "bankbsi.co.id",
+    "BreachDate": "2023-05-08",
+    "PwnCount": 15000000,
+    "Description": "Bank Syariah Indonesia suffered a ransomware attack by the LockBit gang, which allegedly stole 1.5TB of data including customer records and employee information.",
+    "DataClasses": ["Names", "Account numbers", "Phone numbers", "Transaction history"],
+    "Country": "Indonesia"
+  }
+]
