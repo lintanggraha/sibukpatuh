@@ -297,7 +297,6 @@
                     <tr>
                       <th width="60" class="ps-4">No</th>
                       <th>Email</th>
-                      <th>Password</th>
                       <th width="120">Tipe Hash</th>
                       <th class="pe-4">Sumber Breach</th>
                     </tr>
@@ -306,16 +305,6 @@
                     <tr v-for="(item, index) in checkResult.list" :key="index">
                       <td class="ps-4 text-muted">{{ index + 1 }}</td>
                       <td class="fw-bold">{{ item.email }}</td>
-                      <td>
-                        <div class="password-toggle-group">
-                          <span class="font-mono text-navy fw-bold">
-                            {{ item.showPassword ? item.password : maskPassword(item.password) }}
-                          </span>
-                          <button class="btn btn-link btn-sm text-muted ms-2" @click="item.showPassword = !item.showPassword">
-                            <i class="fas" :class="item.showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
-                          </button>
-                        </div>
-                      </td>
                       <td>
                         <span :class="['badge rounded-pill px-3', item.hash_password ? 'bg-secondary' : 'bg-danger']">
                           {{ item.hash_password ? 'Hashed' : 'Plaintext' }}
@@ -528,10 +517,7 @@ export default {
           this.checkResult = {
             found: true,
             size: data.found,
-            list: data.result.map(item => ({
-              ...item,
-              showPassword: false
-            }))
+            list: data.result
           };
         } else {
           this.checkResult = { found: false };
@@ -546,11 +532,6 @@ export default {
       } finally {
         this.isChecking = false;
       }
-    },
-    maskPassword(pass) {
-      if (!pass) return "********";
-      if (pass.length <= 4) return "****";
-      return pass.substring(0, 1) + "***" + pass.substring(pass.length - 1);
     },
     copyAllSources() {
       if (!this.checkResult || !this.checkResult.list) return;
