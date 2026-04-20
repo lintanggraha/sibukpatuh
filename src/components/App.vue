@@ -150,14 +150,9 @@ export default {
           show: false,
           items: [
             {
-              routeName: "cve_intel",
-              label: "CVE Terbaru",
-              icon: "fa-bug",
-            },
-            {
-              routeName: "data_breach",
-              label: "Threat Intelligence",
-              icon: "fa-radar",
+              routeName: "intelligence_center",
+              label: "Pusat Intelijen",
+              icon: "fa-shield-virus",
             },
           ],
         },
@@ -218,7 +213,7 @@ export default {
         route.name === "owasp_top10" ||
         route.name === "owasp_asvs";
       this.frameworkNavGroups[2].active =
-        route.name === "cve_intel" || route.name === "data_breach";
+        route.name === "intelligence_center";
       
       // Sync with Pinia store
       const store = useFrameworkStore();

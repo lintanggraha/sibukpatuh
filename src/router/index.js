@@ -52,14 +52,9 @@ const routes = [
         component: () => import('../views/OwaspAsvs.vue')
     },
     {
-        path: '/intel/cve-intelligence',
-        name: 'cve_intel',
-        component: () => import('../views/CveIntelligence.vue')
-    },
-    {
-        path: '/intel/data-breach',
-        name: 'data_breach',
-        component: () => import('../views/DataBreachMonitor.vue')
+        path: '/intel/intelligence-center',
+        name: 'intelligence_center',
+        component: () => import('../views/IntelligenceCenter.vue')
     }
 ];
 

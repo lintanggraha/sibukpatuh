@@ -2,31 +2,35 @@ import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  
+
   return {
     plugins: [
-      vue()
+      vue(),
     ],
-    server: {
-      proxy: {
-        '/api/misp': {
-          target: env.VITE_MISP_URL || 'https://your-misp-instance.com',
-          changeOrigin: true,
-          secure: false, 
-          rewrite: (path) => path.replace(/^\/api\/misp/, ''),
-          headers: {
-            'Authorization': env.VITE_MISP_KEY
-          }
-        }
-      }
-    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
-    base: '/'
+    server: {
+      proxy: {
+        // Proxy for local development to match Vercel serverless functions
+        '/api/otx': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+        },
+        '/api/breach': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+        }
+      }
+    },
+    base: '/',
+    build: {
+      chunkSizeWarningLimit: 1600,
+    }
   };
 });
