@@ -12,104 +12,86 @@
       </p>
     </div>
 
-    <!-- Section 1: Cek Email (Slim Panel) -->
+    <!-- Section 1: Cek Email (Ultra Minimalist) -->
     <div class="row mb-4">
       <div class="col-12">
-        <div class="panel-card p-3 shadow-sm border-0 bg-navy text-white">
-          <div class="d-flex flex-column flex-md-row align-items-center gap-4">
-            <div class="flex-shrink-0">
-              <h6 class="mb-0 fw-bold">CEK EMAIL</h6>
-              <p class="mb-0 opacity-75" style="font-size: 0.75rem;">Periksa keamanan email kamu.</p>
+        <div class="panel-card p-4 shadow-sm border">
+          <div class="row align-items-center">
+            <div class="col-md-3">
+              <h6 class="mb-0 fw-bold text-navy">CEK EMAIL</h6>
+              <p class="mb-0 text-muted" style="font-size: 0.7rem;">Cek kebocoran data kamu.</p>
             </div>
-
-            <div class="flex-grow-1 w-100">
-              <div class="input-group shadow-sm rounded-3 overflow-hidden">
-                <span class="input-group-text bg-white border-0"><i class="fas fa-envelope text-muted"></i></span>
+            <div class="col-md-9">
+              <div class="input-group input-group-sm rounded-3 overflow-hidden border">
+                <span class="input-group-text bg-light border-0"><i class="fas fa-envelope text-muted"></i></span>
                 <input 
                   type="email" 
                   class="form-control border-0" 
                   v-model="userTerm" 
-                  placeholder="Masukkan alamat email kamu..."
+                  placeholder="Masukkan email..."
                   :disabled="isChecking"
                   @keyup.enter="checkBreachStatus"
                 >
                 <button 
-                  class="btn btn-warning px-4 fw-bold" 
+                  class="btn btn-navy px-4" 
                   @click="checkBreachStatus"
                   :disabled="isChecking || !userTerm"
                 >
                   <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
-                  {{ isChecking ? 'Cek' : 'Periksa Sekarang' }}
+                  {{ isChecking ? 'Checking...' : 'Cek Sekarang' }}
                 </button>
               </div>
             </div>
           </div>
 
-          <div v-if="emailError" class="text-warning small mt-2 ms-1 fw-bold" style="font-size: 0.7rem;">
+          <div v-if="emailError" class="text-danger small mt-2 ms-1 fw-bold" style="font-size: 0.7rem;">
             <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
           </div>
 
           <!-- Loading State -->
-          <div v-if="isChecking" class="p-5 text-center">
-            <div class="enrich-loader">
-              <div class="skeleton-line mb-3"></div>
-              <div class="skeleton-line mb-3 w-75"></div>
-              <div class="skeleton-line mb-3 w-50"></div>
-            </div>
-            <p class="text-muted mt-3 fw-bold">Memeriksa di seluruh database...</p>
+          <div v-if="isChecking" class="mt-4 text-center">
+            <div class="spinner-border spinner-border-sm text-navy opacity-50"></div>
+            <span class="ms-2 text-muted small">Memeriksa database...</span>
           </div>
 
           <!-- Result Area -->
-          <div v-else-if="checkResult" class="result-area animate-fade-in">
-            <!-- Safe Case -->
-            <div v-if="!checkResult.found" class="alert alert-success d-flex align-items-center p-4 rounded-4 border-0">
-              <i class="fas fa-check-circle fs-1 me-4"></i>
-              <div>
-                <h5 class="mb-0 fw-bold">Email ini tidak ditemukan di database breach manapun</h5>
-                <p class="mb-0 opacity-75">Tetap waspada dan jangan lupa ganti password secara berkala.</p>
-              </div>
+          <div v-else-if="checkResult" class="mt-4 animate-fade-in">
+            <!-- Safe -->
+            <div v-if="!checkResult.found" class="alert alert-success border-0 rounded-3 p-3">
+              <i class="fas fa-check-circle me-2"></i> <span class="small fw-bold">Email aman, tidak ditemukan kebocoran.</span>
             </div>
 
-            <!-- Breached Case -->
+            <!-- Breached -->
             <div v-else>
-              <div class="alert alert-danger d-flex justify-content-between align-items-center p-4 rounded-4 border-0 mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <div class="alert-icon-wrapper me-4">
-                    <i class="fas fa-biohazard fs-1"></i>
-                  </div>
-                  <div>
-                    <h5 class="mb-0 fw-bold">Ditemukan di {{ checkResult.size }} entri breach</h5>
-                    <p class="mb-0 opacity-75">Beberapa informasi sensitif kamu mungkin telah bocor ke publik.</p>
-                  </div>
-                </div>
-                <button class="btn btn-light btn-sm fw-bold shadow-sm" @click="copyAllSources">
-                  <i class="fas fa-copy me-2 text-danger"></i> Salin semua sumber breach
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger rounded-pill px-3 py-2">
+                  <i class="fas fa-exclamation-circle me-1"></i> Terdeteksi di {{ checkResult.size }} sumber
+                </span>
+                <button class="btn btn-outline-secondary btn-xs" @click="copyAllSources">
+                  <i class="fas fa-copy me-1"></i> Salin Sumber
                 </button>
               </div>
 
-              <!-- Result Table -->
-              <div class="table-responsive rounded-4 border shadow-sm">
-                <table class="table table-hover align-middle mb-0 breach-result-table">
+              <div class="table-responsive border rounded-3">
+                <table class="table table-sm table-hover align-middle mb-0" style="font-size: 0.8rem;">
                   <thead class="bg-light">
                     <tr>
-                      <th width="60" class="ps-4">No</th>
-                      <th>Email</th>
-                      <th width="120">Tipe Hash</th>
-                      <th class="pe-4">Sumber Breach</th>
+                      <th class="ps-3 py-2">Email</th>
+                      <th class="py-2">Tipe</th>
+                      <th class="pe-3 py-2">Sumber</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr v-for="(item, index) in checkResult.list" :key="index">
-                      <td class="ps-4 text-muted">{{ index + 1 }}</td>
-                      <td class="fw-bold">{{ item.email }}</td>
-                      <td>
-                        <span :class="['badge rounded-pill px-3', item.hash_password ? 'bg-secondary' : 'bg-danger']">
+                      <td class="ps-3 py-2 fw-bold text-navy">{{ item.email }}</td>
+                      <td class="py-2">
+                        <span :class="['badge rounded-pill', item.hash_password ? 'bg-secondary' : 'bg-danger']" style="font-size: 0.65rem;">
                           {{ item.hash_password ? 'Hashed' : 'Plaintext' }}
                         </span>
                       </td>
-                      <td class="pe-4">
+                      <td class="pe-3 py-2">
                         <div class="d-flex flex-wrap gap-1">
-                          <span v-for="source in item.sources" :key="source" class="badge bg-soft-red text-danger border border-danger border-opacity-10">
+                          <span v-for="source in item.sources" :key="source" class="badge-minimal">
                             {{ source }}
                           </span>
                         </div>
@@ -118,22 +100,15 @@
                   </tbody>
                 </table>
               </div>
-              <div class="mt-4 p-3 bg-light rounded-4 border">
-                <p class="mb-0 small text-muted">
-                  <i class="fas fa-exclamation-triangle text-warning me-2"></i>
-                  Data ini berasal dari <strong>BreachDirectory</strong>. Segera ganti password pada layanan yang tercantum di atas untuk menjaga keamanan akun Anda.
-                </p>
-              </div>
+              <p class="mt-2 mb-0 text-muted" style="font-size: 0.65rem;">
+                * Data dari <strong>BreachDirectory</strong>. Disarankan ganti password segera.
+              </p>
             </div>
           </div>
 
-          <!-- Error States -->
-          <div v-if="apiError" class="alert alert-warning p-4 rounded-4 border-0 mt-3 d-flex align-items-center">
-            <i class="fas fa-exclamation-triangle me-4 fs-3 text-warning"></i>
-            <div>
-              <h6 class="mb-1 fw-bold">{{ apiError }}</h6>
-              <span v-if="rateLimitCountdown > 0" class="small fw-bold">Coba lagi dalam {{ rateLimitCountdown }} detik</span>
-            </div>
+          <!-- API Errors -->
+          <div v-if="apiError" class="alert alert-warning border-0 rounded-3 p-3 mt-4 small">
+            <i class="fas fa-clock me-2"></i> {{ apiError }}
           </div>
         </div>
       </div>
@@ -569,6 +544,23 @@ export default {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.section.btn-xs {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge-minimal {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .section-label {
