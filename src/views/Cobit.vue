@@ -21,29 +21,6 @@
             ><i class="fas fa-project-diagram"></i>Framework Studio</span
           >
           <h1 class="sej-title">
-<template>
-  <div class="sej-page">
-    <div v-if="loading" class="loading-state">
-      <div class="loading-spinner">
-        <i class="fas fa-spinner fa-spin"></i>
-        <p>Loading COBIT 2019 data...</p>
-      </div>
-    </div>
-    <div v-else-if="error" class="error-state">
-      <div class="error-message">
-        <i class="fas fa-exclamation-triangle"></i>
-        <h3>Failed to load data</h3>
-        <p>{{ error }}</p>
-        <button @click="retryLoad" class="btn btn-primary">Retry</button>
-      </div>
-    </div>
-    <div v-else class="sej-shell">
-      <section class="sej-hero">
-        <div>
-          <span class="sej-kicker"
-            ><i class="fas fa-project-diagram"></i>Framework Studio</span
-          >
-          <h1 class="sej-title">
             COBIT 2019 Introduction & Methodology Navigator
           </h1>
           <p class="sej-lede">
@@ -1165,6 +1142,18 @@ export default {
 .sej-side-stack{display:grid;gap:.85rem}
 .sej-side{padding:.8rem .86rem;border-radius:18px;background:rgba(255,250,242,.78);border-color:rgba(255,255,255,.24);min-height:142px}
 .sej-side label{color:var(--muted);margin-bottom:.4rem}
+.sej-side h3{margin:0;font-size:1rem;font-weight:800}
+.sej-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
+.sej-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.sej-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
+.sej-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
+.sej-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
+.sej-tab strong{display:block;font-size:.9rem;font-weight:800}
+.sej-tab span{display:block;margin-top:.14rem;color:var(--muted);font-size:.76rem;line-height:1.4}
+.sej-grid{display:grid;gap:1rem}
+.sej-grid.two{grid-template-columns:1.06fr .94fr}
+.sej-panel{padding:1rem;border-radius:20px}
+.sej-head{display:flex;align-items:center;justify-content:space-between;gap:.85rem;margin-bottom:.7rem}
 .sej-head h3{margin:0;font-size:.98rem;font-weight:800}
 .sej-chip,.sej-pill,.sej-meta span,.sej-ref{display:inline-flex;align-items:center;gap:.3rem;padding:.24rem .52rem;border-radius:999px;font-size:.7rem;font-weight:700;line-height:1.2}
 .sej-chip{background:rgba(20,38,59,.08);color:var(--ink)}
