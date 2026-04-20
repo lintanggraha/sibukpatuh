@@ -206,13 +206,27 @@
                     <template v-for="ioc in topIocs" :key="ioc.id">
                       <tr @click="toggleIoc(ioc.id)" :class="{ 'row-expanded': expandedIocId === ioc.id }">
                         <td><span class="ioc-tag">{{ ioc.type }}</span></td>
-                        <td><span class="mono-value">{{ truncate(ioc.value, 25) }}</span></td>
+                        <td><span class="mono-value">{{ ioc.value }}</span></td>
                         <td class="text-end"><span class="sight-count">{{ ioc.sightings || 0 }}</span></td>
                       </tr>
                       <tr v-if="expandedIocId === ioc.id" class="row-detail-pane">
                         <td colspan="3">
-                          <div class="p-2 x-small text-muted">
-                            <i class="fas fa-info-circle me-1"></i> <strong>Context:</strong> {{ ioc.Event?.info || 'No additional context available.' }}
+                          <div class="p-3">
+                            <div class="row g-3">
+                              <div class="col-md-8">
+                                <label class="detail-label-mini">Context & Pulse Title</label>
+                                <div class="fw-700 text-navy mb-2">{{ ioc.Event?.info || 'N/A' }}</div>
+                                <div class="d-flex flex-wrap gap-1 mb-2">
+                                  <span v-for="tag in ioc.Tag" :key="tag.id" class="badge-tag">{{ tag.name }}</span>
+                                </div>
+                              </div>
+                              <div class="col-md-4 text-end">
+                                <label class="detail-label-mini">External Source</label>
+                                <a :href="`https://otx.alienvault.com/indicator/${ioc.type}/${ioc.value}`" target="_blank" class="btn btn-xs btn-outline-primary d-block mt-1">
+                                  View on OTX <i class="fas fa-external-link-alt ms-1"></i>
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -241,14 +255,32 @@
                   <tbody>
                     <template v-for="event in recentEvents" :key="event.id">
                       <tr @click="toggleEvent(event.id)" :class="{ 'row-expanded': expandedEventId === event.id }">
-                        <td class="fw-700 text-navy">{{ truncate(event.info, 35) }}</td>
+                        <td class="fw-700 text-navy pulse-title-cell">{{ event.info }}</td>
                         <td><span :class="['severity-pill', getSeverityClass(event.threat_level_id)]">{{ getSeverityLabel(event.threat_level_id) }}</span></td>
                         <td class="text-end text-muted">{{ formatDateShort(event.timestamp) }}</td>
                       </tr>
                       <tr v-if="expandedEventId === event.id" class="row-detail-pane">
                         <td colspan="3">
-                          <div class="p-2 x-small text-muted">
-                            <strong>Organization:</strong> {{ event.Org?.name }} | <strong>ID:</strong> {{ event.id }}
+                          <div class="p-3">
+                            <div class="row g-3">
+                              <div class="col-md-9">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                  <label class="detail-label-mini mb-0">Contributor:</label>
+                                  <span class="fw-700 text-navy x-small">{{ event.Org?.name }}</span>
+                                </div>
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                  <span v-for="tag in event.Tag" :key="tag.id" class="badge-tag pulse">{{ tag.name }}</span>
+                                </div>
+                                <div class="x-small text-muted">
+                                  <i class="fas fa-fingerprint me-1"></i> <strong>Indicators:</strong> {{ event.indicators?.length || 0 }} IOCs in this pulse.
+                                </div>
+                              </div>
+                              <div class="col-md-3 text-end">
+                                <a :href="`https://otx.alienvault.com/pulse/${event.id}`" target="_blank" class="btn btn-xs btn-outline-primary d-block">
+                                  Pulse Details <i class="fas fa-external-link-alt ms-1"></i>
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -818,13 +850,18 @@ export default {
 .table-custom tbody tr:hover { background: #f8fafc; }
 .table-custom tbody tr.row-expanded { background: #f0f7ff; }
 .table-custom tbody td { padding: 10px 12px; font-size: .75rem; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.pulse-title-cell { line-height: 1.4; max-width: 300px; word-break: break-word; }
+.mono-value { font-family: 'JetBrains Mono', monospace; color: #475569; font-size: .7rem; word-break: break-all; }
 .table-custom tbody tr:last-child td { border-bottom: none; }
 
 .ioc-tag { font-size: .6rem; font-weight: 800; color: #3b82f6; background: #eff6ff; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
 .mono-value { font-family: 'JetBrains Mono', monospace; color: #475569; font-size: .7rem; }
 .sight-count { font-size: .65rem; font-weight: 800; background: #1e293b; color: white; padding: 1px 6px; border-radius: 10px; }
 .severity-pill { font-size: .6rem; font-weight: 800; padding: 2px 8px; border-radius: 99px; }
-.row-detail-pane td { background: #fafbfc !important; border-bottom: 1px solid #e2e8f0 !important; }
+.row-detail-pane td { background: #fafbfc !important; border-bottom: 1px solid #e2e8f0 !important; padding: 0 !important; }
+.detail-label-mini { display: block; font-size: .55rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+.badge-tag { font-size: .6rem; font-weight: 700; color: #64748b; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; border: 1px solid #e2e8f0; }
+.badge-tag.pulse { color: #0369a1; background: #f0f9ff; border-color: #bae6fd; }
 
 .fw-700 { font-weight: 700; }
 .fw-800 { font-weight: 800; }
