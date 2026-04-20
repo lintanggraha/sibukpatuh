@@ -76,6 +76,7 @@
 
               <div class="table-responsive border rounded-3">
                 <table class="table table-sm table-hover align-middle mb-0" style="font-size: 0.8rem;">
+                  <caption class="visually-hidden">Daftar hasil temuan kebocoran data untuk email yang diperiksa</caption>
                   <thead class="bg-light">
                     <tr>
                       <th class="ps-3 py-2">Email</th>
@@ -138,28 +139,6 @@
         <div class="panel-card p-4 h-100">
           <h6 class="section-label mb-3">FILTER WORKSPACE</h6>
           
-          <!-- API Config Accordion -->
-          <div class="api-accordion mb-4">
-            <button class="btn btn-api-toggle w-100 d-flex justify-content-between align-items-center" @click="showConfig = !showConfig">
-              <span><i class="fas fa-cog me-2"></i>Konfigurasi API</span>
-              <i class="fas" :class="showConfig ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
-            </button>
-            <div v-if="showConfig" class="api-config-panel mt-2 p-3">
-              <div class="mb-3">
-                <label class="form-label small fw-bold">Breach Directory API Key</label>
-                <input type="password" class="form-control form-control-sm" v-model="config.BREACHDIR_API_KEY" placeholder="Masukkan key...">
-              </div>
-              <div class="mb-3">
-                <label class="form-label small fw-bold">IntelligenceX API Key</label>
-                <input type="password" class="form-control form-control-sm" v-model="config.INTELX_API_KEY" placeholder="Masukkan key...">
-              </div>
-              <button class="btn btn-save-config btn-sm w-100" @click="saveConfig">
-                Simpan Konfigurasi
-              </button>
-              <div v-if="configSaved" class="alert alert-success py-1 px-2 mt-2 small">Tersimpan!</div>
-            </div>
-          </div>
-
           <!-- Category Chips -->
           <div class="filter-group mb-4">
             <label class="form-label small fw-bold text-muted mb-2">KATEGORI</label>
@@ -333,12 +312,6 @@ export default {
   name: "DataBreachMonitor",
   data() {
     return {
-      showConfig: false,
-      config: {
-        BREACHDIR_API_KEY: localStorage.getItem('BREACHDIR_API_KEY') || '',
-        INTELX_API_KEY: localStorage.getItem('INTELX_API_KEY') || ''
-      },
-      configSaved: false,
       activeCategory: "Semua",
       categories: CONFIG.CATEGORIES,
       filterYear: "Semua",
@@ -440,12 +413,6 @@ export default {
       if (!dateStr) return "-";
       return new Date(dateStr).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
     },
-    saveConfig() {
-      localStorage.setItem('BREACHDIR_API_KEY', this.config.BREACHDIR_API_KEY);
-      localStorage.setItem('INTELX_API_KEY', this.config.INTELX_API_KEY);
-      this.configSaved = true;
-      setTimeout(() => this.configSaved = false, 2000);
-    },
     resetFilters() {
       this.activeCategory = "Semua";
       this.filterYear = "Semua";
@@ -530,94 +497,11 @@ export default {
 </script>
 
 <style scoped>
-.breach-container {
-  padding: 1.5rem 0.5rem;
+.breach-header {
   animation: fadeIn 0.4s ease-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.panel-card {
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.section.btn-xs {
-  padding: 0.2rem 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.badge-minimal {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #475569;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.section-label {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #64748b;
-  letter-spacing: 1px;
-}
-
-.section-label-small {
-  display: block;
-  font-size: 0.65rem;
-  font-weight: 800;
-  color: #94a3b8;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-}
-
-/* Metric Cards */
-.metric-card {
-  background: white;
-  padding: 1.25rem;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  border: 1px solid #e2e8f0;
-}
-
-.metric-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-}
-
-.metric-label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #64748b;
-}
-
-.metric-value {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 850;
-  color: #0f172a;
-}
-
-/* Filter Area */
+/* Category Area */
 .filter-chip {
   padding: 0.35rem 0.85rem;
   border-radius: 8px;
@@ -629,74 +513,21 @@ export default {
   transition: all 0.2s;
 }
 
-.filter-chip:hover {
-  background: #f1f5f9;
-}
+.filter-chip:hover { background: #f1f5f9; }
+.filter-chip.active { background: #0f172a; color: white; border-color: #0f172a; }
 
-.filter-chip.active {
-  background: #0f172a;
-  color: white;
-  border-color: #0f172a;
-}
-
-.api-config-panel {
-  background: #f1f5f9;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-}
-
-.stats-box-dark {
-  background: #0f172a;
-  padding: 1rem;
-  border-radius: 14px;
-}
+.stats-box-dark { background: #0f172a; padding: 1rem; border-radius: 14px; }
 
 /* List Area */
-.breach-scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 500px;
-}
+.breach-scroll-area { flex: 1; overflow-y: auto; min-height: 500px; }
+.breach-card { padding: 1.25rem; border-bottom: 1px solid #f1f5f9; cursor: pointer; transition: all 0.2s; }
+.breach-card:hover { background: #f8fafc; }
+.breach-card.selected { background: #faf8f4; border-left: 4px solid #144e72; }
 
-.breach-card {
-  padding: 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.breach-card:hover {
-  background: #f8fafc;
-}
-
-.breach-card.selected {
-  background: #faf8f4;
-  border-left: 4px solid #144e72;
-}
-
-.breach-id {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.7rem;
-  color: #94a3b8;
-  font-weight: 700;
-}
-
-.breach-name {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.breach-meta {
-  font-size: 0.8rem;
-  color: #64748b;
-}
-
-.breach-date {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #94a3b8;
-}
+.breach-id { font-family: 'Courier New', Courier, monospace; font-size: 0.7rem; color: #94a3b8; font-weight: 700; }
+.breach-name { font-size: 1.05rem; font-weight: 800; color: #0f172a; }
+.breach-meta { font-size: 0.8rem; color: #64748b; }
+.breach-date { font-size: 0.75rem; font-weight: 700; color: #94a3b8; }
 
 .badge-source { background: #0c4a6e; color: #f0f9ff; }
 .badge-category { background: #92400e; color: #fffbeb; }
@@ -710,16 +541,8 @@ export default {
 }
 
 /* Inspector Area */
-.inspector-title {
-  font-weight: 850;
-  color: #0f172a;
-}
-
-.inspector-text {
-  font-size: 0.88rem;
-  color: #334155;
-  line-height: 1.6;
-}
+.inspector-title { font-weight: 850; color: #0f172a; }
+.inspector-text { font-size: 0.88rem; color: #334155; line-height: 1.6; }
 
 .data-chip {
   background: #f1f5f9;
@@ -730,22 +553,8 @@ export default {
   color: #475569;
 }
 
-.btn-navy {
-  background: #144e72;
-  color: white;
-}
-
-.btn-api-toggle {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
 @media (max-width: 1280px) {
   .breach-col-filter { width: 300px; }
   .breach-col-inspector { width: 350px; }
 }
-
-.bg-navy { background: #144e72; }
 </style>

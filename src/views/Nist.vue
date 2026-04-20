@@ -478,7 +478,9 @@ export default {
 @media (max-height:850px) and (min-width:1024px){.nst-hero { min-height: 240px; padding: 1.15rem; } .nst-metrics { margin-top: 0.6rem; } .nst-list, .nst-inspector { max-height: calc(100vh - 280px); } .nst-inspector-body { padding-top: 0.5rem; }}
 @media (max-width:1399.98px){.nst-workspace,.nst-refspace{grid-template-columns:1fr}.nst-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.nst-hero,.nst-metric,.nst-side{min-height:auto}.nst-hero,.nst-nav,.nst-grid.two,.nst-refspace,.nst-metrics,.nst-mini-row,.nst-cards{grid-template-columns:1fr}.nst-bar,.nst-hotspot,.nst-family{grid-template-columns:1fr}}
-@media (max-width:767.98px){.nst-hero,.nst-panel{padding:1.2rem;border-radius:22px}.nst-function-grid{grid-template-columns:1fr}}
+@media (max-width:767.98px){/* NIST Specific Styles */
+.nist-header { animation: fadeIn 0.4s ease-out; }
+</style>
 
 /* Pagination styles */
 .nst-pagination{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem;padding:1rem;border-top:1px solid var(--line)}

@@ -6,8 +6,8 @@
 export default async function handler(req, res) {
   const { email } = req.query;
 
-  // SECURITY: Input Validation (Regex) to prevent injection and malformed requests
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // SECURITY: Optimized Regex to prevent ReDoS (Regular Expression Denial of Service)
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!email || !emailRegex.test(email)) {
     return res.status(400).json({ 
       success: false, 

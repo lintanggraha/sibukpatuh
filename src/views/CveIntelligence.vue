@@ -671,13 +671,6 @@ export default {
   overflow: hidden;
 }
 
-.cve-section-title {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 1rem;
-}
-
 .cve-card-subtitle {
   font-size: 0.78rem;
   color: #64748b;

@@ -1,11 +1,8 @@
-/**
- * Shared Framework Styles (SibukPatuh Core)
- * Common styles used across all framework view components
- * Extracted to reduce code duplication and improve maintainability
- * SECURITY: All links with target="_blank" must use rel="noopener noreferrer"
- */
+/* 
+  SibukPatuh Framework Core Styles 
+  Clean Code Standard: Centralized to reduce code duplication 
+*/
 
-/* Panel & Layout */
 .panel-card {
   background: white;
   border: 1px solid #e2e8f0;
@@ -69,20 +66,7 @@
   color: #0f172a;
 }
 
-/* Loading & Error States */
-.loading-state, .error-state {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  text-align: center;
-}
-
-.loading-spinner i { font-size: 2rem; color: #144e72; }
-.error-message i { font-size: 3rem; color: #dc3545; margin-bottom: 1rem; }
-.error-message h3 { color: #dc3545; margin-bottom: 0.5rem; }
-
-/* Animations */
+/* Global Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -92,7 +76,7 @@
   animation: fadeIn 0.4s ease-out forwards;
 }
 
-/* Global Utilities */
+/* Common UI Elements */
 .badge-minimal {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
