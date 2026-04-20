@@ -4,9 +4,27 @@
       <!-- Left Column: CVE List -->
       <div class="col-lg-7 col-xl-8">
         <div class="cve-list-header mb-4">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <h2 class="cve-section-title mb-0">CVE terbaru</h2>
-            <span class="cve-badge-count">{{ filteredCves.length }} CVE</span>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="intel-icon-wrapper">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div>
+                <h2 class="cve-section-title mb-0">CVE Global Intelligence</h2>
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <span class="source-tag">
+                    <i class="fas fa-server me-1"></i> Source: NIST NVD
+                  </span>
+                  <div class="live-feed-status">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">LIVE FEED</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-stats">
+              <span class="cve-badge-count">{{ filteredCves.length }} Vulnerabilities Found</span>
+            </div>
           </div>
           
           <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
@@ -297,18 +315,84 @@ export default {
 }
 
 .cve-section-title {
-  font-weight: 800;
+  font-weight: 850;
   color: #0f172a;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
+  font-size: 1.75rem;
+}
+
+.intel-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  border: 1px solid #dbeafe;
+}
+
+.source-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #f1f5f9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.live-feed-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #dcfce7;
+}
+
+.status-text {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #166534;
+  letter-spacing: 0.5px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  animation: pulse-ring 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3.5); opacity: 0; }
 }
 
 .cve-badge-count {
-  background: #f1f5f9;
-  color: #475569;
-  padding: 0.35rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
+  background: #0f172a;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
   font-weight: 700;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
 }
 
 .cve-filter-btn {
