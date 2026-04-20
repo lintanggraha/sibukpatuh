@@ -523,21 +523,30 @@ export default {
     async fetchAllIntelData() {
       this.isIntelLoading = true;
       try {
-        const events = await otxService.getRecentPulses(20);
-        const iocs = await otxService.searchIndicators('ransomware');
-        
-        this.recentEvents = events.slice(0, 10);
+        // Fetch recent events and IOCs in parallel for speed
+        const [events, iocs] = await Promise.all([
+          otxService.getRecentPulses(20),
+          otxService.getRecentIocs(20)
+        ]);
+
+        // Sort events by timestamp descending to ensure most recent first
+        const sortedEvents = [...events].sort((a, b) => b.timestamp - a.timestamp);
+
+        this.recentEvents = sortedEvents.slice(0, 10);
         this.topIocs = iocs.slice(0, 20);
-        
+
         // Populate metrics based on OTX pulses
+        const totalIocs = iocs.length;
+        const criticalCount = sortedEvents.filter(e => e.threat_level_id === 1).length;
+
         this.metrics = {
-          totalEvents: events.length * 42, // Simulated total
-          activeIocs: iocs.length || 0,
-          criticalEvents: events.filter(e => e.threat_level_id === 1).length,
-          activeFeeds: 12 // OTX Global Feeds
+          totalEvents: sortedEvents.length || 0,
+          activeIocs: totalIocs || 0,
+          criticalEvents: criticalCount,
+          activeFeeds: 12 // OTX Global Feeds count
         };
 
-        this.prepareChartData(events);
+        this.prepareChartData(sortedEvents);
         this.lastUpdated = new Date().toLocaleTimeString('id-ID');
       } catch (error) {
         console.error("OTX Fetch Error:", error);
@@ -564,15 +573,24 @@ export default {
       const days = [];
       const data = [];
       const now = new Date();
-      
+
+      // Build a lookup: dateLabel → count of real events on that day
+      const eventCountByDay = {};
+      events.forEach(event => {
+        const label = new Date(event.timestamp * 1000).toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
+        eventCountByDay[label] = (eventCountByDay[label] || 0) + 1;
+      });
+
       for (let i = 6; i >= 0; i--) {
         const d = new Date(now);
         d.setDate(d.getDate() - i);
-        days.push(d.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' }));
-        data.push(Math.floor(Math.random() * 20) + 5);
+        const label = d.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
+        days.push(label);
+        // Use real count if available, otherwise 0
+        data.push(eventCountByDay[label] || 0);
       }
 
-      const avg = data.reduce((a, b) => a + b, 0) / data.length;
+      const avg = data.reduce((a, b) => a + b, 0) / (data.length || 1);
 
       this.chartSeries = [{ name: 'Events', data: data }];
       this.chartOptions = {
@@ -592,7 +610,7 @@ export default {
         plotOptions: { bar: { borderRadius: 6, columnWidth: '60%', distributed: true } },
         dataLabels: { enabled: false },
         xaxis: { categories: days, axisBorder: { show: false }, axisTicks: { show: false } },
-        yaxis: { labels: { style: { colors: '#64748b' } } },
+        yaxis: { labels: { style: { colors: '#64748b' } }, min: 0, forceNiceScale: true },
         grid: { borderColor: '#f1f5f9' },
         legend: { show: false },
         tooltip: { theme: 'dark' }
