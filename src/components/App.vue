@@ -435,7 +435,7 @@ body {
 .framework-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.25rem;
   justify-content: flex-end;
 }
 
@@ -449,30 +449,26 @@ body {
 
 .framework-nav-toggle {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  min-width: 11rem;
-  padding: 0.72rem 1.25rem;
-  border-radius: 999px;
-  border: 1px solid rgba(20, 78, 114, 0.08);
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.72);
+  gap: 0.25rem;
+  min-width: 5.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--muted);
+  background: transparent;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.88rem;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-  transition:
-    transform 0.15s ease,
-    border-color 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.15s ease,
-    color 0.15s ease;
+  font-weight: 600;
+  font-size: 0.72rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .framework-nav-toggle .nav-icon {
-  margin-right: 0.2rem;
-  font-size: 0.95rem;
+  margin-right: 0;
+  font-size: 1.25rem;
   flex-shrink: 0;
 }
 
@@ -480,17 +476,14 @@ body {
 .framework-nav-toggle:focus,
 .framework-nav-group.show .framework-nav-toggle {
   color: var(--active);
-  border-color: rgba(20, 78, 114, 0.18);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 10px 20px rgba(20, 78, 114, 0.08);
-  transform: translateY(-1px);
+  background: rgba(20, 78, 114, 0.05);
 }
 
 .framework-nav-toggle.is-active {
   color: var(--active);
-  border-color: rgba(20, 78, 114, 0.22);
-  background: var(--active-soft);
-  box-shadow: 0 12px 22px rgba(20, 78, 114, 0.08);
+  border-bottom: 2px solid var(--active);
+  border-radius: 12px 12px 0 0;
+  background: transparent;
 }
 
 .framework-nav-toggle::after {
