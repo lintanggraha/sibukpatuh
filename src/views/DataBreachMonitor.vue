@@ -29,15 +29,17 @@
                   class="form-control border-0" 
                   v-model="userTerm" 
                   placeholder="Masukkan email..."
+                  aria-label="Alamat email untuk diperiksa"
                   :disabled="isChecking"
                   @keyup.enter="checkBreachStatus"
                 >
                 <button 
                   class="btn btn-navy px-4" 
                   @click="checkBreachStatus"
+                  aria-label="Tombol periksa kebocoran"
                   :disabled="isChecking || !userTerm"
                 >
-                  <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
+                  <span v-if="isChecking" class="spinner-border spinner-border-sm me-2" role="status"></span>
                   {{ isChecking ? 'Checking...' : 'Cek Sekarang' }}
                 </button>
               </div>
@@ -321,7 +323,10 @@
 <script>
 const CONFIG = {
   ITEMS_PER_PAGE: 20,
-  STATIC_DB_URL: '/data/breaches.json'
+  STATIC_DB_URL: '/data/breaches.json',
+  CATEGORIES: ["Semua", "Terverifikasi", "Kredensial", "Database", "Pemerintah", "Keuangan"],
+  YEARS: ["2025", "2024", "2023", "2022", "2021"],
+  EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 };
 
 export default {
@@ -335,10 +340,10 @@ export default {
       },
       configSaved: false,
       activeCategory: "Semua",
-      categories: ["Semua", "Terverifikasi", "Kredensial", "Database", "Pemerintah", "Keuangan"],
+      categories: CONFIG.CATEGORIES,
       filterYear: "Semua",
       filterCountry: "Semua",
-      years: ["2025", "2024", "2023", "2022", "2021"],
+      years: CONFIG.YEARS,
       searchQuery: "",
       breaches: [],
       isLoading: true,
@@ -449,11 +454,12 @@ export default {
       this.currentPage = 1;
     },
     async checkBreachStatus() {
-      if (!this.userTerm) return;
+      // SECURITY: Input Sanitization
+      const sanitizedTerm = (this.userTerm || "").trim().toLowerCase();
+      if (!sanitizedTerm) return;
       
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(this.userTerm)) {
+      // SECURITY: Format Validation (SonarQube Security Hotspot)
+      if (!CONFIG.EMAIL_REGEX.test(sanitizedTerm)) {
         this.emailError = "Format email tidak valid";
         return;
       }
@@ -463,46 +469,42 @@ export default {
       this.checkResult = null;
       this.apiError = "";
 
-      // Timeout handler
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
-        const response = await fetch(`/api/breach?email=${encodeURIComponent(this.userTerm)}`, {
+        const response = await fetch(`/api/breach?email=${encodeURIComponent(sanitizedTerm)}`, {
           signal: controller.signal
         });
         clearTimeout(timeoutId);
 
+        const data = await response.json();
+
+        // RELIABILITY: Granular Status Code Handling
         if (response.status === 429) {
-          this.apiError = "Terlalu banyak permintaan. Coba lagi nanti.";
+          this.apiError = data.error || "Terlalu banyak permintaan.";
           this.startRateLimitTimer();
           return;
         }
 
-        if (!response.ok) {
-          this.apiError = "Terjadi kesalahan server (500), coba beberapa saat lagi.";
+        if (!response.ok || data.success === false) {
+          this.apiError = data.error || "Gagal melakukan pemeriksaan.";
           return;
         }
-
-        const data = await response.json();
         
-        // BreachDirectory specific response handling
-        if (data.found) {
+        // RELIABILITY: Robust Data Handling
+        if (data.found > 0) {
           this.checkResult = {
             found: true,
             size: data.found,
-            list: data.result
+            list: data.result || []
           };
         } else {
           this.checkResult = { found: false };
         }
 
       } catch (err) {
-        if (err.name === 'AbortError') {
-          this.apiError = "Koneksi timeout, coba lagi.";
-        } else {
-          this.apiError = "Terjadi kesalahan koneksi, coba lagi.";
-        }
+        this.apiError = err.name === 'AbortError' ? "Koneksi timeout." : "Gagal terhubung ke server.";
       } finally {
         this.isChecking = false;
       }
