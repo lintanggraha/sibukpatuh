@@ -305,7 +305,8 @@ const CONFIG = {
   STATIC_DB_URL: '/data/breaches.json',
   CATEGORIES: ["Semua", "Terverifikasi", "Kredensial", "Database", "Pemerintah", "Keuangan"],
   YEARS: ["2025", "2024", "2023", "2022", "2021"],
-  EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  // SECURITY: Linear-time regex safe from ReDoS backtracking (SonarQube S5852)
+  EMAIL_REGEX: /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/
 };
 
 export default {
