@@ -180,7 +180,7 @@ export default {
         "Apakah ada exploit yang sudah beredar?",
         "Regulasi mana yang terdampak?"
       ],
-      displayLimit: 5,
+      displayLimit: 10,
       limitOptions: [5, 10, 15, 20],
       cves: [] // Will be populated by API
     };
@@ -214,8 +214,8 @@ export default {
         let fetchedCves = data.vulnerabilities.map(item => {
           return {
             id: item.cveID,
-            score: 'KEV', // CISA KEV items are all high priority
-            severity: 'CRITICAL', // Exploited in the wild
+            score: 'KEV', 
+            severity: 'CRITICAL', 
             title: `${item.vulnerabilityName}: ${item.shortDescription}`,
             vendor: item.vendorProject,
             product: item.product,
@@ -241,9 +241,16 @@ export default {
     },
     setMockData() {
       this.cves = [
-        { id: "CVE-2026-33827", score: 9.8, severity: "CRITICAL", title: "Windows TCP/IP Remote Code Execution vulnerability via IPv6.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026" },
-        { id: "CVE-2026-32157", score: 9.0, severity: "CRITICAL", title: "Remote Desktop Client Remote Code Execution Vulnerability.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026" },
-        { id: "CVE-2026-41242", score: 8.8, severity: "HIGH", title: "Protobufjs arbitrary code injection vulnerability.", vendor: "Protobufjs", product: "Node.js Lib", date: "22 Mar 2026" }
+        { id: "CVE-2026-33827", score: "KEV", severity: "CRITICAL", title: "Windows TCP/IP Remote Code Execution via IPv6.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026" },
+        { id: "CVE-2026-32157", score: "KEV", severity: "CRITICAL", title: "Remote Desktop Client Remote Code Execution.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026" },
+        { id: "CVE-2026-41242", score: "KEV", severity: "CRITICAL", title: "Protobufjs arbitrary code injection.", vendor: "Protobufjs", product: "Node.js", date: "22 Mar 2026" },
+        { id: "CVE-2026-6414", score: "KEV", severity: "CRITICAL", title: "@fastify/static path traversal bypass.", vendor: "Fastify", product: "Static Plugin", date: "15 Mar 2026" },
+        { id: "CVE-2026-33825", score: "KEV", severity: "HIGH", title: "Microsoft Defender Elevation of Privilege.", vendor: "Microsoft", product: "Defender", date: "28 Feb 2026" },
+        { id: "CVE-2026-0282", score: "KEV", severity: "CRITICAL", title: "Ivanti Connect Secure buffer overflow.", vendor: "Ivanti", product: "VPN", date: "08 Jan 2026" },
+        { id: "CVE-2025-21298", score: "KEV", severity: "CRITICAL", title: "Windows OLE Remote Code Execution.", vendor: "Microsoft", product: "Windows", date: "14 Nov 2025" },
+        { id: "CVE-2025-51567", score: "KEV", severity: "HIGH", title: "CyberPanel command injection RCE.", vendor: "CyberPanel", product: "Control Panel", date: "28 Oct 2025" },
+        { id: "CVE-2024-44308", score: "KEV", severity: "HIGH", title: "WebKit Safari zero-day exploitation.", vendor: "Apple", product: "Safari", date: "19 Nov 2024" },
+        { id: "CVE-2024-38063", score: "KEV", severity: "CRITICAL", title: "Windows TCP/IP IPv6 remote code execution.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024" }
       ];
       if (this.cves.length > 0) this.selectedCve = this.cves[0];
     },
