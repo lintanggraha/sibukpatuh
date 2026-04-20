@@ -132,17 +132,20 @@
         </div>
       </div>
 
-      <!-- Charts & Tag Cloud Row -->
-      <div class="col-xl-8 col-lg-7">
-        <div class="panel-card shadow-sm h-100 border-0 p-4">
+      <!-- Chart Row (Full Width) -->
+      <div class="col-12">
+        <div class="panel-card shadow-sm border border-light-subtle p-4 bg-white">
           <div class="d-flex justify-content-between align-items-center mb-4">
-            <h6 class="fw-bold mb-0">Events Distribution (Last 7 Days)</h6>
+            <div>
+              <h6 class="fw-bold mb-1">Events Distribution</h6>
+              <p class="text-muted x-small mb-0">Klik bar untuk melihat detail event pada tanggal tersebut</p>
+            </div>
             <div class="chart-legend d-flex gap-3">
               <span class="small text-muted"><i class="fas fa-square me-1" style="color: #3b82f6;"></i> Events</span>
               <span class="small text-muted"><i class="fas fa-square me-1" style="color: #ef4444;"></i> Above Avg</span>
             </div>
           </div>
-          <div style="height: 300px;">
+          <div style="height: 320px;">
             <apexchart 
               v-if="!isMispLoading && chartOptions" 
               type="bar" 
@@ -157,23 +160,48 @@
         </div>
       </div>
 
-      <div class="col-xl-4 col-lg-5">
-        <div class="panel-card shadow-sm h-100 border border-light-subtle p-4 bg-white">
-          <h6 class="fw-bold mb-4">Top Intelligence Tags</h6>
-          <div class="tag-cloud mt-2">
-            <span 
-              v-for="tag in topTags" 
-              :key="tag.id" 
-              class="tag-item"
-              :style="{ fontSize: calculateTagSize(tag.count), color: tag.colour || '#3b82f6' }"
-              @click="searchByTag(tag.name)"
-            >
-              {{ tag.name }}
-            </span>
-            <div v-if="!topTags.length && !isMispLoading" class="text-center py-5 opacity-50">
-              <i class="fas fa-tags fs-1 mb-3"></i>
-              <p>No tags found</p>
-            </div>
+      <!-- Filtered Events Section (Conditional) -->
+      <div v-if="selectedChartDate" class="col-12 animate-fade-in">
+        <div class="panel-card shadow-sm border border-primary border-opacity-25 overflow-hidden">
+          <div class="p-4 bg-primary bg-opacity-10 d-flex justify-content-between align-items-center">
+            <h6 class="fw-bold mb-0 text-primary">
+              <i class="fas fa-calendar-check me-2"></i> Events for {{ selectedChartDate }}
+            </h6>
+            <button class="btn btn-xs btn-outline-primary rounded-pill" @click="selectedChartDate = null">
+              <i class="fas fa-times me-1"></i> Tutup
+            </button>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="bg-white">
+                <tr>
+                  <th class="ps-4">ID</th>
+                  <th>Event Name</th>
+                  <th>Threat Level</th>
+                  <th>Organization</th>
+                  <th class="pe-4 text-end">Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="event in filteredEvents" :key="event.id" @click="toggleEvent(event.id)" style="cursor: pointer;">
+                  <td class="ps-4 fw-bold text-primary">{{ event.id }}</td>
+                  <td>{{ event.info }}</td>
+                  <td>
+                    <span :class="['badge severity-pill', getSeverityClass(event.threat_level_id)]">
+                      {{ getSeverityLabel(event.threat_level_id) }}
+                    </span>
+                  </td>
+                  <td class="small">{{ event.Org?.name }}</td>
+                  <td class="pe-4 text-end small text-muted">{{ formatTimeOnly(event.timestamp * 1000) }}</td>
+                </tr>
+                <tr v-if="!filteredEvents.length">
+                  <td colspan="5" class="text-center py-5 text-muted">
+                    <i class="fas fa-folder-open fs-2 mb-3 d-block opacity-25"></i>
+                    No detailed event data for this specific day in cache.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -418,6 +446,10 @@ export default {
         activeFeeds: 0
       },
       
+      // Chart Filter
+      selectedChartDate: null,
+      filteredEvents: [],
+      
       // Search
       mispSearchQuery: "",
       searchResults: [],
@@ -560,7 +592,18 @@ export default {
 
       this.chartSeries = [{ name: 'Events', data: data }];
       this.chartOptions = {
-        chart: { type: 'bar', toolbar: { show: false }, zoom: { enabled: false }, fontFamily: 'Inter, sans-serif' },
+        chart: { 
+          type: 'bar', 
+          toolbar: { show: false }, 
+          zoom: { enabled: false }, 
+          fontFamily: 'Inter, sans-serif',
+          events: {
+            dataPointSelection: (event, chartContext, config) => {
+              const date = config.w.config.xaxis.categories[config.dataPointIndex];
+              this.handleChartClick(date);
+            }
+          }
+        },
         colors: [({ value }) => value > avg ? '#ef4444' : '#3b82f6'],
         plotOptions: { bar: { borderRadius: 6, columnWidth: '60%', distributed: true } },
         dataLabels: { enabled: false },
@@ -669,6 +712,25 @@ export default {
       this.toasts = this.toasts.filter(t => t.id !== id);
     },
 
+    handleChartClick(date) {
+      this.selectedChartDate = date;
+      // Filter events from the current set that match the clicked date
+      this.filteredEvents = this.recentEvents.filter(e => {
+        const eventDate = new Date(e.timestamp * 1000).toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
+        return eventDate === date;
+      });
+
+      // Smooth scroll to the filtered table
+      setTimeout(() => {
+        const el = document.querySelector('.bg-primary.bg-opacity-10');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    },
+
+    formatTimeOnly(timestamp) {
+      return new Date(timestamp).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+    },
+
     handleGlobalClick(e) {
       if (!e.target.closest('.input-group') && !e.target.closest('.search-dropdown')) {
         this.searchResults = [];
@@ -711,10 +773,6 @@ export default {
 .metric-icon-small { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 1.1rem; flex-shrink: 0; }
 
 .ls-1 { letter-spacing: 0.5px; font-size: 0.65rem; }
-
-.tag-cloud { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; min-height: 180px; }
-.tag-item { cursor: pointer; font-weight: 700; transition: all 0.2s; opacity: 0.7; text-decoration: none; }
-.tag-item:hover { opacity: 1; transform: scale(1.1); }
 
 .severity-pill { font-size: 0.65rem; font-weight: 800; padding: 0.35rem 0.75rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
 
