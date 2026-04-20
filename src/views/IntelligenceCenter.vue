@@ -146,36 +146,19 @@
           </div>
         </div>
 
-        <!-- OTX Dashboard -->
-        <div class="row g-4">
-          <!-- Metrics -->
-          <div class="col-xl-3 col-md-6" v-for="card in otxMetricCards" :key="card.label">
-            <div class="panel-card p-4 shadow-sm border border-light-subtle h-100">
-              <div class="d-flex align-items-center gap-3">
-                <div class="metric-icon-small" :style="{ color: card.accent, backgroundColor: card.accent + '15' }">
-                  <i :class="card.icon"></i>
-                </div>
-                <div>
-                  <small class="text-muted text-uppercase fw-bold ls-1">{{ card.label }}</small>
-                  <h4 class="mb-0 fw-bold">{{ isIntelLoading ? '...' : card.value }}</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Chart Area -->
+        <!-- Chart Area -->
+        <div class="row g-3 mb-3">
           <div class="col-12">
-            <div class="panel-card shadow-sm p-4">
-              <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="panel-card shadow-sm p-3">
+              <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                  <h6 class="fw-bold mb-1">OTX Events Distribution</h6>
-                  <p class="text-muted small mb-0">Aktivitas intelijen dalam 7 hari terakhir.</p>
+                  <h6 class="fw-bold mb-0 x-small text-uppercase text-muted ls-1">OTX Activity Distribution</h6>
                 </div>
-                <button class="btn btn-sm btn-outline-primary rounded-pill px-3" @click="fetchAllIntelData" :disabled="isIntelLoading">
-                  <i class="fas fa-sync-alt me-1" :class="{ 'fa-spin': isIntelLoading }"></i> Refresh
+                <button class="btn btn-xs btn-outline-primary rounded-pill px-2" @click="fetchAllIntelData" :disabled="isIntelLoading">
+                  <i class="fas fa-sync-alt me-1" :class="{ 'fa-spin': isIntelLoading }"></i>
                 </button>
               </div>
-              <div style="height: 320px;">
+              <div style="height: 200px;">
                 <apexchart 
                   v-if="!isIntelLoading && chartOptions" 
                   type="bar" 
@@ -183,44 +166,59 @@
                   :options="chartOptions" 
                   :series="chartSeries"
                 ></apexchart>
-                <div v-else class="h-100 d-flex align-items-center justify-content-center bg-light rounded-4">
-                  <div class="spinner-border text-primary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="row g-3 mb-3">
+          <div class="col-xl-3 col-md-6" v-for="card in otxMetricCards" :key="card.label">
+            <div class="panel-card p-3 shadow-sm h-100">
+              <div class="d-flex align-items-center gap-2">
+                <div class="metric-icon-small" :style="{ color: card.accent, backgroundColor: card.accent + '15' }">
+                  <i :class="card.icon"></i>
+                </div>
+                <div>
+                  <small class="text-muted text-uppercase fw-bold ls-1 d-block">{{ card.label }}</small>
+                  <h5 class="mb-0 fw-bold">{{ isIntelLoading ? '...' : card.value }}</h5>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
+        <!-- IOC & Events Grid -->
+        <div class="row g-3">
           <!-- IOC Table -->
           <div class="col-lg-6">
             <div class="panel-card shadow-sm overflow-hidden h-100">
-              <div class="p-3 bg-light border-bottom d-flex justify-content-between align-items-center">
-                <h6 class="fw-bold mb-0">Active IOCs</h6>
+              <div class="p-2 px-3 bg-light border-bottom d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold mb-0 x-small">Active IOCs</h6>
                 <div class="input-group input-group-sm w-50">
-                  <input type="text" class="form-control" v-model="otxSearchQuery" placeholder="Search IOC..." @keyup.enter="performSearch">
-                  <button class="btn btn-primary" @click="performSearch"><i class="fas fa-search"></i></button>
+                  <input type="text" class="form-control form-control-sm" v-model="otxSearchQuery" placeholder="Search..." @keyup.enter="performSearch">
                 </div>
               </div>
-              <div class="table-responsive" style="max-height: 500px;">
-                <table class="table table-hover align-middle mb-0">
-                  <thead class="table-light sticky-top">
+              <div class="table-responsive" style="max-height: 400px;">
+                <table class="table table-sm table-hover align-middle mb-0">
+                  <thead class="table-light x-small">
                     <tr>
                       <th class="ps-3">Type</th>
                       <th>Value</th>
                       <th class="pe-3 text-end">Sightings</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="x-small">
                     <template v-for="ioc in topIocs" :key="ioc.id">
-                      <tr @click="toggleIoc(ioc.id)" class="cursor-pointer">
-                        <td class="ps-3"><span class="badge bg-primary bg-opacity-10 text-primary">{{ ioc.type }}</span></td>
-                        <td class="small font-monospace">{{ truncate(ioc.value, 30) }}</td>
+                      <tr @click="toggleIoc(ioc.id)" class="cursor-pointer border-0">
+                        <td class="ps-3 py-2"><span class="badge bg-primary bg-opacity-10 text-primary">{{ ioc.type }}</span></td>
+                        <td class="font-monospace opacity-75">{{ truncate(ioc.value, 20) }}</td>
                         <td class="pe-3 text-end"><span class="badge bg-dark rounded-pill">{{ ioc.sightings || 0 }}</span></td>
                       </tr>
                       <tr v-if="expandedIocId === ioc.id" class="bg-light">
-                        <td colspan="3" class="p-3">
-                          <div class="small">
-                            <strong>Context:</strong> {{ ioc.Event?.info || 'N/A' }}<br>
-                            <a :href="`https://otx.alienvault.com/indicator/${ioc.type}/${ioc.value}`" target="_blank" class="btn btn-xs btn-link p-0 mt-2">Open in OTX <i class="fas fa-external-link-alt"></i></a>
+                        <td colspan="3" class="p-2 border-0">
+                          <div class="x-small ps-3">
+                            <strong>Context:</strong> {{ ioc.Event?.info || 'N/A' }}
                           </div>
                         </td>
                       </tr>
@@ -234,33 +232,29 @@
           <!-- Events Table -->
           <div class="col-lg-6">
             <div class="panel-card shadow-sm overflow-hidden h-100">
-              <div class="p-3 bg-light border-bottom">
-                <h6 class="fw-bold mb-0">Recent Pulses</h6>
+              <div class="p-2 px-3 bg-light border-bottom">
+                <h6 class="fw-bold mb-0 x-small">Recent Pulses</h6>
               </div>
-              <div class="table-responsive" style="max-height: 500px;">
-                <table class="table table-hover align-middle mb-0">
-                  <thead class="table-light sticky-top">
+              <div class="table-responsive" style="max-height: 400px;">
+                <table class="table table-sm table-hover align-middle mb-0">
+                  <thead class="table-light x-small">
                     <tr>
-                      <th class="ps-3">Title</th>
+                      <th class="ps-3">Pulse Title</th>
                       <th>Level</th>
                       <th class="pe-3 text-end">Date</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="x-small">
                     <template v-for="event in recentEvents" :key="event.id">
-                      <tr @click="toggleEvent(event.id)" class="cursor-pointer">
-                        <td class="ps-3 small fw-bold">{{ truncate(event.info, 40) }}</td>
-                        <td><span :class="['badge', getSeverityClass(event.threat_level_id)]">{{ getSeverityLabel(event.threat_level_id) }}</span></td>
-                        <td class="pe-3 text-end x-small">{{ formatDateShort(event.timestamp) }}</td>
+                      <tr @click="toggleEvent(event.id)" class="cursor-pointer border-0">
+                        <td class="ps-3 py-2 fw-bold text-navy">{{ truncate(event.info, 30) }}</td>
+                        <td><span :class="['badge x-small', getSeverityClass(event.threat_level_id)]">{{ getSeverityLabel(event.threat_level_id) }}</span></td>
+                        <td class="pe-3 text-end opacity-50">{{ formatDateShort(event.timestamp) }}</td>
                       </tr>
                       <tr v-if="expandedEventId === event.id" class="bg-light">
-                        <td colspan="3" class="p-3">
-                          <div class="small">
-                            <strong>Organization:</strong> {{ event.Org?.name }}<br>
-                            <div class="mt-2 d-flex flex-wrap gap-1">
-                              <span v-for="tag in event.Tag" :key="tag.id" class="badge border text-muted x-small">{{ tag.name }}</span>
-                            </div>
-                            <a :href="`https://otx.alienvault.com/pulse/${event.id}`" target="_blank" class="btn btn-xs btn-link p-0 mt-2">View Pulse <i class="fas fa-external-link-alt"></i></a>
+                        <td colspan="3" class="p-2 border-0">
+                          <div class="x-small ps-3">
+                            <strong>Org:</strong> {{ event.Org?.name }}
                           </div>
                         </td>
                       </tr>
@@ -271,6 +265,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <!-- TAB 2: CISA KEV INTELLIGENCE -->
@@ -766,37 +761,38 @@ export default {
 </script>
 
 <style scoped>
-.intel-center-page { padding: .25rem; border-radius: 32px; background: linear-gradient(180deg, #f7f2e8 0%, #edf5f5 100%); }
+.intel-center-page { padding: .25rem; border-radius: 24px; background: linear-gradient(180deg, #f8f9fa 0%, #f1f5f9 100%); }
 .intel-hero { 
-  display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; 
-  padding: 2rem; border-radius: 28px; color: white;
-  background: linear-gradient(135deg, #17324d 0%, #215a56 100%);
-  box-shadow: 0 14px 30px rgba(15,23,42,.1); margin-bottom: 1.5rem;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem; 
+  padding: 1rem 1.5rem; border-radius: 20px; color: white;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  box-shadow: 0 10px 25px rgba(0,0,0,.05); margin-bottom: 1rem;
 }
-.hero-kicker { display: inline-flex; gap: .5rem; padding: .4rem .8rem; background: rgba(255,255,255,.1); border-radius: 99px; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
-.hero-title { font-size: 2.5rem; font-weight: 800; margin: 1rem 0; }
-.hero-lede { opacity: .8; max-width: 600px; font-size: .95rem; line-height: 1.6; }
-.hero-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; align-content: center; }
-.hero-stat-card { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.1); padding: 1rem; border-radius: 18px; }
-.hero-stat-card label { display: block; font-size: .65rem; opacity: .7; text-transform: uppercase; font-weight: 800; }
-.hero-stat-card strong { display: block; font-size: 1.5rem; font-weight: 800; margin: .25rem 0; }
-.hero-stat-card span { font-size: .75rem; opacity: .6; }
+.hero-content { flex: 1; }
+.hero-kicker { display: inline-flex; gap: .4rem; padding: .25rem .6rem; background: rgba(255,255,255,.1); border-radius: 6px; font-size: .65rem; font-weight: 700; text-transform: uppercase; }
+.hero-title { font-size: 1.5rem; font-weight: 800; margin: .4rem 0; letter-spacing: -0.02em; }
+.hero-lede { opacity: .7; max-width: 500px; font-size: .8rem; line-height: 1.4; margin-bottom: 0; }
+.hero-stats-grid { display: flex; gap: .75rem; }
+.hero-stat-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); padding: .6rem 1rem; border-radius: 12px; min-width: 100px; text-align: center; }
+.hero-stat-card label { display: block; font-size: .6rem; opacity: .6; text-transform: uppercase; font-weight: 800; }
+.hero-stat-card strong { display: block; font-size: 1.1rem; font-weight: 800; margin: 0; }
+.hero-stat-card span { display: none; }
 
-.intel-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.intel-nav { display: flex; gap: .75rem; }
 .intel-tab { 
-  display: flex; align-items: center; gap: 1rem; padding: 1.25rem; 
-  background: white; border: 1px solid rgba(19,34,56,.1); border-radius: 20px;
+  flex: 1; display: flex; align-items: center; gap: .75rem; padding: .75rem 1rem; 
+  background: white; border: 1px solid rgba(19,34,56,.08); border-radius: 14px;
   cursor: pointer; transition: all .2s; text-align: left;
 }
-.intel-tab i { width: 45px; height: 45px; background: #f1f5f9; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
-.intel-tab.active { border-color: #3b82f6; box-shadow: 0 10px 25px rgba(59,130,246,.1); }
+.intel-tab i { width: 32px; height: 32px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: #64748b; }
+.intel-tab.active { border-color: #3b82f6; background: #f0f7ff; }
 .intel-tab.active i { background: #3b82f6; color: white; }
-.intel-tab strong { display: block; font-size: 1rem; font-weight: 800; }
-.intel-tab span { font-size: .8rem; color: #64748b; }
+.intel-tab strong { display: block; font-size: .85rem; font-weight: 800; }
+.intel-tab span { font-size: .7rem; color: #94a3b8; }
 
-.panel-card { background: white; border-radius: 24px; box-shadow: 0 10px 20px rgba(0,0,0,.03); }
-.metric-icon-small { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
-.ls-1 { letter-spacing: 1px; font-size: .65rem; }
+.panel-card { background: white; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,.02); }
+.metric-icon-small { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .9rem; }
+.ls-1 { letter-spacing: .5px; font-size: .6rem; }
 
 .cursor-pointer { cursor: pointer; }
 .animate-fade-in { animation: fadeIn .4s ease-out; }
