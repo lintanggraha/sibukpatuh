@@ -146,6 +146,7 @@
 <script>
 export default {
   name: "CveIntelligence",
+  data() {
     return {
       activeFilter: "Semua",
       filters: ["Semua", "Critical", "High", "Medium", "Low"],
