@@ -393,8 +393,8 @@ export default {
 .cve-section-title {
   font-weight: 850;
   color: #0f172a;
-  letter-spacing: -0.8px;
-  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+  font-size: 1.25rem;
 }
 
 .intel-icon-wrapper {
@@ -657,6 +657,25 @@ export default {
   background: #0f172a;
   color: white;
   border-color: #0f172a;
+}
+
+.cve-card-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cve-section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
 }
 
 .cve-card-subtitle {
