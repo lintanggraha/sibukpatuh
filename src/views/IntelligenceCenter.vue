@@ -54,105 +54,66 @@
       <!-- TAB 1: OTX ALIENVAULT & BREACH CHECKER -->
       <div v-if="activeTab === 'otx'" class="tab-pane-content animate-fade-in">
         
-        <!-- Breach Checker Panel -->
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="panel-card p-4 border border-danger-subtle">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div>
-                  <h5 class="mb-1 fw-bold text-danger"><i class="fas fa-user-shield me-2"></i>BREACH CHECKER</h5>
-                  <p class="text-muted small mb-0">Monitor keamanan akun Anda melalui integrasi database intelijen ancaman real-time.</p>
-                </div>
-                <div v-if="rateLimitCountdown > 0" class="badge bg-warning text-dark">
+        <!-- Top Section: Breach Checker & Activity Chart -->
+        <div class="row g-3 mb-3">
+          <!-- Breach Checker -->
+          <div class="col-lg-6">
+            <div class="panel-card p-3 border border-danger-subtle h-100">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h6 class="fw-800 text-danger mb-0 x-small ls-1"><i class="fas fa-user-shield me-2"></i>BREACH CHECKER</h6>
+                <div v-if="rateLimitCountdown > 0" class="badge bg-warning text-dark x-small">
                   Limit: {{ rateLimitCountdown }}s
                 </div>
               </div>
+              <p class="text-muted x-small mb-3">Integrasi database intelijen kebocoran data real-time.</p>
 
-              <div class="input-group input-group-lg rounded-4 overflow-hidden border shadow-sm">
-                <span class="input-group-text bg-white border-0 ps-4"><i class="fas fa-envelope text-muted"></i></span>
+              <div class="input-group input-group-sm rounded-3 overflow-hidden border shadow-sm mb-2">
+                <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-envelope text-muted"></i></span>
                 <input 
                   type="email" 
-                  class="form-control border-0 py-3" 
+                  class="form-control border-0 py-2" 
                   v-model="userTerm" 
-                  placeholder="Masukkan alamat email untuk dianalisis..."
+                  placeholder="Email to analyze..."
                   :disabled="isChecking"
                   @keyup.enter="checkBreachStatus"
                 >
                 <button 
-                  class="btn btn-danger px-5 fw-bold" 
+                  class="btn btn-danger px-3 fw-bold" 
                   @click="checkBreachStatus" 
                   :disabled="isChecking || !userTerm || rateLimitCountdown > 0"
                 >
-                  <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
-                  {{ isChecking ? 'MEMERIKSA...' : 'CEK SEKARANG' }}
+                  <span v-if="isChecking" class="spinner-border spinner-border-sm me-1"></span>
+                  {{ isChecking ? '...' : 'CHECK' }}
                 </button>
               </div>
 
-              <div v-if="emailError" class="text-danger small mt-2 ms-1 fw-bold">
+              <div v-if="emailError" class="text-danger x-small mt-1 fw-bold">
                 <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
               </div>
 
-              <div v-if="checkResult" class="mt-4 animate-fade-in">
-                <div v-if="!checkResult.found" class="alert alert-success border-0 rounded-4 p-4 d-flex align-items-center">
-                  <i class="fas fa-check-circle fs-3 me-3"></i>
-                  <div>
-                    <h6 class="mb-1 fw-bold">Email Aman!</h6>
-                    <p class="mb-0 small">Alamat email Anda tidak ditemukan dalam database kebocoran data publik yang kami pantau.</p>
-                  </div>
+              <!-- Compact Results -->
+              <div v-if="checkResult" class="mt-2 animate-fade-in x-small">
+                <div v-if="!checkResult.found" class="p-2 bg-success bg-opacity-10 text-success rounded">
+                  <i class="fas fa-check-circle me-1"></i> Email aman dalam pantauan kami.
                 </div>
-                
-                <div v-else class="breach-detail-box rounded-4 border border-danger overflow-hidden">
-                  <div class="bg-danger bg-opacity-10 p-3 d-flex justify-content-between align-items-center">
-                    <span class="fw-bold text-danger"><i class="fas fa-exclamation-circle me-2"></i>DITEMUKAN {{ checkResult.size }} SUMBER KEBOCORAN</span>
-                    <button class="btn btn-sm btn-outline-danger" @click="copyAllSources">Salin Semua Sumber</button>
-                  </div>
-                  <div class="table-responsive">
-                    <table class="table table-hover align-middle mb-0">
-                      <thead class="table-light">
-                        <tr>
-                          <th class="ps-4">Email</th>
-                          <th>Tipe Data</th>
-                          <th class="pe-4">Sumber / Database</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="(item, index) in checkResult.list" :key="index">
-                          <td class="ps-4 fw-bold text-navy">{{ item.email }}</td>
-                          <td>
-                            <span :class="['badge rounded-pill px-3', item.hash_password ? 'bg-secondary' : 'bg-danger']">
-                              {{ item.hash_password ? 'Hashed Password' : 'PLAINTEXT PASSWORD' }}
-                            </span>
-                          </td>
-                          <td class="pe-4">
-                            <div class="d-flex flex-wrap gap-1">
-                              <span v-for="source in item.sources" :key="source" class="badge bg-light text-dark border">
-                                {{ source }}
-                              </span>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <div v-else class="p-2 bg-danger bg-opacity-10 text-danger rounded d-flex justify-content-between align-items-center">
+                  <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran.</span>
+                  <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">Salin</button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Chart Area -->
-        <div class="row g-3 mb-3">
-          <div class="col-12">
-            <div class="panel-card shadow-sm p-3">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <h6 class="fw-bold mb-0 x-small text-uppercase text-muted ls-1">OTX Activity Distribution</h6>
-                </div>
-                <button class="btn btn-xs btn-outline-primary rounded-pill px-2" @click="fetchAllIntelData" :disabled="isIntelLoading">
-                  <i class="fas fa-sync-alt me-1" :class="{ 'fa-spin': isIntelLoading }"></i>
+          <!-- Activity Chart -->
+          <div class="col-lg-6">
+            <div class="panel-card shadow-sm p-3 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="fw-800 text-muted text-uppercase ls-1 x-small mb-0">Activity Distribution</h6>
+                <button class="btn btn-ai-mini" @click="fetchAllIntelData" :disabled="isIntelLoading">
+                  <i class="fas fa-sync-alt" :class="{ 'fa-spin': isIntelLoading }"></i>
                 </button>
               </div>
-              <div style="height: 200px;">
+              <div style="height: 140px;">
                 <apexchart 
                   v-if="!isIntelLoading && chartOptions" 
                   type="bar" 
