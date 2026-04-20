@@ -52,5 +52,221 @@
     "Description": "Bank Syariah Indonesia suffered a ransomware attack by the LockBit gang, which allegedly stole 1.5TB of data including customer records and employee information.",
     "DataClasses": ["Names", "Account numbers", "Phone numbers", "Transaction history"],
     "Country": "Indonesia"
+  },
+  {
+    "Name": "PDNS (Pusat Data Nasional Sementara)",
+    "Domain": "pdn.go.id",
+    "BreachDate": "2024-06-20",
+    "PwnCount": 282000,
+    "Description": "Serangan ransomware Brain Cipher pada Pusat Data Nasional Sementara (PDNS) 2 menyebabkan gangguan layanan publik masif di Indonesia, termasuk imigrasi.",
+    "DataClasses": ["Government records", "Biometric data", "Service logs"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "BKN (Badan Kepegawaian Negara)",
+    "Domain": "bkn.go.id",
+    "BreachDate": "2024-08-10",
+    "PwnCount": 4759218,
+    "Description": "Kebocoran data 4,7 juta ASN Indonesia yang mencakup data pribadi sensitif, riwayat hidup, dan dokumen kepegawaian yang dijual di forum hacker.",
+    "DataClasses": ["Names", "Phone numbers", "Emails", "Employment history"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "National Public Data (NPD)",
+    "Domain": "nationalpublicdata.com",
+    "BreachDate": "2024-04-01",
+    "PwnCount": 2900000000,
+    "Description": "A massive leak containing billions of records including Social Security Numbers, names, and addresses from a US background check company.",
+    "DataClasses": ["Social Security Numbers", "Names", "Addresses", "Phone numbers"],
+    "Country": "Global"
+  },
+  {
+    "Name": "KPU (Komisi Pemilihan Umum)",
+    "Domain": "kpu.go.id",
+    "BreachDate": "2023-11-27",
+    "PwnCount": 204000000,
+    "Description": "Data pemilih tetap (DPT) Pemilu 2024 diduga bocor dan dijual oleh hacker bernama Jimbo, mencakup NIK, nomor KK, dan alamat.",
+    "DataClasses": ["NIK", "KK", "Names", "Addresses", "Birth dates"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "BPJS Kesehatan",
+    "Domain": "bpjs-kesehatan.go.id",
+    "BreachDate": "2021-05-20",
+    "PwnCount": 279000000,
+    "Description": "Data 279 juta penduduk Indonesia yang dikelola BPJS Kesehatan bocor dan dijual di forum RaidForums, termasuk data gaji dan NIK.",
+    "DataClasses": ["NIK", "Names", "Phone numbers", "Salaries", "Addresses"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Facebook",
+    "Domain": "facebook.com",
+    "BreachDate": "2021-04-03",
+    "PwnCount": 533000000,
+    "Description": "Data personal 533 juta pengguna Facebook dari 106 negara bocor secara online, mencakup nomor telepon dan ID pengguna.",
+    "DataClasses": ["Phone numbers", "Facebook IDs", "Full names", "Locations"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Yahoo",
+    "Domain": "yahoo.com",
+    "BreachDate": "2013-08-01",
+    "PwnCount": 3000000000,
+    "Description": "Yahoo announced that all 3 billion of its user accounts were affected by a 2013 data breach, making it the largest in history.",
+    "DataClasses": ["Names", "Email addresses", "Passwords", "Dates of birth"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Marriott International",
+    "Domain": "marriott.com",
+    "BreachDate": "2018-11-30",
+    "PwnCount": 500000000,
+    "Description": "The Starwood guest reservation database was compromised, exposing information for up to 500 million guests.",
+    "DataClasses": ["Names", "Mailing addresses", "Passport numbers", "Phone numbers"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Equifax",
+    "Domain": "equifax.com",
+    "BreachDate": "2017-09-07",
+    "PwnCount": 147900000,
+    "Description": "A cybersecurity incident at Equifax impacted approximately 147 million U.S. consumers, exposing sensitive credit information.",
+    "DataClasses": ["Social Security Numbers", "Birth dates", "Addresses", "Driver's license numbers"],
+    "Country": "Global"
+  },
+  {
+    "Name": "MyPertamina",
+    "Domain": "mypertamina.id",
+    "BreachDate": "2022-11-10",
+    "PwnCount": 44000000,
+    "Description": "Bjorka mengklaim telah meretas data 44 juta pengguna aplikasi MyPertamina, mencakup nama, email, NIK, dan pengeluaran bahan bakar.",
+    "DataClasses": ["Names", "Emails", "NIK", "Fuel consumption"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "PLN",
+    "Domain": "pln.co.id",
+    "BreachDate": "2022-08-18",
+    "PwnCount": 17000000,
+    "Description": "Data pelanggan PLN diduga bocor dan dijual di forum breached.to, mencakup nama pelanggan dan nomor meteran.",
+    "DataClasses": ["Customer names", "Meter numbers", "Addresses", "Energy usage"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Telkomsel (IndiHome)",
+    "Domain": "telkomsel.com",
+    "BreachDate": "2022-08-21",
+    "PwnCount": 26000000,
+    "Description": "Data browsing history dan NIK pelanggan IndiHome diduga bocor dan dijual di forum online.",
+    "DataClasses": ["Browsing history", "NIK", "Names", "Customer IDs"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Wattpad",
+    "Domain": "wattpad.com",
+    "BreachDate": "2020-07-01",
+    "PwnCount": 270000000,
+    "Description": "Wattpad suffered a data breach that exposed the personal information of 270 million users, which was later sold on public forums.",
+    "DataClasses": ["Names", "Usernames", "Email addresses", "Passwords"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Zynga",
+    "Domain": "zynga.com",
+    "BreachDate": "2019-09-01",
+    "PwnCount": 173000000,
+    "Description": "The mobile game developer Zynga suffered a breach affecting players of Words with Friends and Draw Something.",
+    "DataClasses": ["Names", "Email addresses", "Login IDs", "Passwords"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Change Healthcare",
+    "Domain": "changehealthcare.com",
+    "BreachDate": "2024-02-21",
+    "PwnCount": 190000000,
+    "Description": "A massive ransomware attack disrupted the US healthcare system and resulted in the theft of millions of patient records.",
+    "DataClasses": ["Patient records", "Financial info", "SSN", "Medical history"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Red Hat (GitLab)",
+    "Domain": "redhat.com",
+    "BreachDate": "2025-01-15",
+    "PwnCount": 28000,
+    "Description": "Crimson Collective exfiltrated 570GB of data from over 28,000 internal repositories, including sensitive configuration data.",
+    "DataClasses": ["Source code", "Config files", "API keys", "Credentials"],
+    "Country": "Global"
+  },
+  {
+    "Name": "TransUnion",
+    "Domain": "transunion.com",
+    "BreachDate": "2025-02-05",
+    "PwnCount": 4400000,
+    "Description": "Misconfigured API permissions allowed unauthorized access to millions of customer records through a third-party integration.",
+    "DataClasses": ["Names", "Contact details", "Credit scores", "Social Security Numbers"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Qantas",
+    "Domain": "qantas.com",
+    "BreachDate": "2025-03-12",
+    "PwnCount": 6000000,
+    "Description": "Exfiltration of customer records following exploitation of a third-party system, affecting frequent-flyer members.",
+    "DataClasses": ["Names", "Contact details", "Frequent-flyer info", "Travel history"],
+    "Country": "Global"
+  },
+  {
+    "Name": "Inafis (Polri)",
+    "Domain": "polri.go.id",
+    "BreachDate": "2024-06-22",
+    "PwnCount": 1000000,
+    "Description": "Data sidik jari dan informasi pribadi dari database Inafis Polri diduga bocor dan dijual di forum gelap.",
+    "DataClasses": ["Fingerprints", "Names", "Police IDs", "Emails"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Jasa Marga",
+    "Domain": "jasamarga.com",
+    "BreachDate": "2022-08-25",
+    "PwnCount": 252000,
+    "Description": "Data internal PT Jasa Marga diduga bocor, mencakup data karyawan dan dokumen proyek.",
+    "DataClasses": ["Employee records", "Project documents", "Emails", "Phone numbers"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Bank Jatim",
+    "Domain": "bankjatim.co.id",
+    "BreachDate": "2021-10-21",
+    "PwnCount": 378000,
+    "Description": "Data nasabah Bank Jatim diduga bocor dan dijual di RaidForums, mencakup data saldo dan NIK.",
+    "DataClasses": ["Names", "Account numbers", "NIK", "Balances"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Pertamina Training & Consulting",
+    "Domain": "pertamina-ptc.com",
+    "BreachDate": "2022-01-10",
+    "PwnCount": 160000,
+    "Description": "Data pribadi pelamar kerja di Pertamina PTC diduga bocor dan dipublikasikan secara online.",
+    "DataClasses": ["CVs", "Names", "Emails", "Phone numbers", "Addresses"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "Ditjen Pajak (DJP)",
+    "Domain": "pajak.go.id",
+    "BreachDate": "2024-09-18",
+    "PwnCount": 6000000,
+    "Description": "Bjorka kembali berulah dengan membocorkan 6 juta data NPWP, termasuk milik Presiden Jokowi dan para menteri.",
+    "DataClasses": ["NPWP", "NIK", "Names", "Addresses", "Emails"],
+    "Country": "Indonesia"
+  },
+  {
+    "Name": "MOAB (Mother of All Breaches)",
+    "Domain": "various.com",
+    "BreachDate": "2024-01-22",
+    "PwnCount": 26000000000,
+    "Description": "A super-leak containing 26 billion records from thousands of previous breaches and new leaks compiled in one place.",
+    "DataClasses": ["Email addresses", "Passwords", "Social profiles", "Full names"],
+    "Country": "Global"
   }
 ]

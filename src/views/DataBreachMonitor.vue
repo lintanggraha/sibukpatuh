@@ -304,7 +304,7 @@ const CONFIG = {
   ITEMS_PER_PAGE: 20,
   STATIC_DB_URL: '/data/breaches.json',
   CATEGORIES: ["Semua", "Terverifikasi", "Kredensial", "Database", "Pemerintah", "Keuangan"],
-  YEARS: ["2025", "2024", "2023", "2022", "2021"],
+  YEARS: ["2025", "2024", "2023", "2022", "2021", "2020"],
   // SECURITY: Linear-time regex safe from ReDoS backtracking (SonarQube S5852)
   EMAIL_REGEX: /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/
 };
@@ -342,7 +342,7 @@ export default {
         const matchesYear = this.filterYear === "Semua" || 
                            (this.filterYear === "≤2020" ? parseInt(b.date?.split('-')[0]) <= 2020 : b.date?.startsWith(this.filterYear));
         const matchesCountry = this.filterCountry === "Semua" || 
-                              (this.filterCountry === "Indonesia" ? (b.country === "Indonesia" || b.domain?.endsWith('.id')) : b.country !== "Indonesia");
+                               (this.filterCountry === "Indonesia" ? (b.country === "Indonesia" || b.domain?.endsWith('.id')) : b.country !== "Indonesia");
         const matchesSearch = !this.searchQuery || 
                              b.name.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
                              b.domain?.toLowerCase().includes(this.searchQuery.toLowerCase());
@@ -399,9 +399,16 @@ export default {
     },
     detectCategory(b) {
       const desc = (b.Description || "").toLowerCase();
-      if (desc.includes('government') || desc.includes('pemerintah')) return "Pemerintah";
-      if (desc.includes('bank') || desc.includes('finance')) return "Keuangan";
-      if (b.DataClasses?.includes('Passwords')) return "Kredensial";
+      const name = (b.Name || "").toLowerCase();
+      const domain = (b.Domain || "").toLowerCase();
+      
+      const govtKeywords = ['government', 'pemerintah', 'kpu', 'bkn', 'djp', 'polri', 'inafis', 'go.id'];
+      if (govtKeywords.some(kw => desc.includes(kw) || name.includes(kw) || domain.includes(kw))) return "Pemerintah";
+      
+      const financeKeywords = ['bank', 'finance', 'investasi', 'syariah', 'asuransi', 'ojk'];
+      if (financeKeywords.some(kw => desc.includes(kw) || name.includes(kw) || domain.includes(kw))) return "Keuangan";
+      
+      if (b.DataClasses?.some(dc => dc.toLowerCase().includes('password'))) return "Kredensial";
       return "Database";
     },
     formatCount(num) {
