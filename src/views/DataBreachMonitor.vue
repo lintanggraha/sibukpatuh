@@ -351,6 +351,8 @@
           </div>
         </div>
       </div>
+    </div>
+
     <!-- Toast Container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
       <div v-for="toast in toasts" :key="toast.id" class="toast show animate-fade-in" role="alert">
