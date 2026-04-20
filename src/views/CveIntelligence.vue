@@ -205,19 +205,25 @@ export default {
     async fetchLatestCves() {
       this.isLoading = true;
       try {
-        // Fetch from NIST NVD API 2.0 (15 latest results)
-        const response = await fetch('https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=15');
+        // Menghitung tanggal 120 hari yang lalu untuk filter 'terbaru'
+        const now = new Date();
+        const pastDate = new Date();
+        pastDate.setDate(now.getDate() - 120);
+        
+        const isoDate = pastDate.toISOString().split('.')[0]; // Format: YYYY-MM-DDTHH:mm:ss
+        
+        // Fetch from NIST NVD API 2.0 dengan filter pubStartDate
+        const response = await fetch(`https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=${isoDate}&resultsPerPage=30`);
         if (!response.ok) throw new Error('API Response Error');
         
         const data = await response.json();
         
-        this.cves = data.vulnerabilities.map(item => {
+        let fetchedCves = data.vulnerabilities.map(item => {
           const cve = item.cve;
           const metrics = cve.metrics?.cvssMetricV31?.[0]?.cvssData || 
                          cve.metrics?.cvssMetricV30?.[0]?.cvssData || 
                          cve.metrics?.cvssMetricV2?.[0]?.cvssData;
           
-          // Helper to extract vendor/product from CPE string
           const cpe = cve.configurations?.[0]?.nodes?.[0]?.cpeMatch?.[0]?.criteria || "";
           const cpeParts = cpe.split(':');
           
@@ -226,13 +232,17 @@ export default {
             score: metrics?.baseScore || 'N/A',
             severity: metrics?.baseSeverity || (metrics?.baseScore >= 9 ? 'CRITICAL' : metrics?.baseScore >= 7 ? 'HIGH' : 'MEDIUM'),
             title: cve.descriptions.find(d => d.lang === 'en')?.value || 'No description available.',
-            vendor: cpeParts[3] ? cpeParts[3].charAt(0).toUpperCase() + cpeParts[3].slice(1) : 'Unknown',
-            product: cpeParts[4] ? cpeParts[4].replace(/_/g, ' ') : 'General System',
-            date: new Date(cve.published).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })
+            vendor: cpeParts[3] ? cpeParts[3].charAt(0).toUpperCase() + cpeParts[3].slice(1) : 'General',
+            product: cpeParts[4] ? cpeParts[4].replace(/_/g, ' ') : 'Software',
+            date: new Date(cve.published).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }),
+            rawDate: new Date(cve.published)
           };
         });
 
-        // Select first one if available
+        // Urutkan berdasarkan tanggal terbaru di atas
+        this.cves = fetchedCves.sort((a, b) => b.rawDate - a.rawDate);
+
+        // Select first one
         if (this.cves.length > 0 && !this.selectedCve) {
           this.selectedCve = this.cves[0];
         }
