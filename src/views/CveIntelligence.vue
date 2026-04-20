@@ -74,6 +74,8 @@
               <h3 class="cve-card-title">{{ cve.title }}</h3>
               
               <div class="cve-bottom-row">
+                <span class="cve-meta-info">
+                  <strong>{{ cve.vendor }}</strong> · {{ cve.product }} · <span class="text-muted">{{ cve.date }}</span>
                 </span>
               </div>
 
