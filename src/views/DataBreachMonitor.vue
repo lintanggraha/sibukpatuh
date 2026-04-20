@@ -1,5 +1,17 @@
 <template>
   <div class="breach-container">
+    <div class="breach-header mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <h2 class="breach-section-title mb-0">Data Breach Monitor</h2>
+        <span class="badge source-info-pill">
+          <i class="fas fa-database me-1"></i> Source: Have I Been Pwned & Public OSINT Archive
+        </span>
+      </div>
+      <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">
+        Monitoring basis data kebocoran data global dan nasional dari sumber intelijen keamanan publik (FOSS).
+      </p>
+    </div>
+
     <!-- 4 Metric Cards -->
     <div class="row g-3 mb-4">
       <div class="col-md-3" v-for="card in metricCards" :key="card.label">
@@ -181,11 +193,12 @@
             </div>
 
             <div class="inspector-section mb-4">
-              <label class="section-label-small">RINGKASAN</label>
+              <label class="section-label-small">RINGKASAN & ATRIBUSI</label>
               <p class="inspector-text">{{ selectedBreach.description || 'Tidak ada deskripsi tersedia.' }}</p>
-              <small class="text-muted d-block mt-2" style="font-size: 0.7rem; font-style: italic;">
-                * Sumber data: Have I Been Pwned / Public OSINT Repositories
-              </small>
+              <div class="source-attribution-box mt-3">
+                <i class="fas fa-info-circle me-2"></i>
+                <span>Data dikumpulkan dari repositori publik <strong>Have I Been Pwned</strong> dan arsip keamanan <strong>OSINT</strong>.</span>
+              </div>
             </div>
 
             <div class="inspector-section mb-4">
@@ -197,50 +210,150 @@
               </div>
             </div>
 
-            <div class="inspector-section mt-auto pt-4 border-top">
-              <label class="section-label-small">CEK EMAIL / DOMAIN</label>
-              <div class="input-group mb-3">
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  v-model="userTerm" 
-                  placeholder="Email atau domain..."
-                  :disabled="isChecking || !isApiConfigured"
-                >
-                <button 
-                  class="btn btn-navy" 
-                  @click="checkBreachStatus"
-                  :disabled="isChecking || !userTerm || !isApiConfigured"
-                >
-                  <span v-if="isChecking" class="spinner-border spinner-border-sm"></span>
-                  <span v-else>Periksa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Cek Email (Full Width Panel) -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="panel-card p-4 shadow-sm">
+          <div class="mb-4">
+            <h5 class="fw-bold text-navy">CEK EMAIL</h5>
+            <p class="text-muted small">Periksa apakah email kamu pernah bocor di seluruh database breach yang tercatat.</p>
+          </div>
+
+          <div class="search-panel-wrapper mb-4">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <div class="input-group input-group-lg shadow-sm rounded-4 overflow-hidden">
+                  <span class="input-group-text bg-white border-end-0"><i class="fas fa-envelope text-muted"></i></span>
+                  <input 
+                    type="email" 
+                    class="form-control border-start-0" 
+                    v-model="userTerm" 
+                    placeholder="Masukkan alamat email kamu..."
+                    :disabled="isChecking"
+                    @keyup.enter="checkBreachStatus"
+                  >
+                  <button 
+                    class="btn btn-navy px-4 fw-bold" 
+                    @click="checkBreachStatus"
+                    :disabled="isChecking || !userTerm"
+                  >
+                    <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
+                    {{ isChecking ? 'Memeriksa...' : 'Periksa Sekarang' }}
+                  </button>
+                </div>
+                <div v-if="emailError" class="text-danger small mt-2 ms-2 fw-bold">
+                  <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading State -->
+          <div v-if="isChecking" class="p-5 text-center">
+            <div class="enrich-loader">
+              <div class="skeleton-line mb-3"></div>
+              <div class="skeleton-line mb-3 w-75"></div>
+              <div class="skeleton-line mb-3 w-50"></div>
+            </div>
+            <p class="text-muted mt-3 fw-bold">Memeriksa di seluruh database...</p>
+          </div>
+
+          <!-- Result Area -->
+          <div v-else-if="checkResult" class="result-area animate-fade-in">
+            <!-- Safe Case -->
+            <div v-if="!checkResult.found" class="alert alert-success d-flex align-items-center p-4 rounded-4 border-0">
+              <i class="fas fa-check-circle fs-1 me-4"></i>
+              <div>
+                <h5 class="mb-0 fw-bold">Email ini tidak ditemukan di database breach manapun</h5>
+                <p class="mb-0 opacity-75">Tetap waspada dan jangan lupa ganti password secara berkala.</p>
+              </div>
+            </div>
+
+            <!-- Breached Case -->
+            <div v-else>
+              <div class="alert alert-danger d-flex justify-content-between align-items-center p-4 rounded-4 border-0 mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <div class="alert-icon-wrapper me-4">
+                    <i class="fas fa-biohazard fs-1"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-0 fw-bold">Ditemukan di {{ checkResult.size }} entri breach</h5>
+                    <p class="mb-0 opacity-75">Beberapa informasi sensitif kamu mungkin telah bocor ke publik.</p>
+                  </div>
+                </div>
+                <button class="btn btn-light btn-sm fw-bold shadow-sm" @click="copyAllSources">
+                  <i class="fas fa-copy me-2 text-danger"></i> Salin semua sumber breach
                 </button>
               </div>
 
-              <div v-if="!isApiConfigured" class="alert alert-warning py-2 small">
-                <i class="fas fa-info-circle me-1"></i> Tambahkan API key di konfigurasi untuk menggunakan fitur ini.
+              <!-- Result Table -->
+              <div class="table-responsive rounded-4 border shadow-sm">
+                <table class="table table-hover align-middle mb-0 breach-result-table">
+                  <thead class="bg-light">
+                    <tr>
+                      <th width="60" class="ps-4">No</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th width="120">Tipe Hash</th>
+                      <th class="pe-4">Sumber Breach</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(item, index) in checkResult.list" :key="index">
+                      <td class="ps-4 text-muted">{{ index + 1 }}</td>
+                      <td class="fw-bold">{{ item.email }}</td>
+                      <td>
+                        <div class="password-toggle-group">
+                          <span class="font-mono text-navy fw-bold">
+                            {{ item.showPassword ? item.password : maskPassword(item.password) }}
+                          </span>
+                          <button class="btn btn-link btn-sm text-muted ms-2" @click="item.showPassword = !item.showPassword">
+                            <i class="fas" :class="item.showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td>
+                        <span :class="['badge rounded-pill px-3', item.hash_password ? 'bg-secondary' : 'bg-danger']">
+                          {{ item.hash_password ? 'Hashed' : 'Plaintext' }}
+                        </span>
+                      </td>
+                      <td class="pe-4">
+                        <div class="d-flex flex-wrap gap-1">
+                          <span v-for="source in item.sources" :key="source" class="badge bg-soft-red text-danger border border-danger border-opacity-10">
+                            {{ source }}
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-
-              <div v-if="checkResult" :class="`alert py-2 ${checkResult.found ? 'alert-danger' : 'alert-success'}`">
-                <div v-if="checkResult.found">
-                  <strong class="d-block mb-1">Ditemukan di database breach!</strong>
-                  <ul class="mb-0 ps-3 small">
-                    <li v-for="b in checkResult.list" :key="b">{{ b }}</li>
-                  </ul>
-                </div>
-                <div v-else>
-                  <i class="fas fa-check-circle me-1"></i> Tidak ditemukan di database breach.
-                </div>
-              </div>
-
-              <div v-if="rateLimitCountdown > 0" class="alert alert-info py-1 small">
-                Coba lagi dalam {{ rateLimitCountdown }} detik.
-              </div>
-
-              <div v-if="corsMessage" class="alert alert-danger py-2 small">
-                <i class="fas fa-exclamation-triangle me-1"></i> {{ corsMessage }}
+              <div class="mt-4 p-3 bg-light rounded-4 border">
+                <p class="mb-0 small text-muted">
+                  <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                  Data ini berasal dari <strong>BreachDirectory</strong>. Segera ganti password pada layanan yang tercantum di atas untuk menjaga keamanan akun Anda.
+                </p>
               </div>
             </div>
+          </div>
+
+          <!-- Error States -->
+          <div v-if="apiError" class="alert alert-warning p-4 rounded-4 border-0 mt-3 d-flex align-items-center">
+            <i class="fas fa-exclamation-triangle me-4 fs-3 text-warning"></i>
+            <div>
+              <h6 class="mb-1 fw-bold">{{ apiError }}</h6>
+              <span v-if="rateLimitCountdown > 0" class="small fw-bold">Coba lagi dalam {{ rateLimitCountdown }} detik</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
           </div>
         </div>
       </div>
@@ -279,12 +392,13 @@ export default {
       isChecking: false,
       checkResult: null,
       rateLimitCountdown: 0,
-      corsMessage: ""
+      emailError: "",
+      apiError: ""
     };
   },
   computed: {
     isApiConfigured() {
-      return this.config.BREACHDIR_API_KEY !== '';
+      return true; // Now handled by server-side env vars
     },
     filteredBreaches() {
       return this.breaches.filter(b => {
@@ -336,7 +450,7 @@ export default {
           accounts: b.PwnCount || b.accounts || 0,
           date: b.BreachDate || b.date,
           category: this.detectCategory(b),
-          source: "Static DB",
+          source: "OSINT ARCHIVE",
           country: b.Country || (b.Domain?.endsWith('.id') ? "Indonesia" : "Global"),
           description: b.Description || b.description,
           dataClasses: b.DataClasses || b.data_types || []
@@ -379,59 +493,76 @@ export default {
     },
     async checkBreachStatus() {
       if (!this.userTerm) return;
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(this.userTerm)) {
+        this.emailError = "Format email tidak valid";
+        return;
+      }
+      
+      this.emailError = "";
       this.isChecking = true;
       this.checkResult = null;
-      this.corsMessage = "";
+      this.apiError = "";
+
+      // Timeout handler
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
 
       try {
-        // Parallel fetch using Promise.all
-        const [breachDirRes, psbdmpRes] = await Promise.allSettled([
-          this.fetchBreachDirectory(this.userTerm),
-          this.fetchPSBDMP(this.userTerm)
-        ]);
+        const response = await fetch(`/api/breach?email=${encodeURIComponent(this.userTerm)}`, {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
 
-        let combinedResults = [];
-        if (breachDirRes.status === 'fulfilled') combinedResults.push(...breachDirRes.value);
-        if (psbdmpRes.status === 'fulfilled') combinedResults.push(...psbdmpRes.value);
+        if (response.status === 429) {
+          this.apiError = "Terlalu banyak permintaan. Coba lagi nanti.";
+          this.startRateLimitTimer();
+          return;
+        }
 
-        // Deduplicate
-        const uniqueList = [...new Set(combinedResults)];
+        if (!response.ok) {
+          this.apiError = "Terjadi kesalahan server (500), coba beberapa saat lagi.";
+          return;
+        }
 
-        this.checkResult = {
-          found: uniqueList.length > 0,
-          list: uniqueList
-        };
+        const data = await response.json();
+        
+        // BreachDirectory specific response handling
+        if (data.found) {
+          this.checkResult = {
+            found: true,
+            size: data.found,
+            list: data.result.map(item => ({
+              ...item,
+              showPassword: false
+            }))
+          };
+        } else {
+          this.checkResult = { found: false };
+        }
 
       } catch (err) {
-        this.corsMessage = "Terjadi kesalahan koneksi API. Periksa CORS atau API Key.";
+        if (err.name === 'AbortError') {
+          this.apiError = "Koneksi timeout, coba lagi.";
+        } else {
+          this.apiError = "Terjadi kesalahan koneksi, coba lagi.";
+        }
       } finally {
         this.isChecking = false;
       }
     },
-    async fetchBreachDirectory(term) {
-      // Mocked logic for CORS/API simulation
-      const url = `https://breachdirectory.org/api?func=auto&term=${term}`;
-      try {
-        const res = await fetch(url, {
-          headers: { 'X-Api-Key': this.config.BREACHDIR_API_KEY }
-        });
-        if (res.status === 429) {
-          this.startRateLimitTimer();
-          return [];
-        }
-        if (!res.ok) return [];
-        const data = await res.json();
-        return data.found ? data.sources : [];
-      } catch { return []; }
+    maskPassword(pass) {
+      if (!pass) return "********";
+      if (pass.length <= 4) return "****";
+      return pass.substring(0, 1) + "***" + pass.substring(pass.length - 1);
     },
-    async fetchPSBDMP(term) {
-      const url = `https://psbdmp.ws/api/v3/search/${term}`;
-      try {
-        const res = await fetch(url);
-        if (!res.ok) return [];
-        const data = await res.json();
-        return data.data ? data.data.map(p => `Pastebin Dump: ${p.id}`) : [];
-      } catch { return []; }
+    copyAllSources() {
+      if (!this.checkResult || !this.checkResult.list) return;
+      const allSources = [...new Set(this.checkResult.list.flatMap(i => i.sources))];
+      navigator.clipboard.writeText(allSources.join(', '));
+      alert("Semua sumber telah disalin!");
     },
     startRateLimitTimer() {
       this.rateLimitCountdown = 60;
