@@ -35,10 +35,7 @@
         @click="activeTab = 'otx'"
       >
         <i class="fas fa-satellite-dish"></i>
-        <div>
-          <strong>Threat Feed (OTX)</strong>
-          <span>Real-time pulses & Breach Checker</span>
-        </div>
+        <strong>Threat Feed</strong>
       </button>
       <button 
         class="intel-tab" 
@@ -47,10 +44,7 @@
         @click="activeTab = 'cve'"
       >
         <i class="fas fa-bug"></i>
-        <div>
-          <strong>Vulnerability Intel (CISA)</strong>
-          <span>Known Exploited Vulnerabilities</span>
-        </div>
+        <strong>Vulnerability Intel</strong>
       </button>
     </div>
 
@@ -299,47 +293,38 @@
                 <p class="text-muted">Tidak ada data intelijen yang ditemukan.</p>
                 <button class="btn btn-sm btn-outline-primary" @click="fetchCisaKEV">Coba Lagi</button>
               </div>
-              <transition-group v-else name="list" tag="div" class="cve-cards-grid">
+              <transition-group v-else name="list" tag="div" class="cve-list-container">
                 <div 
                   v-for="cve in filteredCves" 
                   :key="cve.id" 
-                  class="cve-card"
+                  class="cve-row-item"
                   :class="{ selected: selectedCve?.id === cve.id, expanded: expandedCveId === cve.id }"
                   @click="toggleCveExpand(cve)"
                 >
-                  <div class="cve-top-row">
-                    <span class="cve-id">{{ cve.id }}</span>
-                    <div class="cve-actions">
-                      <span class="cve-exploited-badge">EXPLOITED</span>
-                      <button class="btn btn-ai-icon" @click.stop="askAi(cve)"><i class="fas fa-robot"></i></button>
+                  <div class="cve-row-main">
+                    <div class="cve-row-id-cell">
+                      <span class="cve-id-tag">{{ cve.id }}</span>
                     </div>
-                  </div>
-                  <h3 class="cve-title-text">{{ cve.title }}</h3>
-                  <p class="cve-desc-text">{{ cve.shortDescription }}</p>
-                  <div class="cve-footer-meta">
-                    <strong>{{ cve.vendor }}</strong> · {{ cve.product }} · <span class="text-muted">{{ cve.date }}</span>
+                    <div class="cve-row-content-cell">
+                      <div class="d-flex align-items-center gap-2">
+                        <span v-if="cve.isRansomware" class="badge-mini bg-danger">RANSOM</span>
+                        <span class="cve-row-title">{{ cve.title }}</span>
+                      </div>
+                      <div class="cve-row-sub">{{ cve.vendor }} · {{ cve.product }}</div>
+                    </div>
+                    <div class="cve-row-meta-cell">
+                      <span class="cve-row-date">{{ cve.date }}</span>
+                      <div class="cve-row-actions">
+                        <button class="btn btn-ai-mini" @click.stop="askAi(cve)"><i class="fas fa-robot"></i></button>
+                      </div>
+                    </div>
                   </div>
 
                   <transition name="expand">
-                    <div v-if="expandedCveId === cve.id" class="cve-expanded-body mt-3">
-                      <div class="divider mb-3"></div>
-                      <label class="detail-label">Technical Description (NVD)</label>
-                      <div v-if="cve.isEnriching" class="skeleton-loader">
-                        <div class="skeleton-line mb-1"></div>
-                        <div class="skeleton-line w-75"></div>
-                      </div>
-                      <p v-else class="detail-text">{{ cve.fullDescription || cve.shortDescription }}</p>
-                      
-                      <div class="mt-3 d-flex gap-2">
-                        <div class="info-pill" :class="{ danger: cve.isRansomware }">
-                          <i class="fas" :class="cve.isRansomware ? 'fa-biohazard' : 'fa-check-circle'"></i>
-                          {{ cve.isRansomware ? 'Ransomware Campaign' : 'No Ransomware Known' }}
-                        </div>
-                      </div>
-
-                      <div v-if="cve.requiredAction" class="mitigation-box mt-3">
-                        <label class="text-danger fw-bold small"><i class="fas fa-tools me-1"></i> CISA Required Action</label>
-                        <p class="mb-0 small mt-1">{{ cve.requiredAction }}</p>
+                    <div v-if="expandedCveId === cve.id" class="cve-row-details">
+                      <p class="cve-row-description">{{ cve.fullDescription || cve.shortDescription }}</p>
+                      <div v-if="cve.requiredAction" class="cve-row-action-box">
+                        <strong>Required Action:</strong> {{ cve.requiredAction }}
                       </div>
                     </div>
                   </transition>
@@ -798,22 +783,29 @@ export default {
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 /* CVE Styles */
-.cve-count-pill { background: #0f172a; color: white; padding: .25rem .75rem; border-radius: 8px; font-weight: 700; font-size: .75rem; }
-.live-pulse { display: flex; align-items: center; gap: 6px; background: #f0fdf4; padding: .25rem .75rem; border-radius: 8px; border: 1px solid #dcfce7; }
-.pulse-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; position: relative; }
-.pulse-dot::after { content:''; position: absolute; width: 100%; height: 100%; background: inherit; border-radius: 50%; animation: pulse-ping 1.5s infinite; }
-@keyframes pulse-ping { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(3); opacity: 0; } }
-.status-text { font-size: .65rem; font-weight: 800; color: #166534; }
+/* CVE List Rows */
+.cve-list-container { display: flex; flex-direction: column; gap: 4px; }
+.cve-row-item { 
+  background: white; border: 1px solid #eef2f6; border-radius: 8px; 
+  padding: 8px 12px; cursor: pointer; transition: all .2s; 
+}
+.cve-row-item:hover { background: #f8fafc; border-color: #cbd5e1; }
+.cve-row-item.selected { border-color: #3b82f6; background: #f0f7ff; }
+.cve-row-main { display: flex; align-items: center; gap: 12px; }
+.cve-row-id-cell { min-width: 100px; }
+.cve-id-tag { font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #3b82f6; font-size: .7rem; }
+.cve-row-content-cell { flex: 1; min-width: 0; }
+.cve-row-title { display: block; font-weight: 700; font-size: .8rem; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cve-row-sub { font-size: .65rem; color: #94a3b8; }
+.cve-row-meta-cell { display: flex; align-items: center; gap: 12px; text-align: right; }
+.cve-row-date { font-size: .65rem; color: #94a3b8; white-space: nowrap; }
+.badge-mini { font-size: .55rem; padding: 1px 4px; border-radius: 3px; font-weight: 800; }
+.btn-ai-mini { width: 24px; height: 24px; border-radius: 6px; border: none; background: #f1f5f9; color: #64748b; font-size: .7rem; display: flex; align-items: center; justify-content: center; transition: all .2s; }
+.btn-ai-mini:hover { background: #0f172a; color: white; }
 
-.cve-card { background: white; border: 1px solid #e2e8f0; border-radius: 18px; padding: 1.25rem; margin-bottom: .75rem; transition: all .2s; cursor: pointer; }
-.cve-card:hover { border-color: #3b82f6; background: #f8faff; }
-.cve-card.selected { border-color: #3b82f6; box-shadow: 0 0 0 1px #3b82f6; background: #f0f7ff; }
-.cve-card.expanded { cursor: default; box-shadow: 0 15px 35px rgba(0,0,0,.08); }
-.cve-id { font-weight: 800; color: #3b82f6; font-size: .85rem; }
-.cve-exploited-badge { background: #ef4444; color: white; padding: .15rem .5rem; border-radius: 4px; font-size: .6rem; font-weight: 900; }
-.cve-title-text { font-size: .95rem; font-weight: 800; margin: .5rem 0; line-height: 1.3; }
-.cve-desc-text { font-size: .8rem; color: #64748b; margin-bottom: .75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.cve-footer-meta { font-size: .7rem; color: #94a3b8; }
+.cve-row-details { padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(0,0,0,.05); }
+.cve-row-description { font-size: .75rem; color: #475569; line-height: 1.5; margin-bottom: 8px; }
+.cve-row-action-box { background: #fff1f2; border-radius: 6px; padding: 6px 10px; font-size: .7rem; color: #b91c1c; }
 
 .mitigation-box { background: #fff1f2; border-left: 4px solid #f43f5e; padding: .75rem; border-radius: 8px; }
 .info-pill { display: inline-flex; align-items: center; gap: 6px; padding: .3rem .7rem; background: #f1f5f9; border-radius: 8px; font-size: .7rem; font-weight: 700; color: #475569; }
