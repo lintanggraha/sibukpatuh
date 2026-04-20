@@ -48,9 +48,6 @@
           <div v-if="emailError" class="text-warning small mt-2 ms-1 fw-bold" style="font-size: 0.7rem;">
             <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
           </div>
-        </div>
-      </div>
-    </div>
 
           <!-- Loading State -->
           <div v-if="isChecking" class="p-5 text-center">
