@@ -263,9 +263,7 @@
                 </table>
               </div>
             </div>
-          </div>
         </div>
-      </div>
       </div>
 
       <!-- TAB 2: CISA KEV INTELLIGENCE -->
