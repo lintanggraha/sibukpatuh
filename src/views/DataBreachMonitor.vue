@@ -12,43 +12,45 @@
       </p>
     </div>
 
-    <!-- Section 1: Cek Email (Top Full Width Panel) -->
+    <!-- Section 1: Cek Email (Slim Panel) -->
     <div class="row mb-4">
       <div class="col-12">
-        <div class="panel-card p-4 shadow-sm">
-          <div class="mb-4">
-            <h5 class="fw-bold text-navy">CEK EMAIL</h5>
-            <p class="text-muted small">Periksa apakah email kamu pernah bocor di seluruh database breach yang tercatat.</p>
-          </div>
+        <div class="panel-card p-3 shadow-sm border-0 bg-navy text-white">
+          <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+            <div class="flex-shrink-0">
+              <h6 class="mb-0 fw-bold">CEK EMAIL</h6>
+              <p class="mb-0 opacity-75" style="font-size: 0.75rem;">Periksa keamanan email kamu.</p>
+            </div>
 
-          <div class="search-panel-wrapper mb-4">
-            <div class="row align-items-center">
-              <div class="col-lg-8">
-                <div class="input-group input-group-lg shadow-sm rounded-4 overflow-hidden">
-                  <span class="input-group-text bg-white border-end-0"><i class="fas fa-envelope text-muted"></i></span>
-                  <input 
-                    type="email" 
-                    class="form-control border-start-0" 
-                    v-model="userTerm" 
-                    placeholder="Masukkan alamat email kamu..."
-                    :disabled="isChecking"
-                    @keyup.enter="checkBreachStatus"
-                  >
-                  <button 
-                    class="btn btn-navy px-4 fw-bold" 
-                    @click="checkBreachStatus"
-                    :disabled="isChecking || !userTerm"
-                  >
-                    <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
-                    {{ isChecking ? 'Memeriksa...' : 'Periksa Sekarang' }}
-                  </button>
-                </div>
-                <div v-if="emailError" class="text-danger small mt-2 ms-2 fw-bold">
-                  <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
-                </div>
+            <div class="flex-grow-1 w-100">
+              <div class="input-group shadow-sm rounded-3 overflow-hidden">
+                <span class="input-group-text bg-white border-0"><i class="fas fa-envelope text-muted"></i></span>
+                <input 
+                  type="email" 
+                  class="form-control border-0" 
+                  v-model="userTerm" 
+                  placeholder="Masukkan alamat email kamu..."
+                  :disabled="isChecking"
+                  @keyup.enter="checkBreachStatus"
+                >
+                <button 
+                  class="btn btn-warning px-4 fw-bold" 
+                  @click="checkBreachStatus"
+                  :disabled="isChecking || !userTerm"
+                >
+                  <span v-if="isChecking" class="spinner-border spinner-border-sm me-2"></span>
+                  {{ isChecking ? 'Cek' : 'Periksa Sekarang' }}
+                </button>
               </div>
             </div>
           </div>
+
+          <div v-if="emailError" class="text-warning small mt-2 ms-1 fw-bold" style="font-size: 0.7rem;">
+            <i class="fas fa-exclamation-triangle me-1"></i> {{ emailError }}
+          </div>
+        </div>
+      </div>
+    </div>
 
           <!-- Loading State -->
           <div v-if="isChecking" class="p-5 text-center">
