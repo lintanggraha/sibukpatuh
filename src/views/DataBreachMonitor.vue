@@ -174,15 +174,18 @@
             <h4 class="inspector-title mb-3">{{ selectedBreach.name }}</h4>
             
             <div class="d-flex flex-wrap gap-2 mb-4">
-              <span class="badge bg-light text-navy border">{{ selectedBreach.category }}</span>
-              <span class="badge bg-light text-navy border">{{ selectedBreach.source }}</span>
-              <span class="badge bg-light text-navy border">{{ formatDate(selectedBreach.date) }}</span>
-              <span class="badge bg-light text-navy border">{{ selectedBreach.country || 'Global' }}</span>
+              <span class="badge badge-inspector">{{ selectedBreach.category }}</span>
+              <span class="badge badge-inspector">{{ selectedBreach.source }}</span>
+              <span class="badge badge-inspector">{{ formatDate(selectedBreach.date) }}</span>
+              <span class="badge badge-inspector">{{ selectedBreach.country || 'Global' }}</span>
             </div>
 
             <div class="inspector-section mb-4">
               <label class="section-label-small">RINGKASAN</label>
               <p class="inspector-text">{{ selectedBreach.description || 'Tidak ada deskripsi tersedia.' }}</p>
+              <small class="text-muted d-block mt-2" style="font-size: 0.7rem; font-style: italic;">
+                * Sumber data: Have I Been Pwned / Public OSINT Repositories
+              </small>
             </div>
 
             <div class="inspector-section mb-4">
@@ -596,8 +599,16 @@ export default {
   color: #94a3b8;
 }
 
-.badge-source { background: #e0f2fe; color: #0369a1; }
-.badge-category { background: #fef3c7; color: #92400e; }
+.badge-source { background: #0c4a6e; color: #f0f9ff; }
+.badge-category { background: #92400e; color: #fffbeb; }
+
+.badge-inspector {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+}
 
 /* Inspector Area */
 .inspector-title {
