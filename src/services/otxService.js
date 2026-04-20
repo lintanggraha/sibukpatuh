@@ -42,6 +42,7 @@ function mapIndicatorToIoc(ind, pulse) {
     id: ind.id || `${pulse.id}-${ind.indicator}`,
     type: ind.type,
     value: ind.indicator,
+    description: ind.description || null, // Capture indicator-specific detail
     Event: { info: pulse.name || pulse.info || 'N/A' },
     sightings: ind.observations || 0,
     // ind.created is ISO-8601; convert to Unix seconds for formatDateShort
@@ -105,16 +106,13 @@ export const otxService = {
       if (!pulses.length) return [];
 
       const allIocs = [];
+      const maxPerPulse = 2;
 
       for (const pulse of pulses) {
         const inds = pulse.indicators || [];
-        if (inds.length > 0) {
-          // Indicators already embedded in search result
-          inds.slice(0, 8).forEach(ind => {
-            allIocs.push(mapIndicatorToIoc(ind, pulse));
-          });
-        }
-        if (allIocs.length >= 20) break;
+        inds.slice(0, maxPerPulse).forEach(ind => {
+          allIocs.push(mapIndicatorToIoc(ind, pulse));
+        });
       }
 
       return allIocs;
@@ -135,15 +133,21 @@ export const otxService = {
       });
       const pulses = response.data.results || [];
       const allIocs = [];
-
-      for (const pulse of pulses) {
-        const inds = pulse.indicators || [];
-        inds.slice(0, 5).forEach(ind => {
-          if (allIocs.length < limit) {
-            allIocs.push(mapIndicatorToIoc(ind, pulse));
+      const indicatorsByPulse = pulses.map(p => (p.indicators || []).map(ind => mapIndicatorToIoc(ind, p)));
+      
+      // Round-robin selection for maximum diversity
+      let found = true;
+      let depth = 0;
+      while (found && allIocs.length < limit) {
+        found = false;
+        for (const pulseIocs of indicatorsByPulse) {
+          if (pulseIocs[depth]) {
+            allIocs.push(pulseIocs[depth]);
+            found = true;
           }
-        });
-        if (allIocs.length >= limit) break;
+          if (allIocs.length >= limit) break;
+        }
+        depth++;
       }
 
       return allIocs;
