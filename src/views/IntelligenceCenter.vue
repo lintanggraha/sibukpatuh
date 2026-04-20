@@ -186,33 +186,33 @@
         <div class="row g-3">
           <!-- IOC Table -->
           <div class="col-lg-6">
-            <div class="panel-card shadow-sm overflow-hidden h-100">
+            <div class="panel-card shadow-sm h-100 overflow-hidden">
               <div class="p-2 px-3 bg-light border-bottom d-flex justify-content-between align-items-center">
-                <h6 class="fw-bold mb-0 x-small">Active IOCs</h6>
+                <span class="x-small fw-800 text-muted text-uppercase ls-1">Active Indicators (IOC)</span>
                 <div class="input-group input-group-sm w-50">
-                  <input type="text" class="form-control form-control-sm" v-model="otxSearchQuery" placeholder="Search..." @keyup.enter="performSearch">
+                  <input type="text" class="form-control form-control-sm bg-white border-0" v-model="otxSearchQuery" placeholder="Search IOC..." @keyup.enter="performSearch">
                 </div>
               </div>
               <div class="table-responsive" style="max-height: 400px;">
-                <table class="table table-sm table-hover align-middle mb-0">
-                  <thead class="table-light x-small">
+                <table class="table table-custom mb-0">
+                  <thead>
                     <tr>
-                      <th class="ps-3">Type</th>
-                      <th>Value</th>
-                      <th class="pe-3 text-end">Sightings</th>
+                      <th>TYPE</th>
+                      <th>INDICATOR VALUE</th>
+                      <th class="text-end">SIGHTS</th>
                     </tr>
                   </thead>
-                  <tbody class="x-small">
+                  <tbody>
                     <template v-for="ioc in topIocs" :key="ioc.id">
-                      <tr @click="toggleIoc(ioc.id)" class="cursor-pointer border-0">
-                        <td class="ps-3 py-2"><span class="badge bg-primary bg-opacity-10 text-primary">{{ ioc.type }}</span></td>
-                        <td class="font-monospace opacity-75">{{ truncate(ioc.value, 20) }}</td>
-                        <td class="pe-3 text-end"><span class="badge bg-dark rounded-pill">{{ ioc.sightings || 0 }}</span></td>
+                      <tr @click="toggleIoc(ioc.id)" :class="{ 'row-expanded': expandedIocId === ioc.id }">
+                        <td><span class="ioc-tag">{{ ioc.type }}</span></td>
+                        <td><span class="mono-value">{{ truncate(ioc.value, 25) }}</span></td>
+                        <td class="text-end"><span class="sight-count">{{ ioc.sightings || 0 }}</span></td>
                       </tr>
-                      <tr v-if="expandedIocId === ioc.id" class="bg-light">
-                        <td colspan="3" class="p-2 border-0">
-                          <div class="x-small ps-3">
-                            <strong>Context:</strong> {{ ioc.Event?.info || 'N/A' }}
+                      <tr v-if="expandedIocId === ioc.id" class="row-detail-pane">
+                        <td colspan="3">
+                          <div class="p-2 x-small text-muted">
+                            <i class="fas fa-info-circle me-1"></i> <strong>Context:</strong> {{ ioc.Event?.info || 'No additional context available.' }}
                           </div>
                         </td>
                       </tr>
@@ -225,30 +225,30 @@
 
           <!-- Events Table -->
           <div class="col-lg-6">
-            <div class="panel-card shadow-sm overflow-hidden h-100">
+            <div class="panel-card shadow-sm h-100 overflow-hidden">
               <div class="p-2 px-3 bg-light border-bottom">
-                <h6 class="fw-bold mb-0 x-small">Recent Pulses</h6>
+                <span class="x-small fw-800 text-muted text-uppercase ls-1">Global Threat Pulses</span>
               </div>
               <div class="table-responsive" style="max-height: 400px;">
-                <table class="table table-sm table-hover align-middle mb-0">
-                  <thead class="table-light x-small">
+                <table class="table table-custom mb-0">
+                  <thead>
                     <tr>
-                      <th class="ps-3">Pulse Title</th>
-                      <th>Level</th>
-                      <th class="pe-3 text-end">Date</th>
+                      <th>PULSE TITLE</th>
+                      <th>SEVERITY</th>
+                      <th class="text-end">DATE</th>
                     </tr>
                   </thead>
-                  <tbody class="x-small">
+                  <tbody>
                     <template v-for="event in recentEvents" :key="event.id">
-                      <tr @click="toggleEvent(event.id)" class="cursor-pointer border-0">
-                        <td class="ps-3 py-2 fw-bold text-navy">{{ truncate(event.info, 30) }}</td>
-                        <td><span :class="['badge x-small', getSeverityClass(event.threat_level_id)]">{{ getSeverityLabel(event.threat_level_id) }}</span></td>
-                        <td class="pe-3 text-end opacity-50">{{ formatDateShort(event.timestamp) }}</td>
+                      <tr @click="toggleEvent(event.id)" :class="{ 'row-expanded': expandedEventId === event.id }">
+                        <td class="fw-700 text-navy">{{ truncate(event.info, 35) }}</td>
+                        <td><span :class="['severity-pill', getSeverityClass(event.threat_level_id)]">{{ getSeverityLabel(event.threat_level_id) }}</span></td>
+                        <td class="text-end text-muted">{{ formatDateShort(event.timestamp) }}</td>
                       </tr>
-                      <tr v-if="expandedEventId === event.id" class="bg-light">
-                        <td colspan="3" class="p-2 border-0">
-                          <div class="x-small ps-3">
-                            <strong>Org:</strong> {{ event.Org?.name }}
+                      <tr v-if="expandedEventId === event.id" class="row-detail-pane">
+                        <td colspan="3">
+                          <div class="p-2 x-small text-muted">
+                            <strong>Organization:</strong> {{ event.Org?.name }} | <strong>ID:</strong> {{ event.id }}
                           </div>
                         </td>
                       </tr>
@@ -257,6 +257,7 @@
                 </table>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -806,6 +807,29 @@ export default {
 .cve-row-details { padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(0,0,0,.05); }
 .cve-row-description { font-size: .75rem; color: #475569; line-height: 1.5; margin-bottom: 8px; }
 .cve-row-action-box { background: #fff1f2; border-radius: 6px; padding: 6px 10px; font-size: .7rem; color: #b91c1c; }
+
+/* Custom Table Styles for OTX */
+.table-custom { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table-custom thead th { 
+  font-size: .6rem; font-weight: 800; color: #64748b; 
+  padding: 8px 12px; border-bottom: 1px solid #e2e8f0;
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.table-custom tbody tr { cursor: pointer; transition: background .2s; }
+.table-custom tbody tr:hover { background: #f8fafc; }
+.table-custom tbody tr.row-expanded { background: #f0f7ff; }
+.table-custom tbody td { padding: 10px 12px; font-size: .75rem; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.table-custom tbody tr:last-child td { border-bottom: none; }
+
+.ioc-tag { font-size: .6rem; font-weight: 800; color: #3b82f6; background: #eff6ff; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
+.mono-value { font-family: 'JetBrains Mono', monospace; color: #475569; font-size: .7rem; }
+.sight-count { font-size: .65rem; font-weight: 800; background: #1e293b; color: white; padding: 1px 6px; border-radius: 10px; }
+.severity-pill { font-size: .6rem; font-weight: 800; padding: 2px 8px; border-radius: 99px; }
+.row-detail-pane td { background: #fafbfc !important; border-bottom: 1px solid #e2e8f0 !important; }
+
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.text-navy { color: #0f172a; }
 
 .mitigation-box { background: #fff1f2; border-left: 4px solid #f43f5e; padding: .75rem; border-radius: 8px; }
 .info-pill { display: inline-flex; align-items: center; gap: 6px; padding: .3rem .7rem; background: #f1f5f9; border-radius: 8px; font-size: .7rem; font-weight: 700; color: #475569; }
