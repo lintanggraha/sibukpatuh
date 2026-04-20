@@ -234,21 +234,46 @@
                     <div class="skeleton-line"></div>
                   </td>
                 </tr>
-                <tr v-for="ioc in topIocs" :key="ioc.id" @click="openIocDetail(ioc)" style="cursor: pointer;">
-                  <td class="ps-4">
-                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">
-                      {{ ioc.type }}
-                    </span>
-                  </td>
-                  <td class="fw-bold font-monospace small">
-                    {{ truncate(ioc.value, 40) }}
-                  </td>
-                  <td class="small text-muted">{{ ioc.Event?.info || 'N/A' }}</td>
-                  <td>
-                    <span class="badge bg-dark rounded-pill">{{ ioc.sightings || 0 }}</span>
-                  </td>
-                  <td class="pe-4 text-end small">{{ formatDateShort(ioc.timestamp) }}</td>
-                </tr>
+                <template v-for="ioc in topIocs" :key="ioc.id">
+                  <tr @click="toggleIoc(ioc.id)" :class="{ 'bg-primary bg-opacity-10': expandedIocId === ioc.id }" style="cursor: pointer;">
+                    <td class="ps-4">
+                      <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">
+                        {{ ioc.type }}
+                      </span>
+                    </td>
+                    <td class="fw-bold font-monospace small">
+                      {{ truncate(ioc.value, 40) }}
+                    </td>
+                    <td class="small text-muted">{{ ioc.Event?.info || 'N/A' }}</td>
+                    <td>
+                      <span class="badge bg-dark rounded-pill">{{ ioc.sightings || 0 }}</span>
+                    </td>
+                    <td class="pe-4 text-end small">{{ formatDateShort(ioc.timestamp) }}</td>
+                  </tr>
+                  <!-- IOC Detail Expansion -->
+                  <tr v-if="expandedIocId === ioc.id" class="bg-light bg-opacity-50">
+                    <td colspan="5" class="p-0 border-0">
+                      <div class="p-4 animate-fade-in">
+                        <div class="row g-3">
+                          <div class="col-md-8">
+                            <label class="section-label-small mb-2">IOC CONTEXT</label>
+                            <p class="small mb-2"><strong>Event:</strong> {{ ioc.Event?.info }}</p>
+                            <div class="d-flex flex-wrap gap-2">
+                              <span v-for="tag in ioc.Tag" :key="tag.id" class="badge rounded-pill border px-2 py-1 x-small" :style="{ color: tag.colour, borderColor: tag.colour }">
+                                {{ tag.name }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="col-md-4 text-end d-flex align-items-center justify-content-end gap-2">
+                            <a :href="`${mispBaseUrl}/attributes/view/${ioc.id}`" target="_blank" class="btn btn-xs btn-outline-primary rounded-pill">
+                              <i class="fas fa-external-link-alt me-1"></i> MISP
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
               </tbody>
             </table>
           </div>
@@ -279,75 +304,67 @@
                     <div class="skeleton-line"></div>
                   </td>
                 </tr>
-                <tr v-for="event in recentEvents" :key="event.id" @click="openEventDetail(event)" style="cursor: pointer;">
-                  <td class="ps-4 fw-bold text-primary">{{ event.id }}</td>
-                  <td>{{ event.info }}</td>
-                  <td>
-                    <span :class="['badge severity-pill', getSeverityClass(event.threat_level_id)]">
-                      {{ getSeverityLabel(event.threat_level_id) }}
-                    </span>
-                  </td>
-                  <td class="small">{{ event.Org?.name || 'Unknown' }}</td>
-                  <td class="pe-4 text-end small text-muted">{{ formatDate(event.timestamp * 1000) }}</td>
-                </tr>
+                <template v-for="event in recentEvents" :key="event.id">
+                  <tr @click="toggleEvent(event.id)" :class="{ 'bg-primary bg-opacity-10': expandedEventId === event.id }" style="cursor: pointer;">
+                    <td class="ps-4 fw-bold text-primary">{{ event.id }}</td>
+                    <td>{{ event.info }}</td>
+                    <td>
+                      <span :class="['badge severity-pill', getSeverityClass(event.threat_level_id)]">
+                        {{ getSeverityLabel(event.threat_level_id) }}
+                      </span>
+                    </td>
+                    <td class="small">{{ event.Org?.name || 'Unknown' }}</td>
+                    <td class="pe-4 text-end small text-muted">{{ formatDate(event.timestamp * 1000) }}</td>
+                  </tr>
+                  <!-- Event Detail Expansion -->
+                  <tr v-if="expandedEventId === event.id" class="bg-light bg-opacity-50">
+                    <td colspan="5" class="p-0 border-0">
+                      <div class="p-4 animate-fade-in border-start border-4 border-primary">
+                        <div class="row g-4">
+                          <div class="col-md-7">
+                            <label class="section-label-small mb-3">Intelligence Summary</label>
+                            <h6 class="fw-bold mb-2">{{ event.info }}</h6>
+                            <div class="mb-3">
+                              <small class="text-muted d-block">Reporting Organization</small>
+                              <span class="fw-bold">{{ event.Org?.name }} ({{ event.Orgc?.name }})</span>
+                            </div>
+                            <div class="d-flex gap-4">
+                              <div>
+                                <small class="text-muted d-block">ID</small>
+                                <span class="fw-bold">#{{ event.id }}</span>
+                              </div>
+                              <div>
+                                <small class="text-muted d-block">UUID</small>
+                                <span class="font-monospace x-small">{{ event.uuid }}</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <label class="section-label-small mb-3">Tags & Classification</label>
+                            <div class="d-flex flex-wrap gap-2">
+                              <span v-for="tag in event.Tag" :key="tag.id" class="badge rounded-pill border px-3 py-2" :style="{ color: tag.colour, borderColor: tag.colour, backgroundColor: tag.colour + '10' }">
+                                {{ tag.name }}
+                              </span>
+                              <span v-if="!event.Tag?.length" class="text-muted small">No tags associated.</span>
+                            </div>
+                            <div class="mt-4">
+                              <a :href="`${mispBaseUrl}/events/view/${event.id}`" target="_blank" class="btn btn-sm btn-primary rounded-pill w-100">
+                                <i class="fas fa-eye me-1"></i> Open Full Intelligence in MISP
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
               </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Event Detail Modal -->
-    <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
-          <div v-if="selectedEvent" class="modal-header bg-dark text-white p-4">
-            <div>
-              <span class="badge bg-primary mb-2">EVENT #{{ selectedEvent.id }}</span>
-              <h5 class="modal-title fw-bold">{{ selectedEvent.info }}</h5>
-            </div>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div v-if="selectedEvent" class="modal-body p-4">
-            <div class="row g-4">
-              <div class="col-md-6">
-                <label class="section-label-small">General Information</label>
-                <div class="intel-box p-3 rounded-4 mt-2">
-                  <div class="mb-3">
-                    <small class="text-muted d-block">Threat Level</small>
-                    <span :class="['badge severity-pill', getSeverityClass(selectedEvent.threat_level_id)]">
-                      {{ getSeverityLabel(selectedEvent.threat_level_id) }}
-                    </span>
-                  </div>
-                  <div class="mb-3">
-                    <small class="text-muted d-block">Organization</small>
-                    <span class="fw-bold">{{ selectedEvent.Org?.name }} ({{ selectedEvent.Orgc?.name }})</span>
-                  </div>
-                  <div>
-                    <small class="text-muted d-block">Date</small>
-                    <span class="fw-bold">{{ formatDate(selectedEvent.timestamp * 1000) }}</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label class="section-label-small">Tags & Classification</label>
-                <div class="d-flex flex-wrap gap-2 mt-2">
-                  <span v-for="tag in selectedEvent.Tag" :key="tag.id" class="badge rounded-pill border px-3 py-2" :style="{ color: tag.colour, borderColor: tag.colour, backgroundColor: tag.colour + '10' }">
-                    {{ tag.name }}
-                  </span>
-                  <span v-if="!selectedEvent.Tag?.length" class="text-muted small">No tags associated.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer bg-light border-0">
-            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
-            <a :class="['btn btn-primary rounded-pill px-4']" :href="`${mispBaseUrl}/events/view/${selectedEvent?.id}`" target="_blank">View in MISP</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Toast Container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
       <div v-for="toast in toasts" :key="toast.id" class="toast show animate-fade-in" role="alert">
@@ -405,8 +422,10 @@ export default {
       mispSearchQuery: "",
       searchResults: [],
       
-      // Modal
+      // Modal / Selection
       selectedEvent: null,
+      expandedIocId: null,
+      expandedEventId: null,
 
       // Charts
       chartOptions: null,
@@ -573,19 +592,34 @@ export default {
       }
     },
 
-    openEventDetail(event) {
-      this.selectedEvent = event;
-      const modalElement = document.getElementById('eventDetailModal');
-      if (window.bootstrap) {
-        const modal = new window.bootstrap.Modal(modalElement);
-        modal.show();
-      }
+    toggleEvent(id) {
+      this.expandedEventId = this.expandedEventId === id ? null : id;
+    },
+
+    toggleIoc(id) {
+      this.expandedIocId = this.expandedIocId === id ? null : id;
     },
 
     openIocDetail(ioc) {
-      if (ioc.id) {
-        window.open(`${this.mispBaseUrl}/attributes/view/${ioc.id}`, '_blank');
+      if (!ioc || !ioc.id) return;
+      
+      // If the IOC is not in the current visible list, add it to the top
+      if (!this.topIocs.find(item => item.id === ioc.id)) {
+        this.topIocs.unshift(ioc);
       }
+      
+      // Expand it
+      this.expandedIocId = this.expandedIocId === ioc.id ? null : ioc.id;
+      
+      // Clear search
+      this.searchResults = [];
+      this.mispSearchQuery = "";
+      
+      // Smooth scroll to the table area to show results
+      setTimeout(() => {
+        const table = document.querySelector('.table-responsive');
+        if (table) table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
     },
 
     getSeverityClass(id) {
