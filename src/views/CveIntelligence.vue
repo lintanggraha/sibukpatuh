@@ -13,7 +13,7 @@
                 <h2 class="cve-section-title mb-0">CVE Global Intelligence</h2>
                 <div class="d-flex align-items-center gap-2 mt-1">
                   <span class="source-tag">
-                    <i class="fas fa-server me-1"></i> Source: NIST NVD
+                    <i class="fas fa-bullseye me-1"></i> Source: CISA KEV
                   </span>
                   <div class="live-feed-status">
                     <span class="pulse-dot"></span>
@@ -61,7 +61,7 @@
               <div class="cve-top-row">
                 <span class="cve-id">{{ cve.id }}</span>
                 <div class="cve-actions-group">
-                  <span class="cve-score">{{ cve.score }}</span>
+                  <span class="cve-score exploited">EXPLOITED</span>
                   <span :class="['cve-severity-badge', cve.severity.toLowerCase()]">
                     {{ cve.severity }}
                   </span>
@@ -205,41 +205,27 @@ export default {
     async fetchLatestCves() {
       this.isLoading = true;
       try {
-        // Menghitung tanggal 120 hari yang lalu untuk filter 'terbaru'
-        const now = new Date();
-        const pastDate = new Date();
-        pastDate.setDate(now.getDate() - 120);
-        
-        const isoDate = pastDate.toISOString().split('.')[0]; // Format: YYYY-MM-DDTHH:mm:ss
-        
-        // Fetch from NIST NVD API 2.0 dengan filter pubStartDate
-        const response = await fetch(`https://services.nvd.nist.gov/rest/json/cves/2.0?pubStartDate=${isoDate}&resultsPerPage=30`);
-        if (!response.ok) throw new Error('API Response Error');
+        // Fetch from CISA Known Exploited Vulnerabilities (KEV) Catalog
+        const response = await fetch('https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json');
+        if (!response.ok) throw new Error('CISA API Response Error');
         
         const data = await response.json();
         
         let fetchedCves = data.vulnerabilities.map(item => {
-          const cve = item.cve;
-          const metrics = cve.metrics?.cvssMetricV31?.[0]?.cvssData || 
-                         cve.metrics?.cvssMetricV30?.[0]?.cvssData || 
-                         cve.metrics?.cvssMetricV2?.[0]?.cvssData;
-          
-          const cpe = cve.configurations?.[0]?.nodes?.[0]?.cpeMatch?.[0]?.criteria || "";
-          const cpeParts = cpe.split(':');
-          
           return {
-            id: cve.id,
-            score: metrics?.baseScore || 'N/A',
-            severity: metrics?.baseSeverity || (metrics?.baseScore >= 9 ? 'CRITICAL' : metrics?.baseScore >= 7 ? 'HIGH' : 'MEDIUM'),
-            title: cve.descriptions.find(d => d.lang === 'en')?.value || 'No description available.',
-            vendor: cpeParts[3] ? cpeParts[3].charAt(0).toUpperCase() + cpeParts[3].slice(1) : 'General',
-            product: cpeParts[4] ? cpeParts[4].replace(/_/g, ' ') : 'Software',
-            date: new Date(cve.published).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }),
-            rawDate: new Date(cve.published)
+            id: item.cveID,
+            score: 'KEV', // CISA KEV items are all high priority
+            severity: 'CRITICAL', // Exploited in the wild
+            title: `${item.vulnerabilityName}: ${item.shortDescription}`,
+            vendor: item.vendorProject,
+            product: item.product,
+            date: new Date(item.dateAdded).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }),
+            rawDate: new Date(item.dateAdded),
+            requiredAction: item.requiredAction
           };
         });
 
-        // Urutkan berdasarkan tanggal terbaru di atas
+        // Sort by Date Added (Newest first)
         this.cves = fetchedCves.sort((a, b) => b.rawDate - a.rawDate);
 
         // Select first one
@@ -247,8 +233,7 @@ export default {
           this.selectedCve = this.cves[0];
         }
       } catch (error) {
-        console.error("API Error:", error);
-        // Fallback to mock data if API fails (e.g. CORS or rate limit)
+        console.error("CISA API Error:", error);
         this.setMockData();
       } finally {
         this.isLoading = false;
@@ -475,6 +460,21 @@ export default {
   font-weight: 800;
   color: #0f172a;
   font-size: 0.9rem;
+}
+
+.cve-score.exploited {
+  background: #ef4444;
+  color: white;
+  padding: 0.1rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  animation: danger-blink 2s infinite;
+}
+
+@keyframes danger-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .cve-severity-badge {
