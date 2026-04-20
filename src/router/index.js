@@ -55,6 +55,11 @@ const routes = [
         path: '/intel/cve-intelligence',
         name: 'cve_intel',
         component: () => import('../views/CveIntelligence.vue')
+    },
+    {
+        path: '/intel/data-breach',
+        name: 'data_breach',
+        component: () => import('../views/DataBreachMonitor.vue')
     }
 ];
 
