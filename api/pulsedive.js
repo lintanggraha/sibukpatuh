@@ -3,7 +3,22 @@
  * Provides detailed intelligence for IPs, Domains, and URLs.
  */
 export default async function handler(req, res) {
-  const { indicator } = req.query;
+  const { indicator, action } = req.query;
+
+  const PULSEDIVE_KEY = process.env.PULSEDIVE_KEY;
+
+  if (action === 'feed') {
+    // Fetch latest high-risk indicators
+    const feedUrl = `https://pulsedive.com/api/explore.php?q=risk%3Dhigh%2Ccritical&limit=20&pretty=1${PULSEDIVE_KEY ? `&key=${PULSEDIVE_KEY}` : ''}`;
+    try {
+      const response = await fetch(feedUrl);
+      if (!response.ok) throw new Error("Pulsedive Feed Error");
+      const data = await response.json();
+      return res.status(200).json({ success: true, results: data.results || [] });
+    } catch (e) {
+      return res.status(500).json({ success: false, error: "Failed to fetch threat feed." });
+    }
+  }
 
   if (!indicator) {
     return res.status(400).json({ success: false, error: "Indicator is required" });
