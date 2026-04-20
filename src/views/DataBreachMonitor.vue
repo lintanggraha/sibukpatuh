@@ -107,11 +107,11 @@
     <div class="row g-4 mb-4">
       <div class="col-12">
         <div class="d-flex align-items-center justify-content-between mb-3">
-          <h5 class="mb-0 fw-bold text-primary"><i class="fas fa-radar me-2"></i>MISP THREAT INTELLIGENCE</h5>
+          <h5 class="mb-0 fw-bold text-primary"><i class="fas fa-radar me-2"></i>OTX ALIENVAULT THREAT INTELLIGENCE</h5>
           <div class="d-flex align-items-center gap-2">
             <span v-if="lastUpdated" class="text-muted x-small">Terakhir diperbarui: {{ lastUpdated }}</span>
-            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" @click="fetchAllMispData" :disabled="isMispLoading">
-              <i class="fas fa-sync-alt me-1" :class="{ 'fa-spin': isMispLoading }"></i> Refresh
+            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" @click="fetchAllIntelData" :disabled="isIntelLoading">
+              <i class="fas fa-sync-alt me-1" :class="{ 'fa-spin': isIntelLoading }"></i> Refresh
             </button>
           </div>
         </div>
@@ -126,7 +126,7 @@
             </div>
             <div>
               <small class="text-muted text-uppercase fw-bold ls-1">{{ card.label }}</small>
-              <h4 class="mb-0 fw-bold">{{ isMispLoading ? '...' : card.value }}</h4>
+              <h4 class="mb-0 fw-bold">{{ isIntelLoading ? '...' : card.value }}</h4>
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@
           </div>
           <div style="height: 320px;">
             <apexchart 
-              v-if="!isMispLoading && chartOptions" 
+              v-if="!isIntelLoading && chartOptions" 
               type="bar" 
               height="100%" 
               :options="chartOptions" 
@@ -220,8 +220,8 @@
                   <input 
                     type="text" 
                     class="form-control border-0" 
-                    v-model="mispSearchQuery" 
-                    placeholder="Search IOCs (IP, Domain, Hash...)"
+                    v-model="otxSearchQuery" 
+                    placeholder="Search OTX Pulses (Ransomware, APT...)"
                     @input="handleIocSearch"
                     @keyup.enter="performSearch"
                   >
@@ -257,7 +257,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-if="isMispLoading" v-for="i in 5" :key="i">
+                <tr v-if="isIntelLoading" v-for="i in 5" :key="i">
                   <td colspan="5" class="p-3">
                     <div class="skeleton-line"></div>
                   </td>
@@ -327,7 +327,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-if="isMispLoading" v-for="i in 5" :key="i">
+                <tr v-if="isIntelLoading" v-for="i in 5" :key="i">
                   <td colspan="5" class="p-3">
                     <div class="skeleton-line"></div>
                   </td>
@@ -450,7 +450,7 @@ export default {
       filteredEvents: [],
       
       // Search
-      mispSearchQuery: "",
+      otxSearchQuery: "",
       searchResults: [],
       
       // Modal / Selection
@@ -520,16 +520,6 @@ export default {
       alert("Semua sumber telah disalin!");
     },
 
-  mounted() {
-    this.fetchAllIntelData();
-    this.refreshTimer = setInterval(this.fetchAllIntelData, 5 * 60 * 1000);
-    document.addEventListener('click', this.handleGlobalClick);
-  },
-  beforeUnmount() {
-    if (this.refreshTimer) clearInterval(this.refreshTimer);
-    document.removeEventListener('click', this.handleGlobalClick);
-  },
-  methods: {
     async fetchAllIntelData() {
       this.isIntelLoading = true;
       try {
@@ -610,16 +600,16 @@ export default {
     },
 
     handleIocSearch() {
-      if (this.mispSearchQuery.length < 3) {
+      if (this.otxSearchQuery.length < 3) {
         this.searchResults = [];
         return;
       }
     },
 
     async performSearch() {
-      if (!this.mispSearchQuery) return;
+      if (!this.otxSearchQuery) return;
       try {
-        const results = await otxService.searchIndicators(this.mispSearchQuery);
+        const results = await otxService.searchIndicators(this.otxSearchQuery);
         this.searchResults = (results || []).map(r => ({
           ...r,
           event_name: r.Event?.info || 'N/A'
@@ -650,7 +640,7 @@ export default {
       
       // Clear search
       this.searchResults = [];
-      this.mispSearchQuery = "";
+      this.otxSearchQuery = "";
       
       // Smooth scroll to the table area to show results
       setTimeout(() => {
@@ -675,7 +665,7 @@ export default {
     },
 
     searchByTag(tagName) {
-      this.mispSearchQuery = tagName;
+      this.otxSearchQuery = tagName;
       this.performSearch();
     },
 
@@ -731,25 +721,17 @@ export default {
       }
     }
   },
-  computed: {
-    metricCards() {
-      return [
-        { label: "Total Events", value: this.metrics.totalEvents, icon: "fas fa-database", color: "bg-primary-subtle", accent: "#3b82f6" },
-        { label: "Active IOCs (7d)", value: this.metrics.activeIocs, icon: "fas fa-shield-virus", color: "bg-success-subtle", accent: "#10b981" },
-        { label: "Critical Severity", value: this.metrics.criticalEvents, icon: "fas fa-exclamation-triangle", color: "bg-danger-subtle", accent: "#ef4444" },
-        { label: "Active Feeds", value: this.metrics.activeFeeds, icon: "fas fa-rss", color: "bg-info-subtle", accent: "#0ea5e9" }
-      ];
-    }
-  },
+
   mounted() {
-    this.fetchAllMispData();
-    this.refreshTimer = setInterval(this.fetchAllMispData, 5 * 60 * 1000);
+    this.fetchAllIntelData();
+    this.refreshTimer = setInterval(this.fetchAllIntelData, 5 * 60 * 1000);
     document.addEventListener('click', this.handleGlobalClick);
   },
+
   beforeUnmount() {
     if (this.refreshTimer) clearInterval(this.refreshTimer);
     document.removeEventListener('click', this.handleGlobalClick);
-  }
+  },
 };
 </script>
 

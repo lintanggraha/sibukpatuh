@@ -1,17 +1,13 @@
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
-import { copyFileSync, mkdirSync, existsSync } from 'fs';
-
-// ... (copyDataFiles remains same)
+import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   
   return {
     plugins: [
-      vue(),
-      copyDataFiles()
+      vue()
     ],
     server: {
       proxy: {
@@ -27,9 +23,10 @@ export default defineConfig(({ mode }) => {
       }
     },
     resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
-  base: '/'
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    },
+    base: '/'
+  };
 });
