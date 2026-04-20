@@ -55,8 +55,8 @@
               v-for="cve in filteredCves" 
               :key="cve.id" 
               class="cve-card"
-              :class="{ selected: selectedCve?.id === cve.id }"
-              @click="selectCve(cve)"
+              :class="{ selected: selectedCve?.id === cve.id, expanded: expandedCveId === cve.id }"
+              @click="toggleExpand(cve)"
             >
               <div class="cve-top-row">
                 <span class="cve-id">{{ cve.id }}</span>
@@ -74,10 +74,31 @@
               <h3 class="cve-card-title">{{ cve.title }}</h3>
               
               <div class="cve-bottom-row">
-                <span class="cve-meta-info">
-                  <strong>{{ cve.vendor }}</strong> · {{ cve.product }} · <span class="text-muted">{{ cve.date }}</span>
                 </span>
               </div>
+
+              <!-- Expanded Detail Area -->
+              <transition name="expand">
+                <div v-if="expandedCveId === cve.id" class="cve-expanded-content mt-3">
+                  <div class="detail-divider mb-3"></div>
+                  
+                  <div class="detail-item mb-3">
+                    <label>Deskripsi Kerentanan</label>
+                    <p>{{ cve.title }}</p>
+                  </div>
+
+                  <div v-if="cve.requiredAction" class="detail-item required-action-box mb-3">
+                    <label class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i> Aksi Mitigasi Wajib</label>
+                    <p>{{ cve.requiredAction }}</p>
+                  </div>
+
+                  <div class="detail-footer d-flex gap-2">
+                    <button class="btn btn-ask-ai-expanded" @click.stop="askAi(cve)">
+                      <i class="fas fa-robot me-2"></i> Analisis dengan Gemini
+                    </button>
+                  </div>
+                </div>
+              </transition>
             </div>
           </transition-group>
         </div>
@@ -169,6 +190,7 @@ export default {
       activeFilter: "Semua",
       filters: ["Semua", "Critical", "High", "Medium", "Low"],
       selectedCve: null,
+      expandedCveId: null,
       userInput: "",
       isTyping: false,
       isLoading: false,
@@ -253,6 +275,14 @@ export default {
         { id: "CVE-2024-38063", score: "KEV", severity: "CRITICAL", title: "Windows TCP/IP IPv6 remote code execution.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024" }
       ];
       if (this.cves.length > 0) this.selectedCve = this.cves[0];
+    },
+    toggleExpand(cve) {
+      if (this.expandedCveId === cve.id) {
+        this.expandedCveId = null;
+      } else {
+        this.expandedCveId = cve.id;
+        this.selectCve(cve);
+      }
     },
     selectCve(cve) {
       this.selectedCve = cve;
@@ -441,6 +471,74 @@ export default {
   border-color: #3b82f6;
   background: #eff6ff;
   box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.cve-card.expanded {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  cursor: default;
+}
+
+.cve-expanded-content {
+  overflow: hidden;
+}
+
+.detail-divider {
+  height: 1px;
+  background: #e2e8f0;
+  width: 100%;
+}
+
+.detail-item label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.detail-item p {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.required-action-box {
+  background: #fff1f2;
+  border-left: 4px solid #f43f5e;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.btn-ask-ai-expanded {
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-ask-ai-expanded:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+/* Expand Transition */
+.expand-enter-active, .expand-leave-active {
+  transition: all 0.3s ease-in-out;
+  max-height: 800px;
+}
+.expand-enter-from, .expand-leave-to {
+  max-height: 0;
+  opacity: 0;
 }
 
 .cve-top-row {
