@@ -20,7 +20,7 @@
           <div class="d-flex align-items-center justify-content-between mb-3">
             <div>
               <h5 class="mb-1 fw-bold text-danger"><i class="fas fa-user-shield me-2"></i>BREACH CHECKER</h5>
-              <p class="text-muted small mb-0">Cek kebocoran data pribadi Anda melalui database publik (OSINT).</p>
+              <p class="text-muted small mb-0">Monitor keamanan akun Anda melalui integrasi database intelijen ancaman real-time.</p>
             </div>
             <div v-if="rateLimitCountdown > 0" class="badge bg-warning text-dark">
               Limit: {{ rateLimitCountdown }}s
