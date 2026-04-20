@@ -265,8 +265,9 @@
             </div>
         </div>
       </div>
+    </div>
 
-      <!-- TAB 2: CISA KEV INTELLIGENCE -->
+    <!-- TAB 2: CISA KEV INTELLIGENCE -->
       <div v-if="activeTab === 'cve'" class="tab-pane-content animate-fade-in">
         <div class="row g-4">
           <!-- Left Column: CVE List -->
