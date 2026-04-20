@@ -331,7 +331,6 @@ export default {
     },
     selectCve(cve) {
       this.selectedCve = cve;
-      this.messages = [];
     },
     askAi(cve) {
       this.selectCve(cve);
