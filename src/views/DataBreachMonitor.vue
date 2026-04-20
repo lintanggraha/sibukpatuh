@@ -119,19 +119,14 @@
 
       <!-- Metric Cards -->
       <div class="col-xl-3 col-md-6" v-for="card in metricCards" :key="card.label">
-        <div class="panel-card p-3 shadow-sm border-0 metric-card h-100" :class="card.color">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <small class="text-muted text-uppercase fw-bold" style="font-size: 0.65rem;">{{ card.label }}</small>
-              <h3 class="mb-0 fw-bold mt-1">{{ isMispLoading ? '...' : card.value }}</h3>
-            </div>
-            <div class="metric-icon">
+        <div class="panel-card p-4 shadow-sm border border-light-subtle metric-card h-100">
+          <div class="d-flex align-items-center gap-3">
+            <div class="metric-icon-small" :style="{ color: card.accent, backgroundColor: card.accent + '15' }">
               <i :class="card.icon"></i>
             </div>
-          </div>
-          <div class="mt-2">
-            <div class="progress" style="height: 4px;">
-              <div class="progress-bar" :style="{ width: '100%', background: card.accent }"></div>
+            <div>
+              <small class="text-muted text-uppercase fw-bold ls-1">{{ card.label }}</small>
+              <h4 class="mb-0 fw-bold">{{ isMispLoading ? '...' : card.value }}</h4>
             </div>
           </div>
         </div>
@@ -163,9 +158,9 @@
       </div>
 
       <div class="col-xl-4 col-lg-5">
-        <div class="panel-card shadow-sm h-100 border-0 p-4 bg-dark text-white">
-          <h6 class="fw-bold mb-3 text-primary-emphasis">Top Intelligence Tags</h6>
-          <div class="tag-cloud mt-4">
+        <div class="panel-card shadow-sm h-100 border border-light-subtle p-4 bg-white">
+          <h6 class="fw-bold mb-4">Top Intelligence Tags</h6>
+          <div class="tag-cloud mt-2">
             <span 
               v-for="tag in topTags" 
               :key="tag.id" 
@@ -677,17 +672,15 @@ export default {
 .section-label { font-size: 0.75rem; font-weight: 800; color: #64748b; letter-spacing: 1px; }
 
 /* MISP Dashboard Styling */
-.metric-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: default; }
-.metric-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important; }
-.metric-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 1.3rem; }
-.bg-primary-subtle .metric-icon { background: #3b82f6; color: white; }
-.bg-success-subtle .metric-icon { background: #10b981; color: white; }
-.bg-danger-subtle .metric-icon { background: #ef4444; color: white; }
-.bg-info-subtle .metric-icon { background: #0ea5e9; color: white; }
+.metric-card { transition: all 0.2s ease; border-radius: 20px; }
+.metric-card:hover { transform: translateY(-3px); }
+.metric-icon-small { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 1.1rem; flex-shrink: 0; }
 
-.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; justify-content: center; min-height: 200px; }
-.tag-item { cursor: pointer; font-weight: 800; transition: all 0.2s; opacity: 0.75; text-decoration: none; }
-.tag-item:hover { opacity: 1; transform: scale(1.15); }
+.ls-1 { letter-spacing: 0.5px; font-size: 0.65rem; }
+
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; min-height: 180px; }
+.tag-item { cursor: pointer; font-weight: 700; transition: all 0.2s; opacity: 0.7; text-decoration: none; }
+.tag-item:hover { opacity: 1; transform: scale(1.1); }
 
 .severity-pill { font-size: 0.65rem; font-weight: 800; padding: 0.35rem 0.75rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
 
