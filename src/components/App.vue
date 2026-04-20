@@ -156,8 +156,8 @@ export default {
             },
             {
               routeName: "data_breach",
-              label: "Data Breach",
-              icon: "fa-user-shield",
+              label: "Threat Intelligence",
+              icon: "fa-radar",
             },
           ],
         },
