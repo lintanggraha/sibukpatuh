@@ -72,6 +72,7 @@
               </div>
               
               <h3 class="cve-card-title">{{ cve.title }}</h3>
+              <p class="cve-card-subtitle">{{ cve.shortDescription }}</p>
               
               <div class="cve-bottom-row">
                 <span class="cve-meta-info">
@@ -85,12 +86,26 @@
                   <div class="detail-divider mb-3"></div>
                   
                   <div class="detail-item mb-3">
-                    <label>Deskripsi Kerentanan</label>
-                    <p>{{ cve.title }}</p>
+                    <label>Deskripsi Teknis (NVD)</label>
+                    <div v-if="cve.isEnriching" class="enrich-loader">
+                      <div class="skeleton-line"></div>
+                      <div class="skeleton-line w-75"></div>
+                    </div>
+                    <p v-else>{{ cve.fullDescription || cve.shortDescription }}</p>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-3 mb-3">
+                    <div class="meta-detail-pill" :class="{ danger: cve.isRansomware }">
+                      <i class="fas" :class="cve.isRansomware ? 'fa-biohazard' : 'fa-check-circle'"></i>
+                      {{ cve.isRansomware ? 'Ransomware Campaign: YES' : 'Ransomware: Not Known' }}
+                    </div>
+                    <div v-if="cve.notes" class="meta-detail-pill">
+                      <i class="fas fa-sticky-note"></i> Analysis Note Available
+                    </div>
                   </div>
 
                   <div v-if="cve.requiredAction" class="detail-item required-action-box mb-3">
-                    <label class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i> Aksi Mitigasi Wajib</label>
+                    <label class="text-danger"><i class="fas fa-exclamation-triangle me-1"></i> Instruksi Mitigasi CISA</label>
                     <p>{{ cve.requiredAction }}</p>
                   </div>
 
@@ -240,12 +255,17 @@ export default {
             id: item.cveID,
             score: 'KEV', 
             severity: 'CRITICAL', 
-            title: `${item.vulnerabilityName}: ${item.shortDescription}`,
+            title: item.vulnerabilityName,
+            shortDescription: item.shortDescription,
             vendor: item.vendorProject,
             product: item.product,
             date: new Date(item.dateAdded).toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' }),
             rawDate: new Date(item.dateAdded),
-            requiredAction: item.requiredAction
+            requiredAction: item.requiredAction,
+            notes: item.notes,
+            isRansomware: item.knownRansomwareCampaignUse === 'Known',
+            fullDescription: null, // To be enriched
+            isEnriching: false
           };
         });
 
@@ -284,6 +304,29 @@ export default {
       } else {
         this.expandedCveId = cve.id;
         this.selectCve(cve);
+        if (!cve.fullDescription) {
+          this.enrichCveDetail(cve);
+        }
+      }
+    },
+    async enrichCveDetail(cve) {
+      cve.isEnriching = true;
+      try {
+        const response = await fetch(`https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=${cve.id}`);
+        if (!response.ok) throw new Error('NVD Detail Error');
+        const data = await response.json();
+        
+        const nvdCve = data.vulnerabilities?.[0]?.cve;
+        if (nvdCve) {
+          cve.fullDescription = nvdCve.descriptions.find(d => d.lang === 'en')?.value;
+        } else {
+          cve.fullDescription = cve.shortDescription;
+        }
+      } catch (e) {
+        console.error("Enrichment failed:", e);
+        cve.fullDescription = cve.shortDescription;
+      } finally {
+        cve.isEnriching = false;
       }
     },
     selectCve(cve) {
@@ -617,16 +660,63 @@ export default {
   border-color: #0f172a;
 }
 
-.cve-card-title {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #1e293b;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
+.cve-card-subtitle {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 1.4;
+}
+
+.meta-detail-pill {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-detail-pill.danger {
+  background: #fef2f2;
+  border-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.enrich-loader {
+  padding: 0.5rem 0;
+}
+
+.skeleton-line {
+  height: 12px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  animation: skeleton-wave 1.5s infinite;
+}
+
+@keyframes skeleton-wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .cve-bottom-row {
