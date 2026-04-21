@@ -676,28 +676,47 @@ export default {
       this.sendAiQuery("Berikan ringkasan eksekutif untuk kerentanan ini.");
     },
     async sendAiQuery(text) {
-      if (!text || !text.trim() || this.isTyping) return;
+      if (!text || !text.trim() || this.isTyping || !this.selectedCve) return;
       const query = text.trim();
       this.userInput = "";
       this.messages.push({ role: "user", text: query });
       this.isTyping = true;
       this.scrollToBottom();
-      
-      setTimeout(() => {
-        let response = "";
-        if (query.includes("mitigasi")) {
-          response = `Untuk mitigasi ${this.selectedCve.id}, segera lakukan update patch resmi dari ${this.selectedCve.vendor}. Jika patch belum tersedia, batasi akses network ke komponen terdampak dan aktifkan monitoring pada IDS/IPS untuk pola traffic yang mencurigakan terkait ${this.selectedCve.product}.`;
-        } else if (query.includes("Indonesia")) {
-          response = `Organisasi di Indonesia yang menggunakan ${this.selectedCve.product} berisiko tinggi terkena dampak ini, terutama bagi sektor infrastruktur kritis yang memiliki regulasi ketat seperti SEOJK 29 atau PBI 02/2024. Penyerang dapat menargetkan kelemahan ini untuk mengganggu operasional atau mencuri data sensitif nasabah.`;
-        } else if (query.includes("exploit")) {
-          response = `Berdasarkan intelijen terbaru, exploit PoC (Proof of Concept) untuk ${this.selectedCve.id} sudah mulai beredar di forum-forum diskusi keamanan. Belum ada laporan serangan massal di lapangan, namun tingkat urgensi tetap di level CRITICAL.`;
+
+      try {
+        const cveContext = {
+          id: this.selectedCve.id,
+          title: this.selectedCve.title,
+          vendor: this.selectedCve.vendor,
+          product: this.selectedCve.product,
+          shortDescription: this.selectedCve.shortDescription || this.selectedCve.fullDescription,
+          requiredAction: this.selectedCve.requiredAction,
+          isRansomware: this.selectedCve.isRansomware
+        };
+
+        const response = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            messages: this.messages,
+            cveContext: cveContext
+          })
+        });
+
+        const data = await response.json();
+        
+        if (data.error) {
+          this.messages.push({ role: "assistant", text: `Maaf, terjadi kesalahan: ${data.error}` });
         } else {
-          response = `Kerentanan ${this.selectedCve.id} pada ${this.selectedCve.product} ditemukan dieksploitasi di lapangan. Dampak utamanya adalah potensi eksploitasi jarak jauh yang memungkinkan penyerang mengambil alih kontrol sistem. Pastikan tim keamanan IT Anda telah melakukan scanning berkala untuk mendeteksi keberadaan library/produk terdampak.`;
+          this.messages.push({ role: "assistant", text: data.response });
         }
-        this.messages.push({ role: "assistant", text: response });
+      } catch (err) {
+        console.error('Gemini API Error:', err);
+        this.messages.push({ role: "assistant", text: "Maaf, gagal terhubung ke layanan AI. Silakan coba lagi." });
+      } finally {
         this.isTyping = false;
         this.scrollToBottom();
-      }, 1500);
+      }
     },
     scrollToBottom() {
       this.$nextTick(() => {
