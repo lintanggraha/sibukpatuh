@@ -526,7 +526,7 @@ export default {
       this.isIntelLoading = true;
       try {
         const [events, iocs] = await Promise.all([
-          otxService.getRecentPulses(20),
+          otxService.getRecentPulses(50),
           otxService.getRecentIocs(20)
         ]);
         const sortedEvents = [...events].sort((a, b) => b.timestamp - a.timestamp);
