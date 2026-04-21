@@ -6,13 +6,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GEMINI_KEY || process.env.GEMINI_API_KEY;
   console.log('Request body keys:', Object.keys(req.body));
   console.log('GEMINI_API_KEY exists:', !!apiKey);
   
   if (!apiKey) {
     console.error('Missing API Key');
-    return res.status(500).json({ error: 'GEMINI_API_KEY tidak dikonfigurasi di server.' });
+    return res.status(500).json({ error: 'GEMINI_KEY tidak dikonfigurasi di server.' });
   }
 
   const { messages, cveContext } = req.body;
