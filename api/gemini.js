@@ -1,17 +1,11 @@
 export default async function handler(req, res) {
-  console.log('GEMINI_API_KEY present:', !!process.env.GEMINI_API_KEY);
-  console.log('All env keys:', Object.keys(process.env).filter(k => k.includes('API') || k.includes('KEY')));
-  
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const apiKey = process.env.GEMINI_KEY || process.env.GEMINI_API_KEY;
-  console.log('Request body keys:', Object.keys(req.body));
-  console.log('GEMINI_API_KEY exists:', !!apiKey);
   
   if (!apiKey) {
-    console.error('Missing API Key');
     return res.status(500).json({ error: 'GEMINI_KEY tidak dikonfigurasi di server.' });
   }
 
@@ -80,7 +74,20 @@ Guidelines:
     if (!response.ok) {
       const errBody = await response.text();
       console.error('Gemini API Error:', response.status, errBody);
-      return res.status(response.status).json({ error: 'Gemini API error', detail: errBody });
+      
+      let errorMessage = 'Gemini API error';
+      try {
+        const errData = JSON.parse(errBody);
+        if (response.status === 429) {
+          errorMessage = 'Limit penggunaan Gemini sudah tercapai (quota habis). Silakan coba lagi besok atau upgrade ke paid plan.';
+        } else if (errData?.error?.message) {
+          errorMessage = errData.error.message;
+        }
+      } catch (e) {
+        errorMessage = errBody;
+      }
+      
+      return res.status(response.status).json({ error: errorMessage, detail: errBody });
     }
 
     const data = await response.json();
