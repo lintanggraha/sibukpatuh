@@ -36,7 +36,7 @@
       <div class="sej-nav nav" role="tablist">
         <button class="sej-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Program</strong><span>Peta pilar, bab regulasi, dan struktur program.</span></span></button>
         <button class="sej-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter requirements, baca detail, dan telusuri.</span></span></button>
-        <button class="sej-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-balance-scale"></i><span><strong>Hukum & Sanksi</span><span>Ketentuan pidana dan sanksi administratif.</span></span></button>
+        <button class="sej-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-balance-scale"></i><span><strong>Hukum &amp; Sanksi</strong><span>Ketentuan pidana dan sanksi administratif.</span></span></button>
       </div>
 
       <div class="tab-content sej-grid">
