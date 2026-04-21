@@ -14,21 +14,29 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Field "messages" diperlukan dan harus berupa array.' });
   }
 
-  // Build system instruction with CVE context
-  const systemInstruction = cveContext
-    ? `Kamu adalah CVE AI Analyst — asisten intelijen keamanan siber berbahasa Indonesia yang berspesialisasi dalam analisis kerentanan (CVE).
+  // Build system instruction with CVE context - only on first message
+  const isFirstMessage = messages.length === 1 || (messages.length === 2 && messages[0].role === 'user' && messages[1].role === 'assistant');
+  
+  let systemInstruction;
+  if (cveContext && isFirstMessage) {
+    systemInstruction = `Kamu adalah asisten AI yang helpful dan friendly. Namamu adalah AI Assistant dari SibukPatuh.
 
-Konteks CVE aktif saat ini:
-- ID: ${cveContext.id}
-- Nama: ${cveContext.title}
+Konteks CVE yang sedang dibahas (hanya untuk referensi):
+- CVE ID: ${cveContext.id}
+- Judul: ${cveContext.title}
 - Vendor: ${cveContext.vendor}
 - Produk: ${cveContext.product}
 - Deskripsi: ${cveContext.shortDescription || ''}
-- Tindakan yang Diperlukan: ${cveContext.requiredAction || ''}
-- Terkait Ransomware: ${cveContext.isRansomware ? 'Ya' : 'Tidak'}
 
-Selalu jawab dalam Bahasa Indonesia yang profesional, terstruktur, dan mudah dipahami oleh praktisi keamanan. Fokus pada dampak praktis, mitigasi, dan relevansi terhadap regulasi Indonesia (SEOJK, PBI, BSSN, dll). Jawaban harus ringkas namun informatif. Jika pengguna mengirim pesan yang tidak berkaitan dengan CVE atau keamanan siber, tetap jawab dengan ramah dan arahkan kembali ke konteks analisis.`
-    : `Kamu adalah CVE AI Analyst — asisten intelijen keamanan siber berbahasa Indonesia dari platform SibukPatuh. Jawab semua pertanyaan dalam Bahasa Indonesia yang profesional.`;
+Guidelines:
+- Jawab dalam Bahasa Indonesia yang natural dan conversational
+- Jika pertanyaan terkait CVE, berikan jawaban yang informatif dan praktisi
+- Jika pertanyaan tidak terkait CVE, tetap jawab dengan baik dan ramah
+- Jangan memaksa mengarahkan percakapan ke topik CVE jika tidak relevan
+- Jawaban boleh singkat tapi tetap helpful`;
+  } else {
+    systemInstruction = `Kamu adalah asisten AI yang helpful dan friendly dari SibukPatuh. Jawab dalam Bahasa Indonesia yang natural dan conversational.`;
+  }
 
   // Convert messages to Gemini format
   const geminiContents = messages.map((msg) => ({
@@ -42,9 +50,9 @@ Selalu jawab dalam Bahasa Indonesia yang profesional, terstruktur, dan mudah dip
     },
     contents: geminiContents,
     generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1024,
-      topP: 0.9
+      temperature: 0.9,
+      maxOutputTokens: 2048,
+      topP: 0.95
     },
     safetySettings: [
       { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_MEDIUM_AND_ABOVE' },
