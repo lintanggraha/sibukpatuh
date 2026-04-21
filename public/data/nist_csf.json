@@ -3,3779 +3,1050 @@
     "id": "GV.OC-01",
     "function": "GOVERN",
     "category": "Organizational Context (GV.OC)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
+    "title": "Konteks organisasi dipahami",
+    "description": "Organisasi mengidentifikasi dan memahami misi, tujuan, dan pemangku kepentingan eksternal yang mempengaruhi keputusan keamanan siber. Ini mencakup evaluasi terhadap persyaratan regulasi, kontrak, dan ekspektasi bisnis yang membentuk kerangka kerja keamanan.",
+    "panda_explanation": "Pahami konteks bisnis Anda terlebih dahulu sebelum merancang program keamanan siber.",
+    "evidence": ["Dokumen Visi Misi Organisasi", "Analisis Pemangku Kepentingan", "Matriks Persyaratan Regulasi"],
+    "sp80053": ["PM-01", "PM-08", "PM-09", "PM-10", "PM-11", "PM-12", "PM-14", "PM-16"]
   },
   {
     "id": "GV.OC-02",
     "function": "GOVERN",
     "category": "Organizational Context (GV.OC)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "GV.OC-03",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
-  },
-  {
-    "id": "GV.OC-04",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
-  },
-  {
-    "id": "GV.OC-05",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
-  },
-  {
-    "id": "GV.OC-06",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
-  },
-  {
-    "id": "GV.OC-07",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
-  },
-  {
-    "id": "GV.OC-08",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
-  },
-  {
-    "id": "GV.OC-09",
-    "function": "GOVERN",
-    "category": "Organizational Context (GV.OC)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
+    "title": "Konteks organisasi diinformasikan ke pemangku kepentingan",
+    "description": "Informasi tentang konteks organisasi, termasuk misi, tujuan, dan persyaratan keamanan, dikomunikasikan secara efektif kepada semua pemangku kepentingan yang relevan untuk memastikan keselarasan dalam implementasi keamanan siber.",
+    "panda_explanation": "Komunikasi yang efektif memastikan semua pihak memahami prioritas keamanan organisasi.",
+    "evidence": ["Dokumen Tata Kelola Keamanan Siber", "Notulensi Rapat Direksi", "Laporan Komunikasi Stakeholder"],
+    "sp80053": ["PM-02", "PM-07", "PM-11", "PM-13"]
   },
   {
     "id": "GV.RM-01",
     "function": "GOVERN",
     "category": "Risk Management Strategy (GV.RM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
+    "title": "Strategi manajemen risiko ditetapkan",
+    "description": "Organisasi menetapkan dan mengkomunikasikan strategi manajemen risiko siber yang mencakup metodologi penilaian risiko, toleransi risiko, dan pendekatan mitigasi. Strategi ini menjadi dasar pengambilan keputusan keamanan siber di seluruh organisasi.",
+    "panda_explanation": "Definisi strategi risiko yang jelas membantu organisasi fokus pada ancaman paling kritis.",
+    "evidence": ["Dokumen Strategi Manajemen Risiko", "Matriks Toleransi Risiko", "Kebijakan Risiko Keamanan Siber"],
+    "sp80053": ["PM-03", "PM-04", "PM-09", "RA-01", "RA-02", "RA-03"]
   },
   {
     "id": "GV.RM-02",
     "function": "GOVERN",
     "category": "Risk Management Strategy (GV.RM)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
+    "title": "Porositas terhadap risiko dipahami",
+    "description": "Organisasi mengidentifikasi dan memahami toleransi risiko siber yang dapat diterima, mempertimbangkan dampak potensial terhadap misi, aset, dan pemangku kepentingan. Pemahaman ini mendasari keputusan tentang investasi dan prioritas keamanan.",
+    "panda_explanation": "Kenali batasan risiko yang dapat ditoleransi organisasi untuk mengalokasikan sumber daya secara optimal.",
+    "evidence": ["Matriks Penilaian Risiko", "Dokumen Selera Risiko Direksi", "Laporan Analisis Dampak Bisnis"],
+    "sp80053": ["RA-02", "RA-03", "PM-03", "PM-09", "PM-10"]
   },
   {
     "id": "GV.RM-03",
     "function": "GOVERN",
     "category": "Risk Management Strategy (GV.RM)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
-  },
-  {
-    "id": "GV.RM-04",
-    "function": "GOVERN",
-    "category": "Risk Management Strategy (GV.RM)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
-  },
-  {
-    "id": "GV.RM-05",
-    "function": "GOVERN",
-    "category": "Risk Management Strategy (GV.RM)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
-  },
-  {
-    "id": "GV.RM-06",
-    "function": "GOVERN",
-    "category": "Risk Management Strategy (GV.RM)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
-  },
-  {
-    "id": "GV.RM-07",
-    "function": "GOVERN",
-    "category": "Risk Management Strategy (GV.RM)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "GV.RM-08",
-    "function": "GOVERN",
-    "category": "Risk Management Strategy (GV.RM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
+    "title": "Prioritas risiko ditentukan",
+    "description": "Berdasarkan toleransi risiko dan penilaian risiko, organisasi menetapkan prioritas untuk aktivitas manajemen risiko. Ini memastikan bahwa sumber daya terbatas dialokasikan ke area dengan risiko tertinggi atau dampak paling signifikan.",
+    "panda_explanation": "Prioritisasi membantu fokus pada risiko yang paling mempengaruhi kelangsungan bisnis.",
+    "evidence": ["Dokumen Prioritas Risiko", "Ranking Risiko", "Rencana Mitigasi Berbasis Prioritas"],
+    "sp80053": ["RA-01", "RA-02", "RA-05", "PM-04", "PM-11"]
   },
   {
     "id": "GV.RR-01",
     "function": "GOVERN",
     "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
+    "title": "Peran dan tanggung jawab keamanan siber ditetapkan",
+    "description": "Organisasi mendefinisikan dan mengomunikasikan peran, tanggung jawab, dan otoritas keamanan siber untuk semua individu. Ini mencakup penunjukan akuntabilitas manajemen, identifikasi tim respons insiden, dan klarifikasi rantai komando.",
+    "panda_explanation": "Jelasnya tanggung jawab mencegah tumpang tindih dan celah dalam pengelolaan keamanan.",
+    "evidence": ["Matriks RACI Keamanan Siber", "Job Description", "Surat Penunjukan Tim Keamanan"],
+    "sp80053": ["PM-01", "PM-02", "PM-11", "PM-13"]
   },
   {
     "id": "GV.RR-02",
     "function": "GOVERN",
     "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
-  },
-  {
-    "id": "GV.RR-03",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
-  },
-  {
-    "id": "GV.RR-04",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
-  },
-  {
-    "id": "GV.RR-05",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
-  },
-  {
-    "id": "GV.RR-06",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
-  },
-  {
-    "id": "GV.RR-07",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
-  },
-  {
-    "id": "GV.RR-08",
-    "function": "GOVERN",
-    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
+    "title": "Akuntabilitas senior untuk keamanan siber ditetapkan",
+    "description": "Organisasi menunjuk individu senior dengan tanggung jawab akuntabilitas untuk keamanan siber. Pejabat ini memiliki otoritas untuk mengalokasikan sumber daya, membuat keputusan strategis, dan memastikan kepatuhan terhadap kebijakan keamanan.",
+    "panda_explanation": "Dukungan dan akuntabilitas dari manajemen senior sangat krusial untuk keberhasilan program keamanan.",
+    "evidence": ["Surat Penunjukan CISO/Direktur Keamanan", "Surat Keputusan Direksi", "Dokumen Otorisasi"],
+    "sp80053": ["PM-01", "PM-02", "PM-11", "PM-13", "PM-14"]
   },
   {
     "id": "GV.PO-01",
     "function": "GOVERN",
     "category": "Policy (GV.PO)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
+    "title": "Kebijakan keamanan siber didirikan",
+    "description": "Organisasi mengembangkan dan memelihara kebijakan keamanan siber yang menyediakan kerangka kerja untuk governance, mencakup struktur organisasi, mekanisme koordinasi, dan proses review berkala untuk memastikan relevansi dan efektivitas kebijakan.",
+    "panda_explanation": "Kebijakan yang solid menjadi fondasi untuk konsistensi dalam pengelolaan keamanan siber.",
+    "evidence": ["Buku Kebijakan Keamanan Siber", "Dokumen Tata Kelola IT", "Prosedur Review Kebijakan"],
+    "sp80053": ["PL-01", "PL-02", "PM-01", "PM-02", "PM-11"]
   },
   {
     "id": "GV.PO-02",
     "function": "GOVERN",
     "category": "Policy (GV.PO)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
+    "title": "Kebijakan keamanan siber dikomunikasikan",
+    "description": "Kebijakan keamanan siber dikomunikasikan secara efektif kepada semua individu yang relevan, termasuk karyawan, kontraktor, dan mitra bisnis. Komunikasi mencakup aksesibilitas, pelatihan implementasi, dan mekanisme konfirmasi pemahaman.",
+    "panda_explanation": "Kebijakan hanya efektif jika dipahami dan dapat diakses oleh semua pihak yang terikat.",
+    "evidence": ["Bukti Komunikasi Kebijakan", "Tanda Tangan Kontrak Kepatuhan", "Materi Pelatihan Karyawan"],
+    "sp80053": ["PL-04", "AT-01", "AT-02", "PM-12"]
   },
   {
     "id": "GV.PO-03",
     "function": "GOVERN",
     "category": "Policy (GV.PO)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
-  },
-  {
-    "id": "GV.PO-04",
-    "function": "GOVERN",
-    "category": "Policy (GV.PO)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
-  },
-  {
-    "id": "GV.PO-05",
-    "function": "GOVERN",
-    "category": "Policy (GV.PO)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "GV.PO-06",
-    "function": "GOVERN",
-    "category": "Policy (GV.PO)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
-  },
-  {
-    "id": "GV.PO-07",
-    "function": "GOVERN",
-    "category": "Policy (GV.PO)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
-  },
-  {
-    "id": "GV.PO-08",
-    "function": "GOVERN",
-    "category": "Policy (GV.PO)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
+    "title": "Kebijakan keamanan siber direview dan diupdate",
+    "description": "Organisasi mereview dan memperbarui kebijakan keamanan siber secara berkala untuk mencerminkan perubahan dalam misi, ancaman, teknologi, dan lingkungan regulasi. Review memastikan kebijakan tetap relevan dan efektif.",
+    "panda_explanation": "Kebijakan harus hidup dan beradaptasi dengan perubahan lingkungan bisnis dan ancaman.",
+    "evidence": ["Log Review Kebijakan", "Dokumen Versi Kebijakan", "Laporan Audit Kebijakan"],
+    "sp80053": ["PL-01", "PL-02", "PM-09", "PM-10"]
   },
   {
     "id": "GV.OV-01",
     "function": "GOVERN",
     "category": "Oversight (GV.OV)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
+    "title": "Aktivitas keamanan siber dipantau",
+    "description": "Organisasi memantau dan mengukur kinerja keamanan siber terhadap target dan指标 yang ditetapkan. Monitoring mencakup pengumpulan metrik, analisis tren, dan evaluasi kepatuhan terhadap kebijakan dan standar.",
+    "panda_explanation": "Monitoring memungkinkan identifikasi dini masalah dan evaluasi efektivitas kontrol.",
+    "evidence": ["Dashboard Monitoring Keamanan", "Laporan KPI Keamanan", "Log Aktivitas Audit"],
+    "sp80053": ["CA-07", "PM-06", "PM-10", "PM-11"]
   },
   {
     "id": "GV.OV-02",
     "function": "GOVERN",
     "category": "Oversight (GV.OV)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Aktivitas keamanan siber dilaporkan",
+    "description": "Organisasi melaporkan hasil monitoring dan metrics keamanan siber kepada pengambil keputusan yang tepat. Laporan menyediakan informasi yang cukup untuk evaluasi risiko, alokasi sumber daya, dan penentuan prioritas keamanan.",
+    "panda_explanation": "Reporting yang efektif memungkinkan pengambilan keputusan berbasis data di level manajemen.",
+    "evidence": ["Laporan Status Keamanan", "Presentasi ke Direksi", "Dashboard Eksekutif"],
+    "sp80053": ["CA-07", "PM-06", "PM-10", "PM-11", "PM-14"]
   },
   {
     "id": "GV.OV-03",
     "function": "GOVERN",
     "category": "Oversight (GV.OV)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
-  },
-  {
-    "id": "GV.OV-04",
-    "function": "GOVERN",
-    "category": "Oversight (GV.OV)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
-  },
-  {
-    "id": "GV.OV-05",
-    "function": "GOVERN",
-    "category": "Oversight (GV.OV)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
-  },
-  {
-    "id": "GV.OV-06",
-    "function": "GOVERN",
-    "category": "Oversight (GV.OV)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
-  },
-  {
-    "id": "GV.OV-07",
-    "function": "GOVERN",
-    "category": "Oversight (GV.OV)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
-  },
-  {
-    "id": "GV.OV-08",
-    "function": "GOVERN",
-    "category": "Oversight (GV.OV)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
+    "title": "Pengawasan keamanan siber dilakukan",
+    "description": "Organisasi melakukan pengawasan terhadap proses dan aktivitas keamanan siber melalui mekanisme seperti audit internal, review oleh pihak ketiga, dan evaluasi independen. Oversight memastikan akuntabilitas dan identifikasi area perbaikan.",
+    "panda_explanation": "Pengawasan independen memberikan perspektif objektif tentang efektivitas program keamanan.",
+    "evidence": ["Laporan Audit Internal", "Hasil Penilaian Pihak Ketiga", "Matriks Tindak Lanjut Temuan"],
+    "sp80053": ["CA-07", "PM-10", "PM-14", "PM-15"]
   },
   {
     "id": "GV.SC-01",
     "function": "GOVERN",
     "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
+    "title": "Program manajemen risiko rantai pasok siber didirikan",
+    "description": "Organisasi menetapkan program sistematis untuk mengidentifikasi, menilai, dan mengelola risiko keamanan siber dalam rantai pasok. Program ini mencakup kebijakan, prosedur, dan criteria untuk mengevaluasi dan memilih pemasok dan vendor.",
+    "panda_explanation": "Rantai pasok sering menjadi titik lemah - pengelolaan risiko vendor yang ketat sangat penting.",
+    "evidence": ["Dokumen Program SCRM", "Kebijakan Vendor", "Matriks Penilaian Risiko Vendor"],
+    "sp80053": ["PM-08", "SA-02", "SA-03", "SA-04", "SA-05", "SA-09", "SA-10", "SA-11", "SA-12", "SA-15", "SA-17", "SR-01", "SR-02", "SR-03"]
   },
   {
     "id": "GV.SC-02",
     "function": "GOVERN",
     "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
+    "title": "Rantai pasok siber dipantau",
+    "description": "Organisasi memantau risiko keamanan siber dari pemasok dan vendor secara berkelanjutan. Pemantauan mencakup evaluasi kinerja keamanan, perubahan status risiko, dan kepatuhan terhadap persyaratan kontrak keamanan.",
+    "panda_explanation": "Monitoring berkelanjutan mendeteksi perubahan risiko sebelum menjadi insiden.",
+    "evidence": ["Laporan Penilaian Vendor", "Monitoring Kepatuhan Kontrak", "Alert Keamanan Vendor"],
+    "sp80053": ["PM-08", "SR-02", "SR-03", "SR-04", "SR-05", "SR-06"]
   },
   {
     "id": "GV.SC-03",
     "function": "GOVERN",
     "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "GV.SC-04",
-    "function": "GOVERN",
-    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
-  },
-  {
-    "id": "GV.SC-05",
-    "function": "GOVERN",
-    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
-  },
-  {
-    "id": "GV.SC-06",
-    "function": "GOVERN",
-    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
-  },
-  {
-    "id": "GV.SC-07",
-    "function": "GOVERN",
-    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
-  },
-  {
-    "id": "GV.SC-08",
-    "function": "GOVERN",
-    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Produk dan layanan siber diperoleh dengan aman",
+    "description": "Organisasi memperoleh produk dan layanan teknologi informasi dengan mempertimbangkan keamanan siber. Ini mencakup evaluasi keamanan sebelum akuisisi, persyaratan kontrak keamanan, dan verifikasi integritas komponen yang diperoleh.",
+    "panda_explanation": "Keamanan harus dipertimbangkan sejak tahap perencanaan akuisisi, bukan setelah deployment.",
+    "evidence": ["Checklist Keamanan Akuisisi", "Persyaratan Keamanan dalam Kontrak", "Verifikasi Integritas Software"],
+    "sp80053": ["SA-02", "SA-03", "SA-04", "SA-05", "SA-09", "SA-10", "SA-11", "SA-15", "SR-04"]
   },
   {
     "id": "ID.AM-01",
     "function": "IDENTIFY",
     "category": "Asset Management (ID.AM)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
+    "title": "Aset fisik diinventarisasi",
+    "description": "Organisasi mengidentifikasi dan mendokumentasikan semua aset fisik yang mendukung fungsi organisasi, termasuk perangkat keras, fasilitas, dan infrastruktur kritis. Inventarisasi mencakup lokasi, kepemilikan, dan klasifikasi keamanan setiap aset.",
+    "panda_explanation": "Anda tidak dapat melindungi apa yang tidak Anda ketahui - inventarisasi adalah fondasi keamanan.",
+    "evidence": ["Registrar Aset Hardware", "Peta Infrastruktur Data Center", "Dokumen Konfigurasi Fisik"],
+    "sp80053": ["CM-08", "CP-02", "PE-01", "PE-02", "PE-03", "PE-04", "PE-05", "PE-06"]
   },
   {
     "id": "ID.AM-02",
     "function": "IDENTIFY",
     "category": "Asset Management (ID.AM)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
+    "title": "Aset digital didokumentasikan",
+    "description": "Organisasi mengidentifikasi dan mendokumentasikan aset digital termasuk perangkat lunak, data, dan sistem informasi. Dokumentasi mencakup versi, pemilik, dependensi, dan klasifikasi keamanan untuk setiap aset digital.",
+    "panda_explanation": "Setiap software dan data adalah asset yang perlu dilindungi - ketahui apa yang Anda miliki.",
+    "evidence": ["Inventaris Software", "Registrar Data", "Peta Sistem dan Aplikasi"],
+    "sp80053": ["CM-08", "MA-02", "SA-04", "SA-05"]
   },
   {
     "id": "ID.AM-03",
     "function": "IDENTIFY",
     "category": "Asset Management (ID.AM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
+    "title": "Arsitektur sistem dipahami",
+    "description": "Organisasi memahami dan mendokumentasikan arsitektur sistem informasi, termasuk topologi jaringan, alur data, dan interkoneksi antar sistem. Pemahaman ini penting untuk menilai risiko dan merancang kontrol keamanan yang efektif.",
+    "panda_explanation": "Pahami bagaimana sistem terhubung untuk mengidentifikasi celah potensial dalam arsitektur Anda.",
+    "evidence": ["Diagram Arsitektur Jaringan", "Dokumentasi Arsitektur Enterprise", "Peta Alur Data"],
+    "sp80053": ["CM-02", "CM-06", "SA-04", "SA-08", "SC-02", "SC-04", "SC-07"]
   },
   {
     "id": "ID.AM-04",
     "function": "IDENTIFY",
     "category": "Asset Management (ID.AM)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
+    "title": "Aset diklasifikasikan berdasarkan pentingnya bagi misi",
+    "description": "Organisasi mengklasifikasikan aset berdasarkan pentingnya terhadap fungsi bisnis dan misi organisasi. Klasifikasi ini mendasari penentuan prioritas perlindungan dan alokasi sumber daya keamanan.",
+    "panda_explanation": "Tidak semua aset memiliki nilai yang sama - fokuskan perlindungan pada yang paling kritikal.",
+    "evidence": ["Matriks Klasifikasi Aset", "Dokumen Impact Assessment", "Prioritas Proteksi"],
+    "sp80053": ["RA-02", "CP-02", "SC-06"]
   },
   {
     "id": "ID.AM-05",
     "function": "IDENTIFY",
     "category": "Asset Management (ID.AM)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
+    "title": "Klasifikasi aset dikomunikasikan",
+    "description": "Organisasi mengomunikasikan klasifikasi aset kepada pemilik dan pengguna yang relevan. Komunikasi memastikan bahwa penanganan aset sesuai dengan tingkat keamanan yang ditetapkan.",
+    "panda_explanation": "Pemilik aset perlu tahu bagaimana mengklasifikasikan dan menangani informasi dengan benar.",
+    "evidence": ["Kebijakan Klasifikasi Data", "Materi Pelatihan Karyawan", "Kontrak Kerahasiaan"],
+    "sp80053": ["AC-16", "SC-06", "AT-02"]
   },
   {
-    "id": "ID.AM-06",
+    "id": "ID.BE-01",
     "function": "IDENTIFY",
-    "category": "Asset Management (ID.AM)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
+    "category": "Business Environment (ID.BE)",
+    "title": "Lingkungan bisnis dipahami",
+    "description": "Organisasi mengidentifikasi dan memahami faktor-faktor eksternal dan internal yang mempengaruhi kemampuan untuk mencapai misi. Ini mencakup analisis pesaing, kondisi pasar, dan kemampuan organisasi.",
+    "panda_explanation": "Konteks bisnis yang jelas membantu merancang strategi keamanan yang aligned dengan tujuan organisasi.",
+    "evidence": ["Analisis SWOT", "Dokumen Perencanaan Strategis", "Laporan Lingkungan Bisnis"],
+    "sp80053": ["PM-07", "PM-08", "PM-11"]
   },
   {
-    "id": "ID.AM-07",
+    "id": "ID.BE-02",
     "function": "IDENTIFY",
-    "category": "Asset Management (ID.AM)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
+    "category": "Business Environment (ID.BE)",
+    "title": "Peran organisasi dipahami",
+    "description": "Organisasi mengidentifikasi dan memahami perannya dalam ekosistem yang lebih luas, termasuk tanggung jawab terhadap pelanggan, mitra, dan regulator. Pemahaman ini penting untuk mengelola ekspektasi dan kewajiban keamanan.",
+    "panda_explanation": "Kenali posisi Anda dalam rantai nilai - keamanan Anda berdampak pada ekosistem yang lebih luas.",
+    "evidence": ["Analisis Peran Organisasi", "Kontrak dan SLA", "Matriks Tanggung Jawab Keamanan"],
+    "sp80053": ["PM-07", "PM-08", "PM-11"]
   },
   {
-    "id": "ID.AM-08",
+    "id": "ID.BE-03",
     "function": "IDENTIFY",
-    "category": "Asset Management (ID.AM)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
+    "category": "Business Environment (ID.BE)",
+    "title": "Prioritas misi dan fungsi dipahami",
+    "description": "Organisasi mengidentifikasi dan memprioritaskan misi, tujuan, dan aktivitas bisnis yang kritis. Pemahaman ini memungkinkan penentuan prioritas dalam perlindungan dan pemulihan sistem.",
+    "panda_explanation": "Tentukan apa yang harus terus beroperasi dalam kondisi apapun - itu prioritas utama keamanan.",
+    "evidence": ["Dokumen Prioritas Bisnis", "BIA (Business Impact Analysis)", "Analisis Fungsi Kritikal"],
+    "sp80053": ["CP-02", "CP-06", "CP-07", "PE-09", "PM-07", "PM-11"]
+  },
+  {
+    "id": "ID.BE-04",
+    "function": "IDENTIFY",
+    "category": "Business Environment (ID.BE)",
+    "title": "Ketergantungan terhadap layanan eksternal dipahami",
+    "description": "Organisasi mengidentifikasi dan memahami ketergantungan pada layanan, sistem, dan informasi eksternal. Pemahaman ini penting untuk menilai risiko dan merencanakan kontinjensi.",
+    "panda_explanation": "Jika Anda bergantung pada layanan pihak ketiga, risiko mereka menjadi risiko Anda.",
+    "evidence": ["Registrar Ketergantungan Eksternal", "Kontrak SLA", "Analisis Risiko Vendor"],
+    "sp80053": ["CP-02", "PE-09", "PM-08", "SR-02"]
+  },
+  {
+    "id": "ID.GV-01",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Kebijakan dan prosedur keamanan siber dibentuk",
+    "description": "Organisasi mengembangkan dan memelihara kebijakan, prosedur, dan standar keamanan siber yang komprehensif. Framework governance ini menyediakan kerangka kerja untuk pengambilan keputusan dan akuntabilitas keamanan.",
+    "panda_explanation": "Kebijakan yang well-defined memastikan konsistensi dalam implementasi keamanan di seluruh organisasi.",
+    "evidence": ["Buku Kebijakan Keamanan", "Standar Teknis Keamanan", "Prosedur Operasional"],
+    "sp80053": ["PL-01", "PL-02", "PL-03", "PL-04", "PM-01", "PM-02"]
+  },
+  {
+    "id": "ID.GV-02",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Kebijakan dan prosedur keamanan siber dikomunikasikan",
+    "description": "Kebijakan dan prosedur keamanan dikomunikasikan kepada semua individu yang relevan dengan cara yang sesuai dengan peran mereka. Komunikasi memastikan pemahaman dan kepatuhan terhadap persyaratan keamanan.",
+    "panda_explanation": "Kebijakan tanpa komunikasi efektif tidak akan di-implement dengan benar.",
+    "evidence": ["Bukti Distribusi Kebijakan", "Materi Pelatihan", "Konfirmasi Penerimaan"],
+    "sp80053": ["AT-01", "AT-02", "PL-04", "PM-12"]
+  },
+  {
+    "id": "ID.GV-03",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Kebijakan dan prosedur keamanan siber direview dan disesuaikan",
+    "description": "Organisasi mereview dan menyesuaikan kebijakan keamanan secara berkala untuk mencerminkan perubahan dalam misi, ancaman, teknologi, dan lingkungan regulasi. Review memastikan kebijakan tetap relevan dan efektif.",
+    "panda_explanation": "Kebijakan harus evolve seiring dengan perubahan lingkungan ancaman dan bisnis.",
+    "evidence": ["Log Review Kebijakan", "Catatan Perubahan", "Approval Direksi"],
+    "sp80053": ["PL-01", "PL-02", "PM-09", "PM-10"]
+  },
+  {
+    "id": "ID.GV-04",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Kepatuhan terhadap hukum dan regulasi diverifikasi",
+    "description": "Organisasi memverifikasi kepatuhan terhadap semua hukum, regulasi, dan kewajiban kontrak yang berlaku terkait keamanan siber. Verifikasi mencakup dokumentasi dan pelaporan yang diperlukan.",
+    "panda_explanation": "Kepatuhan regulasi bukan pilihan - kegagalan dapat mengakibatkan sanksi dan reputasi rusak.",
+    "evidence": ["Laporan Kepatuhan", "Audit Compliance", "Dokumen Legal Review"],
+    "sp80053": ["CA-07", "PM-09", "PM-10", "RA-07"]
   },
   {
     "id": "ID.RA-01",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
+    "title": "Aset dan ancaman diidentifikasi",
+    "description": "Organisasi mengidentifikasi aset yang perlu dilindungi dan ancaman potensial terhadap aset tersebut. Identifikasi mencakup analisisistorian ancaman, evaluasi kerentanan, dan pemetaan terhadap skenario serangan.",
+    "panda_explanation": "Anda tidak dapat menilai risiko tanpa memahami apa yang Anda lindungi dan dari siapa.",
+    "evidence": ["Registrar Aset", "Profil Ancaman", "Peta Kerentanan"],
+    "sp80053": ["RA-01", "RA-03", "RA-05", "PM-15", "PM-16"]
   },
   {
     "id": "ID.RA-02",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
+    "title": "Dampak dan kemungkinan dievaluasi",
+    "description": "Organisasi mengevaluasi dampak potensial dan kemungkinan terjadinya insiden keamanan siber. Evaluasi mempertimbangkan aspek finansial, operasional, reputasi, dan hukum dari setiap skenario risiko.",
+    "panda_explanation": "Tidak semua risiko memiliki dampak yang sama - kuantifikasi membantu dalam pengambilan keputusan.",
+    "evidence": ["Matriks Penilaian Risiko", "Analisis Finansial Dampak", "Dokumen BIA"],
+    "sp80053": ["RA-02", "RA-03", "PM-09", "CP-02"]
   },
   {
     "id": "ID.RA-03",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
+    "title": "Tren ancaman dan risiko diidentifikasi",
+    "description": "Organisasi menganalisis tren dalam lanskap ancaman dan risiko untuk mengidentifikasi pola dan prediksi. Analisis ini membantu dalam proaktif mempersiapkan diri terhadap ancaman emerging.",
+    "panda_explanation": "Monitor threat landscape membantu mengantisipasi serangan sebelum terjadi.",
+    "evidence": ["Laporan Threat Intelligence", "Analisis Trend", "Feeds Keamanan"],
+    "sp80053": ["RA-03", "RA-04", "RA-05", "PM-15", "PM-16"]
   },
   {
     "id": "ID.RA-04",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
+    "title": "Penilaian risiko divalidasi",
+    "description": "Organisasi memvalidasi hasil penilaian risiko untuk memastikan akurasi dan kelengkapan. Validasi mencakup review oleh pemangku kepentingan dan reconciliation dengan data operasional.",
+    "panda_explanation": "Penilaian risiko yang tidak divalidasi bisa miss target dan menghabiskan sumber daya di area yang salah.",
+    "evidence": ["Review Penilaian Risiko", "Validasi Stakeholder", "Matriks Perbandingan"],
+    "sp80053": ["RA-02", "RA-03", "CA-07"]
   },
   {
     "id": "ID.RA-05",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
+    "title": "Kerentanan diidentifikasi dan dikategorikan",
+    "description": "Organisasi mengidentifikasi dan mengkategorikan kerentanan dalam sistem dan aset. Kategorisasi mempertimbangkan severity, exploitability, dan relevansi dengan konteks organisasi.",
+    "panda_explanation": "Kerentanan adalah pintu masuk bagi penyerang - identifikasi dan kategori membantu prioritasi perbaikan.",
+    "evidence": ["Laporan Vulnerability Assessment", "Matriks Prioritas Kerentanan", "Scan Results"],
+    "sp80053": ["RA-03", "RA-04", "RA-05", "SI-02"]
   },
   {
     "id": "ID.RA-06",
     "function": "IDENTIFY",
     "category": "Risk Assessment (ID.RA)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Penilaian risiko dikomunikasikan",
+    "description": "Hasil penilaian risiko dikomunikasikan kepada pengambil keputusan dan pemangku kepentingan yang relevan. Komunikasi menyediakan informasi yang cukup untuk memahami dan merespons risiko yang teridentifikasi.",
+    "panda_explanation": "Risiko yang tidak dikomunikasikan tidak akan mendapat perhatian dan sumber daya yang diperlukan.",
+    "evidence": ["Laporan Penilaian Risiko", "Presentasi ke Manajemen", "Dashboard Risiko"],
+    "sp80053": ["PM-09", "PM-11", "RA-07"]
   },
   {
-    "id": "ID.RA-07",
+    "id": "ID.RM-01",
     "function": "IDENTIFY",
-    "category": "Risk Assessment (ID.RA)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "Toleransi risiko organisasi ditetapkan",
+    "description": "Organisasi menetapkan tingkat toleransi risiko yang dapat diterima, mempertimbangkan misi, objetivos, dan sumber daya yang tersedia. Toleransi ini menjadi dasar untuk keputusan accept, mitigate, transfer, atau avoid risiko.",
+    "panda_explanation": "Toleransi risiko yang jelas menghindari over-protection atau under-protection.",
+    "evidence": ["Dokumen Toleransi Risiko", "Approval Direksi", "Matriks Risk Appetite"],
+    "sp80053": ["PM-03", "PM-04", "PM-09", "PM-11"]
   },
   {
-    "id": "ID.RA-08",
+    "id": "ID.RM-02",
     "function": "IDENTIFY",
-    "category": "Risk Assessment (ID.RA)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "Prioritas risiko ditetapkan",
+    "description": "Berdasarkan toleransi risiko dan penilaian risiko, organisasi menetapkan prioritas untuk aktivitas mitigasi risiko. Prioritisasi memastikan sumber daya digunakan secara efektif untuk risiko dengan dampak tertinggi.",
+    "panda_explanation": "Prioritas yang jelas memastikan fokus pada risiko yang paling kritikal bagi organisasi.",
+    "evidence": ["Dokumen Prioritas Risiko", "Rencana Mitigasi", "Alokasi Budget"],
+    "sp80053": ["PM-04", "PM-11", "RA-02", "RA-03"]
+  },
+  {
+    "id": "ID.RM-03",
+    "function": "IDENTIFY",
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "Strategi manajemen risiko dikembangkan",
+    "description": "Organisasi mengembangkan strategi komprehensif untuk mengelola risiko siber yang mencakup semua fase: identifikasi, analisis, treatment, dan monitoring. Strategi ini harus aligned dengan tujuan bisnis.",
+    "panda_explanation": "Strategi yang well-defined memastikan konsistensi dalam pengelolaan risiko dari waktu ke waktu.",
+    "evidence": ["Dokumen Strategi Manajemen Risiko", "Framework Risiko", "Kebijakan Risk Management"],
+    "sp80053": ["PM-03", "PM-04", "PM-09", "PM-11"]
+  },
+  {
+    "id": "ID.SC-01",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Risiko rantai pasok diidentifikasi",
+    "description": "Organisasi mengidentifikasi risiko keamanan siber yang terkait dengan rantai pasok, termasuk pemasok, vendor, dan layanan pihak ketiga. Identifikasi mencakup analisis terhadap komponen, layanan, dan proses yang diperoleh dari pihak eksternal.",
+    "panda_explanation": "Rantai pasok yang lemah dapat mengkompromikan seluruh posture keamanan organisasi.",
+    "evidence": ["Registrar Vendor", "Analisis Risiko Supply Chain", "Due Diligence Vendor"],
+    "sp80053": ["PM-08", "RA-03", "SR-01", "SR-02", "SR-05"]
+  },
+  {
+    "id": "ID.SC-02",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Persyaratan keamanan untuk supplier ditetapkan",
+    "description": "Organisasi menetapkan persyaratan keamanan siber yang harus dipenuhi oleh pemasok dan vendor. Persyaratan ini harus terangkum dalam kontrak dan dievaluasi sebelum engagement.",
+    "panda_explanation": "Persyaratan yang jelas memastikan vendor memahami standar keamanan yang diharapkan.",
+    "evidence": ["Syarat Keamanan dalam Kontrak", "Klausul Security Requirements", "SLA Keamanan"],
+    "sp80053": ["PM-08", "SA-04", "SA-05", "SR-03", "SR-05"]
+  },
+  {
+    "id": "ID.SC-03",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Supplier didue-diligence kan",
+    "description": "Organisasi melakukan due diligence terhadap supplier untuk memverifikasi kemampuan mereka dalam memenuhi persyaratan keamanan. Due diligence mencakup evaluasi kemampuan teknis, track record, dan praktik keamanan.",
+    "panda_explanation": "Due diligence yang thorough mencegah masuknya vendor yang tidak kompeten ke ekosistem Anda.",
+    "evidence": ["Laporan Due Diligence", "Sertifikasi Vendor", "Assessment Results"],
+    "sp80053": ["PM-08", "SR-02", "SR-03", "SR-05"]
+  },
+  {
+    "id": "ID.SC-04",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Risiko rantai pasok dimitigasi",
+    "description": "Organisasi menerapkan kontrol dan mitigasi untuk mengurangi risiko keamanan siber dalam rantai pasok. Mitigasi dapat mencakup persyaratan kontraktual, audit, monitoring, atau pencarian alternatif.",
+    "panda_explanation": "Mitigasi proaktif lebih cost-effective daripada menanggapi insiden yang berasal dari vendor.",
+    "evidence": ["Rencana Mitigasi Vendor", "Kontrak dengan Klausul Keamanan", "Hasil Audit Vendor"],
+    "sp80053": ["PM-08", "SR-03", "SR-05", "SR-06"]
   },
   {
     "id": "ID.IM-01",
     "function": "IDENTIFY",
     "category": "Improvement (ID.IM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
+    "title": "Area perbaikan keamanan diidentifikasi",
+    "description": "Organisasi secara berkelanjutan mengidentifikasi area yang memerlukan perbaikan dalam posture keamanan siber. Identifikasi dilakukan melalui lessons learned, audit findings, dan evaluasi efektivitas kontrol.",
+    "panda_explanation": "Improvement kontinyu memastikan program keamanan tidak stagnan dan terus berkembang.",
+    "evidence": ["Lessons Learned Reports", "Action Items dari Audit", "Root Cause Analysis"],
+    "sp80053": ["CA-05", "CA-07", "PM-10"]
   },
   {
     "id": "ID.IM-02",
     "function": "IDENTIFY",
     "category": "Improvement (ID.IM)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
-  },
-  {
-    "id": "ID.IM-03",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
-  },
-  {
-    "id": "ID.IM-04",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
-  },
-  {
-    "id": "ID.IM-05",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
-  },
-  {
-    "id": "ID.IM-06",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
-  },
-  {
-    "id": "ID.IM-07",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "ID.IM-08",
-    "function": "IDENTIFY",
-    "category": "Improvement (ID.IM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
+    "title": "Proses manajemen risiko ditingkatkan",
+    "description": "Organisasi secara berkala mengevaluasi dan meningkatkan proses manajemen risiko keamanan siber. Peningkatan didasarkan pada hasil pengukuran, umpan balik, dan evolusi ancaman.",
+    "panda_explanation": "Proses yang terus meningkat menghasilkan hasil yang lebih baik dalam jangka panjang.",
+    "evidence": ["Process Improvement Plans", "KPI Risk Management", "Review Methodology"],
+    "sp80053": ["PM-10", "CA-05", "CA-07"]
   },
   {
     "id": "PR.AA-01",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
+    "title": "Identitas dan akses dikelola",
+    "description": "Organisasi mengelola identitas individu dan sistem secara terpusat dan terdokumentasi. Manajemen identitas mencakup provisioning, modification, dan deprovisioning akses sesuai dengan prinsip least privilege dan need-to-know.",
+    "panda_explanation": "Identity is the new perimeter - pengelolaan identitas yang kuat adalah fondasi keamanan modern.",
+    "evidence": ["Identity Management System", "Provisioning/Deprovisioning Procedures", "Access Review Logs"],
+    "sp80053": ["AC-01", "AC-02", "AC-03", "AC-05", "AC-06", "AC-14", "AC-17", "AC-18", "AC-19", "AC-20", "AC-21", "AC-22", "IA-01", "IA-02", "IA-03", "IA-04", "IA-05", "IA-06", "IA-07", "IA-08", "IA-09", "IA-10", "IA-11", "IA-12"]
   },
   {
     "id": "PR.AA-02",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
+    "title": "Identitas dipertahankan",
+    "description": "Organisasi melindungi identitas dari compromise melalui credential management yang aman, proteksi terhadap phishing dan social engineering, serta monitoring terhadap aktivitas mencurigakan terkait identitas.",
+    "panda_explanation": "Identitas yang compromise dapat memberikan akses penuh kepada penyerang - proteksi berlapis sangat penting.",
+    "evidence": ["Credential Policy", "MFA Implementation", "Identity Threat Monitoring"],
+    "sp80053": ["IA-02", "IA-05", "IA-06", "IA-07", "AC-07"]
   },
   {
     "id": "PR.AA-03",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
+    "title": "Akses fisik dimonitor dan dikontrol",
+    "description": "Organisasi mengontrol dan memantau akses ke fasilitas dan area kritikal. Kontrol mencakup visitor management, badge systems, dan monitoring terhadap akses yang tidak authorized.",
+    "panda_explanation": "Akses fisik yang tidak terkontrol dapat bypass semua kontrol keamanan siber digital.",
+    "evidence": ["Access Control System", "Visitor Logs", "CCTV Recordings", "Security Patrol Records"],
+    "sp80053": ["PE-02", "PE-03", "PE-04", "PE-05", "PE-06"]
   },
   {
     "id": "PR.AA-04",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Akses logis dikelola",
+    "description": "Organisasi mengelola akses logis ke sistem, aplikasi, dan data berdasarkan prinsip least privilege. Pengelolaan mencakup permission reviews berkala dan prompt removal of excessive privileges.",
+    "panda_explanation": "Excessive privileges adalah salah satu penyebab utama insiden - review berkala adalah keharusan.",
+    "evidence": ["Access Control Lists", "Periodic Access Reviews", "Privilege Monitoring"],
+    "sp80053": ["AC-02", "AC-03", "AC-06", "AC-17", "AC-18", "AC-19", "AC-20", "AC-21"]
   },
   {
     "id": "PR.AA-05",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
+    "title": "Identitas dan akses diverifikasi",
+    "description": "Organisasi memverifikasi identitas sebelum memberikan akses melalui mekanisme autentikasi yang kuat. Verifikasi mencakup penggunaan multi-factor authentication untuk akses sensitive.",
+    "panda_explanation": "Verifikasi identitas yang robust mencegah unauthorized access bahkan jika credentials tercompromise.",
+    "evidence": ["MFA Policy", "Authentication Logs", "Zero Trust Implementation"],
+    "sp80053": ["IA-02", "IA-05", "IA-07", "IA-08", "IA-09", "IA-10", "IA-11"]
   },
   {
     "id": "PR.AA-06",
     "function": "PROTECT",
     "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
-  },
-  {
-    "id": "PR.AA-07",
-    "function": "PROTECT",
-    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
-  },
-  {
-    "id": "PR.AA-08",
-    "function": "PROTECT",
-    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
+    "title": "Identitas dan akses diproteksi",
+    "description": "Organisasi menerapkan kontrol untuk melindungi identitas dan kredensial dari compromise, loss, atau theft. Proteksi mencakup encryption, secure storage, dan monitoring terhadap credential abuse.",
+    "panda_explanation": "Credential protection adalah lini pertahanan pertama terhadap unauthorized access.",
+    "evidence": ["Password Vault", "Credential Encryption", "Stolen Credential Monitoring"],
+    "sp80053": ["IA-05", "IA-06", "SC-12", "SC-13"]
   },
   {
     "id": "PR.AT-01",
     "function": "PROTECT",
     "category": "Awareness and Training (PR.AT)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
+    "title": "Individu receive cybersecurity awareness training",
+    "description": "Organisasi menyediakan pelatihan awareness keamanan siber untuk semua individu yang memiliki akses ke sistem organisasi. Pelatihan mencakup pengenalan ancaman, kebijakan keamanan, dan prosedur pelaporan insiden.",
+    "panda_explanation": "Human error adalah penyebab utama insiden - awareness training mengurangi risiko ini secara signifikan.",
+    "evidence": ["Training Records", "Phishing Simulation Results", "Awareness Materials"],
+    "sp80053": ["AT-01", "AT-02", "AT-03", "AT-04"]
   },
   {
     "id": "PR.AT-02",
     "function": "PROTECT",
     "category": "Awareness and Training (PR.AT)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
+    "title": "Individu dengan tanggung jawab khusus menerima pelatihan",
+    "description": "Organisasi menyediakan pelatihan tambahan untuk individu dengan tanggung jawab keamanan siber khusus, seperti incident responders, system administrators, dan personnel dengan akses ke data sensitif.",
+    "panda_explanation": "Personel dengan tanggung jawab khusus memerlukan skill dan knowledge yang lebih mendalam.",
+    "evidence": ["Role-Based Training Records", "Certifications", "Technical Training Completion"],
+    "sp80053": ["AT-03", "AT-04", "IR-02"]
   },
   {
     "id": "PR.AT-03",
     "function": "PROTECT",
     "category": "Awareness and Training (PR.AT)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
-  },
-  {
-    "id": "PR.AT-04",
-    "function": "PROTECT",
-    "category": "Awareness and Training (PR.AT)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
-  },
-  {
-    "id": "PR.AT-05",
-    "function": "PROTECT",
-    "category": "Awareness and Training (PR.AT)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
-  },
-  {
-    "id": "PR.AT-06",
-    "function": "PROTECT",
-    "category": "Awareness and Training (PR.AT)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
-  },
-  {
-    "id": "PR.AT-07",
-    "function": "PROTECT",
-    "category": "Awareness and Training (PR.AT)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
-  },
-  {
-    "id": "PR.AT-08",
-    "function": "PROTECT",
-    "category": "Awareness and Training (PR.AT)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
+    "title": "Program kesadaran keamanan dievaluasi",
+    "description": "Organisasi mengevaluasi efektivitas program kesadaran keamanan siber melalui pengukuran perilaku, phishing simulations, dan feedback peserta. Evaluasi mendasari perbaikan program yang berkelanjutan.",
+    "panda_explanation": "Training yang tidak dievaluasi tidak bisa ditingkatkan - pengukuran adalah kunci improvement.",
+    "evidence": ["Phishing Click Rates", "Security Incident Trends", "Training Effectiveness Metrics"],
+    "sp80053": ["AT-01", "AT-03", "CA-07"]
   },
   {
     "id": "PR.DS-01",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
+    "title": "Data dilindungi saat transit",
+    "description": "Organisasi menerapkan kontrol untuk melindungi data saat ditransmisikan melalui jaringan. Perlindungan mencakup encryption, secure protocols, dan validasi endpoint untuk mencegah eavesdropping dan tampering.",
+    "panda_explanation": "Data dalam transit sangat rentan terhadap interception - encryption adalah keharusan.",
+    "evidence": ["TLS Configuration", "VPN Usage Logs", "Network Encryption Policy"],
+    "sp80053": ["SC-08", "SC-12", "SC-13"]
   },
   {
     "id": "PR.DS-02",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Data dilindungi saat tersimpan",
+    "description": "Organisasi menerapkan kontrol untuk melindungi data yang tersimpan di berbagai media. Perlindungan mencakup encryption at rest, access controls, dan secure deletion procedures.",
+    "panda_explanation": "Data at rest yang tidak terenkripsi bisa diakses jika storage device jatuh ke tangan yang salah.",
+    "evidence": ["Encryption Configuration", "Storage Access Logs", "Data Classification Policy"],
+    "sp80053": ["SC-28", "SC-12", "SC-13", "MP-03", "MP-04", "MP-05", "MP-06"]
   },
   {
     "id": "PR.DS-03",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
+    "title": "Konfigurasi sistem dikelola",
+    "description": "Organisasi mengelola konfigurasi sistem untuk memastikan security baseline yang konsisten. Konfigurasi mencakup hardening, perubahan management, dan verification terhadap baseline standards.",
+    "panda_explanation": "Konfigurasi yang tidak terkontrol menciptakan kerentanan yang bisa dieksploitasi.",
+    "evidence": ["Configuration Baseline Documents", "Change Management Logs", "Compliance Scan Results"],
+    "sp80053": ["CM-02", "CM-06", "CM-07", "CM-08"]
   },
   {
     "id": "PR.DS-04",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6"
-    ]
+    "title": "Kebocoran data dicegah",
+    "description": "Organisasi menerapkan kontrol untuk mencegah kebocoran data, baik yang disengaja maupun tidak. Kontrol mencakup DLP (Data Loss Prevention), access restrictions, dan monitoring terhadap data exfiltration.",
+    "panda_explanation": "DLP yang well-implemented dapat mendeteksi dan mencegah kebocoran data sebelum terjadi.",
+    "evidence": ["DLP Policy", "DLP Alert Logs", "Data Exfiltration Monitoring"],
+    "sp80053": ["AC-04", "AC-05", "SC-07", "SC-08", "SI-04"]
   },
   {
     "id": "PR.DS-05",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6"
-    ]
+    "title": "Integritas data dijaga",
+    "description": "Organisasi menerapkan kontrol untuk menjaga integritas data dari modifikasi yang tidak sah. Kontrol mencakup checksums, digital signatures, dan audit trails yang merekam semua perubahan data.",
+    "panda_explanation": "Data integrity ensures bahwa informasi yang Anda miliki adalah akurat dan belum dimanipulasi.",
+    "evidence": ["Integrity Verification Logs", "Checksum Records", "Change Audit Trails"],
+    "sp80053": ["SC-16", "SC-28", "SI-07", "AU-10"]
   },
   {
     "id": "PR.DS-06",
     "function": "PROTECT",
     "category": "Data Security (PR.DS)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6"
-    ]
-  },
-  {
-    "id": "PR.DS-07",
-    "function": "PROTECT",
-    "category": "Data Security (PR.DS)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6"
-    ]
-  },
-  {
-    "id": "PR.DS-08",
-    "function": "PROTECT",
-    "category": "Data Security (PR.DS)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6"
-    ]
+    "title": "Data diklasifikasikan",
+    "description": "Organisasi mengklasifikasikan data berdasarkan tingkat sensitivitas dan dampaknya terhadap organisasi. Klasifikasi mendasari penerapan kontrol keamanan yang proporsional terhadap setiap kategori data.",
+    "panda_explanation": "Tidak semua data perlu dilindungi dengan cara yang sama - klasifikasi memungkinkan resource allocation yang efisien.",
+    "evidence": ["Data Classification Policy", "Classification Labels", "Handling Procedures"],
+    "sp80053": ["AC-16", "SC-06", "MP-02", "MP-03"]
   },
   {
     "id": "PR.IP-01",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6"
-    ]
+    "title": "Prosedur keamanan siber didokumentasikan",
+    "description": "Organisasi mendokumentasikan prosedur keamanan siber yang mencakup semua aspek perlindungan. Dokumentasi harus up-to-date, accessible, dan dikomunikasikan kepada semua individu yang relevan.",
+    "panda_explanation": "Prosedur yang terdokumentasi memastikan konsistensi dalam implementasi dan mendukung training.",
+    "evidence": ["Security Procedures Manual", "Standard Operating Procedures", "Documentation Repository"],
+    "sp80053": ["PL-02", "PL-07", "PM-06"]
   },
   {
     "id": "PR.IP-02",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6"
-    ]
+    "title": "Perubahan keamanan dikelola",
+    "description": "Organisasi mengelola perubahan terhadap sistem, aplikasi, dan konfigurasi melalui proses change management yang terstruktur. Setiap perubahan dievaluasi, disetujui, dan didokumentasikan sebelum implementasi.",
+    "panda_explanation": "Uncontrolled changes adalah salah satu penyebab utama outage dan kerentanan.",
+    "evidence": ["Change Request Records", "Change Approval Logs", "Post-Implementation Reviews"],
+    "sp80053": ["CM-02", "CM-03", "CM-04", "CM-05", "CM-09"]
   },
   {
     "id": "PR.IP-03",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6"
-    ]
+    "title": "Konfigurasi baseline dikelola",
+    "description": "Organisasi menetapkan dan mengelola konfigurasi baseline untuk semua sistem. Baseline dievaluasi terhadap standar keamanan dan diverifikasi secara berkala untuk mendeteksi drift.",
+    "panda_explanation": "Configuration drift dapat menciptakan kerentanan yang tidak terdeteksi - monitoring baseline sangat penting.",
+    "evidence": ["Baseline Configuration Standards", "Compliance Scan Results", "Drift Detection Reports"],
+    "sp80053": ["CM-06", "CM-07", "CM-08"]
   },
   {
     "id": "PR.IP-04",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6"
-    ]
+    "title": "Backup dan recovery dilakukan",
+    "description": "Organisasi melakukan backup data dan system state secara berkala sesuai dengan RTO dan RPO yang ditetapkan. Backup diuji secara regular untuk memastikan bisa di-restore dengan sukses.",
+    "panda_explanation": "Backup yang tidak diuji adalah backup yang tidak bisa diandalkan saat dibutuhkan.",
+    "evidence": ["Backup Logs", "Restore Test Results", "Backup Verification Reports"],
+    "sp80053": ["CP-09", "CP-10"]
   },
   {
     "id": "PR.IP-05",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6"
-    ]
+    "title": "Media dikontrol",
+    "description": "Organisasi mengontrol penggunaan dan disposal media penyimpanan yang mengandung data sensitif. Kontrol mencakup secure handling, sanitization, dan destruction procedures sesuai dengan data classification.",
+    "panda_explanation": "Media yang tidak dikontrol dengan baik dapat menjadi vector untuk data breach.",
+    "evidence": ["Media Handling Policy", "Sanitization Records", "Disposal Certificates"],
+    "sp80053": ["MP-01", "MP-02", "MP-03", "MP-04", "MP-05", "MP-06", "MP-07", "MP-08"]
   },
   {
     "id": "PR.IP-06",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6"
-    ]
+    "title": "Data dan asset diproteksi sepanjang lifecycle",
+    "description": "Organisasi menerapkan kontrol keamanan yang konsisten sepanjang data dan asset lifecycle, dari creation hingga destruction. Setiap fase memiliki requirements keamanan yang sesuai.",
+    "panda_explanation": "Proteksi yang konsisten dari awal hingga akhir mencegah gap dalam perlindungan data.",
+    "evidence": ["Data Lifecycle Management Policy", "Retention Schedules", "Disposal Procedures"],
+    "sp80053": ["MP-02", "MP-03", "MP-04", "MP-06"]
   },
   {
     "id": "PR.IP-07",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6"
-    ]
+    "title": "Insiden ditangani sesuai prosedur",
+    "description": "Organisasi memiliki dan menerapkan prosedur respons insiden yang terstruktur. Prosedur mencakup containment, eradication, recovery, dan lessons learned untuk setiap fase incident lifecycle.",
+    "panda_explanation": "Insiden yang tidak ditangani dengan benar dapat meningkatkan dampak secara signifikan.",
+    "evidence": ["Incident Response Plan", "Incident Handling Logs", "Post-Incident Reports"],
+    "sp80053": ["IR-01", "IR-02", "IR-03", "IR-04", "IR-05", "IR-06", "IR-07", "IR-08", "IR-09", "IR-10"]
   },
   {
     "id": "PR.IP-08",
     "function": "PROTECT",
     "category": "Information Protection Processes and Procedures (PR.IP)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6"
-    ]
+    "title": "Keamanan dalam decommissioning terjaga",
+    "description": "Organisasi menerapkan prosedur keamanan yang tepat saat decommissioning sistem atau komponen. Prosedur mencakup data sanitization, access removal, dan verification sebelum retirement.",
+    "panda_explanation": "Decommissioning yang tidak aman dapat meninggalkan data sensitif yang dapat diambil oleh pihak tidak berwenang.",
+    "evidence": ["Decommissioning Checklist", "Data Sanitization Records", "Access Removal Verification"],
+    "sp80053": ["CM-08", "MP-06", "SR-04"]
+  },
+  {
+    "id": "PR.IP-09",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Prosedur respons insiden ditest secara berkala",
+    "description": "Organisasi secara berkala menguji prosedur respons insiden melalui tabletop exercises dan functional exercises. Testing mengidentifikasi kelemahan dalam prosedur dan meningkatkan readiness tim.",
+    "panda_explanation": "Tim yang tidak pernah latihan akan struggle saat real incident terjadi.",
+    "evidence": ["Exercise Reports", "Tabletop Exercise Records", "Improvement Action Items"],
+    "sp80053": ["IR-03", "CP-03", "CP-04"]
+  },
+  {
+    "id": "PR.IP-10",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Prosedur pencarian dan evaluasi kerentanan diikuti",
+    "description": "Organisasi mengikuti prosedur sistematis untuk mengidentifikasi, mengategorikan, dan memprioritaskan kerentanan. Prosedur mencakup scanning, assessment, dan remediation tracking.",
+    "panda_explanation": "Kerentanan yang tidak ditemukan adalah kerentanan yang tidak bisa dimitigasi.",
+    "evidence": ["Vulnerability Scan Reports", "Remediation Tracking", "Risk Acceptance Documentation"],
+    "sp80053": ["RA-03", "RA-04", "RA-05", "SI-02", "SI-03"]
+  },
+  {
+    "id": "PR.PI-01",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "Boot integrity terjaga",
+    "description": "Organisasi memastikan integritas boot process melalui secure boot, measured boot, atau mekanisme serupa. Proteksi ini mencegah boot dari komponen yang tidak trusted atau telah dimodifikasi.",
+    "panda_explanation": "Boot integrity memastikan bahwa sistem memulai dari state yang trusted.",
+    "evidence": ["Secure Boot Configuration", "TPM Status Logs", "Boot Measurement Records"],
+    "sp80053": ["SC-03", "SC-51", "SI-07"]
+  },
+  {
+    "id": "PR.PI-02",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "Software integrity diverifikasi",
+    "description": "Organisasi memverifikasi integritas software sebelum execution melalui digital signatures, checksums, atau mekanisme cryptographic. Verifikasi memastikan software tidak dimodifikasi atau compromised.",
+    "panda_explanation": "Software yang tidak terverifikasi bisa jadi malware atau telah di-tamper.",
+    "evidence": ["Code Signing Policy", "Integrity Verification Logs", "Application Whitelisting"],
+    "sp80053": ["CM-11", "SC-03", "SC-13", "SI-07"]
+  },
+  {
+    "id": "PR.PI-03",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "Integrity of hardware dimonitor",
+    "description": "Organisasi memonitor integritas hardware untuk mendeteksi tampering atau unauthorized modifications. Monitoring mencakup firmware verification dan detection terhadap malicious hardware components.",
+    "panda_explanation": "Hardware compromise sangat sulit dideteksi tapi bisa sangat devastating.",
+    "evidence": ["Hardware Integrity Monitoring", "Firmware Verification Logs", "Supply Chain Verification"],
+    "sp80053": ["CM-08", "PE-06", "SI-07", "SR-04"]
   },
   {
     "id": "PR.IR-01",
     "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6"
-    ]
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Infrastruktur diklasifikasikan",
+    "description": "Organisasi mengklasifikasikan infrastruktur berdasarkan kritikalitas terhadap misi dan dampak dari outage. Klasifikasi mendasari prioritas proteksi dan recovery efforts.",
+    "panda_explanation": "Tidak semua infrastruktur sama kritikal - klasifikasi memungkinkan fokus pada yang paling penting.",
+    "evidence": ["Infrastructure Classification", "BIA Results", "Critical Asset Register"],
+    "sp80053": ["CP-02", "CP-06", "PE-09", "SC-06"]
   },
   {
     "id": "PR.IR-02",
     "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Infrastruktur dikonfigurasi secara resilient",
+    "description": "Organisasi mengkonfigurasi infrastruktur untuk meningkatkan resilience terhadap failure dan attack. Konfigurasi mencakup redundancy, failover mechanisms, dan protection against common failure modes.",
+    "panda_explanation": "Resilient architecture mencegah single point of failure yang dapat menyebabkan outage.",
+    "evidence": ["Redundancy Configuration", "Failover Test Records", "HA Architecture Documentation"],
+    "sp80053": ["CP-06", "CP-07", "CP-08", "SC-06", "SC-07"]
   },
   {
     "id": "PR.IR-03",
     "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
-  },
-  {
-    "id": "PR.IR-04",
-    "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
-  },
-  {
-    "id": "PR.IR-05",
-    "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
-  },
-  {
-    "id": "PR.IR-06",
-    "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
-  },
-  {
-    "id": "PR.IR-07",
-    "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
-  },
-  {
-    "id": "PR.IR-08",
-    "function": "PROTECT",
-    "category": "Incident Response Lifecycle (PR.IR)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
-  },
-  {
-    "id": "PR.PT-01",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
-  },
-  {
-    "id": "PR.PT-02",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
-  },
-  {
-    "id": "PR.PT-03",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6",
-      "PM-7"
-    ]
-  },
-  {
-    "id": "PR.PT-04",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6",
-      "RA-7"
-    ]
-  },
-  {
-    "id": "PR.PT-05",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6",
-      "SA-7"
-    ]
-  },
-  {
-    "id": "PR.PT-06",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6",
-      "SC-7"
-    ]
-  },
-  {
-    "id": "PR.PT-07",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6",
-      "SI-7"
-    ]
-  },
-  {
-    "id": "PR.PT-08",
-    "function": "PROTECT",
-    "category": "Platform Security (PR.PT)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Availability dimonitoring dan diproteksi",
+    "description": "Organisasi memonitor availability infrastruktur dan menerapkan kontrol untuk mencegah dan merespons gangguan. Monitoring mencakup uptime tracking, performance monitoring, dan alerting.",
+    "panda_explanation": "Availability monitoring mendeteksi masalah sebelum menjadi outage yang signifikan.",
+    "evidence": ["Uptime Reports", "Monitoring Dashboards", "Alert Response Logs"],
+    "sp80053": ["CP-06", "CP-07", "IR-04", "IR-06", "SC-06"]
   },
   {
     "id": "DE.CM-01",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
+    "title": "Jaringan dimonitor",
+    "description": "Organisasi secara continuous memonitor traffic jaringan untuk mendeteksi anomali, unauthorized connections, dan aktivitas mencurigakan. Monitoring mencakup both internal dan external network traffic.",
+    "panda_explanation": "Jaringan adalah highway untuk data dan attack - visibility di network level sangat critical.",
+    "evidence": ["Network Monitoring Logs", "IDS/IPS Alerts", "NetFlow Analysis"],
+    "sp80053": ["AC-17", "AC-18", "CA-07", "SC-07", "SC-35", "SI-04"]
   },
   {
     "id": "DE.CM-02",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
+    "title": "Aktivitas pengguna dimonitor",
+    "description": "Organisasi memonitor aktivitas pengguna untuk mendeteksi perilaku anomali atau unauthorized yang mungkin mengindikasikan compromised accounts atau insider threats.",
+    "panda_explanation": "User behavior analytics dapat mendeteksi threat yang evade traditional security controls.",
+    "evidence": ["UEBA Reports", "Privileged User Monitoring", "Access Anomaly Alerts"],
+    "sp80053": ["AC-02", "AC-06", "AC-07", "AU-02", "AU-06", "AU-07"]
   },
   {
     "id": "DE.CM-03",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
+    "title": "Event keamanan dari host dimonitor",
+    "description": "Organisasi memonitor event keamanan dari endpoint devices dan servers. Monitoring mencakup antivirus alerts, firewall logs, dan system integrity events.",
+    "panda_explanation": "Endpoint adalah battlefield utama - visibility di endpoint sangat krusial untuk deteksi.",
+    "evidence": ["EDR Alerts", "Endpoint Logs", "HIDS/HIPS Logs"],
+    "sp80053": ["AC-02", "AC-06", "AU-02", "AU-06", "SI-03", "SI-04"]
   },
   {
     "id": "DE.CM-04",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
+    "title": "Aktivitas malicious code dimonitor",
+    "description": "Organisasi memonitor indikator dan aktivitas malicious code melalui antivirus, EDR, dan other security tools. Monitoring mencakup both known dan unknown malware patterns.",
+    "panda_explanation": "Malware adalah vector attack yang paling umum - deteksi yang efektif adalah keharusan.",
+    "evidence": ["Malware Detection Logs", "Sandbox Reports", "YARA Rule Matches"],
+    "sp80053": ["SC-03", "SC-07", "SC-44", "SI-03", "SI-04", "SI-05"]
   },
   {
     "id": "DE.CM-05",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
+    "title": "Aktivitas pada jaringan wireless dimonitor",
+    "description": "Organisasi memonitor aktivitas pada wireless networks untuk mendeteksi unauthorized access points, rogue devices, dan wireless-based attacks.",
+    "panda_explanation": "Wireless networks memiliki footprint yang lebih besar dan lebih sulit dikontrol.",
+    "evidence": ["Wireless Monitoring Logs", "Rogue AP Detection", "Wireless IDS Alerts"],
+    "sp80053": ["AC-18", "CA-07", "SC-07", "SC-35"]
   },
   {
     "id": "DE.CM-06",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
+    "title": "Kerentanan dimonitor",
+    "description": "Organisasi secara continuous memonitor kerentanan melalui scanning, assessment, dan threat intelligence. Monitoring memungkinkan identifikasi kerentanan baru yang muncul.",
+    "panda_explanation": "Kerentanan baru discovered setiap hari - continuous monitoring adalah keharusan.",
+    "evidence": ["Vulnerability Scan Reports", "Patch Status Reports", "Threat Intel Feeds"],
+    "sp80053": ["RA-03", "RA-04", "RA-05", "SI-02", "SI-03"]
   },
   {
     "id": "DE.CM-07",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
+    "title": "Aktivitas unauthorized mobile code dimonitor",
+    "description": "Organisasi memonitor untuk mendeteksi execution dari unauthorized mobile code yang bisa menjadi vector untuk malicious software.",
+    "panda_explanation": "Mobile code dari sumber tidak dikenal adalah risiko yang sering diabaikan.",
+    "evidence": ["Mobile Code Detection Logs", "Application Whitelisting Alerts", "Execution Policy Violations"],
+    "sp80053": ["SC-44", "SI-03", "SI-05"]
   },
   {
     "id": "DE.CM-08",
     "function": "DETECT",
     "category": "Continuous Monitoring (DE.CM)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
+    "title": "Detection activities dimonitor",
+    "description": "Organisasi memonitor efektivitas detection mechanisms untuk memastikan kontinuitas visibility. Monitoring mencakup coverage analysis dan tuning terhadap detection rules.",
+    "panda_explanation": "Detection yang tidak dimonitor bisa miss events yang kritikal - Anda tidak tahu apa yang tidak Anda lihat.",
+    "evidence": ["Detection Coverage Reports", "False Positive Analysis", "Rule Effectiveness Metrics"],
+    "sp80053": ["CA-07", "SI-04"]
   },
   {
     "id": "DE.AE-01",
     "function": "DETECT",
     "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6",
-      "PM-7"
-    ]
+    "title": "Anomali dan events yang tidak diharapkan diidentifikasi",
+    "description": "Organisasi mengidentifikasi anomali dan events yang mengindikasikan potensi keamanan incident melalui analysis dari collected data dan threat intelligence.",
+    "panda_explanation": "Deteksi anomali yang accurate membutuhkan baseline yang baik dan understanding tentang normal behavior.",
+    "evidence": ["Anomaly Detection Reports", "SIEM Correlation Rules", "Behavioral Analysis Results"],
+    "sp80053": ["SI-04", "SI-05", "AU-06"]
   },
   {
     "id": "DE.AE-02",
     "function": "DETECT",
     "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6",
-      "RA-7"
-    ]
+    "title": "Aktivitas suspicios dianalisis",
+    "description": "Organisasi menganalisis events dan indicators yang dicurigai untuk menentukan apakah mereka merupakan true security incidents atau false positives.",
+    "panda_explanation": "False positive yang tinggi dapat menyebabkan alert fatigue dan miss real threats.",
+    "evidence": ["Incident Analysis Reports", "Forensic Analysis", "Triage Records"],
+    "sp80053": ["AU-06", "IR-04", "IR-05", "SI-03", "SI-04"]
   },
   {
     "id": "DE.AE-03",
     "function": "DETECT",
     "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6",
-      "SA-7"
-    ]
+    "title": "Korelasi analisis dilakukan",
+    "description": "Organisasi melakukan korelasi data dari berbagai sumber untuk membangun gambaran lengkap tentang aktivitas yang mungkin merupakan security incident.",
+    "panda_explanation": "Korelasi multi-source dapat reveal pola yang tidak terlihat dari single data source.",
+    "evidence": ["SIEM Correlation Alerts", "Cross-Tool Correlation Reports", "Timeline Analysis"],
+    "sp80053": ["AU-06", "IR-04", "IR-05", "SI-04"]
   },
   {
     "id": "DE.AE-04",
     "function": "DETECT",
     "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6",
-      "SC-7"
-    ]
+    "title": "Dampak potensial diestimasi",
+    "description": "Organisasi mengestimasi dampak potensial dari identified anomalies untuk menentukan severity dan appropriate response priority.",
+    "panda_explanation": "Impact estimation membantu memprioritaskan response dan allocation of resources.",
+    "evidence": ["Impact Assessment Reports", "Severity Classification", "Business Impact Estimation"],
+    "sp80053": ["CP-02", "IR-04", "RA-02", "RA-03"]
   },
   {
     "id": "DE.AE-05",
     "function": "DETECT",
     "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6",
-      "SI-7"
-    ]
-  },
-  {
-    "id": "DE.AE-06",
-    "function": "DETECT",
-    "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
-  },
-  {
-    "id": "DE.AE-07",
-    "function": "DETECT",
-    "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
-  },
-  {
-    "id": "DE.AE-08",
-    "function": "DETECT",
-    "category": "Adverse Event Analysis (DE.AE)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
+    "title": "Awal incident diidentifikasi",
+    "description": "Organisasi menentukan earliest indicators dari incident untuk memahami timeline dan scope dari compromise. Analisis forensik dapat diperlukan untuk mengidentifikasi initial vector.",
+    "panda_explanation": "Mengetahui kapan incident mulai membantu menentukan scope dan dampak yang sebenarnya.",
+    "evidence": ["Forensic Analysis", "Log Timeline Reconstruction", "Root Cause Analysis"],
+    "sp80053": ["AU-06", "IR-04", "IR-05", "SI-04"]
   },
   {
     "id": "RS.MA-01",
     "function": "RESPOND",
     "category": "Incident Management (RS.MA)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
+    "title": "Insiden dilaporkan sesuai prosedur",
+    "description": "Organisasi melaporkan insiden keamanan sesuai dengan defined procedures yang mencakup escalation paths, notification requirements, dan documentation standards.",
+    "panda_explanation": "Reporting yang tepat memastikan insiden mendapat perhatian yang diperlukan dari awal.",
+    "evidence": ["Incident Reports", "Escalation Logs", "Notification Records"],
+    "sp80053": ["IR-06", "IR-07", "IR-08"]
   },
   {
     "id": "RS.MA-02",
     "function": "RESPOND",
     "category": "Incident Management (RS.MA)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
-  },
-  {
-    "id": "RS.MA-03",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
-  },
-  {
-    "id": "RS.MA-04",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
-  },
-  {
-    "id": "RS.MA-05",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
-  },
-  {
-    "id": "RS.MA-06",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
-  },
-  {
-    "id": "RS.MA-07",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6",
-      "PM-7"
-    ]
-  },
-  {
-    "id": "RS.MA-08",
-    "function": "RESPOND",
-    "category": "Incident Management (RS.MA)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6",
-      "RA-7"
-    ]
+    "title": "Insiden dipantau",
+    "description": "Organisasi memonitor insiden security yang sedang ditangani untuk memastikan visibility dan tracking terhadap progress. Monitoring memungkinkan resource allocation yang tepat.",
+    "panda_explanation": "Insiden tanpa monitoring bisa kehilangan momentum dan scope creep.",
+    "evidence": ["Incident Tracking System", "Status Update Logs", "Resource Allocation Records"],
+    "sp80053": ["IR-04", "IR-06", "IR-08"]
   },
   {
     "id": "RS.AN-01",
     "function": "RESPOND",
     "category": "Incident Analysis (RS.AN)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6",
-      "SA-7"
-    ]
+    "title": "Analisis insiden dilakukan",
+    "description": "Organisasi melakukan investigasi untuk memahami nature, scope, dan cause dari insiden. Analisis mendalam diperlukan untuk response yang efektif dan prevention di masa depan.",
+    "panda_explanation": "Understanding what happened adalah prerequisite untuk fixing dan preventing recurrence.",
+    "evidence": ["Incident Analysis Reports", "Forensic Evidence", "Root Cause Analysis"],
+    "sp80053": ["IR-04", "IR-05", "AU-06"]
   },
   {
     "id": "RS.AN-02",
     "function": "RESPOND",
     "category": "Incident Analysis (RS.AN)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6",
-      "SC-7"
-    ]
+    "title": "Korelasi insiden dieksekusi",
+    "description": "Organisasi mengkorelasikan insiden dengan data dari sumber lain untuk mengidentifikasi pola, determine scope, dan menentukan apakah insiden terkait merupakan bagian dari campaign yang lebih besar.",
+    "panda_explanation": "Correlation dapat reveal bahwa isolated incidents sebenarnya adalah bagian dari coordinated attack.",
+    "evidence": ["Correlation Analysis", "Threat Intel Integration", "Cross-Incident Analysis"],
+    "sp80053": ["IR-04", "IR-05", "SI-04"]
   },
   {
     "id": "RS.AN-03",
     "function": "RESPOND",
     "category": "Incident Analysis (RS.AN)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6",
-      "SI-7"
-    ]
-  },
-  {
-    "id": "RS.AN-04",
-    "function": "RESPOND",
-    "category": "Incident Analysis (RS.AN)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
-  },
-  {
-    "id": "RS.AN-05",
-    "function": "RESPOND",
-    "category": "Incident Analysis (RS.AN)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
-  },
-  {
-    "id": "RS.AN-06",
-    "function": "RESPOND",
-    "category": "Incident Analysis (RS.AN)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
-  },
-  {
-    "id": "RS.AN-07",
-    "function": "RESPOND",
-    "category": "Incident Analysis (RS.AN)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
-  },
-  {
-    "id": "RS.AN-08",
-    "function": "RESPOND",
-    "category": "Incident Analysis (RS.AN)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
+    "title": "Forensik dilakukan sesuai kebutuhan",
+    "description": "Organisasi melakukan forensics investigation sesuai kebutuhan untuk mengumpulkan evidence, determine root cause, dan mendukung potential legal proceedings.",
+    "panda_explanation": "Proper forensics dapat provide evidence yang diperlukan untuk prosecution atau insurance claims.",
+    "evidence": ["Forensic Reports", "Evidence Preservation Logs", "Chain of Custody Records"],
+    "sp80053": ["AU-06", "AU-07", "AU-11", "IR-04", "IR-05"]
   },
   {
     "id": "RS.CO-01",
     "function": "RESPOND",
     "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
+    "title": "Stakeholder diinformasikan sesuai prosedur",
+    "description": "Organisasi mengomunikasikan insiden kepada internal dan external stakeholders sesuai dengan defined procedures dan regulatory requirements. Komunikasi mencakup status updates berkala.",
+    "panda_explanation": "Komunikasi yang tepat mencegah misinformation dan memastikan coordinated response.",
+    "evidence": ["Notification Records", "Communication Templates", "Stakeholder Contact Lists"],
+    "sp80053": ["IR-06", "IR-07", "IR-08", "IR-09"]
   },
   {
     "id": "RS.CO-02",
     "function": "RESPOND",
     "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
+    "title": "Insiden dilaporkan ke authorities sesuai kebutuhan",
+    "description": "Organisasi melaporkan insiden ke relevant authorities (law enforcement, regulators, ISAC) sesuai kebutuhan dan dalam timeframe yang required.",
+    "panda_explanation": "有些 insiden memerlukan pelaporan regulasi dalam timeframe tertentu - ketahui requirements Anda.",
+    "evidence": ["Authority Notification Records", "Regulatory Filing", "Law Enforcement Reports"],
+    "sp80053": ["IR-06", "IR-07", "IR-08"]
   },
   {
     "id": "RS.CO-03",
     "function": "RESPOND",
     "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
-  },
-  {
-    "id": "RS.CO-04",
-    "function": "RESPOND",
-    "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
-  },
-  {
-    "id": "RS.CO-05",
-    "function": "RESPOND",
-    "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6",
-      "PM-7"
-    ]
-  },
-  {
-    "id": "RS.CO-06",
-    "function": "RESPOND",
-    "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6",
-      "RA-7"
-    ]
-  },
-  {
-    "id": "RS.CO-07",
-    "function": "RESPOND",
-    "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6",
-      "SA-7"
-    ]
-  },
-  {
-    "id": "RS.CO-08",
-    "function": "RESPOND",
-    "category": "Incident Response Reporting and Communication (RS.CO)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6",
-      "SC-7"
-    ]
+    "title": "Informasi ditukar sesuai prosedur",
+    "description": "Organisasi berbagi relevant incident information dengan appropriate parties sesuai dengan sharing agreements dan need-to-know principles.",
+    "panda_explanation": "Information sharing dapat membantu others defend against similar attacks.",
+    "evidence": ["ISAC Sharing Reports", "Industry Alerts", "Information Sharing Logs"],
+    "sp80053": ["IR-06", "IR-08", "PM-15"]
   },
   {
     "id": "RS.MI-01",
     "function": "RESPOND",
     "category": "Incident Mitigation (RS.MI)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6",
-      "SI-7"
-    ]
+    "title": "Insiden dimitigasi",
+    "description": "Organisasi menerapkan mitigation measures untuk membatasi scope dan dampak dari insiden security. Mitigation dilakukan segera setelah insiden diidentifikasi dan confirmed.",
+    "panda_explanation": "Fast mitigation dapat mencegah incident dari becoming a breach atau outage yang besar.",
+    "evidence": ["Mitigation Actions Taken", "Containment Records", "Impact Limitation Reports"],
+    "sp80053": ["IR-04", "IR-05", "IR-06"]
   },
   {
     "id": "RS.MI-02",
     "function": "RESPOND",
     "category": "Incident Mitigation (RS.MI)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
+    "title": "Mitigasi dimonitor untuk efektivitas",
+    "description": "Organisasi memonitor efektivitas dari mitigation measures dan adjust sesuai kebutuhan. Monitoring memastikan bahwa mitigasi berhasil reducing incident impact.",
+    "panda_explanation": "Mitigasi yang tidak efektif adalah waste of resources - monitor dan adjust sesuai kebutuhan.",
+    "evidence": ["Mitigation Effectiveness Reports", "Re-assessment Results", "Monitoring Logs"],
+    "sp80053": ["IR-04", "IR-06", "CA-07"]
   },
   {
-    "id": "RS.MI-03",
+    "id": "RS.RE-01",
     "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
+    "category": "Incident Recovery Plan Execution (RS.RE)",
+    "title": "Recovery plan dieksekusi",
+    "description": "Organisasi execute recovery plan sesuai procedures untuk restore affected systems dan operations ke operational state. Recovery dilakukan secara methodical untuk ensure integrity.",
+    "panda_explanation": "Recovery plan yang practiced dapat execute lebih cepat dan lebih effectively saat needed.",
+    "evidence": ["Recovery Execution Logs", "Recovery Progress Reports", "System Restoration Records"],
+    "sp80053": ["CP-07", "CP-10", "IR-04", "IR-07", "IR-10"]
   },
   {
-    "id": "RS.MI-04",
+    "id": "RS.RE-02",
     "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
-  },
-  {
-    "id": "RS.MI-05",
-    "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
-  },
-  {
-    "id": "RS.MI-06",
-    "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
-  },
-  {
-    "id": "RS.MI-07",
-    "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
-  },
-  {
-    "id": "RS.MI-08",
-    "function": "RESPOND",
-    "category": "Incident Mitigation (RS.MI)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
+    "category": "Incident Recovery Plan Execution (RS.RE)",
+    "title": "Recovery plan dimonitor untuk efektivitas",
+    "description": "Organisasi memonitor recovery progress dan efektivitas untuk memastikan timely restoration ke operational state yang accepted. Adjustments dibuat sesuai dengan lessons learned.",
+    "panda_explanation": "Monitoring recovery progress ensures timely restoration dan identifies issues early.",
+    "evidence": ["Recovery Status Reports", "RTO Achievement Metrics", "Recovery Issues Log"],
+    "sp80053": ["CP-07", "CP-10", "IR-04", "IR-07"]
   },
   {
     "id": "RC.RP-01",
     "function": "RECOVER",
     "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
-  },
-  {
-    "id": "RC.RP-02",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
-  },
-  {
-    "id": "RC.RP-03",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "CM-1",
-      "CP-2",
-      "IA-3",
-      "IR-4",
-      "PE-5",
-      "PL-6",
-      "PM-7"
-    ]
-  },
-  {
-    "id": "RC.RP-04",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "CP-1",
-      "IA-2",
-      "IR-3",
-      "PE-4",
-      "PL-5",
-      "PM-6",
-      "RA-7"
-    ]
-  },
-  {
-    "id": "RC.RP-05",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "IA-1",
-      "IR-2",
-      "PE-3",
-      "PL-4",
-      "PM-5",
-      "RA-6",
-      "SA-7"
-    ]
-  },
-  {
-    "id": "RC.RP-06",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "IR-1",
-      "PE-2",
-      "PL-3",
-      "PM-4",
-      "RA-5",
-      "SA-6",
-      "SC-7"
-    ]
-  },
-  {
-    "id": "RC.RP-07",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "PE-1",
-      "PL-2",
-      "PM-3",
-      "RA-4",
-      "SA-5",
-      "SC-6",
-      "SI-7"
-    ]
-  },
-  {
-    "id": "RC.RP-08",
-    "function": "RECOVER",
-    "category": "Incident Recovery Plan Execution (RC.RP)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "PL-1",
-      "PM-2",
-      "RA-3",
-      "SA-4",
-      "SC-5",
-      "SI-6",
-      "AC-7"
-    ]
+    "title": "Recovery plan dieksekusi setelah incident",
+    "description": "Organisasi execute formal recovery plan untuk mengembalikan sistem dan operations ke baseline functionality. Recovery plan dieksekusi secara coordinated dan prioritize critical functions.",
+    "panda_explanation": "Formal recovery plan ensures systematic restoration dengan minimal disruption.",
+    "evidence": ["Recovery Plan Documents", "Execution Logs", "Coordination Records"],
+    "sp80053": ["CP-07", "CP-10", "IR-04", "IR-07", "IR-10"]
   },
   {
     "id": "RC.CO-01",
     "function": "RECOVER",
     "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "PM-1",
-      "RA-2",
-      "SA-3",
-      "SC-4",
-      "SI-5",
-      "AC-6",
-      "AU-7"
-    ]
+    "title": "Pemangku kepentingan diinformasikan sepanjang recovery",
+    "description": "Organisasi mengomunikasikan recovery status kepada pemangku kepentingan secara regular dan transparan. Komunikasi mencakup progress updates, expected timelines, dan any changes.",
+    "panda_explanation": "Regular updates mantém stakeholder confidence dan memungkinkan mereka untuk make informed decisions.",
+    "evidence": ["Recovery Communication Records", "Status Update Templates", "Stakeholder Feedback"],
+    "sp80053": ["IR-06", "IR-07", "IR-08", "IR-09"]
   },
   {
     "id": "RC.CO-02",
     "function": "RECOVER",
     "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Kredensial dipertahankan secara proaktif",
-    "description": "Organisasi memastikan bahwa kredensial selalu dipertahankan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Prosedur harus dites berkala, jangan hanya ditulis dan lupakan dalam laci.",
-    "evidence": [
-      "Dashboard SIEM Aktif",
-      "Konfigurasi Firewall"
-    ],
-    "sp80053": [
-      "RA-1",
-      "SA-2",
-      "SC-3",
-      "SI-4",
-      "AC-5",
-      "AU-6",
-      "AT-7"
-    ]
+    "title": "Recovery divalidasi dengan pemangku kepentingan",
+    "description": "Organisasi memvalidasi dengan pemangku kepentingan bahwa recovery telah successful dan systems are operating at acceptable level. Validation ensures stakeholder acceptance of recovery outcomes.",
+    "panda_explanation": "Stakeholder validation prevents disputes about recovery completeness dan quality.",
+    "evidence": ["Validation Records", "Sign-off Documentation", "Acceptance Criteria"],
+    "sp80053": ["IR-04", "IR-06", "IR-07", "IR-10"]
   },
   {
-    "id": "RC.CO-03",
+    "id": "RC.IM-01",
     "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Perangkat lunak diselaraskan secara proaktif",
-    "description": "Organisasi memastikan bahwa perangkat lunak selalu diselaraskan berdasarkan analisis yang tepat.",
-    "panda_explanation": "Gunakan otomatisasi untuk mempercepat respon insiden siber pada sistem.",
-    "evidence": [
-      "Konfigurasi Firewall",
-      "Notulensi Rapat Direksi"
-    ],
-    "sp80053": [
-      "SA-1",
-      "SC-2",
-      "SI-3",
-      "AC-4",
-      "AU-5",
-      "AT-6",
-      "CM-7"
-    ]
+    "category": "Incident Recovery Plan Improvement (RC.IM)",
+    "title": "Lessons learned dikumpulkan setelah incident",
+    "description": "Organisasi conducts post-incident review untuk mengidentifikasi lessons learned, successful practices, dan areas for improvement. Review melibatkan semua relevant parties.",
+    "panda_explanation": "Lessons learned that are not captured will be forgotten and repeated.",
+    "evidence": ["Post-Incident Review Reports", "Lessons Learned Documentation", "Improvement Recommendations"],
+    "sp80053": ["IR-03", "IR-05", "IR-10", "CA-05"]
   },
   {
-    "id": "RC.CO-04",
+    "id": "RC.IM-02",
     "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Risiko bawaan dilindungi secara proaktif",
-    "description": "Organisasi memastikan bahwa risiko bawaan selalu dilindungi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Koordinasikan dengan dewan direksi untuk merancang selera risiko tingkat perusahaan.",
-    "evidence": [
-      "Notulensi Rapat Direksi",
-      "Dokumen Tata Kelola IT"
-    ],
-    "sp80053": [
-      "SC-1",
-      "SI-2",
-      "AC-3",
-      "AU-4",
-      "AT-5",
-      "CM-6",
-      "CP-7"
-    ]
-  },
-  {
-    "id": "RC.CO-05",
-    "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Data rahasia dievaluasi secara proaktif",
-    "description": "Organisasi memastikan bahwa data rahasia selalu dievaluasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Kelola vendor Anda seakan-akan mereka adalah sistem internal Anda, karena kerentanan mereka adalah kerentanan Anda.",
-    "evidence": [
-      "Dokumen Tata Kelola IT",
-      "Log Sistem Terpusat"
-    ],
-    "sp80053": [
-      "SI-1",
-      "AC-2",
-      "AU-3",
-      "AT-4",
-      "CM-5",
-      "CP-6",
-      "IA-7"
-    ]
-  },
-  {
-    "id": "RC.CO-06",
-    "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Aset fisik diidentifikasi secara proaktif",
-    "description": "Organisasi memastikan bahwa aset fisik selalu diidentifikasi berdasarkan analisis yang tepat.",
-    "panda_explanation": "Pastikan tim operasional memiliki visibilitas penuh atas aktivitas tidak wajar.",
-    "evidence": [
-      "Log Sistem Terpusat",
-      "Matriks Akses Pengguna"
-    ],
-    "sp80053": [
-      "AC-1",
-      "AU-2",
-      "AT-3",
-      "CM-4",
-      "CP-5",
-      "IA-6",
-      "IR-7"
-    ]
-  },
-  {
-    "id": "RC.CO-07",
-    "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Sistem informasi dikelola secara proaktif",
-    "description": "Organisasi memastikan bahwa sistem informasi selalu dikelola berdasarkan analisis yang tepat.",
-    "panda_explanation": "Beri hak akses seminimal mungkin. Jangan beri akses admin jika tidak diperlukan.",
-    "evidence": [
-      "Matriks Akses Pengguna",
-      "Laporan Penetrasi Tambahan"
-    ],
-    "sp80053": [
-      "AU-1",
-      "AT-2",
-      "CM-3",
-      "CP-4",
-      "IA-5",
-      "IR-6",
-      "PE-7"
-    ]
-  },
-  {
-    "id": "RC.CO-08",
-    "function": "RECOVER",
-    "category": "Incident Recovery Communication (RC.CO)",
-    "title": "Identitas dipantau secara proaktif",
-    "description": "Organisasi memastikan bahwa identitas selalu dipantau berdasarkan analisis yang tepat.",
-    "panda_explanation": "Enkripsi data sangat penting, gunakan algoritma modern yang disetujui industri.",
-    "evidence": [
-      "Laporan Penetrasi Tambahan",
-      "Dashboard SIEM Aktif"
-    ],
-    "sp80053": [
-      "AT-1",
-      "CM-2",
-      "CP-3",
-      "IA-4",
-      "IR-5",
-      "PE-6",
-      "PL-7"
-    ]
+    "category": "Incident Recovery Plan Improvement (RC.IM)",
+    "title": "Recovery plan dan procedures diperbarui",
+    "description": "Organisasi updates recovery plans dan procedures berdasarkan lessons learned dari incidents dan exercises. Updates ensures plans remain effective dan relevant.",
+    "panda_explanation": "Plans that are not updated become outdated and ineffective.",
+    "evidence": ["Updated Recovery Plans", "Change Control Records", "Version History"],
+    "sp80053": ["CP-02", "CP-03", "CP-04", "IR-03", "IR-10", "PM-10"]
   }
 ]

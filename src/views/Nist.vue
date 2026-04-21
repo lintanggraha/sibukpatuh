@@ -104,7 +104,7 @@
               <div class="nst-inspector-body">
                 <div class="nst-meta"><span>{{ activeControl ? getFunctionLabel(activeControl.function) : '-' }}</span><span>{{ activeControl ? activeControl.category : '-' }}</span><span>{{ activeControl ? (activeControl.sp80053 || []).length + ' referensi' : '0 referensi' }}</span></div>
                 <div class="nst-callout"><span class="nst-label">Deskripsi</span><div class="mt-2">{{ activeControl ? activeControl.description : 'Pilih subkategori untuk membaca deskripsi.' }}</div></div>
-                <div class="nst-note"><span class="nst-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeControl ? activeControl.analogy : '-' }}</div></div>
+                <div class="nst-note"><span class="nst-label"><i class="fas fa-lightbulb me-1"></i>Catatan Edukatif</span><div class="mt-2">{{ activeControl ? activeControl.panda_explanation : '-' }}</div></div>
                 <div class="nst-callout"><span class="nst-label"><i class="fas fa-bullseye me-1"></i>Fokus Implementasi</span><ul class="nst-plain"><li v-for="(item, idx) in (activeControl?.fokus || [])" :key="idx">{{ item }}</li><li v-if="!activeControl?.fokus?.length" class="text-muted">Tidak ada fokus implementasi tambahan.</li></ul></div>
                 <div class="nst-callout"><span class="nst-label">Contoh Bukti Audit</span><ul class="nst-plain"><li v-for="(item, idx) in (activeControl && activeControl.evidence && activeControl.evidence.length ? activeControl.evidence : ['Tidak ada contoh bukti audit.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="nst-callout"><span class="nst-label">Referensi SP 800-53</span><div class="nst-refs"><button v-for="ref in (activeControl?.sp80053 || [])" :key="ref" type="button" class="nst-ref" @click="jumpReference(ref)">{{ ref }}</button><span v-if="!activeControl || !activeControl.sp80053 || !activeControl.sp80053.length" class="nst-empty w-100">Belum ada referensi SP 800-53 yang ditautkan.</span></div></div>
@@ -198,12 +198,12 @@ export default {
       controls: [],
       sp800Controls: [],
       functionMeta: {
-        'GOVERN': { label: 'Tata Kelola', color: '#1d3557', icon: 'fa-sitemap', summary: 'Arah kebijakan, akuntabilitas, dan keputusan manajemen.' },
-        'IDENTIFY': { label: 'Identifikasi', color: '#2563eb', icon: 'fa-compass', summary: 'Aset, konteks bisnis, dan eksposur risiko.' },
-        'PROTECT': { label: 'Perlindungan', color: '#0f766e', icon: 'fa-shield-alt', summary: 'Safeguard operasional dan teknis yang berjalan konsisten.' },
-        'DETECT': { label: 'Deteksi', color: '#a16207', icon: 'fa-binoculars', summary: 'Pemantauan, deteksi anomali, dan eskalasi cepat.' },
-        'RESPOND': { label: 'Respons', color: '#b91c1c', icon: 'fa-bolt', summary: 'Koordinasi tindakan dan pengendalian dampak insiden.' },
-        'RECOVER': { label: 'Pemulihan', color: '#15803d', icon: 'fa-life-ring', summary: 'Pemulihan layanan dan kesinambungan operasi.' },
+        'GOVERN': { label: 'Tata Kelola', color: '#1d3557', icon: 'fa-sitemap', summary: 'MapanlanKerangka kerja keamanan siber, kebijakan, dan oversight organisasi untuk memastikan alinhamiento dengan tujuan bisnis.' },
+        'IDENTIFY': { label: 'Identifikasi', color: '#2563eb', icon: 'fa-compass', summary: 'Pengelolaan aset, penilaian risiko, dan pemahaman konteks bisnis serta rantai pasok.' },
+        'PROTECT': { label: 'Perlindungan', color: '#0f766e', icon: 'fa-shield-alt', summary: 'Implementasi safeguard teknis dan operasional untuk membatasi dan mengendalikan risiko.' },
+        'DETECT': { label: 'Deteksi', color: '#a16207', icon: 'fa-binoculars', summary: 'Monitoring berkelanjutan dan analisis untuk mengidentifikasi insiden keamanan siber.' },
+        'RESPOND': { label: 'Respons', color: '#b91c1c', icon: 'fa-bolt', summary: 'Penanganan, mitigasi, dan komunikasi insiden untuk membatasi dampak dan memulihkan operasi.' },
+        'RECOVER': { label: 'Pemulihan', color: '#15803d', icon: 'fa-life-ring', summary: 'Pemulihan sistem dan operasi ke kondisi normal serta peningkatan ketahanan.' },
       },
       functionFilter: '',
       categoryFilter: '',
