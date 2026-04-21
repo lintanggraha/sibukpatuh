@@ -20,7 +20,8 @@
       "Notulen atau memo persetujuan hasil penilaian oleh manajemen.",
       "Bukti penyampaian laporan ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Seperti perusahaan asuransi yang menentukan premi berdasarkan risiko, Bank juga harus 'menentukan tarif' risiko sibernya setiap tahun. Posisi akhir Desember ibaratfoto keluarga tahunan - semua berkumpul dan tersenyum untuk didokumentasikan sebagai patokan resmi."
   },
   {
     "id": "II.02",
@@ -43,7 +44,8 @@
       "Dokumen metodologi penilaian parameter.",
       "Profil risiko siber tahunan yang ditandatangani reviewer."
     ],
-    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber."
+    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber.",
+    "analogy": "Mengevaluasi risiko bank digital ibarat dokter melakukan check-up lengkap - bukan hanya mengecek satu organ, tapi empat komponen vital: teknologi (hardware tubuh), produk (layanan kesehatan), organisasi (gaya hidup), dan riwayat sakit (insiden lalu). Hasilnya menentukan 'kondisi kesehatan' risiko bank."
   },
   {
     "id": "III.01",
@@ -66,7 +68,8 @@
       "Pernyataan risk appetite dan risk tolerance siber.",
       "Program awareness dan pelatihan keamanan siber."
     ],
-    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas."
+    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas.",
+    "analogy": "Bayangkan kapal tanker yang membawa muatan jutaan dolar. Nahkoda (Direksi) tidak cukup hanya duduk di ruang kemudi - ia harus aktif melihat kondisi laut, mendengarkan laporan kru, dan menetapkan batas kecepatan berani ditolak. Begitu juga keamanan siber butuh 'nahkoda aktif' yang tidak sekadar duduk."
   },
   {
     "id": "III.02",
@@ -89,12 +92,13 @@
       "Kebijakan dan prosedur keamanan siber yang berlaku.",
       "Dokumen limit risiko dan eskalasi pelampauannya."
     ],
-    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber."
+    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber.",
+    "analogy": "Membangun kerangka manajemen risiko ibarat mendirikan bangunan - butuh blueprint (strategi), fondasi kuat (organisasi), dinding-dinding (kebijakan), pintu dan jendela (prosedur), serta alarm batas (limit risiko). Tanpa satu elemen saja, bangunan tidak aman dihuni."
   },
   {
     "id": "III.03",
     "chapter": "III",
-    "chapter_title": "Penerapan Manajemen Risiko",
+    "chapter_title": "Penerapan Manajemen Risika",
     "pillar": "Governance",
     "title": "Perkuat proses manajemen risiko, SDM, dan sistem informasi manajemen risiko",
     "summary": "Bank wajib memastikan proses manajemen risiko, kecukupan SDM, dan sistem informasi manajemen risiko mendukung pengelolaan keamanan siber.",
@@ -112,7 +116,8 @@
       "Dashboard atau laporan sistem informasi manajemen risiko.",
       "Risk register yang memasukkan risiko terkait keamanan siber."
     ],
-    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas."
+    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas.",
+    "analogy": "Tim sepak bola butuh tiga komponen untuk menang: strategi permainan (proses), pemain berkualitas (SDM), dan analis yang memberi data di pinggir lapangan (sistem informasi). Tanpa satu pun, tim akan kesulitan meraih kemenangan."
   },
   {
     "id": "III.04",
@@ -127,7 +132,7 @@
     "appendices": ["I.b", "II.b", "III.b"],
     "focus": [
       "Lakukan pengujian dan kaji ulang atas kontrol yang material.",
-      "Dokumentasikan temuan audit dan tindak lanjutnya secara lengkap.",
+      "Dokumentasikan temuan audit dan tindak lanjut hasilnya.",
       "Pantau penyelesaian kelemahan material sampai tuntas."
     ],
     "evidence": [
@@ -135,7 +140,8 @@
       "Register temuan dan tindak lanjut hasil audit.",
       "Laporan verifikasi perbaikan kelemahan material."
     ],
-    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber."
+    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber.",
+    "analogy": "Audit intern ibarat dokter family doctor yang rutin check-up kesehatan perusahaan. Bukan sekadar diagnose, tapi juga pastikan pasien minum obat yang diresepkan dan kontrol ulang sampai sembuh. Kelemahan yang ditemukan bukan aib, tapi peluang perbaikan."
   },
   {
     "id": "IV.01",
@@ -149,7 +155,7 @@
     "scoring": "Menjadi bagian dari kualitas penerapan proses ketahanan siber",
     "appendices": ["I.c", "II.c", "III.c"],
     "focus": [
-      "Inventarisasi perangkat keras, perangkat lunak, jaringan, dan infrastruktur disertai konfigurasi yang efektif.",
+      "Inventarisasi perangkat keras, perangkat lunak, jaringan, dan infrastruktur disertai konfigurasi.",
       "Pantau perkembangan ancaman siber terkini untuk memperbarui daftar kerentanan.",
       "Gunakan hasil identifikasi sebagai basis semua kontrol perlindungan."
     ],
@@ -158,7 +164,8 @@
       "Laporan vulnerability identification atau threat monitoring.",
       "Jadwal pengujian keamanan siber berkala."
     ],
-    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber."
+    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber.",
+    "analogy": "Sebelum berperang, jenderal yang baik pasti memetakan wilayah (aset), mengidentifikasi musuh (ancaman), dan mencari kelemahan armor sendiri (kerentanan). Tanpa intelligence ini, pasukan akan buta di medan perang digital."
   },
   {
     "id": "IV.02",
@@ -181,7 +188,8 @@
       "Catatan hardening, patching, dan maintenance kontrol.",
       "Dokumentasi pengelolaan keamanan data dan informasi."
     ],
-    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber."
+    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber.",
+    "analogy": "Protection ibarat membangun benteng dengan berbagai lapisan pertahanan - pagar, gerbang, penjaga, sensor, dan alarm. Tapi benteng tanpa perawatan akan roboh. Patching dan hardening adalah 'pengecatan' dan 'perbaikan' benteng agar tetap kokoh."
   },
   {
     "id": "IV.03",
@@ -204,7 +212,8 @@
       "Prosedur analisis dan eskalasi insiden.",
       "Log dan tiket penanganan alert keamanan."
     ],
-    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif."
+    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif.",
+    "analogy": "Deteksi ibarat alarm mobil yang sensitive terhadap getaran dan gerakan mencurigakan. Alarm yang terlalu sensitif bikin false alarm, terlalu lambat bikin maling kabur sebelum ketahuan. Keseimbangan yang tepat antara early warning dan akurasi adalah kuncinya."
   },
   {
     "id": "IV.04",
@@ -227,7 +236,8 @@
       "Matriks peran tim tanggap insiden siber.",
       "Laporan lesson learned pascainsiden."
     ],
-    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan."
+    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan.",
+    "analogy": "Pernah mengalami HP jatuh ke air? Yang pertama fokus matikan HP, keringkan, jangan coba nyalakan sembarangan. Baru kalau sudah kering coba hidupkan. Tim respons insiden ibarat SOP救出 HP: stop the bleeding (containment), stabilize (mitigation), recovery (pemulihan), dan analisis kenapa bisa jatuh (lesson learned)."
   },
   {
     "id": "V.01",
@@ -250,7 +260,8 @@
       "Ringkasan gap dan rencana perbaikan.",
       "Bukti pelaporan hasil penilaian ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Maturity assessment ibarat nilai rapor keamanan siber. Bukan sekadar angka, tapi cermin yang menunjukkan area mana yang perlu les tambahan. Tingkat 5 bukan berarti sempurna - justru harus terus dipertahankan dan dikembangkan agar tidak turun."
   },
   {
     "id": "V.02",
@@ -273,7 +284,8 @@
       "Daftar kontrol yang diuji terhadap Lampiran I.b.",
       "Berita acara review hasil penilaian."
     ],
-    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber."
+    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "Quality assessment ibarat inspeksi kendaraan sebelum digunakan untuk antar jemput penumpang. Bukan cuma cek mesin nyala atau nggak, tapi komponen rem, ban, lampu, sabuk pengaman, dll. Setiap komponen punya standar, dan ketidaksesuaian satu saja bisa menggugurkan status laik jalan."
   },
   {
     "id": "V.03",
@@ -296,7 +308,8 @@
       "Hasil walkthrough atau uji desain proses.",
       "Rencana aksi perbaikan atas proses yang lemah."
     ],
-    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber."
+    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "Empat proses ketahanan ibarat urutan layanan di rumah sakit emergency: triage (identifikasi), perawatan (proteksi), monitoring kondisi pasien (deteksi), dan operasi atau pemulihan (respons). Kalau satu proses lemah, keselamatan pasien risiko."
   },
   {
     "id": "V.04",
@@ -319,7 +332,8 @@
       "Ringkasan scoring justification.",
       "Peta level maturitas per area penilaian."
     ],
-    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI."
+    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI.",
+    "analogy": "Skala penilaian ibarat sistem belt di karate - dari putih ke hitam. Setiap level punya standar tertentu yang harus dipenuhi. Consistent grading memastikan semua pihak paham di level mana bank berada dan apa yang perlu dilakukan untuk naik level."
   },
   {
     "id": "VI.01",
@@ -342,7 +356,8 @@
       "Dokumen keputusan manajemen atas tingkat risiko akhir.",
       "Bukti pelaporan tingkat risiko ke OJK."
     ],
-    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan."
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Menentukan risiko akhir ibarat dokter menentukan kategori kesehatan pasien: kita punya kondisi fisik dasar (inheren) dan kemampuan ditangani rumah sakit (maturitas). Pasien dengan kondisi berat tapi ditangani RS canggih mungkin risikonya sedang. Sebaliknya, kondisi ringan tapi RS tidak mampu berisiko tinggi. Kombinasi keduanya yang menentukan."
   },
   {
     "id": "VII.01",
@@ -365,7 +380,8 @@
       "Jadwal pengujian per sistem atau layanan.",
       "Laporan hasil pengujian dan pengendalian aksesnya."
     ],
-    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber."
+    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber.",
+    "analogy": "Testing keamanan ibarat servispakai rutin mobil - rem, ban, mesin dicek berkala. Semakin sering dipakai (sistem kritikal), semakin sering diservis. Mobil yang tidak pernah diservis mungkin jalan lancar hari ini, tapi risiko breakdown di jalan meningkat drastis."
   },
   {
     "id": "VII.02",
@@ -388,7 +404,8 @@
       "Laporan penetration test beserta severity temuan.",
       "Rencana remediasi hasil uji."
     ],
-    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan."
+    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan.",
+    "analogy": "VA+PT ibarat tes kesehatan lengkap: pertama cek tekanan darah, kolesterol, gula darah (vulnerability scanning), lalu dokter coba masuk tanpa izin dengan berbagai cara untuk bukti ada celah (penetration test). Hasilnya bukan untuk menghukum, tapi untuk pengobatan yang tepat."
   },
   {
     "id": "VII.03",
@@ -411,7 +428,8 @@
       "After action report atau lesson learned.",
       "Rencana aksi hasil evaluasi exercise."
     ],
-    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank."
+    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank.",
+    "analogy": "Latihan kebakaran di gedung perkantoran - semua tahu alarmnya, tahu pintu darurat, tahu titik kumpul. Tapi latihan ini penting agar saat api sungguhan, tidak ada kepanikan. Evakuasi berjalan smooth karena sudah diasah berkali-kali. Incident response exercise melakukan hal yang sama, tapi untuk skenario siber."
   },
   {
     "id": "VIII.01",
@@ -434,7 +452,8 @@
       "SK pembentukan unit atau fungsi keamanan siber.",
       "Rencana kerja tahunan unit siber."
     ],
-    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber."
+    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber.",
+    "analogy": "Bank tanpa unit siber ibarat rumah tanpa satpam. Bukan berarti rumah tidak bisa ditinggal, tapi risikonya jauh lebih tinggi. Satpam profesional yang tahu tanggung jawabnya, punya jadwal kerja jelas, dan bisa koordinasi dengan lingkungan - itulah fungsi siber yang ideal."
   },
   {
     "id": "VIII.02",
@@ -457,6 +476,7 @@
       "Dokumen tim tanggap insiden siber dan agenda latihan rutin.",
       "Daftar kontak eskalasi lintas fungsi dan pihak ketiga."
     ],
-    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi."
+    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi.",
+    "analogy": "Independensi fungsi siber ibarat pemisahan fungsi wasit dan pelatih dalam olahraga. Kalau pelatih juga jadi wasit, akan ada conflict of interest. Fungsi keamanan harus bisa 'blow the whistle' tanpa takut dipecat atau dipindah. Dan tim tanggap insiden ibarat tim medis cadangan - harus siap dimunculkan kapan saja dengan equipment lengkap."
   }
 ]
