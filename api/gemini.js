@@ -1,10 +1,17 @@
 export default async function handler(req, res) {
+  console.log('GEMINI_API_KEY present:', !!process.env.GEMINI_API_KEY);
+  console.log('All env keys:', Object.keys(process.env).filter(k => k.includes('API') || k.includes('KEY')));
+  
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const apiKey = process.env.GEMINI_API_KEY;
+  console.log('Request body keys:', Object.keys(req.body));
+  console.log('GEMINI_API_KEY exists:', !!apiKey);
+  
   if (!apiKey) {
+    console.error('Missing API Key');
     return res.status(500).json({ error: 'GEMINI_API_KEY tidak dikonfigurasi di server.' });
   }
 
