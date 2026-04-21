@@ -558,7 +558,7 @@ export default {
         const label = new Date(event.timestamp * 1000).toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
         eventCountByDay[label] = (eventCountByDay[label] || 0) + 1;
       });
-      for (let i = 6; i >= 0; i--) {
+      for (let i = 4; i >= 0; i--) {
         const d = new Date(now);
         d.setDate(d.getDate() - i);
         const label = d.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' });
@@ -569,7 +569,7 @@ export default {
       this.chartSeries = [{ name: 'Events', data: data }];
       this.chartOptions = {
         chart: { type: 'bar', toolbar: { show: false }, zoom: { enabled: false }, fontFamily: 'Inter, sans-serif' },
-        colors: [({ value }) => value > avg ? '#ef4444' : '#3b82f6'],
+        colors: [('#fbbf24')],
         plotOptions: { bar: { borderRadius: 6, columnWidth: '60%', distributed: true } },
         xaxis: { categories: days, axisBorder: { show: false } },
         yaxis: { min: 0, forceNiceScale: true },
