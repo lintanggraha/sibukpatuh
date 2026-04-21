@@ -112,6 +112,7 @@ export default {
               icon: "fa-layer-group",
             },
             { routeName: "pbi", label: "PBI 02/2024", icon: "fa-university" },
+            { routeName: "pdp", label: "UU PDP No. 27/2022", icon: "fa-user-shield" },
           ],
         },
         {

@@ -55,6 +55,11 @@ const routes = [
         path: '/intel/intelligence-center',
         name: 'intelligence_center',
         component: () => import('../views/IntelligenceCenter.vue')
+    },
+    {
+        path: '/frameworks/uu-pdp-27-2022',
+        name: 'pdp',
+        component: () => import('../views/Pdp.vue')
     }
 ];
 

@@ -1,0 +1,621 @@
+[
+  {
+    "id": "I.01",
+    "chapter": "I",
+    "chapter_title": "Ketentuan Umum",
+    "pillar": "Reference",
+    "title": "Pahami definisi Data Pribadi",
+    "summary": "Data Pribadi adalah data tentang orang perseorangan yang teridentifikasi atau dapat diidentifikasi. Pelindungan Data Pribadi adalah keseluruhan upaya untuk melindungi Data Pribadi dalam rangkaian pemrosesan.",
+    "cadence": "Referensi foundational",
+    "owner": "Semua pihak yang terkait",
+    "scoring": "Pemahaman konseptual",
+    "appendices": [],
+    "focus": [
+      "Pahami perbedaan Data Pribadi dan Data Pribadi Spesifik",
+      "Kenali peran Pengendali dan Prosesor Data Pribadi",
+      "Pahami hak dan kewajiban Subjek Data Pribadi"
+    ],
+    "evidence": [
+      "Glossary internal organisasi",
+      "Materi pelatihan kesadaran PDP"
+    ],
+    "reporting": "Dasar pemahaman untuk seluruh implementasi UU PDP",
+    "analogy": "UU PDP ibarat aturan main dalam komunitas - sebelum bisa bermain dengan benar, semua orang perlu memahami definisi dasar. Data Pribadi itu ibarat 'identitas' kita di dunia digital. Tanpa definisi yang jelas, susah untuk menerapkan aturan."
+  },
+  {
+    "id": "II.01",
+    "chapter": "II",
+    "chapter_title": "Asas",
+    "pillar": "Reference",
+    "title": "Pahami asas pelindungan data pribadi",
+    "summary": "UU PDP berasaskan 8 asas: pelindungan, kepastian hukum, kepentingan umum, kemanfaatan, kehati-hatian, keseimbangan, pertanggungjawaban, dan kerahasiaan.",
+    "cadence": "Referensi foundational",
+    "owner": "Semua pihak yang terkait",
+    "scoring": "Pemahaman konseptual",
+    "appendices": [],
+    "focus": [
+      "Implementasi asas pelindungan dalam setiap aktivitas pemrosesan",
+      "Jamin kepastian hukum dalam setiap tindakan",
+      "Seimbangkan kepentingan bisnis dengan hak individu"
+    ],
+    "evidence": [
+      "Kebijakan PDP organisasi",
+      " SOP pemrosesan data"
+    ],
+    "reporting": "Dasar evaluasi kepatuhan seluruh aktivitas PDP",
+    "analogy": "Delapan asas ini ibarat bintangCompas navigasi - setiap perjalanan pemrosesan data harus selalu mengacu ke delapan arah ini. Tanpa kompas, kapal很容易 tersesat. Dengan asas yang jelas, setiap keputusan pemrosesan data punya arah yang terang."
+  },
+  {
+    "id": "III.01",
+    "chapter": "III",
+    "chapter_title": "Jenis Data Pribadi",
+    "pillar": "Classification",
+    "title": "Identifikasi Data Pribadi Spesifik",
+    "summary": "Data Pribadi spesifik meliputi: data kesehatan, biometrik, genetika, catatan kejahatan, data anak, dan data keuangan pribadi yang memerlukan perlindungan ekstra.",
+    "cadence": "Saat inventarisasi data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Klasifikasi data yang tepat",
+    "appendices": [],
+    "focus": [
+      "Inventarisasi dan klasifikasikan data sensitif",
+      "Terapkan kontrol lebih ketat untuk data spesifik",
+      "Dokumentasikan dasar pemrosesan untuk setiap kategori"
+    ],
+    "evidence": [
+      "Registrar Data Pribadi",
+      "Klasifikasi data dan label sensitivitas",
+      "Matriks kontrol per kategori data"
+    ],
+    "reporting": "Bagian dari laporan kepatuhan berkala",
+    "analogy": "Data spesifik ibarat barang berharga di brankas - perlu penanganan khusus dibanding barang biasa. Data kesehatan atau biometrik lebih sensitif dari nama lengkap, jadi butuh level perlindungan yang lebih tinggi. Seperti mengh treat berlian berbeda dari besi."
+  },
+  {
+    "id": "III.02",
+    "chapter": "III",
+    "chapter_title": "Jenis Data Pribadi",
+    "pillar": "Classification",
+    "title": "Identifikasi Data Pribadi Umum",
+    "summary": "Data Pribadi umum meliputi: nama lengkap, jenis kelamin, kewarganegaraan, agama, status perkawinan, dan data yang dikombinasikan untuk identifikasi.",
+    "cadence": "Saat inventarisasi data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Klasifikasi data yang tepat",
+    "appendices": [],
+    "focus": [
+      "Identifikasi data umum dalam sistem",
+      "Pahami bahwa kombinasi data umum bisa menjadi spesifik",
+      "Tetapkan kontrol dasar untuk data umum"
+    ],
+    "evidence": [
+      "Inventaris data pribadi umum",
+      "Dokumentasi kombinasi data"
+    ],
+    "reporting": "Bagian dari laporan kepatuhan berkala",
+    "analogy": "Data umum ibarat bahan bangunan dasar - sendiri mungkin tidak berbahaya, tapi dikombinasikan dengan yang lain bisa menjadi sesuatu yang powerful. Nomor HP + alamat email + nama lengkap bisa cukup untuk identifikasi unik. Perlu tetap waspada meski terlihat 'biasa'."
+  },
+  {
+    "id": "IV.01",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak informasi dan transparansi",
+    "summary": "Subjek Data Pribadi berhak mendapatkan informasi tentang kejelasan identitas peng问卷, dasar kepentingan hukum, tujuan penggunaan, dan akuntabilitas pihak yang meminta.",
+    "cadence": "Setiap kali permintaan data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas transparansi kepada subjek",
+    "appendices": [],
+    "focus": [
+      "Sediakan informasi yang jelas saat pengumpulan data",
+      "Jelaskan tujuan pemrosesan secara transparan",
+      "Dokumentasikan dasar legal pemrosesan"
+    ],
+    "evidence": [
+      "Kebijakan privasi yang accessible",
+      "Formulir persetujuan dengan informasi lengkap",
+      "Kontrak atau agreement pemrosesan"
+    ],
+    "reporting": "Audit trail transparansi",
+    "analogy": "Transparansi ibarat label nutrisi di makanan - konsumen berhak tahu apa yang mereka 'konsumsi'. Organisasi harus jujur tentang apa yang diambil, untuk apa, dan siapa yang mengakses. Tanpa label, trust tidak akan ada."
+  },
+  {
+    "id": "IV.02",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak koreksi dan pembaruan",
+    "summary": "Subjek Data Pribadi berhak melengkapi, memperbarui, dan memperbaiki kesalahan atau ketidakakuratan data dalam 3x24 jam.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Respons time dan akurasi koreksi",
+    "appendices": [],
+    "focus": [
+      "Bangun mekanisme permintaan koreksi yang mudah",
+      "Verifikasi permintaan secara aman",
+      "Penuhi tenggat 3x24 jam"
+    ],
+    "evidence": [
+      "Prosedur permintaan koreksi",
+      "Log permintaan dan respons time",
+      "Bukti verifikasi subjek data"
+    ],
+    "reporting": "Metrics respons terhadap permintaan subjek",
+    "analogy": "Koreksi data ibarat service在手 kendaraan - kalau ada yang rusak atau aus, harus segera diperbaiki agar tetap berjalan baik. Data yang tidak akurat bisa menyebabkan keputusan yang salah, mirip seperti GPS yang menunjukkan lokasi salah."
+  },
+  {
+    "id": "IV.03",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak akses dan portabilitas",
+    "summary": "Subjek Data Pribadi berhak mendapatkan akses, salinan data, dan portabilitas data dalam format yang dapat dibaca sistem elektronik.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas layanan akses data",
+    "appendices": [],
+    "focus": [
+      "Sediakan mekanisme permintaan akses data",
+      "Berikan data dalam format yang berguna",
+      "Dokumentasikan semua akses yang diberikan"
+    ],
+    "evidence": [
+      "Portal self-service akses data",
+      "Log permintaan dan pemberian akses",
+      "Format export data"
+    ],
+    "reporting": "Statistik permintaan akses",
+    "analogy": "Akses data ibaratmutton ke safe deposit box - pemilik punya hak penuh masuk dan mengambil miliknya kapan saja. Bank tidak boleh menolak akses yang sah, tapi bisa memverifikasi identitas dulu. Data adalah 'milik' subjek, bukan organisasi."
+  },
+  {
+    "id": "IV.04",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak penghapusan dan pemusnahan",
+    "summary": "Subjek Data Pribadi berhak mengakhiri pemrosesan, menghapus, atau memusnahkan data pribadinya sesuai ketentuan peraturan perundang-undangan.",
+    "cadence": "Saat permintaan atau masa retensi berakhir",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Efektivitas penghapusan",
+    "appendices": [],
+    "focus": [
+      "Tetapkan jadwal retensi yang jelas",
+      "Buat prosedur penghapusan yang aman",
+      "Verifikasi penghapusan telah selesai"
+    ],
+    "evidence": [
+      "Kebijakan retensi data",
+      "Log penghapusan dan pemusnahan",
+      "Sertifikat destruição data"
+    ],
+    "reporting": "Audit penghapusan berkala",
+    "analogy": "Penghapusan data ibarat Shredder dokumen kantor - setelah tidak нужна lagi, harus dihancurkan dengan benar, bukan cuma dimasukkan ke trash. Ini mencegah 'identity theft' atau penyalahgunaan data yang sudah tidak relevan."
+  },
+  {
+    "id": "IV.05",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak penarikan persetujuan",
+    "summary": "Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan data yang telah diberikan. Penghentian dilakukan paling lambat 3x24 jam.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Responsiveness terhadap penarikan",
+    "appendices": [],
+    "focus": [
+      "Bikin mekanisme penarikan yang mudah",
+      "Hormati penarikan persetujuan tanpa syarat",
+      "Lakukan penghapusan terkait setelah penarikan"
+    ],
+    "evidence": [
+      "Prosedur penarikan persetujuan",
+      "Log penarikan dan konfirmasi",
+      "Tindakan lanjut penghapusan"
+    ],
+    "reporting": "Statistik penarikan persetujuan",
+    "analogy": "Penarikan persetujuan ibarat membatalkan langganan - sekali dibatalkan, perusahaan tidak boleh继续 mengirim email atau menggunakan data untuk tujuan tersebut. easy to withdraw itu penting untuk trust."
+  },
+  {
+    "id": "IV.06",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Wujudkan hak keberatan dan pembatasan",
+    "summary": "Subjek Data Pribadi berhak mengajukan keberatan atas keputusan otomatis dan menunda atau membatasi pemrosesan secara proporsional.",
+    "cadence": "Saat ada keputusan otomatis atau permintaan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Penanganan keberatan",
+    "appendices": [],
+    "focus": [
+      "Identifikasi sistem pengambilan keputusan otomatis",
+      "Bikin mekanisme keberatan yang jelas",
+      "Tinjau keputusan otomatis secara manual jika diperlukan"
+    ],
+    "evidence": [
+      "Kebijakan keputusan otomatis",
+      "Prosedur penanganan keberatan",
+      "Log review manual"
+    ],
+    "reporting": "Statistik keberatan dan penundaan",
+    "analogy": "Keberatan terhadap keputusan otomatis ibarat banding ke hakim setelah divonis AI - meskipun teknologi memutuskan, manusia tetap punya hak untuk minta tinjauan ulang. Keputusan mesin tidak boleh mutlak tanpa opsi banding."
+  },
+  {
+    "id": "V.01",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Patuhi prinsip pemrosesan yang sah",
+    "summary": "Pemrosesan data harus dilakukan secara terbatas, spesifik, sah hukum, transparan, sesuai tujuan, akurat, dan bertanggung jawab.",
+    "cadence": "Setiap aktivitas pemrosesan",
+    "owner": "Pengendali dan Prosesor Data Pribadi",
+    "scoring": "Kepatuhan terhadap prinsip",
+    "appendices": [],
+    "focus": [
+      "Pastikan ada dasar legal untuk setiap pemrosesan",
+      "Kumpulkan hanya data yang diperlukan",
+      "Dokumentasikan semua aktivitas pemrosesan"
+    ],
+    "evidence": [
+      "Basis legal pemrosesan terdokumentasi",
+      "DPIA untuk pemrosesan berisiko tinggi",
+      "Records of Processing Activities (RoPA)"
+    ],
+    "reporting": "RoPA dan audit kepatuhan",
+    "analogy": "Prinsip pemrosesan ibarat etika medis - pasien harus consent, dokter harus menjelaskan, dan hanya boleh melakukan tindakan yang perlu. Informed consent bukan sekadar tanda tangan, tapi pemahaman penuh tentang apa yang akan dilakukan."
+  },
+  {
+    "id": "V.02",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Kelola persetujuan dengan benar",
+    "summary": "Persetujuan harus eksplisit, informed, unambiguous, dan dapat ditarik kembali. Persetujuan tidak memenuhi syarat dinyatakan batal demi hukum.",
+    "cadence": "Saat pengumpulan data baru",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas mekanisme persetujuan",
+    "appendices": [],
+    "focus": [
+      "Desain consent yang jelas dan berbahasa sederhana",
+      "Pisahkan consent untuk tujuan berbeda",
+      "Sediakan easy withdrawal mechanism"
+    ],
+    "evidence": [
+      "Consent records yang valid",
+      "Audit consent trail",
+      "Prosedur withdrawal"
+    ],
+    "reporting": "Consent metrics dan audit",
+    "analogy": "Consent yang baik ibarat tanda tangan di kontrak yang jelas读完nya - bukanfine print yang tidak bisa dibaca. Kalau orang tidak benar-benar paham apa yang disetujui, consent itu bisa batal. Organisasi harus invest di clarity."
+  },
+  {
+    "id": "V.03",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Lindungi data anak dan kelompok rentan",
+    "summary": "Pemrosesan data anak dan penyandang disabilitas harus diselenggarakan secara khusus dengan persetujuan yang sesuai.",
+    "cadence": "Saat memproses data minor atau disabilitas",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Perlindungan khusus kelompok rentan",
+    "appendices": [],
+    "focus": [
+      "Verifikasi usia sebelum memproses data anak",
+      "Dapatkan persetujuan orang tua/wali",
+      "Terapkan akses terbatas untuk data sensitif"
+    ],
+    "evidence": [
+      "Kebijakan khusus anak",
+      "Verifikasi usia dan parental consent",
+      "Prosedur akses terbatas"
+    ],
+    "reporting": "Review berkala perlindungan kelompok rentan",
+    "analogy": "Perlindungan data anak ibarat aturan parental control di smartTV - orang tua harus aware dan approve konten yang anak konsumsi. Anak belum bisa memberikan consent penuh karena belum cukup umur untuk memahami implikasinya."
+  },
+  {
+    "id": "VI.01",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Miliki dasar pemrosesan yang sah",
+    "summary": "Pengendali Data Pribadi wajib memiliki dasar pemrosesan yang meliputi consent, perjanjian, hukum, kepentingan vital, tugas publik, atau kepentingan sah lainnya.",
+    "cadence": "Setiap aktivitas pemrosesan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan dasar pemrosesan",
+    "appendices": [],
+    "focus": [
+      "Identifikasi dan dokumentasikan dasar pemrosesan",
+      "Pilih dasar yang paling tepat untuk setiap aktivitas",
+      "Review berkala kelayakan dasar"
+    ],
+    "evidence": [
+      "Legal basis documentation",
+      "Matriks dasar pemrosesan per aktivitas",
+      "Review legal basis berkala"
+    ],
+    "reporting": "RoPA dengan legal basis",
+    "analogy": "Dasar pemrosesan ibarat 'alasan masuk' di resepsionis - tidak bisa masuk tanpa alasan yang jelas. Konsumen, kontrak, hukum, atau kepentingan vital - salah satu harus ada. Tanpa ini, pemrosesan tidak sah."
+  },
+  {
+    "id": "VI.02",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Lakukan penilaian dampak PDP",
+    "summary": "Pengendali Data Pribadi wajib melakukan penilaian dampak (DPIA) ketika pemrosesan memiliki potensi risiko tinggi terhadap subjek data.",
+    "cadence": "Sebelum pemrosesan berisiko tinggi baru",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas DPIA",
+    "appendices": [],
+    "focus": [
+      "Identifikasi pemrosesan yang memerlukan DPIA",
+      "Lakukan assessment risiko komprehensif",
+      "Implementasikan mitigation yang diperlukan"
+    ],
+    "evidence": [
+      "DPIA documents",
+      "Risk assessment reports",
+      "Mitigation action plans"
+    ],
+    "reporting": "DPIA register dan hasil review",
+    "analogy": "DPIA ibarat environmental impact assessment sebelum pembangunan - tidak bisa sembarangan mulai proyek yang bisa berdampak besar. Risiko tinggi = perlu study lebih dalam sebelum proceed."
+  },
+  {
+    "id": "VI.03",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Lindungi keamanan data pribadi",
+    "summary": "Pengendali Data Pribadi wajib melindungi data dengan langkah teknis operasional dan menentukan tingkat keamanan sesuai risiko data.",
+    "cadence": "Berkesinambungan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecukupan kontrol keamanan",
+    "appendices": [],
+    "focus": [
+      "Terapkan enkripsi dan access control",
+      "Lakukan monitoring dan deteksi ancaman",
+      "Tetapkan security baseline sesuai risk level"
+    ],
+    "evidence": [
+      "Security policies dan procedures",
+      "Encryption implementation",
+      "Access control lists dan logs"
+    ],
+    "reporting": "Security audit dan incident reports",
+    "analogy": "Keamanan data ibarat brankas bank - bukan satu kunci, tapi multiple layers. Digital vault butuh enkripsi sebagai baja, access control sebagai kuncinya, dan monitoring sebagai CCTV. Tingkat keamanan harus sesuai dengan isi brankas."
+  },
+  {
+    "id": "VI.04",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Perekam seluruh kegiatan pemrosesan",
+    "summary": "Pengendali Data Pribadi wajib merekam seluruh kegiatan pemrosesan untuk audit trail dan accountability.",
+    "cadence": "Berkesinambungan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan records",
+    "appendices": [],
+    "focus": [
+      "Implementasikan logging yang komprehensif",
+      "Simpan logs dengan secure storage",
+      "Pastikan traceability dari collection ke deletion"
+    ],
+    "evidence": [
+      "Processing records (RoPA)",
+      "Audit logs",
+      "Access and modification logs"
+    ],
+    "reporting": "RoPA dan compliance audit",
+    "analogy": "Recording pemrosesan ibarat CCTV di toko - bukan untuk mengawasi semua orang, tapi untuk bisa trace jika terjadi masalah. Dengan records, bisa buktikan apa yang happened dan who did what."
+  },
+  {
+    "id": "VI.05",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Notifikasi pelanggaran data",
+    "summary": "Dalam hal kegagalan perlindungan data, Pengendali wajib memberitahu subjek data dan lembaga dalam 3x24 jam.",
+    "cadence": "Saat terjadi breach",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecepatan dan kualitas respons",
+    "appendices": [],
+    "focus": [
+      "Bangun incident response plan",
+      "Definisikan escalation dan notification procedures",
+      "Latih tim untuk respons cepat"
+    ],
+    "evidence": [
+      "Incident response plan",
+      "Breach notification records",
+      "Communication templates"
+    ],
+    "reporting": "Incident logs dan breach notifications",
+    "analogy": "Notifikasi breach ibarat darurat medis - kalau ada yang terluka, harus segera ada yang tahu dan bisa bantu. Delay bisa fatal. Same with data breach - subjek perlu tahu secepat mungkin agar bisa ambil langkah perlindungan diri."
+  },
+  {
+    "id": "VI.06",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Tunjuk DPO/petugas PDP",
+    "summary": "Pengendali Data Pribadi wajib menunjuk pejabat atau petugas PDP dalam kondisi tertentu seperti pelayanan publik atau pemrosesan skala besar.",
+    "cadence": "Sesuai kebutuhan organisasi",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecukupan struktur governance",
+    "appendices": [],
+    "focus": [
+      "Evaluasi kebutuhan penunjukan DPO",
+      "Pilih kandidat dengan kualifikasi yang tepat",
+      "Berikan independensi dan resources yang cukup"
+    ],
+    "evidence": [
+      "SK penunjukan DPO/petugas PDP",
+      "Job description dan scope",
+      "Training records"
+    ],
+    "reporting": "Organizational structure dan responsibilities",
+    "analogy": "DPO ibarat compliance officer di perusahaan - seseorang yang tugasnya memastikan semua berjalan sesuai aturan. Ia butuh akses ke manajemen, independence, dan tidak bisa diintervensi. Tanpa ini, compliance jadi jendela."
+  },
+  {
+    "id": "VII.01",
+    "chapter": "VII",
+    "chapter_title": "Transfer Data Pribadi",
+    "pillar": "Transfer",
+    "title": "Kelola transfer data dalam negeri",
+    "summary": "Transfer data dalam wilayah Indonesia wajib dilakukan dengan perlindungan PDP yang sesuai UU. Kedua belah pihak bertanggung jawab.",
+    "cadence": "Saat ada transfer antar organisasi",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan agreement",
+    "appendices": [],
+    "focus": [
+      "Dokumentasikan semua transfer data",
+      "Pastikan ada data processing agreement",
+      "Monitor kepatuhan penerima"
+    ],
+    "evidence": [
+      "Data transfer agreements",
+      "List of data recipients",
+      "Monitoring records"
+    ],
+    "reporting": "Transfer register",
+    "analogy": "Transfer data dalam negeri ibarat kirim paket lewat JNE - paket tetap dalam negeri, tapi masih butuh tanda terima dan bisa di-track. Tidak bisa asal kirim tanpa tahu data sampai di mana."
+  },
+  {
+    "id": "VII.02",
+    "chapter": "VII",
+    "chapter_title": "Transfer Data Pribadi",
+    "pillar": "Transfer",
+    "title": "Kelola transfer data keluar negeri",
+    "summary": "Transfer keluar Indonesia harus memastikan negara tujuan memiliki perlindungan setara atau lebih tinggi, atau ada safeguard yang memadai.",
+    "cadence": "Saat ada transfer lintas negara",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan assessment dan safeguards",
+    "appendices": [],
+    "focus": [
+      "Assess tingkat perlindungan negara tujuan",
+      "Implementasikan safeguard jika perlu",
+      "Dokumentasikan legal basis transfer"
+    ],
+    "evidence": [
+      "Country assessment",
+      "Safeguard agreements",
+      "Standard contractual clauses"
+    ],
+    "reporting": "Cross-border transfer register",
+    "analogy": "Transfer lintas batas ibarat kirim paket ke luar negeri - ada custom, aturan bea cukai, dan kalau negara tujuan kurang aman, butuh asuransi ekstra. Data yang meninggalkan Indonesia butuh perlindungan yang tidak boleh lebih rendah dari yang di dalam negeri."
+  },
+  {
+    "id": "VIII.01",
+    "chapter": "VIII",
+    "chapter_title": "Sanksi Administratif",
+    "pillar": "Sanction",
+    "title": "Pahami sanksi administratif",
+    "summary": "Pelanggaran ketentuan PDP dikenai sanksi administratif: peringatan tertulis, penghentian sementara, penghapusan/pemusnahan, dan/atau denda hingga 2% pendapatan tahunan.",
+    "cadence": "Referensi saat audit",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Awareness terhadap risiko sanksi",
+    "appendices": [],
+    "focus": [
+      "Pahami daftar pelanggaran dan sanksinya",
+      "Implementasikan compliance program",
+      "Lakukan self-assessment berkala"
+    ],
+    "evidence": [
+      "Compliance self-assessment",
+      "Remediation plans",
+      "Audit reports"
+    ],
+    "reporting": "Compliance status reports",
+    "analogy": "Sanksi administratif ibarat tilang lalu lintas - bukan pidana berat, tapi tetap dolorosa. Denda 2% dari revenue itu signifikan untuk perusahaan besar. Lebih baik patuhi dari pada kena sanksi."
+  },
+  {
+    "id": "IX.01",
+    "chapter": "IX",
+    "chapter_title": "Kelembagaan",
+    "pillar": "Governance",
+    "title": "Pahami peran lembaga PDP",
+    "summary": "Lembaga PDP yang ditunjuk oleh Presiden melaksanakan perumusan kebijakan, pengawasan, penegakan hukum administratif, dan fasilitasi penyelesaian sengketa.",
+    "cadence": "Referensi struktural",
+    "owner": "Semua pihak",
+    "scoring": "Pemahaman peran lembaga",
+    "appendices": [],
+    "focus": [
+      "Pahami wewenang lembaga pengawas",
+      "Siapkan diri untuk audit atau pemeriksaan",
+      "Manfaatkan mekanisme penyelesaian sengketa"
+    ],
+    "evidence": [
+      "Contact dengan lembaga",
+      "Prosedur penanganan aduan"
+    ],
+    "reporting": "Komunikasi dengan lembaga",
+    "analogy": "Lembaga PDP ibarat police khusus cyber - mereka yang jaga aturan main di dunia data. Mereka bisa auditi, tilang, bahkan Stop operasional jika melanggar. Sama seperti perusahaan wajib patuhi aturan kemenhub."
+  },
+  {
+    "id": "X.01",
+    "chapter": "X",
+    "chapter_title": "Penyelesaian Sengketa",
+    "pillar": "Resolution",
+    "title": "Pahami mekanisme penyelesaian sengketa",
+    "summary": "Penyelesaian sengketa PDP dapat melalui arbitrase, pengadilan, atau lembaga penyelesaian sengketa alternatif sesuai ketentuan perundang-undangan.",
+    "cadence": "Saat terjadi sengketa",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kesiapan penyelesaian",
+    "appendices": [],
+    "focus": [
+      "Pahami opsi penyelesaian yang tersedia",
+      "Siapkan dokumentasi untuk pembelaan",
+      "Consider alternative dispute resolution"
+    ],
+    "evidence": [
+      "Legal defense documentation",
+      "Communication records"
+    ],
+    "reporting": "Legal compliance reports",
+    "analogy": "Penyelesaian sengketa ibarat jalur hukum biasa - bisa lewat mediasi, arbitrase, atau pengadilan. Tapi sebaiknya konflik tidak usah sampai ke sana. Prevention is better than cure."
+  },
+  {
+    "id": "XII.01",
+    "chapter": "XII",
+    "chapter_title": "Ketentuan Pidana",
+    "pillar": "Criminal",
+    "title": "Pahami ketentuan pidana",
+    "summary": "Pelanggaran pidana PDP meliputi: memperoleh/mengumpulkan (5 tahun/Rp5M), mengungkapkan (4 tahun/Rp4M), menggunakan (5 tahun/Rp5M), memalsukan (6 tahun/Rp6M).",
+    "cadence": "Referensi risk awareness",
+    "owner": "Semua pihak",
+    "scoring": "Awareness terhadap risiko pidana",
+    "appendices": [],
+    "focus": [
+      "Eduukasi karyawan tentang ketentuan pidana",
+      "Implementasi kontrol untuk mencegah pelanggaran",
+      "Lakukan due diligence terhadap pihak ketiga"
+    ],
+    "evidence": [
+      "Training records",
+      "Due diligence documentation",
+      "Internal controls"
+    ],
+    "reporting": "Compliance and awareness reports",
+    "analogy": "Ketentuan pidana ibarat ultimatum - perusahaan bisa dapat denda, tapi individu bisa masuk penjara. Ini serius. Bukan cuma masalah uang, tapi bisa kehilangan kebebasan. Maka prevention harus ketat."
+  },
+  {
+    "id": "XIV.01",
+    "chapter": "XIV",
+    "chapter_title": "Ketentuan Peralihan",
+    "pillar": "Implementation",
+    "title": "Adaptasi terhadap UU PDP",
+    "summary": "Pengendali dan Prosesor Data Pribadi wajib menyesuaikan dengan UU PDP paling lama 2 tahun sejak diundangkan (Oktober 2022).",
+    "cadence": "October 2024 deadline",
+    "owner": "Semua pengendali dan prosesor",
+    "scoring": "Status implementasi compliance",
+    "appendices": [],
+    "focus": [
+      "Lakukan gap assessment",
+      "Susun roadmap kepatuhan",
+      "Implementasikan perubahan needed"
+    ],
+    "evidence": [
+      "Gap assessment report",
+      "Implementation roadmap",
+      "Compliance checklist"
+    ],
+    "reporting": "Progress reports ke manajemen",
+    "analogy": "Adaptasi UU PDP ibarat persiapan ujian - deadline October 2024 itu like 'batas waktu pengumpulan tugas'. Yang tidak submit akan kena sanksi. Semakin cepat подготовка, semakin ready."
+  }
+]
