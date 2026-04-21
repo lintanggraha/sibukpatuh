@@ -131,10 +131,17 @@
               <div class="sej-head"><h3>Sanksi Administratif</h3><span class="sej-chip">Pasal 57</span></div>
               <p class="sej-copy">Pelanggaran terhadap ketentuan tertentu dikenai sanksi administratif yang diberikan oleh lembaga.</p>
               <div class="sej-bars">
-                <button type="button" class="sej-bar"><span><strong>Peringatan Tertulis</strong><em>Sanksi pertama yang diberikan.</em></span><span class="sej-num">1</span></button>
-                <button type="button" class="sej-bar"><span><strong>Penghentian Sementara</strong><em>Penghentian aktivitas pemrosesan.</em></span><span class="sej-num">2</span></button>
-                <button type="button" class="sej-bar"><span><strong>Penghapusan/Pemusnahan</strong><em>Data wajib dihapus atau dimusnahkan.</em></span><span class="sej-num">3</span></button>
-                <button type="button" class="sej-bar"><span><strong>Denda Administratif</strong><em>Maksimal 2% pendapatan tahunan.</em></span><span class="sej-num">4</span></button>
+                <button type="button" class="sej-bar" :class="{ active: selectedSanction === 1 }" @click="selectedSanction = selectedSanction === 1 ? null : 1"><span><strong>Peringatan Tertulis</strong><em>Sanksi pertama yang diberikan.</em></span><span class="sej-num">1</span></button>
+                <button type="button" class="sej-bar" :class="{ active: selectedSanction === 2 }" @click="selectedSanction = selectedSanction === 2 ? null : 2"><span><strong>Penghentian Sementara</strong><em>Penghentian aktivitas pemrosesan.</em></span><span class="sej-num">2</span></button>
+                <button type="button" class="sej-bar" :class="{ active: selectedSanction === 3 }" @click="selectedSanction = selectedSanction === 3 ? null : 3"><span><strong>Penghapusan/Pemusnahan</strong><em>Data wajib dihapus atau dimusnahkan.</em></span><span class="sej-num">3</span></button>
+                <button type="button" class="sej-bar" :class="{ active: selectedSanction === 4 }" @click="selectedSanction = selectedSanction === 4 ? null : 4"><span><strong>Denda Administratif</strong><em>Maksimal 2% pendapatan tahunan.</em></span><span class="sej-num">4</span></button>
+              </div>
+              <div v-if="selectedSanction" class="sej-note mt-3">
+                <span class="sej-label">Detail Sanksi</span>
+                <div class="mt-2" v-if="selectedSanction === 1">Peringatan tertulis diberikan untuk pelanggaran pertama kali. Perusahaan wajib memperbaiki dalam waktu yang ditetapkan.</div>
+                <div class="mt-2" v-if="selectedSanction === 2">Penghentian sementara aktivitas pemrosesan data sampai pelanggaran diperbaiki atau selesai ditangani.</div>
+                <div class="mt-2" v-if="selectedSanction === 3">Data yang terkait pelanggaran wajib dihapus atau dimusnahkan sesuai prosedur.</div>
+                <div class="mt-2" v-if="selectedSanction === 4">Denda administratif maksimal 2% dari pendapatan tahunan. Dihitung berdasarkan variabel pelanggaran.</div>
               </div>
             </article>
           </div>
@@ -153,6 +160,7 @@ export default {
       error: null,
       activeTab: 'overview',
       requirements: [],
+      selectedSanction: null,
       pillarMeta: {
         'Reference': { label: 'Referensi', color: '#1d3557', icon: 'fa-book', summary: 'Definisi dan asas foundational UU PDP.' },
         'Classification': { label: 'Klasifikasi', color: '#2563eb', icon: 'fa-tags', summary: 'Jenis data spesifik dan umum.' },
