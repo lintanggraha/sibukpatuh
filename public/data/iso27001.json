@@ -455,7 +455,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Identifikasi business process kritis dan Maximum Tolerable Downtime. Buat BCP yang mencakup skenario worst-case. Lakukan tabletop exercise minimal setahun sekali untuk uji kesiapan.",
-    "analogy": "Seperti演习 kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis.",
+    "analogy": "Sepertilatihan kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis.",
     "focusArea": "Business Continuity"
   },
   {
@@ -1272,7 +1272,7 @@
       "Notulen rapat pengesahan oleh manajemen"
     ],
     "implementationTips": "Run vulnerability scan monthly untuk semua sistem. Prioritize remediation berdasarkan risk score. Patch critical vulnerability dalam 7 hari. Retest setelah patch untuk verify fix.",
-    "analogy": "Layaknya体检 kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi.",
+    "analogy": "Layaknyapemeriksaan kesehatan kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi.",
     "focusArea": "Vulnerability Management"
   },
   {

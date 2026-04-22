@@ -43,7 +43,7 @@
       " SOP pemrosesan data"
     ],
     "reporting": "Dasar evaluasi kepatuhan seluruh aktivitas PDP",
-    "analogy": "Delapan asas ini ibarat bintangCompas navigasi - setiap perjalanan pemrosesan data harus selalu mengacu ke delapan arah ini. Tanpa kompas, kapal很容易 tersesat. Dengan asas yang jelas, setiap keputusan pemrosesan data punya arah yang terang."
+    "analogy": "Delapan asas ini ibarat bintangCompas navigasi - setiap perjalanan pemrosesan data harus selalu mengacu ke delapan arah ini. Tanpa kompas, kapal tersesat. Dengan asas yang jelas, setiap keputusan pemrosesan data punya arah yang terang."
   },
   {
     "id": "III.01",
@@ -98,7 +98,7 @@
     "chapter_title": "Hak Subjek Data Pribadi",
     "pillar": "Rights",
     "title": "Wujudkan hak informasi dan transparansi",
-    "summary": "Subjek Data Pribadi berhak mendapatkan informasi tentang kejelasan identitas peng问卷, dasar kepentingan hukum, tujuan penggunaan, dan akuntabilitas pihak yang meminta.",
+    "summary": "Subjek Data Pribadi berhak mendapatkan informasi tentang kejelasan identitas peng, dasar kepentingan hukum, tujuan penggunaan, dan akuntabilitas pihak yang meminta.",
     "cadence": "Setiap kali permintaan data",
     "owner": "Pengendali Data Pribadi",
     "scoring": "Kualitas transparansi kepada subjek",
@@ -138,7 +138,7 @@
       "Bukti verifikasi subjek data"
     ],
     "reporting": "Metrics respons terhadap permintaan subjek",
-    "analogy": "Koreksi data ibarat service在手 kendaraan - kalau ada yang rusak atau aus, harus segera diperbaiki agar tetap berjalan baik. Data yang tidak akurat bisa menyebabkan keputusan yang salah, mirip seperti GPS yang menunjukkan lokasi salah."
+    "analogy": "Koreksi data ibarat servicetangan kendaraan - kalau ada yang rusak atau aus, harus segera diperbaiki agar tetap berjalan baik. Data yang tidak akurat bisa menyebabkan keputusan yang salah, mirip seperti GPS yang menunjukkan lokasi salah."
   },
   {
     "id": "IV.03",
@@ -210,7 +210,7 @@
       "Tindakan lanjut penghapusan"
     ],
     "reporting": "Statistik penarikan persetujuan",
-    "analogy": "Penarikan persetujuan ibarat membatalkan langganan - sekali dibatalkan, perusahaan tidak boleh继续 mengirim email atau menggunakan data untuk tujuan tersebut. easy to withdraw itu penting untuk trust."
+    "analogy": "Penarikan persetujuan ibarat membatalkan berhenti berhenti langganan - sekali dibatalkan, perusahaan tidak bolehterus mengirim email atau menggunakan data untuk tujuan tersebut. easy to withdraw itu penting untuk trust."
   },
   {
     "id": "IV.06",
@@ -282,7 +282,7 @@
       "Prosedur withdrawal"
     ],
     "reporting": "Consent metrics dan audit",
-    "analogy": "Consent yang baik ibarat tanda tangan di kontrak yang jelas读完nya - bukanfine print yang tidak bisa dibaca. Kalau orang tidak benar-benar paham apa yang disetujui, consent itu bisa batal. Organisasi harus invest di clarity."
+    "analogy": "Consent yang baik ibarat tanda tangan di kontrak yang jelasdibacanya - bukanrinci print yang tidak bisa dibaca. Kalau orang tidak benar-benar paham apa yang disetujui, consent itu bisa batal. Organisasi harus invest di clarity."
   },
   {
     "id": "V.03",

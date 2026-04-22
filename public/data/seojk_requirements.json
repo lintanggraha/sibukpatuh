@@ -9,7 +9,12 @@
     "cadence": "Tahunan pada posisi akhir Desember",
     "owner": "Risk management, unit siber, dan Direksi",
     "scoring": "Peringkat 1-5 (Low sampai High)",
-    "appendices": ["I.a", "II.a", "III.a", "V"],
+    "appendices": [
+      "I.a",
+      "II.a",
+      "III.a",
+      "V"
+    ],
     "focus": [
       "Gunakan posisi akhir Desember sebagai snapshot resmi profil risiko inheren.",
       "Perbarui penilaian saat ada perubahan signifikan pada profil risiko atau eksposur siber Bank.",
@@ -33,7 +38,10 @@
     "cadence": "Digunakan pada setiap siklus penilaian inheren",
     "owner": "Risk management dan unit siber",
     "scoring": "Parameter minimum dapat ditambah sesuai kompleksitas Bank",
-    "appendices": ["I.a", "II.a"],
+    "appendices": [
+      "I.a",
+      "II.a"
+    ],
     "focus": [
       "Gunakan parameter minimum dalam Lampiran I.a sebagai baseline penilaian.",
       "Tambahkan indikator lain bila karakteristik dan kompleksitas usaha Bank menuntut penilaian lebih detail.",
@@ -57,7 +65,11 @@
     "cadence": "Berjalan terus-menerus dan ditinjau berkala",
     "owner": "Direksi dan Dewan Komisaris",
     "scoring": "Kualitas penerapan dinilai dalam penilaian maturitas",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Jelaskan peran aktif pengurus dalam menetapkan arah kontrol siber.",
       "Dokumentasikan risk appetite dan risk tolerance terkait keamanan siber.",
@@ -81,7 +93,11 @@
     "cadence": "Ditinjau berkala sesuai perubahan organisasi dan TI",
     "owner": "Manajemen risiko dan unit siber",
     "scoring": "Kualitas penerapan dinilai menggunakan definisi peringkat Strong sampai Unsatisfactory",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Selaraskan strategi manajemen risiko siber dengan strategi bisnis dan TI Bank.",
       "Pastikan struktur organisasi mendukung pelaksanaan kontrol siber secara efektif.",
@@ -105,7 +121,11 @@
     "cadence": "Berjalan harian dan dievaluasi berkala",
     "owner": "Risk management, SDM, dan unit siber",
     "scoring": "Masuk ke penilaian kualitas penerapan manajemen risiko",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Pastikan kapasitas dan kompetensi SDM memadai untuk risiko siber yang dihadapi.",
       "Gunakan sistem informasi manajemen risiko untuk pelaporan dan monitoring eksposur.",
@@ -129,7 +149,11 @@
     "cadence": "Berkala dan berbasis tindak lanjut",
     "owner": "Internal control, audit intern, dan unit siber",
     "scoring": "Dinilai dalam kualitas penerapan manajemen risiko siber",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Lakukan pengujian dan kaji ulang atas kontrol yang material.",
       "Dokumentasikan temuan audit dan tindak lanjut hasilnya.",
@@ -153,7 +177,11 @@
     "cadence": "Berjalan terus-menerus dengan review berkala",
     "owner": "Unit siber dan pengelola aset TI",
     "scoring": "Menjadi bagian dari kualitas penerapan proses ketahanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Inventarisasi perangkat keras, perangkat lunak, jaringan, dan infrastruktur disertai konfigurasi.",
       "Pantau perkembangan ancaman siber terkini untuk memperbarui daftar kerentanan.",
@@ -177,7 +205,11 @@
     "cadence": "Berkala dan mengikuti hasil identifikasi terbaru",
     "owner": "Unit siber dan pengelola TI",
     "scoring": "Masuk ke penilaian kualitas penerapan proses ketahanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Gunakan security control yang relevan terhadap aset, ancaman, dan kerentanan yang telah diidentifikasi.",
       "Lakukan maintenance dan update kontrol keamanan secara terjadwal.",
@@ -201,7 +233,11 @@
     "cadence": "Berjalan terus-menerus",
     "owner": "SOC, unit siber, dan fungsi operasional terkait",
     "scoring": "Dinilai sebagai proses deteksi pada maturitas keamanan siber",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Bangun monitoring dan alerting untuk kejadian kritis dan penyalahgunaan.",
       "Pastikan proses analisis insiden mengarah ke eskalasi yang cepat.",
@@ -225,7 +261,11 @@
     "cadence": "Diaktifkan saat insiden dan diuji secara berkala",
     "owner": "Tim tanggap insiden siber dan manajemen krisis",
     "scoring": "Dinilai pada proses ketahanan siber dan pengujian skenario",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Tentukan peran dan tanggung jawab tim tanggap insiden siber.",
       "Pastikan prosedur pemulihan mencegah penyebaran dampak dengan waktu pemulihan yang tepat.",
@@ -237,7 +277,7 @@
       "Laporan lesson learned pascainsiden."
     ],
     "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan.",
-    "analogy": "Pernah mengalami HP jatuh ke air? Yang pertama fokus matikan HP, keringkan, jangan coba nyalakan sembarangan. Baru kalau sudah kering coba hidupkan. Tim respons insiden ibarat SOP救出 HP: stop the bleeding (containment), stabilize (mitigation), recovery (pemulihan), dan analisis kenapa bisa jatuh (lesson learned)."
+    "analogy": "Pernah mengalami HP jatuh ke air? Yang pertama fokus matikan HP, keringkan, jangan coba nyalakan sembarangan. Baru kalau sudah kering coba hidupkan. Tim respons insiden ibarat SOPselamatkan HP: stop the bleeding (containment), stabilize (mitigation), recovery (pemulihan), dan analisis kenapa bisa jatuh (lesson learned)."
   },
   {
     "id": "V.01",
@@ -249,7 +289,16 @@
     "cadence": "Tahunan pada posisi akhir Desember",
     "owner": "Unit siber, risk management, dan manajemen",
     "scoring": "Tingkat 1-5",
-    "appendices": ["I.b", "I.c", "II.b", "II.c", "III.b", "III.c", "III.d", "V"],
+    "appendices": [
+      "I.b",
+      "I.c",
+      "II.b",
+      "II.c",
+      "III.b",
+      "III.c",
+      "III.d",
+      "V"
+    ],
     "focus": [
       "Gunakan hasil penilaian untuk melihat kondisi keamanan siber Bank saat ini.",
       "Identifikasi area dengan kelemahan yang memerlukan perbaikan terukur.",
@@ -273,7 +322,11 @@
     "cadence": "Setiap siklus penilaian maturitas",
     "owner": "Risk management dan unit siber",
     "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
-    "appendices": ["I.b", "II.b", "III.b"],
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
     "focus": [
       "Gunakan kontrol pada Lampiran I.b sebagai dasar analisis kualitas penerapan.",
       "Dokumentasikan penilaian tiap aspek secara konsisten.",
@@ -297,7 +350,11 @@
     "cadence": "Setiap siklus penilaian maturitas",
     "owner": "Unit siber dan fungsi operasional keamanan",
     "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
-    "appendices": ["I.c", "II.c", "III.c"],
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
     "focus": [
       "Gunakan kontrol pada Lampiran I.c sebagai baseline penilaian proses.",
       "Nilai kualitas implementasi untuk keempat proses ketahanan secara konsisten.",
@@ -321,7 +378,11 @@
     "cadence": "Pada setiap penetapan hasil maturitas",
     "owner": "Unit siber dan reviewer penilaian",
     "scoring": "Strong sampai Unsatisfactory dan Level 1 sampai Level 5",
-    "appendices": ["III.b", "III.c", "III.d"],
+    "appendices": [
+      "III.b",
+      "III.c",
+      "III.d"
+    ],
     "focus": [
       "Gunakan definisi peringkat yang sama untuk menjaga konsistensi antarperiode.",
       "Pisahkan penilaian kualitas penerapan dan level maturitas akhir.",
@@ -345,7 +406,9 @@
     "cadence": "Tahunan setelah penilaian inheren dan maturitas selesai",
     "owner": "Risk management dan unit siber",
     "scoring": "Peringkat 1-5 (Low sampai High)",
-    "appendices": ["V"],
+    "appendices": [
+      "V"
+    ],
     "focus": [
       "Gabungkan hasil risiko inheren dan maturitas untuk memperoleh tingkat risiko akhir.",
       "Gunakan skala peringkat yang sama dari Low sampai High.",
