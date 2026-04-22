@@ -98,36 +98,46 @@ export default {
           accent: "#7c3aed",
           icon: "fa-layer-group",
         },
-        {
-          routeName: "pbi",
-          name: "PBI 02/2024",
-          subtitle: "Ringkasan KKS dan ketahanan siber BI",
-          summary: "Kewajiban KKS, pelaporan insiden, dan konteks pembacaan regulasi BI.",
-          metric_label: "Kewajiban",
-          metric_value: null,
-          accent: "#b91c1c",
-          icon: "fa-university",
-        },
-        {
-          routeName: "owasp_top10",
-          name: "OWASP Top 10 2025",
-          subtitle: "10 kerentanan aplikasi web paling kritis",
-          summary: "Eksplorasi kerentanan keamanan web, analogi penyerang, dan spesifikasi mitigasi pengembangan.",
-          metric_label: "Kerentanan",
-          metric_value: null,
-          accent: "#b91c1c",
-          icon: "fa-bug",
-        },
-        {
-          routeName: "owasp_asvs",
-          name: "OWASP ASVS 5.0.0",
-          subtitle: "Standar pengujian & verifikasi keamanan",
-          summary: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.",
-          metric_label: "Kategori Uji",
-          metric_value: null,
-          accent: "#1d4ed8",
-          icon: "fa-check-double",
-        },
+         {
+           routeName: "pbi",
+           name: "PBI 02/2024",
+           subtitle: "Ringkasan KKS dan ketahanan siber BI",
+           summary: "Kewajiban KKS, pelaporan insiden, dan konteks pembacaan regulasi BI.",
+           metric_label: "Kewajiban",
+           metric_value: null,
+           accent: "#b91c1c",
+           icon: "fa-university",
+         },
+         {
+           routeName: "padg",
+           name: "PADG 32/2025",
+           subtitle: "Pengaturan Industri Sistem Pembayaran",
+           summary: "Kewajiban penyelenggaraan sistem pembayaran, produk, inovasi, pricing, pengawasan, dan koordinasi.",
+           metric_label: "Kewajiban",
+           metric_value: null,
+           accent: "#0d9488",
+           icon: "fa-credit-card",
+         },
+         {
+           routeName: "owasp_top10",
+           name: "OWASP Top 10 2025",
+           subtitle: "10 kerentanan aplikasi web paling kritis",
+           summary: "Eksplorasi kerentanan keamanan web, analogi penyerang, dan spesifikasi mitigasi pengembangan.",
+           metric_label: "Kerentanan",
+           metric_value: null,
+           accent: "#b91c1c",
+           icon: "fa-bug",
+         },
+         {
+           routeName: "owasp_asvs",
+           name: "OWASP ASVS 5.0.0",
+           subtitle: "Standar pengujian & verifikasi keamanan",
+           summary: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.",
+           metric_label: "Kategori Uji",
+           metric_value: null,
+           accent: "#1d4ed8",
+           icon: "fa-check-double",
+         },
       ],
     };
   },
@@ -182,6 +192,7 @@ export default {
       seojkCount,
       resilienceCount,
       pbiCount,
+      padgCount,
       owaspTop10Count,
       owaspAsvsCount,
     ] = await Promise.all([
@@ -191,6 +202,7 @@ export default {
       loadData("/data/seojk_requirements.json"),
       loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
+      loadData("/data/padg_requirements.json"),
       loadData("/data/owasp_top10_reqs.json"),
       loadData("/data/owasp_asvs_reqs.json"),
     ]);
@@ -201,8 +213,9 @@ export default {
     this.frameworks[3].metric_value = seojkCount || 0;
     this.frameworks[4].metric_value = resilienceCount || 0;
     this.frameworks[5].metric_value = pbiCount || 0;
-    this.frameworks[6].metric_value = owaspTop10Count || 10;
-    this.frameworks[7].metric_value = owaspAsvsCount || 8;
+    this.frameworks[6].metric_value = padgCount || 0;
+    this.frameworks[7].metric_value = owaspTop10Count || 10;
+    this.frameworks[8].metric_value = owaspAsvsCount || 8;
   },
 };
 </script>

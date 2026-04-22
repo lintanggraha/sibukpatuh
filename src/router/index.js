@@ -32,6 +32,11 @@ const routes = [
         component: () => import('../views/Seojk.vue')
     },
     {
+        path: '/frameworks/padg-32-2025',
+        name: 'padg',
+        component: () => import('../views/Padg.vue')
+    },
+    {
         path: '/frameworks/panduan-resiliensi-ojk',
         name: 'resilience',
         component: () => import('../views/Resilience.vue')

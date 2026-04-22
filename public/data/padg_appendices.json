@@ -1,0 +1,152 @@
+[
+  {
+    "id": "I.a",
+    "title": "Definisi Kunci Pengaturan Industri Sistem Pembayaran",
+    "type": "Glosarium",
+    "scope": "Ketentuan Umum",
+    "summary": "Daftar definisi istilah yang digunakan dalam Peraturan Anggota Dewan Gubernur ini, termasuk Sistem Pembayaran, PSP, PJP, PIP, Sumber Dana, dan lainnya.",
+    "contains": [
+      "Sistem Pembayaran",
+      "Penyelenggara Jasa Sistem Pembayaran (PSP)",
+      "Penyedia Jasa Pembayaran (PJP)",
+      "Penyelenggara Infrastruktur Sistem Pembayaran (PIP)",
+      "Sumber Dana untuk Pembayaran",
+      "Layanan Keuangan Digital (LKD)",
+      "Self-Regulatory Organization (SRO)",
+      "TIKMI",
+      "Dana float"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "I.b",
+    "title": "Batas Nilai Uang Elektronik",
+    "type": "Parameter",
+    "scope": "Uang Elektronik",
+    "summary": "Batas nilai uang elektronik: unregistered max Rp2 juta (simpanan), Rp20 juta (transaksi/bulan); registered max Rp20 juta (simpanan), Rp40 juta (transaksi/bulan).",
+    "contains": [
+      "Uang elektronik unregistered: maksimal simpanan Rp2.000.000, transaksi bulanan Rp20.000.000",
+      "Uang elektronik registered: maksimal simpanan Rp20.000.000, transaksi bulanan Rp40.000.000",
+      "Transaksi incoming dihitung dalam batas transaksi",
+      "Pengecualian untuk akun Penyedia Barang dan Jasa"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "I.c",
+    "title": "Kewajiban Penempatan Dana Float",
+    "type": "Kewajiban",
+    "scope": "Uang Elektronik - Prudensial",
+    "summary": "PJP penerbit uang elektronik wajib menempatkan dana float: minimal 30% pada kas/giro bank KBMI 4, maksimal 70% pada surat berharga/CFI.",
+    "contains": [
+      "Bank KBMI 4: minimal 30% pada kas",
+      "Bank non-KBMI 4 dan LSB: minimal 30% pada giro bank KBMI 4",
+      "Maksimal 70% pada surat berharga Pemerintah/BI atau rekening BI",
+      "Pencatatan dana float pada pos kewajiban",
+      "Dana float adalahaset pengguna (dana titipan)"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "II.a",
+    "title": "Izin Penerbitan Uang Elektronik Closed Loop",
+    "type": "Kewajiban",
+    "scope": "Uang Elektronik Closed Loop",
+    "summary": "Penerbit uang elektronik closed loop dengan dana float >= Rp1 miliar wajib memiliki izin PJP. Manajemen risiko & pelindungan konsumen wajib.",
+    "contains": [
+      "Dana float >= Rp1.000.000.000 wajib izin PJP",
+      "Multiple closed loop: jumlah dana float dikumulasi",
+      "Penerapan manajemen risiko dan pelindungan konsumen wajib",
+      "BI berwenang melakukan pemeriksaan pada penerbit < Rp1 miliar",
+      "LSB dapat melanjutkan selama proses izin dengan pembatasan"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "II.b",
+    "title": "Penerbitan Layanan Keuangan Digital (LKD)",
+    "type": "Persyaratan",
+    "scope": "LKD",
+    "summary": "PJP penerbit uang elektronik dapat menjadi penyelenggara LKD melalui kerja sama dengan agen. Wajib dapatkan persetujuan BI.",
+    "contains": [
+      "Kerja sama dengan agen LKD (badan usaha Indonesia/individu)",
+      "Aspek: manajemen risiko, aset & permodalan, APU/PPT, sistem informasi, monitoring keluhan",
+      "Agen LKD harus memiliki kemampuan finansial dan lulus due diligence",
+      "PJP hanya dapat bekerja sama dengan agen yang memenuhi kriteria"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "III.a",
+    "title": "Standar Nasional Alat Pembayaran Menggunakan Kartu",
+    "type": "Standar",
+    "scope": "Alat Pembayaran Kartu",
+    "summary": "PJP yang memproses transaksi kartu wajib menggunakan standar nasional alat pembayaran menggunakan kartu yang ditetapkan Bank Indonesia.",
+    "contains": [
+      "Kewajiban penggunaan standar nasional",
+      "Tahapan implementing ditetapkan oleh BI",
+      "Meliputi kartu kredit, kartu debit, dan kartu ATM"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "IV.a",
+    "title": "Framework Uji Coba Inovasi (Regulatory Sandbox)",
+    "type": "Framework",
+    "scope": "Inovasi Teknologi Sistem Pembayaran",
+    "summary": "Kerangka uji coba inovasi: prinsip (criteria-based, transparansi, proporsionalitas, fairness, kesetaraan, forward looking), durasi maksimal 6+6 bulan, status hasil.",
+    "contains": [
+      "Prinsip: criteria-based process, transparansi, proporsionalitas, fairness, kesetaraan, forward looking",
+      "Durasi: maksimal 6 bulan, dapat diperpanjang 1x6 bulan",
+      "Sumber: permohonan PSP/pihak lain atau inisiatif BI",
+      "Pusat inovasi dapat dibentuk atau ditunjuk pihak lain",
+      "Status hasil uji coba: berhasil atau tidak berhasil",
+      "BI dapat menetapkan kebijakan tertentu selama uji coba"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "IV.b",
+    "title": "Persyaratan Laporan Uji Coba Inovasi",
+    "type": "Format",
+    "scope": "Inovasi Teknologi",
+    "summary": "Dokumen pendukung permohonan uji coba: profil peserta, data inovasi (fitur, manfaat, risiko), skenario uji coba, ruang lingkup, jangka waktu.",
+    "contains": [
+      "Profil seluruh calon peserta (entitas, narahubung)",
+      "Data inovasi: fitur produk, aktivitas, layanan, model bisnis, unsur inovasi, manfaat",
+      "Aspek manajemen risiko, keamanan informasi, APU/PPT, kesiapan infrastruktur",
+      "Usulan skenario uji coba",
+      "Ruang lingkup: batas jumlah pengguna, nominal transaksi, batas wilayah",
+      "Jangka waktu pelaksanaan"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "V.a",
+    "title": "Uang Elektronik Syariah",
+    "type": "Ketentuan Khusus",
+    "scope": "Uang Elektronik Syariah",
+    "summary": "Penyelenggaraan uang elektronik oleh bank/unit usaha/LSB syariah harus sesuai prinsip syariah. Penempatan dana float pada rekening giro unit usaha syariah bank KBMI 4.",
+    "contains": [
+      "Sesuai ketentuan PADG sepanjang tidak bertentangan dengan prinsip syariah",
+      "Penempatan dana float pada rekening giro unit usaha syariah bank KBMI 4",
+      "Atau bank syariah yang memiliki hubungan kepemilikan dengan bank KBMI 4",
+      "BI dapat menyesuaikan kebijakan penempatan dana float"
+    ],
+    "used_by": []
+  },
+  {
+    "id": "V.b",
+    "title": "Penerimaan dan Penanganan Keluhan",
+    "type": "Prosedur",
+    "scope": "Pengawasan Konsumen",
+    "summary": "Bank Indonesia dapat menerima dan menyampaikan keluhan konsumen terkait penyelenggaraan sistem pembayaran kepada PSP untuk ditindaklanjuti.",
+    "contains": [
+      "Keluhan konsumen dapat disampaikan ke BI",
+      "BI akan menyampaikan keluhan kepada PSP terkait",
+      "PSP wajib menindaklanjuti dan melaporkan",
+      "Batas waktu penanganan sesuai ketentuan yang berlaku"
+    ],
+    "used_by": []
+  }
+]
