@@ -62,7 +62,7 @@
       "Roadmap implementasi atau program kerja tahunan KKS.",
       "Mekanisme pelaporan status implementasi kepada manajemen."
     ],
-    "analogy": "Analogi untuk Strategi dan kebijakan KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
     "appendices": [
       "Pasal 8"
     ],
@@ -85,7 +85,7 @@
       "Rencana kebutuhan anggaran, kapasitas SDM, dan teknologi.",
       "Hasil review berkala terhadap capaian roadmap."
     ],
-    "analogy": "Analogi untuk Rencana strategis KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
     "appendices": [
       "Pasal 9"
     ],
@@ -108,7 +108,7 @@
       "Kontrol due diligence dan pengamanan pihak ketiga.",
       "Hasil review kebijakan dan pembaruan dokumen."
     ],
-    "analogy": "Analogi untuk Kebijakan, standar, dan prosedur KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
     "appendices": [
       "Pasal 10"
     ],
@@ -131,7 +131,7 @@
       "Piagam organisasi atau mandat fungsi KKS.",
       "Laporan berkala manajemen KKS kepada manajemen tertinggi."
     ],
-    "analogy": "Analogi untuk Fungsi organisasi dan manajemen KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya CEO yang menentukan arah perusahaan, tata kelola KKS menentukan arah penguatan keamanan siber.",
     "appendices": [
       "Pasal 11-13"
     ],
@@ -154,7 +154,7 @@
       "Hasil asesmen atau maturity assessment KKS.",
       "Rencana mitigasi dan status tindak lanjut risiko siber."
     ],
-    "analogy": "Analogi untuk Manajemen risiko siber dan pengukuran maturitas KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya SOP yang harus diikuti karyawan, standar KKS harus diikuti seluruh personel.",
     "appendices": [
       "Pasal 14-15"
     ],
@@ -177,7 +177,7 @@
       "Laporan hasil audit internal atau eksternal.",
       "Daftar temuan dan bukti penyelesaian tindak lanjut."
     ],
-    "analogy": "Analogi untuk Audit KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya CEO yang menentukan arah perusahaan, tata kelola KKS menentukan arah penguatan keamanan siber.",
     "appendices": [
       "Pasal 16-17"
     ],
@@ -200,7 +200,7 @@
       "Materi sosialisasi, pelatihan, atau kampanye kesadaran.",
       "Rekaman partisipasi dan evaluasi efektivitas program budaya."
     ],
-    "analogy": "Analogi untuk Budaya KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya olahraga yang jadi gaya hidup, budaya KKS harus jadi gaya hidup organisasi.",
     "appendices": [
       "Pasal 18"
     ],
@@ -223,7 +223,7 @@
       "Jadwal review berkala atas profil risiko siber.",
       "Pemetaan prioritas pengendalian berbasis hasil identifikasi."
     ],
-    "analogy": "Analogi untuk Penyusunan dan pengkinian profil risiko siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya疫苗 yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
     "appendices": [
       "Pasal 21"
     ],
@@ -246,7 +246,7 @@
       "Hasil penilaian risiko terhadap aset atau layanan kritikal.",
       "Daftar prioritas mitigasi dan penanggung jawabnya."
     ],
-    "analogy": "Analogi untuk Asesmen risiko siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya疫苗 yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
     "appendices": [
       "Pasal 23"
     ],
@@ -269,7 +269,7 @@
       "Daftar infrastruktur informasi vital.",
       "Dokumen prioritas pemulihan layanan kritikal."
     ],
-    "analogy": "Analogi untuk Analisis dampak bisnis dan identifikasi infrastruktur informasi vital: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya dokter yang meresepkan vitamin sebelum sakit, pencegahan KKS memperkuat imun organisasi sebelum serangan terjadi.",
     "appendices": [
       "Pasal 24-25"
     ],
@@ -292,7 +292,7 @@
       "Baseline konfigurasi keamanan dan hardening standard.",
       "Catatan implementasi endpoint security, patching, atau segmentasi jaringan."
     ],
-    "analogy": "Analogi untuk Pembangunan sistem pertahanan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya masker yang mencegah virus masuk, kontrol keamanan mencegah ancaman siber masuk.",
     "appendices": [
       "Pasal 27"
     ],
@@ -315,7 +315,7 @@
       "Kontrol enkripsi, backup, dan access control untuk data sensitif.",
       "Dokumen kepatuhan atau assessment atas pelindungan data pribadi."
     ],
-    "analogy": "Analogi untuk Pengamanan dan pelindungan data serta informasi: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya疫苗 yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
     "appendices": [
       "Pasal 28"
     ],
@@ -338,7 +338,7 @@
       "Definisi threshold alert dan aturan eskalasi.",
       "Hasil vulnerability scanning atau pemantauan kerentanan."
     ],
-    "analogy": "Analogi untuk Deteksi, pemantauan, dan sistem peringatan dini: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya sensor asap yang mendeteksi kebakaran dini, deteksi dini mendeteksi insiden sebelum meluas.",
     "appendices": [
       "Pasal 29-30"
     ],
@@ -361,7 +361,7 @@
       "Hasil malware analysis atau review unauthorized code.",
       "Bukti pemeliharaan tool deteksi dan hasil pengujiannya."
     ],
-    "analogy": "Analogi untuk Analisis hasil pemantauan dan pengujian sistem deteksi: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya radar yang mendeteksi pesawat musuh, sistem peringatan dini mendeteksi ancaman siber.",
     "appendices": [
       "Pasal 31-34"
     ],
@@ -384,7 +384,7 @@
       "Penetapan RTO dan RPO untuk layanan kritikal.",
       "Dokumen business continuity plan yang terintegrasi."
     ],
-    "analogy": "Analogi untuk Rencana penanganan dan pemulihan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
     "appendices": [
       "Pasal 37"
     ],
@@ -407,7 +407,7 @@
       "Berita acara, notulen, atau laporan hasil simulasi.",
       "Perbaikan rencana penanganan setelah evaluasi exercise."
     ],
-    "analogy": "Analogi untuk Simulasi, uji coba, dan evaluasi rencana penanganan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
     "appendices": [
       "Pasal 38-39"
     ],
@@ -431,7 +431,7 @@
       "Laporan forensik, kronologi insiden, dan bukti tindakan mitigasi."
     ],
     "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
-    "analogy": "Analogi untuk Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya tim pemadam kebakaran yang memadamkan api, tim insiden siber memadamkan serangan siber.",
     "appendices": [
       "Pasal 40"
     ]
@@ -454,7 +454,7 @@
       "Bukti penyampaian update penanganan ke regulator."
     ],
     "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan.",
-    "analogy": "Analogi untuk Komunikasi tindakan penanganan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya dokter emergency yang menangani pasien gawat darurat, tim insiden siber menangani krisis dengan cepat.",
     "appendices": [
       "Pasal 41"
     ]
@@ -476,7 +476,7 @@
       "Hasil uji failover atau aktivasi lokasi alternatif.",
       "Bukti pemulihan layanan berdasarkan prioritas kritikalitas."
     ],
-    "analogy": "Analogi untuk Pemulihan dan pengembalian layanan ke kondisi normal: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
     "appendices": [
       "Pasal 42-43"
     ],
@@ -500,7 +500,7 @@
       "Bukti komunikasi pemulihan kepada regulator dan pemangku kepentingan."
     ],
     "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan.",
-    "analogy": "Analogi untuk Perbaikan berkelanjutan dan komunikasi pemulihan: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya plan B yang siap digunakan saat plan A gagal, contingency plan memastikan pemulihan bisa dilakukan.",
     "appendices": [
       "Pasal 44-45"
     ]
@@ -523,7 +523,7 @@
       "Bukti tindak lanjut atas hasil pengawasan."
     ],
     "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan.",
-    "analogy": "Analogi untuk Mekanisme pengawasan Bank Indonesia: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya polisi yang patroli untuk jaga keamanan, pengawasan memastikan kepatuhan terhadap aturan.",
     "appendices": [
       "Pasal 47-52"
     ]
@@ -546,7 +546,7 @@
       "Bukti penyampaian laporan insidental dan tahunan ke Bank Indonesia."
     ],
     "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan.",
-    "analogy": "Analogi untuk Penyampaian data, informasi, dan laporan KKS: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya medical record pasien, data KKS harus dijaga kerahasiaannya.",
     "appendices": [
       "Pasal 54-55"
     ]
@@ -568,7 +568,7 @@
       "Bukti partisipasi pada forum atau sarana berbagi informasi.",
       "Ringkasan pembelajaran insiden yang dibagikan secara terkendali."
     ],
-    "analogy": "Analogi untuk Pertukaran informasi ancaman, kerentanan, dan insiden siber: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya arsip penting yang disimpan di brankas, informasi sensitif harus dilindungi.",
     "appendices": [
       "Pasal 57-58"
     ],
@@ -591,7 +591,7 @@
       "Partisipasi pada simulasi serangan siber sektor keuangan.",
       "Prosedur teknis atau standar operasional yang dirujuk dari SRO."
     ],
-    "analogy": "Analogi untuk Koordinasi pencegahan insiden dan kerja sama dengan SRO: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya check point di jalan tol, pengawasan memastikan hanya yang berhak yang lewat.",
     "appendices": [
       "Pasal 59-61"
     ],
@@ -614,7 +614,7 @@
       "Pemetaan kontrol KKS berdasarkan klasifikasi atau risk tier.",
       "Matriks pemenuhan terhadap ketentuan turunan yang relevan."
     ],
-    "analogy": "Analogi untuk Penerapan KKS sesuai klasifikasi penyelenggara: Bertindak sebagai panduan agar operasional tetap aman dan terukur.",
+    "analogy": "Layaknya backup system yang otomatis aktif saat utama gagal, backup plan memastikan kontinuitas operasional.",
     "appendices": [
       "Pasal 62"
     ],
