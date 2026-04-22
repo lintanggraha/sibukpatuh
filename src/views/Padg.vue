@@ -97,6 +97,7 @@
               <div class="padg-inspector-body">
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
                 <div class="padg-callout"><span class="padg-label">Ringkasan Kewajiban</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
+                <div v-if="activeRequirement?.analogy" class="padg-analogy"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement.analogy }}</div></div>
                 <div class="padg-note"><span class="padg-label"><i class="fas fa-book me-1"></i>Konteks regulasi</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.title + ' - ' + getChapterLabel(activeRequirement.chapter)) : '-' }}</div></div>
                 <!-- Simplified inspector - detailed focus/evidence/appendices to be populated -->
               </div>
@@ -460,6 +461,8 @@ export default {
 .padg-callout,.padg-note{padding:.76rem .84rem;border-radius:16px;border:1px solid var(--line);line-height:1.62}
 .padg-callout{background:rgba(255,255,255,.75)}
 .padg-note{background:rgba(238,245,245,.84)}
+.padog-analogy{padding:.76rem .84rem;border-radius:16px;border:1px solid rgba(194,120,45,.22);background:linear-gradient(135deg,rgba(255,251,235,.95) 0%,rgba(255,244,220,.95) 100%);line-height:1.62}
+.padog-analogy .padg-label{color:#92400e}
 .padg-plain{margin:.15rem 0 0;padding-left:1rem;color:var(--muted);font-size:.78rem;line-height:1.6}
 .padg-plain li{margin-bottom:.16rem}
 .padg-refs{display:flex;flex-wrap:wrap;gap:.4rem}
