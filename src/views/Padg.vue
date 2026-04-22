@@ -50,13 +50,7 @@
                 <button v-for="item in pillarBreakdown" :key="item.key" type="button" class="padg-bar" @click="jumpExplorer(item.key)"><span><strong>{{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="padg-track"><b :style="{ width: (item.count / maxPillarCount) * 100 + '%', background: item.color }"></b></span><span class="padg-num">{{ item.count }}</span></button>
               </div>
             </article>
-            <article class="padg-panel">
-              <div class="padg-head"><h3>Hotspot per bab</h3><span class="padg-chip">{{ totalChapters }} bab aktif</span></div>
-              <p class="padg-copy">Distribusi bab membantu melihat di mana regulasi paling banyak memberi arahan operasional: ketentuan umum, kerangka kerja, aktivitas & produk, tata kelola, maupun pengawasan.</p>
-              <div class="padg-hotspots">
-                <button v-for="item in chapterBreakdown" :key="item.key" type="button" class="padg-hotspot" @click="jumpExplorer('', item.key)"><span><strong>{{ item.key }}. {{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="padg-track"><b :style="{ width: (item.count / maxChapterCount) * 100 + '%', background: item.color }"></b></span><span class="padg-num">{{ item.count }}</span></button>
-              </div>
-            </article>
+            <!-- Removed: Hotspot per bab section - data incomplete -->
           </div>
           <div class="padg-grid two">
             <article class="padg-panel">
@@ -69,11 +63,9 @@
               <div class="padg-note">PADG 32/2025 menjadi peraturan pelaksanaan dari PBI 10/2025. Setiap PSP wajib menyelenggarakan sistem pembayaran sesuai dengan ketentuan PADG ini dan mematuhi kebijakan Bank Indonesia terkait.</div>
             </article>
             <article class="padg-panel">
-              <div class="padg-head"><h3>Peta lampiran</h3><span class="padg-chip">{{ totalAppendices }} referensi</span></div>
-              <p class="padg-copy">Lampiran dalam PADG berisi parameter, definisi, dan kerangka teknis yang menjadi pedoman penerapan. Klik jenis lampiran untuk melihat daftar referensi.</p>
-              <div class="padg-cards">
-                <button v-for="item in appendixTypeBreakdown" :key="item.type" type="button" class="padg-card" :style="{ '--accent': item.color }" @click="jumpAppendix('', item.type)"><div class="padg-card-top"><span class="padg-icon"><i class="fas fa-layer-group"></i></span><span>{{ item.count }} lampiran</span></div><strong>{{ item.type }}</strong><p>Lompat ke board lampiran dengan filter jenis ini.</p></button>
-              </div>
+              <div class="padg-head"><h3>Referensi lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
+              <p class="padg-copy">Daftar lampiran berisi definisi, parameter, dan kerangka teknis PADG. Pilih lampiran untuk melihat detail isi dan kewajiban terkait.</p>
+              <!-- Removed: Appendix type cards - appendix cross-references not yet mapped -->
             </article>
           </div>
         </div>
@@ -104,12 +96,9 @@
               <div class="padg-inspector-head"><small>Kewajiban Detail</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="padg-inspector-body">
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
-                <div class="padg-callout"><span class="padg-label">Ringkasan Kewajiban</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih kewajiban untuk membaca ringkasan.' }}</div></div>
-                <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Inti Implementasi</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence[0] : 'Tidak ada catatan khusus.') : '-' }}</div></div>
-                <div class="padg-callout"><span class="padg-label">Fokus Penerapan</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
-                <div class="padg-callout"><span class="padg-label">Contoh Evidence</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence.slice(1) : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
-                <div class="padg-callout"><span class="padg-label">Lampiran Terkait</span><div class="padg-refs"><button v-for="ref in (activeRequirement?.appendices || [])" :key="ref" type="button" class="padg-ref" @click="jumpAppendix(ref)">{{ ref }}</button><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="padg-empty w-100">Kewajiban ini tidak menunjuk lampiran spesifik.</span></div></div>
-                <div class="padg-note"><span class="padg-label">Pelaporan / Output</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.reporting || '-') : '-' }}</div></div>
+                <div class="padg-callout"><span class="padg-label">Ringkasan Kewajiban</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
+                <div class="padg-note"><span class="padg-label"><i class="fas fa-book me-1"></i>Konteks regulasi</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.title + ' - ' + getChapterLabel(activeRequirement.chapter)) : '-' }}</div></div>
+                <!-- Simplified inspector - detailed focus/evidence/appendices to be populated -->
               </div>
             </article>
           </div>
@@ -119,23 +108,13 @@
         <div v-if="activeTab === 'reference'" key="reference-tab">
           <div class="padg-refspace">
             <article class="padg-panel">
-              <div class="padg-head"><h3>Filter lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
-              <div class="padg-form">
-                <div><label for="appendixTypeFilter">Jenis Lampiran</label><select id="appendixTypeFilter" v-model="appendixTypeFilter" class="form-select"><option value="">Semua jenis</option><option v-for="item in appendixTypeBreakdown" :key="item.type" :value="item.type">{{ item.type }}</option></select></div>
-                <div><label for="appendixSearch">Cari lampiran</label><input id="appendixSearch" v-model="appendixSearch" type="search" class="form-control" placeholder="Cari ID, judul, jenis, atau scope"></div>
-                <button type="button" class="btn btn-outline-secondary" @click="resetAppendixFilters">Atur ulang filter</button>
-              </div>
-              <div class="padg-summary"><small>Lampiran Ditampilkan</small><strong>{{ filteredAppendices.length }}</strong><span>{{ filteredAppendices.length ? `Menampilkan ${filteredAppendices.length} lampiran PADG sesuai filter aktif.` : 'Tidak ada lampiran yang cocok dengan filter saat ini.' }}</span></div>
-              <div class="padg-families mt-3">
-                <button v-for="item in appendixTypeBreakdown" :key="item.type" type="button" class="padg-family" :class="{ active: appendixTypeFilter === item.type }" :style="{ '--accent': item.color }" @click="appendixTypeFilter = appendixTypeFilter === item.type ? '' : item.type"><span><strong>{{ item.type }}</strong><em>{{ item.count }} lampiran</em></span><span class="padg-num">{{ item.count }}</span></button>
-              </div>
-              <div class="padg-note mt-3"><span class="padg-label">Referensi Utama</span>Lampiran-lampiran ini menjadi panduan teknis dan parameter dalam implementasi PADG. Gunakan untuk memahami definisi, batasan, dan format laporan yang dibutuhkan.</div>
+              <div class="padg-head"><h3>Daftar lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
+              <p class="padg-copy">Daftar lampiran PADG berisi definisi, parameter, dan kerangka teknis untuk implementasi regulasi.</p>
             </article>
             <article class="padg-panel">
-              <div class="padg-head"><h3>Board lampiran</h3><span class="padg-chip">{{ filteredAppendices.length }} entri</span></div>
+              <div class="padg-head"><h3>Board lampiran</h3><span class="padg-chip">{{ appendices.length }} entri</span></div>
               <div class="padg-list">
-                <button v-for="app in filteredAppendices" :key="app.id" type="button" class="padg-item" @click="openAppendixModal(app)"><div class="padg-item-top"><span class="padg-item-code">{{ app.id }}</span><span class="padg-pill">{{ app.type }}</span></div><div class="padg-item-name">{{ app.title || '-' }}</div><div class="padg-item-meta"><span>{{ (app.used_by || []).length }} kewajiban</span></div></button>
-                <div v-if="filteredAppendices.length === 0" class="padg-empty">Tidak ada lampiran yang cocok dengan filter saat ini.</div>
+                <button v-for="app in appendices" :key="app.id" type="button" class="padg-item" @click="openAppendixModal(app)"><div class="padg-item-top"><span class="padg-item-code">{{ app.id }}</span><span class="padg-pill">{{ app.type }}</span></div><div class="padg-item-name">{{ app.title || '-' }}</div></button>
               </div>
             </article>
           </div>
@@ -273,8 +252,6 @@ export default {
       chapterFilter: '',
       requirementSearch: '',
       activeRequirementId: null,
-      appendixTypeFilter: '',
-      appendixSearch: '',
       showAppendixModal: false,
       selectedAppendix: null,
       reportingSla: 30,
@@ -299,32 +276,6 @@ export default {
         .filter(item => item.count > 0);
     },
     maxChapterCount() { return Math.max(...this.chapterBreakdown.map(c => c.count), 1); },
-    appendixTypeBreakdown() {
-      const grouped = this.appendices.reduce((acc, a) => {
-        if (!a.type) return acc;
-        if (!acc[a.type]) acc[a.type] = { type: a.type, count: 0, color: this.appendixTypePalette[a.type] || '#144e72' };
-        acc[a.type].count++;
-        return acc;
-      }, {});
-      return Object.values(grouped).sort((a, b) => b.count - a.count);
-    },
-    filteredRequirements() {
-      const query = (this.requirementSearch || '').trim().toLowerCase();
-      return this.requirements.filter(req => {
-        if (this.activePillar && req.pillar !== this.activePillar) return false;
-        if (this.chapterFilter && req.chapter !== this.chapterFilter) return false;
-        if (!query) return true;
-        return [req.id, req.title, req.summary, req.chapter_title, this.pillarMeta[req.pillar]?.label, ...(req.appendices || []), ...(req.focus || [])].join(' ').toLowerCase().includes(query);
-      });
-    },
-    filteredAppendices() {
-      const query = (this.appendixSearch || '').trim().toLowerCase();
-      return this.appendices.filter(a => {
-        if (this.appendixTypeFilter && a.type !== this.appendixTypeFilter) return false;
-        if (!query) return true;
-        return [a.id, a.type, a.title, a.scope].join(' ').toLowerCase().includes(query);
-      });
-    },
     activeRequirement() { return this.requirements.find(r => r.id === this.activeRequirementId) || null; },
   },
   methods: {
@@ -333,7 +284,6 @@ export default {
     getChapterLabel(c) { return (c || '-') + '. ' + (this.chapterMeta[c]?.label || ''); },
     togglePillar(p) { this.activePillar = this.activePillar === p ? '' : p; },
     resetRequirementFilters() { this.activePillar = ''; this.chapterFilter = ''; this.requirementSearch = ''; },
-    resetAppendixFilters() { this.appendixTypeFilter = ''; this.appendixSearch = ''; },
     setActiveRequirement(id) { this.activeRequirementId = id; },
     jumpExplorer(pillar = '', chapter = '') {
       this.activePillar = pillar || '';
@@ -341,8 +291,7 @@ export default {
       this.requirementSearch = '';
       this.activeTab = 'explorer';
     },
-    jumpAppendix(id = '', type = '') {
-      this.appendixTypeFilter = type || '';
+    jumpAppendix(id = '') {
       this.appendixSearch = id || '';
       this.activeTab = 'reference';
     },
