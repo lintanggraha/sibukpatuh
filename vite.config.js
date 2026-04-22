@@ -29,6 +29,10 @@ export default defineConfig(({ mode }) => {
         '/api/cisa': {
           target: 'http://localhost:3000',
           changeOrigin: true,
+        },
+        '/api/gemini': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
         }
       }
     },
