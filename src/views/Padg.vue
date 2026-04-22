@@ -277,6 +277,26 @@ export default {
     },
     maxChapterCount() { return Math.max(...this.chapterBreakdown.map(c => c.count), 1); },
     activeRequirement() { return this.requirements.find(r => r.id === this.activeRequirementId) || null; },
+    filteredRequirements() {
+      let result = this.requirements;
+      if (this.activePillar) {
+        result = result.filter(r => r.pillar === this.activePillar);
+      }
+      if (this.chapterFilter) {
+        result = result.filter(r => r.chapter === this.chapterFilter);
+      }
+      if (this.requirementSearch) {
+        const search = this.requirementSearch.toLowerCase();
+        result = result.filter(r => {
+          const id = (r.id || '').toLowerCase();
+          const title = (r.title || '').toLowerCase();
+          const summary = (r.summary || '').toLowerCase();
+          const appendices = (r.appendices || []).join(' ').toLowerCase();
+          return id.includes(search) || title.includes(search) || summary.includes(search) || appendices.includes(search);
+        });
+      }
+      return result;
+    },
   },
   methods: {
     getPillarColor(p) { return this.pillarMeta[p]?.color || '#144e72'; },
