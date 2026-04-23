@@ -33,11 +33,10 @@
         </div>
       </section>
 
-      <div class="padg-nav nav" role="tablist" style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div class="padg-nav nav" role="tablist">
         <button class="padg-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Regulasi</strong><span>Peta pilar, bab regulasi, dan elemen kewajiban inti.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter kewajiban, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>Lampiran & Referensi</strong><span>Board referensi lampiran, definisi, dan format.</span></span></button>
-        <button class="padg-tab" :class="{ active: activeTab === 'assessment' }" type="button" role="tab" @click="activeTab = 'assessment'"><i class="fas fa-clipboard-check"></i><span><strong>Asesmen Mandiri</strong><span>Alat ukur kesiapan dan gap analysis kepatuhan.</span></span></button>
       </div>
 
       <div class="tab-content padg-grid">
@@ -46,14 +45,27 @@
           <div class="padg-grid two">
             <article class="padg-panel">
               <div class="padg-head"><h3>Lanskap pilar regulasi</h3><span class="padg-chip">{{ pillarBreakdown.length }} pilar</span></div>
-              <p class="padg-copy">Pilar ini dipakai sebagai lensa kerja utama untuk membaca PADG: tata kelola, aktivitas, produk, manajemen risiko, skema harga, inovasi, pengawasan, dan pelaporan. Klik salah satu bar untuk langsung lompat ke eksplorasi dengan filter yang relevan.</p>
+              <p class="padg-copy">Pilar utama PADG: tata kelola, aktivitas, produk, risiko, harga, inovasi, pengawasan, dan pelaporan. Klik bar untuk filter eksplorasi.</p>
               <div class="padg-bars">
                 <button v-for="item in pillarBreakdown" :key="item.key" type="button" class="padg-bar" @click="jumpExplorer(item.key)"><span><strong>{{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="padg-track"><b :style="{ width: (item.count / maxPillarCount) * 100 + '%', background: item.color }"></b></span><span class="padg-num">{{ item.count }}</span></button>
               </div>
             </article>
-            <!-- Removed: Hotspot per bab section - data incomplete -->
-          </div>
-          <div class="padg-grid two">
+
+            <article class="padg-panel">
+              <div class="padg-head"><h3>Timeline Kepatuhan</h3><span class="padg-chip">Batas waktu</span></div>
+              <p class="padg-copy">Rencana milestone implementasi PADG 32/2025 untuk memastikan kesiapan operasional tepat waktu.</p>
+              <div class="padg-timeline mt-3">
+                <div class="d-flex gap-3 mb-3">
+                  <div class="text-center"><div class="fw-bold text-navy x-small">APR</div><div class="h5 fw-800 mb-0">2026</div></div>
+                  <div class="border-start ps-3"><div class="fw-bold x-small">Fase Persiapan</div><p class="text-muted mb-0 x-small">Analisa gap dan pemetaan kewajiban internal.</p></div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="text-center"><div class="fw-bold text-danger x-small">DES</div><div class="h5 fw-800 mb-0">2026</div></div>
+                  <div class="border-start ps-3"><div class="fw-bold x-small text-danger">Batas Akhir</div><p class="text-muted mb-0 x-small">Seluruh sistem harus sudah comply 100%.</p></div>
+                </div>
+              </div>
+            </article>
+
             <article class="padg-panel">
               <div class="padg-head"><h3>Ringkasan PADG</h3><span class="padg-chip">Pemeriksaan cepat</span></div>
               <div class="padg-mini-row">
@@ -62,12 +74,17 @@
                 <div class="padg-mini"><label>Prioritas</label><strong>Stabilitas & Inovasi</strong><span>Kestabilan sistem pembayaran sambil dorong inovasi digital.</span></div>
                 <div class="padg-mini"><label>Sifat Aturan</label><strong>Mandatory</strong><span>Kepatuhan wajib dengan sanksi administratif bagi pelanggar.</span></div>
               </div>
-              <div class="padg-note">PADG 32/2025 menjadi peraturan pelaksanaan dari PBI 10/2025. Setiap PSP wajib menyelenggarakan sistem pembayaran sesuai dengan ketentuan PADG ini dan mematuhi kebijakan Bank Indonesia terkait.</div>
+              <div class="padg-note">Setiap PSP wajib menyelenggarakan sistem pembayaran sesuai ketentuan PADG ini.</div>
             </article>
+
             <article class="padg-panel">
               <div class="padg-head"><h3>Referensi lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
-              <p class="padg-copy">Daftar lampiran berisi definisi, parameter, dan kerangka teknis PADG. Pilih lampiran untuk melihat detail isi dan kewajiban terkait.</p>
-              <!-- Removed: Appendix type cards - appendix cross-references not yet mapped -->
+              <p class="padg-copy">Daftar lampiran berisi definisi, parameter, dan kerangka teknis PADG. Pilih lampiran untuk melihat detail isi.</p>
+              <div class="mt-3 p-3 bg-light rounded-4 border border-dashed text-center">
+                <i class="fas fa-file-pdf fs-3 text-muted mb-2"></i>
+                <div class="x-small fw-bold">10 Dokumen Teknis</div>
+                <div class="x-small text-muted">Tersedia di tab Lampiran</div>
+              </div>
             </article>
           </div>
         </div>
@@ -407,7 +424,7 @@ export default {
 .padg-side label{color:var(--muted);margin-bottom:.4rem}
 .padg-side h3{margin:0;font-size:1rem;font-weight:800}
 .padg-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
-.padg-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.padg-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
 .padg-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
 .padg-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
 .padg-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
