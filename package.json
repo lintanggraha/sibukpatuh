@@ -12,13 +12,14 @@
     "apexcharts": "^5.10.6",
     "axios": "^1.15.1",
     "bootstrap": "^5.3.8",
+    "d3": "^7.9.0",
     "pinia": "^2.1.7",
     "vue": "^3.5.28",
     "vue-router": "^4.6.4",
     "vue3-apexcharts": "^1.11.1"
   },
   "devDependencies": {
-    "@vercel/node": "^5.7.12",
+    "@vercel/node": "^5.7.13",
     "@vitejs/plugin-vue": "^6.0.1",
     "vite": "^7.1.8"
   }

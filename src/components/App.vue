@@ -158,6 +158,19 @@ export default {
             },
           ],
         },
+        {
+          label: "Analisis",
+          icon: "fa-chart-pie",
+          active: false,
+          show: false,
+          items: [
+            {
+              routeName: "cross_mapping",
+              label: "Cross-Mapping",
+              icon: "fa-network-wired",
+            },
+          ],
+        },
       ],
     };
   },
@@ -216,6 +229,8 @@ export default {
         route.name === "owasp_asvs";
       this.frameworkNavGroups[2].active =
         route.name === "intelligence_center";
+      this.frameworkNavGroups[3].active =
+        route.name === "cross_mapping";
       
       // Sync with Pinia store
       const store = useFrameworkStore();

@@ -65,6 +65,11 @@ const routes = [
         path: '/frameworks/uu-pdp-27-2022',
         name: 'pdp',
         component: () => import('../views/Pdp.vue')
+    },
+    {
+        path: '/cross-mapping',
+        name: 'cross_mapping',
+        component: () => import('../views/CrossMapping.vue')
     }
 ];
 
