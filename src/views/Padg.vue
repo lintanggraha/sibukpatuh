@@ -56,9 +56,10 @@
             <article class="padg-panel">
               <div class="padg-head"><h3>Ringkasan PADG</h3><span class="padg-chip">Pemeriksaan cepat</span></div>
               <div class="padg-mini-row">
-                <div class="padg-mini"><label>Ruang Lingkup</label><strong>12 BAB</strong><span>Men covering seluruh aspek industri sistem pembayaran.</span></div>
-                <div class="padg-mini"><label>Penerapan</label><strong>PSP & Pihak Terkait</strong><span>Bank Indonesia, PSP, PJP, PIP, Peserta, SRO, dan pihak terafiliasi.</span></div>
-                <div class="padg-mini"><label>Prioritas</label><strong>Stabilitas & Inovasi</strong><span>Memenuhi kestabilan sistem pembayaran sambil mendorong inovasi dan keuangan digital.</span></div>
+                <div class="padg-mini"><label>Ruang Lingkup</label><strong>12 BAB</strong><span>Mencakup seluruh aspek industri sistem pembayaran.</span></div>
+                <div class="padg-mini"><label>Penerapan</label><strong>PSP & Pihak Terkait</strong><span>Bank Indonesia, PSP, PJP, PIP, Peserta, SRO, dan afiliasi.</span></div>
+                <div class="padg-mini"><label>Prioritas</label><strong>Stabilitas & Inovasi</strong><span>Kestabilan sistem pembayaran sambil dorong inovasi digital.</span></div>
+                <div class="padg-mini"><label>Sifat Aturan</label><strong>Mandatory</strong><span>Kepatuhan wajib dengan sanksi administratif bagi pelanggar.</span></div>
               </div>
               <div class="padg-note">PADG 32/2025 menjadi peraturan pelaksanaan dari PBI 10/2025. Setiap PSP wajib menyelenggarakan sistem pembayaran sesuai dengan ketentuan PADG ini dan mematuhi kebijakan Bank Indonesia terkait.</div>
             </article>
@@ -423,7 +424,7 @@ export default {
 .padg-icon{width:1.9rem;height:1.9rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(20,78,114,.12);color:var(--accent);font-size:.8rem}
 .padg-card strong{display:block;margin-top:.42rem;font-size:.86rem;font-weight:800}
 .padg-card p{margin:.22rem 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}
-.padg-mini-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:.8rem}
+.padg-mini-row{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin-bottom:.8rem}
 .padg-mini{padding:.72rem .78rem;border-radius:16px}
 .padg-mini label{color:var(--muted)}
 .padg-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
