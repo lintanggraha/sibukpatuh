@@ -33,10 +33,11 @@
         </div>
       </section>
 
-      <div class="padg-nav nav" role="tablist">
+      <div class="padg-nav nav" role="tablist" style="display: grid; grid-template-columns: repeat(4, 1fr);">
         <button class="padg-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Regulasi</strong><span>Peta pilar, bab regulasi, dan elemen kewajiban inti.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter kewajiban, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>Lampiran & Referensi</strong><span>Board referensi lampiran, definisi, dan format.</span></span></button>
+        <button class="padg-tab" :class="{ active: activeTab === 'assessment' }" type="button" role="tab" @click="activeTab = 'assessment'"><i class="fas fa-clipboard-check"></i><span><strong>Asesmen Mandiri</strong><span>Alat ukur kesiapan dan gap analysis kepatuhan.</span></span></button>
       </div>
 
       <div class="tab-content padg-grid">
@@ -120,6 +121,17 @@
                 <button v-for="app in appendices" :key="app.id" type="button" class="padg-item" @click="openAppendixModal(app)"><div class="padg-item-top"><span class="padg-item-code">{{ app.id }}</span><span class="padg-pill">{{ app.type }}</span></div><div class="padg-item-name">{{ app.title || '-' }}</div></button>
               </div>
             </article>
+          </div>
+        </div>
+
+        <!-- Tab 4: Asesmen Mandiri -->
+        <div v-if="activeTab === 'assessment'" key="assessment-tab">
+          <div class="padg-panel text-center py-5">
+            <i class="fas fa-clipboard-check mb-3" style="font-size: 3rem; color: #cbd5e1;"></i>
+            <h4 class="fw-800 text-navy mb-2">Modul Asesmen Dalam Pengembangan</h4>
+            <p class="text-muted" style="max-width: 500px; margin: 0 auto;">
+              Fitur kalkulator gap-analysis dan checklist audit kepatuhan untuk PADG 32/2025 sedang dipersiapkan. Modul ini akan membantu Anda mengukur tingkat kesiapan secara otomatis.
+            </p>
           </div>
         </div>
       </div>
@@ -395,7 +407,7 @@ export default {
 .padg-side label{color:var(--muted);margin-bottom:.4rem}
 .padg-side h3{margin:0;font-size:1rem;font-weight:800}
 .padg-side p{margin:.55rem 0 0;color:var(--muted);line-height:1.55;font-size:.84rem}
-.padg-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.padg-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
 .padg-tab{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:center;padding:.82rem .88rem;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,250,242,.94) 0%,rgba(239,245,246,.94) 100%);text-align:left;color:var(--ink);box-shadow:0 12px 24px rgba(15,23,42,.04);cursor:pointer}
 .padg-tab.active{border-color:rgba(20,78,114,.24);box-shadow:0 18px 30px rgba(20,78,114,.1)}
 .padg-tab i{width:2.35rem;height:2.35rem;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(20,38,59,.06)}
