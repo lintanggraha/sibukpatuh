@@ -6,7 +6,7 @@
     "article": "Pasal 3-4",
     "title": "Sasaran pengaturan dan prinsip dasar pelaksanaan KKS",
     "summary": "KKS diarahkan untuk mencegah dan menangani dampak serangan siber, meningkatkan manajemen risiko siber, dan memperkuat pengawasan serta kolaborasi.",
-    "analogy": "Seperti menetapkan aturan main dasar dalam sebuah kompetisi olahraga agar semua pemain paham batasan dan tujuan fair play.",
+    "analogy": "Sama kayak fondasi dan blueprint sebelum bangun gedung pencakar langit. Kalau blueprint-nya gak ada, gedungnya gampang roboh.",
     "focus": [
       "Menetapkan sasaran penguatan KKS yang selaras dengan tujuan penyelenggara dan tujuan Bank Indonesia.",
       "Menegaskan kejelasan peran dan tanggung jawab, strategi komprehensif, integrasi enterprise risk management, budaya KKS, dan kesiapan menghadapi insiden.",
@@ -29,7 +29,7 @@
     "article": "Pasal 5-6",
     "title": "Objek pengaturan dan ruang lingkup KKS",
     "summary": "Pengaturan KKS berlaku bagi PJP, PIP, pelaku PUVA, lembaga pendukung, penyelenggara KUPVA BB, dan pihak lain yang diatur serta diawasi Bank Indonesia.",
-    "analogy": "Seperti menentukan batas pagar rumah; bagian mana yang harus dijaga ketat agar pencuri tidak masuk ke area privasi.",
+    "analogy": "Kayak masang patok batas tanah sertifikat. Biar jelas mana area yang wajib dijaga satpam, mana yang area publik.",
     "focus": [
       "Memastikan entitas memahami apakah termasuk objek pengaturan KKS Bank Indonesia.",
       "Memetakan ruang lingkup penerapan pada area tata kelola, pencegahan, penanganan, pengawasan, dan kolaborasi.",
@@ -62,7 +62,7 @@
       "Roadmap implementasi atau program kerja tahunan KKS.",
       "Mekanisme pelaporan status implementasi kepada manajemen."
     ],
-    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
+    "analogy": "Ini kompas dan peta jalannya organisasi. Kalau nggak ada, kapalnya bakal muter-muter aja di lautan tanpa arah.",
     "appendices": [
       "Pasal 8"
     ],
@@ -85,7 +85,7 @@
       "Rencana kebutuhan anggaran, kapasitas SDM, dan teknologi.",
       "Hasil review berkala terhadap capaian roadmap."
     ],
-    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
+    "analogy": "Kayak nyusun itinerary liburan jangka panjang. Lu udah rencanain kapan ke gunung, kapan ke pantai, plus budgetingnya.",
     "appendices": [
       "Pasal 9"
     ],
@@ -108,7 +108,7 @@
       "Kontrol due diligence dan pengamanan pihak ketiga.",
       "Hasil review kebijakan dan pembaruan dokumen."
     ],
-    "analogy": "Layaknya board of directors yang oversee perusahaan, tata kelola KKS memberikan oversight terhadap keamanan siber.",
+    "analogy": "Ibarat buku resep dan SOP di dapur restoran bintang lima. Semua koki harus masak pake standar yang sama biar rasanya konsisten.",
     "appendices": [
       "Pasal 10"
     ],
@@ -131,7 +131,7 @@
       "Piagam organisasi atau mandat fungsi KKS.",
       "Laporan berkala manajemen KKS kepada manajemen tertinggi."
     ],
-    "analogy": "Layaknya CEO yang menentukan arah perusahaan, tata kelola KKS menentukan arah penguatan keamanan siber.",
+    "analogy": "Mirip pembagian posisi di tim sepak bola. Harus ada yang jadi striker, bek, dan kiper. Gak bisa semuanya maju nyerang.",
     "appendices": [
       "Pasal 11-13"
     ],
@@ -154,7 +154,7 @@
       "Hasil asesmen atau maturity assessment KKS.",
       "Rencana mitigasi dan status tindak lanjut risiko siber."
     ],
-    "analogy": "Layaknya SOP yang harus diikuti karyawan, standar KKS harus diikuti seluruh personel.",
+    "analogy": "Kayak medical check-up rutin. Buat ngetes seberapa sehat badan organisasi lu sebelum penyakitnya jadi kronis.",
     "appendices": [
       "Pasal 14-15"
     ],
@@ -177,7 +177,7 @@
       "Laporan hasil audit internal atau eksternal.",
       "Daftar temuan dan bukti penyelesaian tindak lanjut."
     ],
-    "analogy": "Layaknya CEO yang menentukan arah perusahaan, tata kelola KKS menentukan arah penguatan keamanan siber.",
+    "analogy": "Ini kayak ngundang food vlogger atau kritikus buat nyicip masakan lu secara objektif, biar ketahuan kurang garam atau kemanisan.",
     "appendices": [
       "Pasal 16-17"
     ],
@@ -200,7 +200,7 @@
       "Materi sosialisasi, pelatihan, atau kampanye kesadaran.",
       "Rekaman partisipasi dan evaluasi efektivitas program budaya."
     ],
-    "analogy": "Layaknya olahraga yang jadi gaya hidup, budaya KKS harus jadi gaya hidup organisasi.",
+    "analogy": "Sama kayak budaya cuci tangan sebelum makan. Kalau udah jadi kebiasaan, nggak perlu disuruh lagi, semua otomatis peduli kebersihan.",
     "appendices": [
       "Pasal 18"
     ],
@@ -223,7 +223,7 @@
       "Jadwal review berkala atas profil risiko siber.",
       "Pemetaan prioritas pengendalian berbasis hasil identifikasi."
     ],
-    "analogy": "Layaknyavaksin yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
+    "analogy": "Kayak bikin KTP atau rekam medis khusus ancaman. Biar lu tahu kelemahan spesifik lu apa aja, misal alergi ransomware.",
     "appendices": [
       "Pasal 21"
     ],
@@ -246,7 +246,7 @@
       "Hasil penilaian risiko terhadap aset atau layanan kritikal.",
       "Daftar prioritas mitigasi dan penanggung jawabnya."
     ],
-    "analogy": "Layaknyavaksin yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
+    "analogy": "Mirip simulasi what-if sebelum investasi. Nge-tes kalau terjadi skenario terburuk, seberapa besar kerugian yang bakal dialami.",
     "appendices": [
       "Pasal 23"
     ],
@@ -269,7 +269,7 @@
       "Daftar infrastruktur informasi vital.",
       "Dokumen prioritas pemulihan layanan kritikal."
     ],
-    "analogy": "Layaknya dokter yang meresepkan vitamin sebelum sakit, pencegahan KKS memperkuat imun organisasi sebelum serangan terjadi.",
+    "analogy": "Sama kayak nyari tahu organ vital di tubuh. Kalo kelingking luka masih bisa jalan, tapi kalo jantung berhenti, kelar semua.",
     "appendices": [
       "Pasal 24-25"
     ],
@@ -292,7 +292,7 @@
       "Baseline konfigurasi keamanan dan hardening standard.",
       "Catatan implementasi endpoint security, patching, atau segmentasi jaringan."
     ],
-    "analogy": "Layaknya masker yang mencegah virus masuk, kontrol keamanan mencegah ancaman siber masuk.",
+    "analogy": "Kayak ngebangun tembok benteng, parit, dan pos jaga di sekeliling istana biar musuh mikir dua kali sebelum nyerang.",
     "appendices": [
       "Pasal 27"
     ],
@@ -315,7 +315,7 @@
       "Kontrol enkripsi, backup, dan access control untuk data sensitif.",
       "Dokumen kepatuhan atau assessment atas pelindungan data pribadi."
     ],
-    "analogy": "Layaknyavaksin yang mencegah penyakit, keamanan siber mencegah serangan sebelum terjadi.",
+    "analogy": "Mirip masukin barang berharga ke dalam brankas berlapis, plus kuncinya cuma dipegang sama orang yang berhak aja.",
     "appendices": [
       "Pasal 28"
     ],
@@ -338,7 +338,7 @@
       "Definisi threshold alert dan aturan eskalasi.",
       "Hasil vulnerability scanning atau pemantauan kerentanan."
     ],
-    "analogy": "Layaknya sensor asap yang mendeteksi kebakaran dini, deteksi dini mendeteksi insiden sebelum meluas.",
+    "analogy": "Ibarat alarm anti-maling dan CCTV yang nyala 24 jam. Pas ada gerakan mencurigakan, alarm langsung bunyi kenceng.",
     "appendices": [
       "Pasal 29-30"
     ],
@@ -361,7 +361,7 @@
       "Hasil malware analysis atau review unauthorized code.",
       "Bukti pemeliharaan tool deteksi dan hasil pengujiannya."
     ],
-    "analogy": "Layaknya radar yang mendeteksi pesawat musuh, sistem peringatan dini mendeteksi ancaman siber.",
+    "analogy": "Sama kayak satpam ngecek rekaman CCTV tiap pagi. Jangan-jangan semalem ada kucing lewat atau malah maling beneran yang coba-coba.",
     "appendices": [
       "Pasal 31-34"
     ],
@@ -384,7 +384,7 @@
       "Penetapan RTO dan RPO untuk layanan kritikal.",
       "Dokumen business continuity plan yang terintegrasi."
     ],
-    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
+    "analogy": "Kayak buku panduan evakuasi gempa. Kalau beneran gempa, semua orang udah tahu harus lari lewat pintu mana tanpa panik.",
     "appendices": [
       "Pasal 37"
     ],
@@ -407,7 +407,7 @@
       "Berita acara, notulen, atau laporan hasil simulasi.",
       "Perbaikan rencana penanganan setelah evaluasi exercise."
     ],
-    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
+    "analogy": "Mirip latihan fire drill di gedung kantoran. Biar kalau ada api beneran, pada nggak dorong-dorongan lari ke tangga darurat.",
     "appendices": [
       "Pasal 38-39"
     ],
@@ -431,7 +431,7 @@
       "Laporan forensik, kronologi insiden, dan bukti tindakan mitigasi."
     ],
     "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
-    "analogy": "Layaknya tim pemadam kebakaran yang memadamkan api, tim insiden siber memadamkan serangan siber.",
+    "analogy": "Kayak nelpon polisi dan pemadam kebakaran pas rumah lu kemalingan atau kebakaran. Lu harus lapor secepatnya, gak boleh ditunda.",
     "appendices": [
       "Pasal 40"
     ]
@@ -454,7 +454,7 @@
       "Bukti penyampaian update penanganan ke regulator."
     ],
     "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan.",
-    "analogy": "Layaknya dokter emergency yang menangani pasien gawat darurat, tim insiden siber menangani krisis dengan cepat.",
+    "analogy": "Sama kayak PR perusahaan yang bikin press release pas lagi ada krisis. Informasinya harus diatur biar nasabah nggak panik berjamaah.",
     "appendices": [
       "Pasal 41"
     ]
@@ -476,7 +476,7 @@
       "Hasil uji failover atau aktivasi lokasi alternatif.",
       "Bukti pemulihan layanan berdasarkan prioritas kritikalitas."
     ],
-    "analogy": "Layaknya mechanic yang memperbaiki mobil mogok, tim pemulihan memperbaiki sistem yang rusak.",
+    "analogy": "Mirip proses nyapu pecahan kaca dan bangun ulang atap setelah kena puting beliung, sampe rumah bisa dihunin lagi.",
     "appendices": [
       "Pasal 42-43"
     ],
@@ -500,7 +500,7 @@
       "Bukti komunikasi pemulihan kepada regulator dan pemangku kepentingan."
     ],
     "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan.",
-    "analogy": "Layaknya plan B yang siap digunakan saat plan A gagal, contingency plan memastikan pemulihan bisa dilakukan.",
+    "analogy": "Kayak ngobatin luka terus nambal lubang di jalan yang bikin jatuh. Biar besok-besok nggak ada lagi yang kepeleset di tempat yang sama.",
     "appendices": [
       "Pasal 44-45"
     ]
@@ -523,7 +523,7 @@
       "Bukti tindak lanjut atas hasil pengawasan."
     ],
     "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan.",
-    "analogy": "Layaknya polisi yang patroli untuk jaga keamanan, pengawasan memastikan kepatuhan terhadap aturan.",
+    "analogy": "Ibarat polisi lalu lintas di perempatan jalan. Mantau lu bawa helm apa enggak, dan siap nilang kalau lu ugal-ugalan.",
     "appendices": [
       "Pasal 47-52"
     ]
@@ -546,7 +546,7 @@
       "Bukti penyampaian laporan insidental dan tahunan ke Bank Indonesia."
     ],
     "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan.",
-    "analogy": "Layaknya medical record pasien, data KKS harus dijaga kerahasiaannya.",
+    "analogy": "Sama kayak ngumpulin rapor sekolah tiap semester. Laporannya harus jujur dan nunjukin progres belajar selama 6 bulan terakhir.",
     "appendices": [
       "Pasal 54-55"
     ]
@@ -568,7 +568,7 @@
       "Bukti partisipasi pada forum atau sarana berbagi informasi.",
       "Ringkasan pembelajaran insiden yang dibagikan secara terkendali."
     ],
-    "analogy": "Layaknya arsip penting yang disimpan di brankas, informasi sensitif harus dilindungi.",
+    "analogy": "Kayak grup WhatsApp siskamling komplek. Kalau ada maling di blok A, blok B dikasih tahu biar siap-siap ngeronda.",
     "appendices": [
       "Pasal 57-58"
     ],
@@ -591,7 +591,7 @@
       "Partisipasi pada simulasi serangan siber sektor keuangan.",
       "Prosedur teknis atau standar operasional yang dirujuk dari SRO."
     ],
-    "analogy": "Layaknya check point di jalan tol, pengawasan memastikan hanya yang berhak yang lewat.",
+    "analogy": "Mirip kerja sama antar dinas pemadam kebakaran lintas kota. Kalau apinya terlalu besar, mereka saling bantu ngerjain sumber apinya.",
     "appendices": [
       "Pasal 59-61"
     ],
@@ -614,7 +614,7 @@
       "Pemetaan kontrol KKS berdasarkan klasifikasi atau risk tier.",
       "Matriks pemenuhan terhadap ketentuan turunan yang relevan."
     ],
-    "analogy": "Layaknya backup system yang otomatis aktif saat utama gagal, backup plan memastikan kontinuitas operasional.",
+    "analogy": "Ibarat klasifikasi kelas tinju. Lu harus bertarung di kelas yang sesuai berat badan lu. Aturannya disesuaikan sama kapasitas.",
     "appendices": [
       "Pasal 62"
     ],

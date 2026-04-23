@@ -9,8 +9,17 @@
       "Hubungkan penilaian risiko siber dengan dampaknya terhadap layanan, nasabah, dan operasi inti Bank.",
       "Lakukan pengkinian analisa ketika terjadi perubahan signifikan pada layanan, teknologi, atau pola ancaman."
     ],
-    "mapped_pillars": ["Assessment", "Governance", "Reporting"],
-    "related_requirements": ["II.01", "II.02", "VI.01"]
+    "mapped_pillars": [
+      "Assessment",
+      "Governance",
+      "Reporting"
+    ],
+    "related_requirements": [
+      "II.01",
+      "II.02",
+      "VI.01"
+    ],
+    "analogy": "Ibarat memilih sistem keamanan untuk rumah, lu harus tahu dulu ruangan mana yang nyimpen barang berharga, bukan pasang alarm di seluruh genteng."
   },
   {
     "id": "DR-02",
@@ -22,8 +31,18 @@
       "Selaraskan kebijakan dan kerangka ketahanan digital dengan strategi bisnis, TI, dan manajemen risiko.",
       "Bangun koordinasi lintas fungsi agar pengambilan keputusan saat gangguan atau insiden dapat berlangsung cepat dan terdokumentasi."
     ],
-    "mapped_pillars": ["Governance", "Organization"],
-    "related_requirements": ["III.01", "III.02", "III.03", "VIII.01", "VIII.02"]
+    "mapped_pillars": [
+      "Governance",
+      "Organization"
+    ],
+    "related_requirements": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "VIII.01",
+      "VIII.02"
+    ],
+    "analogy": "Seperti menunjuk kapten kapal saat badai datang. Kalau semua orang mau pegang kemudi, kapalnya malah tenggelam."
   },
   {
     "id": "DR-03",
@@ -35,8 +54,17 @@
       "Hubungkan identifikasi ancaman dan kerentanan dengan tingkat kritikalitas layanan dan dampak operasional.",
       "Gunakan hasil pemetaan dependency untuk menentukan prioritas proteksi, monitoring, dan pemulihan."
     ],
-    "mapped_pillars": ["Assessment", "Resilience"],
-    "related_requirements": ["II.02", "IV.01", "IV.02", "V.03"]
+    "mapped_pillars": [
+      "Assessment",
+      "Resilience"
+    ],
+    "related_requirements": [
+      "II.02",
+      "IV.01",
+      "IV.02",
+      "V.03"
+    ],
+    "analogy": "Mirip anatomi tubuh manusia. Lu harus tahu organ mana yang kalau sakit bakal bikin lu pingsan, biar penanganannya diprioritaskan."
   },
   {
     "id": "DR-04",
@@ -48,8 +76,17 @@
       "Tetapkan jalur komunikasi, eskalasi, dan keputusan saat terjadi gangguan atau serangan siber.",
       "Gunakan lesson learned insiden untuk memperbarui baseline kontrol dan prosedur respons."
     ],
-    "mapped_pillars": ["Resilience", "Organization"],
-    "related_requirements": ["IV.02", "IV.03", "IV.04", "VIII.02"]
+    "mapped_pillars": [
+      "Resilience",
+      "Organization"
+    ],
+    "related_requirements": [
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "VIII.02"
+    ],
+    "analogy": "Kayak pasang sistem deteksi asap dan pemadam api. Begitu ada percikan, alarm bunyi, dan api langsung dipadamkan sebelum ngebakar seluruh gedung."
   },
   {
     "id": "DR-05",
@@ -61,8 +98,16 @@
       "Pastikan proses recovery menghasilkan pembelajaran, pembaruan prosedur, dan penguatan kontrol.",
       "Ukur keberhasilan pemulihan dari sisi layanan, data, dan kesiapan organisasi untuk kembali beroperasi."
     ],
-    "mapped_pillars": ["Resilience", "Reporting"],
-    "related_requirements": ["IV.04", "V.01", "VI.01"]
+    "mapped_pillars": [
+      "Resilience",
+      "Reporting"
+    ],
+    "related_requirements": [
+      "IV.04",
+      "V.01",
+      "VI.01"
+    ],
+    "analogy": "Sama kayak kotak P3K dan asuransi kesehatan pas kecelakaan. Lu jatuh, diobatin, terus belajar biar nggak jalan di jalur berlubang yang sama."
   },
   {
     "id": "DR-06",
@@ -74,7 +119,20 @@
       "Pastikan hasil pengujian menghasilkan action plan yang dipantau sampai selesai.",
       "Gunakan hasil evaluasi untuk menyempurnakan prioritas investasi, kompetensi, dan tata kelola ketahanan digital."
     ],
-    "mapped_pillars": ["Testing", "Assessment", "Governance"],
-    "related_requirements": ["V.01", "V.02", "V.03", "V.04", "VII.01", "VII.02", "VII.03"]
+    "mapped_pillars": [
+      "Testing",
+      "Assessment",
+      "Governance"
+    ],
+    "related_requirements": [
+      "V.01",
+      "V.02",
+      "V.03",
+      "V.04",
+      "VII.01",
+      "VII.02",
+      "VII.03"
+    ],
+    "analogy": "Ibarat latihan simulasi kebakaran di kantor. Mending panik pas latihan ketimbang bengong pas beneran ada api."
   }
 ]

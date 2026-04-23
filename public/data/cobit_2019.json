@@ -411,7 +411,7 @@
       ],
       "group": "Strategi",
       "color": "#2563eb",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Ibarat mobil balap vs mobil keluarga. Kalau strategi nyari inovasi, tata kelola harus fleksibel. Kalau nyari stabilitas, kontrol harus kuat.",
       "details": [
         "Baca objective melalui lensa strategi pertumbuhan, inovasi, stabilitas, atau layanan.",
         "Selaraskan prioritas governance dengan tujuan strategis enterprise."
@@ -432,7 +432,7 @@
       ],
       "group": "Nilai",
       "color": "#0f766e",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Sama kayak nentuin destinasi liburan di GPS. Tata kelola ini cuma kendaraan, goals itu destinasinya. Harus sinkron biar nyampe.",
       "details": [
         "Hubungkan governance dengan sasaran bisnis yang benar-benar sedang dikejar.",
         "Gunakan goal enterprise sebagai bahasa bersama lintas stakeholder."
@@ -453,7 +453,7 @@
       ],
       "group": "Risiko",
       "color": "#b91c1c",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Kayak milih jenis asuransi. Kalau hobi olahraga ekstrem, butuh coverage maksimal. Tata kelola harus selaras sama risiko terberat.",
       "details": [
         "Petakan risiko yang paling material bagi enterprise.",
         "Gunakan profil risiko untuk memperjelas prioritas objective dan komponen."
@@ -474,7 +474,7 @@
       ],
       "group": "Risiko",
       "color": "#c2410c",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Mirip pergi ke bengkel karena mesin sering mati. Tata kelola lu harus langsung fokus ngobatin penyakit bawaan yang sering dikeluhkan.",
       "details": [
         "Lihat issue yang berulang, bottleneck, atau kegagalan layanan.",
         "Pakai issue aktual sebagai pendorong quick win dan prioritas awal."
@@ -495,7 +495,7 @@
       ],
       "group": "Risiko",
       "color": "#7c3aed",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Kayak masang pager rumah di daerah rawan maling vs elit. Ancaman luar nentuin seberapa ketat satpam yang disiapin.",
       "details": [
         "Perhatikan tren ancaman yang paling relevan bagi enterprise.",
         "Sesuaikan prioritas governance dengan tingkat eksposur ancaman."
@@ -516,7 +516,7 @@
       ],
       "group": "Kepatuhan",
       "color": "#144e72",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Ibarat main bola di liga resmi. Suka nggak suka, lu harus ikut aturan main dan regulasi, kalau enggak ya kena kartu merah.",
       "details": [
         "Petakan regulasi dan kewajiban yang paling membentuk cara kerja enterprise.",
         "Gunakan COBIT untuk merapikan penyelarasan governance dan compliance."
@@ -537,7 +537,7 @@
       ],
       "group": "Model Operasi",
       "color": "#15803d",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Beda IT sebagai pabrik sama support. Kalau pabrik mati, bisnis tutup. Kalau cuma support, kontrol standar aja cukup.",
       "details": [
         "Pahami seberapa kritikal I&T dalam model bisnis enterprise.",
         "Gunakan peran I&T untuk menentukan intensitas governance yang dibutuhkan."
@@ -558,7 +558,7 @@
       ],
       "group": "Model Operasi",
       "color": "#475569",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Kayak makan di restoran vs masak sendiri. Walaupun outsource, lu tetep yang nanggung akibat kalau makanannya bikin sakit perut.",
       "details": [
         "Jangan anggap risiko governance hilang hanya karena layanan dialihdayakan.",
         "Perjelas kontrol dan akuntabilitas lintas pihak."
@@ -579,7 +579,7 @@
       ],
       "group": "Delivery",
       "color": "#1d4ed8",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Ibarat milih gaya lari: sprint vs marathon. Tata kelola buat tim agile harus cepet dan gak birokratis.",
       "details": [
         "Selaraskan governance dengan metode delivery yang dipakai tim.",
         "Jaga supaya kontrol tetap hidup tanpa mematikan kecepatan kerja."
@@ -600,7 +600,7 @@
       ],
       "group": "Delivery",
       "color": "#0ea5e9",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Sama kayak jadi early adopter gadget baru. Kalau agresif pake teknologi paling mutakhir, tata kelola harus siap nanggung error.",
       "details": [
         "Pahami gaya adopsi teknologi enterprise sebelum menentukan kontrol.",
         "Sesuaikan ritme review dan pengawasan dengan pola adopsi."
@@ -621,7 +621,7 @@
       ],
       "group": "Skala",
       "color": "#b45309",
-      "analogy": "Seperti menyesuaikan setelan jas agar pas dengan ukuran tubuh pemakainya.",
+      "analogy": "Ibarat atur startup vs korporat raksasa. Peraturan RT beda tingkat kerumitannya sama negara, jangan pake baju kedodoran.",
       "details": [
         "Sesuaikan tingkat formalitas dengan ukuran dan kompleksitas enterprise.",
         "Jangan memaksakan struktur besar pada organisasi yang masih ramping."
@@ -647,7 +647,7 @@
       "metric_label": "Objektif",
       "count": 5,
       "color": "#0f766e",
-      "analogy": "EDM menjaga agar board dan pimpinan punya titik pijak yang jelas dalam mengarahkan I&T.",
+      "analogy": "Ibarat dewan komisaris atau pemilik klub bola. Mereka gak ikut nendang bola di lapangan, tapi milih pelatih, nentuin target juara, dan ngevaluasi kinerja.",
       "evidence": [
         "Governance Charter",
         "Performance Report",
@@ -668,7 +668,7 @@
       "metric_label": "Objektif",
       "count": 14,
       "color": "#2563eb",
-      "analogy": "APO membantu menyelaraskan keputusan manajemen dengan arah enterprise dan kebutuhan governance.",
+      "analogy": "Kayak manajer dan arsitek klub bola. Mereka bikin strategi, atur taktik, rancang formasi, dan ngatur anggaran transfer biar tim siap tanding.",
       "evidence": [
         "Governance Charter",
         "Performance Report",
@@ -689,7 +689,7 @@
       "metric_label": "Objektif",
       "count": 11,
       "color": "#b45309",
-      "analogy": "BAI penting untuk memastikan perubahan I&T tidak lepas dari arah governance dan kebutuhan bisnis.",
+      "analogy": "Sama kayak tim konstruksi dan rekrutmen. Mereka eksekusi perombakan stadion, beli pemain baru, dan mastiin semuanya udah siap pakai sebelum kickoff.",
       "evidence": [
         "Governance Charter",
         "Performance Report",
@@ -710,7 +710,7 @@
       "metric_label": "Objektif",
       "count": 6,
       "color": "#b91c1c",
-      "analogy": "DSS membuat governance terasa nyata dalam operasi sehari-hari dan kualitas layanan yang diterima bisnis.",
+      "analogy": "Ini staf operasional dan tim medis harian. Mereka yang mastiin lapangan tetep hijau, logistik aman, dan pemain cedera langsung dirawat.",
       "evidence": [
         "Governance Charter",
         "Performance Report",
@@ -731,7 +731,7 @@
       "metric_label": "Objektif",
       "count": 4,
       "color": "#7c3aed",
-      "analogy": "MEA memberi ruang refleksi dan assurance agar enterprise tahu apa yang bekerja dan apa yang perlu diperbaiki.",
+      "analogy": "Ibarat wasit dan analis VAR. Mereka mantau dari luar lapangan buat mastiin aturan ditaati dan ngasih report apa aja yang salah buat bahan evaluasi.",
       "evidence": [
         "Governance Charter",
         "Performance Report",
