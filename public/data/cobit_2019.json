@@ -197,7 +197,8 @@
         "Gunakan hasil bisnis sebagai titik ukur utama."
       ],
       "group": "Nilai",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Kayak masak buat keluarga. Percuma masak mahal-mahal kalau gak ada yang suka. Tata kelola harus ngasih nilai yang beneran dibutuhin stakeholder."
     },
     {
       "id": "GPS-02",
@@ -210,7 +211,8 @@
         "Pastikan hubungan antar-komponen terlihat jelas."
       ],
       "group": "Desain Sistem",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Sama kayak periksa mobil ke bengkel. Lu gak bisa cuma ganti oli tapi ngabaiin rem blong. Harus dilihat menyeluruh (holistik) dari semua komponen."
     },
     {
       "id": "GPS-03",
@@ -223,7 +225,8 @@
         "Jaga governance system tetap hidup, bukan statis."
       ],
       "group": "Adaptasi",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Ibarat main layangan. Kalau angin berubah arah, lu harus nyesuaiin tarikan. Tata kelola juga harus dinamis ngikutin perubahan bisnis dan teknologi."
     },
     {
       "id": "GPS-04",
@@ -236,7 +239,8 @@
         "Jangan campur peran pengawasan dengan aktivitas operasional harian."
       ],
       "group": "Peran",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Kayak bedanya bos dan eksekutor. Bos (governance) nentuin arah dan ngevaluasi, sementara tim (management) yang ngerjain operasional sehari-hari."
     },
     {
       "id": "GPS-05",
@@ -249,7 +253,8 @@
         "Sesuaikan kedalaman penerapan dengan kapasitas enterprise."
       ],
       "group": "Tailoring",
-      "color": "#7c3aed"
+      "color": "#7c3aed",
+      "analogy": "Mirip beli baju di penjahit vs beli jadi. Tata kelola harus di-tailor biar pas sama ukuran badan (kebutuhan) organisasi, jangan maksain baju kedodoran."
     },
     {
       "id": "GPS-06",
@@ -262,7 +267,8 @@
         "Pastikan objective relevan untuk bisnis, bukan hanya fungsi TI."
       ],
       "group": "Cakupan",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Kayak sistem keamanan bandara. Gak cuma gerbang depan yang dijaga, tapi dari mulai masuk parkiran sampe bagasi harus diawasi end-to-end."
     }
   ],
   "principles_framework": [
@@ -277,7 +283,8 @@
         "Pastikan desain tetap logis saat diperluas."
       ],
       "group": "Struktur",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Ibarat pondasi rumah. Framework harus punya model konseptual yang jelas biar kalau mau nambah lantai di masa depan gak gampang rubuh."
     },
     {
       "id": "GPF-02",
@@ -290,7 +297,8 @@
         "Biarkan framework berkembang mengikuti kebutuhan enterprise."
       ],
       "group": "Integrasi",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Kayak main lego. Framework yang bagus itu terbuka dan fleksibel, bisa digabung-gabungin sama kepingan standar lain tanpa harus ngerusak bentuk aslinya."
     },
     {
       "id": "GPF-03",
@@ -303,7 +311,8 @@
         "Jaga konsistensi keputusan governance di atas banyak acuan."
       ],
       "group": "Penyelarasan",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Sama kayak adaptor universal. COBIT bisa nyambungin berbagai standar, framework, dan regulasi lain biar colokannya cocok semua."
     }
   ],
   "components": [
@@ -318,7 +327,8 @@
         "Gunakan proses sebagai mekanisme kerja, bukan sekadar dokumentasi."
       ],
       "group": "Operasi",
-      "color": "#144e72"
+      "color": "#144e72",
+      "analogy": "Kayak SOP di restoran cepat saji. Proses itu resep dan langkah yang bikin burger rasanya selalu sama walau kokinya beda-beda."
     },
     {
       "id": "CMP-02",
@@ -331,7 +341,8 @@
         "Pastikan struktur mendukung akuntabilitas lintas unit."
       ],
       "group": "Arah dan Akuntabilitas",
-      "color": "#0f766e"
+      "color": "#0f766e",
+      "analogy": "Ibarat bagan hierarki di medan perang. Struktur organisasi nentuin siapa jenderal yang ngasih perintah dan siapa prajurit yang maju ke depan."
     },
     {
       "id": "CMP-03",
@@ -344,7 +355,8 @@
         "Jaga dokumentasi tetap relevan dan tidak berlebihan."
       ],
       "group": "Arahan",
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "analogy": "Mirip rambu lalu lintas. Prinsip dan kebijakan itu yang ngatur kapan boleh jalan dan kapan harus berhenti biar gak pada tabrakan."
     },
     {
       "id": "CMP-04",
@@ -357,7 +369,8 @@
         "Gunakan informasi untuk memantau outcome dan risiko."
       ],
       "group": "Pengambilan Keputusan",
-      "color": "#b45309"
+      "color": "#b45309",
+      "analogy": "Kayak dashboard di mobil. Informasi itu ngasih tahu bensin tinggal berapa dan kecepatan mesin, biar supir bisa ngambil keputusan yang bener."
     },
     {
       "id": "CMP-05",
@@ -370,7 +383,8 @@
         "Lihat budaya sebagai bagian inti, bukan tempelan."
       ],
       "group": "Perilaku",
-      "color": "#b91c1c"
+      "color": "#b91c1c",
+      "analogy": "Ibarat budaya antre. Kalau etikanya udah bener, gak perlu ada satpam yang jagain, orang bakal otomatis disiplin sendiri."
     },
     {
       "id": "CMP-06",
@@ -383,7 +397,8 @@
         "Pastikan kapabilitas orang berkembang bersama kebutuhan enterprise."
       ],
       "group": "Kapabilitas",
-      "color": "#15803d"
+      "color": "#15803d",
+      "analogy": "Kayak milih kru bajak laut. Orang, skill, dan kompetensi itu yang nentuin apakah kapal lu bisa melewati badai atau tenggelam di tengah jalan."
     },
     {
       "id": "CMP-07",
@@ -396,7 +411,8 @@
         "Hubungkan keputusan governance dengan kesiapan layanan nyata."
       ],
       "group": "Platform",
-      "color": "#475569"
+      "color": "#475569",
+      "analogy": "Sama kayak alat tempur. Layanan dan infrastruktur itu senjata lu; percuma strategi bagus kalau senjatanya karatan."
     }
   ],
   "design_factors": [

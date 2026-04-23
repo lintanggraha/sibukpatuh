@@ -621,6 +621,7 @@ const goalCascadeEnhancements = {
       "Beri bobot urgency dan dampak supaya tidak semua permintaan diperlakukan sama.",
       "Terjemahkan driver yang masih abstrak menjadi masalah atau peluang yang bisa dibahas dalam forum governance.",
     ],
+    analogy: "Layer ini ibarat pemicu alarm kebakaran. Kalau nggak ada asap atau alasan kuat buat bergerak, orang-orang bakal males evakuasi dan ngerasa semuanya baik-baik aja.",
     examples: [
       "Regulator meminta bukti tata kelola I&T yang lebih eksplisit dan siap audit.",
       "Board ingin investasi digital terlihat dampaknya pada layanan, efisiensi, dan risiko.",
@@ -646,6 +647,7 @@ const goalCascadeEnhancements = {
       "Jangan langsung lompat ke kontrol teknis sebelum tahu tujuan bisnis mana yang ingin dilindungi atau ditingkatkan.",
       "Gunakan tujuan enterprise untuk memilih area governance yang paling material.",
     ],
+    analogy: "Kayak nentuin destinasi liburan bareng keluarga. Kalau tujuannya udah sepakat ke Bali (business goal), baru deh gampang nentuin naik apa dan budgetnya berapa.",
     examples: [
       "Tekanan regulator diterjemahkan menjadi tujuan enterprise tentang kepatuhan eksternal dan kualitas informasi manajemen.",
       "Kebutuhan layanan digital diterjemahkan menjadi tujuan enterprise tentang kontinuitas, customer-oriented service, dan program transformasi digital.",
@@ -671,6 +673,7 @@ const goalCascadeEnhancements = {
       "Tentukan indikator yang bisa dibaca oleh bisnis dan I&T bersama-sama.",
       "Pastikan alignment goals dipakai sebagai filter sebelum memilih objective COBIT.",
     ],
+    analogy: "Mirip kayak translasi bahasa. Alignment goal ngebantu nge-translate bahasa bisnis yang ngawang-ngawang (misal: 'pengen omset naik') jadi bahasa I&T yang konkret (misal: 'aplikasi gak boleh down pas flash sale').",
     examples: [
       "Tujuan kontinuitas bisnis biasanya turun ke alignment goal tentang layanan I&T yang andal dan aman.",
       "Tujuan transformasi digital bisa turun ke agility, program delivery, integrasi aplikasi, dan inovasi.",
@@ -696,6 +699,7 @@ const goalCascadeEnhancements = {
       "Bedakan objective yang perlu dibangun segera dari objective yang cukup dimonitor dulu.",
       "Gunakan hasil mapping sebagai dasar roadmap, assessment, dan assurance.",
     ],
+    analogy: "Ini ibarat milih obat yang tepat buat gejala penyakit lu. Kalau pusingnya gara-gara kurang darah, ya minum penambah darah (objective spesifik), jangan minum obat batuk (objective yang gak nyambung).",
     examples: [
       "Kebutuhan pengawasan nilai investasi bisa mengarah ke objective governance di EDM dan portofolio di APO.",
       "Kebutuhan keamanan dan kontinuitas bisa mengarah ke objective di APO, BAI, DSS, dan MEA.",
@@ -720,6 +724,7 @@ const implementationPhaseEnhancements = {
       "Tulis case for change dalam bahasa bisnis agar sponsor paham kenapa COBIT perlu dipakai.",
       "Tentukan stakeholder utama, sponsor, pain point, risiko bila tidak berubah, dan ruang lingkup awal.",
     ],
+    analogy: "Ibarat nyadar atap rumah lu bocor pas ujan deres. Rasa panik dan sadar kalau 'kita harus benerin ini sekarang' itu adalah driver utamanya.",
     examples: [
       "Audit menemukan ownership layanan dan metrik risiko I&T belum jelas.",
       "Manajemen ingin memastikan program digital punya governance, risk, dan benefit tracking yang konsisten.",
@@ -741,6 +746,7 @@ const implementationPhaseEnhancements = {
       "Kumpulkan bukti seperti kebijakan, struktur keputusan, KPI, risk register, audit finding, incident report, dan dokumen layanan.",
       "Petakan gap antara kondisi aktual, ekspektasi stakeholder, dan praktik governance yang dibutuhkan.",
     ],
+    analogy: "Kayak lagi nimbang berat badan sebelum mulai diet. Lu harus tahu dulu titik awalnya seburuk apa, biar tahu target turunnya berapa kilo.",
     examples: [
       "Menilai apakah komite I&T punya mandat, keputusan, agenda, dan tindak lanjut yang terdokumentasi.",
       "Membandingkan proses perubahan aplikasi dengan target kontrol, ownership, dan risiko yang disepakati.",
@@ -762,6 +768,7 @@ const implementationPhaseEnhancements = {
       "Tentukan target capability, outcome, KPI, risk indicator, dan kriteria sukses.",
       "Validasi target dengan sponsor bisnis agar tidak menjadi ambisi sepihak dari tim I&T.",
     ],
+    analogy: "Sama kayak bikin rancangan diet dan workout plan. Lu udah nentuin targetnya 'sixpack dalam 6 bulan', nah fase ini ngebikin rute perjalanannya.",
     examples: [
       "Menetapkan target bahwa portofolio I&T harus punya benefit owner, risk owner, dan review berkala.",
       "Menentukan target layanan kritikal punya metrik availability, incident trend, recovery readiness, dan ownership yang jelas.",
@@ -783,6 +790,7 @@ const implementationPhaseEnhancements = {
       "Tentukan dependency, owner, resource, timeline, quick win, risiko implementasi, dan mekanisme eskalasi.",
       "Pastikan roadmap mencakup perubahan proses, struktur, informasi, budaya, skill, dan tooling bila relevan.",
     ],
+    analogy: "Mirip bikin daftar belanjaan harian buat diet. Lu mulai breakdown apa aja yang harus dibeli, sayur apa, daging apa, dan hindarin jajan sembarangan.",
     examples: [
       "Membuat backlog inisiatif governance: perbaikan RACI, policy update, dashboard KPI, dan forum review.",
       "Membagi roadmap menjadi quick wins 30 hari, stabilisasi 90 hari, dan peningkatan lanjutan.",
@@ -804,6 +812,7 @@ const implementationPhaseEnhancements = {
       "Kelola komunikasi, pelatihan, resistensi, perubahan peran, dan adopsi praktik kerja.",
       "Pastikan artefak tidak hanya dibuat, tetapi dipakai dalam keputusan harian.",
     ],
+    analogy: "Ini hari pertama lu nge-gym dan makan makanan sehat. Keringetan, otot sakit, dan mulai ngebiasain diri pake rutinitas yang baru.",
     examples: [
       "Menjalankan pilot dashboard portofolio I&T di satu direktorat sebelum diperluas.",
       "Mengubah agenda komite supaya pembahasan nilai, risiko, dan resource muncul secara rutin.",
@@ -825,6 +834,7 @@ const implementationPhaseEnhancements = {
       "Bandingkan baseline dengan kondisi setelah implementasi menggunakan KPI, KRI, audit result, service metric, dan feedback stakeholder.",
       "Identifikasi apa yang berhasil, apa yang belum, dan apa yang perlu diperbaiki di cycle berikutnya.",
     ],
+    analogy: "Kayak nimbang berat badan lagi setelah 3 bulan nge-gym. Udah turun belum? Kalau belum, berarti ada yang salah sama eksekusinya kemarin.",
     examples: [
       "Menguji apakah risiko layanan kritikal lebih terlihat dan dibahas dalam forum governance.",
       "Mengecek apakah benefit investasi digital dipantau oleh owner bisnis, bukan hanya oleh project manager.",
@@ -846,6 +856,7 @@ const implementationPhaseEnhancements = {
       "Perbarui prioritas saat strategi, risiko, regulasi, teknologi, atau organisasi berubah.",
       "Jaga governance cadence supaya perbaikan tidak berhenti setelah proyek awal selesai.",
     ],
+    analogy: "Sama kayak lu udah berhasil sixpack, sekarang tantangannya adalah gimana caranya biar gak buncit lagi pas liburan. Harus dipertahanin jadi gaya hidup!",
     examples: [
       "Menjadwalkan review triwulanan untuk objective prioritas dan design factor yang berubah.",
       "Mengubah roadmap setelah ada regulasi baru, insiden besar, atau perubahan strategi digital.",
