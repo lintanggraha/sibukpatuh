@@ -179,14 +179,14 @@
                   </div>
                   <strong>{{ domain.id }} - {{ domain.title }}</strong>
                   <p>{{ domain.summary }}</p>
-                  <span class="sej-track mt-2"
+                  <div class="sej-track mt-2"
                     ><b
                       :style="{
                         width: (domain.count / maxObjectiveCount) * 100 + '%',
                         background: domain.color,
                       }"
                     ></b
-                  ></span>
+                  ></div>
                 </button>
               </div>
             </article>
@@ -1221,14 +1221,14 @@ export default {
 /* Modal Styles */
 .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.56);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:1rem}
 .modal-dialog{width:100%;max-width:780px;animation:modalSlideIn .25s ease-out}
-.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+.modal-shell{display:grid;grid-template-columns:120px 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12);max-height:85vh}
 .modal-sidebar{position:relative;padding:1.5rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;color:#fffaf2;text-align:center}
 .modal-close{position:absolute;top:.75rem;right:.75rem;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;border:none;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;transition:background .15s ease,transform .15s ease}
 .modal-close:hover{background:rgba(255,255,255,.28);transform:scale(1.05)}
 .modal-sidebar-icon{width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;border-radius:16px;background:rgba(255,255,255,.18);font-size:1.25rem;margin-bottom:.25rem}
 .modal-sidebar-id{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;font-size:1.15rem;font-weight:800;letter-spacing:.04em}
 .modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
-.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-main{display:flex;flex-direction:column;overflow:hidden;min-height:0}
 .modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
 .modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
 .modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
