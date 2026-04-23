@@ -96,9 +96,23 @@
                 <div v-if="!checkResult.found" class="p-2 bg-success bg-opacity-10 text-success rounded">
                   <i class="fas fa-check-circle me-1"></i> Email aman dalam pantauan kami.
                 </div>
-                <div v-else class="p-2 bg-danger bg-opacity-10 text-danger rounded d-flex justify-content-between align-items-center">
-                  <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran.</span>
-                  <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">Salin</button>
+                <div v-else>
+                  <div class="p-2 bg-danger bg-opacity-10 text-danger rounded d-flex justify-content-between align-items-center mb-2">
+                    <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran.</span>
+                    <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">Salin</button>
+                  </div>
+                  <!-- Detil Kebocoran -->
+                  <div class="border rounded px-2 py-1 bg-light mt-1" style="max-height: 120px; overflow-y: auto;">
+                    <div v-for="(item, idx) in checkResult.list" :key="idx" class="border-bottom py-1 last-border-0">
+                      <div class="d-flex align-items-center gap-1 mb-1">
+                        <i class="fas fa-database text-muted"></i>
+                        <span class="fw-bold text-dark">{{ item.sources ? item.sources.join(', ') : 'Unknown Source' }}</span>
+                      </div>
+                      <div class="text-muted" style="font-size: 0.65rem;">
+                        <i class="fas fa-key me-1"></i> {{ item.passwords && item.passwords.length ? item.passwords[0] : 'Data terkompromi' }}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
