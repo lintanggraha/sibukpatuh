@@ -1,100 +1,98 @@
-# SibukPatuh - Sistem Informasi Biar Update Kepatuhan
+# 🛡️ SibukPatuh - Intelligence & Compliance Dashboard
+
+[![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4fc08d?style=for-the-badge&logo=vuedotjs)](https://vuejs.org)
+[![Vite](https://img.shields.io/badge/Vite-Latest-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev)
+[![Gemini AI](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-blue?style=for-the-badge&logo=google-gemini)](https://ai.google.dev)
+
+**SibukPatuh** adalah platform *Unified Compliance & Threat Intelligence* yang dirancang untuk membedah kompleksitas regulasi IT dan memantau lanskap ancaman siber secara *real-time*. Dikembangkan dengan estetika *high-density dashboard* untuk para praktisi GRC (*Governance, Risk, and Compliance*) dan *Security Analyst*.
+
+---
 
 ## ⚠️ Disclaimer Penting
 
 **Konten edukatif — bukan pengganti standar resmi:**
 
-- Data untuk **ISO 27001:2022** dan **COBIT 2019** yang tersedia di repositori ini adalah **ringkasan edukatif** berdasarkan interpretasi kami, **bukan** teks resmi dari ISO atau ISACA.
-- Untuk standar asli dan lisensi resmi, silakan kunjungi:
-  - ISO 27001: [https://www.iso.org/isoiec-27001-information-security.html](https://www.iso.org/isoiec-27001-information-security.html) atau [BSN](https://www.bsn.go.id)
-  - COBIT 2019: [https://www.isaca.org/resources/cobit](https://www.isaca.org/resources/cobit)
-- Repositori ini dibuat untuk tujuan **edukasi dan pembelajaran**, bukan untuk penggunaan komersial yang mengklaim sebagai pengganti standar resmi.
-- Penggunaan konten ini sepenuhnya menjadi tanggung jawab pengguna.
+- Data untuk **ISO 27001:2022**, **COBIT 2019**, **PBI**, dan **SEOJK** adalah **ringkasan edukatif** berdasarkan interpretasi teknis, **bukan** teks hukum resmi.
+- Untuk keperluan audit resmi, silakan merujuk pada dokumen yang diterbitkan oleh institusi terkait (BSN, OJK, BI, ISO, ISACA).
 
 ---
 
-## 📖 Tentang Aplikasi
+## 🚀 Fitur Unggulan
 
-**SibukPatuh** adalah platform eksplorasi edukatif untuk mempelajari dan membedah berbagai *framework* regulasi teknologi informasi — baik nasional maupun internasional.
+### 1. 🧠 Intelligence Center (OSINT Hub)
+Pusat komando intelijen ancaman yang mengintegrasikan berbagai sumber data global:
+- **Threat Feed (OTX AlienVault):** Monitoring *pulse* dan indikator ancaman (IOC) terbaru secara *real-time*.
+- **Vulnerability Intel (CISA KEV):** Daftar kerentanan yang telah dieksploitasi secara aktif (*Known Exploited Vulnerabilities*).
+- **Breach Checker (Smart Fallback):** Integrasi API BreachDirectory dengan mekanisme **Smart Fallback** otomatis (menggunakan data *mock* jika limit API tercapai) untuk simulasi kebocoran data email.
 
-Aplikasi ini dibuat murni sebagai sarana pembelajaran interaktif untuk membantu para praktisi IT, analis, dan mahasiswa dalam:
+### 🤖 AI Analyst Integration
+Ditenagai oleh **Google Gemini 1.5 Flash**, aplikasi ini menyediakan asisten AI untuk menganalisis CVE secara mendalam, memberikan rekomendasi mitigasi, dan memetakan dampak risiko terhadap regulasi di Indonesia.
 
-- **Mempelajari anatomi** dari berbagai *framework* keamanan (SEOJK, PBI, ISO, NIST, COBIT)
-- **Menyimulasikan studi kasus** terhadap pemahaman kontrol dan regulasi yang berlaku
-- **Menelusuri referensi edukasi** secara cepat untuk memahami hubungan antar komponen *framework*
-- **Menjelajahi konsep pemetaan (*cross-mapping*)** antar *framework* sebagai bahan studi komparatif
+### 📊 Professional Framework Explorer
+Navigasi interaktif untuk berbagai standar kepatuhan dengan layout 3-kolom yang efisien:
+- **Nasional:** SEOJK 29/2022, Panduan Resiliensi OJK, PBI 02/2024 (PADG 32).
+- **Internasional:** COBIT 2019, NIST CSF 2.0, ISO 27001:2022.
+- **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan analogi bahasa santai namun profesional (metafara manajemen klub bola, konstruksi bangunan, dll) agar mudah dipahami oleh semua level manajemen.
 
-> **Catatan Penting:**
-> Konten di dalam SibukPatuh disusun murni sebagai **referensi pembelajaran dan edukasi** untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).
+---
 
-## 📋 Fitur
+## 🛠️ Tech Stack & Arsitektur
 
-- **Dropdown Nasional**: SEOJK 29/03/2022, Panduan Resiliensi OJK, PBI 02/2024
-- **Dropdown Internasional**: ISO 27001, NIST CSF 2.0, COBIT 2019
-- Search & filter real-time di setiap framework
-- Responsive design (mobile-friendly)
-- Navigasi tanpa reload (client-side routing)
+### Frontend
+- **Vue 3 (Composition API):** Framework reaktif untuk performa tinggi.
+- **ApexCharts:** Visualisasi distribusi ancaman dan pilar regulasi.
+- **Custom CSS:** Estetika *Glassmorphism* dan *High-Density Layout*.
 
-## � Build & Deploy
+### Backend (Serverless)
+- **Vercel Serverless Functions:** Proxy API untuk bypass CORS dan perlindungan API Key.
+- **Smart Rate Limiting:** Mekanisme perlindungan *client-side* untuk mencegah *spamming* API.
+- **Vercel Routing:** Konfigurasi `vercel.json` untuk mendukung *Single Page Application (SPA) refresh stability*.
+
+---
+
+## 📂 Struktur Project
 
 ```bash
-npm run build
-```
-
-Hasil build ada di folder `dist/`. Tinggal upload ke hosting manapun.
-
-## 🛠️ Tech Stack
-
-- **Vue.js 3** — UI Framework
-- **Vue Router 4** — Client-side routing
-- **Pinia** — State management
-- **Vite** — Build tool
-- **Bootstrap 5** — CSS framework
-- **Font Awesome 6** — Icons (CDN)
-
-## 📁 Struktur Project
-
-```
 sibukpatuh-vue/
+├── api/                # Serverless Functions (Breach, CISA, Gemini, OTX)
+├── public/data/        # Framework JSON Datasets (COBIT, PBI, ISO, dll)
 ├── src/
-│   ├── components/
-│   │   └── App.vue           # Main layout + navigation
-│   ├── views/
-│   │   ├── FrameworkIndex.vue
-│   │   ├── Iso27001.vue
-│   │   ├── Nist.vue
-│   │   ├── Cobit.vue
-│   │   ├── Seojk.vue
-│   │   ├── Resilience.vue
-│   │   └── Pbi.vue
-│   ├── router/index.js       # Routes config
-│   └── main.js               # Entry point
-├── data/                     # JSON data files
-└── dist/                     # Production build
+│   ├── components/     # UI Components
+│   ├── views/          # Framework & Intelligence Pages
+│   ├── services/       # API Services Logic
+│   └── assets/css/     # Core Design System
+├── vercel.json         # Deployment & Routing Config
+└── README.md           # Documentation
 ```
 
-## 🔧 Tambah Framework Baru
+---
 
-1. Buat file JSON di folder `data/`
-2. Buat Vue component di `src/views/`
-3. Tambah route di `src/router/index.js`
-4. Tambah link di `src/components/App.vue`
+## 🔧 Pengembangan Lokal
+
+1. Clone repositori:
+   ```bash
+   git clone https://github.com/lintanggraha/sibukpatuh.git
+   ```
+2. Install dependensi:
+   ```bash
+   npm install
+   ```
+3. Setup Environment Variables (`.env`):
+   ```env
+   VITE_GEMINI_API_KEY=your_key_here
+   RAPIDAPI_KEY=your_key_here
+   ```
+4. Jalankan server dev:
+   ```bash
+   npm run dev
+   ```
+
+---
 
 ## 🌐 Deployment
 
-Upload isi folder `dist/` ke:
-
-- **GitHub Pages**
-- **Netlify** (drag & drop)
-- **Vercel**
-- **Nginx/Apache** (pastikan `try_files $uri $uri/ /index.html`)
-
-## ⚡ Performance
-
-- **Bundle size**: ~100KB JS + ~235KB CSS (gzipped)
-- **Load time**: < 1 detik di 3G
-- **Navigasi**: Instant (no backend latency)
+Aplikasi ini dioptimalkan untuk deployment di **Vercel** dengan dukungan otomatis untuk *rewrite rules* agar fitur *refresh* (F5) pada rute aplikasi tetap berjalan mulus (mencegah Error 404).
 
 ---
-
-**SibukPatuh** — Biar update kepatusan gak ribet.
+**SibukPatuh** — *Biar update kepatuhan gak ribet.*
