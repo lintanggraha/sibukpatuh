@@ -19,7 +19,7 @@
         <div>
           <span class="sej-kicker"><i class="fas fa-shield-alt"></i>Framework Nasional</span>
           <h1 class="sej-title">UU No. 27 Tahun 2022 Pelindungan Data Pribadi</h1>
-          <p class="sej-lede">Halaman ini menyajikan rangkuman kewajiban UU PDP untuk mendukung implementasi compliance, termasuk peta bab, kategori persyaratan, analisa hak dan kewajiban subjek, serta compliance checklist yang dapat digunakan untuk kebutuhan penilaian kepatuhan.</p>
+          <p class="sej-lede">Data privacy is the new currency. Di sini kita breakdown UU PDP jadi framework yang gampang dieksekusi. Mulai dari mapping bab, analisa hak-kewajiban subjek data, sampai compliance checklist yang ready-to-use. Anggap aja ini cheat sheet lo buat mastiin perlindungan data pribadi organisasi udah sejalan sama regulasi tanpa overkill.</p>
           <div class="sej-metrics">
             <div class="sej-metric"><label>Bab Regulasi</label><strong>{{ totalChapters }}</strong><span>Dari ketentuan umum sampai ketentuan pidana.</span></div>
             <div class="sej-metric"><label>Kewajiban Inti</label><strong>{{ totalRequirements }}</strong><span>Requirements yang dapat dieksplorasi satu per satu.</span></div>
@@ -104,11 +104,11 @@
               <div class="sej-inspector-head"><small>Requirement Inspector</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih requirement untuk membaca detail.' }}</span></div>
               <div class="sej-inspector-body">
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? activeRequirement.cadence || '-' : '-' }}</span><span>{{ activeRequirement ? activeRequirement.owner || '-' : '-' }}</span></div>
-                <div class="sej-callout"><span class="sej-label">Summary</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih requirement untuk membaca ringkasan.' }}</div></div>
-                <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : '-' }}</div></div>
+                <div class="sej-callout"><span class="sej-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih requirement untuk membaca ringkasan.' }}</div></div>
+                <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Implementasi</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="sej-callout"><span class="sej-label">Contoh Evidence</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
-                <div class="sej-note"><span class="sej-label">Pelaporan</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.reporting || '-') : '-' }}</div></div>
+                <div class="sej-callout"><span class="sej-label">Lampiran Terkait</span><div class="sej-refs"><span v-for="ref in (activeRequirement?.appendices || [])" :key="ref" class="sej-ref">{{ ref }}</span><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="sej-empty w-100">Requirement ini tidak menunjuk lampiran spesifik.</span></div></div>
               </div>
             </article>
           </div>

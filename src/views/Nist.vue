@@ -19,7 +19,7 @@
         <div>
           <span class="nst-kicker"><i class="fas fa-compass"></i>Kerangka Kerja</span>
           <h1 class="nst-title">NIST CSF 2.0 Tinjauan Fungsi Inti</h1>
-          <p class="nst-lede">Halaman ini menyajikan subkategori NIST CSF 2.0 dalam tampilan terstruktur yang mendukung analisa fungsi inti, penetapan fokus implementasi, dan penelusuran referensi SP 800-53.</p>
+          <p class="nst-lede">Ready to upgrade your cyber defense? Halaman ini membedah NIST CSF 2.0 jadi struktur yang super actionable. Lo bisa mapping fungsi inti, nentuin fokus implementasi, sampai cross-check referensi SP 800-53 secara langsung. Ini fondasi yang lo butuhin buat bangun resilience siber kelas dunia.</p>
           <div class="nst-metrics">
             <div class="nst-metric"><label>Fungsi Inti</label><strong>{{ totalFuncs }}</strong><span>Tata Kelola, Identifikasi, Perlindungan, Deteksi, Respons, dan Pemulihan.</span></div>
             <div class="nst-metric"><label>Kategori</label><strong>{{ totalCats }}</strong><span>Kelompok topik yang merangkum area pengendalian.</span></div>

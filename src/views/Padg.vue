@@ -19,7 +19,7 @@
         <div>
           <span class="padg-kicker"><i class="fas fa-landmark"></i>Bank Indonesia</span>
           <h1 class="padg-title">PADG 32/2025 - Pengaturan Industri Sistem Pembayaran</h1>
-          <p class="padg-lede">Halaman ini menyajikan kewajiban inti PADG Nomor 32 Tahun 2025 tentang Pengaturan Industri Sistem Pembayaran, termasuk peta kewajiban berdasarkan bab, analisis implementasi, lampiran referensi, dan panduan pelaporan untuk penyelenggara sistem pembayaran.</p>
+          <p class="padg-lede">Time to decode the payment ecosystem rules! Halaman ini membedah PADG 32/2025 dengan presisi. Kita map out seluruh kewajiban per bab, analisis implementasi teknisnya, plus reference lampiran yang lo butuhin. Jadikan ini kompas lo buat comply sama standar industri sistem pembayaran tanpa kehilangan agility bisnis.</p>
           <div class="padg-metrics">
             <div class="padg-metric"><label>Total Bab</label><strong>{{ totalChapters }}</strong><span>BAB I sampai XII yang mengatur berbagai aspek sistem pembayaran.</span></div>
             <div class="padg-metric"><label>Total Kewajiban</label><strong>{{ totalRequirements }}</strong><span>Pasal-pasal yang dapat ditinjau satu per satu dalam eksplorasi.</span></div>
@@ -96,10 +96,11 @@
               <div class="padg-inspector-head"><small>Kewajiban Detail</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="padg-inspector-body">
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
-                <div class="padg-callout"><span class="padg-label">Ringkasan Kewajiban</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
-                <div v-if="activeRequirement?.analogy" class="padg-analogy"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement.analogy }}</div></div>
-                <div class="padg-note"><span class="padg-label"><i class="fas fa-book me-1"></i>Konteks regulasi</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.title + ' - ' + getChapterLabel(activeRequirement.chapter)) : '-' }}</div></div>
-                <!-- Simplified inspector - detailed focus/evidence/appendices to be populated -->
+                <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
+                <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
+                <div class="padg-callout"><span class="padg-label">Fokus Implementasi</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="padg-callout"><span class="padg-label">Contoh Evidence</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="padg-callout"><span class="padg-label">Lampiran Terkait</span><div class="padg-refs"><span v-for="ref in (activeRequirement?.appendices || [])" :key="ref" class="padg-ref">{{ ref }}</span><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="padg-empty w-100">Kewajiban ini tidak menunjuk lampiran spesifik.</span></div></div>
               </div>
             </article>
           </div>

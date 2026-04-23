@@ -19,7 +19,7 @@
         <div>
           <span class="sej-kicker"><i class="fas fa-check-double"></i>Framework Studio</span>
           <h1 class="sej-title">OWASP ASVS 5.0.0 Verifier</h1>
-          <p class="sej-lede">Halaman ini menyajikan komponen verifikasi keamanan berlapis dari standar OWASP ASVS versi 5.0.0. Kerangka kerja ini digunakan untuk meninjau secara mendalam kriteria pengujian aplikasi web berdasar tingkatan risiko (Level 1 sampai Level 3).</p>
+          <p class="sej-lede">Level up your app security testing! Halaman ini membedah OWASP ASVS 5.0.0 jadi checklist verifikasi yang komprehensif. Dari pengujian Level 1 sampai Level 3, lo bisa review kriteria keamanan secara mendalam sesuai risk appetite aplikasi lo. No more guessing, pure systematic security validation.</p>
           <div class="sej-metrics">
             <div class="sej-metric"><label>Kategori</label><strong>{{ totalChapters }}</strong><span>Area verifikasi dan tipe pengamanan.</span></div>
             <div class="sej-metric"><label>Komponen Uji</label><strong>{{ totalRequirements }}</strong><span>Kriteria keamanan operasional ASVS.</span></div>

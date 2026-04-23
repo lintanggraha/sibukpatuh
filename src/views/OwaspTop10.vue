@@ -19,7 +19,7 @@
         <div>
           <span class="sej-kicker"><i class="fas fa-bug"></i>Framework Studio</span>
           <h1 class="sej-title">OWASP Top 10 2025 Navigator</h1>
-          <p class="sej-lede">Halaman ini menyajikan 10 risiko keamanan aplikasi web paling kritis (Top 10) yang diidentifikasi oleh OWASP untuk tahun 2025, lengkap dengan panduan mitigasi dan referensi perlindungan.</p>
+          <p class="sej-lede">Stay ahead of the hackers! Di sini kita kupas tuntas 10 risiko keamanan web paling kritis versi OWASP. Lo gak cuma dapet teori, tapi juga panduan mitigasi dan referensi proteksi yang siap dieksekusi. Wajib banget buat developer dan security engineer yang mau bikin aplikasi kebal serangan.</p>
           <div class="sej-metrics">
             <div class="sej-metric"><label>Pilar</label><strong>{{ totalChapters }}</strong><span>Area operasional, desain, dan arsitektur kontrol.</span></div>
             <div class="sej-metric"><label>Risiko Teratas</label><strong>{{ totalRequirements }}</strong><span>Kerentanan utama web application modern.</span></div>

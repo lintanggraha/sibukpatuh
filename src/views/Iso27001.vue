@@ -19,7 +19,7 @@
         <div>
           <span class="iso-kicker"><i class="fas fa-compass"></i>Framework Studio</span>
           <h1 class="iso-title">ISO 27001:2022 Control Studio</h1>
-          <p class="iso-lede">Halaman ini menyajikan kontrol Annex A dalam tampilan yang mendukung analisa kebijakan, penentuan prioritas implementasi, dan identifikasi kebutuhan bukti audit.</p>
+          <p class="iso-lede">ISMS made simple! Kita breakdown kontrol Annex A dari ISO 27001 biar lo gampang ngelakuin analisa kebijakan, nentuin prioritas implementasi, dan nyiapin evidence buat audit. Jadikan ini kompas lo buat dapet sertifikasi tanpa drama, dan pastinya ngebangun security culture yang solid.</p>
           <div class="iso-metric-grid">
             <div class="iso-metric"><label>Annex A Controls</label><strong>{{ totalControls }}</strong><span>Kontrol inti yang bisa ditelusuri end-to-end.</span></div>
             <div class="iso-metric"><label>Categories</label><strong>{{ domainBreakdown.length }}</strong><span>Organisasional, Orang, Fisik, dan Teknologi.</span></div>

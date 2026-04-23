@@ -22,11 +22,7 @@
           >
           <h1 class="sej-title">PBI 02/2024 KKS Navigator</h1>
           <p class="sej-lede">
-            Halaman ini menyajikan ringkasan Peraturan Bank Indonesia Nomor 2
-            Tahun 2024 mengenai keamanan sistem informasi dan ketahanan siber
-            bagi penyelenggara yang diatur dan diawasi Bank Indonesia, termasuk
-            peta kewajiban inti, analisa implementasi, serta rujukan pelaporan
-            dan pengawasan.
+            Ready for the new PBI standard? Di sini kita mapping PBI 02/2024 soal KKS tanpa bikin pusing. Lo bisa pantau langsung peta kewajiban inti, insight implementasi, plus rujukan pelaporan dan pengawasan dari Bank Indonesia. Ini ibarat navigasi pintar lo buat align sama ekspektasi regulator sekaligus ngamanin sistem pembayaran organisasi.
           </p>
           <div class="sej-metrics">
             <div class="sej-metric">

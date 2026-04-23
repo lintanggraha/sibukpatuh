@@ -19,7 +19,7 @@
         <div>
           <span class="sej-kicker"><i class="fas fa-landmark"></i>Framework Studio</span>
           <h1 class="sej-title">SEOJK 29/SEOJK.03/2022 Cyber Resilience Map</h1>
-          <p class="sej-lede">Halaman ini menyajikan rangkuman kewajiban inti SEOJK 29/SEOJK.03/2022 mengenai ketahanan dan keamanan siber bagi bank umum, termasuk peta kewajiban, analisa implementasi, lampiran resmi, dan format pelaporan yang relevan untuk kebutuhan penilaian dan pelaporan.</p>
+          <p class="sej-lede">Welcome to the compliance engine! Di sini kita bedah tuntas SEOJK 29/SEOJK.03/2022 buat bank umum. Gak cuma sekadar compliance, lo dapet blueprint komprehensif mulai dari pemetaan requirement, insight implementasi, sampai format pelaporan resmi OJK. Think of it as your ultimate playbook buat naikin level cyber maturity organisasi lu dengan cara yang smart dan terstruktur.</p>
           <div class="sej-metrics">
             <div class="sej-metric"><label>Bab Operasional</label><strong>{{ totalChapters }}</strong><span>Mulai dari risiko inheren sampai unit/fungsi siber.</span></div>
             <div class="sej-metric"><label>Kewajiban Inti</label><strong>{{ totalRequirements }}</strong><span>Requirement yang dapat ditinjau satu per satu dalam explorer.</span></div>

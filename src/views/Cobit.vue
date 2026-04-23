@@ -23,10 +23,7 @@
           <h1 class="sej-title">
             COBIT 2019 Introduction & Methodology Navigator
           </h1>
-          <p class="sej-lede">
-            Ringkasan berbahasa Indonesia untuk membaca prinsip, design factor,
-            core model, dan alur implementasi COBIT 2019 dengan lebih cepat.
-          </p>
+          <p class="sej-lede">Governance doesn't have to be boring! Di sini kita decode COBIT 2019 jadi gampang dicerna. Mulai dari prinsip dasar, design factor, core model, sampai alur implementasi yang step-by-step. Perfect buat lo yang mau align IT dengan objektif bisnis tanpa tenggelam di lautan dokumen teori.</p>
           <div class="sej-note" style="margin-top: 1.1rem; border-left: 4px solid #f59e0b;">
             <strong style="color: #b45309;"><i class="fas fa-info-circle me-1"></i> Disclaimer</strong>
             <div class="mt-1" style="font-size: 0.82rem; line-height: 1.6;">

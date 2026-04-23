@@ -22,10 +22,7 @@
           >
           <h1 class="orj-title">Panduan Resiliensi OJK</h1>
           <p class="orj-lede">
-            Halaman ini menyajikan ringkasan Panduan Resiliensi Digital OJK
-            dalam bentuk struktur dokumen, eksplorasi tema, dan fokus implementasi
-            untuk membantu pembacaan materi ketahanan digital secara lebih
-            terstruktur dan operasional.
+            Let's talk digital resilience! Halaman ini ngebongkar Panduan Resiliensi Digital OJK jadi struktur yang actionable. Lo bakal diajak eksplorasi tiap tema dan fokus implementasinya biar paham gimana caranya maintain operasional tetap on-track meski lagi diserang. Basically, ini panduan lo buat shifting dari sekadar 'bertahan' jadi 'tangguh' secara terukur.
           </p>
           <div class="orj-metrics">
             <div class="orj-metric">
@@ -300,46 +297,14 @@
               <div class="orj-inspector-body">
                 <div class="orj-meta">
                   <span>{{ activeTheme ? activeTheme.section : "-" }}</span>
-                  <span>{{
-                    activeTheme
-                      ? (activeTheme.focus || []).length + " fokus"
-                      : "0 fokus"
-                  }}</span>
-                  <span>{{
-                    activeTheme ? getSectionLabel(activeTheme.section) : "-"
-                  }}</span>
+                  <span>{{ activeTheme ? getSectionLabel(activeTheme.section) : "-" }}</span>
+                  <span>{{ activeTheme ? (activeTheme.focus || []).length + " fokus" : "0 fokus" }}</span>
                 </div>
-                <div class="orj-callout">
-                  <strong>Ringkasan Tema</strong>
-                  <div class="mt-2">
-                    {{
-                      activeTheme
-                        ? activeTheme.summary
-                        : "Pilih tema untuk membaca ringkasan."
-                    }}
-                  </div>
-                </div>
-                <div class="orj-note">
-                  <strong><i class="fas fa-lightbulb me-1"></i>Analogi</strong>
-                  <div class="mt-2">
-                    {{ activeTheme ? activeTheme.analogy : "-" }}
-                  </div>
-                </div>
-                <div class="orj-callout">
-                  <strong>Fokus Implementasi</strong>
-                  <ul class="orj-plain">
-                    <li
-                      v-for="(item, idx) in activeTheme &&
-                      activeTheme.focus &&
-                      activeTheme.focus.length
-                        ? activeTheme.focus
-                        : ['Tidak ada fokus implementasi tambahan.']"
-                      :key="idx"
-                    >
-                      {{ item }}
-                    </li>
-                  </ul>
-                </div>
+                <div class="orj-callout"><span class="orj-label">Ringkasan Requirement</span><div class="mt-2">{{ activeTheme ? activeTheme.summary : 'Pilih tema untuk membaca ringkasan.' }}</div></div>
+                <div class="orj-note"><span class="orj-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeTheme && activeTheme.analogy ? activeTheme.analogy : '-' }}</div></div>
+                <div class="orj-callout"><span class="orj-label">Fokus Implementasi</span><ul class="orj-plain"><li v-for="(item, idx) in (activeTheme && activeTheme.focus && activeTheme.focus.length ? activeTheme.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="orj-callout"><span class="orj-label">Contoh Evidence</span><ul class="orj-plain"><li v-for="(item, idx) in (activeTheme && activeTheme.evidence && activeTheme.evidence.length ? activeTheme.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="orj-callout"><span class="orj-label">Lampiran Terkait</span><div class="orj-refs"><span v-for="ref in (activeTheme?.appendices || [])" :key="ref" class="orj-ref">{{ ref }}</span><span v-if="!activeTheme || !activeTheme.appendices || !activeTheme.appendices.length" class="orj-empty w-100">Tema ini tidak menunjuk lampiran spesifik.</span></div></div>
               </div>
             </article>
           </div>

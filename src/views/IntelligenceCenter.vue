@@ -5,7 +5,7 @@
       <div class="hero-content">
         <span class="hero-kicker"><i class="fas fa-shield-virus"></i> Global Intelligence Center</span>
         <h1 class="hero-title">Unified Threat Intelligence</h1>
-        <p class="hero-lede">Dashboard terintegrasi untuk pemantauan kerentanan global (CISA KEV), indikator ancaman real-time (OTX AlienVault), dan pemantauan kebocoran data.</p>
+        <p class="hero-lede">Your ultimate cyber radar! Dashboard ini ngasih lo visibility penuh buat mantau kerentanan global dari CISA KEV, indikator ancaman real-time via OTX AlienVault, plus pantauan kebocoran data. Everything you need to stay proactive and keep the bad guys out, all in one screen.</p>
       </div>
       <div class="hero-stats-grid">
         <div class="hero-stat-card">
