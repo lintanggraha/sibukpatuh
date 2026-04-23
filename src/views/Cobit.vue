@@ -1044,7 +1044,7 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        const response = await fetch("/data/cobit_2019.json");
+        const response = await fetch("/data/cobit_2019.json?v=" + new Date().getTime());
         if (response.ok) {
           const data = await response.json();
           this.chapters = data.chapters || [];
