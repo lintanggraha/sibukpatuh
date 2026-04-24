@@ -33,7 +33,17 @@ Ditenagai oleh **Google Gemini 1.5 Flash**, aplikasi ini menyediakan asisten AI 
 Navigasi interaktif untuk berbagai standar kepatuhan dengan layout 3-kolom yang efisien:
 - **Nasional:** SEOJK 29/2022, Panduan Resiliensi OJK, PBI 02/2024 (PADG 32).
 - **Internasional:** COBIT 2019, NIST CSF 2.0, ISO 27001:2022.
-- **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan analogi bahasa santai namun profesional (metafara manajemen klub bola, konstruksi bangunan, dll) agar mudah dipahami oleh semua level manajemen.
+- **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan analogi bahasa santai namun profesional.
+
+### 🔗 Compliance Synergy (Cross-Mapping)
+- **Visual Cross-Mapping:** Visualisasi keterkaitan antar framework (ISO, NIST, PBI, dll) menggunakan **D3.js Force-Directed Graph**.
+- **Comparison Engine:** Perbandingan *side-by-side* antar regulasi untuk menemukan *overlapping controls* secara otomatis.
+- **Gap Analysis Tool:** Identifikasi celah kepatuhan dengan memetakan status implementasi terhadap standar target.
+
+---
+
+## 📈 Change Log
+Lacak pembaruan fitur dan perbaikan bug secara real-time di [CHANGELOG.md](./CHANGELOG.md).
 
 ---
 

@@ -83,6 +83,9 @@
                   <a href="https://www.linkedin.com/in/lintanggraha/" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill px-4 btn-contact">
                     <i class="fab fa-linkedin me-2"></i> Terhubung di LinkedIn
                   </a>
+                  <a href="https://github.com/lintanggraha/sibukpatuh" target="_blank" rel="noopener noreferrer" class="btn btn-dark rounded-pill px-4 btn-contact">
+                    <i class="fab fa-github me-2"></i> GitHub Repository
+                  </a>
                 </div>
               </div>
             </div>
