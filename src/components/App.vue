@@ -169,6 +169,11 @@ export default {
               label: "Cross-Mapping",
               icon: "fa-network-wired",
             },
+            {
+              routeName: "framework_analysis",
+              label: "Komparasi & Gap",
+              icon: "fa-code-compare",
+            },
           ],
         },
       ],
@@ -230,7 +235,8 @@ export default {
       this.frameworkNavGroups[2].active =
         route.name === "intelligence_center";
       this.frameworkNavGroups[3].active =
-        route.name === "cross_mapping";
+        route.name === "cross_mapping" ||
+        route.name === "framework_analysis";
       
       // Sync with Pinia store
       const store = useFrameworkStore();

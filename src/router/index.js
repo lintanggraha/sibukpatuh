@@ -70,6 +70,11 @@ const routes = [
         path: '/cross-mapping',
         name: 'cross_mapping',
         component: () => import('../views/CrossMapping.vue')
+    },
+    {
+        path: '/framework-analysis',
+        name: 'framework_analysis',
+        component: () => import('../views/FrameworkAnalysis.vue')
     }
 ];
 
