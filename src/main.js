@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './components/App.vue';
 import router from './router/index.js';
-import VueGtag from 'vue-gtag';
+import VueGtag from 'vue-gtag-next';
 
 // Import Bootstrap CSS from CDN
 import 'bootstrap/dist/css/bootstrap.min.css';
