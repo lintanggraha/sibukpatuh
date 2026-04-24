@@ -27,7 +27,7 @@ Pusat komando intelijen ancaman yang mengintegrasikan berbagai sumber data globa
 - **Breach Checker (Smart Fallback):** Integrasi API BreachDirectory dengan mekanisme **Smart Fallback** otomatis (menggunakan data *mock* jika limit API tercapai) untuk simulasi kebocoran data email.
 
 ### 🤖 AI Analyst Integration
-Ditenagai oleh **Google Gemini 1.5 Flash**, aplikasi ini menyediakan asisten AI untuk menganalisis CVE secara mendalam, memberikan rekomendasi mitigasi, dan memetakan dampak risiko terhadap regulasi di Indonesia.
+Ditenagai oleh **Google Gemini 3 Flash**, aplikasi ini menyediakan asisten AI untuk menganalisis CVE secara mendalam, memberikan rekomendasi mitigasi, dan memetakan dampak risiko terhadap regulasi di Indonesia.
 
 ### 📊 Professional Framework Explorer
 Navigasi interaktif untuk berbagai standar kepatuhan dengan layout 3-kolom yang efisien:
