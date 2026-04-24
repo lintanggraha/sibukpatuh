@@ -17,13 +17,14 @@ app.use(router);
 app.use(pinia);
 
 // Install Google Analytics 4
+import { trackRouter } from 'vue-gtag-next';
 const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 if (gaId && gaId !== 'G-XXXXXXXXXX') {
   app.use(VueGtag, {
-    config: { id: gaId },
-    appName: 'SibukPatuh',
-    pageTrackerScreenviewEnabled: true
-  }, router);
+    property: { id: gaId },
+    appName: 'SibukPatuh'
+  });
+  trackRouter(router);
 } else {
   console.warn('Google Analytics is disabled (VITE_GA_MEASUREMENT_ID is missing or default).');
 }
