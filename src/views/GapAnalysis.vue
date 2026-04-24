@@ -24,25 +24,45 @@
         
         <div class="row g-3 text-center">
           <div class="col-md-3 col-6">
-            <div class="border rounded-3 p-3 bg-white h-100 shadow-sm border-success">
+            <div 
+              class="border rounded-3 p-3 bg-white h-100 shadow-sm border-success cursor-pointer transition-all card-filter"
+              :class="{'ring-2 ring-success bg-success bg-opacity-10': selectedFilter === 'Covered'}"
+              @click="selectedFilter = selectedFilter === 'Covered' ? 'All' : 'Covered'"
+              role="button"
+            >
               <h2 class="text-success fw-bold mb-1">{{ stats.covered }}</h2>
               <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-check text-success me-1"></i> Covered</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
-            <div class="border rounded-3 p-3 bg-white h-100 shadow-sm border-warning">
+            <div 
+              class="border rounded-3 p-3 bg-white h-100 shadow-sm border-warning cursor-pointer transition-all card-filter"
+              :class="{'ring-2 ring-warning bg-warning bg-opacity-10': selectedFilter === 'Partial'}"
+              @click="selectedFilter = selectedFilter === 'Partial' ? 'All' : 'Partial'"
+              role="button"
+            >
               <h2 class="text-warning fw-bold mb-1">{{ stats.partial }}</h2>
               <span class="text-muted small fw-bold"><i class="fa-solid fa-triangle-exclamation text-warning me-1"></i> Partial</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
-            <div class="border rounded-3 p-3 bg-white h-100 shadow-sm border-danger">
+            <div 
+              class="border rounded-3 p-3 bg-white h-100 shadow-sm border-danger cursor-pointer transition-all card-filter"
+              :class="{'ring-2 ring-danger bg-danger bg-opacity-10': selectedFilter === 'Gap'}"
+              @click="selectedFilter = selectedFilter === 'Gap' ? 'All' : 'Gap'"
+              role="button"
+            >
               <h2 class="text-danger fw-bold mb-1">{{ stats.gap }}</h2>
               <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Gap</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
-            <div class="border rounded-3 p-3 bg-light h-100 shadow-sm">
+            <div 
+              class="border rounded-3 p-3 bg-light h-100 shadow-sm cursor-pointer transition-all card-filter"
+              :class="{'ring-2 ring-secondary bg-secondary bg-opacity-10': selectedFilter === 'All'}"
+              @click="selectedFilter = 'All'"
+              role="button"
+            >
               <h2 class="text-secondary fw-bold mb-1">{{ stats.total }}</h2>
               <span class="text-muted small fw-bold"><i class="fa-solid fa-list-check text-secondary me-1"></i> Total Baseline</span>
             </div>
@@ -67,7 +87,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="item in analysisResults" :key="item.req.id">
+              <tr v-for="item in filteredResults" :key="item.req.id">
                 <td class="p-3">
                   <div class="fw-bold text-dark">{{ item.req.name }}</div>
                   <div class="text-muted small mb-1">{{ item.req.desc }}</div>
@@ -103,10 +123,11 @@
                   </div>
                 </td>
               </tr>
-              <tr v-if="analysisResults.length === 0">
+              <tr v-if="filteredResults.length === 0">
                 <td colspan="3" class="text-center p-5 text-muted">
                   <i class="fa-solid fa-clipboard-question fs-1 mb-3"></i>
-                  <p class="mb-0 fs-5">Tidak ada data evaluasi (Baseline tidak memiliki kontrol ini).</p>
+                  <p class="mb-0 fs-5" v-if="analysisResults.length > 0">Tidak ada data yang sesuai dengan filter ({{ selectedFilter }}).</p>
+                  <p class="mb-0 fs-5" v-else>Tidak ada data evaluasi (Baseline tidak memiliki kontrol ini).</p>
                 </td>
               </tr>
             </tbody>
@@ -118,7 +139,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { gapData } from '../data/gapData';
 
 const props = defineProps({
@@ -138,6 +159,8 @@ const getFrameworkName = (id) => {
   const fw = availableFrameworks.find(f => f.id === id);
   return fw ? fw.name : id;
 };
+
+const selectedFilter = ref('All');
 
 const analysisResults = computed(() => {
   const sourceCoverage = gapData.coverage[props.sourceFwId] || [];
@@ -173,6 +196,11 @@ const analysisResults = computed(() => {
   });
   
   return results;
+});
+
+const filteredResults = computed(() => {
+  if (selectedFilter.value === 'All') return analysisResults.value;
+  return analysisResults.value.filter(item => item.status === selectedFilter.value);
 });
 
 const stats = computed(() => {
@@ -236,4 +264,21 @@ const exportCSV = () => {
 .bg-warning.text-dark {
   text-shadow: none;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+.card-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.08)!important;
+}
+.ring-2 {
+  box-shadow: 0 0 0 0.25rem;
+}
+.ring-success { box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important; }
+.ring-warning { box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important; }
+.ring-danger { box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important; }
+.ring-secondary { box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25) !important; }
 </style>
