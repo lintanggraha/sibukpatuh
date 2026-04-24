@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './components/App.vue';
 import router from './router/index.js';
+import VueGtag from 'vue-gtag';
 
 // Import Bootstrap CSS from CDN
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +15,18 @@ const app = createApp(App);
 
 app.use(router);
 app.use(pinia);
+
+// Install Google Analytics 4
+const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+if (gaId && gaId !== 'G-XXXXXXXXXX') {
+  app.use(VueGtag, {
+    config: { id: gaId },
+    appName: 'SibukPatuh',
+    pageTrackerScreenviewEnabled: true
+  }, router);
+} else {
+  console.warn('Google Analytics is disabled (VITE_GA_MEASUREMENT_ID is missing or default).');
+}
 
 // Global error handler for uncaught errors
 app.config.errorHandler = (error, instance, info) => {
