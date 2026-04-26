@@ -55,6 +55,16 @@
                  <i class="fas fa-info-circle nav-icon"></i>
                  <span>Tentang</span>
               </router-link>
+
+              <button 
+                class="framework-nav-toggle" 
+                style="text-decoration: none; cursor: pointer;" 
+                @click.stop="toggleTheme"
+                aria-label="Toggle dark mode"
+              >
+                <i :class="isDarkTheme ? 'fas fa-moon' : 'fas fa-sun'" class="nav-icon"></i>
+                <span>{{ isDarkTheme ? 'Dark' : 'Light' }}</span>
+              </button>
             </nav>
           </div>
         </div>
@@ -94,6 +104,7 @@ export default {
   name: "App",
   data() {
     return {
+      isDarkTheme: false,
       frameworkNavGroups: [
         {
           label: "Nasional",
@@ -190,6 +201,12 @@ export default {
     },
   },
   methods: {
+    toggleTheme() {
+      this.isDarkTheme = !this.isDarkTheme;
+      const theme = this.isDarkTheme ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+    },
     handleClickOutside(event) {
       const clickedInsideNav = event.target.closest(".framework-nav-group");
       if (!clickedInsideNav) {
@@ -244,6 +261,17 @@ export default {
     },
   },
   mounted() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      this.isDarkTheme = true;
+      document.documentElement.setAttribute('data-bs-theme', 'dark');
+    } else {
+      this.isDarkTheme = false;
+      document.documentElement.setAttribute('data-bs-theme', 'light');
+    }
+
     this.updateActiveGroups();
     document.addEventListener("click", this.handleClickOutside);
     document.addEventListener("keydown", this.handleKeydown);
@@ -395,12 +423,59 @@ body::-webkit-scrollbar-thumb:active {
   --active-soft: rgba(20, 78, 114, 0.1);
 }
 
+[data-bs-theme="dark"] {
+  --canvas-top: #1a1a2e;
+  --canvas-bottom: #16213e;
+  --ink: #e0e6ed;
+  --muted: #a0aec0;
+  --shell: rgba(30, 41, 59, 0.85);
+  --active: #48cae4;
+  --active-soft: rgba(72, 202, 228, 0.15);
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
   background:
     linear-gradient(180deg, var(--canvas-top) 0%, var(--canvas-bottom) 100%);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .framework-header {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .framework-page {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .framework-dropdown {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-bs-theme="dark"] .framework-dropdown .dropdown-item {
+  color: #e0e6ed;
+}
+
+[data-bs-theme="dark"] .framework-dropdown .dropdown-item:hover,
+[data-bs-theme="dark"] .framework-dropdown .dropdown-item:focus {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--active);
+}
+
+[data-bs-theme="dark"] .framework-nav-toggle:hover,
+[data-bs-theme="dark"] .framework-nav-toggle:focus,
+[data-bs-theme="dark"] .framework-nav-group.show .framework-nav-toggle {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .framework-brand-mark {
+  background: linear-gradient(135deg, #1f6f78 0%, #48cae4 100%);
+  color: #1a1a2e;
 }
 
 .framework-shell {
