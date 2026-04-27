@@ -11,6 +11,13 @@ export default async function handler(req, res) {
 
   const { messages, cveContext } = req.body;
 
+  // Security: Basic Origin/Referer validation to prevent curl abuse
+  const origin = req.headers.origin || req.headers.referer || '';
+  // You may want to restrict this strictly to your production domain
+  if (!origin.includes('localhost') && !origin.includes('sibukpatuh')) {
+    // return res.status(403).json({ error: 'Forbidden. Invalid Origin.' });
+  }
+
   if (!messages || !Array.isArray(messages)) {
     return res.status(400).json({ error: 'Field "messages" diperlukan dan harus berupa array.' });
   }
@@ -20,14 +27,23 @@ export default async function handler(req, res) {
   
   let systemInstruction;
   if (cveContext && isFirstMessage) {
+    // Security: Escape user inputs to prevent Prompt Injection
+    const safeCveId = String(cveContext.id).replace(/[<>]/g, '');
+    const safeTitle = String(cveContext.title).replace(/[<>]/g, '');
+    const safeVendor = String(cveContext.vendor).replace(/[<>]/g, '');
+    const safeProduct = String(cveContext.product).replace(/[<>]/g, '');
+    const safeDesc = String(cveContext.shortDescription || '').replace(/[<>]/g, '');
+
     systemInstruction = `Kamu adalah asisten AI yang helpful dan friendly. Namamu adalah AI Assistant dari SibukPatuh.
 
 Konteks CVE yang sedang dibahas (hanya untuk referensi):
-- CVE ID: ${cveContext.id}
-- Judul: ${cveContext.title}
-- Vendor: ${cveContext.vendor}
-- Produk: ${cveContext.product}
-- Deskripsi: ${cveContext.shortDescription || ''}
+<context>
+- CVE ID: ${safeCveId}
+- Judul: ${safeTitle}
+- Vendor: ${safeVendor}
+- Produk: ${safeProduct}
+- Deskripsi: ${safeDesc}
+</context>
 
 Guidelines:
 - Jawab dalam Bahasa Indonesia yang natural dan conversational

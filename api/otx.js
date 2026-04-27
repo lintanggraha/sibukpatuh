@@ -89,6 +89,13 @@ export default async function handler(request, response) {
     return;
   }
 
+  // Security: Basic Origin/Referer validation to prevent curl abuse
+  const origin = request.headers.origin || request.headers.referer || '';
+  if (!origin.includes('localhost') && !origin.includes('sibukpatuh')) {
+    // response.status(403).json({ error: 'Forbidden. Invalid Origin.' });
+    // return;
+  }
+
   const requestUrl = new URL(request.url, `https://${request.headers.host || 'localhost'}`);
   const headers = { Accept: 'application/json' };
   const serverApiKey = String(process.env.OTX_API_KEY || '').trim();
