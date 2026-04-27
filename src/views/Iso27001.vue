@@ -92,7 +92,7 @@
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="iso-workspace">
-            <aside class="iso-panel" style="position: sticky; top: 1rem;">
+            <aside class="iso-panel iso-filter-panel" style="position: sticky; top: 1rem;">
               <div class="iso-panel-head"><h3>Filter Workspace</h3></div>
               <div class="iso-quick-themes mb-3">
                 <button v-for="domain in domainBreakdown" :key="domain.name" type="button" class="iso-quick-theme" :style="{ '--accent': domain.color }" @click="filterTheme = domain.name"><strong>{{ domain.name === 'Organisasional' ? 'Organisasi' : domain.name }}</strong><span>{{ domain.count }} kontrol</span></button>
@@ -103,7 +103,6 @@
                 <div><label for="filter-prio">Prioritas</label><select id="filter-prio" v-model="filterPrio" class="form-select"><option value="All">Semua prioritas</option><option v-for="p in priorityBreakdown" :key="p.name" :value="p.name">{{ p.name }}</option></select></div>
                 <div><label for="filter-diff">Kesulitan</label><select id="filter-diff" v-model="filterDiff" class="form-select"><option value="All">Semua tingkat</option><option value="Rendah">Rendah</option><option value="Sedang">Sedang</option><option value="Tinggi">Tinggi</option></select></div>
                 <div><label for="filter-search">Cari kontrol</label><input type="text" id="filter-search" v-model="filterSearch" class="form-control" placeholder="Cari ID, nama, atau capability"></div>
-                <div class="iso-summary"><small>Visible controls</small><strong>{{ filteredControls.length }}</strong><span>{{ filteredControls.length ? activeFilterCopy : 'Semua kontrol sedang ditampilkan.' }}</span></div>
                 <button class="btn btn-outline-dark" type="button" @click="resetFilters"><i class="fas fa-rotate-left me-2"></i>Reset filter</button>
               </div>
             </aside>
@@ -386,8 +385,8 @@ export default {
 .iso-number{min-width:2.4rem;text-align:right;font-weight:800}
 .iso-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 .iso-concept-board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.65rem}
-.iso-quick-themes{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem}
-.iso-quick-theme{width:100%;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.72);text-align:left;cursor:pointer}
+.iso-quick-themes{display:flex;flex-wrap:wrap;gap:.55rem}
+.iso-quick-theme{flex:1 1 auto;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.72);text-align:left;cursor:pointer}
 .iso-quick-theme strong{display:block;font-size:.82rem;font-weight:800;color:var(--accent)}
 .iso-quick-theme span{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem;white-space:nowrap}
 .iso-mini{padding:.78rem .82rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.72)}
@@ -408,8 +407,10 @@ export default {
 .iso-priority-name::before{content:'';width:.55rem;height:.55rem;border-radius:999px;background:var(--accent)}
 .iso-priority-track{height:.45rem;border-radius:999px;background:rgba(19,34,56,.08);overflow:hidden}
 .iso-priority-track b{display:block;height:100%;border-radius:inherit;background:var(--accent)}
-.iso-workspace{display:grid;grid-template-columns:.78fr 1fr .95fr;gap:1rem}
-.iso-form-grid{display:grid;gap:.85rem}
+.iso-workspace{display:grid;grid-template-columns:.85fr 1.15fr;gap:1rem}
+.iso-filter-panel{grid-column:1 / -1}
+.iso-form-grid{display:flex;gap:.75rem;align-items:flex-end}
+.iso-form-grid > div { flex: 1; }
 .iso-form-grid label{display:block;margin-bottom:.35rem;color:var(--muted);font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .iso-summary{padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(23,70,67,.95) 100%);color:#fffaf2}
 .iso-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}

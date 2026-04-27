@@ -264,7 +264,7 @@
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="sej-workspace">
-            <article class="sej-panel">
+            <article class="sej-panel sej-filter-panel">
               <div class="sej-head">
                 <h3>Filter Kewajiban</h3>
                 <span class="sej-chip">{{ totalRequirements }} entri</span>
@@ -318,15 +318,6 @@
                 >
                   Atur ulang filter
                 </button>
-              </div>
-              <div class="sej-summary">
-                <small>Kewajiban Ditampilkan</small
-                ><strong>{{ filteredRequirements.length }}</strong
-                ><span>{{
-                  filteredRequirements.length
-                    ? `Menampilkan ${filteredRequirements.length} requirement PBI 02/2024 sesuai filter aktif.`
-                    : "Tidak ada requirement yang cocok dengan filter saat ini."
-                }}</span>
               </div>
             </article>
             <article class="sej-panel">
@@ -485,15 +476,6 @@
                 >
                   Atur ulang filter
                 </button>
-              </div>
-              <div class="sej-summary">
-                <small>Rujukan Ditampilkan</small
-                ><strong>{{ filteredReferences.length }}</strong
-                ><span>{{
-                  filteredReferences.length
-                    ? `Menampilkan ${filteredReferences.length} rujukan operasional PBI 02/2024 sesuai filter aktif.`
-                    : "Tidak ada rujukan yang cocok dengan filter saat ini."
-                }}</span>
               </div>
             </article>
             <article class="sej-panel">
@@ -1046,14 +1028,16 @@ export default {
 .sej-mini label{color:var(--muted)}
 .sej-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
 .sej-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
-.sej-workspace{display:grid;grid-template-columns:.76fr 1.03fr .91fr;gap:1rem}
+.sej-workspace{display:grid;grid-template-columns:.85fr 1.15fr;gap:1rem}
+.sej-filter-panel{grid-column:1 / -1}
 .sej-refspace{display:grid;grid-template-columns:.82fr 1.18fr;gap:1rem}
-.sej-pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem;margin-bottom:.8rem}
-.sej-pillar{width:100%;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
+.sej-pillar-grid{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:.8rem}
+.sej-pillar{flex:1 1 auto;padding:.62rem .68rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.75);text-align:left;cursor:pointer}
 .sej-pillar.active{border-color:rgba(20,78,114,.24);background:rgba(238,245,245,.72);box-shadow:0 12px 24px rgba(20,78,114,.08)}
 .sej-pillar strong{display:block;font-size:.82rem;font-weight:800;color:var(--accent)}
 .sej-pillar span{display:block;margin-top:.12rem;color:var(--muted);font-size:.74rem}
-.sej-form{display:grid;gap:.75rem}
+.sej-form{display:flex;gap:.75rem;align-items:flex-end}
+.sej-form > div { flex: 1; }
 .sej-form label{margin-bottom:.3rem;color:var(--muted)}
 .sej-summary{margin-top:.85rem;padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(20,78,114,.95) 100%);color:#fffaf2}
 .sej-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}

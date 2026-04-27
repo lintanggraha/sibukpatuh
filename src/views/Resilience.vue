@@ -201,7 +201,7 @@
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="orj-workspace">
-            <article class="orj-panel">
+            <article class="orj-panel orj-filter-panel">
               <div class="orj-head">
                 <h3>Filter Tema</h3>
                 <span class="orj-chip">{{ totalThemes }} tema</span>
@@ -241,15 +241,6 @@
                 >
                   Atur ulang filter
                 </button>
-              </div>
-              <div class="orj-summary">
-                <small>Tema Ditampilkan</small>
-                <strong>{{ filteredThemes.length }}</strong>
-                <span>{{
-                  filteredThemes.length
-                    ? `Menampilkan ${filteredThemes.length} tema Panduan Resiliensi OJK sesuai filter aktif.`
-                    : "Tidak ada tema yang cocok dengan filter saat ini."
-                }}</span>
               </div>
             </article>
             <article class="orj-panel">
@@ -320,7 +311,6 @@
                 <div><label for="focusSearch">Cari tema</label><input id="focusSearch" v-model="focusSearch" type="search" class="form-control" placeholder="Cari ID, judul, atau fokus implementasi"></div>
                 <button type="button" class="btn btn-outline-secondary" @click="resetFocusFilters">Atur ulang filter</button>
               </div>
-              <div class="orj-summary"><small>Tema Ditampilkan</small><strong>{{ filteredFocusThemes.length }}</strong><span>{{ filteredFocusThemes.length ? `Menampilkan ${filteredFocusThemes.length} tema sesuai filter aktif.` : 'Tidak ada tema yang cocok dengan filter saat ini.' }}</span></div>
               <div class="orj-families mt-3">
                 <button v-for="item in sectionBreakdown" :key="item.key" type="button" class="orj-family" :class="{ active: focusSectionFilter === item.key }" :style="{ '--accent': item.color }" @click="focusSectionFilter = focusSectionFilter === item.key ? '' : item.key"><span><strong>{{ item.label }}</strong><em>{{ item.count }} tema</em></span><span class="orj-num">{{ item.count }}</span></button>
               </div>
@@ -583,9 +573,11 @@ export default {
 .orj-mini label{color:var(--muted)}
 .orj-mini strong{display:block;margin-top:.2rem;font-size:1.08rem;font-weight:800;color:#144e72}
 .orj-mini span{display:block;margin-top:.14rem;color:var(--muted);font-size:.72rem;line-height:1.4}
-.orj-workspace{display:grid;grid-template-columns:.76fr 1.03fr .91fr;gap:1rem}
+.orj-workspace{display:grid;grid-template-columns:.85fr 1.15fr;gap:1rem}
+.orj-filter-panel{grid-column:1 / -1}
 .orj-refspace{display:grid;grid-template-columns:.82fr 1.18fr;gap:1rem}
-.orj-form{display:grid;gap:.75rem}
+.orj-form{display:flex;gap:.75rem;align-items:flex-end}
+.orj-form > div { flex: 1; }
 .orj-form label{margin-bottom:.3rem;color:var(--muted)}
 .orj-summary{margin-top:.85rem;padding:.82rem .88rem;border-radius:18px;background:linear-gradient(180deg,rgba(25,61,87,.95) 0%,rgba(20,78,114,.95) 100%);color:#fffaf2}
 .orj-summary small{display:block;color:rgba(255,250,242,.7);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
