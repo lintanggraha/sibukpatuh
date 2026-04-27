@@ -56,15 +56,7 @@
                  <span>Tentang</span>
               </router-link>
 
-              <button 
-                class="framework-nav-toggle" 
-                style="text-decoration: none; cursor: pointer;" 
-                @click.stop="toggleTheme"
-                aria-label="Toggle dark mode"
-              >
-                <i :class="isDarkTheme ? 'fas fa-moon' : 'fas fa-sun'" class="nav-icon"></i>
-                <span>{{ isDarkTheme ? 'Dark' : 'Light' }}</span>
-              </button>
+
             </nav>
           </div>
         </div>
@@ -93,6 +85,17 @@
           <span>Traktir Kopi</span>
         </div>
       </a>
+
+      <!-- Theme Toggle Floating Button -->
+      <button 
+        class="theme-toggle-fab" 
+        @click.stop="toggleTheme"
+        :aria-label="isDarkTheme ? 'Aktifkan Mode Terang' : 'Aktifkan Mode Gelap'"
+      >
+        <div class="theme-fab-content">
+          <i :class="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </div>
+      </button>
     </div>
   </div>
 </template>
@@ -528,6 +531,7 @@ body {
   font-size: 1.05rem;
   font-weight: 800;
   line-height: 1.2;
+  max-width: 200px;
 }
 
 .framework-nav {
@@ -855,18 +859,18 @@ body {
 .trakteer-content {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.25rem;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 999px;
   background: linear-gradient(135deg, #FF5E5E 0%, #FF2E63 100%);
   color: white !important;
   font-weight: 800;
-  font-size: 0.88rem;
-  letter-spacing: 0.02em;
-  box-shadow: 0 10px 25px rgba(255, 46, 99, 0.4);
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 8px 20px rgba(255, 46, 99, 0.35);
   position: relative;
   z-index: 2;
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
 }
 
 .trakteer-content i {
@@ -923,6 +927,73 @@ body {
   .trakteer-pulse {
     width: 100%;
     height: 100%;
+  }
+}
+/* Theme Toggle FAB Styles */
+.theme-toggle-fab {
+  position: fixed;
+  bottom: 6.8rem;
+  right: 2.5rem;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-fab-content {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--shell);
+  border: 2px solid rgba(20, 78, 114, 0.1);
+  color: var(--active);
+  font-size: 1.2rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .theme-fab-content {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #48cae4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-fab:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.theme-toggle-fab:hover .theme-fab-content {
+  border-color: var(--active);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.18);
+}
+
+[data-bs-theme="dark"] .theme-toggle-fab:hover .theme-fab-content {
+  border-color: #48cae4;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.theme-toggle-fab:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 767.98px) {
+  .theme-toggle-fab {
+    bottom: 5.5rem;
+    right: 1.5rem;
+  }
+  .theme-fab-content {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1rem;
   }
 }
 </style>
