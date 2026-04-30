@@ -10,6 +10,7 @@
     "changelog": "node scripts/update-changelog.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "apexcharts": "^5.10.6",
     "axios": "^1.15.1",
     "bootstrap": "^5.3.8",

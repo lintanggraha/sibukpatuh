@@ -1,4 +1,5 @@
 <template>
+  <Analytics />
   <div class="framework-shell">
     <div class="container-xl">
       <header class="framework-header">
@@ -101,10 +102,14 @@
 </template>
 
 <script>
+import { Analytics } from '@vercel/analytics/vue';
 import { useFrameworkStore } from '../stores/frameworkStore';
 
 export default {
   name: "App",
+  components: {
+    Analytics,
+  },
   data() {
     return {
       isDarkTheme: false,
