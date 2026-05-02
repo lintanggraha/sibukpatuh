@@ -4,3 +4,6 @@ dist/
 .env.local
 *.log
 .scannerwork/
+
+.vercel
+.env*.local

@@ -188,6 +188,11 @@ export default {
               label: "Komparasi & Gap",
               icon: "fa-code-compare",
             },
+            {
+              routeName: "checklist_tools",
+              label: "Checklist Tools",
+              icon: "fa-tasks",
+            },
           ],
         },
       ],
@@ -256,7 +261,8 @@ export default {
         route.name === "intelligence_center";
       this.frameworkNavGroups[3].active =
         route.name === "cross_mapping" ||
-        route.name === "framework_analysis";
+        route.name === "framework_analysis" ||
+        route.name === "checklist_tools";
       
       // Sync with Pinia store
       const store = useFrameworkStore();

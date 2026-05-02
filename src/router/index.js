@@ -75,6 +75,11 @@ const routes = [
         path: '/framework-analysis',
         name: 'framework_analysis',
         component: () => import('../views/FrameworkAnalysis.vue')
+    },
+    {
+        path: '/checklist-tools',
+        name: 'checklist_tools',
+        component: () => import('../views/ChecklistTools.vue')
     }
 ];
 

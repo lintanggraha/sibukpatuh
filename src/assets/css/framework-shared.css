@@ -371,3 +371,48 @@ body, .panel-card, .metric-card, .framework-header, .framework-page, .framework-
   background: rgba(255, 255, 255, 0.1) !important;
   color: #e2e8f0 !important;
 }
+
+/* ChecklistTools Dark Mode Fixes */
+[data-bs-theme="dark"] .framework-checkbox-content {
+  background: rgba(30, 41, 59, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-bs-theme="dark"] .framework-checkbox:hover .framework-checkbox-content {
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+[data-bs-theme="dark"] .framework-checkbox input:checked + .framework-checkbox-content {
+  background: rgba(15, 118, 110, 0.1) !important;
+  border-color: #48cae4 !important;
+}
+[data-bs-theme="dark"] .checklist-summary {
+  background: rgba(30, 41, 59, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-bs-theme="dark"] .checklist-table-wrapper {
+  background: rgba(30, 41, 59, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-bs-theme="dark"] .checklist-table th {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #94a3b8 !important;
+}
+[data-bs-theme="dark"] .checklist-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+}
+[data-bs-theme="dark"] .ai-report-content {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #f59e0b !important;
+}
+
+/* GapAnalysis Dark Mode Fixes */
+[data-bs-theme="dark"] .shadow-inner {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5) !important;
+}
+[data-bs-theme="dark"] .card-filter.border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+[data-bs-theme="dark"] .bg-opacity-10 {
+  --bs-bg-opacity: 0.2 !important;
+}
+
