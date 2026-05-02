@@ -3,10 +3,7 @@ import { createPinia } from 'pinia';
 import App from './components/App.vue';
 import router from './router/index.js';
 import VueGtag from 'vue-gtag-next';
-import { inject } from '@vercel/analytics';
-
-// Initialize Vercel Analytics
-inject();
+// Vercel Analytics is now handled via component in App.vue
 
 // Import Bootstrap CSS from CDN
 import 'bootstrap/dist/css/bootstrap.min.css';

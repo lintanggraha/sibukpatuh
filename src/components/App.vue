@@ -96,15 +96,20 @@
           <i :class="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
         </div>
       </button>
+      <Analytics />
     </div>
   </div>
 </template>
 
 <script>
 import { useFrameworkStore } from '../stores/frameworkStore';
+import { Analytics } from '@vercel/analytics/vue';
 
 export default {
   name: "App",
+  components: {
+    Analytics
+  },
   data() {
     return {
       isDarkTheme: false,
