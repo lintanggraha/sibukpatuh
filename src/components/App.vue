@@ -97,6 +97,7 @@
         </div>
       </button>
       <Analytics />
+      <SpeedInsights />
     </div>
   </div>
 </template>
@@ -104,11 +105,13 @@
 <script>
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { Analytics } from '@vercel/analytics/vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 export default {
   name: "App",
   components: {
-    Analytics
+    Analytics,
+    SpeedInsights
   },
   data() {
     return {
