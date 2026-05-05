@@ -325,6 +325,13 @@ html {
   overflow-x: clip;
 }
 
+/* Restrict container width on very large screens for better focus */
+@media (min-width: 1400px) {
+  .container-xl {
+    max-width: 1200px !important;
+  }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -524,8 +531,8 @@ body {
 }
 
 .framework-header {
-  position: sticky;
-  top: 1rem;
+  position: relative;
+  top: 0;
   z-index: 1000;
   overflow: visible;
   margin-bottom: 0.8rem;
@@ -536,6 +543,14 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+}
+
+/* Only make sticky if there's enough vertical room to avoid covering content */
+@media (min-height: 680px) {
+  .framework-header {
+    position: sticky;
+    top: 1rem;
+  }
 }
 
 .framework-brand {
@@ -577,7 +592,7 @@ body {
 .framework-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.35rem;
   justify-content: flex-end;
   align-items: center;
 }
@@ -861,26 +876,79 @@ body {
 
 @media (max-width: 991.98px) {
   .framework-header {
-    padding: 1rem;
+    padding: 0.6rem 0.85rem;
+    top: 0.5rem;
+    border-radius: 20px;
   }
 
   .framework-header .row {
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .framework-nav {
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.25rem 0.15rem 0.65rem;
+    margin: 0 -0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 78, 114, 0.2) transparent;
+  }
+
+  .framework-nav::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+  }
+
+  .framework-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .framework-nav::-webkit-scrollbar-thumb {
+    background: rgba(20, 78, 114, 0.15);
+    border-radius: 10px;
+  }
+
+  [data-bs-theme="dark"] .framework-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .framework-nav-group,
   .framework-nav-toggle {
-    width: 100%;
+    width: auto;
+    flex-shrink: 0;
+    min-width: auto;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .nav-divider {
+    height: 1.5rem;
+    margin: 0 0.4rem;
   }
 
   .framework-dropdown {
-    right: 0;
-    left: 0;
-    min-width: 100%;
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 24px 24px 0 0 !important;
+    box-shadow: 0 -10px 40px rgba(15, 23, 42, 0.2) !important;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    opacity: 0;
+    display: block !important; /* Keep block but hide with transform */
+  }
+
+  .framework-dropdown.show {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
   }
 }
 
