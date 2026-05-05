@@ -291,6 +291,16 @@
                   <span>{{ activeTheme ? getSectionLabel(activeTheme.section) : "-" }}</span>
                   <span>{{ activeTheme ? (activeTheme.focus || []).length + " fokus" : "0 fokus" }}</span>
                 </div>
+
+                <div v-if="activeRole !== 'default' && activeTheme && activeTheme.roleTranslations && activeTheme.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="orj-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="orj-callout role-callout mt-2">
+                    {{ activeTheme.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="orj-callout"><span class="orj-label">Ringkasan Requirement</span><div class="mt-2">{{ activeTheme ? activeTheme.summary : 'Pilih tema untuk membaca ringkasan.' }}</div></div>
                 <div class="orj-note"><span class="orj-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeTheme && activeTheme.analogy ? activeTheme.analogy : '-' }}</div></div>
                 <div class="orj-callout"><span class="orj-label">Fokus Implementasi</span><ul class="orj-plain"><li v-for="(item, idx) in (activeTheme && activeTheme.focus && activeTheme.focus.length ? activeTheme.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
@@ -331,6 +341,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 export default {
   name: "OjkResilience",
   data() {
@@ -371,6 +384,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalThemes() {
       return this.themes.length;
     },
@@ -444,6 +458,18 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     getSectionColor(section) {
       return this.sectionMeta[section]?.color || "#144e72";
     },
@@ -493,7 +519,7 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        const response = await fetch("/data/seojk_resilience_guidance.json");
+        const response = await fetch(`/data/seojk_resilience_guidance.json?t=${new Date().getTime()}`);
         if (response.ok) {
           const data = await response.json();
           this.themes = Array.isArray(data)
@@ -520,6 +546,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .orj-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .orj-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .orj-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
 .orj-shell{display:grid;gap:1rem}
 .orj-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}

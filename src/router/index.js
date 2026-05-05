@@ -80,6 +80,11 @@ const routes = [
         path: '/checklist-tools',
         name: 'checklist_tools',
         component: () => import('../views/ChecklistTools.vue')
+    },
+    {
+        path: '/compliance-simulator',
+        name: 'simulator',
+        component: () => import('../views/Simulator.vue')
     }
 ];
 

@@ -9,6 +9,15 @@ export const useFrameworkStore = defineStore('framework', {
     // Current active framework group
     activeFrameworkGroup: null, // 'nasional' | 'internasional' | null
     
+    // Active Role for Regulation Translator
+    activeRole: 'default',
+    roles: [
+      { id: 'default', label: 'Default View', icon: 'fa-eye' },
+      { id: 'bod', label: 'Board of Directors', icon: 'fa-user-tie' },
+      { id: 'sysadmin', label: 'SysAdmin', icon: 'fa-terminal' },
+      { id: 'legal', label: 'Legal / GRC', icon: 'fa-balance-scale' }
+    ],
+    
     // Navigation dropdown states
     navGroups: [
       {
@@ -103,6 +112,13 @@ export const useFrameworkStore = defineStore('framework', {
      */
     setLoading(isLoading) {
       this.isLoading = isLoading;
+    },
+    
+    /**
+     * Set active role for translator
+     */
+    setActiveRole(roleId) {
+      this.activeRole = roleId;
     },
   },
 });

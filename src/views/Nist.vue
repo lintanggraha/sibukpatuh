@@ -102,6 +102,16 @@
               <div class="nst-inspector-head"><small>Detail Subkategori</small><strong>{{ activeControl ? activeControl.id : '-' }}</strong><span>{{ activeControl ? activeControl.title : 'Pilih subkategori untuk membaca detail.' }}</span></div>
               <div class="nst-inspector-body">
                 <div class="nst-meta"><span>{{ activeControl ? getFunctionLabel(activeControl.function) : '-' }}</span><span>{{ activeControl ? activeControl.category : '-' }}</span><span>{{ activeControl ? (activeControl.sp80053 || []).length + ' referensi' : '0 referensi' }}</span></div>
+
+                <div v-if="activeRole !== 'default' && activeControl && activeControl.roleTranslations && activeControl.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="nst-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="nst-callout role-callout mt-2">
+                    {{ activeControl.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="nst-callout"><span class="nst-label">Deskripsi</span><div class="mt-2">{{ activeControl ? activeControl.description : 'Pilih subkategori untuk membaca deskripsi.' }}</div></div>
                 <div class="nst-note"><span class="nst-label"><i class="fas fa-lightbulb me-1"></i>Catatan Edukatif</span><div class="mt-2">{{ activeControl ? activeControl.panda_explanation : '-' }}</div></div>
                 <div class="nst-callout"><span class="nst-label"><i class="fas fa-bullseye me-1"></i>Fokus Implementasi</span><ul class="nst-plain"><li v-for="(item, idx) in (activeControl?.fokus || [])" :key="idx">{{ item }}</li><li v-if="!activeControl?.fokus?.length" class="text-muted">Tidak ada fokus implementasi tambahan.</li></ul></div>
@@ -186,6 +196,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 export default {
   name: 'Nist',
   data() {
@@ -217,6 +230,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalFuncs() {
       const funcs = this.controls.map(c => c.function).filter(Boolean);
       return new Set(funcs).size;
@@ -316,6 +330,18 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     getFunctionColor(func) { return this.functionMeta[func]?.color || '#144e72'; },
     getFunctionLabel(func) { return this.functionMeta[func]?.label || func || '-'; },
     resetFilters() { this.functionFilter = ''; this.categoryFilter = ''; this.controlSearch = ''; this.currentPage = 1; },
@@ -343,8 +369,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [ctrlRes, spRes] = await Promise.all([
-          fetch('/data/nist_csf.json'),
-          fetch('/data/sp800_53.json')
+          fetch(`/data/nist_csf.json?t=${new Date().getTime()}`),
+          fetch(`/data/sp800_53.json?t=${new Date().getTime()}`)
         ]);
         if (ctrlRes.ok) {
           const data = await ctrlRes.json();
@@ -374,6 +400,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .nst-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .nst-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .nst-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6f1e8 0%,#edf5f4 100%);--accent-muted:rgba(20,78,114,0.1);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell);transition:all 0.3s ease}
 [data-bs-theme="dark"] .nst-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
 .nst-shell{display:grid;gap:1rem}

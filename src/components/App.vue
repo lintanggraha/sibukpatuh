@@ -55,7 +55,12 @@
                  <i class="fas fa-info-circle nav-icon"></i>
                  <span>Tentang</span>
               </router-link>
-
+              
+              <!-- Divider -->
+              <div class="nav-divider"></div>
+              
+              <!-- Role-Based Translator Selector -->
+              <RoleSelector />
 
             </nav>
           </div>
@@ -106,12 +111,14 @@
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { Analytics } from '@vercel/analytics/vue';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
+import RoleSelector from './RoleSelector.vue';
 
 export default {
   name: "App",
   components: {
     Analytics,
-    SpeedInsights
+    SpeedInsights,
+    RoleSelector
   },
   data() {
     return {
@@ -200,6 +207,11 @@ export default {
               routeName: "checklist_tools",
               label: "Checklist Tools",
               icon: "fa-tasks",
+            },
+            {
+              routeName: "simulator",
+              label: "Compliance Simulator",
+              icon: "fa-gamepad",
             },
           ],
         },
@@ -310,7 +322,7 @@ export default {
 html {
   scroll-padding-top: 1rem;
   scroll-behavior: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -321,8 +333,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Native scrolling - no forced smooth */
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
   scrollbar-width: thin;
   scrollbar-color: rgba(20, 78, 114, 0.2) transparent;
 }
@@ -500,15 +511,30 @@ body {
   padding: 1.25rem 0 2rem;
 }
 
+.nav-divider {
+  width: 1px;
+  height: 2.2rem;
+  background: rgba(20, 78, 114, 0.15);
+  margin: 0 0.25rem;
+  align-self: center;
+}
+
+[data-bs-theme="dark"] .nav-divider {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .framework-header {
-  position: relative;
-  z-index: 20;
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
   overflow: visible;
   margin-bottom: 0.8rem;
   padding: 0.85rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
-  background: rgba(255, 251, 246, 0.7);
+  background: rgba(255, 251, 246, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
 }
 
@@ -553,6 +579,7 @@ body {
   flex-wrap: wrap;
   gap: 0.25rem;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .framework-nav-group {
