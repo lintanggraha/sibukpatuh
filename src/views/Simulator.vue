@@ -291,104 +291,90 @@ export default {
       const hasSpecificData = dataTypes.includes('Pribadi Spesifik');
       const hasFinancialSect = industries.includes('Perbankan') || industries.includes('Fintech');
       const hasThirdParty = usages.includes('Vendor Cloud') || usages.includes('Pihak Ketiga');
+      const hasRemote = usages.includes('Tim Remote');
 
-      // Rule 1: UU PDP - Data Transfer Luar Negeri
-      if (hasForeignCloud && hasPersonalData) {
-        let message = 'Transfer Data Pribadi ke Luar Negeri terdeteksi.';
-        let rec = 'Pastikan negara cloud tujuan setara UU PDP dan Dapatkan Persetujuan Eksplisit.';
-        let sev = 'danger';
-        
-        if (hasSpecificData) {
-          message = 'Transfer DATA PRIBADI SPESIFIK (Medis/Biometrik) ke Luar Negeri. Potensi Denda sangat masif.';
-          rec = 'Wajib melakukan DPIA (Data Protection Impact Assessment) sebelum pemrosesan dan melaporkan ke otoritas PDP.';
-        }
-        
-        results.push({
-          framework: 'UU PDP No. 27/2022',
-          severity: sev,
-          message: message,
-          recommendation: rec
-        });
+      // 1. Kebutuhan Kebijakan & Administratif (Policies & SOPs)
+      let policiesMsg = 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
+      let policiesRec = 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
+      
+      if (targets.includes('ISO 27001') || targets.includes('NIST')) {
+          policiesRec += ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset & SDLC.';
       }
-
-      // Rule 2: UU PDP - Remote Access is Data Transfer
-      if (usages.includes('Tim Remote') && hasPersonalData && !hasForeignCloud) {
-        results.push({
-          framework: 'UU PDP No. 27/2022',
+      if (targets.includes('PDP') || hasPersonalData) {
+          policiesRec += ' Penunjukan DPO (Data Protection Officer), Privacy Policy Eksternal, Kebijakan Retensi Data, dan SOP Pemenuhan Hak Subjek Data.';
+      }
+      if (targets.includes('OJK') || hasFinancialSect) {
+          policiesRec += ' Kebijakan Tata Kelola TI sesuai SEOJK/PBI, Pembentukan Komite Pengarah TI (IT Steering Committee).';
+      }
+      results.push({
+          framework: 'Tata Kelola & Kebijakan (Governance)',
           severity: 'warning',
-          message: 'Akses data dari luar negeri (Tim Remote) dikategorikan sebagai Transfer Data Lintas Batas meskipun server ada di Jakarta.',
-          recommendation: 'Batasi remote access hanya via VPN terkontrol dan pastikan ikatan hukum dengan pekerja remote (NDA yang jelas).'
-        });
-      }
+          message: policiesMsg,
+          recommendation: policiesRec
+      });
 
-      // Rule 3: OJK & BI - Data Localization
-      if (hasFinancialSect) {
-        if (hasForeignCloud) {
+      // 2. Kebutuhan Tools & Infrastruktur Teknis (Tools)
+      let toolsMsg = 'Untuk memenuhi kontrol teknis regulasi, arsitektur Anda membutuhkan perangkat (tools) keamanan spesifik:';
+      let toolsRec = 'Next-Gen Firewall (NGFW), Antivirus/EDR di Endpoint, dan enkripsi Data at Rest & in Transit (TLS 1.2+).';
+      
+      if (hasPersonalData || dataTypes.includes('Finansial')) {
+          toolsRec += ' Sistem Data Masking / Obfuscator di level database (terutama lingkungan dev), dan Data Loss Prevention (DLP) untuk mencegah eksfiltrasi.';
+      }
+      if (hasRemote) {
+          toolsRec += ' VPN Enterprise dengan otentikasi MFA (Multi-Factor Authentication), solusi MDM (Mobile Device Management) untuk BYOD.';
+      }
+      if (targets.includes('OJK') || hasFinancialSect) {
+          toolsRec += ' Web Application Firewall (WAF), sistem PAM (Privileged Access Management) untuk akses database/server oleh admin, FIM (File Integrity Monitoring).';
+      }
+      results.push({
+          framework: 'Kontrol Teknis & Infrastruktur',
+          severity: 'danger',
+          message: toolsMsg,
+          recommendation: toolsRec
+      });
+
+      // 3. Kebutuhan Tim & Pengawasan Operasional (SOC & Tim)
+      let opsMsg = 'Tuntutan regulasi mengharuskan pengawasan dan evaluasi keamanan secara berkelanjutan (Continuous Monitoring):';
+      let opsRec = 'Pengecekan log jaringan harian dan Vulnerability Assessment internal minimal setahun sekali.';
+      
+      if (targets.includes('OJK') || targets.includes('ISO 27001') || hasFinancialSect) {
+          opsRec = 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin.';
+      }
+      if (targets.includes('NIST') || targets.includes('OJK')) {
+          opsRec += ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun.';
+      }
+      if (targets.includes('ISO 27001') || targets.includes('OJK')) {
+          opsRec += ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler.';
+      }
+      results.push({
+          framework: 'Operasional, Tim (SOC) & Audit',
+          severity: 'warning',
+          message: opsMsg,
+          recommendation: opsRec
+      });
+
+      // 4. Manajemen Risiko Pihak Ketiga & Lokalisasi Data
+      if (hasThirdParty || hasForeignCloud) {
+          let vendorMsg = 'Penggunaan layanan pihak ketiga atau server cloud memicu kewajiban kontrol kepatuhan hukum:';
+          let vendorRec = 'Perjanjian SLA ketat, NDA, dan klausa Right to Audit dengan vendor.';
+          let sev = 'warning';
+          
+          if (hasForeignCloud && hasFinancialSect) {
+              sev = 'danger';
+              vendorMsg = 'PELANGGARAN LOKALISASI OJK/BI: Regulasi Finansial mewajibkan Sistem & Data Center Utama di Indonesia.';
+              vendorRec = 'Migrasikan server Core System ke Data Center Indonesia. Backup/DRC di luar negeri harus dengan izin OJK/BI.';
+          } else if (hasForeignCloud && (targets.includes('PDP') || hasPersonalData)) {
+              sev = 'danger';
+              vendorMsg = 'Transfer Data Lintas Batas (Cross-Border Data Transfer) terkait UU PDP No. 27/2022.';
+              vendorRec = 'Dapatkan persetujuan eksplisit dari pengguna, ATAU pastikan negara cloud tujuan memiliki standar pelindungan data setara/lebih tinggi dari Indonesia (wajib DPIA).';
+          }
+          
           results.push({
-            framework: 'PBI / SEOJK (Data Localization)',
-            severity: 'danger',
-            message: 'Sektor finansial diwajibkan menempatkan Sistem dan Pusat Data di wilayah Indonesia untuk fungsi core.',
-            recommendation: 'Jika untuk non-core, wajib meminta persetujuan OJK/BI terlebih dahulu dan memastikan hak audit fisik bagi regulator.'
+              framework: 'Manajemen Vendor & Kedaulatan Data',
+              severity: sev,
+              message: vendorMsg,
+              recommendation: vendorRec
           });
-        } else {
-           results.push({
-            framework: 'PBI / SEOJK',
-            severity: 'success',
-            message: 'Lokasi server sudah menggunakan On-Premise/Cloud lokal, sejalan dengan prinsip lokalisasi penyelenggara sistem elektronik.',
-            recommendation: 'Pastikan rasio DRC (Disaster Recovery Center) juga berada dalam batas wilayah hukum NKRI.'
-          });
-        }
-      }
-
-      // Rule 4: PCI-DSS / Financial Data
-      if (dataTypes.includes('Finansial')) {
-        results.push({
-          framework: 'Standar Industri (PCI-DSS)',
-          severity: 'warning',
-          message: 'Menyimpan data kartu kredit atau mutasi rekening tunduk pada regulasi standar keamanan tinggi.',
-          recommendation: 'Jaringan penyimpanan data finansial wajib di-segmentasi, terenkripsi (tokenization), dan tidak boleh menyimpan CVV.'
-        });
-      }
-
-      // Rule 5: Vendor & Third Party Risk (ISO 27001 / NIST)
-      if (hasThirdParty) {
-        let msg = 'Risiko rantai pasok dari Pihak Ketiga terdeteksi.';
-        if (dataTypes.includes('HAKI') || hasSpecificData) {
-          msg = 'Pihak ketiga memiliki akses ke Rahasia Dagang atau Data Sensitif. Kebocoran oleh vendor sering terjadi.';
-        }
-        results.push({
-          framework: 'ISO 27001 (A.15) / NIST',
-          severity: 'warning',
-          message: msg,
-          recommendation: 'Wajib melakukan Vendor Risk Assessment. Terapkan Right to Audit dan klausul sanksi pelanggaran NDA dalam kontrak vendor.'
-        });
-      }
-
-      // Rule 6: GDPR Impact
-      if (locations.includes('Eropa') && hasPersonalData) {
-        results.push({
-           framework: 'GDPR (Uni Eropa)',
-           severity: 'warning',
-           message: 'Menggunakan server di Eropa memicu kewajiban tunduk pada regulasi GDPR Eropa terkait standar privasi.',
-           recommendation: 'Terapkan Standard Contractual Clauses (SCC) dan patuhi hak subjek data seperti Right to be Forgotten.'
-        });
-      }
-
-      // Base Safe Conclusion
-      if (results.filter(r => r.severity === 'danger' || r.severity === 'warning').length === 0) {
-         results.push({
-          framework: 'Kesimpulan Umum',
-          severity: 'success',
-          message: 'Konfigurasi Anda saat ini sangat aman dan sesuai dengan praktik compliance yang disarankan.',
-          recommendation: 'Terus pantau akses log harian dan jadwalkan Penetration Testing tahunan.'
-        });
-      } else if (!hasFinancialSect && !hasForeignCloud && !hasSpecificData && results.length < 3) {
-         results.push({
-          framework: 'Kesimpulan Menengah',
-          severity: 'success',
-          message: 'Karena Anda bukan sektor finansial dan tidak pakai server asing, beban regulasinya jauh lebih ringan.',
-          recommendation: 'Perhatikan kontrak dengan pihak ketiga dan pastikan internal security hygiene terjaga.'
-        });
       }
 
       // Sort by severity (danger first, then warning, then success)
