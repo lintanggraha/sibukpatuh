@@ -13,8 +13,16 @@
 
 **Konten edukatif — bukan pengganti standar resmi:**
 
-- Data untuk **ISO 27001:2022**, **COBIT 2019**, **PBI**, dan **SEOJK** adalah **ringkasan edukatif** berdasarkan interpretasi teknis, **bukan** teks hukum resmi.
-- Untuk keperluan audit resmi, silakan merujuk pada dokumen yang diterbitkan oleh institusi terkait (BSN, OJK, BI, ISO, ISACA).
+- Data untuk **ISO 27001:2022**, **COBIT 2019**, **NIST CSF**, regulasi Indonesia (seperti **SEOJK**, **PBI**, **PADG**, **UU PDP**), serta panduan **OWASP** adalah **ringkasan edukatif** berdasarkan interpretasi teknis, **bukan** teks hukum resmi.
+- Untuk keperluan audit resmi, silakan merujuk pada dokumen yang diterbitkan oleh institusi terkait (BSN, OJK, BI, ISO, ISACA, OWASP).
+
+---
+
+## 🗺️ Arsitektur Aplikasi (Flowchart)
+
+Berikut adalah alur navigasi dan fitur utama dalam aplikasi SibukPatuh:
+
+![Flowchart Arsitektur SibukPatuh](./public/flowchart-diagram.png)
 
 ---
 
@@ -25,20 +33,21 @@ Pusat komando intelijen ancaman yang mengintegrasikan berbagai sumber data globa
 - **Threat Feed (OTX AlienVault):** Monitoring *pulse* dan indikator ancaman (IOC) terbaru secara *real-time*.
 - **Vulnerability Intel (CISA KEV):** Daftar kerentanan yang telah dieksploitasi secara aktif (*Known Exploited Vulnerabilities*).
 - **Breach Checker (Smart Fallback):** Integrasi API BreachDirectory dengan mekanisme **Smart Fallback** otomatis (menggunakan data *mock* jika limit API tercapai) untuk simulasi kebocoran data email.
+- **AI Analyst Integration:** Ditenagai oleh **Google Gemini 3 Flash**, memberikan analisis CVE mendalam, rekomendasi mitigasi, dan memetakan dampak risiko terhadap regulasi di Indonesia.
 
-### 🤖 AI Analyst Integration
-Ditenagai oleh **Google Gemini 3 Flash**, aplikasi ini menyediakan asisten AI untuk menganalisis CVE secara mendalam, memberikan rekomendasi mitigasi, dan memetakan dampak risiko terhadap regulasi di Indonesia.
-
-### 📊 Professional Framework Explorer
-Navigasi interaktif untuk berbagai standar kepatuhan dengan layout 3-kolom yang efisien:
-- **Nasional:** SEOJK 29/2022, Panduan Resiliensi OJK, PBI 02/2024 (PADG 32).
+### 2. 📊 Professional Framework Explorer
+Navigasi interaktif untuk berbagai standar kepatuhan dengan layout responsif:
+- **Nasional:** SEOJK 29/2022, Panduan Resiliensi OJK, PBI 02/2024, PADG 32/2025, UU PDP 27/2022.
 - **Internasional:** COBIT 2019, NIST CSF 2.0, ISO 27001:2022.
-- **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan analogi bahasa santai namun profesional.
+- **Application Security (AppSec):** OWASP Top 10, OWASP ASVS.
+- **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan penjelasan bahasa santai dan mudah dipahami namun tetap profesional.
 
-### 🔗 Compliance Synergy (Cross-Mapping)
-- **Visual Cross-Mapping:** Visualisasi keterkaitan antar framework (ISO, NIST, PBI, dll) menggunakan **D3.js Force-Directed Graph**.
-- **Comparison Engine:** Perbandingan *side-by-side* antar regulasi untuk menemukan *overlapping controls* secara otomatis.
-- **Gap Analysis Tool:** Identifikasi celah kepatuhan dengan memetakan status implementasi terhadap standar target.
+### 3. 🔗 Compliance Synergy (Cross-Mapping & Analysis Tools)
+Toolkit lengkap untuk membantu memetakan kepatuhan:
+- **Cross-Mapping Visualization:** Visualisasi keterkaitan antar framework (ISO, NIST, PBI, dll) menggunakan **D3.js Force-Directed Graph**.
+- **Framework Analysis:** Perbandingan *side-by-side* antar regulasi untuk menemukan *overlapping controls* secara otomatis.
+- **Checklist Tools:** Alat evaluasi (Gap Analysis) mandiri untuk mengukur tingkat kepatuhan saat ini dan mengekspor laporannya ke bentuk PDF/Word.
+- **Compliance Simulator:** Fitur analisis "What-If" untuk menyimulasikan dampak perubahan implementasi kontrol terhadap total skor kepatuhan secara instan.
 
 ---
 
@@ -51,13 +60,14 @@ Lacak pembaruan fitur dan perbaikan bug secara real-time di [CHANGELOG.md](./CHA
 
 ### Frontend
 - **Vue 3 (Composition API):** Framework reaktif untuk performa tinggi.
-- **ApexCharts:** Visualisasi distribusi ancaman dan pilar regulasi.
-- **Custom CSS:** Estetika *Glassmorphism* dan *High-Density Layout*.
+- **Pinia:** State management yang ringan dan efisien.
+- **Vue Router:** Navigasi client-side yang mulus tanpa refresh halaman (SPA).
+- **ApexCharts & D3.js:** Visualisasi distribusi data dan pemetaan graph.
+- **Custom CSS:** Estetika *Glassmorphism* dan dukungan responsif *Dark Mode*.
 
 ### Backend (Serverless)
-- **Vercel Serverless Functions:** Proxy API untuk bypass CORS dan perlindungan API Key.
-- **Smart Rate Limiting:** Mekanisme perlindungan *client-side* untuk mencegah *spamming* API.
-- **Vercel Routing:** Konfigurasi `vercel.json` untuk mendukung *Single Page Application (SPA) refresh stability*.
+- **Vercel Serverless Functions:** Proxy API terintegrasi untuk menangani permintaan eksternal (menghindari CORS dan menyembunyikan API Key).
+- **Smart Rate Limiting:** Mekanisme pencegahan *client-side* terhadap indikasi *spamming* permintaan.
 
 ---
 
@@ -65,13 +75,14 @@ Lacak pembaruan fitur dan perbaikan bug secara real-time di [CHANGELOG.md](./CHA
 
 ```bash
 sibukpatuh-vue/
-├── api/                # Serverless Functions (Breach, CISA, Gemini, OTX)
+├── api/                # Serverless Functions (Breach, CISA, Gemini, OTX, MISP)
 ├── public/data/        # Framework JSON Datasets (COBIT, PBI, ISO, dll)
 ├── src/
 │   ├── components/     # UI Components
 │   ├── views/          # Framework & Intelligence Pages
 │   ├── services/       # API Services Logic
-│   └── assets/css/     # Core Design System
+│   ├── router/         # Vue Router Configuration
+│   └── assets/css/     # Core Design System & Styling
 ├── vercel.json         # Deployment & Routing Config
 └── README.md           # Documentation
 ```
