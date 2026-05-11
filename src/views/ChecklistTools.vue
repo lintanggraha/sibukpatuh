@@ -45,6 +45,7 @@
               <h3>2. Workspace Checklist Mandiri</h3>
               <div>
                 <button class="btn btn-sm btn-outline-secondary me-2" @click="currentStep = 1"><i class="fas fa-arrow-left me-1"></i> Kembali</button>
+                <button class="btn btn-sm btn-outline-danger me-2" @click="resetChecklist"><i class="fas fa-trash-alt me-1"></i> Mulai Ulang (Clear)</button>
                 <button class="btn btn-sm btn-success" @click="analyzeWithAI" :disabled="aiLoading"><i class="fas fa-robot me-1"></i> {{ aiLoading ? 'Menganalisa...' : 'Analisa Gap dengan AI' }}</button>
               </div>
             </div>
@@ -198,6 +199,15 @@ export default {
     },
     saveToLocal() {
       localStorage.setItem('sibukpatuh_checklist', JSON.stringify(this.checklistData));
+    },
+    resetChecklist() {
+      if (confirm('Apakah Anda yakin ingin menghapus seluruh data checklist ini? Data tidak dapat dikembalikan.')) {
+        localStorage.removeItem('sibukpatuh_checklist');
+        this.checklistData = [];
+        this.selectedFrameworks = [];
+        this.aiResult = null;
+        this.currentStep = 1;
+      }
     },
     async generateChecklist() {
       this.loading = true;
