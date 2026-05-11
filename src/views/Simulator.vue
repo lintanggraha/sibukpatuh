@@ -227,10 +227,15 @@ export default {
           desc: 'Regulasi apa yang secara spesifik menjadi target utama kepatuhan Anda?',
           field: 'targets',
           options: [
-            { id: 'ISO 27001', label: 'ISO 27001', desc: 'Standar Internasional', icon: 'fa-shield-alt' },
-            { id: 'NIST', label: 'NIST CSF', desc: 'Framework US', icon: 'fa-compass' },
-            { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Privasi Data Indonesia', icon: 'fa-user-shield' },
-            { id: 'OJK', label: 'Regulasi OJK / BI', desc: 'Sektor Finansial', icon: 'fa-landmark' }
+            { id: 'ISO 27001', label: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt' },
+            { id: 'NIST', label: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-compass' },
+            { id: 'COBIT', label: 'COBIT 2019', desc: 'Tata Kelola TI Perusahaan', icon: 'fa-project-diagram' },
+            { id: 'SEOJK', label: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark' },
+            { id: 'PBI', label: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns' },
+            { id: 'PADG', label: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract' },
+            { id: 'Resiliensi', label: 'Resiliensi OJK', desc: 'Panduan Resiliensi Digital OJK', icon: 'fa-shield-heart' },
+            { id: 'OWASP', label: 'OWASP (Top 10 / ASVS)', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug' },
+            { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield' }
           ]
         }
       ]
@@ -297,14 +302,16 @@ export default {
       let policiesMsg = 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
       let policiesRec = 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
       
-      if (targets.includes('ISO 27001') || targets.includes('NIST')) {
-          policiesRec += ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset & SDLC.';
+      const hasOJK = targets.includes('SEOJK') || targets.includes('PBI') || targets.includes('PADG') || targets.includes('Resiliensi');
+
+      if (targets.includes('ISO 27001') || targets.includes('NIST') || targets.includes('COBIT')) {
+          policiesRec += ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset, dan Dokumentasi Tata Kelola TI & Manajemen Risiko (COBIT).';
       }
       if (targets.includes('PDP') || hasPersonalData) {
           policiesRec += ' Penunjukan DPO (Data Protection Officer), Privacy Policy Eksternal, Kebijakan Retensi Data, dan SOP Pemenuhan Hak Subjek Data.';
       }
-      if (targets.includes('OJK') || hasFinancialSect) {
-          policiesRec += ' Kebijakan Tata Kelola TI sesuai SEOJK/PBI, Pembentukan Komite Pengarah TI (IT Steering Committee).';
+      if (hasOJK || hasFinancialSect) {
+          policiesRec += ' Kebijakan Tata Kelola TI sesuai Regulasi Finansial (OJK/BI), Pembentukan Komite Pengarah TI (IT Steering Committee).';
       }
       results.push({
           framework: 'Tata Kelola & Kebijakan (Governance)',
@@ -323,7 +330,9 @@ export default {
       if (hasRemote) {
           toolsRec += ' VPN Enterprise dengan otentikasi MFA (Multi-Factor Authentication), solusi MDM (Mobile Device Management) untuk BYOD.';
       }
-      if (targets.includes('OJK') || hasFinancialSect) {
+      if (targets.includes('OWASP')) {
+          toolsRec += ' SAST/DAST Tooling terintegrasi dalam CI/CD pipeline, Web Application Firewall (WAF), dan implementasi prinsip Secure Coding.';
+      } else if (hasOJK || hasFinancialSect) {
           toolsRec += ' Web Application Firewall (WAF), sistem PAM (Privileged Access Management) untuk akses database/server oleh admin, FIM (File Integrity Monitoring).';
       }
       results.push({
@@ -337,14 +346,14 @@ export default {
       let opsMsg = 'Tuntutan regulasi mengharuskan pengawasan dan evaluasi keamanan secara berkelanjutan (Continuous Monitoring):';
       let opsRec = 'Pengecekan log jaringan harian dan Vulnerability Assessment internal minimal setahun sekali.';
       
-      if (targets.includes('OJK') || targets.includes('ISO 27001') || hasFinancialSect) {
-          opsRec = 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin.';
+      if (hasOJK || targets.includes('ISO 27001') || targets.includes('PADG') || hasFinancialSect) {
+          opsRec = 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin minimal tahunan.';
       }
-      if (targets.includes('NIST') || targets.includes('OJK')) {
-          opsRec += ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun.';
+      if (targets.includes('NIST') || hasOJK || targets.includes('Resiliensi')) {
+          opsRec += ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun, serta simulasi DRP tahunan.';
       }
-      if (targets.includes('ISO 27001') || targets.includes('OJK')) {
-          opsRec += ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler.';
+      if (targets.includes('ISO 27001') || hasOJK || targets.includes('COBIT')) {
+          opsRec += ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler untuk validasi sertifikasi atau kepatuhan.';
       }
       results.push({
           framework: 'Operasional, Tim (SOC) & Audit',
