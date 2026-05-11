@@ -155,6 +155,13 @@ export default {
         { id: 'iso27001', name: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt', file: 'iso27001.json' },
         { id: 'cobit', name: 'COBIT 2019', desc: 'Framework Tata Kelola IT Perusahaan', icon: 'fa-project-diagram', file: 'cobit_2019.json' },
         { id: 'seojk', name: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark', file: 'seojk_requirements.json' },
+        { id: 'nist', name: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-network-wired', file: 'nist_csf.json' },
+        { id: 'pbi', name: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
+        { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: 'Resiliensi Digital OJK', icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },
+        { id: 'padg', name: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract', file: 'padg_requirements.json' },
+        { id: 'owasp_top10', name: 'OWASP Top 10', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug', file: 'owasp_top10_reqs.json' },
+        { id: 'owasp_asvs', name: 'OWASP ASVS', desc: 'Verifikasi Keamanan Aplikasi', icon: 'fa-list-check', file: 'owasp_asvs_reqs.json' },
+        { id: 'pdp', name: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield', file: 'uu_pdp_requirements.json' }
       ],
       selectedFrameworks: [],
       checklistData: []
@@ -275,13 +282,15 @@ export default {
         const promptData = gapItems.map(i => `[${i.source.toUpperCase()}] ${i.id} - ${i.name}\nStatus: ${i.status}\nKondisi Saat Ini (Evidens): ${i.evidence || 'Tidak ada catatan'}`).join('\n\n');
 
         const promptText = `Tolong bertindak sebagai Senior Auditor IT / Konsultan GRC. 
-Berikut adalah temuan *GAP* (kekurangan implementasi) dari checklist compliance (ISO/COBIT/SEOJK) di perusahaan saya.
-Tolong berikan laporan analisa gap eksekutif, serta rekomendasi langkah perbaikan (action plan) yang taktis dan diprioritaskan.
+Berikut adalah temuan *GAP* (kekurangan implementasi) dari checklist compliance di perusahaan saya.
+Tolong berikan laporan analisa gap yang SANGAT KOMPREHENSIF, MENDALAM, dan TERSTRUKTUR untuk SETIAP poin kontrol yang memiliki gap (Belum/Parsial).
 
 PENTING:
-1. Berikan analisa yang ringkas, padat, dan *to-the-point*.
-2. TIDAK PERLU menawarkan bantuan tambahan (seperti membuat draf kebijakan/policy). Langsung tutup laporan jika analisa sudah selesai.
-3. Gunakan format Markdown yang rapi (heading, bullet points, dan bold).
+1. Jangan batasi analisa hanya pada beberapa poin. Berikan pembahasan komprehensif, mencakup dampak risiko dan rekomendasi langkah perbaikan (action plan) yang detail untuk SETIAP gap yang ditemukan.
+2. Jelaskan langkah-langkah implementasi secara teknis maupun administratif.
+3. TIDAK PERLU menawarkan bantuan tambahan (seperti membuat draf kebijakan/policy). Langsung tutup laporan jika analisa sudah selesai.
+4. Gunakan format Markdown yang rapi (heading, bullet points, dan bold).
+5. Laporan ini untuk level eksekutif dan manajerial, gunakan bahasa Indonesia yang profesional.
 
 Data Temuan:
 ${promptData}`;
