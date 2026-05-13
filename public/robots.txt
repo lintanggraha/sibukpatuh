@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sibukpatuh.vercel.app/sitemap.xml
+Sitemap: https://sibukpatuh.net/sitemap.xml

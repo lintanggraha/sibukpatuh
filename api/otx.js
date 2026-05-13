@@ -4,6 +4,12 @@ const PULSE_SUBSCRIBED_PATH = '/pulses/subscribed';
 const INDICATOR_ROOT_PATH = '/indicators';
 const SUPPORTED_INDICATOR_TYPES = new Set(['IPv4', 'hostname', 'domain', 'file']);
 const DEFAULT_MODE = 'pulses';
+const ALLOWED_ORIGIN_PATTERNS = [
+  /^https:\/\/(www\.)?sibukpatuh\.net$/i,
+  /^https:\/\/sibukpatuh\.vercel\.app$/i,
+  /^http:\/\/localhost(?::\d+)?$/i,
+  /^http:\/\/127\.0\.0\.1(?::\d+)?$/i,
+];
 
 function readHeaderValue(value) {
   if (Array.isArray(value)) {
@@ -11,6 +17,25 @@ function readHeaderValue(value) {
   }
 
   return String(value || '').trim();
+}
+
+function getRequestOrigin(headers) {
+  const rawOrigin = Array.isArray(headers.origin) ? headers.origin[0] : headers.origin;
+  if (rawOrigin) return String(rawOrigin).trim();
+
+  const rawReferer = Array.isArray(headers.referer) ? headers.referer[0] : headers.referer;
+  if (!rawReferer) return '';
+
+  try {
+    const url = new URL(String(rawReferer));
+    return url.origin;
+  } catch {
+    return '';
+  }
+}
+
+function isAllowedOrigin(origin) {
+  return ALLOWED_ORIGIN_PATTERNS.some((pattern) => pattern.test(origin));
 }
 
 function buildPulseSearchPath(searchParams) {
@@ -62,12 +87,6 @@ function buildUpstreamPath(searchParams) {
   throw new Error('Unsupported mode. Use pulses or indicator.');
 }
 
-function getAuthMode(serverApiKey, clientApiKey) {
-  if (serverApiKey) return 'server-env';
-  if (clientApiKey) return 'client-header';
-  return 'none';
-}
-
 function getCacheControl(upstreamOk, serverApiKey) {
   if (upstreamOk && serverApiKey) {
     return 's-maxage=300, stale-while-revalidate=900';
@@ -89,11 +108,10 @@ export default async function handler(request, response) {
     return;
   }
 
-  // Security: Basic Origin/Referer validation to prevent curl abuse
-  const origin = request.headers.origin || request.headers.referer || '';
-  if (!origin.includes('localhost') && !origin.includes('sibukpatuh')) {
-    // response.status(403).json({ error: 'Forbidden. Invalid Origin.' });
-    // return;
+  const origin = getRequestOrigin(request.headers);
+  if (!origin || !isAllowedOrigin(origin)) {
+    response.status(403).json({ error: 'Forbidden. Invalid Origin.' });
+    return;
   }
 
   const requestUrl = new URL(request.url, `https://${request.headers.host || 'localhost'}`);
@@ -106,8 +124,6 @@ export default async function handler(request, response) {
     headers['X-OTX-API-KEY'] = apiKey;
   }
 
-  const authMode = getAuthMode(serverApiKey, clientApiKey);
-
   try {
     const upstreamPath = buildUpstreamPath(requestUrl.searchParams);
     const upstream = await fetch(`${OTX_API_ROOT}${upstreamPath}`, { headers });
@@ -115,12 +131,10 @@ export default async function handler(request, response) {
 
     response.setHeader('Content-Type', upstream.headers.get('content-type') || 'application/json');
     response.setHeader('Vary', 'X-OTX-API-KEY');
-    response.setHeader('X-SibukPatuh-Otx-Auth-Mode', authMode);
     response.setHeader('Cache-Control', getCacheControl(upstream.ok, serverApiKey));
     response.status(upstream.status).send(body);
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    response.setHeader('X-SibukPatuh-Otx-Auth-Mode', authMode);
     response.status(getErrorStatus(error)).json({
       error: 'OTX request failed',
       message: errorMessage,
