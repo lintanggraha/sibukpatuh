@@ -4,12 +4,38 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import('../views/FrameworkIndex.vue')
+        component: () => import('../views/FrameworkIndex.vue'),
+        meta: {
+            title: 'SibukPatuh - Referensi Edukatif Kepatuhan Siber dan Tata Kelola TI',
+            description: 'Ruang belajar framework, regulasi, dan praktik kepatuhan keamanan siber untuk praktisi Indonesia.'
+        }
     },
     {
         path: '/about',
         name: 'about',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/AboutView.vue'),
+        meta: {
+            title: 'Tentang SibukPatuh - Metodologi dan Pengelola',
+            description: 'Profil, tujuan, metodologi editorial, dan disclaimer edukatif SibukPatuh.'
+        }
+    },
+    {
+        path: '/privacy-policy',
+        name: 'privacy_policy',
+        component: () => import('../views/PrivacyPolicy.vue'),
+        meta: {
+            title: 'Kebijakan Privasi SibukPatuh',
+            description: 'Kebijakan privasi, cookie, analytics, iklan, dan layanan pihak ketiga di SibukPatuh.'
+        }
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: () => import('../views/ContactView.vue'),
+        meta: {
+            title: 'Kontak SibukPatuh',
+            description: 'Hubungi pengelola SibukPatuh untuk koreksi konten, pertanyaan privasi, dan laporan bug.'
+        }
     },
     {
         path: '/frameworks/iso27001',
@@ -102,6 +128,38 @@ const router = createRouter({
       // content-heavy pages and forces extra work on Firefox/mobile browsers.
       return { top: 0 };
     }
+});
+
+router.afterEach((to) => {
+    const defaultTitle = 'SibukPatuh - Referensi Edukatif Kepatuhan Siber dan Tata Kelola TI';
+    const defaultDescription = 'SibukPatuh adalah referensi edukatif berbahasa Indonesia untuk mempelajari framework, regulasi, dan kepatuhan keamanan siber.';
+    const title = to.meta.title || defaultTitle;
+    const description = to.meta.description || defaultDescription;
+    const canonicalUrl = `https://sibukpatuh.net${to.path === '/' ? '/' : to.path}`;
+
+    document.title = title;
+
+    const upsertMeta = (selector, attributes) => {
+        let element = document.head.querySelector(selector);
+        if (!element) {
+            element = document.createElement('meta');
+            document.head.appendChild(element);
+        }
+        Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+    };
+
+    upsertMeta('meta[name="description"]', { name: 'description', content: description });
+    upsertMeta('meta[property="og:title"]', { property: 'og:title', content: title });
+    upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description });
+    upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', canonicalUrl);
 });
 
 export default router;

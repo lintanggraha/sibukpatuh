@@ -55,6 +55,11 @@
                  <i class="fas fa-info-circle nav-icon"></i>
                  <span>Tentang</span>
               </router-link>
+
+              <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
+                 <i class="fas fa-envelope nav-icon"></i>
+                 <span>Kontak</span>
+              </router-link>
               
               <!-- Divider -->
               <div class="nav-divider"></div>
@@ -76,6 +81,18 @@
           </transition>
         </router-view>
       </main>
+
+      <footer class="site-footer" aria-label="Informasi situs">
+        <div>
+          <strong>SibukPatuh</strong>
+          <span>Referensi edukatif keamanan siber, tata kelola TI, dan kepatuhan digital.</span>
+        </div>
+        <nav aria-label="Footer navigation">
+          <router-link to="/about">Tentang</router-link>
+          <router-link to="/privacy-policy">Kebijakan Privasi</router-link>
+          <router-link to="/contact">Kontak</router-link>
+        </nav>
+      </footer>
       <!-- Trakteer Tip Floating Button -->
       <a 
         href="https://trakteer.id/lintanggraha/tip" 
@@ -282,7 +299,8 @@ export default {
       this.frameworkNavGroups[3].active =
         route.name === "cross_mapping" ||
         route.name === "framework_analysis" ||
-        route.name === "checklist_tools";
+        route.name === "checklist_tools" ||
+        route.name === "simulator";
       
       // Sync with Pinia store
       const store = useFrameworkStore();
@@ -720,6 +738,51 @@ body {
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
 }
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 22px;
+  background: rgba(255, 251, 246, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.82rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.045);
+}
+
+.site-footer strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.site-footer a {
+  color: var(--active);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: underline;
+}
+
+[data-bs-theme="dark"] .site-footer {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .route-wrapper {
   width: 100%;
   height: 100%;
@@ -780,6 +843,16 @@ body {
     padding: 0.65rem;
     border-radius: 20px;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.055);
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 18px;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
   }
 
   .iso-list,
