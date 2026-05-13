@@ -121,7 +121,7 @@ export default {
 <style scoped>
 .role-selector {
   position: relative;
-  margin-left: 0.5rem;
+  margin-left: 0;
   z-index: 100;
 }
 
@@ -129,16 +129,17 @@ export default {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 0.85rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 12px;
   border: 1px solid rgba(20, 78, 114, 0.15);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 245, 248, 0.9) 100%);
   color: var(--ink);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .role-toggle:hover {
@@ -315,6 +316,15 @@ export default {
 }
 
 @media (max-width: 991px) {
+  .role-selector {
+    width: 100%;
+  }
+
+  .role-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
   .role-label {
     display: none;
   }
