@@ -615,10 +615,9 @@ body {
 
 .framework-nav-area {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
-  gap: 0.55rem;
+  justify-content: flex-end;
+  gap: 0.6rem;
   flex: 1 1 auto;
   min-width: 0;
 }
@@ -626,7 +625,7 @@ body {
 .framework-nav {
   display: flex;
   flex-wrap: nowrap;
-  gap: 0.15rem;
+  gap: 0.1rem;
   justify-content: flex-end;
   align-items: center;
   min-width: 0;
@@ -687,16 +686,12 @@ body {
 }
 
 .framework-tools {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.4rem;
-  width: 100%;
+  gap: 0.35rem;
+  width: auto;
   flex: 0 0 auto;
-}
-
-.framework-tools .nav-divider {
-  display: none;
 }
 
 .framework-dropdown {
@@ -1023,7 +1018,7 @@ body {
   }
 
   .framework-nav-area {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 0.55rem;
   }
@@ -1092,6 +1087,7 @@ body {
   }
 
   .framework-tools {
+    width: 100%;
     justify-content: flex-start;
   }
 
