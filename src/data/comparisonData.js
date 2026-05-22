@@ -9,7 +9,8 @@ export const comparisonData = {
     { id: 'padg', name: 'PADG 32/2025' },
     { id: 'owasp_top10', name: 'OWASP Top 10' },
     { id: 'owasp_asvs', name: 'OWASP ASVS' },
-    { id: 'pdp', name: 'UU PDP No. 27/2022' }
+    { id: 'pdp', name: 'UU PDP No. 27/2022' },
+    { id: 'padk', name: 'PADK 1 Tahun 2026' }
   ],
   topics: [
     { id: 'access', name: 'Access Control' },
@@ -34,7 +35,8 @@ export const comparisonData = {
       padg: { id: 'PADG-2', desc: 'Manajemen identitas dan hak akses' },
       owasp_top10: { id: 'A01:2021', desc: 'Broken Access Control' },
       owasp_asvs: { id: 'V2', desc: 'Authentication Verification' },
-      pdp: { id: 'Pasal 35', desc: 'Mencegah akses tidak sah ke data pribadi' }
+      pdp: { id: 'Pasal 35', desc: 'Mencegah akses tidak sah ke data pribadi' },
+      padk: { id: 'Bab 2', desc: 'Tata Kelola TI & Manajemen Akses' }
     },
     {
       topic: 'access',
@@ -47,7 +49,8 @@ export const comparisonData = {
       padg: { id: 'PADG-3', desc: 'Pembatasan akses fisik dan logis' },
       owasp_top10: null,
       owasp_asvs: { id: 'V4', desc: 'Access Control Verification' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 2', desc: 'Pembatasan hak akses sistem' }
     },
     {
       topic: 'access',
@@ -60,7 +63,8 @@ export const comparisonData = {
       padg: { id: 'PADG-4', desc: 'Otentikasi Multi-Faktor (MFA)' },
       owasp_top10: { id: 'A07:2021', desc: 'Identification and Authentication Failures' },
       owasp_asvs: { id: 'V2.8', desc: 'MFA Requirements' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 2', desc: 'MFA untuk akses kritikal' }
     },
     {
       topic: 'access',
@@ -73,7 +77,8 @@ export const comparisonData = {
       padg: null,
       owasp_top10: null,
       owasp_asvs: { id: 'V3', desc: 'Session Management' },
-      pdp: null
+      pdp: null,
+      padk: null
     },
 
     // --- INCIDENT RESPONSE (Topic 2) ---
@@ -88,7 +93,8 @@ export const comparisonData = {
       padg: { id: 'PADG-IR', desc: 'Prosedur Penanganan Insiden' },
       owasp_top10: { id: 'A09:2021', desc: 'Security Logging and Monitoring Failures' },
       owasp_asvs: { id: 'V7', desc: 'Error Handling and Logging' },
-      pdp: { id: 'Pasal 46', desc: 'Kewajiban pemberitahuan kegagalan PDP' }
+      pdp: { id: 'Pasal 46', desc: 'Kewajiban pemberitahuan kegagalan PDP' },
+      padk: { id: 'Bab 5', desc: 'Prosedur penanganan insiden' }
     },
     {
       topic: 'incident',
@@ -101,7 +107,8 @@ export const comparisonData = {
       padg: { id: 'PADG-IR2', desc: 'Analisis Dampak' },
       owasp_top10: null,
       owasp_asvs: { id: 'V7.3', desc: 'Log processing' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 5', desc: 'Analisis insiden siber' }
     },
     {
       topic: 'incident',
@@ -114,7 +121,8 @@ export const comparisonData = {
       padg: { id: 'PADG-IR3', desc: 'Pengumpulan Bukti Forensik' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 5', desc: 'Pengumpulan bukti digital' }
     },
     {
       topic: 'incident',
@@ -127,7 +135,8 @@ export const comparisonData = {
       padg: { id: 'PADG-IR4', desc: 'Lessons Learned & Tindakan Korektif' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: { id: 'Pasal 47', desc: 'Tindakan pencegahan insiden lanjutan' }
+      pdp: { id: 'Pasal 47', desc: 'Tindakan pencegahan insiden lanjutan' },
+      padk: { id: 'Bab 5', desc: 'Evaluasi insiden' }
     },
 
     // --- RISK MANAGEMENT (Topic 3) ---
@@ -142,7 +151,8 @@ export const comparisonData = {
       padg: { id: 'PADG-RM1', desc: 'Penilaian Risiko TI' },
       owasp_top10: { id: 'A06:2021', desc: 'Vulnerable and Outdated Components' },
       owasp_asvs: { id: 'V1.1', desc: 'Secure Software Development Lifecycle' },
-      pdp: { id: 'Pasal 39', desc: 'DPIA (Data Protection Impact Assessment)' }
+      pdp: { id: 'Pasal 39', desc: 'DPIA (Data Protection Impact Assessment)' },
+      padk: { id: 'Bab 3', desc: 'Identifikasi kerentanan' }
     },
     {
       topic: 'risk',
@@ -155,7 +165,8 @@ export const comparisonData = {
       padg: { id: 'PADG-RM2', desc: 'Pemindaian Kerentanan & VAPT' },
       owasp_top10: null,
       owasp_asvs: { id: 'V14', desc: 'Configuration Requirements' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 3', desc: 'Penilaian risiko TI' }
     },
     {
       topic: 'risk',
@@ -168,7 +179,8 @@ export const comparisonData = {
       padg: { id: 'PADG-RM3', desc: 'Audit Keamanan Berkala' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: { id: 'Pasal 53', desc: 'Kepatuhan terhadap prinsip PDP' }
+      pdp: { id: 'Pasal 53', desc: 'Kepatuhan terhadap prinsip PDP' },
+      padk: { id: 'Bab 8', desc: 'Audit dan kepatuhan' }
     },
     {
       topic: 'risk',
@@ -181,7 +193,8 @@ export const comparisonData = {
       padg: null,
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: null
     },
 
     // --- CRYPTOGRAPHY (Topic 4) ---
@@ -196,7 +209,8 @@ export const comparisonData = {
       padg: { id: 'PADG-CR1', desc: 'Kriptografi dan Enkripsi' },
       owasp_top10: { id: 'A02:2021', desc: 'Cryptographic Failures' },
       owasp_asvs: { id: 'V6', desc: 'Cryptography Verification Requirements' },
-      pdp: { id: 'Pasal 43', desc: 'Keamanan Data Pribadi (Enkripsi)' }
+      pdp: { id: 'Pasal 43', desc: 'Keamanan Data Pribadi (Enkripsi)' },
+      padk: { id: 'Bab 4', desc: 'Kriptografi data' }
     },
     {
       topic: 'crypto',
@@ -209,7 +223,8 @@ export const comparisonData = {
       padg: { id: 'PADG-CR2', desc: 'Enkripsi Komunikasi Data' },
       owasp_top10: null,
       owasp_asvs: { id: 'V9', desc: 'Communications Verification' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 4', desc: 'Enkripsi transmisi' }
     },
     {
       topic: 'crypto',
@@ -222,7 +237,8 @@ export const comparisonData = {
       padg: { id: 'PADG-CR3', desc: 'Masking Data Transaksi' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: { id: 'Pasal 44', desc: 'Anonimisasi Data Pribadi' }
+      pdp: { id: 'Pasal 44', desc: 'Anonimisasi Data Pribadi' },
+      padk: { id: 'Bab 4', desc: 'Masking data' }
     },
     {
       topic: 'crypto',
@@ -235,7 +251,8 @@ export const comparisonData = {
       padg: null,
       owasp_top10: null,
       owasp_asvs: { id: 'V6.2', desc: 'Algorithms Requirements' },
-      pdp: null
+      pdp: null,
+      padk: null
     },
 
     // --- BUSINESS CONTINUITY (Topic 5) ---
@@ -250,7 +267,8 @@ export const comparisonData = {
       padg: { id: 'PADG-BC1', desc: 'Rencana Pemulihan Bencana' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 6', desc: 'Rencana kelangsungan bisnis' }
     },
     {
       topic: 'bc',
@@ -263,7 +281,8 @@ export const comparisonData = {
       padg: { id: 'PADG-BC2', desc: 'Uji Coba BCP' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 6', desc: 'Uji coba pemulihan bencana' }
     },
     {
       topic: 'bc',
@@ -276,7 +295,8 @@ export const comparisonData = {
       padg: { id: 'PADG-BC3', desc: 'Pencadangan Data' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 6', desc: 'Backup data kritikal' }
     },
     {
       topic: 'bc',
@@ -289,7 +309,8 @@ export const comparisonData = {
       padg: { id: 'PADG-BC4', desc: 'Sistem High Availability' },
       owasp_top10: { id: 'A05:2021', desc: 'Security Misconfiguration (Availability)' },
       owasp_asvs: null,
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 6', desc: 'Sistem redundansi' }
     },
 
     // --- AUDIT & ACCOUNTABILITY (Topic 6) ---
@@ -304,7 +325,8 @@ export const comparisonData = {
       padg: { id: 'PADG-AA1', desc: 'Jejak Audit (Audit Trail)' },
       owasp_top10: { id: 'A09:2021', desc: 'Security Logging' },
       owasp_asvs: { id: 'V7.1', desc: 'Log Content Requirements' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 7', desc: 'Jejak audit' }
     },
     {
       topic: 'audit',
@@ -317,7 +339,8 @@ export const comparisonData = {
       padg: { id: 'PADG-AA2', desc: 'SOC & Pemantauan' },
       owasp_top10: null,
       owasp_asvs: { id: 'V7.2', desc: 'Log Processing' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 7', desc: 'Pemantauan sistem' }
     },
     {
       topic: 'audit',
@@ -330,7 +353,8 @@ export const comparisonData = {
       padg: { id: 'PADG-AA3', desc: 'Sinkronisasi Waktu' },
       owasp_top10: null,
       owasp_asvs: { id: 'V7.1.3', desc: 'Time Synchronization' },
-      pdp: null
+      pdp: null,
+      padk: { id: 'Bab 7', desc: 'Sinkronisasi NTP' }
     },
     {
       topic: 'audit',
@@ -343,7 +367,8 @@ export const comparisonData = {
       padg: { id: 'PADG-AA4', desc: 'Pelaporan Kepatuhan' },
       owasp_top10: null,
       owasp_asvs: null,
-      pdp: { id: 'Pasal 42', desc: 'Kepatuhan Pelindungan Data' }
+      pdp: { id: 'Pasal 42', desc: 'Kepatuhan Pelindungan Data' },
+      padk: { id: 'Bab 1', desc: 'Kepatuhan terhadap regulasi' }
     }
   ]
 };

@@ -148,6 +148,16 @@ export default {
            accent: "#1d4ed8",
            icon: "fa-check-double",
          },
+         {
+           routeName: "simulator",
+           name: "Compliance Simulator",
+           subtitle: "What-If Compliance Analysis",
+           summary: "Simulasikan skenario infrastruktur dan operasional Anda untuk melihat gap kepatuhan secara instan.",
+           metric_label: "Skenario",
+           metric_value: 6,
+           accent: "#0f766e",
+           icon: "fa-gamepad",
+         },
       ],
     };
   },
@@ -206,6 +216,7 @@ export default {
       padgCount,
       owaspTop10Count,
       owaspAsvsCount,
+      simulatorCount,
     ] = await Promise.all([
       loadData("/data/iso27001.json"),
       loadData("/data/nist_csf.json"),
@@ -217,6 +228,7 @@ export default {
       loadData("/data/padg_requirements.json"),
       loadData("/data/owasp_top10_reqs.json"),
       loadData("/data/owasp_asvs_reqs.json"),
+      Promise.resolve(6), // Constant for now
     ]);
 
     this.frameworks[0].metric_value = isoCount || 93;
@@ -229,6 +241,7 @@ export default {
     this.frameworks[7].metric_value = padgCount || 0;
     this.frameworks[8].metric_value = owaspTop10Count || 10;
     this.frameworks[9].metric_value = owaspAsvsCount || 8;
+    this.frameworks[10].metric_value = simulatorCount || 6;
   },
 };
 </script>

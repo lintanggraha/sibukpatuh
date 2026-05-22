@@ -155,11 +155,12 @@ export default {
       availableFrameworks: [
         { id: 'iso27001', name: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt', file: 'iso27001.json' },
         { id: 'cobit', name: 'COBIT 2019', desc: 'Framework Tata Kelola IT Perusahaan', icon: 'fa-project-diagram', file: 'cobit_2019.json' },
-        { id: 'seojk', name: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark', file: 'seojk_requirements.json' },
+        { id: 'seojk', name: 'SEOJK 29/03/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark', file: 'seojk_29_2022_requirements.json' },
         { id: 'nist', name: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-network-wired', file: 'nist_csf.json' },
         { id: 'pbi', name: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
         { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: 'Resiliensi Digital OJK', icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },
         { id: 'padg', name: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract', file: 'padg_requirements.json' },
+        { id: 'padk', name: 'PADK 1 Tahun 2026', desc: 'Penyelenggaraan TI Bank Umum', icon: 'fa-server', file: 'padk_1_2026_requirements.json' },
         { id: 'owasp_top10', name: 'OWASP Top 10', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug', file: 'owasp_top10_reqs.json' },
         { id: 'owasp_asvs', name: 'OWASP ASVS', desc: 'Verifikasi Keamanan Aplikasi', icon: 'fa-list-check', file: 'owasp_asvs_reqs.json' },
         { id: 'pdp', name: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield', file: 'uu_pdp_requirements.json' }

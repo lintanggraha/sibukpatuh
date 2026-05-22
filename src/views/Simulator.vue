@@ -233,6 +233,7 @@ export default {
             { id: 'SEOJK', label: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark' },
             { id: 'PBI', label: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns' },
             { id: 'PADG', label: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract' },
+            { id: 'PADK', label: 'PADK 1 Tahun 2026', desc: 'Penyelenggaraan TI Bank Umum', icon: 'fa-server' },
             { id: 'Resiliensi', label: 'Resiliensi OJK', desc: 'Panduan Resiliensi Digital OJK', icon: 'fa-shield-heart' },
             { id: 'OWASP', label: 'OWASP (Top 10 / ASVS)', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug' },
             { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield' }
@@ -302,7 +303,7 @@ export default {
       let policiesMsg = 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
       let policiesRec = 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
       
-      const hasOJK = targets.includes('SEOJK') || targets.includes('PBI') || targets.includes('PADG') || targets.includes('Resiliensi');
+      const hasOJK = targets.includes('SEOJK') || targets.includes('PBI') || targets.includes('PADG') || targets.includes('Resiliensi') || targets.includes('PADK');
 
       if (targets.includes('ISO 27001') || targets.includes('NIST') || targets.includes('COBIT')) {
           policiesRec += ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset, dan Dokumentasi Tata Kelola TI & Manajemen Risiko (COBIT).';

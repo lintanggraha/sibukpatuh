@@ -68,16 +68,23 @@ const controls = [
   { id: 'pdp-pasal35', framework: 'pdp', name: 'Pasal 35: Akses Data', desc: 'Pembatasan hak akses ke data pribadi.' },
   { id: 'pdp-pasal39', framework: 'pdp', name: 'Pasal 39: Penilaian Dampak', desc: 'Penilaian dampak pelindungan data pribadi (DPIA).' },
   { id: 'pdp-pasal43', framework: 'pdp', name: 'Pasal 43: Keamanan Data', desc: 'Kewajiban melindungi data pribadi dari akses tidak sah.' },
-  { id: 'pdp-pasal46', framework: 'pdp', name: 'Pasal 46: Pemberitahuan Insiden', desc: 'Kewajiban melaporkan kegagalan pelindungan data pribadi.' }
+  { id: 'pdp-pasal46', framework: 'pdp', name: 'Pasal 46: Pemberitahuan Insiden', desc: 'Kewajiban melaporkan kegagalan pelindungan data pribadi.' },
+
+  // PADK 1 Tahun 2026
+  { id: 'padk-kebijakan', framework: 'padk', name: 'Tata Kelola TI Bank', desc: 'Kebijakan dan prosedur operasional teknologi informasi Bank Umum.' },
+  { id: 'padk-akses', framework: 'padk', name: 'Manajemen Akses & Identitas', desc: 'Pengelolaan akses logika ke sistem Bank Umum.' },
+  { id: 'padk-risiko', framework: 'padk', name: 'Penilaian Risiko TI', desc: 'Manajemen dan mitigasi risiko teknologi informasi.' },
+  { id: 'padk-kripto', framework: 'padk', name: 'Keamanan Data & Enkripsi', desc: 'Perlindungan kerahasiaan data menggunakan kriptografi.' },
+  { id: 'padk-insiden', framework: 'padk', name: 'Respons Insiden & BCP', desc: 'Penanganan insiden, pemulihan bencana, dan keberlangsungan bisnis.' }
 ];
 
 // 2. Daftar Ekuivalensi Berdasarkan 5 Topik (Kebijakan, Akses, Risiko, Data, Insiden)
 const equivalencyGroups = [
-  ['iso-5.1', 'nist-gv.oc-01', 'cobit-apo01.01', 'seojk-1.1', 'pbi-bab2', 'resilience-1', 'padg-1', 'owasp-a01', 'asvs-v1', 'pdp-pasal16'],
-  ['iso-5.15', 'nist-pr.aa-01', 'cobit-dss05.04', 'seojk-2.1', 'pbi-bab3', 'resilience-2', 'padg-2', 'owasp-a07', 'asvs-v2', 'pdp-pasal35'],
-  ['iso-8.8', 'nist-id.ra-01', 'cobit-apo12.01', 'seojk-3.1', 'pbi-bab4', 'resilience-3', 'padg-3', 'owasp-a06', 'asvs-v14', 'pdp-pasal39'],
-  ['iso-8.11', 'nist-pr.ds-01', 'cobit-apo03.02', 'seojk-4.1', 'pbi-bab5', 'resilience-4', 'padg-4', 'owasp-a02', 'asvs-v6', 'pdp-pasal43'],
-  ['iso-5.24', 'nist-rs.ma-01', 'cobit-dss02.05', 'seojk-5.1', 'pbi-bab6', 'resilience-5', 'padg-5', 'owasp-a09', 'asvs-v7', 'pdp-pasal46']
+  ['iso-5.1', 'nist-gv.oc-01', 'cobit-apo01.01', 'seojk-1.1', 'pbi-bab2', 'resilience-1', 'padg-1', 'owasp-a01', 'asvs-v1', 'pdp-pasal16', 'padk-kebijakan'],
+  ['iso-5.15', 'nist-pr.aa-01', 'cobit-dss05.04', 'seojk-2.1', 'pbi-bab3', 'resilience-2', 'padg-2', 'owasp-a07', 'asvs-v2', 'pdp-pasal35', 'padk-akses'],
+  ['iso-8.8', 'nist-id.ra-01', 'cobit-apo12.01', 'seojk-3.1', 'pbi-bab4', 'resilience-3', 'padg-3', 'owasp-a06', 'asvs-v14', 'pdp-pasal39', 'padk-risiko'],
+  ['iso-8.11', 'nist-pr.ds-01', 'cobit-apo03.02', 'seojk-4.1', 'pbi-bab5', 'resilience-4', 'padg-4', 'owasp-a02', 'asvs-v6', 'pdp-pasal43', 'padk-kripto'],
+  ['iso-5.24', 'nist-rs.ma-01', 'cobit-dss02.05', 'seojk-5.1', 'pbi-bab6', 'resilience-5', 'padg-5', 'owasp-a09', 'asvs-v7', 'pdp-pasal46', 'padk-insiden']
 ];
 
 // 3. Generate Link Cross-Mapping Secara Otomatis
@@ -102,7 +109,8 @@ export const crossMappingData = {
     { id: 'padg', name: 'PADG 32/2025', color: '#20c997' },       // Teal
     { id: 'owasp_top10', name: 'OWASP Top 10', color: '#e83e8c' }, // Pink
     { id: 'owasp_asvs', name: 'OWASP ASVS', color: '#d63384' },   // Dark Pink
-    { id: 'pdp', name: 'UU PDP No. 27/2022', color: '#ffc107' }   // Yellow
+    { id: 'pdp', name: 'UU PDP No. 27/2022', color: '#ffc107' },  // Yellow
+    { id: 'padk', name: 'PADK 1 Tahun 2026', color: '#1d4ed8' }   // Dark Blue
   ],
   controls,
   links
