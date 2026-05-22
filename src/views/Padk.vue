@@ -20,9 +20,7 @@
           <span class="sej-kicker"><i class="fas fa-landmark"></i>Framework Nasional</span>
           <h1 class="sej-title">PADK 1 Tahun 2026 - Penyelenggaraan TI Bank Umum</h1>
           <p class="sej-lede">
-            Peta kepatuhan PADK ini merangkum pedoman penyelenggaraan teknologi informasi oleh bank umum, tata cara
-            pelaporan dan perizinan, format laporan dan notifikasi, serta format izin dan laporan realisasi yang
-            menjadi bagian resmi dari PADK.
+            Peraturan Anggota Dewan Komisioner (PADK) No. 1 Tahun 2026 menandai pergeseran paradigma pengawasan OJK dari operasional dasar menuju <strong>Risk-Based & Data-Driven Tech Governance</strong>. Peta kepatuhan ini membedah integrasi postur ketahanan siber, Pelindungan Data Pribadi (PDP), <i>Third-Party Risk Management</i> (TPRM), dan pengetatan yurisdiksi data <i>offshore</i> ke dalam satu kerangka arsitektur kepatuhan yang holistik dan tak terpisahkan.
           </p>
           <div class="sej-metrics">
             <div class="sej-metric"><label>Bab Pedoman</label><strong>{{ substantiveChapters }}</strong><span>Tata kelola TI sampai audit intern TI.</span></div>
@@ -33,18 +31,16 @@
         </div>
         <div class="sej-side-stack">
           <div class="sej-side">
-            <label>Alur Analisa</label>
-            <h3>Mulai dari tata kelola, lalu tutup dengan artefak regulator</h3>
+            <label>Strategic Impact</label>
+            <h3>Transformasi Kepatuhan & Arsitektur Terintegrasi</h3>
             <p>
-              Gunakan ringkasan bab untuk memahami struktur pedoman, telusuri kewajiban di explorer, lalu cek board
-              lampiran untuk format laporan, notifikasi insiden nonsiber, permohonan izin, dan laporan realisasi.
+              Kepatuhan kini tidak lagi bersifat <i>siloed</i>. PADK mewajibkan <i>board-level accountability</i> atas keselarasan Rencana Strategis TI (RSTI) dengan profil risiko institusi, menuntut visibilitas penuh terhadap <i>supply chain</i> penyedia jasa TI (PPJTI), serta penetapan kontrol mutlak atas lokalisasi, interoperabilitas, dan <i>lifecycle</i> privasi data nasabah.
             </p>
           </div>
           <div class="sej-side">
-            <label>Catatan Kepatuhan</label>
+            <label>Regulatory Milestones</label>
             <p>
-              Titik waktu penting PADK meliputi RSTI dan LRPTI pada akhir November, LKTPTI pada 21 Januari tahun
-              berikutnya, notifikasi insiden TI nonsiber paling lama 24 jam, dan laporan insiden paling lama 5 hari kerja.
+              Kerangka waktu kepatuhan menuntut orkestrasi <i>continuous monitoring</i>: <strong>Akhir Nov</strong> (RSTI & LRPTI); <strong>21 Jan</strong> (LKTPTI komprehensif); dan SLA eskalasi insiden ketat (Notifikasi 24 Jam, RCA 5 Hari Kerja). Selain itu, inisiatif <i>offshore processing</i> kini dikunci kuat melalui mekanisme perizinan <i>ex-ante</i> (persetujuan di muka) yang rigid.
             </p>
           </div>
         </div>
