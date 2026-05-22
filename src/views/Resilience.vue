@@ -661,7 +661,7 @@ export default {
 [data-bs-theme="dark"] .orj-note{background:rgba(30,41,59,0.7);border-color:var(--accent,#48cae4)}
 [data-bs-theme="dark"] .orj-ref{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1)}
 [data-bs-theme="dark"] .orj-empty{background:rgba(30,41,59,0.3);border-color:rgba(255,255,255,0.1)}
-[data-bs-theme="dark"] .modal-shell{background:#1e293b;border:1px solid rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .modal-shell{display:flex;flex-direction:column;max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
 [data-bs-theme="dark"] .modal-artifact-list li,[data-bs-theme="dark"] .modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
 [data-bs-theme="dark"] .modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
 [data-bs-theme="dark"] .modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
