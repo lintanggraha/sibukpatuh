@@ -23,7 +23,8 @@
     "roleTranslations": {
       "sysadmin": "Mode SysAdmin: Konfigurasi sistem auto-failover dan backup harian.",
       "board": "Mode Board: Anggarkan biaya pengadaan infrastruktur BCP/DRC yang handal.",
-      "legal": "Mode Legal: Tinjau prosedur kesinambungan layanan dalam perspektif regulasi OJK."
+      "legal": "Mode Legal: Tinjau prosedur kesinambungan layanan dalam perspektif regulasi OJK.",
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konteks dan Prioritas Ketahanan Digital'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional."
     }
   },
   {
@@ -47,7 +48,12 @@
       "VIII.01",
       "VIII.02"
     ],
-    "analogy": "Seperti menunjuk kapten kapal saat badai datang. Kalau semua orang mau pegang kemudi, kapalnya malah tenggelam."
+    "analogy": "Seperti menunjuk kapten kapal saat badai datang. Kalau semua orang mau pegang kemudi, kapalnya malah tenggelam.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Tata Kelola dan Akuntabilitas Ketahanan Digital'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tata Kelola dan Akuntabilitas Ketahanan Digital'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tata Kelola dan Akuntabilitas Ketahanan Digital'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DR-03",
@@ -69,7 +75,12 @@
       "IV.02",
       "V.03"
     ],
-    "analogy": "Mirip anatomi tubuh manusia. Lu harus tahu organ mana yang kalau sakit bakal bikin lu pingsan, biar penanganannya diprioritaskan."
+    "analogy": "Mirip anatomi tubuh manusia. Lu harus tahu organ mana yang kalau sakit bakal bikin lu pingsan, biar penanganannya diprioritaskan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aset, Layanan Penting, dan Ketergantungan ICT'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aset, Layanan Penting, dan Ketergantungan ICT'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aset, Layanan Penting, dan Ketergantungan ICT'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DR-04",
@@ -91,7 +102,12 @@
       "IV.04",
       "VIII.02"
     ],
-    "analogy": "Kayak pasang sistem deteksi asap dan pemadam api. Begitu ada percikan, alarm bunyi, dan api langsung dipadamkan sebelum ngebakar seluruh gedung."
+    "analogy": "Kayak pasang sistem deteksi asap dan pemadam api. Begitu ada percikan, alarm bunyi, dan api langsung dipadamkan sebelum ngebakar seluruh gedung.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pencegahan, Deteksi, dan Respons Insiden'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pencegahan, Deteksi, dan Respons Insiden'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Pencegahan, Deteksi, dan Respons Insiden' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "DR-05",
@@ -112,7 +128,12 @@
       "V.01",
       "VI.01"
     ],
-    "analogy": "Sama kayak kotak P3K dan asuransi kesehatan pas kecelakaan. Lu jatuh, diobatin, terus belajar biar nggak jalan di jalur berlubang yang sama."
+    "analogy": "Sama kayak kotak P3K dan asuransi kesehatan pas kecelakaan. Lu jatuh, diobatin, terus belajar biar nggak jalan di jalur berlubang yang sama.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemulihan Layanan dan Adaptasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemulihan Layanan dan Adaptasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemulihan Layanan dan Adaptasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DR-06",
@@ -138,6 +159,11 @@
       "VII.02",
       "VII.03"
     ],
-    "analogy": "Ibarat latihan simulasi kebakaran di kantor. Mending panik pas latihan ketimbang bengong pas beneran ada api."
+    "analogy": "Ibarat latihan simulasi kebakaran di kantor. Mending panik pas latihan ketimbang bengong pas beneran ada api.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengujian dan Peningkatan Berkelanjutan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengujian dan Peningkatan Berkelanjutan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengujian dan Peningkatan Berkelanjutan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

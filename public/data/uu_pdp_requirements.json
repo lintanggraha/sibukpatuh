@@ -24,7 +24,8 @@
     "roleTranslations": {
       "sysadmin": "Mode SysAdmin: Enkripsi database pelanggan (at rest dan in transit) serta terapkan role-based access.",
       "board": "Mode Board: Tunjuk Data Protection Officer (DPO) untuk memastikan perusahaan tidak didenda.",
-      "legal": "Mode Legal: Perbarui Privacy Policy dan pastikan ada mekanisme persetujuan (consent) yang sah."
+      "legal": "Mode Legal: Perbarui Privacy Policy dan pastikan ada mekanisme persetujuan (consent) yang sah.",
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pahami definisi Data Pribadi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional."
     }
   },
   {
@@ -48,7 +49,12 @@
       " SOP pemrosesan data"
     ],
     "reporting": "Dasar evaluasi kepatuhan seluruh aktivitas PDP",
-    "analogy": "Delapan asas ini ibarat bintangCompas navigasi - setiap perjalanan pemrosesan data harus selalu mengacu ke delapan arah ini. Tanpa kompas, kapal tersesat. Dengan asas yang jelas, setiap keputusan pemrosesan data punya arah yang terang."
+    "analogy": "Delapan asas ini ibarat bintangCompas navigasi - setiap perjalanan pemrosesan data harus selalu mengacu ke delapan arah ini. Tanpa kompas, kapal tersesat. Dengan asas yang jelas, setiap keputusan pemrosesan data punya arah yang terang.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pahami asas pelindungan data pribadi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Pahami asas pelindungan data pribadi'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Pahami asas pelindungan data pribadi'."
+    }
   },
   {
     "id": "III.01",
@@ -72,7 +78,12 @@
       "Matriks kontrol per kategori data"
     ],
     "reporting": "Bagian dari laporan kepatuhan berkala",
-    "analogy": "Data spesifik ibarat barang berharga di brankas - perlu penanganan khusus dibanding barang biasa. Data kesehatan atau biometrik lebih sensitif dari nama lengkap, jadi butuh level perlindungan yang lebih tinggi. Seperti mengh treat berlian berbeda dari besi."
+    "analogy": "Data spesifik ibarat barang berharga di brankas - perlu penanganan khusus dibanding barang biasa. Data kesehatan atau biometrik lebih sensitif dari nama lengkap, jadi butuh level perlindungan yang lebih tinggi. Seperti mengh treat berlian berbeda dari besi.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identifikasi Data Pribadi Spesifik'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Identifikasi Data Pribadi Spesifik'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Identifikasi Data Pribadi Spesifik'."
+    }
   },
   {
     "id": "III.02",
@@ -95,7 +106,12 @@
       "Dokumentasi kombinasi data"
     ],
     "reporting": "Bagian dari laporan kepatuhan berkala",
-    "analogy": "Data umum ibarat bahan bangunan dasar - sendiri mungkin tidak berbahaya, tapi dikombinasikan dengan yang lain bisa menjadi sesuatu yang powerful. Nomor HP + alamat email + nama lengkap bisa cukup untuk identifikasi unik. Perlu tetap waspada meski terlihat 'biasa'."
+    "analogy": "Data umum ibarat bahan bangunan dasar - sendiri mungkin tidak berbahaya, tapi dikombinasikan dengan yang lain bisa menjadi sesuatu yang powerful. Nomor HP + alamat email + nama lengkap bisa cukup untuk identifikasi unik. Perlu tetap waspada meski terlihat 'biasa'.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identifikasi Data Pribadi Umum'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Identifikasi Data Pribadi Umum'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Identifikasi Data Pribadi Umum'."
+    }
   },
   {
     "id": "IV.01",
@@ -119,7 +135,12 @@
       "Kontrak atau agreement pemrosesan"
     ],
     "reporting": "Audit trail transparansi",
-    "analogy": "Transparansi ibarat label nutrisi di makanan - konsumen berhak tahu apa yang mereka 'konsumsi'. Organisasi harus jujur tentang apa yang diambil, untuk apa, dan siapa yang mengakses. Tanpa label, trust tidak akan ada."
+    "analogy": "Transparansi ibarat label nutrisi di makanan - konsumen berhak tahu apa yang mereka 'konsumsi'. Organisasi harus jujur tentang apa yang diambil, untuk apa, dan siapa yang mengakses. Tanpa label, trust tidak akan ada.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak informasi dan transparansi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Wujudkan hak informasi dan transparansi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak informasi dan transparansi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.02",
@@ -143,7 +164,12 @@
       "Bukti verifikasi subjek data"
     ],
     "reporting": "Metrics respons terhadap permintaan subjek",
-    "analogy": "Koreksi data ibarat servicetangan kendaraan - kalau ada yang rusak atau aus, harus segera diperbaiki agar tetap berjalan baik. Data yang tidak akurat bisa menyebabkan keputusan yang salah, mirip seperti GPS yang menunjukkan lokasi salah."
+    "analogy": "Koreksi data ibarat servicetangan kendaraan - kalau ada yang rusak atau aus, harus segera diperbaiki agar tetap berjalan baik. Data yang tidak akurat bisa menyebabkan keputusan yang salah, mirip seperti GPS yang menunjukkan lokasi salah.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak koreksi dan pembaruan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Wujudkan hak koreksi dan pembaruan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak koreksi dan pembaruan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.03",
@@ -167,7 +193,12 @@
       "Format export data"
     ],
     "reporting": "Statistik permintaan akses",
-    "analogy": "Akses data ibaratmutton ke safe deposit box - pemilik punya hak penuh masuk dan mengambil miliknya kapan saja. Bank tidak boleh menolak akses yang sah, tapi bisa memverifikasi identitas dulu. Data adalah 'milik' subjek, bukan organisasi."
+    "analogy": "Akses data ibaratmutton ke safe deposit box - pemilik punya hak penuh masuk dan mengambil miliknya kapan saja. Bank tidak boleh menolak akses yang sah, tapi bisa memverifikasi identitas dulu. Data adalah 'milik' subjek, bukan organisasi.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak akses dan portabilitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Wujudkan hak akses dan portabilitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak akses dan portabilitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.04",
@@ -191,7 +222,12 @@
       "Sertifikat destruição data"
     ],
     "reporting": "Audit penghapusan berkala",
-    "analogy": "Penghapusan data ibarat Shredder dokumen kantor - setelah tidak нужна lagi, harus dihancurkan dengan benar, bukan cuma dimasukkan ke trash. Ini mencegah 'identity theft' atau penyalahgunaan data yang sudah tidak relevan."
+    "analogy": "Penghapusan data ibarat Shredder dokumen kantor - setelah tidak нужна lagi, harus dihancurkan dengan benar, bukan cuma dimasukkan ke trash. Ini mencegah 'identity theft' atau penyalahgunaan data yang sudah tidak relevan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak penghapusan dan pemusnahan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Wujudkan hak penghapusan dan pemusnahan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak penghapusan dan pemusnahan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.05",
@@ -215,7 +251,12 @@
       "Tindakan lanjut penghapusan"
     ],
     "reporting": "Statistik penarikan persetujuan",
-    "analogy": "Penarikan persetujuan ibarat membatalkan berhenti berhenti langganan - sekali dibatalkan, perusahaan tidak bolehterus mengirim email atau menggunakan data untuk tujuan tersebut. easy to withdraw itu penting untuk trust."
+    "analogy": "Penarikan persetujuan ibarat membatalkan berhenti berhenti langganan - sekali dibatalkan, perusahaan tidak bolehterus mengirim email atau menggunakan data untuk tujuan tersebut. easy to withdraw itu penting untuk trust.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak penarikan persetujuan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Wujudkan hak penarikan persetujuan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak penarikan persetujuan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.06",
@@ -239,7 +280,12 @@
       "Log review manual"
     ],
     "reporting": "Statistik keberatan dan penundaan",
-    "analogy": "Keberatan terhadap keputusan otomatis ibarat banding ke hakim setelah divonis AI - meskipun teknologi memutuskan, manusia tetap punya hak untuk minta tinjauan ulang. Keputusan mesin tidak boleh mutlak tanpa opsi banding."
+    "analogy": "Keberatan terhadap keputusan otomatis ibarat banding ke hakim setelah divonis AI - meskipun teknologi memutuskan, manusia tetap punya hak untuk minta tinjauan ulang. Keputusan mesin tidak boleh mutlak tanpa opsi banding.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Wujudkan hak keberatan dan pembatasan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Wujudkan hak keberatan dan pembatasan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Wujudkan hak keberatan dan pembatasan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.01",
@@ -263,7 +309,12 @@
       "Records of Processing Activities (RoPA)"
     ],
     "reporting": "RoPA dan audit kepatuhan",
-    "analogy": "Prinsip pemrosesan ibarat etika medis - pasien harus consent, dokter harus menjelaskan, dan hanya boleh melakukan tindakan yang perlu. Informed consent bukan sekadar tanda tangan, tapi pemahaman penuh tentang apa yang akan dilakukan."
+    "analogy": "Prinsip pemrosesan ibarat etika medis - pasien harus consent, dokter harus menjelaskan, dan hanya boleh melakukan tindakan yang perlu. Informed consent bukan sekadar tanda tangan, tapi pemahaman penuh tentang apa yang akan dilakukan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Patuhi prinsip pemrosesan yang sah'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Patuhi prinsip pemrosesan yang sah'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Patuhi prinsip pemrosesan yang sah'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.02",
@@ -287,7 +338,12 @@
       "Prosedur withdrawal"
     ],
     "reporting": "Consent metrics dan audit",
-    "analogy": "Consent yang baik ibarat tanda tangan di kontrak yang jelasdibacanya - bukanrinci print yang tidak bisa dibaca. Kalau orang tidak benar-benar paham apa yang disetujui, consent itu bisa batal. Organisasi harus invest di clarity."
+    "analogy": "Consent yang baik ibarat tanda tangan di kontrak yang jelasdibacanya - bukanrinci print yang tidak bisa dibaca. Kalau orang tidak benar-benar paham apa yang disetujui, consent itu bisa batal. Organisasi harus invest di clarity.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kelola persetujuan dengan benar'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kelola persetujuan dengan benar'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kelola persetujuan dengan benar'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.03",
@@ -311,7 +367,12 @@
       "Prosedur akses terbatas"
     ],
     "reporting": "Review berkala perlindungan kelompok rentan",
-    "analogy": "Perlindungan data anak ibarat aturan parental control di smartTV - orang tua harus aware dan approve konten yang anak konsumsi. Anak belum bisa memberikan consent penuh karena belum cukup umur untuk memahami implikasinya."
+    "analogy": "Perlindungan data anak ibarat aturan parental control di smartTV - orang tua harus aware dan approve konten yang anak konsumsi. Anak belum bisa memberikan consent penuh karena belum cukup umur untuk memahami implikasinya.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lindungi data anak dan kelompok rentan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Lindungi data anak dan kelompok rentan'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lindungi data anak dan kelompok rentan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VI.01",
@@ -335,7 +396,12 @@
       "Review legal basis berkala"
     ],
     "reporting": "RoPA dengan legal basis",
-    "analogy": "Dasar pemrosesan ibarat 'alasan masuk' di resepsionis - tidak bisa masuk tanpa alasan yang jelas. Konsumen, kontrak, hukum, atau kepentingan vital - salah satu harus ada. Tanpa ini, pemrosesan tidak sah."
+    "analogy": "Dasar pemrosesan ibarat 'alasan masuk' di resepsionis - tidak bisa masuk tanpa alasan yang jelas. Konsumen, kontrak, hukum, atau kepentingan vital - salah satu harus ada. Tanpa ini, pemrosesan tidak sah.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Miliki dasar pemrosesan yang sah'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Miliki dasar pemrosesan yang sah'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Miliki dasar pemrosesan yang sah'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VI.02",
@@ -359,7 +425,12 @@
       "Mitigation action plans"
     ],
     "reporting": "DPIA register dan hasil review",
-    "analogy": "DPIA ibarat environmental impact assessment sebelum pembangunan - tidak bisa sembarangan mulai proyek yang bisa berdampak besar. Risiko tinggi = perlu study lebih dalam sebelum proceed."
+    "analogy": "DPIA ibarat environmental impact assessment sebelum pembangunan - tidak bisa sembarangan mulai proyek yang bisa berdampak besar. Risiko tinggi = perlu study lebih dalam sebelum proceed.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lakukan penilaian dampak PDP'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lakukan penilaian dampak PDP'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Lakukan penilaian dampak PDP'."
+    }
   },
   {
     "id": "VI.03",
@@ -383,7 +454,12 @@
       "Access control lists dan logs"
     ],
     "reporting": "Security audit dan incident reports",
-    "analogy": "Keamanan data ibarat brankas bank - bukan satu kunci, tapi multiple layers. Digital vault butuh enkripsi sebagai baja, access control sebagai kuncinya, dan monitoring sebagai CCTV. Tingkat keamanan harus sesuai dengan isi brankas."
+    "analogy": "Keamanan data ibarat brankas bank - bukan satu kunci, tapi multiple layers. Digital vault butuh enkripsi sebagai baja, access control sebagai kuncinya, dan monitoring sebagai CCTV. Tingkat keamanan harus sesuai dengan isi brankas.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lindungi keamanan data pribadi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Lindungi keamanan data pribadi'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Lindungi keamanan data pribadi'."
+    }
   },
   {
     "id": "VI.04",
@@ -407,7 +483,12 @@
       "Access and modification logs"
     ],
     "reporting": "RoPA dan compliance audit",
-    "analogy": "Recording pemrosesan ibarat CCTV di toko - bukan untuk mengawasi semua orang, tapi untuk bisa trace jika terjadi masalah. Dengan records, bisa buktikan apa yang happened dan who did what."
+    "analogy": "Recording pemrosesan ibarat CCTV di toko - bukan untuk mengawasi semua orang, tapi untuk bisa trace jika terjadi masalah. Dengan records, bisa buktikan apa yang happened dan who did what.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perekam seluruh kegiatan pemrosesan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perekam seluruh kegiatan pemrosesan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perekam seluruh kegiatan pemrosesan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VI.05",
@@ -431,7 +512,12 @@
       "Communication templates"
     ],
     "reporting": "Incident logs dan breach notifications",
-    "analogy": "Notifikasi breach ibarat darurat medis - kalau ada yang terluka, harus segera ada yang tahu dan bisa bantu. Delay bisa fatal. Same with data breach - subjek perlu tahu secepat mungkin agar bisa ambil langkah perlindungan diri."
+    "analogy": "Notifikasi breach ibarat darurat medis - kalau ada yang terluka, harus segera ada yang tahu dan bisa bantu. Delay bisa fatal. Same with data breach - subjek perlu tahu secepat mungkin agar bisa ambil langkah perlindungan diri.",
+    "roleTranslations": {
+      "bod": "Mode Board: Prioritaskan alokasi anggaran dan persetujuan strategis untuk 'Notifikasi pelanggaran data'. Pastikan ROI keamanan terlihat jelas.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Notifikasi pelanggaran data'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Notifikasi pelanggaran data' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "VI.06",
@@ -455,7 +541,12 @@
       "Training records"
     ],
     "reporting": "Organizational structure dan responsibilities",
-    "analogy": "DPO ibarat compliance officer di perusahaan - seseorang yang tugasnya memastikan semua berjalan sesuai aturan. Ia butuh akses ke manajemen, independence, dan tidak bisa diintervensi. Tanpa ini, compliance jadi jendela."
+    "analogy": "DPO ibarat compliance officer di perusahaan - seseorang yang tugasnya memastikan semua berjalan sesuai aturan. Ia butuh akses ke manajemen, independence, dan tidak bisa diintervensi. Tanpa ini, compliance jadi jendela.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Tunjuk DPO/petugas PDP'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tunjuk DPO/petugas PDP'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Tunjuk DPO/petugas PDP'."
+    }
   },
   {
     "id": "VII.01",
@@ -479,7 +570,12 @@
       "Monitoring records"
     ],
     "reporting": "Transfer register",
-    "analogy": "Transfer data dalam negeri ibarat kirim paket lewat JNE - paket tetap dalam negeri, tapi masih butuh tanda terima dan bisa di-track. Tidak bisa asal kirim tanpa tahu data sampai di mana."
+    "analogy": "Transfer data dalam negeri ibarat kirim paket lewat JNE - paket tetap dalam negeri, tapi masih butuh tanda terima dan bisa di-track. Tidak bisa asal kirim tanpa tahu data sampai di mana.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kelola transfer data dalam negeri'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Kelola transfer data dalam negeri'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kelola transfer data dalam negeri'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VII.02",
@@ -503,7 +599,12 @@
       "Standard contractual clauses"
     ],
     "reporting": "Cross-border transfer register",
-    "analogy": "Transfer lintas batas ibarat kirim paket ke luar negeri - ada custom, aturan bea cukai, dan kalau negara tujuan kurang aman, butuh asuransi ekstra. Data yang meninggalkan Indonesia butuh perlindungan yang tidak boleh lebih rendah dari yang di dalam negeri."
+    "analogy": "Transfer lintas batas ibarat kirim paket ke luar negeri - ada custom, aturan bea cukai, dan kalau negara tujuan kurang aman, butuh asuransi ekstra. Data yang meninggalkan Indonesia butuh perlindungan yang tidak boleh lebih rendah dari yang di dalam negeri.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kelola transfer data keluar negeri'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Kelola transfer data keluar negeri'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kelola transfer data keluar negeri'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VIII.01",
@@ -527,7 +628,12 @@
       "Audit reports"
     ],
     "reporting": "Compliance status reports",
-    "analogy": "Sanksi administratif ibarat tilang lalu lintas - bukan pidana berat, tapi tetap dolorosa. Denda 2% dari revenue itu signifikan untuk perusahaan besar. Lebih baik patuhi dari pada kena sanksi."
+    "analogy": "Sanksi administratif ibarat tilang lalu lintas - bukan pidana berat, tapi tetap dolorosa. Denda 2% dari revenue itu signifikan untuk perusahaan besar. Lebih baik patuhi dari pada kena sanksi.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pahami sanksi administratif'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pahami sanksi administratif'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pahami sanksi administratif'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IX.01",
@@ -550,7 +656,12 @@
       "Prosedur penanganan aduan"
     ],
     "reporting": "Komunikasi dengan lembaga",
-    "analogy": "Lembaga PDP ibarat police khusus cyber - mereka yang jaga aturan main di dunia data. Mereka bisa auditi, tilang, bahkan Stop operasional jika melanggar. Sama seperti perusahaan wajib patuhi aturan kemenhub."
+    "analogy": "Lembaga PDP ibarat police khusus cyber - mereka yang jaga aturan main di dunia data. Mereka bisa auditi, tilang, bahkan Stop operasional jika melanggar. Sama seperti perusahaan wajib patuhi aturan kemenhub.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pahami peran lembaga PDP'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pahami peran lembaga PDP'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Pahami peran lembaga PDP'."
+    }
   },
   {
     "id": "X.01",
@@ -573,7 +684,12 @@
       "Communication records"
     ],
     "reporting": "Legal compliance reports",
-    "analogy": "Penyelesaian sengketa ibarat jalur hukum biasa - bisa lewat mediasi, arbitrase, atau pengadilan. Tapi sebaiknya konflik tidak usah sampai ke sana. Prevention is better than cure."
+    "analogy": "Penyelesaian sengketa ibarat jalur hukum biasa - bisa lewat mediasi, arbitrase, atau pengadilan. Tapi sebaiknya konflik tidak usah sampai ke sana. Prevention is better than cure.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pahami mekanisme penyelesaian sengketa'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pahami mekanisme penyelesaian sengketa'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pahami mekanisme penyelesaian sengketa'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "XII.01",
@@ -597,7 +713,12 @@
       "Internal controls"
     ],
     "reporting": "Compliance and awareness reports",
-    "analogy": "Ketentuan pidana ibarat ultimatum - perusahaan bisa dapat denda, tapi individu bisa masuk penjara. Ini serius. Bukan cuma masalah uang, tapi bisa kehilangan kebebasan. Maka prevention harus ketat."
+    "analogy": "Ketentuan pidana ibarat ultimatum - perusahaan bisa dapat denda, tapi individu bisa masuk penjara. Ini serius. Bukan cuma masalah uang, tapi bisa kehilangan kebebasan. Maka prevention harus ketat.",
+    "roleTranslations": {
+      "bod": "Mode Board: Prioritaskan alokasi anggaran dan persetujuan strategis untuk 'Pahami ketentuan pidana'. Pastikan ROI keamanan terlihat jelas.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pahami ketentuan pidana'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pahami ketentuan pidana'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "XIV.01",
@@ -621,6 +742,11 @@
       "Compliance checklist"
     ],
     "reporting": "Progress reports ke manajemen",
-    "analogy": "Adaptasi UU PDP ibarat persiapan ujian - deadline October 2024 itu like 'batas waktu pengumpulan tugas'. Yang tidak submit akan kena sanksi. Semakin cepat подготовка, semakin ready."
+    "analogy": "Adaptasi UU PDP ibarat persiapan ujian - deadline October 2024 itu like 'batas waktu pengumpulan tugas'. Yang tidak submit akan kena sanksi. Semakin cepat подготовка, semakin ready.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Adaptasi terhadap UU PDP'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Adaptasi terhadap UU PDP'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Adaptasi terhadap UU PDP'."
+    }
   }
 ]

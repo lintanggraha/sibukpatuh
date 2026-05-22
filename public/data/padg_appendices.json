@@ -16,7 +16,12 @@
       "TIKMI",
       "Dana float"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Definisi Kunci Pengaturan Industri Sistem Pembayaran'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Definisi Kunci Pengaturan Industri Sistem Pembayaran'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Definisi Kunci Pengaturan Industri Sistem Pembayaran'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "I.b",
@@ -30,7 +35,12 @@
       "Transaksi incoming dihitung dalam batas transaksi",
       "Pengecualian untuk akun Penyedia Barang dan Jasa"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Batas Nilai Uang Elektronik'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Batas Nilai Uang Elektronik'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Batas Nilai Uang Elektronik'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "I.c",
@@ -45,7 +55,12 @@
       "Pencatatan dana float pada pos kewajiban",
       "Dana float adalahaset pengguna (dana titipan)"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Prioritaskan alokasi anggaran dan persetujuan strategis untuk 'Kewajiban Penempatan Dana Float'. Pastikan ROI keamanan terlihat jelas.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kewajiban Penempatan Dana Float'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kewajiban Penempatan Dana Float'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.a",
@@ -60,7 +75,12 @@
       "BI berwenang melakukan pemeriksaan pada penerbit < Rp1 miliar",
       "LSB dapat melanjutkan selama proses izin dengan pembatasan"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Izin Penerbitan Uang Elektronik Closed Loop'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Izin Penerbitan Uang Elektronik Closed Loop'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Izin Penerbitan Uang Elektronik Closed Loop'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.b",
@@ -74,7 +94,12 @@
       "Agen LKD harus memiliki kemampuan finansial dan lulus due diligence",
       "PJP hanya dapat bekerja sama dengan agen yang memenuhi kriteria"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penerbitan Layanan Keuangan Digital (LKD)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penerbitan Layanan Keuangan Digital (LKD)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penerbitan Layanan Keuangan Digital (LKD)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.a",
@@ -87,7 +112,12 @@
       "Tahapan implementing ditetapkan oleh BI",
       "Meliputi kartu kredit, kartu debit, dan kartu ATM"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Standar Nasional Alat Pembayaran Menggunakan Kartu'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Standar Nasional Alat Pembayaran Menggunakan Kartu'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Standar Nasional Alat Pembayaran Menggunakan Kartu'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.a",
@@ -103,7 +133,12 @@
       "Status hasil uji coba: berhasil atau tidak berhasil",
       "BI dapat menetapkan kebijakan tertentu selama uji coba"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Framework Uji Coba Inovasi (Regulatory Sandbox)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Framework Uji Coba Inovasi (Regulatory Sandbox)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Framework Uji Coba Inovasi (Regulatory Sandbox)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.b",
@@ -119,7 +154,12 @@
       "Ruang lingkup: batas jumlah pengguna, nominal transaksi, batas wilayah",
       "Jangka waktu pelaksanaan"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Persyaratan Laporan Uji Coba Inovasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Persyaratan Laporan Uji Coba Inovasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Persyaratan Laporan Uji Coba Inovasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.a",
@@ -133,7 +173,12 @@
       "Atau bank syariah yang memiliki hubungan kepemilikan dengan bank KBMI 4",
       "BI dapat menyesuaikan kebijakan penempatan dana float"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Uang Elektronik Syariah'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Uang Elektronik Syariah'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Uang Elektronik Syariah'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.b",
@@ -147,6 +192,11 @@
       "PSP wajib menindaklanjuti dan melaporkan",
       "Batas waktu penanganan sesuai ketentuan yang berlaku"
     ],
-    "used_by": []
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penerimaan dan Penanganan Keluhan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penerimaan dan Penanganan Keluhan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penerimaan dan Penanganan Keluhan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

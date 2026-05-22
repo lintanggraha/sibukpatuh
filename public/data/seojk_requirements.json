@@ -26,7 +26,12 @@
       "Bukti penyampaian laporan ke OJK."
     ],
     "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
-    "analogy": "Seperti perusahaan asuransi yang menentukan premi berdasarkan risiko, Bank juga harus 'menentukan tarif' risiko sibernya setiap tahun. Posisi akhir Desember ibaratfoto keluarga tahunan - semua berkumpul dan tersenyum untuk didokumentasikan sebagai patokan resmi."
+    "analogy": "Seperti perusahaan asuransi yang menentukan premi berdasarkan risiko, Bank juga harus 'menentukan tarif' risiko sibernya setiap tahun. Posisi akhir Desember ibaratfoto keluarga tahunan - semua berkumpul dan tersenyum untuk didokumentasikan sebagai patokan resmi.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Lakukan penilaian risiko inheren keamanan siber secara tahunan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lakukan penilaian risiko inheren keamanan siber secara tahunan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lakukan penilaian risiko inheren keamanan siber secara tahunan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.02",
@@ -53,7 +58,12 @@
       "Profil risiko siber tahunan yang ditandatangani reviewer."
     ],
     "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber.",
-    "analogy": "Mengevaluasi risiko bank digital ibarat dokter melakukan check-up lengkap - bukan hanya mengecek satu organ, tapi empat komponen vital: teknologi (hardware tubuh), produk (layanan kesehatan), organisasi (gaya hidup), dan riwayat sakit (insiden lalu). Hasilnya menentukan 'kondisi kesehatan' risiko bank."
+    "analogy": "Mengevaluasi risiko bank digital ibarat dokter melakukan check-up lengkap - bukan hanya mengecek satu organ, tapi empat komponen vital: teknologi (hardware tubuh), produk (layanan kesehatan), organisasi (gaya hidup), dan riwayat sakit (insiden lalu). Hasilnya menentukan 'kondisi kesehatan' risiko bank.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Nilai empat faktor utama risiko inheren keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Nilai empat faktor utama risiko inheren keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Nilai empat faktor utama risiko inheren keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.01",
@@ -81,7 +91,12 @@
       "Program awareness dan pelatihan keamanan siber."
     ],
     "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas.",
-    "analogy": "Bayangkan kapal tanker yang membawa muatan jutaan dolar. Nahkoda (Direksi) tidak cukup hanya duduk di ruang kemudi - ia harus aktif melihat kondisi laut, mendengarkan laporan kru, dan menetapkan batas kecepatan berani ditolak. Begitu juga keamanan siber butuh 'nahkoda aktif' yang tidak sekadar duduk."
+    "analogy": "Bayangkan kapal tanker yang membawa muatan jutaan dolar. Nahkoda (Direksi) tidak cukup hanya duduk di ruang kemudi - ia harus aktif melihat kondisi laut, mendengarkan laporan kru, dan menetapkan batas kecepatan berani ditolak. Begitu juga keamanan siber butuh 'nahkoda aktif' yang tidak sekadar duduk.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pastikan pengawasan aktif Direksi dan Dewan Komisaris'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pastikan pengawasan aktif Direksi dan Dewan Komisaris'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pastikan pengawasan aktif Direksi dan Dewan Komisaris'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.02",
@@ -109,7 +124,12 @@
       "Dokumen limit risiko dan eskalasi pelampauannya."
     ],
     "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber.",
-    "analogy": "Membangun kerangka manajemen risiko ibarat mendirikan bangunan - butuh blueprint (strategi), fondasi kuat (organisasi), dinding-dinding (kebijakan), pintu dan jendela (prosedur), serta alarm batas (limit risiko). Tanpa satu elemen saja, bangunan tidak aman dihuni."
+    "analogy": "Membangun kerangka manajemen risiko ibarat mendirikan bangunan - butuh blueprint (strategi), fondasi kuat (organisasi), dinding-dinding (kebijakan), pintu dan jendela (prosedur), serta alarm batas (limit risiko). Tanpa satu elemen saja, bangunan tidak aman dihuni.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Bangun kerangka manajemen risiko terkait keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Bangun kerangka manajemen risiko terkait keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Bangun kerangka manajemen risiko terkait keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.03",
@@ -137,7 +157,12 @@
       "Risk register yang memasukkan risiko terkait keamanan siber."
     ],
     "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas.",
-    "analogy": "Tim sepak bola butuh tiga komponen untuk menang: strategi permainan (proses), pemain berkualitas (SDM), dan analis yang memberi data di pinggir lapangan (sistem informasi). Tanpa satu pun, tim akan kesulitan meraih kemenangan."
+    "analogy": "Tim sepak bola butuh tiga komponen untuk menang: strategi permainan (proses), pemain berkualitas (SDM), dan analis yang memberi data di pinggir lapangan (sistem informasi). Tanpa satu pun, tim akan kesulitan meraih kemenangan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Perkuat proses manajemen risiko, SDM, dan sistem informasi manajemen risiko' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perkuat proses manajemen risiko, SDM, dan sistem informasi manajemen risiko'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perkuat proses manajemen risiko, SDM, dan sistem informasi manajemen risiko'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.04",
@@ -165,7 +190,12 @@
       "Laporan verifikasi perbaikan kelemahan material."
     ],
     "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber.",
-    "analogy": "Audit intern ibarat dokter family doctor yang rutin check-up kesehatan perusahaan. Bukan sekadar diagnose, tapi juga pastikan pasien minum obat yang diresepkan dan kontrol ulang sampai sembuh. Kelemahan yang ditemukan bukan aib, tapi peluang perbaikan."
+    "analogy": "Audit intern ibarat dokter family doctor yang rutin check-up kesehatan perusahaan. Bukan sekadar diagnose, tapi juga pastikan pasien minum obat yang diresepkan dan kontrol ulang sampai sembuh. Kelemahan yang ditemukan bukan aib, tapi peluang perbaikan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Jalankan sistem pengendalian intern dan kaji ulang yang memadai'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Jalankan sistem pengendalian intern dan kaji ulang yang memadai'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Jalankan sistem pengendalian intern dan kaji ulang yang memadai'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.01",
@@ -193,7 +223,12 @@
       "Jadwal pengujian keamanan siber berkala."
     ],
     "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber.",
-    "analogy": "Sebelum berperang, jenderal yang baik pasti memetakan wilayah (aset), mengidentifikasi musuh (ancaman), dan mencari kelemahan armor sendiri (kerentanan). Tanpa intelligence ini, pasukan akan buta di medan perang digital."
+    "analogy": "Sebelum berperang, jenderal yang baik pasti memetakan wilayah (aset), mengidentifikasi musuh (ancaman), dan mencari kelemahan armor sendiri (kerentanan). Tanpa intelligence ini, pasukan akan buta di medan perang digital.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Identifikasi aset, ancaman, dan kerentanan secara menyeluruh' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Identifikasi aset, ancaman, dan kerentanan secara menyeluruh'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Identifikasi aset, ancaman, dan kerentanan secara menyeluruh'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.02",
@@ -221,7 +256,12 @@
       "Dokumentasi pengelolaan keamanan data dan informasi."
     ],
     "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber.",
-    "analogy": "Protection ibarat membangun benteng dengan berbagai lapisan pertahanan - pagar, gerbang, penjaga, sensor, dan alarm. Tapi benteng tanpa perawatan akan roboh. Patching dan hardening adalah 'pengecatan' dan 'perbaikan' benteng agar tetap kokoh."
+    "analogy": "Protection ibarat membangun benteng dengan berbagai lapisan pertahanan - pagar, gerbang, penjaga, sensor, dan alarm. Tapi benteng tanpa perawatan akan roboh. Patching dan hardening adalah 'pengecatan' dan 'perbaikan' benteng agar tetap kokoh.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lindungi aset dengan security control yang komprehensif'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lindungi aset dengan security control yang komprehensif'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lindungi aset dengan security control yang komprehensif'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "IV.03",
@@ -249,7 +289,12 @@
       "Log dan tiket penanganan alert keamanan."
     ],
     "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif.",
-    "analogy": "Deteksi ibarat alarm mobil yang sensitive terhadap getaran dan gerakan mencurigakan. Alarm yang terlalu sensitif bikin false alarm, terlalu lambat bikin maling kabur sebelum ketahuan. Keseimbangan yang tepat antara early warning dan akurasi adalah kuncinya."
+    "analogy": "Deteksi ibarat alarm mobil yang sensitive terhadap getaran dan gerakan mencurigakan. Alarm yang terlalu sensitif bikin false alarm, terlalu lambat bikin maling kabur sebelum ketahuan. Keseimbangan yang tepat antara early warning dan akurasi adalah kuncinya.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Deteksi insiden siber secara tepat waktu'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Deteksi insiden siber secara tepat waktu'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Deteksi insiden siber secara tepat waktu' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "IV.04",
@@ -277,7 +322,12 @@
       "Laporan lesson learned pascainsiden."
     ],
     "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan.",
-    "analogy": "Pernah mengalami HP jatuh ke air? Yang pertama fokus matikan HP, keringkan, jangan coba nyalakan sembarangan. Baru kalau sudah kering coba hidupkan. Tim respons insiden ibarat SOPselamatkan HP: stop the bleeding (containment), stabilize (mitigation), recovery (pemulihan), dan analisis kenapa bisa jatuh (lesson learned)."
+    "analogy": "Pernah mengalami HP jatuh ke air? Yang pertama fokus matikan HP, keringkan, jangan coba nyalakan sembarangan. Baru kalau sudah kering coba hidupkan. Tim respons insiden ibarat SOPselamatkan HP: stop the bleeding (containment), stabilize (mitigation), recovery (pemulihan), dan analisis kenapa bisa jatuh (lesson learned).",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Siapkan penanggulangan dan pemulihan insiden siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Siapkan penanggulangan dan pemulihan insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Siapkan penanggulangan dan pemulihan insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "V.01",
@@ -310,7 +360,12 @@
       "Bukti pelaporan hasil penilaian ke OJK."
     ],
     "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
-    "analogy": "Maturity assessment ibarat nilai rapor keamanan siber. Bukan sekadar angka, tapi cermin yang menunjukkan area mana yang perlu les tambahan. Tingkat 5 bukan berarti sempurna - justru harus terus dipertahankan dan dikembangkan agar tidak turun."
+    "analogy": "Maturity assessment ibarat nilai rapor keamanan siber. Bukan sekadar angka, tapi cermin yang menunjukkan area mana yang perlu les tambahan. Tingkat 5 bukan berarti sempurna - justru harus terus dipertahankan dan dikembangkan agar tidak turun.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lakukan penilaian tingkat maturitas keamanan siber setiap tahun'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lakukan penilaian tingkat maturitas keamanan siber setiap tahun'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lakukan penilaian tingkat maturitas keamanan siber setiap tahun'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.02",
@@ -338,7 +393,12 @@
       "Berita acara review hasil penilaian."
     ],
     "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber.",
-    "analogy": "Quality assessment ibarat inspeksi kendaraan sebelum digunakan untuk antar jemput penumpang. Bukan cuma cek mesin nyala atau nggak, tapi komponen rem, ban, lampu, sabuk pengaman, dll. Setiap komponen punya standar, dan ketidaksesuaian satu saja bisa menggugurkan status laik jalan."
+    "analogy": "Quality assessment ibarat inspeksi kendaraan sebelum digunakan untuk antar jemput penumpang. Bukan cuma cek mesin nyala atau nggak, tapi komponen rem, ban, lampu, sabuk pengaman, dll. Setiap komponen punya standar, dan ketidaksesuaian satu saja bisa menggugurkan status laik jalan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Nilai kualitas penerapan manajemen risiko terkait keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Nilai kualitas penerapan manajemen risiko terkait keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Nilai kualitas penerapan manajemen risiko terkait keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.03",
@@ -366,7 +426,12 @@
       "Rencana aksi perbaikan atas proses yang lemah."
     ],
     "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber.",
-    "analogy": "Empat proses ketahanan ibarat urutan layanan di rumah sakit emergency: triage (identifikasi), perawatan (proteksi), monitoring kondisi pasien (deteksi), dan operasi atau pemulihan (respons). Kalau satu proses lemah, keselamatan pasien risiko."
+    "analogy": "Empat proses ketahanan ibarat urutan layanan di rumah sakit emergency: triage (identifikasi), perawatan (proteksi), monitoring kondisi pasien (deteksi), dan operasi atau pemulihan (respons). Kalau satu proses lemah, keselamatan pasien risiko.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Nilai kualitas penerapan proses ketahanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Nilai kualitas penerapan proses ketahanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Nilai kualitas penerapan proses ketahanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V.04",
@@ -394,7 +459,12 @@
       "Peta level maturitas per area penilaian."
     ],
     "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI.",
-    "analogy": "Skala penilaian ibarat sistem belt di karate - dari putih ke hitam. Setiap level punya standar tertentu yang harus dipenuhi. Consistent grading memastikan semua pihak paham di level mana bank berada dan apa yang perlu dilakukan untuk naik level."
+    "analogy": "Skala penilaian ibarat sistem belt di karate - dari putih ke hitam. Setiap level punya standar tertentu yang harus dipenuhi. Consistent grading memastikan semua pihak paham di level mana bank berada dan apa yang perlu dilakukan untuk naik level.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Gunakan skala kualitas dan tingkat maturitas yang ditetapkan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Gunakan skala kualitas dan tingkat maturitas yang ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Gunakan skala kualitas dan tingkat maturitas yang ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VI.01",
@@ -420,7 +490,12 @@
       "Bukti pelaporan tingkat risiko ke OJK."
     ],
     "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
-    "analogy": "Menentukan risiko akhir ibarat dokter menentukan kategori kesehatan pasien: kita punya kondisi fisik dasar (inheren) dan kemampuan ditangani rumah sakit (maturitas). Pasien dengan kondisi berat tapi ditangani RS canggih mungkin risikonya sedang. Sebaliknya, kondisi ringan tapi RS tidak mampu berisiko tinggi. Kombinasi keduanya yang menentukan."
+    "analogy": "Menentukan risiko akhir ibarat dokter menentukan kategori kesehatan pasien: kita punya kondisi fisik dasar (inheren) dan kemampuan ditangani rumah sakit (maturitas). Pasien dengan kondisi berat tapi ditangani RS canggih mungkin risikonya sedang. Sebaliknya, kondisi ringan tapi RS tidak mampu berisiko tinggi. Kombinasi keduanya yang menentukan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Tetapkan tingkat risiko keamanan siber dari risiko inheren dan maturitas' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tetapkan tingkat risiko keamanan siber dari risiko inheren dan maturitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tetapkan tingkat risiko keamanan siber dari risiko inheren dan maturitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VII.01",
@@ -444,7 +519,12 @@
       "Laporan hasil pengujian dan pengendalian aksesnya."
     ],
     "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber.",
-    "analogy": "Testing keamanan ibarat servispakai rutin mobil - rem, ban, mesin dicek berkala. Semakin sering dipakai (sistem kritikal), semakin sering diservis. Mobil yang tidak pernah diservis mungkin jalan lancar hari ini, tapi risiko breakdown di jalan meningkat drastis."
+    "analogy": "Testing keamanan ibarat servispakai rutin mobil - rem, ban, mesin dicek berkala. Semakin sering dipakai (sistem kritikal), semakin sering diservis. Mobil yang tidak pernah diservis mungkin jalan lancar hari ini, tapi risiko breakdown di jalan meningkat drastis.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lakukan pengujian keamanan siber secara berkala'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lakukan pengujian keamanan siber secara berkala'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lakukan pengujian keamanan siber secara berkala'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VII.02",
@@ -468,7 +548,12 @@
       "Rencana remediasi hasil uji."
     ],
     "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan.",
-    "analogy": "VA+PT ibarat tes kesehatan lengkap: pertama cek tekanan darah, kolesterol, gula darah (vulnerability scanning), lalu dokter coba masuk tanpa izin dengan berbagai cara untuk bukti ada celah (penetration test). Hasilnya bukan untuk menghukum, tapi untuk pengobatan yang tepat."
+    "analogy": "VA+PT ibarat tes kesehatan lengkap: pertama cek tekanan darah, kolesterol, gula darah (vulnerability scanning), lalu dokter coba masuk tanpa izin dengan berbagai cara untuk bukti ada celah (penetration test). Hasilnya bukan untuk menghukum, tapi untuk pengobatan yang tepat.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Gunakan analisis kerentanan dan penetration test'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Gunakan analisis kerentanan dan penetration test'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Gunakan analisis kerentanan dan penetration test'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VII.03",
@@ -492,7 +577,12 @@
       "Rencana aksi hasil evaluasi exercise."
     ],
     "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank.",
-    "analogy": "Latihan kebakaran di gedung perkantoran - semua tahu alarmnya, tahu pintu darurat, tahu titik kumpul. Tapi latihan ini penting agar saat api sungguhan, tidak ada kepanikan. Evakuasi berjalan smooth karena sudah diasah berkali-kali. Incident response exercise melakukan hal yang sama, tapi untuk skenario siber."
+    "analogy": "Latihan kebakaran di gedung perkantoran - semua tahu alarmnya, tahu pintu darurat, tahu titik kumpul. Tapi latihan ini penting agar saat api sungguhan, tidak ada kepanikan. Evakuasi berjalan smooth karena sudah diasah berkali-kali. Incident response exercise melakukan hal yang sama, tapi untuk skenario siber.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lakukan exercise berbasis skenario untuk respons insiden'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Lakukan exercise berbasis skenario untuk respons insiden'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Lakukan exercise berbasis skenario untuk respons insiden' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "VIII.01",
@@ -516,7 +606,12 @@
       "Rencana kerja tahunan unit siber."
     ],
     "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber.",
-    "analogy": "Bank tanpa unit siber ibarat rumah tanpa satpam. Bukan berarti rumah tidak bisa ditinggal, tapi risikonya jauh lebih tinggi. Satpam profesional yang tahu tanggung jawabnya, punya jadwal kerja jelas, dan bisa koordinasi dengan lingkungan - itulah fungsi siber yang ideal."
+    "analogy": "Bank tanpa unit siber ibarat rumah tanpa satpam. Bukan berarti rumah tidak bisa ditinggal, tapi risikonya jauh lebih tinggi. Satpam profesional yang tahu tanggung jawabnya, punya jadwal kerja jelas, dan bisa koordinasi dengan lingkungan - itulah fungsi siber yang ideal.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Bentuk unit atau fungsi yang menangani ketahanan dan keamanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Bentuk unit atau fungsi yang menangani ketahanan dan keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Bentuk unit atau fungsi yang menangani ketahanan dan keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "VIII.02",
@@ -540,6 +635,11 @@
       "Daftar kontak eskalasi lintas fungsi dan pihak ketiga."
     ],
     "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi.",
-    "analogy": "Independensi fungsi siber ibarat pemisahan fungsi wasit dan pelatih dalam olahraga. Kalau pelatih juga jadi wasit, akan ada conflict of interest. Fungsi keamanan harus bisa 'blow the whistle' tanpa takut dipecat atau dipindah. Dan tim tanggap insiden ibarat tim medis cadangan - harus siap dimunculkan kapan saja dengan equipment lengkap."
+    "analogy": "Independensi fungsi siber ibarat pemisahan fungsi wasit dan pelatih dalam olahraga. Kalau pelatih juga jadi wasit, akan ada conflict of interest. Fungsi keamanan harus bisa 'blow the whistle' tanpa takut dipecat atau dipindah. Dan tim tanggap insiden ibarat tim medis cadangan - harus siap dimunculkan kapan saja dengan equipment lengkap.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Jaga independensi fungsi siber dan koordinasikan tim tanggap insiden'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Jaga independensi fungsi siber dan koordinasikan tim tanggap insiden'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Jaga independensi fungsi siber dan koordinasikan tim tanggap insiden' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   }
 ]

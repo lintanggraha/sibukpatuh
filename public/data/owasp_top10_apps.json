@@ -10,7 +10,14 @@
       "Perancangan Access Control Matrix",
       "Mitigasi Insecure Direct Object Reference"
     ],
-    "used_by": ["A01"]
+    "used_by": [
+      "A01"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pedoman Mitigasi Akses Ekstensif dari OWASP'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Pedoman Mitigasi Akses Ekstensif dari OWASP'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pedoman Mitigasi Akses Ekstensif dari OWASP'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "Panduan Kripto",
@@ -23,7 +30,14 @@
       "Penyimpanan Kata Sandi yang Tepat",
       "Pengamanan Salt dan Key"
     ],
-    "used_by": ["A02"]
+    "used_by": [
+      "A02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'OWASP Cryptographic Storage Cheat Sheet'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'OWASP Cryptographic Storage Cheat Sheet'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'OWASP Cryptographic Storage Cheat Sheet'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "Defense Cheat Sheet",
@@ -36,7 +50,15 @@
       "Validasi Allow-list vs Deny-list",
       "Isolasi Jaringan Internal"
     ],
-    "used_by": ["A03", "A10"]
+    "used_by": [
+      "A03",
+      "A10"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "Threat Modeling",
@@ -49,7 +71,14 @@
       "Analisis Dampak Perancangan Sistem Lintas Kepercayaan",
       "Matriks Perbaikan Cacat Logis"
     ],
-    "used_by": ["A04"]
+    "used_by": [
+      "A04"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'OWASP Threat Modeling Initiative'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'OWASP Threat Modeling Initiative'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'OWASP Threat Modeling Initiative'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "SDLC",
@@ -62,7 +91,15 @@
       "Penanda Tangan Digital Pustaka Artefak",
       "Kode Terbuka vs Pustaka Pihak Ketiga"
     ],
-    "used_by": ["A04", "A08"]
+    "used_by": [
+      "A04",
+      "A08"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Secure Software Development Lifecycle'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Secure Software Development Lifecycle'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Secure Software Development Lifecycle'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "Hardening Guide",
@@ -75,7 +112,14 @@
       "Konfigurasi CORS (Cross Origin Resource Sharing) yang Ketat",
       "Proteksi Stack Trace dan Error Message"
     ],
-    "used_by": ["A05"]
+    "used_by": [
+      "A05"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Infrastructure Security Hardening'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Infrastructure Security Hardening'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Infrastructure Security Hardening'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "Monitoring Guide",
@@ -88,7 +132,14 @@
       "Redaksi Otomatis Token/Password dari Log",
       "Aturan Anomali Peringatan (Alarm Tuning)"
     ],
-    "used_by": ["A09"]
+    "used_by": [
+      "A09"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'OWASP Logging Vocabulary and Guidelines'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'OWASP Logging Vocabulary and Guidelines'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'OWASP Logging Vocabulary and Guidelines'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V2",
@@ -96,8 +147,18 @@
     "title": "ASVS Bab 2: Authentication",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Titik temu OWASP Top 10 A07 dengan standar verifikasi formal ASVS terkait kegagalan Otentikasi.",
-    "contains": ["Verifikasi Kompleksitas Identitas", "Validasi Biometrik"],
-    "used_by": ["A07"]
+    "contains": [
+      "Verifikasi Kompleksitas Identitas",
+      "Validasi Biometrik"
+    ],
+    "used_by": [
+      "A07"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 2: Authentication'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'ASVS Bab 2: Authentication'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 2: Authentication'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V3",
@@ -105,8 +166,18 @@
     "title": "ASVS Bab 3: Session Management",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Titik temu OWASP Top 10 A07 dengan standar verifikasi formal ASVS terkait pengelolaan manajemen sesi dan proteksi token identitas.",
-    "contains": ["Penetapan Durasi Sesi Inaktif", "Proteksi Cookie (HttpOnly & Secure)"],
-    "used_by": ["A07"]
+    "contains": [
+      "Penetapan Durasi Sesi Inaktif",
+      "Proteksi Cookie (HttpOnly & Secure)"
+    ],
+    "used_by": [
+      "A07"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 3: Session Management'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'ASVS Bab 3: Session Management'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 3: Session Management'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V4",
@@ -114,8 +185,17 @@
     "title": "ASVS Bab 4: Access Control",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Titik temu OWASP Top 10 A01 dengan standar verifikasi ASVS guna memvalidasi efektivitas filter pengguna.",
-    "contains": ["Pemisahan Layanan Admin dari Publik"],
-    "used_by": ["A01"]
+    "contains": [
+      "Pemisahan Layanan Admin dari Publik"
+    ],
+    "used_by": [
+      "A01"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 4: Access Control'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'ASVS Bab 4: Access Control'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 4: Access Control'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V5",
@@ -123,8 +203,19 @@
     "title": "ASVS Bab 5: Validation, Sanitization, Encoding",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Titik temu OWASP Top 10 A03 & A10 untuk pengujian formal atas mekanisme filter input karakter.",
-    "contains": ["Pengujian SSRF", "Filter Input Injection"],
-    "used_by": ["A03", "A10"]
+    "contains": [
+      "Pengujian SSRF",
+      "Filter Input Injection"
+    ],
+    "used_by": [
+      "A03",
+      "A10"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 5: Validation, Sanitization, Encoding'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'ASVS Bab 5: Validation, Sanitization, Encoding'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 5: Validation, Sanitization, Encoding'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V6",
@@ -132,8 +223,17 @@
     "title": "ASVS Bab 6: Stored Cryptography",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Korelasi OWASP Top 10 A02 yang menjelaskan detail pengujian algoritma.",
-    "contains": ["Daftar Algoritma Diizinkan"],
-    "used_by": ["A02"]
+    "contains": [
+      "Daftar Algoritma Diizinkan"
+    ],
+    "used_by": [
+      "A02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 6: Stored Cryptography'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'ASVS Bab 6: Stored Cryptography'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 6: Stored Cryptography'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V7",
@@ -141,8 +241,17 @@
     "title": "ASVS Bab 7: Error Handling and Logging",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Korelasi OWASP Top 10 A09 terkait logging event spesifik.",
-    "contains": ["Pengujian Integritas Audit Trail"],
-    "used_by": ["A09"]
+    "contains": [
+      "Pengujian Integritas Audit Trail"
+    ],
+    "used_by": [
+      "A09"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 7: Error Handling and Logging'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'ASVS Bab 7: Error Handling and Logging'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 7: Error Handling and Logging'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ASVS V14",
@@ -150,7 +259,17 @@
     "title": "ASVS Bab 14: Configuration",
     "scope": "Standard Verifikasi ASVS L1-L3",
     "summary": "Korelasi OWASP Top 10 A05 & A06 menguji lingkungan produksi terkait komponen versi kuno dan salah konfigurasi server.",
-    "contains": ["Audit Dependensi"],
-    "used_by": ["A05", "A06"]
+    "contains": [
+      "Audit Dependensi"
+    ],
+    "used_by": [
+      "A05",
+      "A06"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'ASVS Bab 14: Configuration'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'ASVS Bab 14: Configuration'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'ASVS Bab 14: Configuration'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

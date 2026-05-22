@@ -24,7 +24,12 @@
       "Bukti log peringatan saat terjadi upaya bypass akses."
     ],
     "reporting": "Kategorisasi sebagai temuan akses prioritas 1",
-    "analogy": "Seperti petugas pos penjagaan yang tidak memeriksa kartu identitas siapa pun yang masuk."
+    "analogy": "Seperti petugas pos penjagaan yang tidak memeriksa kartu identitas siapa pun yang masuk.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kendalikan akses dan batasi privilege pengguna secara ketat'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Kendalikan akses dan batasi privilege pengguna secara ketat'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kendalikan akses dan batasi privilege pengguna secara ketat'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A02",
@@ -51,7 +56,12 @@
       "Penggunaan kunci default atau weak keys."
     ],
     "reporting": "Temuan audit standar enkripsi data perusahaan",
-    "analogy": "Seperti mengirimkan surat rahasia negara menggunakan kartu pos terbuka."
+    "analogy": "Seperti mengirimkan surat rahasia negara menggunakan kartu pos terbuka.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Gunakan kriptografi kuat untuk melindungi data sensitif'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Gunakan kriptografi kuat untuk melindungi data sensitif'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Gunakan kriptografi kuat untuk melindungi data sensitif'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A03",
@@ -78,7 +88,12 @@
       "Review log WAF yang memblokir percobaan injeksi."
     ],
     "reporting": "Temuan krusial dalam laporan Vulnerability Assessment.",
-    "analogy": "Penerjemah buta yang sekadar meneruskan perintah mematikan dari orang asing ke jenderal."
+    "analogy": "Penerjemah buta yang sekadar meneruskan perintah mematikan dari orang asing ke jenderal.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pisahkan data (payload) dengan logika komando'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Pisahkan data (payload) dengan logika komando'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pisahkan data (payload) dengan logika komando'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A04",
@@ -105,7 +120,12 @@
       "Review arsitektur menunjukkan single point of failure keamanan."
     ],
     "reporting": "Termasuk dalam approval design readiness perusahaan",
-    "analogy": "Membangun lemari besi namun menempatkan gemboknya di bagian dalam ruangan kaca."
+    "analogy": "Membangun lemari besi namun menempatkan gemboknya di bagian dalam ruangan kaca.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Terapkan perlindungan sejak fase awal rancangan arsitektur keamanan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Terapkan perlindungan sejak fase awal rancangan arsitektur keamanan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Terapkan perlindungan sejak fase awal rancangan arsitektur keamanan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A05",
@@ -132,7 +152,12 @@
       "Akses password admin default belum diganti."
     ],
     "reporting": "Laporan pengujian postur infrastruktur / CSA.",
-    "analogy": "Meninggalkan dokumen penting di laci tanpa menguncinya padahal laci memiliki kunci yang bagus."
+    "analogy": "Meninggalkan dokumen penting di laci tanpa menguncinya padahal laci memiliki kunci yang bagus.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Hindari kesalahan konfigurasi dengan pengerasan sistem dan otomasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Hindari kesalahan konfigurasi dengan pengerasan sistem dan otomasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Hindari kesalahan konfigurasi dengan pengerasan sistem dan otomasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A06",
@@ -158,7 +183,12 @@
       "Penggunaan pustaka tidak lagi didukung oleh vendor."
     ],
     "reporting": "Laporan Software Composition Analysis",
-    "analogy": "Menambal kebocoran kapal namun membiarkan lubang fondasi di bawah dek membusuk."
+    "analogy": "Menambal kebocoran kapal namun membiarkan lubang fondasi di bawah dek membusuk.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kelola siklus hidup patch dan monitoring komponen rentan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kelola siklus hidup patch dan monitoring komponen rentan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kelola siklus hidup patch dan monitoring komponen rentan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A07",
@@ -185,7 +215,12 @@
       "Aplikasi mengijinkan kata sandi '123456'."
     ],
     "reporting": "Sering menjadi root cause take-over account (ATO).",
-    "analogy": "Menjaga rumah dengan kunci sangat rumit, tapi gampang memberikan duplikat kunci jika orang lain pura-pura kehilangan kuncinya."
+    "analogy": "Menjaga rumah dengan kunci sangat rumit, tapi gampang memberikan duplikat kunci jika orang lain pura-pura kehilangan kuncinya.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Verifikasi dan lindungi kredensial manajemen sesi pengguna'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Verifikasi dan lindungi kredensial manajemen sesi pengguna'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Verifikasi dan lindungi kredensial manajemen sesi pengguna'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A08",
@@ -211,7 +246,12 @@
       "Integrasi 3rd-party CDN yang rentan diinject attacker."
     ],
     "reporting": "Berdampak pada keseluruhan kepercayaan publik atas perangkat lunak/layanan.",
-    "analogy": "Menerima paket barang secara buta padahal prangkonya telah sobek dan dilakban ulang orang tak dikenal."
+    "analogy": "Menerima paket barang secara buta padahal prangkonya telah sobek dan dilakban ulang orang tak dikenal.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pastikan integritas kode, pembaruan, dan CI/CD pipeline'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pastikan integritas kode, pembaruan, dan CI/CD pipeline'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pastikan integritas kode, pembaruan, dan CI/CD pipeline'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A09",
@@ -238,7 +278,12 @@
       "Log aplikasi hanya tersimpan secara lokal dan dapat dimodifikasi attacker."
     ],
     "reporting": "Dituangkan pada laporan insiden dan respons waktu penanganan.",
-    "analogy": "Gedung dengan brankas mahal tetapi tidak memasang kamera CCTV dan sistem deteksi suhu panas ruangan."
+    "analogy": "Gedung dengan brankas mahal tetapi tidak memasang kamera CCTV dan sistem deteksi suhu panas ruangan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pelihara visibilitas sistem lewat log keamanan yang lengkap'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pelihara visibilitas sistem lewat log keamanan yang lengkap'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pelihara visibilitas sistem lewat log keamanan yang lengkap'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "A10",
@@ -265,6 +310,11 @@
       "Payload injeksi memicu panggilan ke IP private internal bank."
     ],
     "reporting": "Penemuan dari BlackBox / GreyBox Testing.",
-    "analogy": "Seperti pengawal pribadi yang disuruh bosnya menelepon nomor aneh tanpa tahu nomor tersebut dapat mengaktivasi tagihan pada rekening si pengawal."
+    "analogy": "Seperti pengawal pribadi yang disuruh bosnya menelepon nomor aneh tanpa tahu nomor tersebut dapat mengaktivasi tagihan pada rekening si pengawal.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Disiplinkan fungsionalitas fetch permintaan antarmuka server'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Disiplinkan fungsionalitas fetch permintaan antarmuka server'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Disiplinkan fungsionalitas fetch permintaan antarmuka server'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]
