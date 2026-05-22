@@ -104,12 +104,12 @@
               <div class="sej-inspector-body">
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? activeRequirement.chapter_title : '-' }}</span><span>{{ activeRequirement ? activeRequirement.cadence || '-' : '-' }}</span><span>Syarat Level: {{ activeRequirement ? (activeRequirement.appendices || []).join(', ') : '0' }}</span></div>
 
-                <div v-if="activeRole !== 'default' && activeRequirement && activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]" class="role-translation-box">
+                <div v-if="activeRole !== 'default' && activeRequirement" class="role-translation-box">
                   <span class="sej-label">
                     <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
                   </span>
                   <div class="sej-callout role-callout mt-2">
-                    {{ activeRequirement.roleTranslations[activeRole] }}
+                    {{ (activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]) ? activeRequirement.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini. Silakan rujuk panduan utama.' }}
                   </div>
                 </div>
 

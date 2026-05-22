@@ -129,12 +129,12 @@
               <div class="iso-detail-body" v-if="selectedExplorerControl">
                 <div class="iso-detail-meta"><span class="iso-detail-meta-item"><small>Kategori</small><strong>{{ selectedExplorerControl.domain || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Jenis</small><strong>{{ selectedExplorerControl.type || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Prioritas</small><strong>{{ selectedExplorerControl.priority || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Kesulitan</small><strong>{{ selectedExplorerControl.difficulty || '-' }}</strong></span></div>
                 
-                <div v-if="activeRole !== 'default' && selectedExplorerControl.roleTranslations && selectedExplorerControl.roleTranslations[activeRole]" class="role-translation-box">
+                <div v-if="activeRole !== 'default' && selectedExplorerControl" class="role-translation-box">
                   <span class="iso-detail-label">
                     <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
                   </span>
                   <div class="iso-callout role-callout">
-                    {{ selectedExplorerControl.roleTranslations[activeRole] }}
+                    {{ (selectedExplorerControl.roleTranslations && selectedExplorerControl.roleTranslations[activeRole]) ? selectedExplorerControl.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini. Silakan rujuk panduan utama.' }}
                   </div>
                 </div>
 
@@ -176,12 +176,12 @@
                     <div class="iso-detail-body" v-if="selectedConceptControl">
                       <div class="iso-detail-meta"><span class="iso-detail-meta-item"><small>Kategori</small><strong>{{ selectedConceptControl.domain || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Jenis</small><strong>{{ selectedConceptControl.type || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Prioritas</small><strong>{{ selectedConceptControl.priority || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Kesulitan</small><strong>{{ selectedConceptControl.difficulty || '-' }}</strong></span></div>
 
-                      <div v-if="activeRole !== 'default' && selectedConceptControl.roleTranslations && selectedConceptControl.roleTranslations[activeRole]" class="role-translation-box">
+                      <div v-if="activeRole !== 'default' && selectedConceptControl" class="role-translation-box">
                         <span class="iso-detail-label">
                           <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
                         </span>
                         <div class="iso-callout role-callout">
-                          {{ selectedConceptControl.roleTranslations[activeRole] }}
+                          {{ (selectedConceptControl.roleTranslations && selectedConceptControl.roleTranslations[activeRole]) ? selectedConceptControl.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini. Silakan rujuk panduan utama.' }}
                         </div>
                       </div>
 

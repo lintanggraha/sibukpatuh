@@ -120,6 +120,10 @@ const routes = [
         path: '/compliance-simulator',
         name: 'simulator',
         component: () => import('../views/Simulator.vue')
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        redirect: '/'
     }
 ];
 

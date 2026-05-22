@@ -292,12 +292,12 @@
                   <span>{{ activeTheme ? (activeTheme.focus || []).length + " fokus" : "0 fokus" }}</span>
                 </div>
 
-                <div v-if="activeRole !== 'default' && activeTheme && activeTheme.roleTranslations && activeTheme.roleTranslations[activeRole]" class="role-translation-box">
+                <div v-if="activeRole !== 'default' && activeTheme" class="role-translation-box">
                   <span class="orj-label">
                     <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
                   </span>
                   <div class="orj-callout role-callout mt-2">
-                    {{ activeTheme.roleTranslations[activeRole] }}
+                    {{ (activeTheme.roleTranslations && activeTheme.roleTranslations[activeRole]) ? activeTheme.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini. Silakan rujuk panduan utama.' }}
                   </div>
                 </div>
 
