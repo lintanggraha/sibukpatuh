@@ -58,6 +58,15 @@ const routes = [
         component: () => import('../views/Seojk.vue')
     },
     {
+        path: '/frameworks/padk-1-2026',
+        name: 'padk',
+        component: () => import('../views/Padk.vue'),
+        meta: {
+            title: 'PADK 1 Tahun 2026 - Penyelenggaraan TI oleh Bank Umum',
+            description: 'Peta kewajiban, pelaporan, perizinan, dan format PADK 1 Tahun 2026 tentang penyelenggaraan teknologi informasi oleh bank umum.'
+        }
+    },
+    {
         path: '/frameworks/padg-32-2025',
         name: 'padg',
         component: () => import('../views/Padg.vue')

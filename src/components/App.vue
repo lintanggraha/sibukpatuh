@@ -150,6 +150,11 @@ export default {
               icon: "fa-landmark",
             },
             {
+              routeName: "padk",
+              label: "PADK 1 Tahun 2026",
+              icon: "fa-server",
+            },
+            {
               routeName: "resilience",
               label: "Panduan Resiliensi OJK",
               icon: "fa-layer-group",
@@ -283,8 +288,11 @@ export default {
       const route = this.$route;
       this.frameworkNavGroups[0].active =
         route.name === "seojk" ||
+        route.name === "padk" ||
         route.name === "resilience" ||
-        route.name === "pbi";
+        route.name === "pbi" ||
+        route.name === "padg" ||
+        route.name === "pdp";
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||
         route.name === "nist" ||

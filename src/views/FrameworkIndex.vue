@@ -89,6 +89,16 @@ export default {
           icon: "fa-landmark",
         },
         {
+          routeName: "padk",
+          name: "PADK 1 Tahun 2026",
+          subtitle: "Penyelenggaraan TI oleh bank umum",
+          summary: "Pedoman tata kelola TI, pelaporan, perizinan, insiden, dan format regulator OJK.",
+          metric_label: "Kewajiban",
+          metric_value: null,
+          accent: "#0f766e",
+          icon: "fa-server",
+        },
+        {
           routeName: "resilience",
           name: "Resiliensi OJK",
           subtitle: "Panduan belajar digital resilience",
@@ -190,6 +200,7 @@ export default {
       nistCount,
       cobitCount,
       seojkCount,
+      padkCount,
       resilienceCount,
       pbiCount,
       padgCount,
@@ -200,6 +211,7 @@ export default {
       loadData("/data/nist_csf.json"),
       loadData("/data/cobit_2019.json", "principles_system"),
       loadData("/data/seojk_requirements.json"),
+      loadData("/data/padk_1_2026_requirements.json"),
       loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
       loadData("/data/padg_requirements.json"),
@@ -211,11 +223,12 @@ export default {
     this.frameworks[1].metric_value = nistCount || 106;
     this.frameworks[2].metric_value = cobitCount || 40;
     this.frameworks[3].metric_value = seojkCount || 0;
-    this.frameworks[4].metric_value = resilienceCount || 0;
-    this.frameworks[5].metric_value = pbiCount || 0;
-    this.frameworks[6].metric_value = padgCount || 0;
-    this.frameworks[7].metric_value = owaspTop10Count || 10;
-    this.frameworks[8].metric_value = owaspAsvsCount || 8;
+    this.frameworks[4].metric_value = padkCount || 0;
+    this.frameworks[5].metric_value = resilienceCount || 0;
+    this.frameworks[6].metric_value = pbiCount || 0;
+    this.frameworks[7].metric_value = padgCount || 0;
+    this.frameworks[8].metric_value = owaspTop10Count || 10;
+    this.frameworks[9].metric_value = owaspAsvsCount || 8;
   },
 };
 </script>
