@@ -1113,7 +1113,7 @@ export default {
 .modal-sidebar-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}
 .modal-sidebar-id{font-size:1.1rem;font-weight:800;margin-bottom:0}
 .modal-sidebar-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.82}
-.modal-main{display:flex;flex-direction:column;max-height:80vh;overflow:hidden}
+.modal-main{display:flex;flex-direction:column;min-height:0;flex:1;overflow:hidden}
 .modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
 .modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
 .modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
