@@ -2,72 +2,69 @@
   <div class="framework-shell">
     <div class="container-xl">
       <header class="framework-header">
-        <div class="row g-3 align-items-center">
-          <div class="col-lg-4">
-            <router-link to="/" class="framework-brand">
-              <span class="framework-brand-mark">
-                <i class="fas fa-layer-group"></i>
-              </span>
-              <span class="framework-brand-copy">
-                <small>SibukPatuh</small>
-                <strong>Sistem Informasi Biar Update Kepatuhan</strong>
-              </span>
-            </router-link>
-          </div>
-          <div class="col-lg-8">
-            <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
-              <div
-                v-for="group in frameworkNavGroups"
-                :key="group.label"
-                class="framework-nav-group"
-                :class="{ show: group.show }"
-              >
-                <button
-                  class="framework-nav-toggle"
-                  :class="{ 'is-active': group.active }"
-                  type="button"
-                  @click.stop="toggleGroup(group)"
-                  aria-expanded="false"
-                >
-                  <i :class="`fas ${group.icon}`" class="nav-icon"></i>
-                  <span>{{ group.label }}</span>
-                </button>
+        <div class="framework-header-inner">
+          <router-link to="/" class="framework-brand">
+            <span class="framework-brand-mark">
+              <i class="fas fa-layer-group"></i>
+            </span>
+            <span class="framework-brand-copy">
+              <small>SibukPatuh</small>
+              <strong>Sistem Informasi Biar Update Kepatuhan</strong>
+            </span>
+          </router-link>
 
+          <div class="framework-nav-area">
+            <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
                 <div
-                  class="framework-dropdown"
+                  v-for="group in frameworkNavGroups"
+                  :key="group.label"
+                  class="framework-nav-group"
                   :class="{ show: group.show }"
                 >
-                  <router-link
-                    v-for="item in group.items"
-                    :key="item.route"
-                    :to="{ name: item.routeName }"
-                    class="dropdown-item"
-                    :class="{ 'is-active': isActiveRoute(item.routeName) }"
-                    @click="closeAllGroups"
+                  <button
+                    class="framework-nav-toggle"
+                    :class="{ 'is-active': group.active }"
+                    type="button"
+                    @click.stop="toggleGroup(group)"
+                    aria-expanded="false"
                   >
-                    <i :class="`fas ${item.icon}`" class="dropdown-icon"></i>
-                    <span>{{ item.label }}</span>
-                  </router-link>
+                    <i :class="`fas ${group.icon}`" class="nav-icon"></i>
+                    <span>{{ group.label }}</span>
+                  </button>
+
+                  <div
+                    class="framework-dropdown"
+                    :class="{ show: group.show }"
+                  >
+                    <router-link
+                      v-for="item in group.items"
+                      :key="item.route"
+                      :to="{ name: item.routeName }"
+                      class="dropdown-item"
+                      :class="{ 'is-active': isActiveRoute(item.routeName) }"
+                      @click="closeAllGroups"
+                    >
+                      <i :class="`fas ${item.icon}`" class="dropdown-icon"></i>
+                      <span>{{ item.label }}</span>
+                    </router-link>
+                  </div>
                 </div>
-              </div>
 
-              <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
-                 <i class="fas fa-info-circle nav-icon"></i>
-                 <span>Tentang</span>
-              </router-link>
+                <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
+                  <i class="fas fa-info-circle nav-icon"></i>
+                  <span>Tentang</span>
+                </router-link>
 
-              <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
-                 <i class="fas fa-envelope nav-icon"></i>
-                 <span>Kontak</span>
-              </router-link>
-              
-              <!-- Divider -->
-              <div class="nav-divider"></div>
-              
-              <!-- Role-Based Translator Selector -->
-              <RoleSelector />
-
+                <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
+                  <i class="fas fa-envelope nav-icon"></i>
+                  <span>Kontak</span>
+                </router-link>
             </nav>
+
+            <div class="framework-tools">
+              <div class="nav-divider"></div>
+              <RoleSelector />
+            </div>
           </div>
         </div>
       </header>
@@ -151,6 +148,11 @@ export default {
               routeName: "seojk",
               label: "SEOJK 29 03/2022",
               icon: "fa-landmark",
+            },
+            {
+              routeName: "padk",
+              label: "PADK 1 Tahun 2026",
+              icon: "fa-server",
             },
             {
               routeName: "resilience",
@@ -286,8 +288,11 @@ export default {
       const route = this.$route;
       this.frameworkNavGroups[0].active =
         route.name === "seojk" ||
+        route.name === "padk" ||
         route.name === "resilience" ||
-        route.name === "pbi";
+        route.name === "pbi" ||
+        route.name === "padg" ||
+        route.name === "pdp";
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||
         route.name === "nist" ||
@@ -563,6 +568,13 @@ body {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
 }
 
+.framework-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
 /* Only make sticky if there's enough vertical room to avoid covering content */
 @media (min-height: 680px) {
   .framework-header {
@@ -575,6 +587,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  flex: 0 1 22rem;
+  min-width: 13.5rem;
   text-decoration: none;
   color: inherit;
 }
@@ -601,18 +615,29 @@ body {
 
 .framework-brand-copy strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  max-width: 200px;
+  max-width: 14rem;
+}
+
+.framework-nav-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .framework-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+  flex-wrap: nowrap;
+  gap: 0.1rem;
   justify-content: flex-end;
   align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .framework-nav-group {
@@ -629,8 +654,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  min-width: 5.5rem;
-  padding: 0.5rem 0.75rem;
+  min-width: 4.9rem;
+  min-height: 4rem;
+  padding: 0.45rem 0.55rem;
   border-radius: 12px;
   border: 1px solid transparent;
   color: var(--muted);
@@ -638,13 +664,14 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.72rem;
+  line-height: 1.15;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .framework-nav-toggle .nav-icon {
   margin-right: 0;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   flex-shrink: 0;
 }
 
@@ -664,6 +691,15 @@ body {
 
 .framework-nav-toggle::after {
   margin-left: 0.15rem;
+}
+
+.framework-tools {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  width: auto;
+  flex: 0 0 auto;
 }
 
 .framework-dropdown {
@@ -934,28 +970,48 @@ body {
 }
 
 @media (max-width: 1440px) {
-  .framework-nav-toggle {
-    min-width: 9.5rem;
-    padding: 0.65rem 1rem;
-    font-size: 0.82rem;
-  }
-  .framework-brand-copy strong {
-    font-size: 0.95rem;
-  }
   .framework-header {
     margin-bottom: 0.65rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .framework-brand {
+    flex-basis: 18rem;
+  }
+
+  .framework-brand-copy strong {
+    font-size: 0.92rem;
+    max-width: 11.25rem;
+  }
+
+  .framework-nav-toggle {
+    min-width: 4.2rem;
+    min-height: 3.55rem;
+    padding: 0.38rem 0.38rem;
+    font-size: 0.65rem;
+  }
+
+  .framework-nav-toggle .nav-icon {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .framework-header {
     padding: 0.6rem 0.85rem;
     top: 0.5rem;
     border-radius: 20px;
   }
 
-  .framework-header .row {
-    gap: 0.75rem;
+  .framework-header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .framework-brand {
+    flex: 0 0 auto;
+    min-width: 0;
   }
 
   .framework-nav {
@@ -967,6 +1023,12 @@ body {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: rgba(20, 78, 114, 0.2) transparent;
+  }
+
+  .framework-nav-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
   }
 
   .framework-nav::-webkit-scrollbar {
@@ -1022,6 +1084,23 @@ body {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .framework-nav-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .framework-tools {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .framework-tools .nav-divider {
+    display: none;
   }
 }
 

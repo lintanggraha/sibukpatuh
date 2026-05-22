@@ -26,7 +26,7 @@ export const useFrameworkStore = defineStore('framework', {
         icon: 'fa-landmark',
         active: false,
         show: false,
-        items: ['seojk', 'resilience', 'pbi'],
+        items: ['seojk', 'padk', 'resilience', 'pbi', 'padg', 'pdp'],
       },
       {
         id: 'internasional',
@@ -64,7 +64,7 @@ export const useFrameworkStore = defineStore('framework', {
      * Update active groups based on current route
      */
     updateActiveGroups(routeName) {
-      this.navGroups[0].active = ['seojk', 'resilience', 'pbi'].includes(routeName);
+      this.navGroups[0].active = ['seojk', 'padk', 'resilience', 'pbi', 'padg', 'pdp'].includes(routeName);
       this.navGroups[1].active = ['iso27001', 'nist', 'cobit', 'owasp_top10', 'owasp_asvs'].includes(routeName);
       
       if (this.navGroups[0].active) {
