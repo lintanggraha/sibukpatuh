@@ -40,7 +40,12 @@
     ],
     "implementationTips": "Buat RACI matrix yang jelas untuk setiap aspek keamanan informasi. Tetapkan CISO atau security champion. Dokumentasikan job description setiap role dan komunikasikan melalui onboarding session.",
     "analogy": "Layaknya tim sepak bola yang punya posisi spesifik—kiper, bek, penyerang—setiap orang di organisasi harus tahu peran mereka dalam menjaga keamanan informasi.",
-    "focusArea": "Struktur Organisasi"
+    "focusArea": "Struktur Organisasi",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Peran dan tanggung jawab keamanan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Peran dan tanggung jawab keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Peran dan tanggung jawab keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.3",
@@ -83,7 +88,12 @@
     ],
     "implementationTips": "Manajemen harus memberikan contoh dengan mengikuti training keamanan terlebih dahulu. Sertakan KPI keamanan dalam performance review. Adakan town hall meeting quarterly untuk update progress keamanan.",
     "analogy": "Seperti pelatih tim yang tidak hanya memberi strategi tapi juga memastikan setiap pemain menjalankannya, manajemen harus aktif mendorong penerapan keamanan informasi.",
-    "focusArea": "Kepemimpinan"
+    "focusArea": "Kepemimpinan",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Tanggung jawab manajemen'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tanggung jawab manajemen'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tanggung jawab manajemen'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.5",
@@ -102,7 +112,12 @@
     ],
     "implementationTips": "Buat daftar kontak BSSAN, POLRI (unit cybercrime), dan Kominfo. Simpan dalam kontak darurat yang mudah diakses. Lakukan silaturahmi rutin minimal setahun sekali untuk membangun relasi.",
     "analogy": "Seperti memiliki nomor telepon darurat yang siap dihubungi saat terjadi masalah, kontak dengan otoritas membantu organisasi merespons insiden dengan tepat.",
-    "focusArea": "Hubungan Eksternal"
+    "focusArea": "Hubungan Eksternal",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kontak dengan otoritas yang berwenang'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kontak dengan otoritas yang berwenang'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kontak dengan otoritas yang berwenang'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.6",
@@ -121,7 +136,12 @@
     ],
     "implementationTips": "Gabung dengan ID-SIRTII, MALSPINDO, atau komunitas CISO Indonesia. Aktif di forum sharing ancaman siber. Hadiri minimal 2 event keamanan informasi per tahun untuk update best practices.",
     "analogy": "Layaknya bergabung dengan komunitas dokter untuk update metode pengobatan terbaru, bergabung dengan forum keamanan membantu organisasi tetap update ancaman terkini.",
-    "focusArea": "Networking & Komunitas"
+    "focusArea": "Networking & Komunitas",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kontak dengan grup kepentingan khusus'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kontak dengan grup kepentingan khusus'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kontak dengan grup kepentingan khusus'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.7",
@@ -140,7 +160,12 @@
     ],
     "implementationTips": "Subscribe ke feed threat intelligence gratis seperti MISP atau AlienVault OTB. Tetapkan tim kecil yang bertugas menganalisis threat feed mingguan. Buat briefing bulanan tentang ancaman terbaru yang relevan dengan industri.",
     "analogy": "Seperti badan meteorologi yang memonitor cuaca untuk memprediksi badai, intelijen ancaman membantu organisasi mengantisipasi serangan sebelum terjadi.",
-    "focusArea": "Threat Intelligence"
+    "focusArea": "Threat Intelligence",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Intelijen ancaman' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Intelijen ancaman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Intelijen ancaman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.8",
@@ -159,7 +184,12 @@
     ],
     "implementationTips": "Tambahkan checklist keamanan di project charter setiap proyek. Libatkan tim security di kick-off meeting. Sertakan security review sebagai gate di stage-gate process proyek.",
     "analogy": "Seperti sabuk pengaman yang harus dipakai di mobil manapun, keamanan informasi harus menjadi bagian dari setiap proyek, apapun jenisnya.",
-    "focusArea": "Integrasi Proyek"
+    "focusArea": "Integrasi Proyek",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan informasi dalam manajemen proyek'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan informasi dalam manajemen proyek'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan informasi dalam manajemen proyek'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.9",
@@ -181,7 +211,12 @@
     ],
     "implementationTips": "Mulai dengan spreadsheet sederhana: nama aset, owner, lokasi, klasifikasi, criticality. Lakukan stock opname aset IT quarterly. Gunakan tools seperti Snipe-IT jika aset sudah ratusan.",
     "analogy": "Seperti daftar isi dalam buku yang membantu Anda menemukan halaman tertentu, inventaris aset membantu organisasi tahu apa yang harus dilindungi dan di mana lokasinya.",
-    "focusArea": "Manajemen Aset"
+    "focusArea": "Manajemen Aset",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Inventarisasi informasi dan aset terkait lainnya'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Inventarisasi informasi dan aset terkait lainnya'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Inventarisasi informasi dan aset terkait lainnya'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.10",
@@ -200,7 +235,12 @@
     ],
     "implementationTips": "Buat AUP yang jelas menyebutkan apa yang boleh dan tidak boleh dilakukan dengan aset IT. Minta karyawan tanda tangan AUP saat onboarding. Sosialisasikan dengan contoh kasus pelanggaran yang sering terjadi.",
     "analogy": "Seperti aturan pemakaian kendaraan perusahaan—boleh untuk dinas saja, bukan liburan pribadi—aset IT juga perlu batasan penggunaan yang jelas.",
-    "focusArea": "Acceptable Use Policy"
+    "focusArea": "Acceptable Use Policy",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penggunaan aset yang dapat diterima'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penggunaan aset yang dapat diterima'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penggunaan aset yang dapat diterima'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.11",
@@ -219,7 +259,12 @@
     ],
     "implementationTips": "Buat checklist exit clearance yang mencakup pengembalian laptop, ID card, token, dan akses sistem. Integrasikan dengan proses HR saat resign. Tetapkan timeline 1-3 hari kerja untuk pengembalian semua aset.",
     "analogy": "Seperti mengembalikan kunci apartemen saat check-out, semua aset organisasi harus dikembalikan saat karyawan keluar atau selesai bertugas.",
-    "focusArea": "Offboarding"
+    "focusArea": "Offboarding",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengembalian aset'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengembalian aset'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengembalian aset'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.12",
@@ -238,7 +283,12 @@
     ],
     "implementationTips": "Definisikan 3-4 level klasifikasi: Public, Internal, Confidential, Restricted. Buat kriteria yang jelas untuk setiap level. Mulai klasifikasi dari data paling kritis dulu, lalu ekspansi bertahap.",
     "analogy": "Seperti sistem triase di rumah sakit yang memprioritaskan pasien berdasarkan tingkat kegawatan, klasifikasi informasi membantu memprioritaskan perlindungan data.",
-    "focusArea": "Data Classification"
+    "focusArea": "Data Classification",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Klasifikasi informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Klasifikasi informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Klasifikasi informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.13",
@@ -257,7 +307,12 @@
     ],
     "implementationTips": "Implementasikan label digital (header/footer dokumen, email subject tag) dan fisik (stiker pada dokumen kertas). Gunakan watermark untuk dokumen confidential. Otomatisasi labeling dengan DLP jika memungkinkan.",
     "analogy": "Layaknya label 'mudah pecah' pada paket yang mengingatkan kurir untuk berhati-hati, label klasifikasi memberi tahu karyawan cara menangani informasi.",
-    "focusArea": "Labeling"
+    "focusArea": "Labeling",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pelabelan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pelabelan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pelabelan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.14",
@@ -276,7 +331,12 @@
     ],
     "implementationTips": "Tetapkan metode transfer aman: SFTP untuk file besar, encrypted email untuk data sensitif, secure portal untuk sharing eksternal. Larang penggunaan personal email atau USB untuk transfer data perusahaan.",
     "analogy": "Seperti pengiriman uang dengan brankas anti-maling, transfer informasi butuh perlindungan khusus agar tidak dicuri di tengah jalan.",
-    "focusArea": "Data Transfer"
+    "focusArea": "Data Transfer",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Transfer informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Transfer informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Transfer informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.15",
@@ -295,7 +355,12 @@
     ],
     "implementationTips": "Terapkan prinsip least privilege dari awal. Buat workflow approval untuk request akses baru. Review akses user setiap 3-6 bulan, terutama untuk sistem kritis.",
     "analogy": "Seperti sistem kartu akses di hotel—tamu hanya bisa masuk kamar mereka sendiri, bukan kamar orang lain—akses harus berdasarkan kebutuhan.",
-    "focusArea": "Access Control"
+    "focusArea": "Access Control",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Manajemen akses'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Manajemen akses'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen akses'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.16",
@@ -314,7 +379,12 @@
     ],
     "implementationTips": "Integrasikan sistem HR dengan Active Directory untuk automate provisioning/deprovisioning. Pastikan proses join-mover-leaver berjalan lancar. Audit identitas user yang tidak aktif setiap bulan.",
     "analogy": "Layaknya pembuatan KTP baru, perpanjangan, dan pencabutan saat pindah kota, identitas digital juga perlu dikelola dari awal sampai akhir.",
-    "focusArea": "Identity Lifecycle"
+    "focusArea": "Identity Lifecycle",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Manajemen identitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Manajemen identitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen identitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.17",
@@ -333,7 +403,12 @@
     ],
     "implementationTips": "Wajibkan password minimal 12 karakter dengan kompleksitas. Implementasi MFA untuk semua sistem critical. Gunakan password manager enterprise. Rotasi password setiap 90 hari untuk akun privileged.",
     "analogy": "Seperti password ATM yang harus dirahasiakan dan diganti berkala, informasi autentikasi perlu dikelola dengan ketat untuk mencegah penyalahgunaan.",
-    "focusArea": "Authentication Management"
+    "focusArea": "Authentication Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Informasi autentikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Informasi autentikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Informasi autentikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.18",
@@ -352,7 +427,12 @@
     ],
     "implementationTips": "Buat prosedur formal untuk grant, modify, dan revoke access. Implementasi role-based access control (RBAC). Lakukan recertification akses quarterly untuk sistem yang mengandung data sensitif.",
     "analogy": "Seperti kunci yang harus diambil kembali saat karyawan resign, hak akses juga harus segera dicabut agar tidak disalahgunakan.",
-    "focusArea": "Access Rights"
+    "focusArea": "Access Rights",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Hak akses'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Hak akses'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Hak akses'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.19",
@@ -371,7 +451,12 @@
     ],
     "implementationTips": "Buat questionnaire security assessment untuk vendor baru. Sertakan klausul keamanan di kontrak. Lakukan audit atau request bukti compliance vendor sebelum onboard.",
     "analogy": "Seperti Anda mengecek reputasi kontraktor sebelum mempekerjakan mereka, risiko keamanan pemasok harus dievaluasi sebelum bekerja sama.",
-    "focusArea": "Supplier Risk"
+    "focusArea": "Supplier Risk",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan informasi dalam hubungan dengan pemasok'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan informasi dalam hubungan dengan pemasok'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan informasi dalam hubungan dengan pemasok'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.20",
@@ -390,7 +475,12 @@
     ],
     "implementationTips": "Pahami shared responsibility model untuk setiap cloud provider. Konfigurasi security group dan IAM dengan benar dari awal. Enable logging dan monitoring untuk semua layanan cloud.",
     "analogy": "Seperti menyewa brankas di bank—Anda harus percaya bank menjaganya, tapi juga pastikan apa yang Anda simpan memang boleh di sana.",
-    "focusArea": "Cloud Security"
+    "focusArea": "Cloud Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengelolaan keamanan informasi untuk layanan cloud'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengelolaan keamanan informasi untuk layanan cloud'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengelolaan keamanan informasi untuk layanan cloud'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.21",
@@ -409,7 +499,12 @@
     ],
     "implementationTips": "Map seluruh supply chain TI dan identifikasi single point of failure. Request business continuity plan dari vendor kritis. Diversifikasi vendor untuk mengurangi risiko ketergantungan.",
     "analogy": "Layaknya restoran yang harus memastikan supplier makanannya aman, organisasi harus memastikan rantai pasokan TI tidak menjadi titik lemah keamanan.",
-    "focusArea": "Supply Chain Security"
+    "focusArea": "Supply Chain Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan informasi dalam rantai pasokan TI'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan informasi dalam rantai pasokan TI'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan informasi dalam rantai pasokan TI'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.22",
@@ -428,7 +523,12 @@
     ],
     "implementationTips": "Buat compliance checklist berdasarkan kebijakan internal. Lakukan self-assessment berkala setiap quarter. Track remediation plan untuk temuan yang belum ditutup.",
     "analogy": "Seperti uji kelayakan kendaraan tahunan, tinjauan kepatuhan berkala memastikan keamanan organisasi masih berjalan di jalur yang benar.",
-    "focusArea": "Compliance Monitoring"
+    "focusArea": "Compliance Monitoring",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kepatuhan terhadap kebijakan, aturan, dan standar keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.23",
@@ -447,7 +547,12 @@
     ],
     "implementationTips": "Aktif berpartisipasi di ISAC (Information Sharing and Analysis Center) sektor industri Anda. Share anonymized threat data untuk membantu komunitas. Manfaatkan intelligence yang didapat untuk improve defense.",
     "analogy": "Seperti sistem RT yang saling berbagi info keamanan lingkungan, komunitas keamanan membantu organisasi saling berbagi info ancaman.",
-    "focusArea": "Information Sharing"
+    "focusArea": "Information Sharing",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Hubungan dengan komunitas informasi dan keamanan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Hubungan dengan komunitas informasi dan keamanan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Hubungan dengan komunitas informasi dan keamanan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.24",
@@ -466,7 +571,12 @@
     ],
     "implementationTips": "Identifikasi business process kritis dan Maximum Tolerable Downtime. Buat BCP yang mencakup skenario worst-case. Lakukan tabletop exercise minimal setahun sekali untuk uji kesiapan.",
     "analogy": "Sepertilatihan kebakaran yang melatih evakuasi sebelum bencana sungguhan, perencanaan kontinuitas mempersiapkan organisasi menghadapi krisis.",
-    "focusArea": "Business Continuity"
+    "focusArea": "Business Continuity",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perencanaan dan persiapan keamanan informasi kontinuitas bisnis'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perencanaan dan persiapan keamanan informasi kontinuitas bisnis'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perencanaan dan persiapan keamanan informasi kontinuitas bisnis'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.25",
@@ -485,7 +595,12 @@
     ],
     "implementationTips": "Inventory semua kewajiban hukum yang berlaku (UU PDP, PP 71/2019, dll). Buat compliance matrix dan assign PIC untuk setiap requirement. Review legal compliance saat ada regulasi baru.",
     "analogy": "Layaknya cek kesehatan sebelum mulai gym, penilaian awal kepatuhan memastikan organisasi siap memenuhi semua kewajiban keamanan.",
-    "focusArea": "Legal Compliance"
+    "focusArea": "Legal Compliance",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Penilaian dan keputusan kepatuhan awal' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penilaian dan keputusan kepatuhan awal'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penilaian dan keputusan kepatuhan awal'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.26",
@@ -504,7 +619,12 @@
     ],
     "implementationTips": "Subscribe ke update regulasi dari OJK, Kominfo, atau BSSN. Buat legal register yang diupdate quarterly. Konsultasi dengan legal counsel untuk interpretasi requirement yang ambigu.",
     "analogy": "Seperti daftar aturan lalu lintas yang harus dipatuhi pengemudi, persyaratan hukum keamanan harus diketahui dan dipatuhi organisasi.",
-    "focusArea": "Regulatory Requirements"
+    "focusArea": "Regulatory Requirements",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Persyaratan hukum, peraturan, dan kontraktual' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Persyaratan hukum, peraturan, dan kontraktual'.",
+      "legal": "Mode Legal: Tinjau SLA dan klausul sanksi (Right to Audit & Penalty) pada vendor terkait pelaksanaan 'Persyaratan hukum, peraturan, dan kontraktual'."
+    }
   },
   {
     "id": "5.27",
@@ -523,7 +643,12 @@
     ],
     "implementationTips": "Definisikan retention period untuk setiap jenis dokumen berdasarkan hukum dan bisnis. Implementasi automated retention di DMS. Pastikan proses disposal dilakukan dengan secure destruction.",
     "analogy": "Seperti arsip penting yang disimpan dalam lemari tahan api, rekaman informasi harus dilindungi agar tidak hilang atau diubah sembarangan.",
-    "focusArea": "Record Retention"
+    "focusArea": "Record Retention",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kekekalan dan disposisi rekaman informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kekekalan dan disposisi rekaman informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kekekalan dan disposisi rekaman informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.28",
@@ -542,7 +667,12 @@
     ],
     "implementationTips": "Lakukan data mapping untuk tahu di mana PII disimpan. Implementasi privacy by design di setiap sistem baru. Tunjuk DPO jika volume PII yang diproses besar.",
     "analogy": "Layaknya dokter yang menjaga rahasia pasien, organisasi wajib melindungi data pribadi yang dipercayakan kepadanya.",
-    "focusArea": "Privacy & PII Protection"
+    "focusArea": "Privacy & PII Protection",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penjaminan privasi dan perlindungan PII'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penjaminan privasi dan perlindungan PII'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Penjaminan privasi dan perlindungan PII'."
+    }
   },
   {
     "id": "5.29",
@@ -561,7 +691,12 @@
     ],
     "implementationTips": "Jadwalkan audit internal minimal setahun sekali oleh tim independen. Gunakan framework audit yang recognized (ISO 27001, NIST). Tindak lanjuti temuan dengan remediation plan yang terukur.",
     "analogy": "Seperti audit keuangan oleh akuntan eksternal, penilaian independen memberi pandangan objektif tentang efektivitas keamanan.",
-    "focusArea": "Independent Review"
+    "focusArea": "Independent Review",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penilaian independen keamanan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penilaian independen keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penilaian independen keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.30",
@@ -580,7 +715,12 @@
     ],
     "implementationTips": "Integrasikan security checkpoint di SDLC. Wajibkan threat modeling untuk setiap fitur baru. Lakukan code review dan security testing sebelum release.",
     "analogy": "Seperti fondasi bangunan yang harus kuat sejak awal, keamanan harus dibangun dari awal dalam pengembangan sistem, bukan ditambahkan belakangan.",
-    "focusArea": "ICT Development Security"
+    "focusArea": "ICT Development Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Persyaratan keamanan informasi dalam proses pengembangan ICT'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Persyaratan keamanan informasi dalam proses pengembangan ICT'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Persyaratan keamanan informasi dalam proses pengembangan ICT'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.31",
@@ -599,7 +739,12 @@
     ],
     "implementationTips": "Review semua kontrak dan perjanjian dari aspek keamanan informasi. Pastikan ada klausul right-to-audit untuk vendor. Konsultasi legal sebelum implementasi kontrol yang berdampak ke karyawan.",
     "analogy": "Layaknya izin mendirikan bangunan yang harus dipenuhi sebelum membangun, aspek legal harus dikendalikan sebelum mengimplementasikan sistem.",
-    "focusArea": "Legal Controls"
+    "focusArea": "Legal Controls",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengembangan dan pengendalian legal'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengembangan dan pengendalian legal'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengembangan dan pengendalian legal'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.32",
@@ -618,7 +763,12 @@
     ],
     "implementationTips": "Inventory semua software yang digunakan dan cek lisensinya. Gunakan software asset management tool untuk track license compliance. Lakukan audit software internal setiap 6 bulan.",
     "analogy": "Seperti menghargai hak cipta musisi dengan membeli lagu asli, organisasi harus menghormati lisensi perangkat lunak yang digunakan.",
-    "focusArea": "Intellectual Property"
+    "focusArea": "Intellectual Property",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengelolaan hak kekayaan intelektual'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengelolaan hak kekayaan intelektual'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengelolaan hak kekayaan intelektual'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.33",
@@ -637,7 +787,12 @@
     ],
     "implementationTips": "Identifikasi records yang wajib dilindungi berdasarkan hukum. Implementasi access control dan encryption untuk records sensitif. Buat backup terpisah untuk records penting.",
     "analogy": "Seperti rekaman CCTV yang disimpan di ruang terkunci, rekaman sistem harus dilindungi agar tidak dimanipulasi.",
-    "focusArea": "Records Protection"
+    "focusArea": "Records Protection",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perlindungan rekaman'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perlindungan rekaman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perlindungan rekaman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.34",
@@ -656,7 +811,12 @@
     ],
     "implementationTips": "Buat privacy notice yang jelas untuk data subject. Implementasi consent management system. Pastikan ada prosedur untuk handle request hak data subject (akses, hapus, rectifikasi).",
     "analogy": "Layaknya surat pribadi yang tidak boleh dibaca orang lain, data pribadi juga harus dijaga kerahasiaannya.",
-    "focusArea": "Privacy Compliance"
+    "focusArea": "Privacy Compliance",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Privasi dan perlindungan PII'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Privasi dan perlindungan PII'.",
+      "legal": "Mode Legal: Pastikan ketersediaan persetujuan (consent) yang sah dan adendum kebijakan privasi sesuai regulasi PDP untuk 'Privasi dan perlindungan PII'."
+    }
   },
   {
     "id": "5.35",
@@ -675,7 +835,12 @@
     ],
     "implementationTips": "Lakukan gap analysis terhadap ISO 27001 secara berkala. Gunakan assessor bersertifikasi untuk audit eksternal. Benchmark dengan organisasi sejenis untuk improve maturity.",
     "analogy": "Seperti second opinion dari dokter spesialis, tinjauan independen memberi perspektif baru tentang efektivitas keamanan.",
-    "focusArea": "Security Assessment"
+    "focusArea": "Security Assessment",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Tinjauan independen keamanan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tinjauan independen keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tinjauan independen keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.36",
@@ -694,7 +859,12 @@
     ],
     "implementationTips": "Buat metrics untuk track compliance (misal: % user yang sudah training). Implementasi automated compliance checking di mana memungkinkan. Report compliance status ke management secara berkala.",
     "analogy": "Seperti cek rutin kendaraan yang memastikan semua sistem berfungsi, tinjauan kepatuhan memastikan keamanan tetap efektif.",
-    "focusArea": "Policy Compliance"
+    "focusArea": "Policy Compliance",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Kepatuhan terhadap kebijakan dan standar keamanan informasi' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kepatuhan terhadap kebijakan dan standar keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kepatuhan terhadap kebijakan dan standar keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "5.37",
@@ -713,7 +883,12 @@
     ],
     "implementationTips": "Gunakan Document Management System dengan version control. Tetapkan document owner untuk setiap prosedur. Review dan update dokumen saat ada perubahan proses atau insiden.",
     "analogy": "Seperti buku manual pesawat yang harus selalu update dan terkontrol, dokumentasi keamanan harus dikelola dengan baik.",
-    "focusArea": "Documentation Management"
+    "focusArea": "Documentation Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prosedur operasi dokumen'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prosedur operasi dokumen'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prosedur operasi dokumen'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.1",
@@ -732,7 +907,12 @@
     ],
     "implementationTips": "Lakukan background check sesuai hukum ketenagakerjaan: cek identitas, pendidikan, dan riwayat kerja. Untuk posisi sensitif, tambah cek kriminal dan kredit. Dokumentasikan hasil screening dan simpan secara confidential.",
     "analogy": "Layaknya pengecekan referensi sebelum mempekerjakan pengasuh anak, penyaringan latar belakang memastikan orang yang kita pekerjakan dapat dipercaya.",
-    "focusArea": "Background Verification"
+    "focusArea": "Background Verification",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penyaringan latar belakang'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penyaringan latar belakang'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penyaringan latar belakang'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.2",
@@ -751,7 +931,12 @@
     ],
     "implementationTips": "Sertakan klausul keamanan informasi di employment contract: kewajiban menjaga kerahasiaan, larangan penggunaan aset untuk pribadi, dan konsekuensi pelanggaran. Review kontrak saat ada perubahan regulasi.",
     "analogy": "Seperti kontrak sewa yang menyebutkan aturan penggunaan properti, kontrak kerja harus menyebutkan kewajiban keamanan informasi.",
-    "focusArea": "Employment Terms"
+    "focusArea": "Employment Terms",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Syarat dan ketentuan pekerjaan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Syarat dan ketentuan pekerjaan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Syarat dan ketentuan pekerjaan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.3",
@@ -770,7 +955,12 @@
     ],
     "implementationTips": "Buat program awareness berlapis: onboarding training untuk karyawan baru, monthly newsletter, annual refresher, dan targeted training untuk role spesifik. Ukur efektivitas dengan phishing simulation.",
     "analogy": "Seperti pelatihan pemadaman api yang mempersiapkan karyawan menghadapi kebakaran, pelatihan keamanan mempersiapkan mereka menghadapi ancaman siber.",
-    "focusArea": "Security Awareness"
+    "focusArea": "Security Awareness",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kesadaran keamanan informasi, pelatihan, dan pendidikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kesadaran keamanan informasi, pelatihan, dan pendidikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kesadaran keamanan informasi, pelatihan, dan pendidikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.4",
@@ -789,7 +979,12 @@
     ],
     "implementationTips": "Definisikan gradasi sanksi sesuai severity pelanggaran: warning pertama, kedua, hingga PHD. Sosialisasikan konsekuensi di employee handbook. Pastikan proses disipliner sesuai hukum ketenagakerjaan.",
     "analogy": "Layaknya tilang untuk pelanggar lalu lintas, proses disipliner memberi konsekuensi bagi yang melanggar aturan keamanan.",
-    "focusArea": "Disciplinary Process"
+    "focusArea": "Disciplinary Process",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Proses disipliner'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Proses disipliner'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Proses disipliner'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.5",
@@ -808,7 +1003,12 @@
     ],
     "implementationTips": "Sertakan klausa non-disclosure yang tetap berlaku setelah resign. Lakukan exit interview yang mengingatkan kewajiban kerahasiaan. Untuk posisi kritis, pertimbangkan garden leave.",
     "analogy": "Seperti kewajiban menjaga rahasia perusahaan meskipun sudah resign, tanggung jawab keamanan tidak berakhir saat karyawan keluar.",
-    "focusArea": "Post-Employment Obligations"
+    "focusArea": "Post-Employment Obligations",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Tanggung jawab setelah penghentian atau perubahan pekerjaan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tanggung jawab setelah penghentian atau perubahan pekerjaan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tanggung jawab setelah penghentian atau perubahan pekerjaan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.6",
@@ -827,7 +1027,12 @@
     ],
     "implementationTips": "Buat NDA yang spesifik menyebutkan scope informasi yang dilindungi, durasi, dan sanksi pelanggaran. Minta tanda tangan NDA untuk karyawan, kontraktor, dan visitor yang akses informasi sensitif.",
     "analogy": "Seperti janji untuk tidak membocorkan resep rahasia restoran, NDA melindungi informasi sensitif dari kebocoran.",
-    "focusArea": "Confidentiality Agreements"
+    "focusArea": "Confidentiality Agreements",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perjanjian kerahasiaan atau non-disclosure'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perjanjian kerahasiaan atau non-disclosure'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perjanjian kerahasiaan atau non-disclosure'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.7",
@@ -846,7 +1051,12 @@
     ],
     "implementationTips": "Buat WFH policy yang mencakup: wajib VPN, larangan pakai public WiFi untuk kerja, secure home network setup, dan clear desk policy di rumah. Provide security guidelines untuk setup home office.",
     "analogy": "Layaknya membawa brankas mini saat kerja di cafe, kerja remote membutuhkan perlindungan ekstra untuk data perusahaan.",
-    "focusArea": "Remote Work Security"
+    "focusArea": "Remote Work Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kerja jarak jauh'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kerja jarak jauh'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kerja jarak jauh'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "6.8",
@@ -865,7 +1075,12 @@
     ],
     "implementationTips": "Sediakan multiple channel pelaporan: email khusus, hotline, dan ticketing system. Pastikan proses pelaporan mudah dan tidak menghakimi. Reward karyawan yang report insiden untuk encourage culture.",
     "analogy": "Seperti nomor darurat 112 yang mudah dihubungi, mekanisme pelaporan keamanan harus mudah diakses oleh semua karyawan.",
-    "focusArea": "Incident Reporting"
+    "focusArea": "Incident Reporting",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pelaporan kejadian keamanan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pelaporan kejadian keamanan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pelaporan kejadian keamanan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.1",
@@ -884,7 +1099,12 @@
     ],
     "implementationTips": "Identifikasi dan map physical boundary: pagar, dinding, atau barrier lainnya. Install fencing untuk area kritis. Pastikan tidak ada blind spot yang bisa dilewati tanpa terdeteksi.",
     "analogy": "Seperti pagar pabrik yang membatasi siapa yang boleh masuk, batas fisik melindungi aset dari akses yang tidak berwenang.",
-    "focusArea": "Physical Perimeter"
+    "focusArea": "Physical Perimeter",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Batas keamanan fisik'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Batas keamanan fisik'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Batas keamanan fisik'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.2",
@@ -903,7 +1123,12 @@
     ],
     "implementationTips": "Implementasi access card atau biometric di semua entry point. Buat visitor management system dengan log buku tamu dan escort policy. Review access log secara berkala.",
     "analogy": "Layaknya security di gedung yang mengecek ID sebelum mengizinkan masuk, kontrol akses fisik menyaring siapa yang boleh masuk.",
-    "focusArea": "Physical Access Control"
+    "focusArea": "Physical Access Control",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Entri fisik'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Entri fisik'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Entri fisik'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.3",
@@ -922,7 +1147,12 @@
     ],
     "implementationTips": "Lakukan risk assessment untuk identifikasi vulnerability fisik. Reinforce door, window, dan wall untuk ruang server. Install secure lock dan alarm untuk area sensitif.",
     "analogy": "Seperti rumah yang punya gembok, alarm, dan pagar, kantor juga butuh lapisan keamanan yang sesuai ancaman.",
-    "focusArea": "Facility Security"
+    "focusArea": "Facility Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Mengamankan kantor, ruangan, dan fasilitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Mengamankan kantor, ruangan, dan fasilitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Mengamankan kantor, ruangan, dan fasilitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.4",
@@ -941,7 +1171,12 @@
     ],
     "implementationTips": "Install CCTV di strategic points: entry, exit, corridor, dan area kritis. Pastikan coverage 24/7 dengan retention minimal 30 hari. Monitor CCTV oleh security team secara real-time.",
     "analogy": "Layaknya satpam yang patroli keliling area, pemantauan kontinu mendeteksi ancaman sebelum mereka bertindak.",
-    "focusArea": "Physical Monitoring"
+    "focusArea": "Physical Monitoring",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemantauan keamanan fisik'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pemantauan keamanan fisik'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemantauan keamanan fisik'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.5",
@@ -960,7 +1195,12 @@
     ],
     "implementationTips": "Identifikasi risiko lingkungan: banjir, gempa, kebakaran. Install fire suppression system, water detection, dan lightning arrester. Buat mitigation plan untuk setiap risiko yang teridentifikasi.",
     "analogy": "Seperti bangunan tahan gempa di zona rawan, fasilitas harus dilindungi dari ancaman lingkungan dan fisik.",
-    "focusArea": "Environmental Protection"
+    "focusArea": "Environmental Protection",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Perlindungan terhadap ancaman fisik dan lingkungan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perlindungan terhadap ancaman fisik dan lingkungan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perlindungan terhadap ancaman fisik dan lingkungan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.6",
@@ -979,7 +1219,12 @@
     ],
     "implementationTips": "Tetapkan aturan untuk kerja di secure area: wajib badge, tidak boleh bawa device pribadi, tidak boleh foto. Implementasi clean desk policy. Audit kepatuhan secara berkala.",
     "analogy": "Layaknya aturan steril di ruang operasi rumah sakit, area aman punya persyaratan khusus yang harus dipatuhi semua orang.",
-    "focusArea": "Secure Area Working"
+    "focusArea": "Secure Area Working",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Bekerja di area aman'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Bekerja di area aman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Bekerja di area aman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.7",
@@ -998,7 +1243,12 @@
     ],
     "implementationTips": "Identifikasi semua utility yang critical: listrik, air, internet, AC. Setup redundancy untuk critical utility: UPS, generator, dual ISP. Buat maintenance schedule untuk semua utility.",
     "analogy": "Seperti generator cadangan yang siap saat listrik PLN mati, utilitas harus punya backup untuk menjaga operasional.",
-    "focusArea": "Utility Support"
+    "focusArea": "Utility Support",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Dukungan utilitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Dukungan utilitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Dukungan utilitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.8",
@@ -1017,7 +1267,12 @@
     ],
     "implementationTips": "Buat maintenance schedule untuk semua equipment keamanan: CCTV, access control, fire suppression. Track maintenance log dan set reminder untuk preventive maintenance. Gunakan vendor terpercaya untuk service.",
     "analogy": "Layaknya servis mobil berkala yang mencegah mogok di jalan, pemeliharaan peralatan mencegah kegagalan sistem.",
-    "focusArea": "Equipment Maintenance"
+    "focusArea": "Equipment Maintenance",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemeliharaan peralatan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemeliharaan peralatan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemeliharaan peralatan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.9",
@@ -1036,7 +1291,12 @@
     ],
     "implementationTips": "Buat policy untuk kerja di luar kantor: wajib encrypt laptop, tidak boleh akses dari public computer, wajib lock screen saat meninggalkan device. Track aset mobile dengan GPS jika memungkinkan.",
     "analogy": "Seperti asuransi dan GPS tracker untuk laptop yang dibawa travel, aset di luar kantor tetap butuh perlindungan.",
-    "focusArea": "Off-site Asset Security"
+    "focusArea": "Off-site Asset Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan aset di luar lokasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan aset di luar lokasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan aset di luar lokasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.10",
@@ -1055,7 +1315,12 @@
     ],
     "implementationTips": "Batasi penggunaan USB drive dengan policy GPO. Untuk yang necessary, wajib encrypt. Buat prosedur disposal media yang aman: physical destruction atau degaussing untuk media yang berisi data sensitif.",
     "analogy": "Layaknya dokumen rahasia yang harus dihancurkan sebelum dibuang, media penyimpanan perlu diamankan atau dimusnahkan dengan benar.",
-    "focusArea": "Removable Media Security"
+    "focusArea": "Removable Media Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Media penyimpanan yang dapat dihapus dan media transmisi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Media penyimpanan yang dapat dihapus dan media transmisi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Media penyimpanan yang dapat dihapus dan media transmisi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.11",
@@ -1074,7 +1339,12 @@
     ],
     "implementationTips": "Buat emergency response plan yang mencakup: evakuasi, assembly point, emergency contact. Install emergency lighting dan exit sign. Lakukan drill minimal 2 kali setahun.",
     "analogy": "Seperti jalur evakuasi dan assembly point yang siap pakai, rencana darurat butuh infrastruktur yang mendukung.",
-    "focusArea": "Emergency Planning"
+    "focusArea": "Emergency Planning",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Dukungan untuk rencana darurat'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Dukungan untuk rencana darurat'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Dukungan untuk rencana darurat'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.12",
@@ -1093,7 +1363,12 @@
     ],
     "implementationTips": "Route kabel power dan data melalui conduit atau raised floor. Pisahkan kabel power dan data untuk hindari interference. Install surge protector dan lightning protection.",
     "analogy": "Layaknya kabel listrik yang ditanam dalam tembok agar tidak digigit tikus, kabel data juga harus dilindungi.",
-    "focusArea": "Cable & Power Security"
+    "focusArea": "Cable & Power Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kabel dan daya'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kabel dan daya'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kabel dan daya'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.13",
@@ -1112,7 +1387,12 @@
     ],
     "implementationTips": "Buat checklist inspeksi facility: structural integrity, fire safety, access control functionality. Lakukan inspeksi berkala: monthly untuk area kritis, quarterly untuk area lain. Track temuan dan remediation.",
     "analogy": "Seperti inspeksi gedung tahunan yang memastikan struktur masih kuat, pemeriksaan fasilitas memastikan keamanan tetap terjaga.",
-    "focusArea": "Facility Inspection"
+    "focusArea": "Facility Inspection",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemeliharaan dan inspeksi fasilitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemeliharaan dan inspeksi fasilitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemeliharaan dan inspeksi fasilitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "7.14",
@@ -1131,7 +1411,12 @@
     ],
     "implementationTips": "Buat relocation plan yang mencakup: packing aman, transport dengan kendaraan secure, setup security di lokasi baru. Pastikan tidak ada downtime untuk security monitoring selama transisi.",
     "analogy": "Layaknya pindah rumah yang butuh pengawasan ekstra, relokasi kantor juga butuh pengamanan ketat.",
-    "focusArea": "Physical Security During Relocation"
+    "focusArea": "Physical Security During Relocation",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan fisik saat penghentian atau relokasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan fisik saat penghentian atau relokasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan fisik saat penghentian atau relokasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.1",
@@ -1150,7 +1435,12 @@
     ],
     "implementationTips": "Install EDR (Endpoint Detection & Response) di semua device. Wajibkan full disk encryption. Enable remote wipe capability untuk mobile device. Patch OS dan aplikasi secara berkala.",
     "analogy": "Seperti smartphone yang punya PIN, enkripsi, dan remote wipe, perangkat endpoint harus punya perlindungan berlapis.",
-    "focusArea": "Endpoint Security"
+    "focusArea": "Endpoint Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perangkat pengguna akhir'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perangkat pengguna akhir'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perangkat pengguna akhir'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.2",
@@ -1169,7 +1459,12 @@
     ],
     "implementationTips": "Implementasi PAM solution untuk manage privileged account. Wajibkan approval untuk setiap penggunaan privileged access. Record session privileged access untuk audit trail.",
     "analogy": "Layaknya kunci master yang hanya dipegang kepala security, hak admin harus dibatasi agar tidak disalahgunakan.",
-    "focusArea": "Privileged Access Management"
+    "focusArea": "Privileged Access Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Hak istimewa akses'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Hak istimewa akses'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Hak istimewa akses'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.3",
@@ -1188,7 +1483,12 @@
     ],
     "implementationTips": "Implementasi access control list (ACL) berdasarkan need-to-know. Review permission secara berkala. Remove default account atau guest access yang tidak diperlukan.",
     "analogy": "Seperti VIP lounge yang hanya untuk tamu undangan, informasi sensitif hanya boleh diakses yang berwenang.",
-    "focusArea": "Information Access Restriction"
+    "focusArea": "Information Access Restriction",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pembatasan akses informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Pembatasan akses informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pembatasan akses informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.4",
@@ -1207,7 +1507,12 @@
     ],
     "implementationTips": "Gunakan version control system (Git) dengan branch protection. Batasi access ke production code. Require code review dan approval sebelum merge ke main branch.",
     "analogy": "Layaknya resep rahasia Coca-Cola yang hanya diketahui beberapa orang, kode sumber harus dibatasi aksesnya.",
-    "focusArea": "Source Code Access"
+    "focusArea": "Source Code Access",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Akses ke kode sumber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Akses ke kode sumber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Akses ke kode sumber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.5",
@@ -1226,7 +1531,12 @@
     ],
     "implementationTips": "Implementasi MFA untuk semua sistem. Gunakan passwordless authentication jika memungkinkan. Monitor failed login attempt untuk deteksi brute force attack.",
     "analogy": "Seperti sidik jari yang unik untuk setiap orang, autentikasi memastikan hanya identitas valid yang bisa masuk.",
-    "focusArea": "Secure Authentication"
+    "focusArea": "Secure Authentication",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Autentikasi aman'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Autentikasi aman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Autentikasi aman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.6",
@@ -1245,7 +1555,12 @@
     ],
     "implementationTips": "Monitor resource utilization: CPU, memory, disk, network. Setup threshold alerting (80% usage). Buat capacity plan untuk 6-12 bulan ke depan berdasarkan growth trend.",
     "analogy": "Layaknya monitoring lalu lintas untuk prediksi kemacetan, manajemen kapasitas mengantisipasi beban sistem sebelum overload.",
-    "focusArea": "Capacity Management"
+    "focusArea": "Capacity Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Manajemen kapasitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Manajemen kapasitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen kapasitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.7",
@@ -1264,7 +1579,12 @@
     ],
     "implementationTips": "Install antivirus/anti-malware di semua endpoint dan server. Update signature daily. Enable real-time scanning. Lakukan scan full system weekly. Educate user untuk tidak click suspicious link.",
     "analogy": "Seperti sistem kekebalan tubuh yang melawan virus, proteksi malware melindungi sistem dari ancaman perangkat lunak berbahaya.",
-    "focusArea": "Malware Protection"
+    "focusArea": "Malware Protection",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Proteksi terhadap malware'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Proteksi terhadap malware'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Proteksi terhadap malware'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.8",
@@ -1283,7 +1603,12 @@
     ],
     "implementationTips": "Run vulnerability scan monthly untuk semua sistem. Prioritize remediation berdasarkan risk score. Patch critical vulnerability dalam 7 hari. Retest setelah patch untuk verify fix.",
     "analogy": "Layaknyapemeriksaan kesehatan kesehatan yang menemukan masalah sebelum parah, manajemen kerentanan menemukan kelemahan sebelum dieksploitasi.",
-    "focusArea": "Vulnerability Management"
+    "focusArea": "Vulnerability Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Manajemen kerentanan teknis'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Manajemen kerentanan teknis'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen kerentanan teknis'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.9",
@@ -1302,7 +1627,12 @@
     ],
     "implementationTips": "Buat baseline configuration untuk semua hardware. Disable unnecessary service dan port. Document semua konfigurasi dan track perubahan. Audit konfigurasi secara berkala.",
     "analogy": "Seperti setting pabrik yang optimal untuk perangkat elektronik, konfigurasi hardware harus distandarkan dan diamankan.",
-    "focusArea": "Hardware Configuration"
+    "focusArea": "Hardware Configuration",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konfigurasi perangkat keras'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konfigurasi perangkat keras'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konfigurasi perangkat keras'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.10",
@@ -1321,7 +1651,12 @@
     ],
     "implementationTips": "Buat prosedur secure deletion: overwrite untuk HDD, crypto-shred untuk SSD. Document proses deletion dan buat destruction certificate. Gunakan third-party certified disposal vendor untuk media besar.",
     "analogy": "Layaknya dokumen rahasia yang harus dihancurkan dengan shredder, penghapusan data harus dilakukan secara aman.",
-    "focusArea": "Information Deletion"
+    "focusArea": "Information Deletion",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penghapusan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penghapusan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penghapusan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.11",
@@ -1340,7 +1675,12 @@
     ],
     "implementationTips": "Implementasi data masking untuk testing environment: scramble atau substitute sensitive data. Gunakan dynamic data masking untuk production query. Mask PII, financial data, dan confidential information.",
     "analogy": "Seperti nomor KTP yang ditampilkan sebagian saja (XXX-XXX-1234), masking data menyembunyikan informasi sensitif.",
-    "focusArea": "Data Masking"
+    "focusArea": "Data Masking",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Masking data'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Masking data'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Masking data'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.12",
@@ -1359,7 +1699,12 @@
     ],
     "implementationTips": "Deploy DLP solution untuk monitor dan block unauthorized data transfer. Define policy untuk classified data. Monitor email, web upload, dan USB transfer. Alert dan block jika ada violation.",
     "analogy": "Layaknya alarm di toko yang berbunyi jika barang dibawa keluar tanpa bayar, DLP mendeteksi data yang keluar tanpa izin.",
-    "focusArea": "Data Leak Prevention"
+    "focusArea": "Data Leak Prevention",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pencegahan kebocoran data'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Pencegahan kebocoran data'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pencegahan kebocoran data'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.13",
@@ -1378,7 +1723,12 @@
     ],
     "implementationTips": "Implementasi 3-2-1 backup rule: 3 copies, 2 media types, 1 offsite. Test restore quarterly untuk verify backup integrity. Encrypt backup data. Monitor backup job daily.",
     "analogy": "Seperti ban cadangan yang siap digunakan saat ban utama bocor, backup memastikan data bisa dipulihkan saat terjadi masalah.",
-    "focusArea": "Information Backup"
+    "focusArea": "Information Backup",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pencadangan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pencadangan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pencadangan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.14",
@@ -1397,7 +1747,12 @@
     ],
     "implementationTips": "Setup redundant server di lokasi berbeda. Implementasi load balancing untuk distribute traffic. Test failover secara berkala. Pastikan RPO dan RTO sesuai business requirement.",
     "analogy": "Layaknya punya dua generator yang bisa saling backup, redundansi memastikan sistem tetap berjalan walau satu komponen gagal.",
-    "focusArea": "Processing Facility Redundancy"
+    "focusArea": "Processing Facility Redundancy",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keberagaman fasilitas pemrosesan informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keberagaman fasilitas pemrosesan informasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keberagaman fasilitas pemrosesan informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.15",
@@ -1416,7 +1771,12 @@
     ],
     "implementationTips": "Enable logging untuk semua sistem critical: OS, aplikasi, network device. Centralize log ke SIEM. Retain log minimal 1 tahun. Monitor log untuk anomali daily.",
     "analogy": "Seperti black box pesawat yang merekam semua aktivitas, log mencatat setiap kejadian untuk investigasi jika terjadi masalah.",
-    "focusArea": "Logging"
+    "focusArea": "Logging",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pencatatan log (Logging)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pencatatan log (Logging)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pencatatan log (Logging)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.16",
@@ -1435,7 +1795,12 @@
     ],
     "implementationTips": "Implementasi monitoring untuk deteksi anomali: unusual login time, volume data access tinggi, privilege escalation. Setup alert untuk suspicious activity. Review alert daily oleh SOC team.",
     "analogy": "Layaknya CCTV yang monitor area 24/7, pemantauan aktivitas mendeteksi keanehan sebelum jadi insiden besar.",
-    "focusArea": "Activity Monitoring"
+    "focusArea": "Activity Monitoring",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas pemantauan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Aktivitas pemantauan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas pemantauan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.17",
@@ -1454,7 +1819,12 @@
     ],
     "implementationTips": "Setup NTP server internal yang sync ke sumber waktu terpercaya. Pastikan semua sistem sync ke NTP server yang sama. Monitor clock drift dan alert jika ada deviasi signifikan.",
     "analogy": "Seperti semua jam di bandara harus sinkron untuk jadwal penerbangan, waktu sistem harus konsisten untuk analisis yang akurat.",
-    "focusArea": "Clock Synchronization"
+    "focusArea": "Clock Synchronization",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Sinkronisasi jam'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Sinkronisasi jam'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Sinkronisasi jam'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.18",
@@ -1473,7 +1843,12 @@
     ],
     "implementationTips": "Inventory semua utility program yang bisa bypass control. Batasi akses utility ke admin saja. Log penggunaan utility. Review necessity utility secara berkala.",
     "analogy": "Layaknya kunci inggris yang bisa membongkar apa saja tapi hanya untuk teknisi resmi, program utilitas harus dikontrol ketat.",
-    "focusArea": "Utility Program Control"
+    "focusArea": "Utility Program Control",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penggunaan program utilitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penggunaan program utilitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penggunaan program utilitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.19",
@@ -1492,7 +1867,12 @@
     ],
     "implementationTips": "Implementasi whitelisting untuk software yang boleh diinstall. Require approval untuk software baru. Test software di staging sebelum production install. Block unauthorized software installation.",
     "analogy": "Seperti renovasi rumah yang tidak boleh mengganggu penghuni, instalasi software harus dilakukan tanpa ganggu operasional.",
-    "focusArea": "Software Installation Control"
+    "focusArea": "Software Installation Control",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Instalasi perangkat lunak pada sistem operasional'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Instalasi perangkat lunak pada sistem operasional'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Instalasi perangkat lunak pada sistem operasional'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.20",
@@ -1511,7 +1891,12 @@
     ],
     "implementationTips": "Segmentasi network berdasarkan function dan sensitivity. Deploy firewall di perimeter dan internal. Monitor network traffic untuk anomaly. Update firewall rule secara berkala.",
     "analogy": "Layaknya jalan tol yang punya gerbang, rambu, dan patrol keamanan, jaringan butuh perlindungan berlapis.",
-    "focusArea": "Network Security"
+    "focusArea": "Network Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Jaringan dan keamanan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Konfigurasi firewall dan segmen jaringan terkait 'Jaringan dan keamanan'. Tutup port terbuka yang tidak perlu dan aktifkan traffic logging.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Jaringan dan keamanan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.21",
@@ -1530,7 +1915,12 @@
     ],
     "implementationTips": "Define SLA untuk setiap network service: availability, latency, security. Encrypt network traffic dengan TLS. Monitor network performance. Review security control network service annually.",
     "analogy": "Seperti standar pelayanan bank yang harus aman dan cepat, layanan jaringan juga butuh SLA keamanan yang jelas.",
-    "focusArea": "Network Service Security"
+    "focusArea": "Network Service Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan layanan jaringan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Konfigurasi firewall dan segmen jaringan terkait 'Keamanan layanan jaringan'. Tutup port terbuka yang tidak perlu dan aktifkan traffic logging.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan layanan jaringan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.22",
@@ -1549,7 +1939,12 @@
     ],
     "implementationTips": "Segregasi network: production, staging, development, guest. Implementasi VLAN dan firewall rule antar segment. Batasi cross-segment communication ke yang necessary saja.",
     "analogy": "Layaknya sekat kapal yang mencegah kebocoran menyebar ke seluruh kapal, segmentasi jaringan membatasi penyebaran serangan.",
-    "focusArea": "Network Segregation"
+    "focusArea": "Network Segregation",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemisahan jaringan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Konfigurasi firewall dan segmen jaringan terkait 'Pemisahan jaringan'. Tutup port terbuka yang tidak perlu dan aktifkan traffic logging.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemisahan jaringan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.23",
@@ -1568,7 +1963,12 @@
     ],
     "implementationTips": "Deploy web proxy dengan filtering capability. Block kategori situs berbahaya: malware, phishing, gambling. Log web traffic untuk monitoring. Update web filter policy monthly.",
     "analogy": "Seperti saringan air yang membuang kotoran, web filter menyaring situs berbahaya sebelum diakses karyawan.",
-    "focusArea": "Web Filtering"
+    "focusArea": "Web Filtering",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penapisan web (Web filtering)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penapisan web (Web filtering)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penapisan web (Web filtering)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.24",
@@ -1587,7 +1987,12 @@
     ],
     "implementationTips": "Integrasikan security di SDLC: threat modeling, secure coding guideline, code review, penetration testing. Gunakan SAST dan DAST tool. Fix critical vulnerability sebelum release.",
     "analogy": "Layaknya insinyur yang menghitung keamanan bangunan dari desain, keamanan aplikasi harus dimulai dari awal pengembangan.",
-    "focusArea": "Application Security"
+    "focusArea": "Application Security",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan pengembangan aplikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan pengembangan aplikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan pengembangan aplikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.25",
@@ -1606,7 +2011,12 @@
     ],
     "implementationTips": "Apply secure design principle: defense in depth, least privilege, fail safe. Document security architecture. Review design sebelum implementasi. Use security pattern dan framework.",
     "analogy": "Seperti arsitek yang mendesain bangunan tahan gempa, engineer sistem harus membangun dengan prinsip keamanan.",
-    "focusArea": "Secure Engineering"
+    "focusArea": "Secure Engineering",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prinsip rekayasa sistem aman'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prinsip rekayasa sistem aman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prinsip rekayasa sistem aman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.26",
@@ -1625,7 +2035,12 @@
     ],
     "implementationTips": "Define security requirement untuk setiap aplikasi berdasarkan data yang diproses. Include requirement: authentication, authorization, encryption, logging. Review requirement sebelum development mulai.",
     "analogy": "Layaknya spesifikasi mobil yang berbeda untuk city car vs SUV, kebutuhan keamanan aplikasi berbeda berdasarkan sensitivitas data.",
-    "focusArea": "Application Security Requirements"
+    "focusArea": "Application Security Requirements",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Persyaratan keamanan aplikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Persyaratan keamanan aplikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Persyaratan keamanan aplikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.27",
@@ -1644,7 +2059,12 @@
     ],
     "implementationTips": "Training developer secure coding: OWASP Top 10, input validation, output encoding. Gunakan secure coding guideline. Implementasi code review dengan security checklist.",
     "analogy": "Seperti tukang las yang mengikuti standar keamanan untuk mencegah kebocoran, developer harus coding aman untuk mencegah bug.",
-    "focusArea": "Secure Coding"
+    "focusArea": "Secure Coding",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengkodean aman (Secure coding)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengkodean aman (Secure coding)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengkodean aman (Secure coding)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.28",
@@ -1663,7 +2083,12 @@
     ],
     "implementationTips": "Integrasikan automated security testing di CI/CD pipeline: SAST, SCA, secret scanning. Require security gate sebelum deploy. Track vulnerability metrics.",
     "analogy": "Layaknya uji crash test mobil sebelum dijual, aplikasi harus diuji keamanannya sebelum dirilis.",
-    "focusArea": "Security Testing in Development"
+    "focusArea": "Security Testing in Development",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengujian keamanan dalam pengembangan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengujian keamanan dalam pengembangan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengujian keamanan dalam pengembangan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.29",
@@ -1682,7 +2107,12 @@
     ],
     "implementationTips": "Lakukan penetration testing annually atau setelah major change. Test semua aplikasi critical. Retest setelah remediation. Document finding dan track remediation.",
     "analogy": "Seperti ujian akhir yang menguji pemahaman siswa, testing sistem memverifikasi apakah kontrol keamanan sudah efektif.",
-    "focusArea": "System Security Testing"
+    "focusArea": "System Security Testing",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengujian keamanan sistem'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengujian keamanan sistem'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengujian keamanan sistem'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.30",
@@ -1701,7 +2131,12 @@
     ],
     "implementationTips": "Sertakan security requirement di kontrak outsourcing. Require secure development process dari vendor. Request evidence security testing. Audit vendor development process secara berkala.",
     "analogy": "Layaknya Anda tetap mengawasi kontraktor yang membangun rumah, outsourcing development tetap butuh pengawasan keamanan.",
-    "focusArea": "Outsourced Development"
+    "focusArea": "Outsourced Development",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengembangan outsourcing'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengembangan outsourcing'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengembangan outsourcing'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.31",
@@ -1720,7 +2155,12 @@
     ],
     "implementationTips": "Separate environment: development, testing, UAT, production. Batasi akses antar environment. Gunakan different credential untuk setiap environment. Promote code melalui pipeline, tidak langsung ke production.",
     "analogy": "Seperti dapur restoran yang terpisah dari area makan, environment development dan production harus dipisahkan.",
-    "focusArea": "Environment Separation"
+    "focusArea": "Environment Separation",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemisahan lingkungan pengembangan, pengujian, dan produksi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemisahan lingkungan pengembangan, pengujian, dan produksi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemisahan lingkungan pengembangan, pengujian, dan produksi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.32",
@@ -1739,7 +2179,12 @@
     ],
     "implementationTips": "Implementasi change management process: request, assess, approve, implement, review. Document semua perubahan. Test change di staging sebelum production. Schedule change di maintenance window.",
     "analogy": "Layaknya proses persetujuan renovasi di apartemen yang harus melalui manajemen, perubahan sistem butuh approval terkontrol.",
-    "focusArea": "Change Management"
+    "focusArea": "Change Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Manajemen perubahan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Manajemen perubahan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen perubahan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.33",
@@ -1758,7 +2203,12 @@
     ],
     "implementationTips": "Track project artifact dengan version control. Protect project document dengan access control. Share project information berdasarkan need-to-know. Backup project data secara berkala.",
     "analogy": "Seperti manajer proyek yang mengawasi timeline dan budget, manajemen informasi proyek mengawasi aspek keamanan.",
-    "focusArea": "Project Information Management"
+    "focusArea": "Project Information Management",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Informasi manajemen proyek'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Informasi manajemen proyek'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Informasi manajemen proyek'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "8.34",
@@ -1777,6 +2227,11 @@
     ],
     "implementationTips": "Gunakan test data atau anonymized data untuk audit. Protect production data saat audit. Monitor aktivitas auditor. Batasi akses auditor ke yang necessary saja.",
     "analogy": "Layaknya sampel makanan yang diuji di lab tanpa mencemari stok utama, audit harus dilakukan tanpa risiko ke sistem produksi.",
-    "focusArea": "Audit Testing Protection"
+    "focusArea": "Audit Testing Protection",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Perlindungan sistem informasi selama pengujian audit' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perlindungan sistem informasi selama pengujian audit'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perlindungan sistem informasi selama pengujian audit'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

@@ -11,7 +11,15 @@
       "Karakteristik organisasi",
       "Rekam jejak insiden siber"
     ],
-    "used_by": ["II.01", "II.02"]
+    "used_by": [
+      "II.01",
+      "II.02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Parameter minimum penilaian risiko inheren keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Parameter minimum penilaian risiko inheren keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Parameter minimum penilaian risiko inheren keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.a",
@@ -24,7 +32,15 @@
       "Kolom justifikasi per faktor",
       "Rekap hasil penilaian"
     ],
-    "used_by": ["II.01", "II.02"]
+    "used_by": [
+      "II.01",
+      "II.02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Format penilaian risiko inheren keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Format penilaian risiko inheren keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Format penilaian risiko inheren keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.a",
@@ -39,7 +55,14 @@
       "Peringkat 4 (Moderate to High)",
       "Peringkat 5 (High)"
     ],
-    "used_by": ["II.01"]
+    "used_by": [
+      "II.01"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Definisi peringkat risiko inheren keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Definisi peringkat risiko inheren keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Definisi peringkat risiko inheren keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "I.b",
@@ -53,7 +76,19 @@
       "Proses, SDM, dan sistem informasi manajemen risiko",
       "Pengendalian intern dan kaji ulang"
     ],
-    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.01", "V.02"]
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.01",
+      "V.02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Kontrol penerapan manajemen risiko terkait keamanan siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kontrol penerapan manajemen risiko terkait keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kontrol penerapan manajemen risiko terkait keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "I.c",
@@ -67,7 +102,19 @@
       "Deteksi insiden siber",
       "Penanggulangan dan pemulihan insiden siber"
     ],
-    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.01", "V.03"]
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.01",
+      "V.03"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kontrol penerapan proses ketahanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kontrol penerapan proses ketahanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kontrol penerapan proses ketahanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.b",
@@ -80,7 +127,19 @@
       "Kolom justifikasi kontrol",
       "Ringkasan hasil penilaian"
     ],
-    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.01", "V.02"]
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.01",
+      "V.02"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Format penilaian kualitas penerapan manajemen risiko siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Format penilaian kualitas penerapan manajemen risiko siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Format penilaian kualitas penerapan manajemen risiko siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "II.c",
@@ -93,7 +152,19 @@
       "Kolom evaluasi tiap proses",
       "Ringkasan hasil penilaian"
     ],
-    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.01", "V.03"]
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.01",
+      "V.03"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Format penilaian kualitas proses ketahanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Format penilaian kualitas proses ketahanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Format penilaian kualitas proses ketahanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.b",
@@ -108,7 +179,19 @@
       "Marginal",
       "Unsatisfactory"
     ],
-    "used_by": ["III.01", "III.02", "III.03", "III.04", "V.02", "V.04"]
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.02",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Definisi peringkat kualitas penerapan manajemen risiko siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Definisi peringkat kualitas penerapan manajemen risiko siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Definisi peringkat kualitas penerapan manajemen risiko siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.c",
@@ -123,7 +206,19 @@
       "Marginal",
       "Unsatisfactory"
     ],
-    "used_by": ["IV.01", "IV.02", "IV.03", "IV.04", "V.03", "V.04"]
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.03",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Definisi peringkat kualitas proses ketahanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Definisi peringkat kualitas proses ketahanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Definisi peringkat kualitas proses ketahanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "III.d",
@@ -138,7 +233,15 @@
       "Tingkat 4",
       "Tingkat 5"
     ],
-    "used_by": ["V.01", "V.04"]
+    "used_by": [
+      "V.01",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Definisi tingkat maturitas keamanan siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Definisi tingkat maturitas keamanan siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Definisi tingkat maturitas keamanan siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "V",
@@ -152,6 +255,15 @@
       "Tingkat risiko terkait keamanan siber",
       "Bagian pelaporan kondisi terkini penyelenggaraan TI"
     ],
-    "used_by": ["II.01", "V.01", "VI.01"]
+    "used_by": [
+      "II.01",
+      "V.01",
+      "VI.01"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Format pelaporan ke OJK dalam laporan kondisi terkini penyelenggaraan TI'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Format pelaporan ke OJK dalam laporan kondisi terkini penyelenggaraan TI'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Format pelaporan ke OJK dalam laporan kondisi terkini penyelenggaraan TI'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

@@ -13,7 +13,12 @@
     ],
     "linked_requirements": [
       "PBI.HDL-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Notifikasi awal insiden siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Notifikasi awal insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Notifikasi awal insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "REF-02",
@@ -29,7 +34,12 @@
     ],
     "linked_requirements": [
       "PBI.HDL-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Laporan insiden siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Laporan insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Laporan insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "REF-03",
@@ -46,7 +56,12 @@
     "linked_requirements": [
       "PBI.GOV-05",
       "PBI.OVS-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pelaporan tahunan tingkat kematangan KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pelaporan tahunan tingkat kematangan KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pelaporan tahunan tingkat kematangan KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "REF-04",
@@ -63,7 +78,12 @@
     "linked_requirements": [
       "PBI.PRV-03",
       "PBI.OVS-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pelaporan hasil identifikasi infrastruktur informasi vital'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pelaporan hasil identifikasi infrastruktur informasi vital'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pelaporan hasil identifikasi infrastruktur informasi vital'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "REF-05",
@@ -80,7 +100,12 @@
     "linked_requirements": [
       "PBI.OVS-01",
       "PBI.OVS-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengawasan tidak langsung dan pengawasan langsung'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengawasan tidak langsung dan pengawasan langsung'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengawasan tidak langsung dan pengawasan langsung'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "REF-06",
@@ -96,7 +121,12 @@
     ],
     "linked_requirements": [
       "PBI.OVS-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konsekuensi ketidakpatuhan pelaporan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konsekuensi ketidakpatuhan pelaporan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konsekuensi ketidakpatuhan pelaporan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "REF-07",
@@ -112,7 +142,12 @@
     ],
     "linked_requirements": [
       "PBI.COL-01"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Pertukaran informasi kerentanan, ancaman, dan insiden' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pertukaran informasi kerentanan, ancaman, dan insiden'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Pertukaran informasi kerentanan, ancaman, dan insiden' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "REF-08",
@@ -128,7 +163,12 @@
     ],
     "linked_requirements": [
       "PBI.COL-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Koordinasi pencegahan insiden dan kesiapan penanganan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Koordinasi pencegahan insiden dan kesiapan penanganan'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Koordinasi pencegahan insiden dan kesiapan penanganan' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "REF-09",
@@ -145,6 +185,11 @@
     "linked_requirements": [
       "PBI.COL-02",
       "PBI.IMP-01"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prosedur teknis melalui SRO dan penerapan berdasarkan klasifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prosedur teknis melalui SRO dan penerapan berdasarkan klasifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prosedur teknis melalui SRO dan penerapan berdasarkan klasifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

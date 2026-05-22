@@ -10,7 +10,30 @@
       "Memastikan Standar Penyadapan Minimal",
       "Cakupan Mayoritas Pengujian Otomatis"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Level 1 (Fundamental Defense)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Level 1 (Fundamental Defense)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Level 1 (Fundamental Defense)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "L2",
@@ -23,7 +46,30 @@
       "Penilaian Risiko Ekosistem (Dependency Analysis)",
       "Verifikasi Logika Cacat Akses Vertikal/Horizontal"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Level 2 (Standard Enterprise)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Level 2 (Standard Enterprise)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Level 2 (Standard Enterprise)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "L3",
@@ -36,6 +82,29 @@
       "Perlindungan Anti-Tampering Berlapis Tinggi",
       "Pemenuhan Regulasi Super Spesifik (mis. PCI-DSS, HIPAA compliance)"
     ],
-    "used_by": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16", "V17"]
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Level 3 (High Assurance)'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Level 3 (High Assurance)'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Level 3 (High Assurance)'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

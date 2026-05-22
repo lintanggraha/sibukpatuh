@@ -24,7 +24,8 @@
     "roleTranslations": {
       "sysadmin": "Mode SysAdmin: Blokir koneksi tidak sah dan jalankan monitoring akses secara berkala.",
       "board": "Mode Board: Pastikan PBI 022024 menjadi acuan utama dalam audit tahunan.",
-      "legal": "Mode Legal: Persiapkan dokumen pertanggungjawaban untuk laporan OJK."
+      "legal": "Mode Legal: Persiapkan dokumen pertanggungjawaban untuk laporan OJK.",
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Sasaran pengaturan dan prinsip dasar pelaksanaan KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional."
     }
   },
   {
@@ -48,7 +49,12 @@
     "reporting": "Dokumentasi perimeter sistem dalam profil risiko tahunan.",
     "appendices": [
       "Pasal 5-6"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Objek pengaturan dan ruang lingkup KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Objek pengaturan dan ruang lingkup KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Objek pengaturan dan ruang lingkup KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-01",
@@ -71,7 +77,12 @@
     "appendices": [
       "Pasal 8"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Strategi dan kebijakan KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Strategi dan kebijakan KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Strategi dan kebijakan KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-02",
@@ -94,7 +105,12 @@
     "appendices": [
       "Pasal 9"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Rencana strategis KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Rencana strategis KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Rencana strategis KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-03",
@@ -117,7 +133,12 @@
     "appendices": [
       "Pasal 10"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan, standar, dan prosedur KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan, standar, dan prosedur KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan, standar, dan prosedur KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-04",
@@ -140,7 +161,12 @@
     "appendices": [
       "Pasal 11-13"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Fungsi organisasi dan manajemen KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Fungsi organisasi dan manajemen KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Fungsi organisasi dan manajemen KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-05",
@@ -163,7 +189,12 @@
     "appendices": [
       "Pasal 14-15"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Manajemen risiko siber dan pengukuran maturitas KKS' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Manajemen risiko siber dan pengukuran maturitas KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Manajemen risiko siber dan pengukuran maturitas KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-06",
@@ -186,7 +217,12 @@
     "appendices": [
       "Pasal 16-17"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Audit KKS' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Audit KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Audit KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.GOV-07",
@@ -209,7 +245,12 @@
     "appendices": [
       "Pasal 18"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Budaya KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Budaya KKS'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Budaya KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-01",
@@ -232,7 +273,12 @@
     "appendices": [
       "Pasal 21"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Penyusunan dan pengkinian profil risiko siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penyusunan dan pengkinian profil risiko siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penyusunan dan pengkinian profil risiko siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-02",
@@ -255,7 +301,12 @@
     "appendices": [
       "Pasal 23"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Asesmen risiko siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Asesmen risiko siber'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Asesmen risiko siber'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-03",
@@ -278,7 +329,12 @@
     "appendices": [
       "Pasal 24-25"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Analisis dampak bisnis dan identifikasi infrastruktur informasi vital'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Analisis dampak bisnis dan identifikasi infrastruktur informasi vital'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Analisis dampak bisnis dan identifikasi infrastruktur informasi vital'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-04",
@@ -301,7 +357,12 @@
     "appendices": [
       "Pasal 27"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pembangunan sistem pertahanan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pembangunan sistem pertahanan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pembangunan sistem pertahanan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-05",
@@ -324,7 +385,12 @@
     "appendices": [
       "Pasal 28"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengamanan dan pelindungan data serta informasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Pengamanan dan pelindungan data serta informasi'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengamanan dan pelindungan data serta informasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-06",
@@ -347,7 +413,12 @@
     "appendices": [
       "Pasal 29-30"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Deteksi, pemantauan, dan sistem peringatan dini'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Deteksi, pemantauan, dan sistem peringatan dini'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Deteksi, pemantauan, dan sistem peringatan dini'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.PRV-07",
@@ -370,7 +441,12 @@
     "appendices": [
       "Pasal 31-34"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Analisis hasil pemantauan dan pengujian sistem deteksi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Analisis hasil pemantauan dan pengujian sistem deteksi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Analisis hasil pemantauan dan pengujian sistem deteksi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.HDL-01",
@@ -393,7 +469,12 @@
     "appendices": [
       "Pasal 37"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Rencana penanganan dan pemulihan insiden siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Rencana penanganan dan pemulihan insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Rencana penanganan dan pemulihan insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PBI.HDL-02",
@@ -416,7 +497,12 @@
     "appendices": [
       "Pasal 38-39"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Simulasi, uji coba, dan evaluasi rencana penanganan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Simulasi, uji coba, dan evaluasi rencana penanganan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Simulasi, uji coba, dan evaluasi rencana penanganan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.HDL-03",
@@ -439,7 +525,12 @@
     "analogy": "Kayak nelpon polisi dan pemadam kebakaran pas rumah lu kemalingan atau kebakaran. Lu harus lapor secepatnya, gak boleh ditunda.",
     "appendices": [
       "Pasal 40"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Penanganan insiden siber dan pelaporan wajib ke Bank Indonesia' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PBI.HDL-04",
@@ -462,7 +553,12 @@
     "analogy": "Sama kayak PR perusahaan yang bikin press release pas lagi ada krisis. Informasinya harus diatur biar nasabah nggak panik berjamaah.",
     "appendices": [
       "Pasal 41"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Komunikasi tindakan penanganan insiden siber'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Komunikasi tindakan penanganan insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Komunikasi tindakan penanganan insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PBI.HDL-05",
@@ -485,7 +581,12 @@
     "appendices": [
       "Pasal 42-43"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemulihan dan pengembalian layanan ke kondisi normal'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemulihan dan pengembalian layanan ke kondisi normal'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemulihan dan pengembalian layanan ke kondisi normal'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.HDL-06",
@@ -508,7 +609,12 @@
     "analogy": "Kayak ngobatin luka terus nambal lubang di jalan yang bikin jatuh. Biar besok-besok nggak ada lagi yang kepeleset di tempat yang sama.",
     "appendices": [
       "Pasal 44-45"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perbaikan berkelanjutan dan komunikasi pemulihan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perbaikan berkelanjutan dan komunikasi pemulihan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perbaikan berkelanjutan dan komunikasi pemulihan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.OVS-01",
@@ -531,7 +637,12 @@
     "analogy": "Ibarat polisi lalu lintas di perempatan jalan. Mantau lu bawa helm apa enggak, dan siap nilang kalau lu ugal-ugalan.",
     "appendices": [
       "Pasal 47-52"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Mekanisme pengawasan Bank Indonesia'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Mekanisme pengawasan Bank Indonesia'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Mekanisme pengawasan Bank Indonesia'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.OVS-02",
@@ -554,7 +665,12 @@
     "analogy": "Sama kayak ngumpulin rapor sekolah tiap semester. Laporannya harus jujur dan nunjukin progres belajar selama 6 bulan terakhir.",
     "appendices": [
       "Pasal 54-55"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penyampaian data, informasi, dan laporan KKS'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Penyampaian data, informasi, dan laporan KKS'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penyampaian data, informasi, dan laporan KKS'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PBI.COL-01",
@@ -577,7 +693,12 @@
     "appendices": [
       "Pasal 57-58"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Pertukaran informasi ancaman, kerentanan, dan insiden siber' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Pertukaran informasi ancaman, kerentanan, dan insiden siber'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Pertukaran informasi ancaman, kerentanan, dan insiden siber' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PBI.COL-02",
@@ -600,7 +721,12 @@
     "appendices": [
       "Pasal 59-61"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Koordinasi pencegahan insiden dan kerja sama dengan SRO'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Koordinasi pencegahan insiden dan kerja sama dengan SRO'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Koordinasi pencegahan insiden dan kerja sama dengan SRO' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PBI.IMP-01",
@@ -623,6 +749,11 @@
     "appendices": [
       "Pasal 62"
     ],
-    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan."
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Penerapan KKS sesuai klasifikasi penyelenggara'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penerapan KKS sesuai klasifikasi penyelenggara'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penerapan KKS sesuai klasifikasi penyelenggara'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

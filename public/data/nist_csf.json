@@ -20,7 +20,12 @@
       "PM-12",
       "PM-14",
       "PM-16"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konteks organisasi dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konteks organisasi dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konteks organisasi dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.OC-02",
@@ -39,7 +44,12 @@
       "PM-07",
       "PM-11",
       "PM-13"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konteks organisasi diinformasikan ke pemangku kepentingan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konteks organisasi diinformasikan ke pemangku kepentingan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konteks organisasi diinformasikan ke pemangku kepentingan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.RM-01",
@@ -60,7 +70,12 @@
       "RA-01",
       "RA-02",
       "RA-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Strategi manajemen risiko ditetapkan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Strategi manajemen risiko ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Strategi manajemen risiko ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.RM-02",
@@ -80,7 +95,12 @@
       "PM-03",
       "PM-09",
       "PM-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Porositas terhadap risiko dipahami' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Porositas terhadap risiko dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Porositas terhadap risiko dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.RM-03",
@@ -100,7 +120,12 @@
       "RA-05",
       "PM-04",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Prioritas risiko ditentukan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prioritas risiko ditentukan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prioritas risiko ditentukan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.RR-01",
@@ -119,7 +144,12 @@
       "PM-02",
       "PM-11",
       "PM-13"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Peran dan tanggung jawab keamanan siber ditetapkan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Peran dan tanggung jawab keamanan siber ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Peran dan tanggung jawab keamanan siber ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.RR-02",
@@ -139,7 +169,12 @@
       "PM-11",
       "PM-13",
       "PM-14"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Akuntabilitas senior untuk keamanan siber ditetapkan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Akuntabilitas senior untuk keamanan siber ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Akuntabilitas senior untuk keamanan siber ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.PO-01",
@@ -159,7 +194,12 @@
       "PM-01",
       "PM-02",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan keamanan siber didirikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan keamanan siber didirikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan keamanan siber didirikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.PO-02",
@@ -178,7 +218,12 @@
       "AT-01",
       "AT-02",
       "PM-12"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan keamanan siber dikomunikasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan keamanan siber dikomunikasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan keamanan siber dikomunikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.PO-03",
@@ -197,7 +242,12 @@
       "PL-02",
       "PM-09",
       "PM-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan keamanan siber direview dan diupdate'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan keamanan siber direview dan diupdate'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan keamanan siber direview dan diupdate'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.OV-01",
@@ -216,7 +266,12 @@
       "PM-06",
       "PM-10",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas keamanan siber dipantau'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas keamanan siber dipantau'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas keamanan siber dipantau'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.OV-02",
@@ -236,7 +291,12 @@
       "PM-10",
       "PM-11",
       "PM-14"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas keamanan siber dilaporkan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas keamanan siber dilaporkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas keamanan siber dilaporkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.OV-03",
@@ -255,7 +315,12 @@
       "PM-10",
       "PM-14",
       "PM-15"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pengawasan keamanan siber dilakukan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pengawasan keamanan siber dilakukan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pengawasan keamanan siber dilakukan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.SC-01",
@@ -284,7 +349,12 @@
       "SR-01",
       "SR-02",
       "SR-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Program manajemen risiko rantai pasok siber didirikan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Program manajemen risiko rantai pasok siber didirikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Program manajemen risiko rantai pasok siber didirikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.SC-02",
@@ -305,7 +375,12 @@
       "SR-04",
       "SR-05",
       "SR-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Rantai pasok siber dipantau'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Rantai pasok siber dipantau'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Rantai pasok siber dipantau'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "GV.SC-03",
@@ -329,7 +404,12 @@
       "SA-11",
       "SA-15",
       "SR-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Produk dan layanan siber diperoleh dengan aman'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Produk dan layanan siber diperoleh dengan aman'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Produk dan layanan siber diperoleh dengan aman'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.AM-01",
@@ -352,7 +432,12 @@
       "PE-04",
       "PE-05",
       "PE-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aset fisik diinventarisasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aset fisik diinventarisasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aset fisik diinventarisasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.AM-02",
@@ -371,7 +456,12 @@
       "MA-02",
       "SA-04",
       "SA-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aset digital didokumentasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aset digital didokumentasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aset digital didokumentasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.AM-03",
@@ -393,7 +483,12 @@
       "SC-02",
       "SC-04",
       "SC-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Arsitektur sistem dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Arsitektur sistem dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Arsitektur sistem dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.AM-04",
@@ -411,7 +506,12 @@
       "RA-02",
       "CP-02",
       "SC-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aset diklasifikasikan berdasarkan pentingnya bagi misi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aset diklasifikasikan berdasarkan pentingnya bagi misi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aset diklasifikasikan berdasarkan pentingnya bagi misi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.AM-05",
@@ -429,7 +529,12 @@
       "AC-16",
       "SC-06",
       "AT-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Klasifikasi aset dikomunikasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Klasifikasi aset dikomunikasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Klasifikasi aset dikomunikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.BE-01",
@@ -447,7 +552,12 @@
       "PM-07",
       "PM-08",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lingkungan bisnis dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lingkungan bisnis dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lingkungan bisnis dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.BE-02",
@@ -465,7 +575,12 @@
       "PM-07",
       "PM-08",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Peran organisasi dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Peran organisasi dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Peran organisasi dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.BE-03",
@@ -486,7 +601,12 @@
       "PE-09",
       "PM-07",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prioritas misi dan fungsi dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prioritas misi dan fungsi dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prioritas misi dan fungsi dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.BE-04",
@@ -505,7 +625,12 @@
       "PE-09",
       "PM-08",
       "SR-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Ketergantungan terhadap layanan eksternal dipahami'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Ketergantungan terhadap layanan eksternal dipahami'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Ketergantungan terhadap layanan eksternal dipahami'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.GV-01",
@@ -526,7 +651,12 @@
       "PL-04",
       "PM-01",
       "PM-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan dan prosedur keamanan siber dibentuk'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan dan prosedur keamanan siber dibentuk'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan dan prosedur keamanan siber dibentuk'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.GV-02",
@@ -545,7 +675,12 @@
       "AT-02",
       "PL-04",
       "PM-12"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan dan prosedur keamanan siber dikomunikasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan dan prosedur keamanan siber dikomunikasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan dan prosedur keamanan siber dikomunikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.GV-03",
@@ -564,7 +699,12 @@
       "PL-02",
       "PM-09",
       "PM-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebijakan dan prosedur keamanan siber direview dan disesuaikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kebijakan dan prosedur keamanan siber direview dan disesuaikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebijakan dan prosedur keamanan siber direview dan disesuaikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.GV-04",
@@ -583,7 +723,12 @@
       "PM-09",
       "PM-10",
       "RA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Kepatuhan terhadap hukum dan regulasi diverifikasi' termonitor dalam laporan audit. Kegagalan dapat memicu sanksi regulator.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kepatuhan terhadap hukum dan regulasi diverifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kepatuhan terhadap hukum dan regulasi diverifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-01",
@@ -603,7 +748,12 @@
       "RA-05",
       "PM-15",
       "PM-16"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Aset dan ancaman diidentifikasi' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aset dan ancaman diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aset dan ancaman diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-02",
@@ -622,7 +772,12 @@
       "RA-03",
       "PM-09",
       "CP-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Dampak dan kemungkinan dievaluasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Dampak dan kemungkinan dievaluasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Dampak dan kemungkinan dievaluasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-03",
@@ -642,7 +797,12 @@
       "RA-05",
       "PM-15",
       "PM-16"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Tren ancaman dan risiko diidentifikasi' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Tren ancaman dan risiko diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Tren ancaman dan risiko diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-04",
@@ -660,7 +820,12 @@
       "RA-02",
       "RA-03",
       "CA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Penilaian risiko divalidasi' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penilaian risiko divalidasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penilaian risiko divalidasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-05",
@@ -679,7 +844,12 @@
       "RA-04",
       "RA-05",
       "SI-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kerentanan diidentifikasi dan dikategorikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kerentanan diidentifikasi dan dikategorikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kerentanan diidentifikasi dan dikategorikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RA-06",
@@ -697,7 +867,12 @@
       "PM-09",
       "PM-11",
       "RA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Penilaian risiko dikomunikasikan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Penilaian risiko dikomunikasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Penilaian risiko dikomunikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RM-01",
@@ -716,7 +891,12 @@
       "PM-04",
       "PM-09",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Toleransi risiko organisasi ditetapkan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Toleransi risiko organisasi ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Toleransi risiko organisasi ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RM-02",
@@ -735,7 +915,12 @@
       "PM-11",
       "RA-02",
       "RA-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Prioritas risiko ditetapkan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prioritas risiko ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prioritas risiko ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.RM-03",
@@ -754,7 +939,12 @@
       "PM-04",
       "PM-09",
       "PM-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Strategi manajemen risiko dikembangkan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Strategi manajemen risiko dikembangkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Strategi manajemen risiko dikembangkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.SC-01",
@@ -774,7 +964,12 @@
       "SR-01",
       "SR-02",
       "SR-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Risiko rantai pasok diidentifikasi' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Risiko rantai pasok diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Risiko rantai pasok diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.SC-02",
@@ -794,7 +989,12 @@
       "SA-05",
       "SR-03",
       "SR-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Persyaratan keamanan untuk supplier ditetapkan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Persyaratan keamanan untuk supplier ditetapkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Persyaratan keamanan untuk supplier ditetapkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.SC-03",
@@ -813,7 +1013,12 @@
       "SR-02",
       "SR-03",
       "SR-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Supplier didue-diligence kan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Supplier didue-diligence kan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Supplier didue-diligence kan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.SC-04",
@@ -832,7 +1037,12 @@
       "SR-03",
       "SR-05",
       "SR-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Risiko rantai pasok dimitigasi' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Risiko rantai pasok dimitigasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Risiko rantai pasok dimitigasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.IM-01",
@@ -850,7 +1060,12 @@
       "CA-05",
       "CA-07",
       "PM-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Area perbaikan keamanan diidentifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Area perbaikan keamanan diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Area perbaikan keamanan diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "ID.IM-02",
@@ -868,7 +1083,12 @@
       "PM-10",
       "CA-05",
       "CA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Monitor eksposur risiko dari 'Proses manajemen risiko ditingkatkan' lewat dashboard eksekutif. Pastikan selaras dengan risk appetite perusahaan.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Proses manajemen risiko ditingkatkan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Proses manajemen risiko ditingkatkan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-01",
@@ -907,7 +1127,12 @@
       "IA-10",
       "IA-11",
       "IA-12"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identitas dan akses dikelola'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Identitas dan akses dikelola'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Identitas dan akses dikelola'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-02",
@@ -927,7 +1152,12 @@
       "IA-06",
       "IA-07",
       "AC-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identitas dipertahankan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Identitas dipertahankan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Identitas dipertahankan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-03",
@@ -948,7 +1178,12 @@
       "PE-04",
       "PE-05",
       "PE-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Akses fisik dimonitor dan dikontrol'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Akses fisik dimonitor dan dikontrol'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Akses fisik dimonitor dan dikontrol'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-04",
@@ -971,7 +1206,12 @@
       "AC-19",
       "AC-20",
       "AC-21"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Akses logis dikelola'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Akses logis dikelola'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Akses logis dikelola'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-05",
@@ -993,7 +1233,12 @@
       "IA-09",
       "IA-10",
       "IA-11"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identitas dan akses diverifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Identitas dan akses diverifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Identitas dan akses diverifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AA-06",
@@ -1012,7 +1257,12 @@
       "IA-06",
       "SC-12",
       "SC-13"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Identitas dan akses diproteksi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan RBAC (Role-Based Access Control) dan MFA (Multi-Factor Authentication) untuk mendukung 'Identitas dan akses diproteksi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Identitas dan akses diproteksi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AT-01",
@@ -1031,7 +1281,12 @@
       "AT-02",
       "AT-03",
       "AT-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Individu receive cybersecurity awareness training'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Individu receive cybersecurity awareness training'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Individu receive cybersecurity awareness training'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AT-02",
@@ -1049,7 +1304,12 @@
       "AT-03",
       "AT-04",
       "IR-02"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Individu dengan tanggung jawab khusus menerima pelatihan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Individu dengan tanggung jawab khusus menerima pelatihan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Individu dengan tanggung jawab khusus menerima pelatihan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.AT-03",
@@ -1067,7 +1327,12 @@
       "AT-01",
       "AT-03",
       "CA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Program kesadaran keamanan dievaluasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Program kesadaran keamanan dievaluasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Program kesadaran keamanan dievaluasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-01",
@@ -1085,7 +1350,12 @@
       "SC-08",
       "SC-12",
       "SC-13"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Data dilindungi saat transit'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Data dilindungi saat transit'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Data dilindungi saat transit'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-02",
@@ -1107,7 +1377,12 @@
       "MP-04",
       "MP-05",
       "MP-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Data dilindungi saat tersimpan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Data dilindungi saat tersimpan'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Data dilindungi saat tersimpan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-03",
@@ -1126,7 +1401,12 @@
       "CM-06",
       "CM-07",
       "CM-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konfigurasi sistem dikelola'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konfigurasi sistem dikelola'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konfigurasi sistem dikelola'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-04",
@@ -1146,7 +1426,12 @@
       "SC-07",
       "SC-08",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kebocoran data dicegah'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Kebocoran data dicegah'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kebocoran data dicegah'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-05",
@@ -1165,7 +1450,12 @@
       "SC-28",
       "SI-07",
       "AU-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Integritas data dijaga'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Integritas data dijaga'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Integritas data dijaga'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.DS-06",
@@ -1184,7 +1474,12 @@
       "SC-06",
       "MP-02",
       "MP-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Data diklasifikasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Data diklasifikasikan'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Data diklasifikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-01",
@@ -1202,7 +1497,12 @@
       "PL-02",
       "PL-07",
       "PM-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prosedur keamanan siber didokumentasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prosedur keamanan siber didokumentasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prosedur keamanan siber didokumentasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-02",
@@ -1222,7 +1522,12 @@
       "CM-04",
       "CM-05",
       "CM-09"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Perubahan keamanan dikelola'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Perubahan keamanan dikelola'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Perubahan keamanan dikelola'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-03",
@@ -1240,7 +1545,12 @@
       "CM-06",
       "CM-07",
       "CM-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Konfigurasi baseline dikelola'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Konfigurasi baseline dikelola'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Konfigurasi baseline dikelola'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-04",
@@ -1257,7 +1567,12 @@
     "sp80053": [
       "CP-09",
       "CP-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Backup dan recovery dilakukan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Backup dan recovery dilakukan'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Backup dan recovery dilakukan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-05",
@@ -1280,7 +1595,12 @@
       "MP-06",
       "MP-07",
       "MP-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Media dikontrol'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Media dikontrol'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Media dikontrol'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-06",
@@ -1299,7 +1619,12 @@
       "MP-03",
       "MP-04",
       "MP-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Data dan asset diproteksi sepanjang lifecycle'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Pastikan enkripsi (AES-256) berjalan saat data at-rest & in-transit untuk 'Data dan asset diproteksi sepanjang lifecycle'. Jadwalkan backup berkala.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Data dan asset diproteksi sepanjang lifecycle'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-07",
@@ -1324,7 +1649,12 @@
       "IR-08",
       "IR-09",
       "IR-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Insiden ditangani sesuai prosedur'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Insiden ditangani sesuai prosedur'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Insiden ditangani sesuai prosedur' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PR.IP-08",
@@ -1342,7 +1672,12 @@
       "CM-08",
       "MP-06",
       "SR-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Keamanan dalam decommissioning terjaga'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Keamanan dalam decommissioning terjaga'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Keamanan dalam decommissioning terjaga'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IP-09",
@@ -1360,7 +1695,12 @@
       "IR-03",
       "CP-03",
       "CP-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prosedur respons insiden ditest secara berkala'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Prosedur respons insiden ditest secara berkala'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Prosedur respons insiden ditest secara berkala' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "PR.IP-10",
@@ -1380,7 +1720,12 @@
       "RA-05",
       "SI-02",
       "SI-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Prosedur pencarian dan evaluasi kerentanan diikuti'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Prosedur pencarian dan evaluasi kerentanan diikuti'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Prosedur pencarian dan evaluasi kerentanan diikuti'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.PI-01",
@@ -1398,7 +1743,12 @@
       "SC-03",
       "SC-51",
       "SI-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Boot integrity terjaga'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Boot integrity terjaga'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Boot integrity terjaga'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.PI-02",
@@ -1417,7 +1767,12 @@
       "SC-03",
       "SC-13",
       "SI-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Software integrity diverifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Software integrity diverifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Software integrity diverifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.PI-03",
@@ -1436,7 +1791,12 @@
       "PE-06",
       "SI-07",
       "SR-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Integrity of hardware dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Integrity of hardware dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Integrity of hardware dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IR-01",
@@ -1455,7 +1815,12 @@
       "CP-06",
       "PE-09",
       "SC-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Infrastruktur diklasifikasikan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Infrastruktur diklasifikasikan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Infrastruktur diklasifikasikan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IR-02",
@@ -1475,7 +1840,12 @@
       "CP-08",
       "SC-06",
       "SC-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Infrastruktur dikonfigurasi secara resilient'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Infrastruktur dikonfigurasi secara resilient'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Infrastruktur dikonfigurasi secara resilient'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "PR.IR-03",
@@ -1495,7 +1865,12 @@
       "IR-04",
       "IR-06",
       "SC-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Availability dimonitoring dan diproteksi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Availability dimonitoring dan diproteksi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Availability dimonitoring dan diproteksi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-01",
@@ -1516,7 +1891,12 @@
       "SC-07",
       "SC-35",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Jaringan dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Konfigurasi firewall dan segmen jaringan terkait 'Jaringan dimonitor'. Tutup port terbuka yang tidak perlu dan aktifkan traffic logging.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Jaringan dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-02",
@@ -1537,7 +1917,12 @@
       "AU-02",
       "AU-06",
       "AU-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas pengguna dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas pengguna dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas pengguna dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-03",
@@ -1558,7 +1943,12 @@
       "AU-06",
       "SI-03",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Event keamanan dari host dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Event keamanan dari host dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Event keamanan dari host dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-04",
@@ -1579,7 +1969,12 @@
       "SI-03",
       "SI-04",
       "SI-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas malicious code dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas malicious code dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas malicious code dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-05",
@@ -1598,7 +1993,12 @@
       "CA-07",
       "SC-07",
       "SC-35"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas pada jaringan wireless dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Konfigurasi firewall dan segmen jaringan terkait 'Aktivitas pada jaringan wireless dimonitor'. Tutup port terbuka yang tidak perlu dan aktifkan traffic logging.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas pada jaringan wireless dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-06",
@@ -1618,7 +2018,12 @@
       "RA-05",
       "SI-02",
       "SI-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Kerentanan dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Kerentanan dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Kerentanan dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-07",
@@ -1636,7 +2041,12 @@
       "SC-44",
       "SI-03",
       "SI-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas unauthorized mobile code dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas unauthorized mobile code dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas unauthorized mobile code dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.CM-08",
@@ -1653,7 +2063,12 @@
     "sp80053": [
       "CA-07",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Detection activities dimonitor'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Detection activities dimonitor'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Detection activities dimonitor'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.AE-01",
@@ -1671,7 +2086,12 @@
       "SI-04",
       "SI-05",
       "AU-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Anomali dan events yang tidak diharapkan diidentifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Anomali dan events yang tidak diharapkan diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Anomali dan events yang tidak diharapkan diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.AE-02",
@@ -1691,7 +2111,12 @@
       "IR-05",
       "SI-03",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Aktivitas suspicios dianalisis'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Aktivitas suspicios dianalisis'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Aktivitas suspicios dianalisis'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.AE-03",
@@ -1710,7 +2135,12 @@
       "IR-04",
       "IR-05",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Korelasi analisis dilakukan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Korelasi analisis dilakukan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Korelasi analisis dilakukan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.AE-04",
@@ -1729,7 +2159,12 @@
       "IR-04",
       "RA-02",
       "RA-03"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Dampak potensial diestimasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Dampak potensial diestimasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Dampak potensial diestimasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "DE.AE-05",
@@ -1748,7 +2183,12 @@
       "IR-04",
       "IR-05",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Awal incident diidentifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Awal incident diidentifikasi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Awal incident diidentifikasi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.MA-01",
@@ -1766,7 +2206,12 @@
       "IR-06",
       "IR-07",
       "IR-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Insiden dilaporkan sesuai prosedur'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Insiden dilaporkan sesuai prosedur'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Insiden dilaporkan sesuai prosedur' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.MA-02",
@@ -1784,7 +2229,12 @@
       "IR-04",
       "IR-06",
       "IR-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Insiden dipantau'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Insiden dipantau'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Insiden dipantau' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.AN-01",
@@ -1802,7 +2252,12 @@
       "IR-04",
       "IR-05",
       "AU-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Analisis insiden dilakukan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Analisis insiden dilakukan'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Analisis insiden dilakukan' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.AN-02",
@@ -1820,7 +2275,12 @@
       "IR-04",
       "IR-05",
       "SI-04"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Korelasi insiden dieksekusi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Korelasi insiden dieksekusi'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Korelasi insiden dieksekusi' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.AN-03",
@@ -1840,7 +2300,12 @@
       "AU-11",
       "IR-04",
       "IR-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Forensik dilakukan sesuai kebutuhan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Forensik dilakukan sesuai kebutuhan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Forensik dilakukan sesuai kebutuhan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.CO-01",
@@ -1859,7 +2324,12 @@
       "IR-07",
       "IR-08",
       "IR-09"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Stakeholder diinformasikan sesuai prosedur'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Stakeholder diinformasikan sesuai prosedur'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Stakeholder diinformasikan sesuai prosedur'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.CO-02",
@@ -1877,7 +2347,12 @@
       "IR-06",
       "IR-07",
       "IR-08"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Insiden dilaporkan ke authorities sesuai kebutuhan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Insiden dilaporkan ke authorities sesuai kebutuhan'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Insiden dilaporkan ke authorities sesuai kebutuhan' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.CO-03",
@@ -1895,7 +2370,12 @@
       "IR-06",
       "IR-08",
       "PM-15"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Informasi ditukar sesuai prosedur'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Informasi ditukar sesuai prosedur'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Informasi ditukar sesuai prosedur'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.MI-01",
@@ -1913,7 +2393,12 @@
       "IR-04",
       "IR-05",
       "IR-06"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Insiden dimitigasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Aktifkan logging tersentralisasi (SIEM) dan alert anomali otomatis terkait 'Insiden dimitigasi'.",
+      "legal": "Mode Legal: Siapkan template notifikasi insiden ke OJK/Kominfo untuk 'Insiden dimitigasi' dalam batas waktu sesuai SLA regulasi (contoh: 3x24 jam)."
+    }
   },
   {
     "id": "RS.MI-02",
@@ -1931,7 +2416,12 @@
       "IR-04",
       "IR-06",
       "CA-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Mitigasi dimonitor untuk efektivitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Mitigasi dimonitor untuk efektivitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Mitigasi dimonitor untuk efektivitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.RE-01",
@@ -1951,7 +2441,12 @@
       "IR-04",
       "IR-07",
       "IR-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Recovery plan dieksekusi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Recovery plan dieksekusi'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Recovery plan dieksekusi'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RS.RE-02",
@@ -1970,7 +2465,12 @@
       "CP-10",
       "IR-04",
       "IR-07"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Recovery plan dimonitor untuk efektivitas'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Recovery plan dimonitor untuk efektivitas'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Recovery plan dimonitor untuk efektivitas'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RC.RP-01",
@@ -1990,7 +2490,12 @@
       "IR-04",
       "IR-07",
       "IR-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Recovery plan dieksekusi setelah incident'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Recovery plan dieksekusi setelah incident'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Recovery plan dieksekusi setelah incident'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RC.CO-01",
@@ -2009,7 +2514,12 @@
       "IR-07",
       "IR-08",
       "IR-09"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Pemangku kepentingan diinformasikan sepanjang recovery'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Pemangku kepentingan diinformasikan sepanjang recovery'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Pemangku kepentingan diinformasikan sepanjang recovery'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RC.CO-02",
@@ -2028,7 +2538,12 @@
       "IR-06",
       "IR-07",
       "IR-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Recovery divalidasi dengan pemangku kepentingan'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Recovery divalidasi dengan pemangku kepentingan'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Recovery divalidasi dengan pemangku kepentingan'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RC.IM-01",
@@ -2047,7 +2562,12 @@
       "IR-05",
       "IR-10",
       "CA-05"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Lessons learned dikumpulkan setelah incident'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Lessons learned dikumpulkan setelah incident'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Lessons learned dikumpulkan setelah incident'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   },
   {
     "id": "RC.IM-02",
@@ -2068,6 +2588,11 @@
       "IR-03",
       "IR-10",
       "PM-10"
-    ]
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Recovery plan dan procedures diperbarui'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
+      "sysadmin": "Mode SysAdmin: Terapkan kontrol teknis (konfigurasi sistem/patching) sesuai kaidah hardening server untuk merealisasikan 'Recovery plan dan procedures diperbarui'.",
+      "legal": "Mode Legal: Tinjau dan ratifikasi dokumen kebijakan/SOP untuk 'Recovery plan dan procedures diperbarui'. Pastikan pemenuhan aspek legal dan compliance."
+    }
   }
 ]

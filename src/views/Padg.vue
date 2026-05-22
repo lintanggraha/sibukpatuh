@@ -543,7 +543,7 @@ export default {
 
 @media (max-width:1440px){.padg-hero { min-height: 280px; padding: 1.25rem; } .padg-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .padg-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .padg-metric strong { font-size: 1.35rem; } .padg-list, .padg-inspector { min-height: auto; max-height: 520px; }}
 @media (max-height:850px) and (min-width:1024px){.padg-hero { min-height: 240px; padding: 1.15rem; } .padg-metrics { margin-top: 0.6rem; } .padg-list, .padg-inspector { max-height: calc(100vh - 280px); } .padg-inspector-body { padding-top: 0.5rem; }}
-@media (max-width:1399.98px){.padg-workspace,.padg-refspace{grid-template-columns:1fr}.padg-inspector{position:static;min-height:auto}}
+@media (max-width:991.98px){.padg-workspace,.padg-refspace{grid-template-columns:1fr}.padg-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.padg-hero,.padg-metric,.padg-side{min-height:auto}.padg-hero,.padg-nav,.padg-grid.two,.padg-refspace,.padg-metrics,.padg-mini-row,.padg-cards{grid-template-columns:1fr}.padg-bar,.padg-hotspot,.padg-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.padg-hero,.padg-panel{padding:1.2rem;border-radius:22px}.padg-pillar-grid{grid-template-columns:1fr}.modal-shell{grid-template-columns:1fr}.modal-sidebar{flex-direction:row;padding:1rem;gap:1rem}.modal-sidebar-icon{width:2.5rem;height:2.5rem;margin-bottom:0}.modal-close{top:.5rem;right:.5rem}.modal-dialog{max-width:100%}}
 
