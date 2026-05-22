@@ -374,6 +374,16 @@
                   <span>{{ activeRequirement ? getDomainLabel(activeRequirement.domain) : "-" }}</span>
                   <span>{{ activeRequirement ? (activeRequirement.evidence_count || (activeRequirement.evidence || []).length) + " bukti" : "0 bukti" }}</span>
                 </div>
+
+                <div v-if="activeRole !== 'default' && activeRequirement && activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="sej-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="sej-callout role-callout mt-2">
+                    {{ activeRequirement.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="sej-callout">
                   <span class="sej-label">Ringkasan Requirement</span>
                   <div class="mt-2">{{ activeRequirement ? activeRequirement.summary : "Pilih requirement untuk membaca ringkasan." }}</div>
@@ -599,6 +609,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 export default {
   name: "Pbi",
   data() {
@@ -762,6 +775,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalChapters() {
       const chapters = this.requirements.map((r) => r.chapter).filter(Boolean);
       return new Set(chapters).size;
@@ -873,6 +887,18 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     getDomainColor(domain) {
       return this.domainMeta[domain]?.color || "#144e72";
     },
@@ -941,8 +967,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, refRes] = await Promise.all([
-          fetch("/data/pbi_022024_requirements.json"),
-          fetch("/data/pbi_022024_references.json"),
+          fetch(`/data/pbi_022024_requirements.json?t=${new Date().getTime()}`),
+          fetch(`/data/pbi_022024_references.json?t=${new Date().getTime()}`),
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();
@@ -975,6 +1001,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .sej-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .sej-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
 .sej-shell{display:grid;gap:1rem}
 .sej-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}

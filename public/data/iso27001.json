@@ -9,6 +9,11 @@
     "concept": "Melindungi",
     "capability": "Keamanan sumber daya manusia",
     "description": "Pastikan organisasi punya dokumen resmi yang menjelaskan bagaimana keamanan informasi dijalankan. Dokumen ini perlu mendapat persetujuan pimpinan, dibagikan ke seluruh tim, dan rutin dicek agar tetap relevan dengan perkembangan bisnis.",
+    "roleTranslations": {
+      "bod": "Bapak/Ibu Direksi, pastikan ada budget tahunan untuk audit dan pembuatan kebijakan keamanan, agar organisasi kita tidak didenda regulator miliaran Rupiah jika terjadi kebocoran data.",
+      "sysadmin": "Bro, pastikan lu implementasikan aturan password dan akses server sesuai dokumen kebijakan yang udah disetujui. Jangan ada server yang jalan pake default password ya.",
+      "legal": "Pastikan klausul kewajiban mematuhi kebijakan keamanan ini masuk ke dalam setiap kontrak kerja karyawan baru dan perjanjian kerjasama vendor pihak ketiga."
+    },
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",
@@ -47,6 +52,11 @@
     "concept": "Mendeteksi",
     "capability": "Manajemen kerentanan teknis",
     "description": "Pisahkan tugas-tugas yang jika dipegang satu orang bisa berpotensi konflik kepentingan. Misalnya, orang yang membuat sistem tidak boleh sama dengan yang memverifikasi keamanannya. Ini membantu mencegah penyalahgunaan wewenang.",
+    "roleTranslations": {
+      "bod": "Bapak/Ibu, pastikan struktur organisasi mencegah penumpukan kuasa pada satu orang. CFO tidak boleh memegang akses super admin IT. Ini krusial untuk mencegah fraud internal.",
+      "sysadmin": "Bro, pastikan lu set role di IAM secara spesifik. Developer gak boleh punya akses prod, dan admin database gak boleh pegang server aplikasi.",
+      "legal": "Pastikan tidak ada temuan pelanggaran pemisahan tugas karena ini sering menjadi temuan kritis oleh auditor eksternal yang bisa berujung teguran."
+    },
     "exampleEvidence": [
       "Dokumen kebijakan yang disetujui",
       "Log tinjauan triwulanan",

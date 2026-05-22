@@ -13,7 +13,12 @@
     "focus": [],
     "evidence": [],
     "reporting": "Sesuai ketentuan dalam pasal",
-    "analogy": "Layaknya konstitusi negara yang menjadi hukum tertinggi, PADG menjadi pedoman utama bagi seluruh industri."
+    "analogy": "Layaknya konstitusi negara yang menjadi hukum tertinggi, PADG menjadi pedoman utama bagi seluruh industri.",
+    "roleTranslations": {
+      "sysadmin": "Mode SysAdmin: Setup log retention sesuai dengan standar PADG.",
+      "board": "Mode Board: Tinjau kepatuhan operasional sesuai arahan Bank Indonesia.",
+      "legal": "Mode Legal: Validasi struktur pelaporan sesuai ketentuan BI."
+    }
   },
   {
     "id": "II.2",

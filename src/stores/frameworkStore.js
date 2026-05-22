@@ -9,6 +9,15 @@ export const useFrameworkStore = defineStore('framework', {
     // Current active framework group
     activeFrameworkGroup: null, // 'nasional' | 'internasional' | null
     
+    // Active Role for Regulation Translator
+    activeRole: 'default',
+    roles: [
+      { id: 'default', label: 'Default View', icon: 'fa-eye' },
+      { id: 'bod', label: 'Board of Directors', icon: 'fa-user-tie' },
+      { id: 'sysadmin', label: 'SysAdmin', icon: 'fa-terminal' },
+      { id: 'legal', label: 'Legal / GRC', icon: 'fa-balance-scale' }
+    ],
+    
     // Navigation dropdown states
     navGroups: [
       {
@@ -17,7 +26,7 @@ export const useFrameworkStore = defineStore('framework', {
         icon: 'fa-landmark',
         active: false,
         show: false,
-        items: ['seojk', 'resilience', 'pbi'],
+        items: ['seojk', 'padk', 'resilience', 'pbi', 'padg', 'pdp'],
       },
       {
         id: 'internasional',
@@ -55,7 +64,7 @@ export const useFrameworkStore = defineStore('framework', {
      * Update active groups based on current route
      */
     updateActiveGroups(routeName) {
-      this.navGroups[0].active = ['seojk', 'resilience', 'pbi'].includes(routeName);
+      this.navGroups[0].active = ['seojk', 'padk', 'resilience', 'pbi', 'padg', 'pdp'].includes(routeName);
       this.navGroups[1].active = ['iso27001', 'nist', 'cobit', 'owasp_top10', 'owasp_asvs'].includes(routeName);
       
       if (this.navGroups[0].active) {
@@ -103,6 +112,13 @@ export const useFrameworkStore = defineStore('framework', {
      */
     setLoading(isLoading) {
       this.isLoading = isLoading;
+    },
+    
+    /**
+     * Set active role for translator
+     */
+    setActiveRole(roleId) {
+      this.activeRole = roleId;
     },
   },
 });

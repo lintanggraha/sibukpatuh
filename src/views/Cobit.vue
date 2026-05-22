@@ -345,6 +345,16 @@
                   <span>{{ activeConcept && activeConcept.metric_label && activeConcept.metric_value !== null ? `${activeConcept.metric_label}: ${activeConcept.metric_value}` : "Ringkasan Konseptual" }}</span>
                   <span>0 lampiran</span>
                 </div>
+
+                <div v-if="activeRole !== 'default' && activeConcept && activeConcept.roleTranslations && activeConcept.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="sej-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="sej-callout role-callout mt-2">
+                    {{ activeConcept.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="sej-callout">
                   <span class="sej-label">Ringkasan Konsep</span>
                   <div class="mt-2">{{ activeConcept ? activeConcept.summary : "Pilih konsep untuk membaca ringkasan." }}</div>
@@ -601,6 +611,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 const goalCascadeEnhancements = {
   "GC-01": {
     group: "Driver",
@@ -920,6 +933,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalChapters() {
       return this.chapters.length;
     },
@@ -997,6 +1011,18 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     toggleType(type) {
       this.activeType = this.activeType === type ? "" : type;
     },
@@ -1124,6 +1150,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .sej-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .sej-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);--accent-muted:rgba(20,78,114,0.1);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell);transition:all 0.3s ease}
 [data-bs-theme="dark"] .sej-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
 .sej-shell{display:grid;gap:1rem}
