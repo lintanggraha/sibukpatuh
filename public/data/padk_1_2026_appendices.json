@@ -1,0 +1,290 @@
+[
+  {
+    "id": "LAMP.I",
+    "title": "Pedoman Penyelenggaraan Teknologi Informasi oleh Bank Umum",
+    "type": "Lampiran PADK",
+    "scope": "Substansi pedoman PADK",
+    "summary": "Lampiran I memuat pedoman penyelenggaraan TI Bank dari pendahuluan sampai pengendalian dan audit intern TI.",
+    "contains": ["Bab I Pendahuluan", "Bab II Tata Kelola TI Bank", "Bab III Arsitektur TI Bank", "Bab IV Manajemen Risiko TI", "Bab V Penggunaan PPJTI", "Bab VI Penempatan Sistem Elektronik dan Pemrosesan Transaksi", "Bab VII Pengelolaan Data dan Pelindungan Data Pribadi", "Bab VIII Penyediaan Jasa TI oleh Bank", "Bab IX Pengendalian dan Audit Intern TI"],
+    "used_by": ["PADK.POKOK-01", "PADK.POKOK-02", "PADK.POKOK-04", "PADK.INTRO-01", "PADK.GOV-01", "PADK.GOV-02", "PADK.GOV-03", "PADK.GOV-04", "PADK.ARC-01", "PADK.ARC-02", "PADK.RSK-01", "PADK.RSK-02", "PADK.RSK-03", "PADK.PPJTI-01", "PADK.PPJTI-02", "PADK.PPJTI-03", "PADK.LOC-01", "PADK.LOC-02", "PADK.DATA-01", "PADK.DATA-02", "PADK.PDP-01", "PADK.PDP-02", "PADK.SVC-01", "PADK.SVC-02", "PADK.AUD-01", "PADK.AUD-02"]
+  },
+  {
+    "id": "LAMP.II",
+    "title": "Tata Cara Penyampaian Laporan dan Permohonan Izin",
+    "type": "Lampiran PADK",
+    "scope": "Pelaporan, insiden, perizinan, dan realisasi",
+    "summary": "Lampiran II menetapkan kanal dan tenggat RSTI, LRPTI, LKTPTI, audit TI, insiden TI nonsiber, perizinan, dan laporan realisasi.",
+    "contains": ["RSTI akhir November sebelum periode awal", "LRPTI akhir November dan perubahan tertentu", "LKTPTI setiap 21 Januari tahun berikutnya", "Notifikasi awal insiden nonsiber 24 jam dan laporan insiden 5 hari kerja", "Izin penempatan sistem, pemrosesan transaksi luar negeri, dan penyediaan jasa TI", "Realisasi izin dan laporan paling lama 3 bulan setelah implementasi"],
+    "used_by": ["PADK.POKOK-01", "PADK.POKOK-03", "PADK.ARC-02", "PADK.AUD-02", "PADK.REP-01", "PADK.REP-02", "PADK.REP-03", "PADK.INC-01", "PADK.PERMIT-01", "PADK.PERMIT-02", "PADK.LOC-01", "PADK.LOC-02"]
+  },
+  {
+    "id": "LAMP.III",
+    "title": "Format Laporan dan Notifikasi",
+    "type": "Lampiran PADK",
+    "scope": "Format laporan regulator",
+    "summary": "Lampiran III memuat Format 3.1, 3.2 dan subformatnya, Format 3.3, serta Format 3.4.1 dan 3.4.2.",
+    "contains": ["Laporan Rencana Pengembangan TI", "Laporan Kondisi Terkini Penyelenggaraan TI", "Laporan Hasil Audit Intern TI", "Notifikasi Awal Insiden TI nonsiber", "Laporan Insiden TI nonsiber"],
+    "used_by": ["PADK.POKOK-01"]
+  },
+  {
+    "id": "LAMP.IV",
+    "title": "Format Permohonan Izin dan Laporan Realisasi",
+    "type": "Lampiran PADK",
+    "scope": "Izin dan realisasi",
+    "summary": "Lampiran IV memuat format permohonan izin dan laporan realisasi untuk penempatan sistem elektronik luar negeri, pemrosesan transaksi luar negeri, dan penyediaan jasa TI oleh Bank.",
+    "contains": ["Format 4.1 sampai 4.6", "Dokumen due diligence dan analisis risiko", "Perjanjian, arsitektur, post-implementation review, dan hasil uji terkait"],
+    "used_by": ["PADK.POKOK-01"]
+  },
+  {
+    "id": "F3.1",
+    "title": "Format 3.1 Laporan Rencana Pengembangan Teknologi Informasi",
+    "type": "Format Laporan",
+    "scope": "LRPTI",
+    "summary": "Format satu tahun rencana pengembangan TI yang menjabarkan RSTI Bank.",
+    "contains": ["Informasi pelapor", "Rencana pengembangan TI", "Rencana waktu dan keterangan pendukung"],
+    "used_by": ["PADK.REP-01"]
+  },
+  {
+    "id": "F3.2",
+    "title": "Format 3.2 Laporan Kondisi Terkini Penyelenggaraan TI",
+    "type": "Format Laporan",
+    "scope": "LKTPTI",
+    "summary": "Induk laporan kondisi penyelenggaraan TI Bank selama satu tahun pelaporan.",
+    "contains": ["Daftar dokumen dan informasi LKTPTI", "Subformat 3.2.1 sampai 3.2.17", "Kondisi TI dan perubahan selama tahun laporan"],
+    "used_by": ["PADK.POKOK-03", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.1",
+    "title": "Format 3.2.1 Informasi Pelapor",
+    "type": "Format LKTPTI",
+    "scope": "Identitas laporan",
+    "summary": "Format identitas Bank, narahubung, unit pelapor, dan tanggal pelaporan.",
+    "contains": ["Nama Bank", "Alamat dan telepon", "Narahubung", "Unit pelapor", "Tanggal pelaporan"],
+    "used_by": ["PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.2",
+    "title": "Format 3.2.2 Organisasi dan Manajemen",
+    "type": "Format LKTPTI",
+    "scope": "Governance TI",
+    "summary": "Format organisasi dan manajemen penyelenggaraan TI Bank.",
+    "contains": ["Struktur organisasi", "Satuan kerja terkait TI", "Informasi tata kelola organisasi"],
+    "used_by": ["PADK.GOV-01", "PADK.GOV-02", "PADK.GOV-03", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.3",
+    "title": "Format 3.2.3 Kebijakan, Standar, dan Prosedur TI",
+    "type": "Format LKTPTI",
+    "scope": "Dokumen tata kelola",
+    "summary": "Daftar kebijakan, standar, dan prosedur TI yang dimiliki Bank.",
+    "contains": ["Nama dokumen", "Nomor dokumen", "Tanggal berlaku", "Keterangan"],
+    "used_by": ["PADK.GOV-01", "PADK.GOV-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.4",
+    "title": "Format 3.2.4 Manajemen Risiko",
+    "type": "Format LKTPTI",
+    "scope": "Risiko TI",
+    "summary": "Format informasi penerapan manajemen risiko dalam penyelenggaraan TI.",
+    "contains": ["Profil risiko TI", "Proses identifikasi dan pengendalian", "Informasi pemantauan risiko"],
+    "used_by": ["PADK.RSK-01", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.5",
+    "title": "Format 3.2.5 Arsitektur TI",
+    "type": "Format LKTPTI",
+    "scope": "Arsitektur TI dan data",
+    "summary": "Format arsitektur TI Bank yang mendukung pemetaan aplikasi, data, dan teknologi.",
+    "contains": ["Informasi arsitektur TI", "Gambar atau deskripsi arsitektur", "Konteks pengelolaan data"],
+    "used_by": ["PADK.GOV-04", "PADK.ARC-01", "PADK.DATA-01", "PADK.DATA-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.6",
+    "title": "Format 3.2.6 Daftar Aplikasi",
+    "type": "Format LKTPTI",
+    "scope": "Aplikasi Bank",
+    "summary": "Daftar aplikasi yang digunakan Bank dalam penyelenggaraan TI.",
+    "contains": ["Nama aplikasi", "Fungsi aplikasi", "Keterangan relevan"],
+    "used_by": ["PADK.GOV-04", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.7",
+    "title": "Format 3.2.7 Terminal Perbankan Elektronik",
+    "type": "Format LKTPTI",
+    "scope": "TPE",
+    "summary": "Format terminal perbankan elektronik seperti ATM, CDM, CRM, EDC, phone banking, SMS banking, internet atau mobile banking.",
+    "contains": ["Jenis TPE", "Jumlah unit", "Frekuensi transaksi", "Nominal transaksi", "Jumlah pengguna bila ada"],
+    "used_by": ["PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.8",
+    "title": "Format 3.2.8 Pusat Data dan Pusat Pemulihan Bencana",
+    "type": "Format LKTPTI",
+    "scope": "DC dan DRC",
+    "summary": "Format DC atau DRC yang memuat penyelenggara, lokasi, sertifikasi, pengendalian fisik, dan pengendalian lingkungan.",
+    "contains": ["Fungsi DC atau DRC", "Penyelenggara dan alamat", "Luas area bila on premise", "Sertifikasi", "Pengendalian fisik", "Pengendalian lingkungan"],
+    "used_by": ["PADK.GOV-04", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.9",
+    "title": "Format 3.2.9 Pengamanan Teknologi Informasi",
+    "type": "Format LKTPTI",
+    "scope": "Aset pengamanan TI",
+    "summary": "Daftar aset pengamanan TI seperti software atau hardware pengamanan.",
+    "contains": ["Nama aset", "Tipe aset", "Deskripsi fungsi, versi, atau lisensi"],
+    "used_by": ["PADK.RSK-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.10",
+    "title": "Format 3.2.10 Rencana Pemulihan Bencana",
+    "type": "Format LKTPTI",
+    "scope": "DRP",
+    "summary": "Format informasi umum DRP, struktur tim, pengujian, kaji ulang, dan tindak lanjut.",
+    "contains": ["Lokasi backup", "Tanggal uji terakhir", "Struktur tim DRP", "Hasil pengujian", "Hasil kaji ulang dan tindak lanjut"],
+    "used_by": ["PADK.RSK-03", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.11",
+    "title": "Format 3.2.11 Penyedia Jasa Teknologi Informasi",
+    "type": "Format LKTPTI",
+    "scope": "PPJTI dan Bank sebagai penyedia jasa",
+    "summary": "Format penggunaan PPJTI oleh Bank dan Bank sebagai penyedia jasa TI.",
+    "contains": ["Nama pihak", "Alamat", "Pihak terkait atau tidak", "Jasa TI", "Tanggal mulai kerja sama"],
+    "used_by": ["PADK.PPJTI-01", "PADK.PPJTI-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.12",
+    "title": "Format 3.2.12 Biaya Teknologi Informasi",
+    "type": "Format LKTPTI",
+    "scope": "Biaya TI",
+    "summary": "Format pembebanan capex dan opex kepada laba rugi atau neraca untuk pihak terkait maupun tidak terkait.",
+    "contains": ["Capex", "Opex", "Pembebanan laba rugi", "Pembebanan neraca", "Nilai Rupiah atau ekuivalen Rupiah"],
+    "used_by": ["PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.13",
+    "title": "Format 3.2.13 Penilaian Terkait Keamanan Siber Bank",
+    "type": "Format LKTPTI",
+    "scope": "SEOJK Siber",
+    "summary": "Format rujukan kertas kerja dan hasil penilaian keamanan siber Bank yang disampaikan sesuai SEOJK Siber.",
+    "contains": ["Risiko inheren keamanan siber", "Hasil penilaian keamanan siber", "Kualitas manajemen risiko siber", "Kualitas proses ketahanan siber"],
+    "used_by": ["PADK.RSK-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.14",
+    "title": "Format 3.2.14 Hasil Pengujian Keamanan Siber Berdasarkan Analisis Kerentanan",
+    "type": "Format LKTPTI",
+    "scope": "Vulnerability testing",
+    "summary": "Format ruang lingkup pengujian, temuan, status tindak lanjut, dan informasi pendukung.",
+    "contains": ["Jenis aset yang diuji", "Tujuan dan metode pengujian", "Temuan dan kritikalitas", "Status tindak lanjut"],
+    "used_by": ["PADK.RSK-02", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.15",
+    "title": "Format 3.2.15 Penilaian Sendiri atas Tingkat Maturitas Digital",
+    "type": "Format LKTPTI",
+    "scope": "SEOJK DMAB",
+    "summary": "Format kertas kerja kualitas aspek maturitas digital dan hasil tingkat maturitas digital.",
+    "contains": ["Kertas kerja maturitas digital", "Hasil penilaian tingkat maturitas digital"],
+    "used_by": ["PADK.INTRO-01", "PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.16",
+    "title": "Format 3.2.16 Daftar Mitra Bank dalam Kerja Sama Layanan Digital",
+    "type": "Format LKTPTI",
+    "scope": "Mitra layanan digital",
+    "summary": "Daftar nama mitra Bank dan jenis layanan digital yang dikerjasamakan.",
+    "contains": ["Nama mitra Bank", "Jenis layanan digital"],
+    "used_by": ["PADK.REP-02"]
+  },
+  {
+    "id": "F3.2.17",
+    "title": "Format 3.2.17 Hasil Identifikasi Sistem Elektronik",
+    "type": "Format LKTPTI",
+    "scope": "Infrastruktur informasi vital",
+    "summary": "Format profil Bank dan identifikasi Sistem Elektronik terkait infrastruktur informasi vital.",
+    "contains": ["Profil Bank dan narahubung", "Jenis dan nama Sistem Elektronik", "Data yang dikelola", "Ketergantungan pihak ketiga", "Rencana keberlangsungan layanan", "Kategori dan dampak sistem elektronik"],
+    "used_by": ["PADK.REP-02"]
+  },
+  {
+    "id": "F3.3",
+    "title": "Format 3.3 Laporan Hasil Audit Intern Teknologi Informasi",
+    "type": "Format Laporan",
+    "scope": "Audit intern TI",
+    "summary": "Format hasil audit TI yang memuat tim audit, kerja sama ekstern bila ada, cakupan audit, kelemahan, tindak lanjut, dan target waktu.",
+    "contains": ["Informasi pelapor", "Anggota tim audit", "Cakupan audit", "Kelemahan TI", "Tindak lanjut dan target"],
+    "used_by": ["PADK.AUD-01", "PADK.AUD-02", "PADK.REP-03"]
+  },
+  {
+    "id": "F3.4.1",
+    "title": "Format 3.4.1 Notifikasi Awal Insiden TI Nonsiber",
+    "type": "Format Notifikasi",
+    "scope": "Notifikasi awal insiden",
+    "summary": "Format informasi awal insiden TI nonsiber yang disampaikan paling lama 24 jam setelah insiden diketahui.",
+    "contains": ["Informasi Bank", "Informasi umum insiden", "Dampak awal", "Otoritas atau lembaga penerima bila relevan"],
+    "used_by": ["PADK.INC-01"]
+  },
+  {
+    "id": "F3.4.2",
+    "title": "Format 3.4.2 Laporan Insiden TI Nonsiber",
+    "type": "Format Notifikasi",
+    "scope": "Laporan insiden",
+    "summary": "Format laporan tindak lanjut insiden TI nonsiber yang lebih lengkap dari notifikasi awal.",
+    "contains": ["Detail insiden", "Analisis dampak", "Penanggulangan", "Pemulihan", "Tanggal penyampaian"],
+    "used_by": ["PADK.INC-01"]
+  },
+  {
+    "id": "F4.1",
+    "title": "Format 4.1 Permohonan Izin Penempatan Sistem Elektronik pada DC atau DRC di Luar Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Izin penempatan sistem elektronik",
+    "summary": "Format permohonan izin cross-border placement pada pusat data atau pusat pemulihan bencana.",
+    "contains": ["Informasi pemohon", "Informasi pusat data atau DRC", "Informasi Sistem Elektronik", "Due diligence dan analisis risiko", "Konsep perjanjian", "Arsitektur TI", "Pernyataan akses regulator"],
+    "used_by": ["PADK.PPJTI-03", "PADK.LOC-01", "PADK.PERMIT-01"]
+  },
+  {
+    "id": "F4.2",
+    "title": "Format 4.2 Laporan Realisasi Penempatan Sistem Elektronik pada DC atau DRC di Luar Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Realisasi penempatan sistem elektronik",
+    "summary": "Format realisasi penempatan yang memuat lokasi, perjanjian, risiko terkini, PIR, hasil uji DRC, berita acara, dan arsitektur terkini.",
+    "contains": ["Informasi pelapor", "Lokasi pusat data dan DRC", "Analisis pengamanan dan risiko terkini", "Post-implementation review", "Hasil pengujian", "Berita acara pengalihan", "Arsitektur terkini"],
+    "used_by": ["PADK.LOC-01", "PADK.PERMIT-02"]
+  },
+  {
+    "id": "F4.3",
+    "title": "Format 4.3 Permohonan Izin Pemrosesan Transaksi Berbasis TI oleh PPJTI di Luar Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Izin pemrosesan transaksi",
+    "summary": "Format izin outsourcing pemrosesan transaksi berbasis TI kepada PPJTI di luar negeri.",
+    "contains": ["Informasi pemohon", "SOP dan flow chart", "Lokasi pemrosesan", "Due diligence", "Analisis risiko dan pengamanan", "Konsep perjanjian", "Analisis biaya manfaat", "Aspek pelindungan nasabah"],
+    "used_by": ["PADK.PPJTI-03", "PADK.LOC-02", "PADK.PERMIT-01"]
+  },
+  {
+    "id": "F4.4",
+    "title": "Format 4.4 Laporan Realisasi Pemrosesan Transaksi Berbasis TI oleh PPJTI di Luar Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Realisasi pemrosesan transaksi",
+    "summary": "Format realisasi pemrosesan transaksi luar negeri yang memuat pengamanan terkini, perjanjian, flow, PIR, hasil uji, berita acara, dan alur pelaporan terkini.",
+    "contains": ["Informasi pelapor", "Lokasi DC atau DRC", "Lokasi dan penyelenggara pemrosesan", "Analisis pengamanan", "Perjanjian", "Post-implementation review", "Hasil pengujian", "Alur proses terkini"],
+    "used_by": ["PADK.LOC-02", "PADK.PERMIT-02"]
+  },
+  {
+    "id": "F4.5",
+    "title": "Format 4.5 Permohonan Izin Penyediaan Jasa TI oleh Bank",
+    "type": "Format Perizinan",
+    "scope": "Izin Bank sebagai penyedia jasa TI",
+    "summary": "Format permohonan izin penyediaan jasa TI oleh Bank kepada lembaga jasa keuangan lain.",
+    "contains": ["Jenis jasa TI", "Pihak penerima jasa", "Lokasi penyelenggaraan", "Daftar layanan aplikasi", "Analisis kapasitas", "Analisis biaya manfaat", "Analisis risiko", "Konsep perjanjian"],
+    "used_by": ["PADK.SVC-01", "PADK.SVC-02", "PADK.PERMIT-01"]
+  },
+  {
+    "id": "F4.6",
+    "title": "Format 4.6 Laporan Realisasi Penyediaan Jasa TI oleh Bank",
+    "type": "Format Perizinan",
+    "scope": "Realisasi jasa TI Bank",
+    "summary": "Format realisasi jasa TI oleh Bank yang memuat jenis jasa, pengguna, lokasi, perjanjian, berita acara, dan PIR.",
+    "contains": ["Jenis jasa TI yang direalisasikan", "Pihak pengguna jasa", "Lokasi penyelenggaraan", "Daftar layanan aplikasi", "Perjanjian", "Berita acara", "Post-implementation review dan SLA"],
+    "used_by": ["PADK.SVC-01", "PADK.SVC-02", "PADK.PERMIT-02"]
+  }
+]

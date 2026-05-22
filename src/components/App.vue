@@ -2,62 +2,69 @@
   <div class="framework-shell">
     <div class="container-xl">
       <header class="framework-header">
-        <div class="row g-3 align-items-center">
-          <div class="col-lg-4">
-            <router-link to="/" class="framework-brand">
-              <span class="framework-brand-mark">
-                <i class="fas fa-layer-group"></i>
-              </span>
-              <span class="framework-brand-copy">
-                <small>SibukPatuh</small>
-                <strong>Sistem Informasi Biar Update Kepatuhan</strong>
-              </span>
-            </router-link>
-          </div>
-          <div class="col-lg-8">
-            <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
-              <div
-                v-for="group in frameworkNavGroups"
-                :key="group.label"
-                class="framework-nav-group"
-                :class="{ show: group.show }"
-              >
-                <button
-                  class="framework-nav-toggle"
-                  :class="{ 'is-active': group.active }"
-                  type="button"
-                  @click.stop="toggleGroup(group)"
-                  aria-expanded="false"
-                >
-                  <i :class="`fas ${group.icon}`" class="nav-icon"></i>
-                  <span>{{ group.label }}</span>
-                </button>
+        <div class="framework-header-inner">
+          <router-link to="/" class="framework-brand">
+            <span class="framework-brand-mark">
+              <i class="fas fa-layer-group"></i>
+            </span>
+            <span class="framework-brand-copy">
+              <small>SibukPatuh</small>
+              <strong>Sistem Informasi Biar Update Kepatuhan</strong>
+            </span>
+          </router-link>
 
+          <div class="framework-nav-area">
+            <nav class="framework-nav navigation-optimized" aria-label="Framework navigation">
                 <div
-                  class="framework-dropdown"
+                  v-for="group in frameworkNavGroups"
+                  :key="group.label"
+                  class="framework-nav-group"
                   :class="{ show: group.show }"
                 >
-                  <router-link
-                    v-for="item in group.items"
-                    :key="item.route"
-                    :to="{ name: item.routeName }"
-                    class="dropdown-item"
-                    :class="{ 'is-active': isActiveRoute(item.routeName) }"
-                    @click="closeAllGroups"
+                  <button
+                    class="framework-nav-toggle"
+                    :class="{ 'is-active': group.active }"
+                    type="button"
+                    @click.stop="toggleGroup(group)"
+                    aria-expanded="false"
                   >
-                    <i :class="`fas ${item.icon}`" class="dropdown-icon"></i>
-                    <span>{{ item.label }}</span>
-                  </router-link>
+                    <i :class="`fas ${group.icon}`" class="nav-icon"></i>
+                    <span>{{ group.label }}</span>
+                  </button>
+
+                  <div
+                    class="framework-dropdown"
+                    :class="{ show: group.show }"
+                  >
+                    <router-link
+                      v-for="item in group.items"
+                      :key="item.route"
+                      :to="{ name: item.routeName }"
+                      class="dropdown-item"
+                      :class="{ 'is-active': isActiveRoute(item.routeName) }"
+                      @click="closeAllGroups"
+                    >
+                      <i :class="`fas ${item.icon}`" class="dropdown-icon"></i>
+                      <span>{{ item.label }}</span>
+                    </router-link>
+                  </div>
                 </div>
-              </div>
 
-              <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
-                 <i class="fas fa-info-circle nav-icon"></i>
-                 <span>Tentang</span>
-              </router-link>
+                <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
+                  <i class="fas fa-info-circle nav-icon"></i>
+                  <span>Tentang</span>
+                </router-link>
 
-
+                <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
+                  <i class="fas fa-envelope nav-icon"></i>
+                  <span>Kontak</span>
+                </router-link>
             </nav>
+
+            <div class="framework-tools">
+              <div class="nav-divider"></div>
+              <RoleSelector />
+            </div>
           </div>
         </div>
       </header>
@@ -71,6 +78,18 @@
           </transition>
         </router-view>
       </main>
+
+      <footer class="site-footer" aria-label="Informasi situs">
+        <div>
+          <strong>SibukPatuh</strong>
+          <span>Referensi edukatif keamanan siber, tata kelola TI, dan kepatuhan digital.</span>
+        </div>
+        <nav aria-label="Footer navigation">
+          <router-link to="/about">Tentang</router-link>
+          <router-link to="/privacy-policy">Kebijakan Privasi</router-link>
+          <router-link to="/contact">Kontak</router-link>
+        </nav>
+      </footer>
       <!-- Trakteer Tip Floating Button -->
       <a 
         href="https://trakteer.id/lintanggraha/tip" 
@@ -106,12 +125,14 @@
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { Analytics } from '@vercel/analytics/vue';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
+import RoleSelector from './RoleSelector.vue';
 
 export default {
   name: "App",
   components: {
     Analytics,
-    SpeedInsights
+    SpeedInsights,
+    RoleSelector
   },
   data() {
     return {
@@ -127,6 +148,11 @@ export default {
               routeName: "seojk",
               label: "SEOJK 29 03/2022",
               icon: "fa-landmark",
+            },
+            {
+              routeName: "padk",
+              label: "PADK 1 Tahun 2026",
+              icon: "fa-server",
             },
             {
               routeName: "resilience",
@@ -201,6 +227,11 @@ export default {
               label: "Checklist Tools",
               icon: "fa-tasks",
             },
+            {
+              routeName: "simulator",
+              label: "Compliance Simulator",
+              icon: "fa-gamepad",
+            },
           ],
         },
       ],
@@ -257,8 +288,11 @@ export default {
       const route = this.$route;
       this.frameworkNavGroups[0].active =
         route.name === "seojk" ||
+        route.name === "padk" ||
         route.name === "resilience" ||
-        route.name === "pbi";
+        route.name === "pbi" ||
+        route.name === "padg" ||
+        route.name === "pdp";
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||
         route.name === "nist" ||
@@ -270,7 +304,8 @@ export default {
       this.frameworkNavGroups[3].active =
         route.name === "cross_mapping" ||
         route.name === "framework_analysis" ||
-        route.name === "checklist_tools";
+        route.name === "checklist_tools" ||
+        route.name === "simulator";
       
       // Sync with Pinia store
       const store = useFrameworkStore();
@@ -310,7 +345,14 @@ export default {
 html {
   scroll-padding-top: 1rem;
   scroll-behavior: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Restrict container width on very large screens for better focus */
+@media (min-width: 1400px) {
+  .container-xl {
+    max-width: 1200px !important;
+  }
 }
 
 body {
@@ -321,8 +363,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Native scrolling - no forced smooth */
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
   scrollbar-width: thin;
   scrollbar-color: rgba(20, 78, 114, 0.2) transparent;
 }
@@ -500,22 +541,54 @@ body {
   padding: 1.25rem 0 2rem;
 }
 
+.nav-divider {
+  width: 1px;
+  height: 2.2rem;
+  background: rgba(20, 78, 114, 0.15);
+  margin: 0 0.25rem;
+  align-self: center;
+}
+
+[data-bs-theme="dark"] .nav-divider {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .framework-header {
   position: relative;
-  z-index: 20;
+  top: 0;
+  z-index: 1000;
   overflow: visible;
   margin-bottom: 0.8rem;
   padding: 0.85rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
-  background: rgba(255, 251, 246, 0.7);
+  background: rgba(255, 251, 246, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+}
+
+.framework-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* Only make sticky if there's enough vertical room to avoid covering content */
+@media (min-height: 680px) {
+  .framework-header {
+    position: sticky;
+    top: 1rem;
+  }
 }
 
 .framework-brand {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  flex: 0 1 22rem;
+  min-width: 13.5rem;
   text-decoration: none;
   color: inherit;
 }
@@ -542,17 +615,29 @@ body {
 
 .framework-brand-copy strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  max-width: 200px;
+  max-width: 14rem;
+}
+
+.framework-nav-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .framework-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
+  flex-wrap: nowrap;
+  gap: 0.1rem;
   justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .framework-nav-group {
@@ -569,8 +654,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  min-width: 5.5rem;
-  padding: 0.5rem 0.75rem;
+  min-width: 4.9rem;
+  min-height: 4rem;
+  padding: 0.45rem 0.55rem;
   border-radius: 12px;
   border: 1px solid transparent;
   color: var(--muted);
@@ -578,13 +664,14 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.72rem;
+  line-height: 1.15;
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .framework-nav-toggle .nav-icon {
   margin-right: 0;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   flex-shrink: 0;
 }
 
@@ -604,6 +691,15 @@ body {
 
 .framework-nav-toggle::after {
   margin-left: 0.15rem;
+}
+
+.framework-tools {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  width: auto;
+  flex: 0 0 auto;
 }
 
 .framework-dropdown {
@@ -678,6 +774,51 @@ body {
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
 }
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 22px;
+  background: rgba(255, 251, 246, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.82rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.045);
+}
+
+.site-footer strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.site-footer a {
+  color: var(--active);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  text-decoration: underline;
+}
+
+[data-bs-theme="dark"] .site-footer {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .route-wrapper {
   width: 100%;
   height: 100%;
@@ -738,6 +879,16 @@ body {
     padding: 0.65rem;
     border-radius: 20px;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.055);
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 18px;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
   }
 
   .iso-list,
@@ -819,41 +970,137 @@ body {
 }
 
 @media (max-width: 1440px) {
-  .framework-nav-toggle {
-    min-width: 9.5rem;
-    padding: 0.65rem 1rem;
-    font-size: 0.82rem;
-  }
-  .framework-brand-copy strong {
-    font-size: 0.95rem;
-  }
   .framework-header {
     margin-bottom: 0.65rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .framework-brand {
+    flex-basis: 18rem;
+  }
+
+  .framework-brand-copy strong {
+    font-size: 0.92rem;
+    max-width: 11.25rem;
+  }
+
+  .framework-nav-toggle {
+    min-width: 4.2rem;
+    min-height: 3.55rem;
+    padding: 0.38rem 0.38rem;
+    font-size: 0.65rem;
+  }
+
+  .framework-nav-toggle .nav-icon {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .framework-header {
-    padding: 1rem;
+    padding: 0.6rem 0.85rem;
+    top: 0.5rem;
+    border-radius: 20px;
   }
 
-  .framework-header .row {
-    gap: 1rem;
+  .framework-header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .framework-brand {
+    flex: 0 0 auto;
+    min-width: 0;
   }
 
   .framework-nav {
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.25rem 0.15rem 0.65rem;
+    margin: 0 -0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 78, 114, 0.2) transparent;
+  }
+
+  .framework-nav-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .framework-nav::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+  }
+
+  .framework-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .framework-nav::-webkit-scrollbar-thumb {
+    background: rgba(20, 78, 114, 0.15);
+    border-radius: 10px;
+  }
+
+  [data-bs-theme="dark"] .framework-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .framework-nav-group,
   .framework-nav-toggle {
-    width: 100%;
+    width: auto;
+    flex-shrink: 0;
+    min-width: auto;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .nav-divider {
+    height: 1.5rem;
+    margin: 0 0.4rem;
   }
 
   .framework-dropdown {
-    right: 0;
-    left: 0;
-    min-width: 100%;
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 24px 24px 0 0 !important;
+    box-shadow: 0 -10px 40px rgba(15, 23, 42, 0.2) !important;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    opacity: 0;
+    display: block !important; /* Keep block but hide with transform */
+  }
+
+  .framework-dropdown.show {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .framework-nav-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .framework-tools {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .framework-tools .nav-divider {
+    display: none;
   }
 }
 

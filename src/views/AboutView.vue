@@ -18,6 +18,8 @@
 
             <p><strong>SibukPatuh</strong> adalah aplikasi web edukatif untuk mempelajari struktur, istilah, dan konteks berbagai framework serta regulasi teknologi informasi, baik nasional maupun internasional.</p>
 
+            <p>Setiap halaman disusun sebagai materi belajar mandiri: ada ringkasan, pengelompokan domain, contoh cara membaca kewajiban, dan penjelasan praktis agar pembaca tidak hanya melihat daftar pasal atau kontrol, tetapi juga memahami hubungan antara tata kelola, risiko, bukti audit, dan implementasi operasional.</p>
+
             <p>Aplikasi ini dibuat untuk membantu tim IT, auditor, dan compliance officer dalam:</p>
             <div class="feature-grid mb-5">
               <div class="feature-item">
@@ -56,6 +58,16 @@
                 <h5 class="alert-heading fw-bold">Catatan Penting</h5>
                 <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong>, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
               </div>
+            </div>
+
+            <div class="editorial-note mt-4">
+              <h4><i class="fas fa-pen-nib me-2"></i> Metodologi Editorial</h4>
+              <p>
+                Konten SibukPatuh dibuat dengan pendekatan kurasi edukatif. Dokumen publik, standar, dan referensi industri dibaca ulang, dipetakan ke kategori pembelajaran, lalu ditulis kembali dalam bahasa yang lebih mudah dipahami oleh praktisi. Untuk standar berlisensi seperti ISO dan COBIT, SibukPatuh tidak menyalin teks resmi; yang ditampilkan adalah interpretasi, struktur belajar, dan konteks penggunaan.
+              </p>
+              <p class="mb-0">
+                Jika ada perubahan regulasi, kekeliruan ringkasan, atau sumber yang perlu diperbaiki, pembaca dapat mengirim koreksi melalui halaman <router-link to="/contact">Kontak</router-link>.
+              </p>
             </div>
           </div>
         </div>
@@ -127,6 +139,10 @@ export default {
 .btn-outline-primary{color:#0f172a;border-color:#0f172a}
 .alert-warning{background:rgba(251,191,36,0.1) !important;border:1px solid rgba(251,191,36,0.2) !important;border-radius:20px !important}
 .alert-heading{color:#92400e;font-size:1rem}
+.editorial-note{padding:1.25rem;border-radius:20px;background:rgba(15,23,42,.04);border:1px solid rgba(15,23,42,.07)}
+.editorial-note h4{margin:0 0 .7rem;font-size:1.05rem;font-weight:900;color:#0f172a}
+.editorial-note p{color:#475569;line-height:1.75}
+.editorial-note a{font-weight:800;color:#0f766e}
 
 @media (max-width: 1440px) {
   .about-header { margin-bottom: 2rem !important; }

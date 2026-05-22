@@ -19,7 +19,12 @@
       "II.02",
       "VI.01"
     ],
-    "analogy": "Ibarat memilih sistem keamanan untuk rumah, lu harus tahu dulu ruangan mana yang nyimpen barang berharga, bukan pasang alarm di seluruh genteng."
+    "analogy": "Ibarat memilih sistem keamanan untuk rumah, lu harus tahu dulu ruangan mana yang nyimpen barang berharga, bukan pasang alarm di seluruh genteng.",
+    "roleTranslations": {
+      "sysadmin": "Mode SysAdmin: Konfigurasi sistem auto-failover dan backup harian.",
+      "board": "Mode Board: Anggarkan biaya pengadaan infrastruktur BCP/DRC yang handal.",
+      "legal": "Mode Legal: Tinjau prosedur kesinambungan layanan dalam perspektif regulasi OJK."
+    }
   },
   {
     "id": "DR-02",

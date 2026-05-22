@@ -20,7 +20,12 @@
     "reporting": "Pelaporan status kesiapan prinsip dasar dalam laporan tahunan KKS.",
     "appendices": [
       "Pasal 3-4"
-    ]
+    ],
+    "roleTranslations": {
+      "sysadmin": "Mode SysAdmin: Blokir koneksi tidak sah dan jalankan monitoring akses secara berkala.",
+      "board": "Mode Board: Pastikan PBI 022024 menjadi acuan utama dalam audit tahunan.",
+      "legal": "Mode Legal: Persiapkan dokumen pertanggungjawaban untuk laporan OJK."
+    }
   },
   {
     "id": "PBI.KRK-02",

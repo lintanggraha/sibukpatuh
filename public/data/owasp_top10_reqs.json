@@ -9,7 +9,10 @@
     "cadence": "Diperiksa setiap rilis atau perubahan hak akses",
     "owner": "Developer, Security Tester",
     "scoring": "Risiko Tinggi - Dampak Signifikan",
-    "appendices": ["Mitigasi Ekstensif", "ASVS V4"],
+    "appendices": [
+      "Mitigasi Ekstensif",
+      "ASVS V4"
+    ],
     "focus": [
       "Secara default, nish akses ke fungsionalitas aplikasi kecuali ditetapkan publik.",
       "Terapkan kontrol akses sekali (centralized) dan gunakan ulang.",
@@ -33,7 +36,10 @@
     "cadence": "Audit kriptografi berkala",
     "owner": "Security Architect, Developer",
     "scoring": "Risiko Sangat Tinggi",
-    "appendices": ["Panduan Kripto", "ASVS V6"],
+    "appendices": [
+      "Panduan Kripto",
+      "ASVS V6"
+    ],
     "focus": [
       "Klasifikasikan data yang diproses atau disimpan aplikasi (Sensitif/Publik).",
       "Jangan gunakan algoritma usang seperti MD5 atau SHA1.",
@@ -57,7 +63,10 @@
     "cadence": "Diuji pada setiap pipeline CI/CD (SAST/DAST)",
     "owner": "Developer",
     "scoring": "Risiko Tinggi",
-    "appendices": ["ASVS V5", "Defense Cheat Sheet"],
+    "appendices": [
+      "ASVS V5",
+      "Defense Cheat Sheet"
+    ],
     "focus": [
       "Gunakan API yang aman yang menghindari interpreter sepenuhnya atau menyediakan antarmuka paramaterized.",
       "Terapkan validasi input server-side yang positif atau allow-list.",
@@ -81,7 +90,10 @@
     "cadence": "Fase SDLC awal (Design Phase)",
     "owner": "Product Owner, Architect",
     "scoring": "Risiko Desain Menengah/Tinggi",
-    "appendices": ["Threat Modeling", "SDLC"],
+    "appendices": [
+      "Threat Modeling",
+      "SDLC"
+    ],
     "focus": [
       "Lakukan threat modeling untuk pengadaan teknologi atau rancangan sistem baru.",
       "Gunakan pola desain yang aman dan komponen referensi yang telah teruji.",
@@ -105,7 +117,10 @@
     "cadence": "Check harian / DevSecOps Scanning",
     "owner": "DevOps, SysAdmin",
     "scoring": "Risiko Tinggi dan meluas",
-    "appendices": ["Hardening Guide", "ASVS V14"],
+    "appendices": [
+      "Hardening Guide",
+      "ASVS V14"
+    ],
     "focus": [
       "Otomatiskan proses instalasi dengan lingkungan yang dikeraskan (hardening).",
       "Hapus atau jangan pasang fitur/framework/fitur yang tidak perlu.",
@@ -129,7 +144,9 @@
     "cadence": "Otomatis menggunakan SCA Scanning pada SDLC",
     "owner": "DevOps, Developer",
     "scoring": "Risiko Kritikal - Cenderung eksploitasi mudah",
-    "appendices": ["ASVS V14"],
+    "appendices": [
+      "ASVS V14"
+    ],
     "focus": [
       "Pelihara daftar material perangkat lunak (SBOM).",
       "Pantau versi komponen baru atau CVE secara berkala.",
@@ -153,7 +170,10 @@
     "cadence": "Sistem rilis otentikasi baru, Penetration Testing rutin",
     "owner": "Developer, IAM Team",
     "scoring": "Risiko Tinggi",
-    "appendices": ["ASVS V2", "ASVS V3"],
+    "appendices": [
+      "ASVS V2",
+      "ASVS V3"
+    ],
     "focus": [
       "Implementasikan MFA (Multi-Factor Authentication).",
       "Gunakan kebijakan panjang & kompleksitas kata sandi yang sesuai.",
@@ -177,7 +197,9 @@
     "cadence": "Setiap build process / deployment",
     "owner": "DevOps, Security Architect",
     "scoring": "Risiko Supply Chain Tinggi",
-    "appendices": ["SDLC"],
+    "appendices": [
+      "SDLC"
+    ],
     "focus": [
       "Verifikasi integritas modul yang diunduh (misalnya dengan checksum/hash).",
       "Gunakan tempat penyimpanan/registry paket aman dan internal yang diawasi.",
@@ -201,7 +223,10 @@
     "cadence": "Realtime, SOC monitoring",
     "owner": "SOC, SysAdmin, DevOps",
     "scoring": "Meningkatkan Risk Impact",
-    "appendices": ["ASVS V7", "Monitoring Guide"],
+    "appendices": [
+      "ASVS V7",
+      "Monitoring Guide"
+    ],
     "focus": [
       "Log kegagalan login dan kegagalan akses untuk deteksi anomali.",
       "Pastikan format log jelas dan dapat diurai SIEM sentral log management.",
@@ -225,7 +250,10 @@
     "cadence": "DAST/SAST pada fitur webhook/metadata parsing",
     "owner": "Developer, Architect",
     "scoring": "Risiko Menengah ke Tinggi pada infrastruktur Cloud",
-    "appendices": ["Defense Cheat Sheet", "ASVS V5"],
+    "appendices": [
+      "Defense Cheat Sheet",
+      "ASVS V5"
+    ],
     "focus": [
       "Isolasi fungsi resource fetching di jaringan terpisah untuk kurangi impak.",
       "Gunakan kebijakan penolakan (deny-by-default) untuk akses URL intranet/lokal (e.g. 169.254.169.254 AWS metadata).",

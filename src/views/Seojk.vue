@@ -103,6 +103,16 @@
               <div class="sej-inspector-head"><small>Requirement Inspector</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih requirement untuk membaca detail.' }}</span></div>
               <div class="sej-inspector-body">
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? activeRequirement.cadence || '-' : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
+
+                <div v-if="activeRole !== 'default' && activeRequirement && activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="sej-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="sej-callout role-callout mt-2">
+                    {{ activeRequirement.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="sej-callout"><span class="sej-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih requirement untuk membaca ringkasan.' }}</div></div>
                 <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Implementasi</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
@@ -223,6 +233,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 export default {
   name: 'Seojk',
   data() {
@@ -269,6 +282,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalChapters() {
       const chapters = this.requirements.map(r => r.chapter).filter(Boolean);
       return new Set(chapters).size;
@@ -316,6 +330,18 @@ export default {
     activeRequirement() { return this.requirements.find(r => r.id === this.activeRequirementId) || null; },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     getPillarColor(p) { return this.pillarMeta[p]?.color || '#144e72'; },
     getPillarLabel(p) { return this.pillarMeta[p]?.label || p || '-'; },
     getChapterLabel(c) { return (c || '-') + '. ' + (this.chapterMeta[c]?.label || ''); },
@@ -362,8 +388,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch('/data/seojk_requirements.json'),
-          fetch('/data/seojk_appendices.json')
+          fetch(`/data/seojk_requirements.json?t=${new Date().getTime()}`),
+          fetch(`/data/seojk_appendices.json?t=${new Date().getTime()}`)
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();
@@ -393,6 +419,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .sej-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .sej-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);--accent-muted:rgba(20,78,114,0.1);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell);transition:all 0.3s ease}
 [data-bs-theme="dark"] .sej-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
 .sej-shell{display:grid;gap:1rem}
