@@ -1294,7 +1294,7 @@ export default {
 .modal-main{display:flex;flex-direction:column;min-height:0;flex:1;overflow:hidden}
 .modal-header{padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
 .modal-title{margin:0;font-size:1.15rem;font-weight:800;color:var(--ink);line-height:1.4}
-.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1}
+.modal-body{padding:1.25rem 1.5rem;overflow-y:auto;flex:1;min-height:0}
 .modal-section{margin-bottom:1.25rem}
 .modal-section:last-child{margin-bottom:0}
 .modal-section-header{display:flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
