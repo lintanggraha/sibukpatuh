@@ -128,7 +128,17 @@
               <div class="iso-detail-head"><small>Control Inspector</small><strong>{{ selectedExplorerControl?.id || 'Pilih sebuah kontrol' }}</strong><span>{{ selectedExplorerControl?.name || 'Klik kontrol di daftar untuk membuka deskripsi, interpretasi, bukti audit, dan tips implementasi.' }}</span></div>
               <div class="iso-detail-body" v-if="selectedExplorerControl">
                 <div class="iso-detail-meta"><span class="iso-detail-meta-item"><small>Kategori</small><strong>{{ selectedExplorerControl.domain || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Jenis</small><strong>{{ selectedExplorerControl.type || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Prioritas</small><strong>{{ selectedExplorerControl.priority || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Kesulitan</small><strong>{{ selectedExplorerControl.difficulty || '-' }}</strong></span></div>
-                <div><span class="iso-detail-label">Deskripsi kontrol</span><div class="iso-callout">{{ selectedExplorerControl.description || '-' }}</div></div>
+                
+                <div v-if="activeRole !== 'default' && selectedExplorerControl.roleTranslations && selectedExplorerControl.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="iso-detail-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="iso-callout role-callout">
+                    {{ selectedExplorerControl.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
+                <div><span class="iso-detail-label">Deskripsi standar ISO</span><div class="iso-callout">{{ selectedExplorerControl.description || '-' }}</div></div>
                 <div><span class="iso-detail-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="iso-note">{{ selectedExplorerControl.analogy || '-' }}</div></div>
                 <div><span class="iso-detail-label">Contoh bukti audit</span><ul class="iso-evidence-list"><li v-for="(item, idx) in (selectedExplorerControl.exampleEvidence && selectedExplorerControl.exampleEvidence.length ? selectedExplorerControl.exampleEvidence : ['Belum ada contoh bukti audit untuk kontrol ini.'])" :key="idx">{{ item }}</li></ul></div>
                 <div><span class="iso-detail-label">Tips implementasi</span><div class="iso-callout">{{ selectedExplorerControl.implementationTips || '-' }}</div></div>
@@ -165,7 +175,17 @@
                     <div class="iso-detail-head"><small>Inspektor Konsep</small><strong>{{ selectedConceptControl?.id || 'Pilih sebuah kontrol' }}</strong><span>{{ selectedConceptControl?.name || 'Klik kontrol dari konsep yang dipilih untuk membaca detail lengkap.' }}</span></div>
                     <div class="iso-detail-body" v-if="selectedConceptControl">
                       <div class="iso-detail-meta"><span class="iso-detail-meta-item"><small>Kategori</small><strong>{{ selectedConceptControl.domain || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Jenis</small><strong>{{ selectedConceptControl.type || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Prioritas</small><strong>{{ selectedConceptControl.priority || '-' }}</strong></span><span class="iso-detail-meta-item"><small>Kesulitan</small><strong>{{ selectedConceptControl.difficulty || '-' }}</strong></span></div>
-                      <div><span class="iso-detail-label">Deskripsi kontrol</span><div class="iso-callout">{{ selectedConceptControl.description || '-' }}</div></div>
+
+                      <div v-if="activeRole !== 'default' && selectedConceptControl.roleTranslations && selectedConceptControl.roleTranslations[activeRole]" class="role-translation-box">
+                        <span class="iso-detail-label">
+                          <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                        </span>
+                        <div class="iso-callout role-callout">
+                          {{ selectedConceptControl.roleTranslations[activeRole] }}
+                        </div>
+                      </div>
+
+                      <div><span class="iso-detail-label">Deskripsi standar ISO</span><div class="iso-callout">{{ selectedConceptControl.description || '-' }}</div></div>
                       <div><span class="iso-detail-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="iso-note">{{ selectedConceptControl.analogy || '-' }}</div></div>
                       <div><span class="iso-detail-label">Contoh bukti audit</span><ul class="iso-evidence-list"><li v-for="(item, idx) in (selectedConceptControl.exampleEvidence && selectedConceptControl.exampleEvidence.length ? selectedConceptControl.exampleEvidence : ['Belum ada contoh bukti audit untuk kontrol ini.'])" :key="idx">{{ item }}</li></ul></div>
                       <div><span class="iso-detail-label">Tips implementasi</span><div class="iso-callout">{{ selectedConceptControl.implementationTips || '-' }}</div></div>
@@ -183,6 +203,9 @@
 </template>
 
 <script>
+import { mapState } from 'pinia';
+import { useFrameworkStore } from '../stores/frameworkStore';
+
 export default {
   name: 'Iso27001',
   data() {
@@ -220,6 +243,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ['activeRole']),
     totalControls() { return this.controls.length; },
     domainBreakdown() {
       return Object.entries(this.domainMeta).map(([name, meta]) => ({ name, id: meta.id, color: meta.color, summary: meta.summary, count: this.controls.filter(c => c.domain === name).length })).filter(d => d.count > 0);
@@ -271,6 +295,14 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      const icons = { 'bod': 'fa-user-tie', 'sysadmin': 'fa-terminal', 'legal': 'fa-balance-scale' };
+      return icons[roleId] || 'fa-eye';
+    },
+    getRoleName(roleId) {
+      const names = { 'bod': 'Board of Directors', 'sysadmin': 'SysAdmin', 'legal': 'Legal / GRC' };
+      return names[roleId] || roleId;
+    },
     getDomainColor(domain) { return this.domainMeta[domain]?.color || '#64748b'; },
     getConceptColor(name) { return this.conceptMeta[name]?.color || '#64748b'; },
     getConceptIcon(name) { return this.conceptMeta[name]?.icon || 'fa-circle'; },
@@ -294,7 +326,8 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        const response = await fetch('/data/iso27001.json');
+        // Tambahkan timestamp untuk menghindari cache agresif browser pada file statis di public/
+        const response = await fetch(`/data/iso27001.json?t=${new Date().getTime()}`);
         if (response.ok) {
           const data = await response.json();
           this.controls = Array.isArray(data) ? data : data.controls || [];
@@ -448,6 +481,10 @@ export default {
 .iso-note,.iso-callout{padding:.9rem 1rem;border-radius:18px;border:1px solid var(--line)}
 .iso-note{background:rgba(238,245,245,.84);line-height:1.7}
 .iso-callout{background:rgba(255,255,255,.72);line-height:1.7}
+.role-translation-box {margin-bottom: 0.5rem; animation: highlight-role 0.5s ease;}
+.role-translation-box .iso-detail-label {color: #144e72;}
+.role-callout {background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600;}
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 .iso-evidence-list{margin:.15rem 0 0;padding-left:1rem;color:var(--muted);font-size:.84rem;line-height:1.7}
 .iso-evidence-list li{margin-bottom:.22rem}
 .iso-tile{width:100%;padding:.72rem .78rem;border-radius:16px;border:1px solid var(--line);background:#fff;text-align:left;cursor:pointer}
@@ -473,4 +510,27 @@ export default {
 @media (max-width:1599.98px){.iso-concept-board{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:991.98px){.iso-concept-board{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:767.98px){.iso-hero,.iso-panel{padding:1.2rem;border-radius:22px}.iso-selected{grid-template-columns:1fr}.iso-selected-count{text-align:left}.iso-concept-board{grid-template-columns:1fr}.iso-inspector-panel{min-height:auto;position:static}}
+
+[data-bs-theme="dark"] .iso-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
+[data-bs-theme="dark"] .iso-metric,[data-bs-theme="dark"] .iso-side,[data-bs-theme="dark"] .iso-panel,[data-bs-theme="dark"] .iso-mini,[data-bs-theme="dark"] .iso-side-card{background:rgba(30,41,59,0.5);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-tab{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-tab.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .iso-tab i,[data-bs-theme="dark"] .iso-icon{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-item,[data-bs-theme="dark"] .iso-tile,[data-bs-theme="dark"] .iso-pillar,[data-bs-theme="dark"] .iso-fn{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-item.active,[data-bs-theme="dark"] .iso-tile.active,[data-bs-theme="dark"] .iso-pillar.active,[data-bs-theme="dark"] .iso-fn.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .iso-item-code,[data-bs-theme="dark"] .iso-code,[data-bs-theme="dark"] .iso-item-name,[data-bs-theme="dark"] .iso-inspector-head strong,[data-bs-theme="dark"] .iso-mini strong{color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .iso-card{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-card.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .iso-chip,[data-bs-theme="dark"] .iso-pill,[data-bs-theme="dark"] .iso-meta span{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-track,[data-bs-theme="dark"] .iso-priority-track{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-callout{background:rgba(30,41,59,0.4)}
+[data-bs-theme="dark"] .role-callout {background: rgba(72, 202, 228, 0.1); border-color: rgba(72, 202, 228, 0.3); border-left-color: #48cae4;}
+[data-bs-theme="dark"] .role-translation-box .iso-detail-label {color: #48cae4;}
+[data-bs-theme="dark"] .iso-note{background:rgba(30,41,59,0.7);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .iso-ref{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .iso-empty{background:rgba(30,41,59,0.3);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .modal-shell{background:#1e293b;border:1px solid rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .modal-artifact-list li,[data-bs-theme="dark"] .modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
+[data-bs-theme="dark"] .modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
+[data-bs-theme="dark"] .modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
 </style>

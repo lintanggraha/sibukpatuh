@@ -20,7 +20,12 @@
       "Materi pelatihan kesadaran PDP"
     ],
     "reporting": "Dasar pemahaman untuk seluruh implementasi UU PDP",
-    "analogy": "UU PDP ibarat aturan main dalam komunitas - sebelum bisa bermain dengan benar, semua orang perlu memahami definisi dasar. Data Pribadi itu ibarat 'identitas' kita di dunia digital. Tanpa definisi yang jelas, susah untuk menerapkan aturan."
+    "analogy": "UU PDP ibarat aturan main dalam komunitas - sebelum bisa bermain dengan benar, semua orang perlu memahami definisi dasar. Data Pribadi itu ibarat 'identitas' kita di dunia digital. Tanpa definisi yang jelas, susah untuk menerapkan aturan.",
+    "roleTranslations": {
+      "sysadmin": "Mode SysAdmin: Enkripsi database pelanggan (at rest dan in transit) serta terapkan role-based access.",
+      "board": "Mode Board: Tunjuk Data Protection Officer (DPO) untuk memastikan perusahaan tidak didenda.",
+      "legal": "Mode Legal: Perbarui Privacy Policy dan pastikan ada mekanisme persetujuan (consent) yang sah."
+    }
   },
   {
     "id": "II.01",

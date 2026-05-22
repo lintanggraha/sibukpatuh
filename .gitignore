@@ -4,3 +4,10 @@ dist/
 .env.local
 *.log
 .scannerwork/
+
+.vercel
+.env*.local
+
+# Utility scripts & extracted data
+*.py
+*_extracted.txt

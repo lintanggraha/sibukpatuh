@@ -103,6 +103,16 @@
               <div class="sej-inspector-head"><small>Vulnerability Inspector</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kerentanan untuk membaca detail.' }}</span></div>
               <div class="sej-inspector-body">
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? activeRequirement.chapter_title : '-' }}</span><span>{{ activeRequirement ? activeRequirement.cadence || '-' : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' Referensi' : '0 Referensi' }}</span></div>
+
+                <div v-if="activeRole !== 'default' && activeRequirement && activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]" class="role-translation-box">
+                  <span class="sej-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="sej-callout role-callout mt-2">
+                    {{ activeRequirement.roleTranslations[activeRole] }}
+                  </div>
+                </div>
+
                 <div class="sej-callout"><span class="sej-label">Ringkasan Ancaman</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih kerentanan untuk membaca definisi risikonya.' }}</div></div>
                 <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi Kehidupan Nyata</span><div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Desain & Kode (Mitigasi)</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada panduan pencegahan tambahan.'])" :key="idx">{{ item }}</li></ul></div>
@@ -222,6 +232,9 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+import { useFrameworkStore } from "../stores/frameworkStore";
+
 export default {
   name: 'OwaspTop10',
   data() {
@@ -267,6 +280,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalChapters() {
       const chapters = this.requirements.map(r => r.chapter).filter(Boolean);
       return new Set(chapters).size;
@@ -314,6 +328,18 @@ export default {
     activeRequirement() { return this.requirements.find(r => r.id === this.activeRequirementId) || null; },
   },
   methods: {
+    getRoleIcon(roleId) {
+      if (roleId === "sysadmin") return "fa-user-shield";
+      if (roleId === "legal") return "fa-balance-scale";
+      if (roleId === "board") return "fa-user-tie";
+      return "fa-user-tag";
+    },
+    getRoleName(roleId) {
+      if (roleId === "sysadmin") return "SysAdmin";
+      if (roleId === "legal") return "Legal & Compliance";
+      if (roleId === "board") return "Board of Directors";
+      return roleId;
+    },
     getPillarColor(p) { return this.pillarMeta[p]?.color || '#144e72'; },
     getPillarLabel(p) { return this.pillarMeta[p]?.label || p || '-'; },
     getChapterLabel(c) { return (c || '-') + '. ' + (this.chapterMeta[c]?.label || ''); },
@@ -360,8 +386,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch('/data/owasp_top10_reqs.json'),
-          fetch('/data/owasp_top10_apps.json')
+          fetch(`/data/owasp_top10_reqs.json?t=${new Date().getTime()}`),
+          fetch(`/data/owasp_top10_apps.json?t=${new Date().getTime()}`)
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();
@@ -391,6 +417,13 @@ export default {
 </script>
 
 <style scoped>
+.role-translation-box { margin-bottom: 0.85rem; animation: highlight-role 0.5s ease; }
+.role-translation-box .sej-label { color: #144e72; }
+[data-bs-theme="dark"] .role-translation-box .sej-label { color: #48cae4; }
+.role-callout { background: linear-gradient(135deg, rgba(20, 78, 114, 0.08) 0%, rgba(72, 202, 228, 0.08) 100%); border-color: rgba(20, 78, 114, 0.2); border-left: 4px solid #144e72; font-weight: 600; color: #144e72; }
+[data-bs-theme="dark"] .role-callout { background: linear-gradient(135deg, rgba(72, 202, 228, 0.1) 0%, rgba(15, 118, 110, 0.1) 100%); border-color: rgba(72, 202, 228, 0.2); border-left: 4px solid #48cae4; color: #e2e8f0; }
+@keyframes highlight-role { from { transform: translateY(-5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 .sej-page{--ink:#14263b;--muted:#5c6776;--line:rgba(20,38,59,.1);--shell:linear-gradient(180deg,#f6efe3 0%,#edf5f6 100%);color:var(--ink);padding:.25rem;border-radius:32px;background:var(--shell)}
 .sej-shell{display:grid;gap:1rem}
 .sej-hero{display:grid;grid-template-columns:1.55fr .92fr;gap:1.2rem;align-items:stretch;min-height:368px;padding:1.45rem;border-radius:28px;overflow:hidden;position:relative;background:radial-gradient(circle at top right,rgba(248,214,161,.88),transparent 30%),radial-gradient(circle at bottom left,rgba(156,210,219,.7),transparent 28%),linear-gradient(135deg,#132a43 0%,#1f5f78 46%,#f2debb 100%);box-shadow:0 20px 44px rgba(15,23,42,.09)}
@@ -529,4 +562,25 @@ export default {
 @media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}.modal-shell{grid-template-columns:1fr}.modal-sidebar{flex-direction:row;padding:1rem;gap:1rem}.modal-sidebar-icon{width:2.5rem;height:2.5rem;margin-bottom:0}.modal-close{top:.5rem;right:.5rem}.modal-dialog{max-width:100%}}
+
+[data-bs-theme="dark"] .sej-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
+[data-bs-theme="dark"] .sej-metric,[data-bs-theme="dark"] .sej-side,[data-bs-theme="dark"] .sej-panel,[data-bs-theme="dark"] .sej-mini,[data-bs-theme="dark"] .sej-side-card{background:rgba(30,41,59,0.5);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-tab{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-tab.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .sej-tab i,[data-bs-theme="dark"] .sej-icon{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-item,[data-bs-theme="dark"] .sej-tile,[data-bs-theme="dark"] .sej-pillar,[data-bs-theme="dark"] .sej-fn{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-item.active,[data-bs-theme="dark"] .sej-tile.active,[data-bs-theme="dark"] .sej-pillar.active,[data-bs-theme="dark"] .sej-fn.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .sej-item-code,[data-bs-theme="dark"] .sej-code,[data-bs-theme="dark"] .sej-item-name,[data-bs-theme="dark"] .sej-inspector-head strong,[data-bs-theme="dark"] .sej-mini strong{color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .sej-card{background:rgba(30,41,59,0.6);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-card.active{background:rgba(30,41,59,0.9);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .sej-chip,[data-bs-theme="dark"] .sej-pill,[data-bs-theme="dark"] .sej-meta span{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-track,[data-bs-theme="dark"] .sej-priority-track{background:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-callout{background:rgba(30,41,59,0.4)}
+[data-bs-theme="dark"] .sej-note{background:rgba(30,41,59,0.7);border-color:var(--accent,#48cae4)}
+[data-bs-theme="dark"] .sej-ref{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .sej-empty{background:rgba(30,41,59,0.3);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .modal-shell{background:#1e293b;border:1px solid rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .modal-artifact-list li,[data-bs-theme="dark"] .modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
+[data-bs-theme="dark"] .modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
+[data-bs-theme="dark"] .modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
 </style>
