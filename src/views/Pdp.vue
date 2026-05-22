@@ -412,7 +412,7 @@ export default {
 .loading-spinner p,.error-message p{margin-top:.5rem;color:var(--muted)}
 
 @media (max-width:1440px){.sej-hero{min-height:280px;padding:1.25rem}.sej-title{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:.8rem 0 .5rem}.sej-metric{min-height:80px;padding:.55rem .65rem}.sej-metric strong{font-size:1.35rem}.sej-list,.sej-inspector{max-height:520px}}
-@media (max-width:1399.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
+@media (max-width:991.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards,.sej-grid{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}}
 
