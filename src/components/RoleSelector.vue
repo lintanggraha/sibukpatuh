@@ -6,9 +6,10 @@
       :aria-expanded="isDropdownOpen"
       title="Ubah Kacamata Divisi"
     >
-      <i :class="`fas ${currentRoleIcon}`" class="role-icon"></i>
-      <span class="role-label d-none d-lg-inline">View as: {{ currentRoleLabel }}</span>
-      <i class="fas fa-chevron-down role-caret"></i>
+      <div class="eyes-icon">
+        <i class="fas fa-eye"></i>
+        <i class="fas fa-eye"></i>
+      </div>
     </button>
 
     <div class="role-dropdown" :class="{ 'show': isDropdownOpen }">
@@ -160,14 +161,14 @@ export default {
   font-size: 1rem;
 }
 
-.role-caret {
-  font-size: 0.7rem;
-  color: var(--muted);
-  transition: transform 0.2s ease;
+.eyes-icon {
+  display: flex;
+  gap: 2px;
+  color: var(--active);
+  font-size: 1.1rem;
 }
-
-.role-selector.is-active .role-caret {
-  transform: rotate(180deg);
+.role-selector.is-active .eyes-icon {
+  color: #fff;
 }
 
 .role-dropdown {
@@ -317,16 +318,12 @@ export default {
 
 @media (max-width: 991px) {
   .role-selector {
-    width: 100%;
+    width: auto;
   }
 
   .role-toggle {
-    width: 100%;
+    width: auto;
     justify-content: center;
-  }
-
-  .role-label {
-    display: none;
   }
 }
 </style>

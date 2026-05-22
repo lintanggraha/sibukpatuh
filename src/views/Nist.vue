@@ -103,12 +103,12 @@
               <div class="nst-inspector-body">
                 <div class="nst-meta"><span>{{ activeControl ? getFunctionLabel(activeControl.function) : '-' }}</span><span>{{ activeControl ? activeControl.category : '-' }}</span><span>{{ activeControl ? (activeControl.sp80053 || []).length + ' referensi' : '0 referensi' }}</span></div>
 
-                <div v-if="activeRole !== 'default' && activeControl && activeControl.roleTranslations && activeControl.roleTranslations[activeRole]" class="role-translation-box">
+                <div v-if="activeRole !== 'default' && activeControl" class="role-translation-box">
                   <span class="nst-label">
                     <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
                   </span>
                   <div class="nst-callout role-callout mt-2">
-                    {{ activeControl.roleTranslations[activeRole] }}
+                    {{ (activeControl.roleTranslations && activeControl.roleTranslations[activeRole]) ? activeControl.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini. Silakan rujuk panduan utama.' }}
                   </div>
                 </div>
 

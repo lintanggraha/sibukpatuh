@@ -146,6 +146,14 @@
             <article class="sej-panel sej-inspector">
               <div class="sej-inspector-head"><small>Requirement Inspector</small><strong>{{ activeRequirement?.id || '-' }}</strong><span>{{ activeRequirement?.title || 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="sej-inspector-body">
+                <div v-if="activeRole !== 'default' && activeRequirement" class="role-translation-box">
+                  <span class="sej-label">
+                    <i :class="getRoleIcon(activeRole)" class="me-1"></i> Terjemahan Divisi ({{ getRoleName(activeRole) }})
+                  </span>
+                  <div class="sej-callout role-callout mt-2">
+                    {{ (activeRequirement.roleTranslations && activeRequirement.roleTranslations[activeRole]) ? activeRequirement.roleTranslations[activeRole] : 'Belum ada panduan spesifik untuk divisi ini pada ketentuan ini. Silakan rujuk panduan utama.' }}
+                  </div>
+                </div>
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement?.cadence || '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' rujukan' : '0 rujukan' }}</span></div>
                 <div class="sej-callout"><span class="sej-label">Ringkasan</span><div class="mt-2">{{ activeRequirement?.summary || '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Implementasi</span><ul class="sej-plain"><li v-for="(item, idx) in activeRequirement?.focus || []" :key="idx">{{ item }}</li></ul></div>
@@ -237,6 +245,9 @@
 </template>
 
 <script>
+import { mapState } from 'pinia';
+import { useFrameworkStore } from '../stores/frameworkStore';
+
 export default {
   name: 'Padk',
   data() {
@@ -290,6 +301,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(useFrameworkStore, ["activeRole"]),
     totalRequirements() { return this.requirements.length; },
     totalAppendices() { return this.appendices.length; },
     totalChapters() { return new Set(this.requirements.map(item => item.chapter).filter(Boolean)).size; },
@@ -334,6 +346,16 @@ export default {
     },
   },
   methods: {
+    getRoleIcon(roleId) {
+      const store = useFrameworkStore();
+      const role = store.roles.find((r) => r.id === roleId);
+      return role ? 'fas ' + role.icon : 'fas fa-eye';
+    },
+    getRoleName(roleId) {
+      const store = useFrameworkStore();
+      const role = store.roles.find((r) => r.id === roleId);
+      return role ? role.label : roleId;
+    },
     getPillarColor(key) { return this.pillarMeta[key]?.color || '#144e72'; },
     getPillarLabel(key) { return this.pillarMeta[key]?.label || key || '-'; },
     getChapterLabel(key) { return `${key || '-'}${this.chapterMeta[key] ? `. ${this.chapterMeta[key].label}` : ''}`; },
