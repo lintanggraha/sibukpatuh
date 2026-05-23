@@ -150,41 +150,41 @@
   </div>
 
   <!-- Modal SP 800-53 -->
-  <div v-if="showSp800Modal" class="modal-overlay" @click.self="showSp800Modal = false">
-    <div class="modal-dialog">
-      <div class="modal-shell">
-        <div class="modal-sidebar" style="background: linear-gradient(180deg, #144e72 0%, rgba(20,78,114,.7) 100%)">
-          <button type="button" class="modal-close" @click="showSp800Modal = false" aria-label="Close">
+  <div v-if="showSp800Modal" class="sej-overlay" @click.self="showSp800Modal = false">
+    <div class="sej-modal-dialog">
+      <div class="sej-modal-shell">
+        <div class="sej-modal-sidebar" style="background: linear-gradient(180deg, #144e72 0%, rgba(20,78,114,.7) 100%)">
+          <button type="button" class="sej-modal-close" @click="showSp800Modal = false" aria-label="Close">
             <i class="fas fa-times"></i>
           </button>
-          <div class="modal-sidebar-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="modal-sidebar-id">{{ selectedSp800?.id || '-' }}</div>
-          <div class="modal-sidebar-type">{{ selectedSp800?.family || '' }}</div>
+          <div class="sej-modal-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="sej-modal-id">{{ selectedSp800?.id || '-' }}</div>
+          <div class="sej-modal-type">{{ selectedSp800?.family || '' }}</div>
         </div>
-        <div class="modal-main">
-          <div class="modal-header">
-            <h4 class="modal-title">{{ selectedSp800?.family_name || 'Detail SP 800-53' }}</h4>
+        <div class="sej-modal-main">
+          <div class="sej-modal-header">
+            <h4 class="sej-modal-title">{{ selectedSp800?.family_name || 'Detail SP 800-53' }}</h4>
           </div>
-          <div class="modal-body">
-            <div class="modal-section">
-              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-info-circle"></i><span>Deskripsi Kontrol</span></div>
-              <div class="modal-section-content"><p class="modal-summary">{{ selectedSp800?.description || '-' }}</p></div>
+          <div class="sej-modal-body">
+            <div class="sej-modal-section">
+              <div class="sej-modal-section-header" style="color: #144e72"><i class="fas fa-info-circle"></i><span>Deskripsi Kontrol</span></div>
+              <div class="modal-section-content"><p class="sej-modal-summary">{{ selectedSp800?.description || '-' }}</p></div>
             </div>
-            <div class="modal-section">
-              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-list-check"></i><span>Contoh Bukti Audit</span></div>
+            <div class="sej-modal-section">
+              <div class="sej-modal-section-header" style="color: #144e72"><i class="fas fa-list-check"></i><span>Contoh Bukti Audit</span></div>
               <div class="modal-section-content">
-                <ul class="modal-artifact-list">
+                <ul class="sej-modal-artifact-list">
                   <li v-for="(item, idx) in (selectedSp800?.bukti_audit && selectedSp800.bukti_audit.length ? selectedSp800.bukti_audit : [])" :key="idx"><i class="fas fa-check-circle"></i><span>{{ item }}</span></li>
-                  <li v-if="!selectedSp800?.bukti_audit || !selectedSp800.bukti_audit.length" class="modal-empty">Tidak ada contoh bukti audit.</li>
+                  <li v-if="!selectedSp800?.bukti_audit || !selectedSp800.bukti_audit.length" class="sej-modal-empty">Tidak ada contoh bukti audit.</li>
                 </ul>
               </div>
             </div>
-            <div class="modal-section">
-              <div class="modal-section-header" style="color: #144e72"><i class="fas fa-link"></i><span>Referensi NIST CSF</span></div>
+            <div class="sej-modal-section">
+              <div class="sej-modal-section-header" style="color: #144e72"><i class="fas fa-link"></i><span>Referensi NIST CSF</span></div>
               <div class="modal-section-content">
-                <div class="modal-requirements">
+                <div class="sej-modal-requirements">
                   <span v-for="ref in (selectedSp800?.nist_references || [])" :key="ref" class="modal-req-badge">{{ ref }}</span>
-                  <div v-if="!selectedSp800?.nist_references || !selectedSp800.nist_references.length" class="modal-empty">Belum ada referensi NIST CSF yang ditautkan.</div>
+                  <div v-if="!selectedSp800?.nist_references || !selectedSp800.nist_references.length" class="sej-modal-empty">Belum ada referensi NIST CSF yang ditautkan.</div>
                 </div>
               </div>
             </div>
@@ -545,8 +545,8 @@ export default {
 .modal-req-badge{display:inline-flex;align-items:center;padding:.35rem .65rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace}
 
 /* Shared Modal Overlay Styles */
-.modal-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(15,23,42,.56)}.modal-dialog{width:100%;max-width:780px}.modal-shell{display:flex;flex-direction:column;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.modal-sidebar-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.modal-sidebar-id{font-size:1.1rem;font-weight:800;margin-bottom:0}.modal-main{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden}.modal-header{flex-shrink:0;padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}.modal-body{flex:1;padding:1.25rem 1.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}.modal-section{margin-bottom:1.25rem}.modal-section-header{display:flex;gap:.55rem;padding-bottom:.5rem;margin-bottom:.65rem;border-bottom:1px solid var(--line)}.modal-scope{display:inline-block;margin-bottom:.55rem;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700}.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}.modal-artifact-list{display:grid;gap:.45rem;list-style:none;margin:0;padding:0}.modal-artifact-list li{display:flex;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem}.modal-artifact-list i{margin-top:.18rem;color:#0f766e}.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}.modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.85);color:var(--ink);font-size:.76rem;font-weight:700}.modal-empty{padding:.9rem 1rem;border:1px dashed rgba(20,38,59,.18);border-radius:12px;color:var(--muted)}
-[data-bs-theme="dark"] .modal-empty{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)}
+.sej-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(15,23,42,.56)}.sej-modal-dialog{width:100%;max-width:780px}.sej-modal-shell{display:flex;flex-direction:column;height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}[data-bs-theme=dark] .sej-modal-shell{background:#1e293b;color:#f8fafc}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-close:hover{background:rgba(255,255,255,.35)}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem}.sej-modal-id{font-size:1.1rem;font-weight:800}.sej-modal-main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0}.sej-modal-header{flex-shrink:0;padding:1.15rem 1.5rem 1rem;border-bottom:1px solid rgba(0,0,0,.08)}.sej-modal-title{display:block;color:#144e72;font-size:1rem;font-weight:800;margin:0}[data-bs-theme=dark] .sej-modal-title{color:#7dd3fc}.sej-modal-body{flex:1;padding:1.25rem 1.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}.sej-modal-section{margin-bottom:1.25rem}.sej-modal-section-header{display:flex;gap:.55rem;padding-bottom:.5rem;margin-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.08);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.sej-modal-scope{display:inline-block;margin-bottom:.55rem;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700}.sej-modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}.sej-modal-artifact-list{display:grid;gap:.45rem;list-style:none;margin:0;padding:0}.sej-modal-artifact-list li{display:flex;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem}[data-bs-theme=dark] .sej-modal-artifact-list li{background:rgba(255,255,255,.05)}.sej-modal-artifact-list i{margin-top:.18rem;color:#0f766e;flex-shrink:0}.sej-modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}.sej-modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border:1px solid rgba(0,0,0,.12);border-radius:999px;background:rgba(255,255,255,.85);color:#1e293b;font-size:.76rem;font-weight:700;cursor:pointer;transition:all .15s ease}.sej-modal-req-btn:hover{background:#144e72;color:#fff;border-color:#144e72}.sej-modal-empty{padding:.9rem 1rem;border:1px dashed rgba(20,38,59,.18);border-radius:12px;color:var(--muted);font-size:.84rem}.sej-fade-enter-active,.sej-fade-leave-active{transition:opacity .2s ease,transform .2s ease}.sej-fade-enter-from,.sej-fade-leave-to{opacity:0;transform:scale(.96)}
+[data-bs-theme="dark"] .sej-modal-empty{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)}
 
 /* Modal Transitions */
 .modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}

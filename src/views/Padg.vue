@@ -155,51 +155,51 @@
   </div>
 
   <!-- Modal Appendix -->
-  <Transition name="modal-fade">
-    <div v-if="showAppendixModal" class="modal-overlay" @click.self="showAppendixModal = false">
+  <Transition name="sej-fade">
+    <div v-if="showAppendixModal" class="sej-overlay" @click.self="showAppendixModal = false">
       <Transition name="modal-slide">
-        <div class="modal-dialog" v-if="showAppendixModal">
-          <div class="modal-shell">
-            <div class="modal-sidebar" :style="{ background: `linear-gradient(180deg, ${getAppendixColor(selectedAppendix?.type)} 0%, ${getAppendixColor(selectedAppendix?.type, 0.7)} 100%)` }">
-              <button type="button" class="modal-close" @click="showAppendixModal = false" aria-label="Close">
+        <div class="sej-modal-dialog" v-if="showAppendixModal">
+          <div class="sej-modal-shell">
+            <div class="sej-modal-sidebar" :style="{ background: `linear-gradient(180deg, ${getAppendixColor(selectedAppendix?.type)} 0%, ${getAppendixColor(selectedAppendix?.type, 0.7)} 100%)` }">
+              <button type="button" class="sej-modal-close" @click="showAppendixModal = false" aria-label="Close">
                 <i class="fas fa-times"></i>
               </button>
-              <div class="modal-sidebar-icon">
+              <div class="sej-modal-icon">
                 <i class="fas fa-file-alt"></i>
               </div>
-              <div class="modal-sidebar-id">{{ selectedAppendix?.id || '-' }}</div>
-              <div class="modal-sidebar-type">{{ selectedAppendix?.type || '' }}</div>
+              <div class="sej-modal-id">{{ selectedAppendix?.id || '-' }}</div>
+              <div class="sej-modal-type">{{ selectedAppendix?.type || '' }}</div>
             </div>
-            <div class="modal-main">
-              <div class="modal-header">
-                <h4 class="modal-title">{{ selectedAppendix?.title || 'Detail Lampiran' }}</h4>
+            <div class="sej-modal-main">
+              <div class="sej-modal-header">
+                <h4 class="sej-modal-title">{{ selectedAppendix?.title || 'Detail Lampiran' }}</h4>
               </div>
-              <div class="modal-body">
+              <div class="sej-modal-body">
                 <!-- Ringkasan Section -->
-                <div class="modal-section">
-                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                <div class="sej-modal-section">
+                  <div class="sej-modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
                     <i class="fas fa-info-circle"></i>
                     <span>Ringkasan</span>
                   </div>
                   <div class="modal-section-content">
-                    <div class="modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
-                    <p class="modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
+                    <div class="sej-modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
+                    <p class="sej-modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
                   </div>
                 </div>
 
                 <!-- Artefak Section -->
-                <div class="modal-section">
-                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                <div class="sej-modal-section">
+                  <div class="sej-modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
                     <i class="fas fa-list-check"></i>
                     <span>Isi / Elemen Utama</span>
                   </div>
                   <div class="modal-section-content">
-                    <ul class="modal-artifact-list">
+                    <ul class="sej-modal-artifact-list">
                       <li v-for="(item, idx) in (selectedAppendix?.contains && selectedAppendix.contains.length ? selectedAppendix.contains : [])" :key="idx">
                         <i class="fas fa-check-circle"></i>
                         <span>{{ item }}</span>
                       </li>
-                      <li v-if="!selectedAppendix?.contains || !selectedAppendix.contains.length" class="modal-empty">
+                      <li v-if="!selectedAppendix?.contains || !selectedAppendix.contains.length" class="sej-modal-empty">
                         Tidak ada artefak yang dipetakan.
                       </li>
                     </ul>
@@ -207,18 +207,18 @@
                 </div>
 
                 <!-- Requirements Section -->
-                <div class="modal-section">
-                  <div class="modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
+                <div class="sej-modal-section">
+                  <div class="sej-modal-section-header" :style="{ color: getAppendixColor(selectedAppendix?.type) }">
                     <i class="fas fa-link"></i>
                     <span>Kewajiban Terkait</span>
                   </div>
                   <div class="modal-section-content">
-                    <div class="modal-requirements">
-                      <button v-for="reqId in (selectedAppendix?.used_by || [])" :key="reqId" type="button" class="modal-req-btn" @click="jumpToRequirement(reqId)">
+                    <div class="sej-modal-requirements">
+                      <button v-for="reqId in (selectedAppendix?.used_by || [])" :key="reqId" type="button" class="sej-modal-req-btn" @click="jumpToRequirement(reqId)">
                         <i class="fas fa-arrow-right"></i>
                         <span>{{ reqId }}</span>
                       </button>
-                      <div v-if="!selectedAppendix?.used_by || !selectedAppendix.used_by.length" class="modal-empty">
+                      <div v-if="!selectedAppendix?.used_by || !selectedAppendix.used_by.length" class="sej-modal-empty">
                         Belum ada kewajiban yang dipetakan ke lampiran ini.
                       </div>
                     </div>
@@ -504,7 +504,7 @@ export default {
 .padg-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
 /* Modal Styles */
-.modal-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(15,23,42,.56)}.modal-dialog{width:100%;max-width:780px}.modal-shell{display:flex;flex-direction:column;height:85vh;max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.modal-sidebar-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.modal-sidebar-id{font-size:1.1rem;font-weight:800;margin-bottom:0}.modal-main{flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden}.modal-header{flex-shrink:0;padding:1.15rem 1.5rem 1rem;border-bottom:1px solid var(--line)}.modal-body{flex:1;padding:1.25rem 1.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}.modal-section{margin-bottom:1.25rem}.modal-section-header{display:flex;gap:.55rem;padding-bottom:.5rem;margin-bottom:.65rem;border-bottom:1px solid var(--line)}.modal-scope{display:inline-block;margin-bottom:.55rem;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700}.modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}.modal-artifact-list{display:grid;gap:.45rem;list-style:none;margin:0;padding:0}.modal-artifact-list li{display:flex;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem}.modal-artifact-list i{margin-top:.18rem;color:#0f766e}.modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}.modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.85);color:var(--ink);font-size:.76rem;font-weight:700}.modal-empty{padding:.9rem 1rem;border:1px dashed rgba(20,38,59,.18);border-radius:12px;color:var(--muted)}
+.sej-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(15,23,42,.56)}.sej-modal-dialog{width:100%;max-width:780px}.sej-modal-shell{display:flex;flex-direction:column;height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}[data-bs-theme=dark] .sej-modal-shell{background:#1e293b;color:#f8fafc}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-close:hover{background:rgba(255,255,255,.35)}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem}.sej-modal-id{font-size:1.1rem;font-weight:800}.sej-modal-main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0}.sej-modal-header{flex-shrink:0;padding:1.15rem 1.5rem 1rem;border-bottom:1px solid rgba(0,0,0,.08)}.sej-modal-title{display:block;color:#144e72;font-size:1rem;font-weight:800;margin:0}[data-bs-theme=dark] .sej-modal-title{color:#7dd3fc}.sej-modal-body{flex:1;padding:1.25rem 1.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}.sej-modal-section{margin-bottom:1.25rem}.sej-modal-section-header{display:flex;gap:.55rem;padding-bottom:.5rem;margin-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.08);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.sej-modal-scope{display:inline-block;margin-bottom:.55rem;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700}.sej-modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}.sej-modal-artifact-list{display:grid;gap:.45rem;list-style:none;margin:0;padding:0}.sej-modal-artifact-list li{display:flex;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem}[data-bs-theme=dark] .sej-modal-artifact-list li{background:rgba(255,255,255,.05)}.sej-modal-artifact-list i{margin-top:.18rem;color:#0f766e;flex-shrink:0}.sej-modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}.sej-modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border:1px solid rgba(0,0,0,.12);border-radius:999px;background:rgba(255,255,255,.85);color:#1e293b;font-size:.76rem;font-weight:700;cursor:pointer;transition:all .15s ease}.sej-modal-req-btn:hover{background:#144e72;color:#fff;border-color:#144e72}.sej-modal-empty{padding:.9rem 1rem;border:1px dashed rgba(20,38,59,.18);border-radius:12px;color:var(--muted);font-size:.84rem}.sej-fade-enter-active,.sej-fade-leave-active{transition:opacity .2s ease,transform .2s ease}.sej-fade-enter-from,.sej-fade-leave-to{opacity:0;transform:scale(.96)}
 
 /* Modal Transitions */
 .modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}
@@ -517,7 +517,7 @@ export default {
 @media (max-height:850px) and (min-width:1024px){.padg-hero { min-height: 240px; padding: 1.15rem; } .padg-metrics { margin-top: 0.6rem; } .padg-list, .padg-inspector { max-height: calc(100vh - 280px); } .padg-inspector-body { padding-top: 0.5rem; }}
 @media (max-width:991.98px){.padg-workspace,.padg-refspace{grid-template-columns:1fr}.padg-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.padg-hero,.padg-metric,.padg-side{min-height:auto}.padg-hero,.padg-nav,.padg-grid.two,.padg-refspace,.padg-metrics,.padg-mini-row,.padg-cards{grid-template-columns:1fr}.padg-bar,.padg-hotspot,.padg-family{grid-template-columns:1fr}}
-@media (max-width:767.98px){.padg-hero,.padg-panel{padding:1.2rem;border-radius:22px}.padg-pillar-grid{grid-template-columns:1fr}.modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.modal-sidebar-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.modal-dialog{max-width:100%}}
+@media (max-width:767.98px){.padg-hero,.padg-panel{padding:1.2rem;border-radius:22px}.padg-pillar-grid{grid-template-columns:1fr}.sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-dialog{max-width:100%}}
 
 [data-bs-theme="dark"] .padg-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
 [data-bs-theme="dark"] .padg-metric,[data-bs-theme="dark"] .padg-side,[data-bs-theme="dark"] .padg-panel,[data-bs-theme="dark"] .padg-mini,[data-bs-theme="dark"] .padg-side-card{background:rgba(30,41,59,0.5);border-color:rgba(255,255,255,0.1)}
@@ -535,8 +535,8 @@ export default {
 [data-bs-theme="dark"] .padg-note{background:rgba(30,41,59,0.7);border-color:var(--accent,#48cae4)}
 [data-bs-theme="dark"] .padg-ref{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1)}
 [data-bs-theme="dark"] .padg-empty{background:rgba(30,41,59,0.3);border-color:rgba(255,255,255,0.1)}
-[data-bs-theme="dark"] .modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
-[data-bs-theme="dark"] .modal-artifact-list li,[data-bs-theme="dark"] .modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
-[data-bs-theme="dark"] .modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
-[data-bs-theme="dark"] .modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
+[data-bs-theme="dark"] .sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
+[data-bs-theme="dark"] .sej-modal-artifact-list li,[data-bs-theme="dark"] .sej-modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
+[data-bs-theme="dark"] .sej-modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
+[data-bs-theme="dark"] .sej-modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
 </style>
