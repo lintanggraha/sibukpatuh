@@ -8,7 +8,6 @@
           Memahami struktur dan konsep acuan keamanan siber (ISO, NIST, COBIT) dan regulasi nasional (OJK, BI) dalam satu antarmuka terintegrasi.
         </p>
       </div>
-
     </section>
 
     <section class="frx-disclaimer" aria-label="Disclaimer edukatif">
@@ -22,7 +21,47 @@
       </div>
     </section>
 
-    <section class="frx-card-grid">
+    <!-- Deskripsi Edukatif (penting untuk SEO & AdSense) -->
+    <section class="frx-description" aria-label="Deskripsi platform">
+      <div class="frx-description-inner">
+        <h2 class="frx-desc-title">Apa itu SibukPatuh?</h2>
+        <p class="frx-desc-text">
+          <strong>SibukPatuh</strong> adalah platform referensi edukatif berbahasa Indonesia yang dirancang untuk membantu praktisi IT, auditor, <em>compliance officer</em>, dan pelajar dalam memahami berbagai framework keamanan siber dan regulasi teknologi informasi. Platform ini menyajikan ringkasan yang terstruktur, mudah dipahami, dan dapat digunakan sebagai titik awal eksplorasi.
+        </p>
+        <div class="frx-desc-grid">
+          <div class="frx-desc-item">
+            <span class="frx-desc-icon"><i class="fas fa-book-open"></i></span>
+            <div>
+              <h3 class="frx-desc-item-title">Framework Internasional</h3>
+              <p class="frx-desc-item-text">Pelajari ISO 27001:2022, NIST CSF 2.0, dan COBIT 2019 melalui ringkasan kontrol, domain, dan panduan pembacaan struktural dalam bahasa Indonesia.</p>
+            </div>
+          </div>
+          <div class="frx-desc-item">
+            <span class="frx-desc-icon"><i class="fas fa-landmark"></i></span>
+            <div>
+              <h3 class="frx-desc-item-title">Regulasi Nasional</h3>
+              <p class="frx-desc-item-text">Navigasi kewajiban SEOJK 29/2022, PBI 02/2024, PADG 32/2025, PADK 1 Tahun 2026, dan UU PDP 27/2022 dengan peta kewajiban yang terstruktur.</p>
+            </div>
+          </div>
+          <div class="frx-desc-item">
+            <span class="frx-desc-icon"><i class="fas fa-tools"></i></span>
+            <div>
+              <h3 class="frx-desc-item-title">Alat Bantu Kepatuhan</h3>
+              <p class="frx-desc-item-text">Gunakan Cross-Mapping, Gap Analysis, Checklist Tools, dan Compliance Simulator untuk mengevaluasi dan mensimulasikan tingkat kepatuhan organisasi Anda.</p>
+            </div>
+          </div>
+          <div class="frx-desc-item">
+            <span class="frx-desc-icon"><i class="fas fa-shield-alt"></i></span>
+            <div>
+              <h3 class="frx-desc-item-title">Intelligence Center</h3>
+              <p class="frx-desc-item-text">Monitor ancaman siber terkini melalui threat feed OTX AlienVault, daftar CISA KEV, dan analisis CVE berbasis AI untuk konteks regulasi Indonesia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="frx-card-grid" aria-label="Daftar framework dan regulasi">
       <article v-for="fw in frameworks" :key="fw.routeName" class="frx-card" :style="{ '--accent': fw.accent }">
         <router-link :to="{ name: fw.routeName }" class="frx-card-link">
           <div class="frx-card-top">
@@ -45,6 +84,29 @@
 <script>
 export default {
   name: "FrameworkIndex",
+  head() {
+    return {
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "SibukPatuh",
+            "url": "https://sibukpatuh.id",
+            "description": "Platform edukasi framework keamanan siber dan regulasi TI di Indonesia.",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "IDR"
+            }
+          }
+        }
+      ]
+    };
+  },
   data() {
     return {
       frameworks: [
@@ -257,7 +319,19 @@ export default {
 .frx-disclaimer-icon{font-size:1rem;color:#f59e0b;flex-shrink:0}
 .frx-disclaimer-copy p{margin:0;color:#6b4f3a;font-size:.78rem;line-height:1.6}
 .frx-disclaimer-copy p strong{color:#92400e;font-weight:800;display:inline}
+
+/* Deskripsi Edukatif */
+.frx-description{padding:1.25rem;border-radius:20px;background:rgba(255,255,255,0.65);border:1px solid rgba(0,0,0,0.04);backdrop-filter:blur(10px)}
+.frx-desc-title{font-size:1rem;font-weight:900;color:#0f172a;margin:0 0 .6rem;letter-spacing:-0.2px}
+.frx-desc-text{font-size:.82rem;color:#475569;line-height:1.7;margin:0 0 1rem}
+.frx-desc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+.frx-desc-item{display:flex;align-items:flex-start;gap:.6rem;padding:.75rem;border-radius:14px;background:rgba(15,23,42,0.02);border:1px solid rgba(15,23,42,0.04)}
+.frx-desc-icon{width:1.8rem;height:1.8rem;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:linear-gradient(135deg,#0f172a,#334155);color:#fff;font-size:.7rem;flex-shrink:0;margin-top:2px}
+.frx-desc-item-title{margin:0 0 .2rem;font-size:.8rem;font-weight:800;color:#1e293b}
+.frx-desc-item-text{margin:0;font-size:.73rem;color:#64748b;line-height:1.55}
+
 .frx-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
+
 .frx-card{border-radius:18px;border:1px solid rgba(0,0,0,0.05);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.01);transition:all .2s ease}
 .frx-card:hover{box-shadow:0 8px 16px rgba(0,0,0,0.04);transform:translateY(-2px);border-color:rgba(0,0,0,0.1)}
 .frx-card-link{display:block;padding:1rem;text-decoration:none;color:inherit}
@@ -282,5 +356,7 @@ export default {
   .frx-card-grid { grid-template-columns: 1fr; }
   .frx-hero { padding: 1.25rem; }
   .frx-disclaimer { padding: 0.75rem; }
+  .frx-desc-grid { grid-template-columns: 1fr; }
+  .frx-description { padding: 1rem; }
 }
 </style>

@@ -1,4 +1,21 @@
+# SibukPatuh - robots.txt
+# https://sibukpatuh.net
+
 User-agent: *
 Allow: /
 
+# Izinkan semua crawler utama
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap
 Sitemap: https://sibukpatuh.net/sitemap.xml
