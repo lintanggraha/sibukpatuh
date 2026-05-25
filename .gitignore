@@ -11,3 +11,5 @@ dist/
 # Utility scripts & extracted data
 *.py
 *_extracted.txt
+scratch/
+
