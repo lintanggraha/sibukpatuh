@@ -13,7 +13,7 @@
 
 **Konten edukatif — bukan pengganti standar resmi:**
 
-- Data untuk **ISO 27001:2022**, **COBIT 2019**, **NIST CSF**, regulasi Indonesia (seperti **SEOJK**, **PBI**, **PADG**, **UU PDP**), serta panduan **OWASP** adalah **ringkasan edukatif** berdasarkan interpretasi teknis, **bukan** teks hukum resmi.
+- Data untuk **ISO 27001:2022**, **ISO 37001:2016**, **COBIT 2019**, **NIST CSF**, regulasi Indonesia (seperti **SEOJK**, **PBI**, **PADG**, **UU PDP**), serta panduan **OWASP** adalah **ringkasan edukatif** berdasarkan interpretasi teknis, **bukan** teks hukum resmi.
 - Untuk keperluan audit resmi, silakan merujuk pada dokumen yang diterbitkan oleh institusi terkait (BSN, OJK, BI, ISO, ISACA, OWASP).
 
 ---
@@ -38,7 +38,7 @@ Pusat komando intelijen ancaman yang mengintegrasikan berbagai sumber data globa
 ### 2. 📊 Professional Framework Explorer
 Navigasi interaktif untuk berbagai standar kepatuhan dengan layout responsif:
 - **Nasional:** SEOJK 29/2022, Panduan Resiliensi OJK, PBI 02/2024, PADG 32/2025, UU PDP 27/2022.
-- **Internasional:** COBIT 2019, NIST CSF 2.0, ISO 27001:2022.
+- **Internasional:** COBIT 2019, NIST CSF 2.0, ISO 27001:2022, ISO 37001:2016.
 - **Application Security (AppSec):** OWASP Top 10, OWASP ASVS.
 - **Analogi "Street Smart":** Setiap kontrol dilengkapi dengan penjelasan bahasa santai dan mudah dipahami namun tetap profesional.
 

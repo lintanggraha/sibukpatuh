@@ -52,6 +52,16 @@ const routes = [
         }
     },
     {
+        path: '/frameworks/iso37001',
+        name: 'iso37001',
+        component: () => import('../views/Iso37001.vue'),
+        meta: {
+            title: 'ISO 37001:2016 - Ringkasan Edukatif Sistem Manajemen Anti-Penyuapan | SibukPatuh',
+            description: 'Pelajari ISO 37001:2016 sebagai ringkasan edukatif sistem manajemen anti-penyuapan. Mencakup konteks, kepemimpinan, due diligence, kontrol operasional, pelaporan, audit, dan peningkatan.',
+            keywords: 'ISO 37001, ISO 37001:2016, anti penyuapan, anti bribery management system, ABMS, compliance, GRC, integritas perusahaan'
+        }
+    },
+    {
         path: '/frameworks/nist-csf-2',
         name: 'nist',
         component: () => import('../views/Nist.vue'),

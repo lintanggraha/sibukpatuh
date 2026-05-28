@@ -176,6 +176,11 @@ export default {
               label: "ISO 27001",
               icon: "fa-shield-alt",
             },
+            {
+              routeName: "iso37001",
+              label: "ISO 37001",
+              icon: "fa-handshake",
+            },
             { routeName: "nist", label: "NIST CSF 2.0", icon: "fa-compass" },
             {
               routeName: "cobit",
@@ -296,6 +301,7 @@ export default {
         route.name === "pdp";
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||
+        route.name === "iso37001" ||
         route.name === "nist" ||
         route.name === "cobit" ||
         route.name === "owasp_top10" ||

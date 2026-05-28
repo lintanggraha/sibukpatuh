@@ -154,6 +154,7 @@ export default {
       aiResult: null,
       availableFrameworks: [
         { id: 'iso27001', name: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt', file: 'iso27001.json' },
+        { id: 'iso37001', name: 'ISO 37001:2016', desc: 'Sistem Manajemen Anti-Penyuapan', icon: 'fa-handshake', file: 'iso37001.json' },
         { id: 'cobit', name: 'COBIT 2019', desc: 'Framework Tata Kelola IT Perusahaan', icon: 'fa-project-diagram', file: 'cobit_2019.json' },
         { id: 'seojk', name: 'SEOJK 29/03/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark', file: 'seojk_29_2022_requirements.json' },
         { id: 'nist', name: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-network-wired', file: 'nist_csf.json' },
