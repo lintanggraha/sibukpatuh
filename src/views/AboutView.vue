@@ -56,7 +56,7 @@
               <i class="fas fa-exclamation-triangle fs-3 me-3 mt-1 text-warning"></i>
               <div>
                 <h5 class="alert-heading fw-bold">Catatan Penting</h5>
-                <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong>, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
+                <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk <strong>ISO 27001:2022</strong>, <strong>ISO 37001:2016</strong>, dan <strong>COBIT 2019</strong>, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
               </div>
             </div>
 
