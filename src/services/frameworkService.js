@@ -64,6 +64,16 @@ export const iso27001Service = {
 };
 
 /**
+ * ISO 37001 Service
+ */
+export const iso37001Service = {
+  async getControls() {
+    const data = await fetchData('iso37001.json', 'Failed to load ISO 37001 controls');
+    return Array.isArray(data) ? data : data.controls || [];
+  },
+};
+
+/**
  * NIST CSF Service
  */
 export const nistService = {
@@ -190,6 +200,7 @@ export function processCobitData(rawData) {
 
 export default {
   iso27001: iso27001Service,
+  iso37001: iso37001Service,
   nist: nistService,
   cobit: cobitService,
   seojk: seojkService,

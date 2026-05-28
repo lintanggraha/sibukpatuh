@@ -1,0 +1,914 @@
+[
+  {
+    "id": "4.1",
+    "name": "Konteks bisnis dan risiko penyuapan",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Pemahaman konteks organisasi",
+    "description": "Organisasi perlu membaca kondisi internal dan eksternal yang dapat memengaruhi risiko penyuapan, mulai dari model bisnis, wilayah operasi, struktur kepemilikan, sampai cara organisasi berinteraksi dengan pihak luar.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan peta konteks ini dipakai dalam keputusan strategis, terutama ekspansi pasar, kerja sama baru, dan area bisnis yang rawan konflik kepentingan.",
+      "sysadmin": "Tim teknis bisa membantu menyediakan data pendukung seperti daftar aplikasi procurement, akses ke sistem pembayaran, dan jejak transaksi digital yang relevan untuk pemetaan risiko.",
+      "legal": "Legal/GRC perlu menautkan konteks ini dengan regulasi anti-korupsi, kontrak, yurisdiksi, serta kewajiban pelaporan yang berlaku."
+    },
+    "exampleEvidence": [
+      "Dokumen analisis konteks organisasi",
+      "Peta proses bisnis dan pihak berkepentingan",
+      "Daftar area operasi atau transaksi berisiko"
+    ],
+    "implementationTips": "Mulai dari workshop lintas fungsi untuk memetakan area yang paling banyak berhubungan dengan uang, izin, pengadaan, hadiah, sponsor, atau perantara. Perbarui konteks saat ada produk, negara, vendor, atau channel baru.",
+    "analogy": "Seperti membaca medan sebelum membuka cabang baru, organisasi perlu tahu titik mana yang licin sebelum orang-orang mulai berjalan di sana.",
+    "focusArea": "Analisis Konteks"
+  },
+  {
+    "id": "4.2",
+    "name": "Harapan pemangku kepentingan",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Stakeholder compliance",
+    "description": "Organisasi perlu mengidentifikasi pihak yang punya kepentingan terhadap program anti-penyuapan, seperti regulator, pelanggan, pemegang saham, karyawan, mitra, auditor, dan komunitas tempat organisasi beroperasi.",
+    "roleTranslations": {
+      "bod": "Board perlu melihat ekspektasi stakeholder sebagai risiko reputasi dan izin usaha, bukan sekadar daftar komunikasi eksternal.",
+      "sysadmin": "Tim teknis dapat memastikan kanal pengaduan, portal vendor, dan repositori dokumen compliance bisa diakses sesuai peran.",
+      "legal": "Legal/GRC perlu menerjemahkan ekspektasi stakeholder menjadi kewajiban kontraktual, kebijakan internal, dan register kepatuhan."
+    },
+    "exampleEvidence": [
+      "Register pemangku kepentingan",
+      "Matriks kebutuhan dan kewajiban compliance",
+      "Notulen evaluasi ekspektasi regulator atau pelanggan"
+    ],
+    "implementationTips": "Buat register sederhana: siapa stakeholder-nya, apa tuntutannya, bukti apa yang biasa diminta, siapa pemilik internalnya, dan seberapa sering perlu ditinjau.",
+    "analogy": "Kalau organisasi seperti acara besar, stakeholder adalah tamu penting yang punya aturan masuk, ekspektasi keamanan, dan standar perilaku.",
+    "focusArea": "Kebutuhan Stakeholder"
+  },
+  {
+    "id": "4.3",
+    "name": "Batas lingkup sistem anti-penyuapan",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Scope management",
+    "description": "Ruang lingkup sistem perlu ditentukan dengan jelas: unit, proses, lokasi, anak perusahaan, transaksi, dan hubungan bisnis mana yang masuk pengelolaan anti-penyuapan.",
+    "roleTranslations": {
+      "bod": "Board perlu menyetujui lingkup yang realistis namun tidak mengecilkan area risiko tinggi hanya demi terlihat mudah lulus audit.",
+      "sysadmin": "SysAdmin perlu tahu sistem mana yang masuk lingkup agar akses, log, dan bukti teknis dapat disiapkan.",
+      "legal": "Legal/GRC perlu memastikan scope selaras dengan struktur badan hukum, kontrak, dan kewajiban regulator."
+    },
+    "exampleEvidence": [
+      "Pernyataan lingkup ABMS",
+      "Daftar unit/proses/lokasi dalam scope",
+      "Justifikasi pengecualian jika ada"
+    ],
+    "implementationTips": "Tulis scope dalam bahasa yang bisa diuji auditor. Hindari kalimat terlalu umum; sebutkan batas organisasi, proses kritis, dan pihak ketiga yang relevan.",
+    "analogy": "Scope itu pagar kerja. Terlalu sempit membuat risiko lolos; terlalu luas membuat tim kehabisan tenaga.",
+    "focusArea": "Lingkup Sistem"
+  },
+  {
+    "id": "4.4",
+    "name": "Sistem manajemen anti-penyuapan",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mengatur",
+    "capability": "ABMS operating model",
+    "description": "Organisasi perlu membangun sistem yang saling terhubung: kebijakan, proses, kontrol, peran, pelaporan, audit, dan perbaikan yang dirancang untuk mencegah, menemukan, dan menangani risiko penyuapan.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan ABMS punya sponsor, anggaran, dan ukuran keberhasilan yang tidak berhenti di dokumen kebijakan.",
+      "sysadmin": "Tim teknis membantu dengan kontrol akses, workflow approval, audit trail, dan integrasi data yang mendukung pengendalian anti-penyuapan.",
+      "legal": "Legal/GRC menjadi penghubung antara kewajiban hukum, prosedur internal, dan bukti operasional."
+    },
+    "exampleEvidence": [
+      "Manual atau blueprint ABMS",
+      "Peta proses anti-penyuapan",
+      "Daftar kebijakan, SOP, dan kontrol terkait"
+    ],
+    "implementationTips": "Bangun model PDCA yang jelas: rencanakan risiko, jalankan kontrol, ukur performa, lalu perbaiki. Jangan biarkan ABMS menjadi folder dokumen yang jarang dibuka.",
+    "analogy": "Program anti-penyuapan bukan poster integritas di dinding; ia lebih mirip sistem rem, sensor, dan prosedur darurat dalam satu kendaraan.",
+    "focusArea": "Model Operasi"
+  },
+  {
+    "id": "4.5",
+    "name": "Penilaian risiko penyuapan",
+    "type": "Deteksi",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Bribery risk assessment",
+    "description": "Organisasi perlu menilai risiko penyuapan secara berkala, melihat skenario yang mungkin terjadi, tingkat paparan, kontrol yang sudah ada, dan tindakan tambahan yang dibutuhkan.",
+    "roleTranslations": {
+      "bod": "Board sebaiknya meminta heatmap risiko yang mudah dibaca dan menanyakan tindakan nyata untuk area merah.",
+      "sysadmin": "SysAdmin dapat menyediakan data transaksi, user activity, dan exception log untuk memperkuat penilaian berbasis bukti.",
+      "legal": "Legal/GRC perlu menjaga metodologi, kriteria risiko, dokumentasi keputusan, dan tindak lanjut hasil asesmen."
+    },
+    "exampleEvidence": [
+      "Metodologi penilaian risiko penyuapan",
+      "Risk register dan heatmap",
+      "Rencana mitigasi per area risiko"
+    ],
+    "implementationTips": "Gunakan skenario konkret: tender, vendor onboarding, perizinan, donasi, perjalanan dinas, komisi agen, dan pembayaran mendesak. Beri owner dan due date untuk tiap mitigasi.",
+    "analogy": "Risk assessment adalah pemeriksaan tekanan darah program integritas. Tanpa angka dan tren, organisasi hanya menebak-nebak sehat.",
+    "focusArea": "Risk Assessment"
+  },
+  {
+    "id": "5.1.1",
+    "name": "Pengawasan dewan pengarah",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Board oversight",
+    "description": "Dewan pengarah perlu menunjukkan pengawasan terhadap kebijakan, sasaran, sumber daya, dan efektivitas sistem anti-penyuapan.",
+    "roleTranslations": {
+      "bod": "Ini area Board langsung: minta laporan berkala, tantang asumsi risiko, dan pastikan fungsi compliance tidak dibiarkan berjalan sendirian.",
+      "sysadmin": "Tim teknis mendukung laporan dewan dengan data yang bersih dan bisa ditelusuri, terutama dari sistem pengadaan dan keuangan.",
+      "legal": "Legal/GRC perlu menyiapkan paket pelaporan yang ringkas, berbasis risiko, dan dapat dipertanggungjawabkan."
+    },
+    "exampleEvidence": [
+      "Agenda rapat dewan tentang ABMS",
+      "Laporan kinerja anti-penyuapan",
+      "Keputusan atau arahan dewan"
+    ],
+    "implementationTips": "Buat dashboard triwulanan yang menunjukkan risiko utama, status mitigasi, pelaporan dugaan pelanggaran, hasil audit, dan kebutuhan keputusan dari dewan.",
+    "analogy": "Dewan bukan penumpang VIP; dalam ABMS, dewan adalah pengawas jalur agar organisasi tidak keluar rel.",
+    "focusArea": "Governance"
+  },
+  {
+    "id": "5.1.2",
+    "name": "Komitmen manajemen puncak",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mengatur",
+    "capability": "Tone from the top",
+    "description": "Manajemen puncak perlu memastikan program anti-penyuapan berjalan dalam proses bisnis, punya sumber daya, dan dikomunikasikan sebagai bagian dari cara organisasi bekerja.",
+    "roleTranslations": {
+      "bod": "Direksi perlu memberi contoh, menyelesaikan konflik kepentingan, dan tidak menekan tim untuk mengejar target dengan cara abu-abu.",
+      "sysadmin": "SysAdmin mendukung dengan workflow yang memaksa approval dan logging, bukan hanya mengandalkan himbauan etika.",
+      "legal": "Legal/GRC perlu memastikan pesan pimpinan diterjemahkan menjadi kebijakan, prosedur, training, dan konsekuensi disiplin."
+    },
+    "exampleEvidence": [
+      "Pernyataan komitmen manajemen",
+      "Bukti alokasi sumber daya",
+      "Komunikasi internal dari pimpinan"
+    ],
+    "implementationTips": "Jangan berhenti di email tahunan. Masukkan pesan anti-suap ke town hall, KPI, onboarding, vendor meeting, dan keputusan bisnis berisiko tinggi.",
+    "analogy": "Budaya integritas mengikuti suara paling keras di ruangan. Kalau pimpinan diam, aturan mudah dianggap formalitas.",
+    "focusArea": "Leadership Commitment"
+  },
+  {
+    "id": "5.2",
+    "name": "Kebijakan anti-penyuapan",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Anti-bribery policy",
+    "description": "Organisasi perlu memiliki kebijakan yang melarang penyuapan, menjelaskan komitmen kepatuhan, membuka kanal pelaporan, dan menetapkan konsekuensi bila aturan dilanggar.",
+    "roleTranslations": {
+      "bod": "Board perlu menyetujui kebijakan yang jelas dan tidak membuka celah untuk pengecualian informal.",
+      "sysadmin": "SysAdmin bisa membantu publikasi kebijakan di portal internal dan memastikan bukti penerimaan karyawan tersimpan.",
+      "legal": "Legal/GRC perlu memastikan kebijakan cocok dengan hukum anti-korupsi, kontrak kerja, dan kebijakan disiplin."
+    },
+    "exampleEvidence": [
+      "Dokumen kebijakan anti-penyuapan",
+      "Bukti sosialisasi dan penerimaan kebijakan",
+      "Catatan review berkala kebijakan"
+    ],
+    "implementationTips": "Tulis kebijakan dengan bahasa lugas. Jelaskan contoh larangan, kanal tanya, perlindungan pelapor, dan hubungan kebijakan dengan hadiah, donasi, sponsorship, serta pihak ketiga.",
+    "analogy": "Kebijakan adalah rambu utama. Orang tetap butuh jalan, tapi rambu membuat batas aman terlihat sebelum terlambat.",
+    "focusArea": "Policy"
+  },
+  {
+    "id": "5.3.1",
+    "name": "Peran dan akuntabilitas",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Roles and responsibilities",
+    "description": "Tanggung jawab anti-penyuapan perlu dibagi secara jelas agar setiap fungsi tahu kewajiban, batas kewenangan, dan cara eskalasi saat menemukan risiko.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan tidak ada area penting yang tidak punya pemilik, khususnya procurement, sales, finance, dan business development.",
+      "sysadmin": "SysAdmin perlu menerjemahkan peran ke role sistem: maker-checker, approver, viewer, dan administrator harus dipisahkan.",
+      "legal": "Legal/GRC perlu memelihara RACI dan memastikan tanggung jawab masuk ke job description atau mandat fungsi."
+    },
+    "exampleEvidence": [
+      "RACI anti-penyuapan",
+      "Job description terkait compliance",
+      "Matriks kewenangan dan eskalasi"
+    ],
+    "implementationTips": "Buat RACI untuk proses sensitif. Pastikan owner tahu apa yang harus dilakukan saat ada red flag, bukan hanya tahu namanya tertulis di dokumen.",
+    "analogy": "Dalam dapur profesional, semua orang punya station. Kekacauan mulai muncul saat semua merasa 'bukan bagian saya'.",
+    "focusArea": "Accountability"
+  },
+  {
+    "id": "5.3.2",
+    "name": "Fungsi kepatuhan anti-penyuapan",
+    "type": "Deteksi",
+    "domain": "Kepemimpinan",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Compliance function independence",
+    "description": "Fungsi kepatuhan anti-penyuapan perlu diberi mandat, kompetensi, akses, dan independensi yang cukup untuk memberi nasihat, memantau sistem, dan melaporkan kinerja program.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan compliance function punya akses langsung untuk isu serius dan tidak mudah ditekan oleh target komersial.",
+      "sysadmin": "SysAdmin membantu akses data yang diperlukan compliance tanpa membuka akses berlebihan ke informasi sensitif.",
+      "legal": "Legal/GRC biasanya menjadi pemilik fungsi ini atau mitra utamanya; pastikan mandat, SLA, dan jalur pelaporan tertulis."
+    },
+    "exampleEvidence": [
+      "Mandat fungsi kepatuhan",
+      "Struktur pelaporan compliance",
+      "Laporan monitoring ABMS"
+    ],
+    "implementationTips": "Tetapkan siapa yang berwenang memberi advice, menghentikan transaksi berisiko, meminta dokumen, dan melapor ke pimpinan. Hindari fungsi compliance yang hanya menjadi stempel.",
+    "analogy": "Fungsi kepatuhan seperti wasit. Ia perlu dekat dengan permainan, tapi tidak boleh bermain untuk salah satu tim.",
+    "focusArea": "Compliance Function"
+  },
+  {
+    "id": "5.3.3",
+    "name": "Keputusan yang didelegasikan",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Delegated authority control",
+    "description": "Keputusan yang dilimpahkan perlu dikendalikan dengan batas kewenangan, kriteria, dan pengawasan yang memadai, terutama ketika keputusan itu dapat memunculkan risiko penyuapan.",
+    "roleTranslations": {
+      "bod": "Board perlu melihat apakah delegasi kewenangan masih masuk akal saat nilai transaksi, negara operasi, atau model bisnis berubah.",
+      "sysadmin": "SysAdmin perlu memastikan approval matrix di sistem sesuai kewenangan resmi dan tidak bisa dilewati tanpa jejak.",
+      "legal": "Legal/GRC perlu meninjau delegasi dalam kebijakan, surat kuasa, kontrak, dan prosedur approval."
+    },
+    "exampleEvidence": [
+      "Matriks delegasi wewenang",
+      "Workflow approval transaksi",
+      "Log override atau exception approval"
+    ],
+    "implementationTips": "Pisahkan kewenangan berdasarkan nilai, tipe transaksi, dan risk rating. Buat exception approval yang ketat untuk kondisi mendesak.",
+    "analogy": "Delegasi itu seperti memberi kunci ruangan. Semakin sensitif ruangannya, semakin jelas siapa yang boleh masuk dan kapan.",
+    "focusArea": "Delegation"
+  },
+  {
+    "id": "6.1",
+    "name": "Tindakan atas risiko dan peluang",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Risk treatment planning",
+    "description": "Hasil analisis risiko perlu diterjemahkan menjadi tindakan yang jelas, sehingga peluang perbaikan dimanfaatkan dan potensi penyuapan dikendalikan sebelum menjadi insiden.",
+    "roleTranslations": {
+      "bod": "Board sebaiknya memantau tindakan untuk risiko tinggi dan meminta alasan bila mitigasi kritis terus tertunda.",
+      "sysadmin": "SysAdmin bisa membantu tindakan teknis seperti mandatory approval, log review, data retention, dan pemisahan akses.",
+      "legal": "Legal/GRC perlu memastikan risk treatment masuk ke action plan, memiliki owner, target waktu, dan bukti selesai."
+    },
+    "exampleEvidence": [
+      "Rencana perlakuan risiko",
+      "Daftar action item dan owner",
+      "Status mitigasi risiko penyuapan"
+    ],
+    "implementationTips": "Hubungkan setiap risiko tinggi dengan kontrol spesifik. Jangan hanya menulis 'akan dimonitor'; jelaskan siapa melakukan apa, kapan, dan bukti apa yang membuktikan selesai.",
+    "analogy": "Mengetahui risiko tanpa action plan seperti melihat atap bocor lalu hanya mencatat cuaca.",
+    "focusArea": "Risk Treatment"
+  },
+  {
+    "id": "6.2",
+    "name": "Sasaran anti-penyuapan",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Compliance objectives",
+    "description": "Organisasi perlu menetapkan sasaran anti-penyuapan yang terukur, relevan, dipantau, dikomunikasikan, dan memiliki rencana pencapaian.",
+    "roleTranslations": {
+      "bod": "Board perlu meminta sasaran yang bermakna, misalnya coverage due diligence atau training high-risk roles, bukan angka kosmetik.",
+      "sysadmin": "SysAdmin dapat mendukung indikator dengan dashboard, data completion rate, dan integrasi laporan.",
+      "legal": "Legal/GRC perlu mengawal definisi KPI, target, owner, dan frekuensi review."
+    },
+    "exampleEvidence": [
+      "Daftar sasaran ABMS",
+      "KPI compliance dan realisasinya",
+      "Rencana kerja pencapaian sasaran"
+    ],
+    "implementationTips": "Gunakan indikator yang bisa ditindaklanjuti: persentase vendor high-risk yang selesai due diligence, jumlah training selesai, waktu penyelesaian investigasi, dan closure rate audit finding.",
+    "analogy": "Sasaran adalah papan skor. Tanpa skor, organisasi sulit tahu apakah programnya menang atau hanya sibuk bergerak.",
+    "focusArea": "Objectives"
+  },
+  {
+    "id": "7.1",
+    "name": "Sumber daya program",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Resource management",
+    "description": "Program anti-penyuapan membutuhkan sumber daya yang memadai, termasuk orang, anggaran, teknologi, waktu manajemen, dan akses ke informasi.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan ekspektasi tinggi terhadap compliance diimbangi sumber daya yang masuk akal.",
+      "sysadmin": "SysAdmin perlu mengestimasi kebutuhan sistem, akses data, penyimpanan bukti, dan dukungan workflow.",
+      "legal": "Legal/GRC perlu mengusulkan kebutuhan resource berdasarkan risiko, bukan sekadar kebiasaan tahun lalu."
+    },
+    "exampleEvidence": [
+      "Anggaran program anti-penyuapan",
+      "Rencana kebutuhan SDM dan tools",
+      "Dokumen persetujuan resource"
+    ],
+    "implementationTips": "Prioritaskan resource untuk area risiko tinggi. Bila anggaran terbatas, mulai dari due diligence, kanal pelaporan, training, dan audit trail transaksi sensitif.",
+    "analogy": "Program integritas tanpa resource seperti pos keamanan tanpa petugas, lampu, atau radio.",
+    "focusArea": "Resources"
+  },
+  {
+    "id": "7.2.1",
+    "name": "Kompetensi umum",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mencegah",
+    "capability": "Competency management",
+    "description": "Orang yang menjalankan pekerjaan yang berdampak pada ABMS perlu memiliki kompetensi yang sesuai dan dapat dibuktikan.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan posisi kunci diisi orang yang memahami risiko integritas, bukan hanya mengejar target operasional.",
+      "sysadmin": "SysAdmin dapat memastikan tim yang mengelola sistem approval dan log memahami pentingnya jejak audit.",
+      "legal": "Legal/GRC perlu menetapkan kriteria kompetensi, materi pembekalan, dan bukti evaluasi."
+    },
+    "exampleEvidence": [
+      "Matriks kompetensi per peran",
+      "Sertifikat atau catatan pelatihan",
+      "Evaluasi efektivitas kompetensi"
+    ],
+    "implementationTips": "Bedakan kompetensi dasar untuk seluruh karyawan dan kompetensi khusus untuk procurement, sales, finance, government relation, dan compliance.",
+    "analogy": "Tidak semua orang perlu menjadi ahli hukum, tapi orang di titik rawan perlu tahu kapan harus berhenti dan bertanya.",
+    "focusArea": "Competence"
+  },
+  {
+    "id": "7.2.2",
+    "name": "Proses rekrutmen dan penempatan",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "People screening",
+    "description": "Proses mempekerjakan dan menempatkan orang pada peran tertentu perlu mempertimbangkan risiko penyuapan, termasuk pemeriksaan yang proporsional untuk posisi sensitif.",
+    "roleTranslations": {
+      "bod": "Board perlu mendukung screening untuk posisi high-risk walau prosesnya sedikit lebih panjang.",
+      "sysadmin": "SysAdmin membantu memastikan akses sistem diberikan setelah status perekrutan dan approval lengkap.",
+      "legal": "Legal/GRC perlu memastikan screening sesuai hukum ketenagakerjaan, privasi, dan kebijakan internal."
+    },
+    "exampleEvidence": [
+      "Prosedur pre-employment screening",
+      "Daftar posisi high-risk",
+      "Bukti deklarasi konflik kepentingan"
+    ],
+    "implementationTips": "Tentukan posisi yang butuh pemeriksaan tambahan: pembelian, pembayaran, tender, sales enterprise, relasi pemerintah, dan manajemen proyek besar.",
+    "analogy": "Untuk ruangan kas, organisasi biasanya memilih penjaga dengan lebih hati-hati. Prinsip yang sama berlaku untuk posisi rawan suap.",
+    "focusArea": "Hiring Controls"
+  },
+  {
+    "id": "7.3",
+    "name": "Kepedulian dan pelatihan",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Awareness and training",
+    "description": "Karyawan dan pihak terkait perlu memahami kebijakan anti-penyuapan, skenario risiko, cara melapor, dan konsekuensi jika melanggar.",
+    "roleTranslations": {
+      "bod": "Pimpinan perlu ikut training agar pesan integritas tidak terdengar hanya berlaku untuk staf.",
+      "sysadmin": "SysAdmin bisa mengelola LMS, reminder, dan bukti completion training.",
+      "legal": "Legal/GRC perlu membuat materi yang dekat dengan kasus sehari-hari dan mengukur pemahaman peserta."
+    },
+    "exampleEvidence": [
+      "Materi pelatihan anti-penyuapan",
+      "Daftar peserta dan completion rate",
+      "Hasil kuis atau evaluasi pemahaman"
+    ],
+    "implementationTips": "Gunakan skenario nyata: hadiah vendor, fee perantara, uang pelicin, sponsor acara, donasi, dan permintaan tidak wajar dari pejabat atau pelanggan.",
+    "analogy": "Training yang baik seperti latihan evakuasi. Saat kejadian muncul, orang tidak lagi panik mencari pintu keluar.",
+    "focusArea": "Training"
+  },
+  {
+    "id": "7.4",
+    "name": "Komunikasi program",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mencegah",
+    "capability": "Compliance communication",
+    "description": "Organisasi perlu menentukan apa yang dikomunikasikan tentang anti-penyuapan, kepada siapa, kapan, melalui kanal apa, dan siapa yang bertanggung jawab.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan komunikasi eksternal selaras dengan komitmen organisasi dan tidak overclaim.",
+      "sysadmin": "SysAdmin mendukung kanal komunikasi seperti intranet, email, portal vendor, dan repository kebijakan.",
+      "legal": "Legal/GRC perlu meninjau pesan untuk karyawan, vendor, pelanggan, dan regulator."
+    },
+    "exampleEvidence": [
+      "Rencana komunikasi ABMS",
+      "Publikasi kebijakan di kanal internal/eksternal",
+      "Template komunikasi kepada pihak ketiga"
+    ],
+    "implementationTips": "Segmentasikan pesan. Karyawan butuh panduan tindakan, vendor butuh kewajiban kontraktual, pimpinan butuh risiko dan keputusan, regulator butuh bukti kepatuhan.",
+    "analogy": "Pesan yang benar ke orang yang salah tetap tidak efektif. Komunikasi perlu alamat yang jelas.",
+    "focusArea": "Communication"
+  },
+  {
+    "id": "7.5.1",
+    "name": "Kebutuhan informasi terdokumentasi",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Documented information",
+    "description": "Organisasi perlu menentukan dokumen dan rekaman apa yang diperlukan agar ABMS dapat dijalankan, dibuktikan, dan ditinjau.",
+    "roleTranslations": {
+      "bod": "Board perlu meminta bukti yang ringkas namun cukup untuk menunjukkan program berjalan.",
+      "sysadmin": "SysAdmin perlu memastikan repositori dokumen aman, terstruktur, dan punya kontrol akses.",
+      "legal": "Legal/GRC perlu menjaga daftar dokumen wajib dan retention sesuai kebutuhan hukum."
+    },
+    "exampleEvidence": [
+      "Daftar dokumen ABMS",
+      "Register rekaman compliance",
+      "Kebijakan retensi dokumen"
+    ],
+    "implementationTips": "Buat document register yang memuat pemilik, versi, lokasi, masa simpan, dan status review. Ini akan sangat membantu saat audit.",
+    "analogy": "Dokumen adalah ingatan organisasi. Tanpanya, semua bergantung pada siapa yang kebetulan masih ingat.",
+    "focusArea": "Documentation"
+  },
+  {
+    "id": "7.5.2",
+    "name": "Pembuatan dan pembaruan dokumen",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Document lifecycle",
+    "description": "Dokumen ABMS perlu dibuat dan diperbarui dengan identitas, format, review, dan persetujuan yang jelas.",
+    "roleTranslations": {
+      "bod": "Board tidak perlu menyetujui semua dokumen, tapi dokumen strategis seperti kebijakan harus punya approval yang sesuai.",
+      "sysadmin": "SysAdmin membantu versioning, akses, dan metadata dokumen pada sistem manajemen dokumen.",
+      "legal": "Legal/GRC perlu memastikan proses review dan approval terdokumentasi."
+    },
+    "exampleEvidence": [
+      "Template dokumen ABMS",
+      "Riwayat versi dan approval",
+      "Log review dokumen"
+    ],
+    "implementationTips": "Gunakan naming convention dan workflow approval yang konsisten. Hindari banyak versi kebijakan beredar di email.",
+    "analogy": "Dokumen tanpa versi seperti peta tanpa tanggal; bisa benar, bisa juga membawa orang ke jalan lama.",
+    "focusArea": "Document Control"
+  },
+  {
+    "id": "7.5.3",
+    "name": "Pengendalian dokumen dan rekaman",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Record protection",
+    "description": "Informasi terdokumentasi perlu dilindungi dari akses tidak sah, kehilangan, perubahan tidak terkendali, dan penggunaan versi yang salah.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan bukti compliance tidak mudah hilang saat ada pergantian personel atau insiden.",
+      "sysadmin": "SysAdmin menangani backup, access control, audit log, dan recovery dokumen penting.",
+      "legal": "Legal/GRC perlu menentukan dokumen mana yang sensitif, masa simpan, serta aturan pemusnahannya."
+    },
+    "exampleEvidence": [
+      "Matriks akses dokumen",
+      "Log perubahan dokumen",
+      "Bukti backup dan retensi"
+    ],
+    "implementationTips": "Pisahkan dokumen publik, internal, rahasia, dan investigasi. Rekaman investigasi dan pelaporan perlu kontrol akses lebih ketat.",
+    "analogy": "Bukti compliance seperti arsip notaris; bukan hanya harus ada, tapi juga harus terjaga keasliannya.",
+    "focusArea": "Information Control"
+  },
+  {
+    "id": "8.1",
+    "name": "Perencanaan dan kontrol operasional",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Operational control",
+    "description": "Proses operasional yang relevan dengan risiko penyuapan perlu direncanakan, dikendalikan, dan dijalankan sesuai kriteria yang sudah ditetapkan.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan kontrol operasional tidak dilemahkan oleh tekanan target revenue atau deadline proyek.",
+      "sysadmin": "SysAdmin memastikan sistem procurement, payment, dan approval mengikuti kontrol yang ditentukan.",
+      "legal": "Legal/GRC perlu menyelaraskan SOP operasional dengan risk treatment dan persyaratan kontrak."
+    },
+    "exampleEvidence": [
+      "SOP proses high-risk",
+      "Kriteria approval operasional",
+      "Bukti pelaksanaan kontrol"
+    ],
+    "implementationTips": "Prioritaskan proses dengan aliran uang atau keputusan bisnis signifikan: tender, vendor onboarding, pembayaran, hadiah, sponsor, donasi, dan agen.",
+    "analogy": "Kontrol operasional adalah pagar pembatas di jalan ramai. Orang masih bisa bergerak cepat, tapi tidak bebas menabrak aturan.",
+    "focusArea": "Operations"
+  },
+  {
+    "id": "8.2",
+    "name": "Uji kelayakan pihak dan transaksi",
+    "type": "Deteksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Due diligence",
+    "description": "Organisasi perlu melakukan due diligence yang proporsional terhadap transaksi, proyek, karyawan tertentu, dan rekan bisnis yang memiliki risiko penyuapan lebih tinggi.",
+    "roleTranslations": {
+      "bod": "Board perlu mendukung keputusan menunda atau menolak peluang bisnis bila due diligence menunjukkan risiko yang tidak bisa diterima.",
+      "sysadmin": "SysAdmin dapat mendukung screening workflow, integrasi vendor master, dan penyimpanan bukti due diligence.",
+      "legal": "Legal/GRC perlu menetapkan kriteria red flag, sumber data, approval, dan tindak lanjut hasil screening."
+    },
+    "exampleEvidence": [
+      "Prosedur due diligence",
+      "Checklist dan hasil screening pihak ketiga",
+      "Catatan keputusan atas red flag"
+    ],
+    "implementationTips": "Gunakan risk-based due diligence. Vendor low-risk tidak perlu proses berlebihan, tapi agen, konsultan, distributor, atau pihak yang berhubungan dengan pejabat perlu pemeriksaan lebih dalam.",
+    "analogy": "Due diligence seperti mengecek latar belakang sebelum menitipkan kunci kantor kepada orang baru.",
+    "focusArea": "Due Diligence"
+  },
+  {
+    "id": "8.3",
+    "name": "Pengendalian keuangan",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Financial controls",
+    "description": "Transaksi keuangan perlu dikendalikan agar pembayaran, pencatatan, reimbursement, dan approval tidak menjadi jalur tersembunyi untuk penyuapan.",
+    "roleTranslations": {
+      "bod": "Board perlu meminta assurance bahwa pembayaran berisiko tinggi punya maker-checker, dokumen pendukung, dan exception review.",
+      "sysadmin": "SysAdmin perlu menjaga pemisahan akses pada sistem finance dan memastikan audit trail tidak mudah dihapus.",
+      "legal": "Legal/GRC perlu berkolaborasi dengan Finance untuk meninjau transaksi tidak lazim dan klausul pembayaran kontrak."
+    },
+    "exampleEvidence": [
+      "Matrix approval pembayaran",
+      "Log maker-checker transaksi",
+      "Sample review pembayaran berisiko"
+    ],
+    "implementationTips": "Perkuat kontrol untuk pembayaran tunai, reimbursement, vendor baru, split invoice, biaya entertainment, komisi, success fee, dan pembayaran mendesak.",
+    "analogy": "Kontrol keuangan adalah pintu kasir dengan kamera. Bukan untuk menghambat pembayaran, tapi memastikan uang keluar lewat jalur yang benar.",
+    "focusArea": "Finance Control"
+  },
+  {
+    "id": "8.4",
+    "name": "Pengendalian non-keuangan",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Non-financial controls",
+    "description": "Keputusan non-keuangan seperti pemilihan vendor, pemberian akses, tender, penerimaan barang, dan persetujuan proyek perlu dikendalikan karena dapat menjadi pintu risiko penyuapan.",
+    "roleTranslations": {
+      "bod": "Board perlu memahami bahwa risiko suap tidak selalu muncul sebagai pembayaran; keputusan teknis dan operasional juga bisa dipengaruhi.",
+      "sysadmin": "SysAdmin mendukung kontrol non-keuangan melalui workflow, segregation of duties, dan log perubahan master data.",
+      "legal": "Legal/GRC perlu memastikan SOP pengadaan, seleksi, dan penerimaan barang memuat red flag anti-penyuapan."
+    },
+    "exampleEvidence": [
+      "SOP procurement dan vendor selection",
+      "Berita acara evaluasi vendor",
+      "Log perubahan vendor master data"
+    ],
+    "implementationTips": "Periksa area seperti perubahan spesifikasi tender, evaluasi teknis, penerimaan barang, penunjukan langsung, dan akses data sensitif.",
+    "analogy": "Tidak semua 'nilai' berbentuk uang. Kadang keputusan kecil bisa bernilai besar bagi pihak tertentu.",
+    "focusArea": "Operational Integrity"
+  },
+  {
+    "id": "8.5",
+    "name": "Kontrol pada organisasi terkendali dan rekan bisnis",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Third-party control alignment",
+    "description": "Organisasi perlu memastikan entitas yang dikendalikan dan rekan bisnis relevan menerapkan pengendalian anti-penyuapan yang sepadan dengan risiko hubungan tersebut.",
+    "roleTranslations": {
+      "bod": "Board perlu memperhatikan risiko grup, joint venture, agen, distributor, dan partner strategis yang bisa menyeret reputasi organisasi.",
+      "sysadmin": "SysAdmin mendukung portal vendor, bukti komitmen pihak ketiga, dan monitoring akses pihak eksternal.",
+      "legal": "Legal/GRC perlu memasukkan persyaratan anti-penyuapan dalam kontrak dan menilai kecukupan kontrol mitra."
+    },
+    "exampleEvidence": [
+      "Klausul anti-penyuapan dalam kontrak",
+      "Hasil penilaian kontrol pihak ketiga",
+      "Bukti komitmen atau sertifikasi mitra"
+    ],
+    "implementationTips": "Bagi mitra berdasarkan risiko. Untuk yang high-risk, mintakan kebijakan, training, beneficial ownership, hak audit, dan komitmen kontraktual yang jelas.",
+    "analogy": "Rekan bisnis seperti orang yang membawa nama organisasi di luar kantor. Perilakunya tetap bisa kembali ke reputasi kita.",
+    "focusArea": "Third Party"
+  },
+  {
+    "id": "8.6",
+    "name": "Komitmen anti-penyuapan pihak terkait",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Anti-bribery commitments",
+    "description": "Untuk hubungan atau transaksi tertentu, organisasi perlu memperoleh komitmen anti-penyuapan dari karyawan, rekan bisnis, atau pihak terkait sesuai tingkat risikonya.",
+    "roleTranslations": {
+      "bod": "Board perlu mendukung prinsip bahwa peluang bisnis yang menolak komitmen dasar integritas patut dipertanyakan.",
+      "sysadmin": "SysAdmin dapat membuat mekanisme e-acknowledgement dan menyimpan bukti persetujuan.",
+      "legal": "Legal/GRC perlu menyiapkan wording komitmen, klausul terminasi, dan konsekuensi pelanggaran."
+    },
+    "exampleEvidence": [
+      "Form komitmen anti-penyuapan",
+      "Klausul integritas dalam kontrak",
+      "Bukti acknowledgement karyawan atau vendor"
+    ],
+    "implementationTips": "Gunakan komitmen tertulis untuk pihak high-risk, termasuk agen, konsultan, distributor, vendor strategis, dan posisi internal sensitif.",
+    "analogy": "Komitmen tertulis bukan jaminan semua aman, tapi ia membuat garis batas lebih sulit disangkal.",
+    "focusArea": "Commitment"
+  },
+  {
+    "id": "8.7",
+    "name": "Hadiah, jamuan, donasi, dan manfaat serupa",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Gift and hospitality control",
+    "description": "Organisasi perlu mengatur hadiah, jamuan, perjalanan, donasi, sponsor, dan manfaat lain agar tidak digunakan sebagai kedok penyuapan atau pengaruh tidak wajar.",
+    "roleTranslations": {
+      "bod": "Board perlu memberi contoh dengan mendeklarasikan hadiah dan menolak perlakuan khusus yang tidak pantas.",
+      "sysadmin": "SysAdmin bisa mendukung register hadiah dan approval workflow untuk sponsorship, donation, atau entertainment.",
+      "legal": "Legal/GRC perlu menetapkan batas nilai, larangan absolut, approval, dan dokumentasi alasan bisnis."
+    },
+    "exampleEvidence": [
+      "Kebijakan hadiah dan hospitality",
+      "Register hadiah, donasi, dan sponsor",
+      "Approval untuk pengecualian atau nilai tinggi"
+    ],
+    "implementationTips": "Tentukan threshold, larangan untuk cash/cash equivalent, aturan pejabat publik, dan kewajiban deklarasi. Buat contoh kasus agar tidak multitafsir.",
+    "analogy": "Hadiah yang kecil bisa jadi sopan santun; hadiah yang salah waktu bisa jadi sinyal bahaya.",
+    "focusArea": "Gifts & Hospitality"
+  },
+  {
+    "id": "8.8",
+    "name": "Ketika kontrol tidak memadai",
+    "type": "Koreksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Merespons",
+    "capability": "Control insufficiency handling",
+    "description": "Jika kontrol anti-penyuapan dinilai tidak cukup untuk menurunkan risiko, organisasi perlu mengambil tindakan seperti menambah kontrol, menunda transaksi, atau menghentikan hubungan.",
+    "roleTranslations": {
+      "bod": "Board perlu siap mendukung keputusan tidak populer bila risiko integritas tidak bisa dikelola.",
+      "sysadmin": "SysAdmin dapat menerapkan hold, block, atau enhanced approval pada sistem untuk transaksi yang belum memenuhi kontrol.",
+      "legal": "Legal/GRC perlu mendokumentasikan alasan keputusan dan opsi mitigasi atau terminasi."
+    },
+    "exampleEvidence": [
+      "Daftar kontrol tidak memadai",
+      "Keputusan hold/terminate transaksi",
+      "Rencana kontrol tambahan"
+    ],
+    "implementationTips": "Buat mekanisme stop/go untuk transaksi high-risk. Keputusan lanjut harus berbasis evidence, approval senior, dan mitigasi yang jelas.",
+    "analogy": "Kalau rem terasa blong, pilihan sehat bukan tetap mengebut, tapi berhenti dan memperbaiki.",
+    "focusArea": "Risk Decision"
+  },
+  {
+    "id": "8.9",
+    "name": "Kanal pelaporan dan kepedulian",
+    "type": "Deteksi",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Speak-up mechanism",
+    "description": "Organisasi perlu menyediakan cara yang aman bagi orang untuk bertanya, meminta nasihat, atau melaporkan dugaan penyuapan tanpa takut pembalasan.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan whistleblowing bukan pajangan. Laporan serius harus sampai ke level yang tepat dan pelapor dilindungi.",
+      "sysadmin": "SysAdmin perlu menjaga kerahasiaan kanal, akses terbatas, logging, dan keamanan data pelaporan.",
+      "legal": "Legal/GRC perlu mengelola prosedur intake, triage, perlindungan pelapor, dan dokumentasi tindak lanjut."
+    },
+    "exampleEvidence": [
+      "Prosedur whistleblowing",
+      "Kanal pelaporan aktif",
+      "Log laporan dan tindak lanjut anonim/agregat"
+    ],
+    "implementationTips": "Sediakan lebih dari satu kanal dan jelaskan apa yang terjadi setelah laporan masuk. Orang lebih berani bicara jika prosesnya jelas dan adil.",
+    "analogy": "Kanal pelaporan adalah alarm asap. Ia harus mudah dijangkau sebelum api membesar.",
+    "focusArea": "Reporting"
+  },
+  {
+    "id": "8.10",
+    "name": "Investigasi dan penanganan dugaan penyuapan",
+    "type": "Koreksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Investigation management",
+    "description": "Dugaan penyuapan perlu dinilai, diselidiki secara objektif, ditangani sesuai tingkat risiko, dan ditutup dengan tindakan yang terdokumentasi.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan investigasi kasus besar independen, tidak ditekan, dan memiliki jalur eskalasi yang tepat.",
+      "sysadmin": "SysAdmin membantu preserving evidence seperti log akses, email metadata, transaksi, dan data sistem tanpa merusak chain of custody.",
+      "legal": "Legal/GRC perlu memimpin atau mengawal prosedur investigasi, privilege, disiplin, dan kewajiban pelaporan."
+    },
+    "exampleEvidence": [
+      "Prosedur investigasi",
+      "Case register dan status penyelesaian",
+      "Laporan investigasi dan tindakan korektif"
+    ],
+    "implementationTips": "Definisikan intake, triage, investigator, konflik kepentingan, penyimpanan bukti, wawancara, legal hold, dan kriteria penutupan kasus.",
+    "analogy": "Investigasi seperti memeriksa retakan pada jembatan. Tujuannya bukan mencari kambing hitam, tapi menemukan fakta dan mencegah runtuh.",
+    "focusArea": "Investigation"
+  },
+  {
+    "id": "9.1",
+    "name": "Pemantauan dan pengukuran kinerja",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mendeteksi",
+    "capability": "Performance monitoring",
+    "description": "Organisasi perlu memantau, mengukur, menganalisis, dan mengevaluasi apakah ABMS berjalan efektif dan menghasilkan informasi yang berguna untuk keputusan.",
+    "roleTranslations": {
+      "bod": "Board perlu meminta indikator yang menjawab efektivitas, bukan hanya jumlah kegiatan.",
+      "sysadmin": "SysAdmin mendukung data quality, dashboard, dan integrasi sumber data monitoring.",
+      "legal": "Legal/GRC perlu menentukan indikator, metode pengukuran, frekuensi, dan interpretasi hasil."
+    },
+    "exampleEvidence": [
+      "Dashboard KPI ABMS",
+      "Laporan monitoring berkala",
+      "Analisis tren red flag atau laporan"
+    ],
+    "implementationTips": "Pantau indikator seperti due diligence completion, training high-risk role, exception payment, laporan masuk, waktu investigasi, audit finding, dan closure rate.",
+    "analogy": "Dashboard compliance seperti panel instrumen kendaraan. Ia tidak mengemudi, tapi memberi tahu kapan mesin mulai panas.",
+    "focusArea": "Monitoring"
+  },
+  {
+    "id": "9.2",
+    "name": "Audit internal ABMS",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mendeteksi",
+    "capability": "Internal audit",
+    "description": "Audit internal perlu dilakukan untuk menilai kesesuaian dan efektivitas ABMS, dengan auditor yang objektif dan program audit berbasis risiko.",
+    "roleTranslations": {
+      "bod": "Board perlu membaca temuan audit sebagai sinyal perbaikan sistem, bukan sekadar daftar kesalahan unit.",
+      "sysadmin": "SysAdmin perlu menyediakan evidence teknis dan akses read-only sesuai kebutuhan auditor.",
+      "legal": "Legal/GRC perlu memastikan scope audit, kriteria, independensi, dan tindak lanjut temuan jelas."
+    },
+    "exampleEvidence": [
+      "Program audit internal",
+      "Checklist dan laporan audit",
+      "Corrective action atas temuan"
+    ],
+    "implementationTips": "Pilih area audit berdasarkan risiko: procurement, payment, agent, donation, tender, gifts, dan investigasi. Pastikan auditor tidak mengaudit pekerjaannya sendiri.",
+    "analogy": "Audit internal seperti medical check-up. Lebih baik menemukan masalah saat masih bisa diperbaiki dengan ringan.",
+    "focusArea": "Audit"
+  },
+  {
+    "id": "9.3.1",
+    "name": "Tinjauan manajemen puncak",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Management review",
+    "description": "Manajemen puncak perlu meninjau ABMS secara berkala untuk memastikan kesesuaian, kecukupan, efektivitas, dan kebutuhan perubahan.",
+    "roleTranslations": {
+      "bod": "Direksi perlu menjadikan management review sebagai forum keputusan, bukan hanya laporan rutin.",
+      "sysadmin": "SysAdmin mendukung data dan status kontrol teknis yang masuk ke paket tinjauan.",
+      "legal": "Legal/GRC perlu menyiapkan input, agenda, keputusan, dan action item hasil tinjauan."
+    },
+    "exampleEvidence": [
+      "Agenda dan materi tinjauan manajemen",
+      "Notulen keputusan",
+      "Action tracker hasil review"
+    ],
+    "implementationTips": "Masukkan perubahan risiko, hasil audit, laporan dugaan pelanggaran, status objective, efektivitas kontrol, dan kebutuhan resource.",
+    "analogy": "Management review adalah pit stop. Tim berhenti sejenak agar bisa lanjut dengan lebih cepat dan aman.",
+    "focusArea": "Management Review"
+  },
+  {
+    "id": "9.3.2",
+    "name": "Tinjauan dewan pengarah",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Governing body review",
+    "description": "Dewan pengarah perlu meninjau informasi penting tentang kinerja ABMS agar dapat memberi arahan dan pengawasan pada level strategis.",
+    "roleTranslations": {
+      "bod": "Ini forum Board untuk menguji apakah sistem benar-benar memadai terhadap risiko, bukan sekadar melihat slide hijau.",
+      "sysadmin": "SysAdmin hanya perlu menyiapkan data pendukung bila diminta, terutama evidence dari sistem kritis.",
+      "legal": "Legal/GRC perlu menyajikan isu secara ringkas: risiko utama, keputusan yang dibutuhkan, dan konsekuensi bisnis."
+    },
+    "exampleEvidence": [
+      "Board pack terkait ABMS",
+      "Risalah tinjauan dewan",
+      "Arahan dan tindak lanjut dewan"
+    ],
+    "implementationTips": "Gunakan format executive: risiko utama, tren, kasus material, status mitigasi, gap resource, dan keputusan yang perlu disetujui.",
+    "analogy": "Dewan melihat peta dari ketinggian. Detail tetap penting, tapi yang dicari adalah arah dan bahaya besar.",
+    "focusArea": "Board Review"
+  },
+  {
+    "id": "9.4",
+    "name": "Tinjauan fungsi kepatuhan",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Compliance function review",
+    "description": "Fungsi kepatuhan anti-penyuapan perlu menilai kinerja ABMS dan melaporkan apakah sistem masih memadai untuk mengelola risiko organisasi.",
+    "roleTranslations": {
+      "bod": "Board perlu memperhatikan opini compliance, terutama bila ada keterbatasan sumber daya atau hambatan independensi.",
+      "sysadmin": "SysAdmin membantu menyediakan data yang dibutuhkan compliance function untuk menilai efektivitas kontrol.",
+      "legal": "Legal/GRC perlu mendokumentasikan review dan rekomendasi compliance function."
+    },
+    "exampleEvidence": [
+      "Laporan review fungsi kepatuhan",
+      "Rekomendasi perbaikan ABMS",
+      "Status tindak lanjut rekomendasi"
+    ],
+    "implementationTips": "Review sebaiknya tidak hanya menyebut kegiatan selesai, tetapi juga apakah kontrol bekerja, apakah red flag ditindaklanjuti, dan apakah fungsi compliance punya akses cukup.",
+    "analogy": "Fungsi kepatuhan seperti dokter program. Ia perlu memberi diagnosis, bukan sekadar mencatat jadwal kontrol.",
+    "focusArea": "Compliance Review"
+  },
+  {
+    "id": "10.1",
+    "name": "Ketidaksesuaian dan tindakan korektif",
+    "type": "Koreksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Meningkatkan",
+    "capability": "Corrective action",
+    "description": "Ketika ada ketidaksesuaian atau kelemahan kontrol, organisasi perlu merespons, mengendalikan dampak, mencari akar masalah, dan menjalankan tindakan korektif.",
+    "roleTranslations": {
+      "bod": "Board perlu memastikan temuan berulang ditangani sampai akar masalah, bukan hanya diberi jawaban administratif.",
+      "sysadmin": "SysAdmin membantu memperbaiki akar teknis seperti role conflict, log gap, atau workflow bypass.",
+      "legal": "Legal/GRC perlu memastikan CAPA terdokumentasi, diverifikasi, dan tidak ditutup sebelum efektif."
+    },
+    "exampleEvidence": [
+      "Log ketidaksesuaian",
+      "Root cause analysis",
+      "Corrective action plan dan verifikasi"
+    ],
+    "implementationTips": "Gunakan CAPA sederhana: masalah, dampak, akar penyebab, koreksi cepat, tindakan permanen, owner, due date, dan bukti efektivitas.",
+    "analogy": "Menambal gejala tanpa memperbaiki pipa membuat lantai kering sebentar, lalu basah lagi.",
+    "focusArea": "Corrective Action"
+  },
+  {
+    "id": "10.2",
+    "name": "Peningkatan berkelanjutan",
+    "type": "Koreksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Meningkatkan",
+    "capability": "Continual improvement",
+    "description": "ABMS perlu terus ditingkatkan agar tetap sesuai dengan perubahan risiko, struktur organisasi, model bisnis, regulasi, dan pengalaman dari audit atau insiden.",
+    "roleTranslations": {
+      "bod": "Board perlu mendorong perbaikan sebagai bagian dari ketahanan bisnis dan reputasi, bukan hanya proyek sertifikasi.",
+      "sysadmin": "SysAdmin dapat mengusulkan automasi, monitoring, dan kontrol sistem yang mengurangi pekerjaan manual rawan error.",
+      "legal": "Legal/GRC perlu menjaga backlog improvement dan memastikan pembelajaran dari kasus masuk ke kebijakan dan training."
+    },
+    "exampleEvidence": [
+      "Roadmap peningkatan ABMS",
+      "Lesson learned dari audit/investigasi",
+      "Bukti update kebijakan, kontrol, atau training"
+    ],
+    "implementationTips": "Tutup loop perbaikan: temuan menjadi action, action diverifikasi, pembelajaran masuk ke training, dan perubahan proses dicatat di dokumen resmi.",
+    "analogy": "Program anti-penyuapan seperti kebugaran. Sekali lulus tes bukan berarti bisa berhenti latihan.",
+    "focusArea": "Improvement"
+  }
+]

@@ -16,7 +16,7 @@
       </div>
       <div class="frx-disclaimer-copy">
         <p>
-          <strong>Disclaimer:</strong> Materi <strong>ISO 27001</strong> dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA. Harap merujuk pada dokumen standar resmi yang berlaku untuk keperluan formal.
+          <strong>Disclaimer:</strong> Materi <strong>ISO 27001</strong>, <strong>ISO 37001</strong>, dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA. Harap merujuk pada dokumen standar resmi yang berlaku untuk keperluan formal.
         </p>
       </div>
     </section>
@@ -33,7 +33,7 @@
             <span class="frx-desc-icon"><i class="fas fa-book-open"></i></span>
             <div>
               <h3 class="frx-desc-item-title">Framework Internasional</h3>
-              <p class="frx-desc-item-text">Pelajari ISO 27001:2022, NIST CSF 2.0, dan COBIT 2019 melalui ringkasan kontrol, domain, dan panduan pembacaan struktural dalam bahasa Indonesia.</p>
+              <p class="frx-desc-item-text">Pelajari ISO 27001:2022, ISO 37001:2016, NIST CSF 2.0, dan COBIT 2019 melalui ringkasan kontrol, domain, dan panduan pembacaan struktural dalam bahasa Indonesia.</p>
             </div>
           </div>
           <div class="frx-desc-item">
@@ -119,6 +119,16 @@ export default {
           metric_value: 93,
           accent: "#0f766e",
           icon: "fa-shield-alt",
+        },
+        {
+          routeName: "iso37001",
+          name: "ISO 37001:2016",
+          subtitle: "Ringkasan sistem manajemen anti-penyuapan",
+          summary: "Ringkasan edukatif ABMS, due diligence, kontrol operasional, pelaporan, audit, dan peningkatan.",
+          metric_label: "Butir",
+          metric_value: 38,
+          accent: "#b45309",
+          icon: "fa-handshake",
         },
         {
           routeName: "nist",
@@ -269,6 +279,7 @@ export default {
 
     const [
       isoCount,
+      iso37001Count,
       nistCount,
       cobitCount,
       seojkCount,
@@ -281,6 +292,7 @@ export default {
       simulatorCount,
     ] = await Promise.all([
       loadData("/data/iso27001.json"),
+      loadData("/data/iso37001.json"),
       loadData("/data/nist_csf.json"),
       loadData("/data/cobit_2019.json", "principles_system"),
       loadData("/data/seojk_requirements.json"),
@@ -294,16 +306,17 @@ export default {
     ]);
 
     this.frameworks[0].metric_value = isoCount || 93;
-    this.frameworks[1].metric_value = nistCount || 106;
-    this.frameworks[2].metric_value = cobitCount || 40;
-    this.frameworks[3].metric_value = seojkCount || 0;
-    this.frameworks[4].metric_value = padkCount || 0;
-    this.frameworks[5].metric_value = resilienceCount || 0;
-    this.frameworks[6].metric_value = pbiCount || 0;
-    this.frameworks[7].metric_value = padgCount || 0;
-    this.frameworks[8].metric_value = owaspTop10Count || 10;
-    this.frameworks[9].metric_value = owaspAsvsCount || 8;
-    this.frameworks[10].metric_value = simulatorCount || 6;
+    this.frameworks[1].metric_value = iso37001Count || 38;
+    this.frameworks[2].metric_value = nistCount || 106;
+    this.frameworks[3].metric_value = cobitCount || 40;
+    this.frameworks[4].metric_value = seojkCount || 0;
+    this.frameworks[5].metric_value = padkCount || 0;
+    this.frameworks[6].metric_value = resilienceCount || 0;
+    this.frameworks[7].metric_value = pbiCount || 0;
+    this.frameworks[8].metric_value = padgCount || 0;
+    this.frameworks[9].metric_value = owaspTop10Count || 10;
+    this.frameworks[10].metric_value = owaspAsvsCount || 8;
+    this.frameworks[11].metric_value = simulatorCount || 6;
   },
 };
 </script>

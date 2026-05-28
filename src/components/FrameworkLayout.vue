@@ -250,9 +250,10 @@
         [
             'label' => 'Internasional',
             'icon' => 'fa-globe-asia',
-            'active' => request()->routeIs('frameworks.iso27001') || request()->routeIs('frameworks.nist') || request()->routeIs('frameworks.cobit'),
+            'active' => request()->routeIs('frameworks.iso27001') || request()->routeIs('frameworks.iso37001') || request()->routeIs('frameworks.nist') || request()->routeIs('frameworks.cobit'),
             'items' => [
                 ['route' => 'frameworks.iso27001', 'label' => 'ISO 27001', 'icon' => 'fa-shield-alt'],
+                ['route' => 'frameworks.iso37001', 'label' => 'ISO 37001', 'icon' => 'fa-handshake'],
                 ['route' => 'frameworks.nist', 'label' => 'NIST CSF 2.0', 'icon' => 'fa-compass'],
                 ['route' => 'frameworks.cobit', 'label' => 'COBIT 2019', 'icon' => 'fa-project-diagram'],
             ],
