@@ -1,0 +1,555 @@
+[
+  {
+    "id": "V1",
+    "chapter": "V1",
+    "chapter_title": "Encoding and Sanitization",
+    "pillar": "Validation",
+    "title": "Injection Prevention via Encoding & Sanitization",
+    "summary": "This chapter discusses how to handle untrusted data to prevent technical vulnerabilities such as XSS and Injection through output encoding and data sanitization.",
+    "cadence": "Setiap pengembangan fitur UI & Backend",
+    "owner": "Developer",
+    "scoring": "Kriteria Utama Level 1-3",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use parameterized queries for database access.",
+      "Apply contextual output encoding to data rendered in the browser.",
+      "Sanitize HTML data using safe and tested libraries."
+    ],
+    "evidence": [
+      "SAST (Static Analysis) report for injection sink detection.",
+      "Code review in the dynamic data rendering section.",
+      "Evidence of using a framework that performs auto-encoding."
+    ],
+    "reporting": "Wajib bebas dari High-risk Injection vulnerabilities.",
+    "analogy": "Such as filtering dirty water (outside data) before it enters the house's clean water tank (system).",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Injection Prevention via Encoding & Sanitization'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Injection Prevention via Encoding & Sanitization'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Prevention of Injection via Encoding & Sanitization'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V2",
+    "chapter": "V2",
+    "chapter_title": "Validation and Business Logic",
+    "pillar": "Validation",
+    "title": "Input Validation & Business Logic Integrity",
+    "summary": "Ensure input data is formatted and the application's business logic cannot be manipulated for illegitimate gain.",
+    "cadence": "Fase Desain & Testing",
+    "owner": "Developer, QA",
+    "scoring": "Kritis untuk semua Level",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Validate data type, length, and format (Allow-list).",
+      "Make sure the business flow (step-by-step) cannot be bypassed.",
+      "Prevent manipulation of price or quantity parameters in transactions."
+    ],
+    "evidence": [
+      "Business logic test case documentation.",
+      "Unit tests for input validation.",
+      "Bug bounty report regarding business logic bypass."
+    ],
+    "reporting": "Meliputi integritas data dan kepatuhan aturan bisnis.",
+    "analogy": "Checking tickets and IDs at the cinema to ensure people are sitting in the correct seats.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Input Validation & Business Logic Integrity'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Input Validation & Business Logic Integrity'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Input Validation & Business Logic Integrity'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V3",
+    "chapter": "V3",
+    "chapter_title": "Web Frontend Security",
+    "pillar": "Frontend",
+    "title": "Client & Browser Side Security",
+    "summary": "Focus on protecting applications running in the browser, including content security policies and origin isolation.",
+    "cadence": "Deployment UI",
+    "owner": "Frontend Developer",
+    "scoring": "Penting untuk Level 1-3",
+    "appendices": [
+      "L1",
+      "L2"
+    ],
+    "focus": [
+      "Implement a strict Content Security Policy (CSP).",
+      "Use the Secure, HttpOnly, and SameSite cookie attributes.",
+      "Verifikasi integritas resource eksternal (Subresource Integrity)."
+    ],
+    "evidence": [
+      "Security header scan results (securityheaders.com).",
+      "CSP configuration on the web server side.",
+      "Evidence of no use of 'unsafe-inline' in the script."
+    ],
+    "reporting": "Postur keamanan browser pengguna.",
+    "analogy": "Install a fence and CCTV in the yard so that strangers cannot send suspicious packages inside.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Client & Browser Side Security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Client & Browser Side Security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Client & Browser Side Security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V4",
+    "chapter": "V4",
+    "chapter_title": "API and Web Service",
+    "pillar": "API",
+    "title": "Web Services & API Endpoint Security",
+    "summary": "Ensures secure communication between systems, including REST, GraphQL, and WebSocket.",
+    "cadence": "Rilis API Baru",
+    "owner": "Backend Developer",
+    "scoring": "Wajib untuk Modern Apps",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Validate HTTP message structure (JSON/XML).",
+      "Implement rate-limiting restrictions at the API level.",
+      "Use secure token-based authorization."
+    ],
+    "evidence": [
+      "API documentation (Swagger/OpenAPI) with security specs.",
+      "Log rate-limiting on API Gateway.",
+      "GraphQL query complexity audit results."
+    ],
+    "reporting": "Ketersediaan dan kerahasiaan endpoint layanan.",
+    "analogy": "Officers at service counters who only serve people with complete and correct forms.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Web Services & API Endpoint Security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Web Service & API Endpoint Security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Web Services & API Endpoint Security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V5",
+    "chapter": "V5",
+    "chapter_title": "File Handling",
+    "pillar": "Data Protection",
+    "title": "File Handling & Secure Storage",
+    "summary": "Protects the system from malicious files uploaded and ensures safe file access.",
+    "cadence": "Fitur Upload/Download",
+    "owner": "Developer, SysAdmin",
+    "scoring": "Risiko Tinggi (RCE/Malware)",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Save files outside the web root or in separate storage.",
+      "Strictly validate file extensions and MIME types.",
+      "Use random file names to prevent direct access."
+    ],
+    "evidence": [
+      "Private storage (S3/GCS) bucket configuration.",
+      "Log antivirus scan results on uploaded files.",
+      "Evidence of upload directory isolation."
+    ],
+    "reporting": "Integritas sistem dari ancaman malware via file.",
+    "analogy": "Quarantine room to check delivery packages before they are brought into the building.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'File Handling & Secure Storage'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'File Handling & Secure Storage'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'File Handling & Secure Storage'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V6",
+    "chapter": "V6",
+    "chapter_title": "Authentication",
+    "pillar": "Authentication",
+    "title": "Authentication & Identity Verification",
+    "summary": "Guarantees strong user identity verification, including password management and MFA.",
+    "cadence": "Tinjauan berkala sistem IAM",
+    "owner": "Security Team, Developer",
+    "scoring": "Pondasi Keamanan",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Implement a strong password policy (length > 12 characters).",
+      "Require MFA for accounts with privileged access.",
+      "Prevent username enumeration in login/forgot password forms."
+    ],
+    "evidence": [
+      "IAM (Identity Access Management) system configuration.",
+      "Brute-force protection audit report.",
+      "Proof of MFA implementation (TOTP/FIDO)."
+    ],
+    "reporting": "Keamanan akun dan pencegahan ATO (Account Takeover).",
+    "analogy": "Checking ID cards and face verification by security officers at the main gate.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Authentication & Identity Verification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Authentication & Identity Verification'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Authentication & Identity Verification'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V7",
+    "chapter": "V7",
+    "chapter_title": "Session Management",
+    "pillar": "Authentication",
+    "title": "User Session Management",
+    "summary": "Manage the session lifecycle to prevent session hijacking.",
+    "cadence": "Rilis aplikasi",
+    "owner": "Developer",
+    "scoring": "Wajib di semua Level",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use high entropy session tokens.",
+      "Implement session timeouts (inactivity & absolute).",
+      "Destroy the session on the server side when the user logs out."
+    ],
+    "evidence": [
+      "Configure session cookies (Secure/HttpOnly).",
+      "Proof of token withdrawal in database/cache when logging out.",
+      "Session fixation test results."
+    ],
+    "reporting": "Kontrol akses aktif pengguna.",
+    "analogy": "Provide visitor wristbands that are valid for one day only in the recreation area.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'User Session Management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'User Session Management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'User Session Management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V8",
+    "chapter": "V8",
+    "chapter_title": "Authorization",
+    "pillar": "Authentication",
+    "title": "Authorization & Access Rights Control",
+    "summary": "Ensure users can only access resources they are entitled to.",
+    "cadence": "Review hak akses berkala",
+    "owner": "Security Tester, Admin",
+    "scoring": "Kritis (Pencegahan IDOR/BOLA)",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Apply the principle of 'Least Privilege'.",
+      "Perform authorization checks on the server side for each request.",
+      "Prevent direct access to data objects (IDOR)."
+    ],
+    "evidence": [
+      "Matrix access control (RBAC/ABAC).",
+      "Penetration testing results for authorization bypass.",
+      "Audit logs of access to sensitive data."
+    ],
+    "reporting": "Kepatuhan privasi data per pengguna.",
+    "analogy": "A hotel room key that can only open your room, not other guests' rooms.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Authorization & Access Rights Control'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Authorization & Access Rights Control'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Access Rights Authorization & Control'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V9",
+    "chapter": "V9",
+    "chapter_title": "Self-contained Tokens",
+    "pillar": "Authentication",
+    "title": "Mandiri Token Security (JWT/Paseto)",
+    "summary": "Secure the use of stateless tokens such as JWT so that they are not easily manipulated.",
+    "cadence": "Desain arsitektur token",
+    "owner": "Security Architect, Developer",
+    "scoring": "Wajib untuk Stateless Apps",
+    "appendices": [
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use a strong digital signature algorithm (e.g. EdDSA/RS256).",
+      "Do not store sensitive data in the token payload.",
+      "Validate token integrity and expiration on each endpoint."
+    ],
+    "evidence": [
+      "Review the JWT library configuration.",
+      "Proof of using 'jti' to prevent reply attacks.",
+      "Configure key rotation for tokens."
+    ],
+    "reporting": "Integritas klaim identitas dalam token.",
+    "analogy": "Meal coupons are stamped with a special stamp so they cannot be photocopied by other people.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Mandiri Token Security (JWT/Paseto)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Mandiri Token Security (JWT/Paseto)'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Mandiri Token Security (JWT/Paseto)'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V10",
+    "chapter": "V10",
+    "chapter_title": "OAuth and OIDC",
+    "pillar": "Authentication",
+    "title": "Third Party Access & Identity Delegation",
+    "summary": "Secure third-party login integration and permission delegation using standard protocols.",
+    "cadence": "Integrasi eksternal",
+    "owner": "Security Architect",
+    "scoring": "Penting untuk Integrasi",
+    "appendices": [
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use the 'state' parameter to prevent CSRF in OAuth flows.",
+      "Strictly validate redirect URIs.",
+      "Only ask for scope data that is really needed."
+    ],
+    "evidence": [
+      "Configure the OAuth client in the Identity Provider.",
+      "Authorization data flow audit results.",
+      "Proof of using PKCE for public clients."
+    ],
+    "reporting": "Keamanan ekosistem integrasi aplikasi.",
+    "analogy": "A special power of attorney that only allows the courier to pick up certain packages, not the entire contents of the warehouse.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Third Party Access & Identity Delegation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Third Party Access & Identity Delegation'.",
+      "legal": "Legal Mode: Review SLAs and sanctions clauses (Right to Audit & Penalty) on vendors regarding implementation of 'Third Party Access & Identity Delegation'."
+    }
+  },
+  {
+    "id": "V11",
+    "chapter": "V11",
+    "chapter_title": "Cryptography",
+    "pillar": "Data Protection",
+    "title": "Secure Cryptography Implementation",
+    "summary": "Use of standard encryption and hashing algorithms to protect data.",
+    "cadence": "Audit keamanan tahunan",
+    "owner": "Security Engineer",
+    "scoring": "Standar Industri Tinggi",
+    "appendices": [
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use algorithms that are not yet obsolete (eg: AES-GCM, Argon2id).",
+      "Manage cryptographic keys in HSM or Vault.",
+      "Avoid creating your own cryptographic algorithms."
+    ],
+    "evidence": [
+      "Inventory list of algorithms used.",
+      "Proof of key separation from source code (Code isolation).",
+      "Certification of the cryptographic module used."
+    ],
+    "reporting": "Ketahanan data terhadap upaya dekripsi ilegal.",
+    "analogy": "Uses a military standard padlock with the key stored in an iron safe.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Secure Cryptographic Implementation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Secure Cryptographic Implementation'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Secure Cryptography Implementation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V12",
+    "chapter": "V12",
+    "chapter_title": "Secure Communication",
+    "pillar": "Communication",
+    "title": "Communication Channel Security (TLS)",
+    "summary": "Protects data as it moves between clients and servers through network encryption.",
+    "cadence": "Konfigurasi Infrastruktur",
+    "owner": "DevOps, SysAdmin",
+    "scoring": "Wajib di semua Level",
+    "appendices": [
+      "L1",
+      "L2"
+    ],
+    "focus": [
+      "Require the use of HTTPS/TLS across all application areas.",
+      "Disable legacy protocols (SSLv3, TLS 1.0, 1.1).",
+      "Implement HSTS to prevent downgrading attacks."
+    ],
+    "evidence": [
+      "SSL Labs Report with Grade A/A+.",
+      "TLS configuration in Load Balancer/Nginx.",
+      "Proof of a valid certificate from a trusted CA."
+    ],
+    "reporting": "Kerahasiaan data dalam perjalanan (In-transit).",
+    "analogy": "Sending secret letters in locked steel tubes carried by special couriers.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Communication Channel Security (TLS)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Communication Channel Security (TLS)'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Communication Channel Security (TLS)'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V13",
+    "chapter": "V13",
+    "chapter_title": "Configuration",
+    "pillar": "Architecture",
+    "title": "Security & Hardening Configuration",
+    "summary": "Ensure servers and application dependencies are configured securely.",
+    "cadence": "Deployment & Patching",
+    "owner": "DevOps",
+    "scoring": "Operasional Keamanan",
+    "appendices": [
+      "L1",
+      "L2"
+    ],
+    "focus": [
+      "Turn off unneeded server features/services.",
+      "Use secret management for API Key/DB Pass.",
+      "Regularly update library dependencies to patch gaps."
+    ],
+    "evidence": [
+      "Secret inventory list (Secret inventory).",
+      "Dependency scan results (Dependency-check).",
+      "Configure a hardened server."
+    ],
+    "reporting": "Kebersihan postur infrastruktur pendukung.",
+    "analogy": "Make sure all additional windows and doors in the house are locked, not just the main door.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Security & Hardening Configuration'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Security Configuration & Hardening'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Security Configuration & Hardening'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V14",
+    "chapter": "V14",
+    "chapter_title": "Data Protection",
+    "pillar": "Data Protection",
+    "title": "Data Protection & Privacy",
+    "summary": "Focus on protecting sensitive data during storage and processing.",
+    "cadence": "Audit Privasi Data",
+    "owner": "Data Privacy Officer, DBA",
+    "scoring": "Kepatuhan Hukum (PDP/GDPR)",
+    "appendices": [
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Classify data based on sensitivity level.",
+      "Apply masking or encryption to PII data in the database.",
+      "Make sure data is not leaked through cache or logs."
+    ],
+    "evidence": [
+      "Company data classification policy.",
+      "Proof of column encryption (Field-level encryption) in the DB.",
+      "Review log untuk memastikan tidak ada data sensitif (misal: CVV)."
+    ],
+    "reporting": "Kepatuhan terhadap regulasi perlindungan data pribadi.",
+    "analogy": "Store patient medical records in a locked cabinet that only doctors can open.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Data Protection & Privacy'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data Protection & Privacy'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Data Protection & Privacy'."
+    }
+  },
+  {
+    "id": "V15",
+    "chapter": "V15",
+    "chapter_title": "Secure Coding and Architecture",
+    "pillar": "Architecture",
+    "title": "Secure Coding Architecture & Principles",
+    "summary": "Apply security design principles from the start of application development.",
+    "cadence": "Fase Perancangan",
+    "owner": "Security Architect",
+    "scoring": "Keamanan Jangka Panjang",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Separate components based on trust levels (Trust Boundaries).",
+      "Use validated security libraries.",
+      "Implement safe error handling (Safe Error Handling)."
+    ],
+    "evidence": [
+      "System security architecture diagram.",
+      "Internal standard secure coding guidelines.",
+      "Application Threat Modeling report."
+    ],
+    "reporting": "Kekokohan desain aplikasi terhadap serangan sistemik.",
+    "analogy": "Build houses with anti-earthquake foundations and fire-resistant materials.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Secure Coding Architecture & Principles'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Secure Coding Architecture & Principles'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Secure Coding Architecture & Principles'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V16",
+    "chapter": "V16",
+    "chapter_title": "Security Logging and Error Handling",
+    "pillar": "Security Operations",
+    "title": "Security Logging & Error Management",
+    "summary": "Logging activity is important for attack detection and auditing.",
+    "cadence": "Operasional Harian",
+    "owner": "Security Ops, Developer",
+    "scoring": "Forensik & Monitoring",
+    "appendices": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Log all authentication and access control failures.",
+      "Don't display stack traces or technical details to end users.",
+      "Make sure the logs cannot be modified by unauthorized parties."
+    ],
+    "evidence": [
+      "SIEM Dashboard/Monitoring Log.",
+      "Log file integrity audit results.",
+      "Example of a user-friendly error message (generic error)."
+    ],
+    "reporting": "Kemampuan deteksi insiden dan audit trail.",
+    "analogy": "Guest book and CCTV recordings that record anyone who tries to enter the restricted area.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Security Logging & Fault Management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Security Logging & Fault Management'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Security Logging & Error Management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V17",
+    "chapter": "V17",
+    "chapter_title": "WebRTC",
+    "pillar": "Communication",
+    "title": "Real-time Communications Security (WebRTC)",
+    "summary": "Secures the flow of voice, video and data between browsers directly.",
+    "cadence": "Fitur Media Streaming",
+    "owner": "Developer",
+    "scoring": "Khusus Aplikasi Media",
+    "appendices": [
+      "L2",
+      "L3"
+    ],
+    "focus": [
+      "Use SRTP for media stream encryption.",
+      "Secure signaling servers and TURN/STUN servers.",
+      "Ask the user for permission before accessing the camera or microphone."
+    ],
+    "evidence": [
+      "Configure DTLS-SRTP on media sessions.",
+      "Authorization log on the TURN server.",
+      "Review browser permissions for hardware access."
+    ],
+    "reporting": "Privasi komunikasi multimedia pengguna.",
+    "analogy": "Telephone lines that are intercepted are encrypted so they cannot be listened to by cable operators.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Real-time Communications (WebRTC) Security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Real-time Communication Security (WebRTC)'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Real-time Communications Security (WebRTC)'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

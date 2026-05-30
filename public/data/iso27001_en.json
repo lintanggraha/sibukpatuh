@@ -1,0 +1,2237 @@
+[
+  {
+    "id": "5.1",
+    "name": "Information security policy",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Make sure the organization has official documents that explain how information security is carried out. This document needs to be approved by leadership, shared with the entire team, and checked regularly so that it remains relevant to business developments.",
+    "roleTranslations": {
+      "bod": "Mr/Mrs Directors, make sure there is an annual budget for audits and creating security policies, so that our organization is not fined by regulators of billions of Rupiah if a data leak occurs.",
+      "sysadmin": "Bro, make sure you implement password and server access rules according to the approved policy document. Don't have a server that runs using the default password.",
+      "legal": "Ensure that an obligation to comply with this security policy clause is included in every new employee employment contract and third-party vendor collaboration agreement."
+    },
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Mulai dengan membuat draft kebijakan yang sederhana dan relevan dengan bisnis. Libatkan C-level untuk approval, lalu sosialisasi ke seluruh karyawan melalui email blast dan briefing. Review kebijakan minimal setahun sekali atau saat ada perubahan regulasi signifikan.",
+    "analogy": "Like a compass that provides direction on a journey, a security policy provides clear guidance to the entire organization about what to protect and how.",
+    "focusArea": "Tata Kelola & Kebijakan"
+  },
+  {
+    "id": "5.2",
+    "name": "Information security roles and responsibilities",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Clearly explain who is responsible for what aspect of security. Each role must have specific tasks that are neatly recorded, so that there are no overlaps or gaps in responsibilities.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat RACI matrix yang jelas untuk setiap aspek keamanan informasi. Tetapkan CISO atau security champion. Dokumentasikan job description setiap role dan komunikasikan melalui onboarding session.",
+    "analogy": "Just as a soccer team has specific positions—goalkeeper, defender, striker—everyone in the organization must know their role in maintaining information security.",
+    "focusArea": "Struktur Organisasi",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security roles and responsibilities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security roles and responsibilities'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security roles and responsibilities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.3",
+    "name": "Separation of duties",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Separate tasks that, if handled by one person, could potentially lead to a conflict of interest. For example, the person who creates the system should not be the same person who verifies its security. This helps prevent abuse of authority.",
+    "roleTranslations": {
+      "bod": "Sir/Madam, make sure the organizational structure prevents the accumulation of power in one person. The CFO may not hold super IT admin access. This is crucial for preventing internal fraud.",
+      "sysadmin": "Bro, make sure you set the role in IAM specifically. Developers cannot have product access, and database admins cannot control the application server.",
+      "legal": "Make sure there are no findings of violations of separation of duties as this is often a critical finding by external auditors that can result in a reprimand."
+    },
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi fungsi-fungsi yang berpotensi konflik (misal: developer vs deployer, buyer vs payer). Implementasi segregation of duties matrix di sistem. Lakukan review akses berkala setiap 6 bulan.",
+    "analogy": "As in a restaurant, the chef who cooks is not the same as the cashier who handles the money—this separation prevents fraud and ensures quality.",
+    "focusArea": "Pengendalian Internal"
+  },
+  {
+    "id": "5.4",
+    "name": "Management responsibilities",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Organizational leaders must actively ensure that all employees follow the established security rules. Not only making rules, but also ensuring consistent implementation.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Manajemen harus memberikan contoh dengan mengikuti training keamanan terlebih dahulu. Sertakan KPI keamanan dalam performance review. Adakan town hall meeting quarterly untuk update progress keamanan.",
+    "analogy": "Like a team coach who not only provides strategies but also ensures that each player carries them out, management must actively encourage the implementation of information security.",
+    "focusArea": "Kepemimpinan",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Management responsibilities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Management responsibility'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Management responsibilities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.5",
+    "name": "Contact with competent authorities",
+    "type": "Koreksi",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Prepare a list of important contacts such as BSSN, police (cybercrime unit), or related regulatory agencies. This good relationship is very useful when the organization needs assistance or reports incidents.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat daftar kontak BSSAN, POLRI (unit cybercrime), dan Kominfo. Simpan dalam kontak darurat yang mudah diakses. Lakukan silaturahmi rutin minimal setahun sekali untuk membangun relasi.",
+    "analogy": "Like having an emergency telephone number ready to call when a problem occurs, contact with authorities helps organizations respond appropriately to incidents.",
+    "focusArea": "Hubungan Eksternal",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Contacts with competent authorities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Contact with competent authority'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Contact with competent authorities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.6",
+    "name": "Contact with special interest groups",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Join a cybersecurity professional community such as ID-SIRTII or the Indonesian CISO forum. From here, the team can get updates on the latest threats and share experiences with other practitioners.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Gabung dengan ID-SIRTII, MALSPINDO, atau komunitas CISO Indonesia. Aktif di forum sharing ancaman siber. Hadiri minimal 2 event keamanan informasi per tahun untuk update best practices.",
+    "analogy": "Just like joining a community of doctors to stay updated on the latest treatment methods, joining a security forum helps organizations stay updated on the latest threats.",
+    "focusArea": "Networking & Komunitas",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Contacts with special interest groups'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Contact with special interest groups'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Contact with special interest groups'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.7",
+    "name": "Threat intelligence",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Gather information about active cyber threats, then analyze their impact on the organization. Threat intelligence helps teams prepare before an attack actually occurs.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Subscribe ke feed threat intelligence gratis seperti MISP atau AlienVault OTB. Tetapkan tim kecil yang bertugas menganalisis threat feed mingguan. Buat briefing bulanan tentang ancaman terbaru yang relevan dengan industri.",
+    "analogy": "Just as meteorological agencies monitor the weather to predict storms, threat intelligence helps organizations anticipate attacks before they occur.",
+    "focusArea": "Threat Intelligence",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Threat intelligence' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'threat intelligence'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Threat intelligence'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.8",
+    "name": "Information security in project management",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Every project—regardless of type—must include information security aspects from the start of planning. Don't wait until the project is finished to think about security.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Tambahkan checklist keamanan di project charter setiap proyek. Libatkan tim security di kick-off meeting. Sertakan security review sebagai gate di stage-gate process proyek.",
+    "analogy": "Just as seat belts must be worn in any car, information security must be part of every project, regardless of type.",
+    "focusArea": "Integrasi Proyek",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security in project management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security in project management'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security in project management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.9",
+    "name": "Inventory information and other related assets",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Make a complete list of all the information assets you own: laptops, servers, databases, applications, even data in the cloud. Each asset must have a clear owner and business value.",
+    "exampleEvidence": [
+      "Spreadsheet inventaris aset atau CMDB",
+      "Register klasifikasi data",
+      "Pemilik aset yang ditunjuk untuk setiap aset signifikan",
+      "Catatan tinjauan inventaris aset secara berkala",
+      "Output alat manajemen aset perangkat lunak",
+      "Inventaris aset Cloud"
+    ],
+    "implementationTips": "Mulai dengan spreadsheet sederhana: nama aset, owner, lokasi, klasifikasi, criticality. Lakukan stock opname aset IT quarterly. Gunakan tools seperti Snipe-IT jika aset sudah ratusan.",
+    "analogy": "Like a table of contents in a book helps you find specific pages, an asset inventory helps an organization know what to protect and where it is located.",
+    "focusArea": "Manajemen Aset",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Inventory of information and other related assets'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Inventory of information and other related assets'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Inventory of information and other related assets'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.10",
+    "name": "Acceptable use of assets",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Manajemen aset",
+    "description": "Create clear rules about how employees can use company IT assets. For example, office laptops can be used for remote work, but not for cryptocurrency mining.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat AUP yang jelas menyebutkan apa yang boleh dan tidak boleh dilakukan dengan aset IT. Minta karyawan tanda tangan AUP saat onboarding. Sosialisasikan dengan contoh kasus pelanggaran yang sering terjadi.",
+    "analogy": "Like the rules for using company vehicles—allowed for business use only, not personal vacations—IT assets also need clear usage limits.",
+    "focusArea": "Acceptable Use Policy",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Acceptable use of assets'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Acceptable use of assets'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Acceptable use of assets'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.11",
+    "name": "Return on assets",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "When employees resign or move divisions, make sure all loaned assets—laptops, system access, ID cards—are returned. Create a checklist that is integrated with HR processes.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat checklist exit clearance yang mencakup pengembalian laptop, ID card, token, dan akses sistem. Integrasikan dengan proses HR saat resign. Tetapkan timeline 1-3 hari kerja untuk pengembalian semua aset.",
+    "analogy": "Like returning apartment keys at check-out, all organizational assets must be returned when employees leave or finish work.",
+    "focusArea": "Offboarding",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Return on assets'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Asset recovery'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Return of assets'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.12",
+    "name": "Information classification",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Classify data based on its sensitivity: which can be public, which is internal, which is confidential. This classification is the basis for determining the level of protection.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Definisikan 3-4 level klasifikasi: Public, Internal, Confidential, Restricted. Buat kriteria yang jelas untuk setiap level. Mulai klasifikasi dari data paling kritis dulu, lalu ekspansi bertahap.",
+    "analogy": "Like hospital triage systems that prioritize patients based on severity, information classification helps prioritize data protection.",
+    "focusArea": "Data Classification",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information classification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information classification'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Information classification'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.13",
+    "name": "Information labeling",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Label or mark each document or file according to its classification. This label reminds anyone handling the level of caution required.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasikan label digital (header/footer dokumen, email subject tag) dan fisik (stiker pada dokumen kertas). Gunakan watermark untuk dokumen confidential. Otomatisasi labeling dengan DLP jika memungkinkan.",
+    "analogy": "Just as a 'fragile' label on a package reminds the courier to be careful, classification labels tell employees how to handle information.",
+    "focusArea": "Labeling",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Information labelling'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information labeling'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Information labelling'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.14",
+    "name": "Information transfer",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Kesinambungan bisnis",
+    "description": "When sending data—whether via email, USB, or the cloud—use a secure method appropriate to the sensitivity of the data. Confidential data should not be sent via regular email without encryption.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Tetapkan metode transfer aman: SFTP untuk file besar, encrypted email untuk data sensitif, secure portal untuk sharing eksternal. Larang penggunaan personal email atau USB untuk transfer data perusahaan.",
+    "analogy": "Like sending money with an anti-theft safe, transferring information requires special protection so that it is not stolen in the middle of the road.",
+    "focusArea": "Data Transfer",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Information transfer'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information transfer'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Transfer of information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.15",
+    "name": "Access management",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen aset",
+    "description": "Set who can access certain information and assets. The principle: provide access only to the extent needed to carry out the task (least privilege).",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Terapkan prinsip least privilege dari awal. Buat workflow approval untuk request akses baru. Review akses user setiap 3-6 bulan, terutama untuk sistem kritis.",
+    "analogy": "Like the access card system in hotels—guests can only enter their own rooms, not other people's rooms—access should be based on need.",
+    "focusArea": "Access Control",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Access management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Access management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Access management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.16",
+    "name": "Identity management",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Manage employee digital identities from entry to exit from the company. Including account creation, role changes, and removing access when resigning.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Integrasikan sistem HR dengan Active Directory untuk automate provisioning/deprovisioning. Pastikan proses join-mover-leaver berjalan lancar. Audit identitas user yang tidak aktif setiap bulan.",
+    "analogy": "Just like creating a new KTP, extending it, and revoking it when moving cities, digital identity also needs to be managed from start to finish.",
+    "focusArea": "Identity Lifecycle",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Identity management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Identity management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Identity management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.17",
+    "name": "Authentication information",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Tightly manage authentication information such as passwords, tokens, or digital certificates. Require the use of strong passwords and multi-factor authentication for critical systems.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Wajibkan password minimal 12 karakter dengan kompleksitas. Implementasi MFA untuk semua sistem critical. Gunakan password manager enterprise. Rotasi password setiap 90 hari untuk akun privileged.",
+    "analogy": "Just as ATM passwords must be kept secret and changed periodically, authentication information needs to be managed tightly to prevent misuse.",
+    "focusArea": "Authentication Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Authentication information'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Authentication information'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Authentication information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.18",
+    "name": "Access rights",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Determine each user's access rights based on their position, and routinely review whether access is still appropriate. Revoke access when no longer needed or when a user changes roles.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat prosedur formal untuk grant, modify, dan revoke access. Implementasi role-based access control (RBAC). Lakukan recertification akses quarterly untuk sistem yang mengandung data sensitif.",
+    "analogy": "Like keys that must be taken back when an employee resigns, access rights must also be revoked immediately so that they are not misused.",
+    "focusArea": "Access Rights",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Access rights'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Access rights'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Access rights'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.19",
+    "name": "Information security in relations with suppliers",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Evaluate security risks that may arise from collaboration with vendors or suppliers. Make sure the contract includes security obligations and audit rights.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat questionnaire security assessment untuk vendor baru. Sertakan klausul keamanan di kontrak. Lakukan audit atau request bukti compliance vendor sebelum onboard.",
+    "analogy": "Just as you check a contractor's reputation before hiring them, a supplier's security risks should be evaluated before collaborating.",
+    "focusArea": "Supplier Risk",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security in supplier relationships'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security in relations with suppliers'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security in relationships with suppliers'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.20",
+    "name": "Information security management for cloud services",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen aset",
+    "description": "When using cloud services, understand the shared responsibility model. Configure security settings correctly and monitor cloud activity regularly.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Pahami shared responsibility model untuk setiap cloud provider. Konfigurasi security group dan IAM dengan benar dari awal. Enable logging dan monitoring untuk semua layanan cloud.",
+    "analogy": "It's like renting a safe at a bank—you have to trust the bank to look after it, but also make sure that what you store is allowed there.",
+    "focusArea": "Cloud Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security management for cloud services'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information security management for cloud services'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security management for cloud services'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.21",
+    "name": "Information security in the IT supply chain",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Monitor security along the IT supply chain. If any vendor becomes a weak point, the risk can spread to the organization. Diversify vendors to reduce risk.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Map seluruh supply chain TI dan identifikasi single point of failure. Request business continuity plan dari vendor kritis. Diversifikasi vendor untuk mengurangi risiko ketergantungan.",
+    "analogy": "Just as restaurants must ensure their food suppliers are safe, organizations must ensure their IT supply chain does not become a security weak point.",
+    "focusArea": "Supply Chain Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security in the IT supply chain'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security in the IT supply chain'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security in the IT supply chain'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.22",
+    "name": "Compliance with information security policies, rules and standards",
+    "type": "Deteksi",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Routinely check whether security implementation is in accordance with established policies and standards. Create a compliance checklist and track the progress of remediation findings.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat compliance checklist berdasarkan kebijakan internal. Lakukan self-assessment berkala setiap quarter. Track remediation plan untuk temuan yang belum ditutup.",
+    "analogy": "Like annual vehicle fitness tests, regular compliance reviews ensure an organization's security is still on track.",
+    "focusArea": "Compliance Monitoring",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Compliance with information security policies, rules and standards' is monitored in audit reports. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Compliance with information security policies, rules and standards'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Compliance with information security policies, rules and standards'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.23",
+    "name": "Relations with the information and security community",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Actively share threat information with other organizations via forums or ISAC. This collaboration helps all parties be better prepared to face the same threats.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Aktif berpartisipasi di ISAC (Information Sharing and Analysis Center) sektor industri Anda. Share anonymized threat data untuk membantu komunitas. Manfaatkan intelligence yang didapat untuk improve defense.",
+    "analogy": "Just as RT systems share environmental security information with each other, security communities help organizations share threat information with each other.",
+    "focusArea": "Information Sharing",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Relations with the information and security community'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Relationship with the information and security community'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Relations with the information and security community'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.24",
+    "name": "Business continuity information security planning and preparation",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Kesinambungan bisnis",
+    "description": "Prepare an information security plan that supports business continuity during a crisis. Identify critical processes and determine how long the system can be down.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi business process kritis dan Maximum Tolerable Downtime. Buat BCP yang mencakup skenario worst-case. Lakukan tabletop exercise minimal setahun sekali untuk uji kesiapan.",
+    "analogy": "Just as fire drills train evacuations before a real disaster, continuity planning prepares an organization for a crisis.",
+    "focusArea": "Business Continuity",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Business continuity information security planning and preparation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Business continuity information security planning and preparation'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Business continuity information security planning and preparation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.25",
+    "name": "Initial compliance assessments and decisions",
+    "type": "Deteksi",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Manajemen aset",
+    "description": "Identify all legal and regulatory obligations that apply to the organization, such as the PDP Law or OJK provisions. Create a compliance matrix and assign PICs for each requirement.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Inventory semua kewajiban hukum yang berlaku (UU PDP, PP 71/2019, dll). Buat compliance matrix dan assign PIC untuk setiap requirement. Review legal compliance saat ada regulasi baru.",
+    "analogy": "Like a health check before starting a gym, an initial compliance assessment ensures the organization is ready to meet all safety obligations.",
+    "focusArea": "Legal Compliance",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with the 'Initial compliance assessment and decision' is monitored in the audit report. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Preliminary compliance assessment and decision'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Initial compliance assessment and decision'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.26",
+    "name": "Legal, regulatory and contractual requirements",
+    "type": "Koreksi",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Continue to monitor regulatory changes that impact information security. Subscribe to the BSSN, OJK, or legal consultant newsletter to stay updated.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Subscribe ke update regulasi dari OJK, Kominfo, atau BSSN. Buat legal register yang diupdate quarterly. Konsultasi dengan legal counsel untuk interpretasi requirement yang ambigu.",
+    "analogy": "Like a list of traffic rules that drivers must comply with, security legal requirements must be known to organizations and adhere to.",
+    "focusArea": "Regulatory Requirements",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Legal, regulatory and contractual requirements' is monitored in audit reports. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Legal, regulatory and contractual requirements'.",
+      "legal": "Legal Mode: Review SLAs and sanctions clauses (Right to Audit & Penalty) on vendors regarding implementation of 'Legal, regulatory and contractual requirements'."
+    }
+  },
+  {
+    "id": "5.27",
+    "name": "Immutability and disposition of recorded information",
+    "type": "Koreksi",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Protect important documents from unauthorized deletion or modification. Determine how long documents should be kept and how to destroy them safely.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Definisikan retention period untuk setiap jenis dokumen berdasarkan hukum dan bisnis. Implementasi automated retention di DMS. Pastikan proses disposal dilakukan dengan secure destruction.",
+    "analogy": "Like important records stored in fireproof cabinets, recorded information must be protected from being lost or carelessly altered.",
+    "focusArea": "Record Retention",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Permanence and disposition of information records'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Immutability and disposition of information records'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Permanence and disposition of information records'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.28",
+    "name": "Privacy assurance and PII protection",
+    "type": "Koreksi",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Identify personal data managed by the organization and ensure its protection in accordance with applicable privacy laws. Appoint a DPO if the volume of personal data processed is large.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Lakukan data mapping untuk tahu di mana PII disimpan. Implementasi privacy by design di setiap sistem baru. Tunjuk DPO jika volume PII yang diproses besar.",
+    "analogy": "Like doctors who protect patient confidentiality, organizations are obliged to protect the personal data entrusted to them.",
+    "focusArea": "Privacy & PII Protection",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Privacy assurance and PII protection'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Privacy guarantee and PII protection'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Guarantee of privacy and protection of PII'."
+    }
+  },
+  {
+    "id": "5.29",
+    "name": "Independent assessment of information security",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Kesinambungan bisnis",
+    "description": "Invite an independent party to periodically review the effectiveness of the information security program. External audits provide an objective perspective that internal teams may miss.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Jadwalkan audit internal minimal setahun sekali oleh tim independen. Gunakan framework audit yang recognized (ISO 27001, NIST). Tindak lanjuti temuan dengan remediation plan yang terukur.",
+    "analogy": "Like a financial audit by an external accountant, an independent assessment provides an objective view of security effectiveness.",
+    "focusArea": "Independent Review",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Independent assessment of information security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Independent assessment of information security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Independent assessment of information security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.30",
+    "name": "Information security requirements in the ICT development process",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Manajemen aset",
+    "description": "Integrate security requirements into the IT system development process. Perform threat modeling and security reviews before new features are released.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Integrasikan security checkpoint di SDLC. Wajibkan threat modeling untuk setiap fitur baru. Lakukan code review dan security testing sebelum release.",
+    "analogy": "Just as the foundation of a building must be strong from the start, security must be built in from the start in system development, not added later.",
+    "focusArea": "ICT Development Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security requirements in the ICT development process'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security requirements in the ICT development process'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Information security requirements in the ICT development process'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.31",
+    "name": "Legal development and control",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Ensure all legal aspects of security implementation have been consulted with the legal team. Including contract clauses with vendors and internal policies that impact employees.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Review semua kontrak dan perjanjian dari aspek keamanan informasi. Pastikan ada klausul right-to-audit untuk vendor. Konsultasi legal sebelum implementasi kontrol yang berdampak ke karyawan.",
+    "analogy": "Just like building permits must be met before building, legal aspects must be controlled before implementing the system.",
+    "focusArea": "Legal Controls",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Legal development and control'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Legal development and control'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Legal development and control'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.32",
+    "name": "Management of intellectual property rights",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Manage software licenses and intellectual property rights neatly. Use tools for tracking usage and make sure there is no pirated software installed.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Inventory semua software yang digunakan dan cek lisensinya. Gunakan software asset management tool untuk track license compliance. Lakukan audit software internal setiap 6 bulan.",
+    "analogy": "Like respecting musicians' copyrights by purchasing original songs, organizations must respect the licenses of the software used.",
+    "focusArea": "Intellectual Property",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Intellectual property rights management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Intellectual property rights management'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Intellectual property rights management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.33",
+    "name": "Record protection",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Protect important records such as system logs, CCTV, or backup data from unauthorized access or modification. Store in a safe and controlled place.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi records yang wajib dilindungi berdasarkan hukum. Implementasi access control dan encryption untuk records sensitif. Buat backup terpisah untuk records penting.",
+    "analogy": "Like CCTV footage stored in a locked room, system footage must be protected from being manipulated.",
+    "focusArea": "Records Protection",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Record protection'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Record protection'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Record protection'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.34",
+    "name": "Privacy and PII protection",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Ensure privacy and personal data (PII) protection is implemented according to regulations. Create procedures to handle data subject requests such as access rights or deletion.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat privacy notice yang jelas untuk data subject. Implementasi consent management system. Pastikan ada prosedur untuk handle request hak data subject (akses, hapus, rectifikasi).",
+    "analogy": "Like private letters that cannot be read by other people, personal data must also be kept confidential.",
+    "focusArea": "Privacy Compliance",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Privacy and protection of PII'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Privacy and PII protection'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Privacy and protection of PII'."
+    }
+  },
+  {
+    "id": "5.35",
+    "name": "Independent review of information security",
+    "type": "Deteksi",
+    "domain": "Organisasional",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Conduct an independent assessment of the maturity of the information security program. Use a certified assessor to get a credible evaluation.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Lakukan gap analysis terhadap ISO 27001 secara berkala. Gunakan assessor bersertifikasi untuk audit eksternal. Benchmark dengan organisasi sejenis untuk improve maturity.",
+    "analogy": "Like a second opinion from a specialist, an independent review provides a new perspective on safety effectiveness.",
+    "focusArea": "Security Assessment",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Independent review of information security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Independent review of information security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Independent review of information security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.36",
+    "name": "Compliance with information security policies and standards",
+    "type": "Deteksi",
+    "domain": "Organisasional",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Regularly monitor compliance with security policies. Create metrics that are easy for management to understand and report progress regularly.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat metrics untuk track compliance (misal: % user yang sudah training). Implementasi automated compliance checking di mana memungkinkan. Report compliance status ke management secara berkala.",
+    "analogy": "Like routine vehicle checks that ensure all systems are working, compliance reviews ensure security remains effective.",
+    "focusArea": "Policy Compliance",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Compliance with information security policies and standards' is monitored in audit reports. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Compliance with information security policies and standards'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Compliance with information security policies and standards'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "5.37",
+    "name": "Document operating procedures",
+    "type": "Pencegahan",
+    "domain": "Organisasional",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Manage security documentation with a neat version control system. Make sure the documents used by the team are always the latest version and have been approved.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Gunakan Document Management System dengan version control. Tetapkan document owner untuk setiap prosedur. Review dan update dokumen saat ada perubahan proses atau insiden.",
+    "analogy": "Like aircraft manuals which must always be updated and controlled, security documentation must be managed well.",
+    "focusArea": "Documentation Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Document operations procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Document operation procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Document operating procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.1",
+    "name": "Background filtering",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Conduct background checks on employee candidates in accordance with applicable law. Check identity, education and work history. For positions that handle sensitive data, consider more in-depth checks.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Lakukan background check sesuai hukum ketenagakerjaan: cek identitas, pendidikan, dan riwayat kerja. Untuk posisi sensitif, tambah cek kriminal dan kredit. Dokumentasikan hasil screening dan simpan secara confidential.",
+    "analogy": "Like checking references before hiring a babysitter, background screening ensures the person you hire can be trusted.",
+    "focusArea": "Background Verification",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Background screening'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Background filtering'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Background screening'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.2",
+    "name": "Terms and conditions of employment",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Include information security obligations in employment contracts. Employees must know from day one that they are responsible for maintaining the confidentiality and security of company data.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Sertakan klausul keamanan informasi di employment contract: kewajiban menjaga kerahasiaan, larangan penggunaan aset untuk pribadi, dan konsekuensi pelanggaran. Review kontrak saat ada perubahan regulasi.",
+    "analogy": "Just as a rental contract states the rules for using the property, an employment contract should state information security obligations.",
+    "focusArea": "Employment Terms",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Terms and conditions of employment'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Terms and conditions of work'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Terms and conditions of employment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.3",
+    "name": "Information security awareness, training, and education",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Have a multi-layered security training program: onboarding training for new employees, monthly newsletters, annual refreshments, and phishing simulations to test awareness.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat program awareness berlapis: onboarding training untuk karyawan baru, monthly newsletter, annual refresher, dan targeted training untuk role spesifik. Ukur efektivitas dengan phishing simulation.",
+    "analogy": "Just as firefighting training prepares employees for fires, security training prepares them for cyber threats.",
+    "focusArea": "Security Awareness",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security awareness, training and education'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Information security awareness, training and education'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Information security awareness, training and education'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.4",
+    "name": "Disciplinary process",
+    "type": "Koreksi",
+    "domain": "Orang",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Create clear sanctions mechanisms for security violations, ranging from verbal warnings to severe disciplinary action. Socialize these consequences so that employees understand the risks.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Definisikan gradasi sanksi sesuai severity pelanggaran: warning pertama, kedua, hingga PHD. Sosialisasikan konsekuensi di employee handbook. Pastikan proses disipliner sesuai hukum ketenagakerjaan.",
+    "analogy": "Like a ticket for traffic violators, the disciplinary process provides consequences for those who violate safety rules.",
+    "focusArea": "Disciplinary Process",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Disciplinary process'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Discipline process'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Disciplinary process'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.5",
+    "name": "Responsibilities after termination or change of employment",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Remind employees who will resign about their confidentiality obligations which still apply even if they no longer work for the company. For critical positions, consider garden leave.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Sertakan klausa non-disclosure yang tetap berlaku setelah resign. Lakukan exit interview yang mengingatkan kewajiban kerahasiaan. Untuk posisi kritis, pertimbangkan garden leave.",
+    "analogy": "Like the obligation to maintain company secrets even after resigning, security responsibilities do not end when employees leave.",
+    "focusArea": "Post-Employment Obligations",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Responsibilities following termination or change of employment'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Responsibilities after termination or change of work'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Responsibilities after termination or change of employment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.6",
+    "name": "Confidentiality or non-disclosure agreement",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Request the signature of a confidentiality agreement (NDA) from all parties who will access sensitive information: employees, contractors, even visitors who enter restricted areas.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat NDA yang spesifik menyebutkan scope informasi yang dilindungi, durasi, dan sanksi pelanggaran. Minta tanda tangan NDA untuk karyawan, kontraktor, dan visitor yang akses informasi sensitif.",
+    "analogy": "Like a promise not to divulge a restaurant's secret recipe, an NDA protects sensitive information from leaks.",
+    "focusArea": "Confidentiality Agreements",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Confidentiality or non-disclosure agreements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'non-disclosure agreement'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Confidentiality or non-disclosure agreements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.7",
+    "name": "Remote work",
+    "type": "Pencegahan",
+    "domain": "Orang",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Create a special policy for remote work that includes the obligation to use a VPN, prohibiting access from public WiFi, and guidelines for setting up security at home.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat WFH policy yang mencakup: wajib VPN, larangan pakai public WiFi untuk kerja, secure home network setup, dan clear desk policy di rumah. Provide security guidelines untuk setup home office.",
+    "analogy": "Like carrying a mini safe when working at a cafe, remote work requires extra protection for company data.",
+    "focusArea": "Remote Work Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Remote work'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Remote work'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Remote working'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "6.8",
+    "name": "Information security incident reporting",
+    "type": "Deteksi",
+    "domain": "Orang",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Provide easily accessible incident reporting channels: dedicated email, hotline, or ticketing system. Make sure employees do not hesitate to report because the process is non-judgmental.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Sediakan multiple channel pelaporan: email khusus, hotline, dan ticketing system. Pastikan proses pelaporan mudah dan tidak menghakimi. Reward karyawan yang report insiden untuk encourage culture.",
+    "analogy": "Like the easy-to-call emergency number 112, security reporting mechanisms should be easily accessible to all employees.",
+    "focusArea": "Incident Reporting",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information security incident reporting'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information security event reporting'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information security incident reporting'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.1",
+    "name": "Physical security boundaries",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Determine the physical boundaries of the area that needs to be protected: building fences, server room walls, or other barriers. Make sure there are no gaps that can pass undetected.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi dan map physical boundary: pagar, dinding, atau barrier lainnya. Install fencing untuk area kritis. Pastikan tidak ada blind spot yang bisa dilewati tanpa terdeteksi.",
+    "analogy": "Like factory fences that limit who can enter, physical boundaries protect assets from unauthorized access.",
+    "focusArea": "Physical Perimeter",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Physical security boundaries'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Physical security limits'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Physical security boundaries'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.2",
+    "name": "Physical entry",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Install access control systems at all entrances: access cards, biometrics, or security guards. Record all visitors and ensure they are accompanied when entering sensitive areas.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi access card atau biometric di semua entry point. Buat visitor management system dengan log buku tamu dan escort policy. Review access log secara berkala.",
+    "analogy": "Just as security in a building checks IDs before allowing entry, physical access controls filter who can enter.",
+    "focusArea": "Physical Access Control",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Physical entries'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Physical entry'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Physical entry'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.3",
+    "name": "Securing offices, rooms and facilities",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Strengthen the physical security of offices and critical spaces: secure door locks, alarms, and reinforcement for walls or windows in critical areas.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Lakukan risk assessment untuk identifikasi vulnerability fisik. Reinforce door, window, dan wall untuk ruang server. Install secure lock dan alarm untuk area sensitif.",
+    "analogy": "Just like a house has locks, alarms and fences, offices also need layers of security that match the threat.",
+    "focusArea": "Facility Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Securing offices, spaces and facilities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Securing offices, rooms and facilities'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Securing offices, spaces and facilities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.4",
+    "name": "Physical security monitoring",
+    "type": "Deteksi",
+    "domain": "Fisik",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Install CCTV at strategic points: entrances, corridors, server rooms and parking areas. Make sure records are kept for at least 30 days and monitored in real-time.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Install CCTV di strategic points: entry, exit, corridor, dan area kritis. Pastikan coverage 24/7 dengan retention minimal 30 hari. Monitor CCTV oleh security team secara real-time.",
+    "analogy": "Like a security guard patrolling an area, continuous monitoring detects threats before they act.",
+    "focusArea": "Physical Monitoring",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Physical security monitoring'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Physical security monitoring'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Physical security monitoring'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.5",
+    "name": "Protection against physical and environmental threats",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Identify environmental risks such as floods, earthquakes, or fires. Install fire suppression, water detection, and lightning arresters according to relevant threats.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi risiko lingkungan: banjir, gempa, kebakaran. Install fire suppression system, water detection, dan lightning arrester. Buat mitigation plan untuk setiap risiko yang teridentifikasi.",
+    "analogy": "Like earthquake-resistant buildings in vulnerable zones, facilities must be protected from environmental and physical threats.",
+    "focusArea": "Environmental Protection",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Protection against physical and environmental threats' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Protection against physical and environmental threats'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Protection against physical and environmental threats'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.6",
+    "name": "Work in a safe area",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Apply strict rules for anyone working in a secure area: mandatory badge, no personal devices, no photos. Regular compliance audits.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Tetapkan aturan untuk kerja di secure area: wajib badge, tidak boleh bawa device pribadi, tidak boleh foto. Implementasi clean desk policy. Audit kepatuhan secara berkala.",
+    "analogy": "Like the sterile rules in a hospital operating room, safe areas have special requirements that everyone must comply with.",
+    "focusArea": "Secure Area Working",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Working in safe areas'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Working in a safe area'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Working in safe areas'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.7",
+    "name": "Utility support",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Make sure supporting utilities such as electricity, water, internet and AC are always available. Redundancy setup for critical utilities: UPS, generator, or dual ISP.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Identifikasi semua utility yang critical: listrik, air, internet, AC. Setup redundancy untuk critical utility: UPS, generator, dual ISP. Buat maintenance schedule untuk semua utility.",
+    "analogy": "Like a backup generator that is ready when PLN power goes out, utilities must have backups to maintain operations.",
+    "focusArea": "Utility Support",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Utility support'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Utility support'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Utility support'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.8",
+    "name": "Equipment maintenance",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Manajemen aset",
+    "description": "Schedule routine maintenance for all security equipment: CCTV, access control, fire suppression. Track maintenance logs and use trusted vendors.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat maintenance schedule untuk semua equipment keamanan: CCTV, access control, fire suppression. Track maintenance log dan set reminder untuk preventive maintenance. Gunakan vendor terpercaya untuk service.",
+    "analogy": "Just as regular car servicing prevents breakdowns on the road, equipment maintenance prevents system failure.",
+    "focusArea": "Equipment Maintenance",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Equipment maintenance'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Equipment maintenance'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Equipment maintenance'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.9",
+    "name": "Off-site asset security",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "For assets taken outside the office, require encryption and a clear security policy. Track mobile device location with GPS if possible.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat policy untuk kerja di luar kantor: wajib encrypt laptop, tidak boleh akses dari public computer, wajib lock screen saat meninggalkan device. Track aset mobile dengan GPS jika memungkinkan.",
+    "analogy": "Like insurance and a GPS tracker for laptops you travel with, assets outside the office still need protection.",
+    "focusArea": "Off-site Asset Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Off-site asset security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Offsite asset security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Off-site asset security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.10",
+    "name": "Erasable storage media and transmission media",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Limit the use of external storage media such as USB flash drives. If necessary, require encryption and create safe disposal procedures.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Batasi penggunaan USB drive dengan policy GPO. Untuk yang necessary, wajib encrypt. Buat prosedur disposal media yang aman: physical destruction atau degaussing untuk media yang berisi data sensitif.",
+    "analogy": "Just like confidential documents that must be destroyed before being thrown away, storage media need to be properly secured or destroyed.",
+    "focusArea": "Removable Media Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Erasable storage media and transmission media'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Erasable storage media and transmission media'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Erasable storage media and transmission media'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.11",
+    "name": "Support for emergency plans",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Create an emergency response plan that includes evacuation routes, assembly points, and emergency contacts. Conduct drills at least twice a year to ensure readiness.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat emergency response plan yang mencakup: evakuasi, assembly point, emergency contact. Install emergency lighting dan exit sign. Lakukan drill minimal 2 kali setahun.",
+    "analogy": "Like ready-to-use evacuation routes and assembly points, emergency plans need supporting infrastructure.",
+    "focusArea": "Emergency Planning",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Support for contingency plans'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Support for emergency plans'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Support for emergency plans'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.12",
+    "name": "Cables and power",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Protect power and data cables from tampering or eavesdropping: use conduits, raised floors, or locked cable trays. Install a surge protector for extra protection.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Route kabel power dan data melalui conduit atau raised floor. Pisahkan kabel power dan data untuk hindari interference. Install surge protector dan lightning protection.",
+    "analogy": "Just like electrical cables are embedded in walls to prevent rats from biting them, data cables must also be protected.",
+    "focusArea": "Cable & Power Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cables and power'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cables and power'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Cables and power'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.13",
+    "name": "Facility maintenance and inspection",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen aset",
+    "description": "Periodic inspection of facilities: check structural integrity, fire safety systems, and access control functions. Track findings and ensure remediation is carried out in a timely manner.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat checklist inspeksi facility: structural integrity, fire safety, access control functionality. Lakukan inspeksi berkala: monthly untuk area kritis, quarterly untuk area lain. Track temuan dan remediation.",
+    "analogy": "Just as an annual building inspection ensures the structure is still strong, a facility inspection ensures safety is maintained.",
+    "focusArea": "Facility Inspection",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Facilities maintenance and inspections'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Facilities maintenance and inspection'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Facilities maintenance and inspection'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "7.14",
+    "name": "Physical security during termination or relocation",
+    "type": "Pencegahan",
+    "domain": "Fisik",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "When relocating offices or equipment, create a plan that includes safe packing, transportation in a secure vehicle, and security setup at the new location without downtime.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat relocation plan yang mencakup: packing aman, transport dengan kendaraan secure, setup security di lokasi baru. Pastikan tidak ada downtime untuk security monitoring selama transisi.",
+    "analogy": "Just like moving house requires extra supervision, office relocation also requires strict security.",
+    "focusArea": "Physical Security During Relocation",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Physical security during termination or relocation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Physical security during shutdown or relocation'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Physical security during termination or relocation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.1",
+    "name": "End user device",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Protect all end user devices—laptops, cellphones, tablets—with EDR (Endpoint Detection & Response). Require full disk encryption and remote wipe capability.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Install EDR (Endpoint Detection & Response) di semua device. Wajibkan full disk encryption. Enable remote wipe capability untuk mobile device. Patch OS dan aplikasi secara berkala.",
+    "analogy": "Just like smartphones have PINs, encryption, and remote wipe, endpoint devices must have layers of protection.",
+    "focusArea": "Endpoint Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'End user devices'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'End user devices'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'End user devices'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.2",
+    "name": "Access privileges",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Strictly manage privileged accounts (admin, root). Use a PAM (Privileged Access Management) solution and require approval for each use.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi PAM solution untuk manage privileged account. Wajibkan approval untuk setiap penggunaan privileged access. Record session privileged access untuk audit trail.",
+    "analogy": "Like a master key that is only held by the head of security, admin rights must be limited so that they are not misused.",
+    "focusArea": "Privileged Access Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Access privileges'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Access privileges'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Access privileges'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.3",
+    "name": "Restrictions on access to information",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Limit access to information based on the need-to-know principle. Review permissions regularly and remove unnecessary default or guest access.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi access control list (ACL) berdasarkan need-to-know. Review permission secara berkala. Remove default account atau guest access yang tidak diperlukan.",
+    "analogy": "Like the VIP lounge which is only for invited guests, sensitive information must only be accessed by authorized persons.",
+    "focusArea": "Information Access Restriction",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Information access restrictions'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Information access restrictions'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Restrictions on access to information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.4",
+    "name": "Access to source code",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Restrict access to source code to authorized developers only. Use version control with branch protection and require code review before merging.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Gunakan version control system (Git) dengan branch protection. Batasi access ke production code. Require code review dan approval sebelum merge ke main branch.",
+    "analogy": "Like Coca-Cola's secret recipe that only a few people know, access to the source code must be restricted.",
+    "focusArea": "Source Code Access",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Access to source code'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Access to source code'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Access to source code'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.5",
+    "name": "Secure authentication",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Implementation of strong authentication mechanisms: MFA for all systems, strict password policy, and monitoring failed login attempts for brute force detection.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi MFA untuk semua sistem. Gunakan passwordless authentication jika memungkinkan. Monitor failed login attempt untuk deteksi brute force attack.",
+    "analogy": "Like a fingerprint that is unique to each person, authentication ensures that only valid identities can log in.",
+    "focusArea": "Secure Authentication",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Secure authentication'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Secure Authentication'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Secure authentication'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.6",
+    "name": "Capacity management",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Monitor system resource usage—CPU, memory, disk, network—and setup alerting if it approaches full capacity. Create a capacity plan for the next 6-12 months.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Monitor resource utilization: CPU, memory, disk, network. Setup threshold alerting (80% usage). Buat capacity plan untuk 6-12 bulan ke depan berdasarkan growth trend.",
+    "analogy": "Like traffic monitoring to predict congestion, capacity management anticipates system load before it overloads.",
+    "focusArea": "Capacity Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Capacity management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Capacity management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Capacity management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.7",
+    "name": "Protection against malware",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Manajemen aset",
+    "description": "Install antivirus/anti-malware on all endpoints and servers. Update signatures daily, enable real-time scanning, and educate users about the dangers of clicking suspicious links.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Install antivirus/anti-malware di semua endpoint dan server. Update signature daily. Enable real-time scanning. Lakukan scan full system weekly. Educate user untuk tidak click suspicious link.",
+    "analogy": "Just as the immune system fights viruses, malware protection protects the system from malicious software threats.",
+    "focusArea": "Malware Protection",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Protection against malware'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Protection against malware'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Protection against malware'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.8",
+    "name": "Technical vulnerability management",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Run vulnerability scans regularly (at least monthly) for all systems. Prioritize remediation based on risk score and patch critical vulnerabilities within 7 days.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Run vulnerability scan monthly untuk semua sistem. Prioritize remediation berdasarkan risk score. Patch critical vulnerability dalam 7 hari. Retest setelah patch untuk verify fix.",
+    "analogy": "Just as a health check finds problems before they get worse, vulnerability management finds weaknesses before they are exploited.",
+    "focusArea": "Vulnerability Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Technical vulnerability management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Technical vulnerability management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Technical vulnerability management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.9",
+    "name": "Hardware configuration",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Create a configuration baseline for all hardware. Disable unnecessary services and ports, document configurations, and audit regularly.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat baseline configuration untuk semua hardware. Disable unnecessary service dan port. Document semua konfigurasi dan track perubahan. Audit konfigurasi secara berkala.",
+    "analogy": "Like optimal factory settings for electronic devices, hardware configurations must be standardized and secured.",
+    "focusArea": "Hardware Configuration",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Hardware configuration'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Hardware configuration'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Hardware configuration'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.10",
+    "name": "Removal of information",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Create secure data deletion procedures: overwrite for HDD, crypto-shred for SSD. Use a certified vendor for disposal of large quantities of media.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Buat prosedur secure deletion: overwrite untuk HDD, crypto-shred untuk SSD. Document proses deletion dan buat destruction certificate. Gunakan third-party certified disposal vendor untuk media besar.",
+    "analogy": "Just like confidential documents that must be destroyed with a shredder, data deletion must be done safely.",
+    "focusArea": "Information Deletion",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Information deletion'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information deletion'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Information deletion'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.11",
+    "name": "Data masking",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Implement data masking to hide sensitive information: use scramble or substitute techniques for testing data, and dynamic data masking for production queries.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi data masking untuk testing environment: scramble atau substitute sensitive data. Gunakan dynamic data masking untuk production query. Mask PII, financial data, dan confidential information.",
+    "analogy": "Like the KTP number which is only partially displayed (XXX-XXX-1234), masking data hides sensitive information.",
+    "focusArea": "Data Masking",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Masking data'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Masking data'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Masking data'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.12",
+    "name": "Data leak prevention",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen aset",
+    "description": "Deploy DLP (Data Leak Prevention) solutions to detect and prevent unauthorized data transfers. Monitor email, web uploads, and USB transfers to detect violations.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Deploy DLP solution untuk monitor dan block unauthorized data transfer. Define policy untuk classified data. Monitor email, web upload, dan USB transfer. Alert dan block jika ada violation.",
+    "analogy": "Like an alarm in a shop that sounds if goods are taken out without payment, DLP detects data that has been left without permission.",
+    "focusArea": "Data Leak Prevention",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Data leak prevention'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data leak prevention'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Data leak prevention'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.13",
+    "name": "Information backup",
+    "type": "Koreksi",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Routine data backup follows the 3-2-1 rule: 3 copies, 2 types of media, 1 offsite. Test restore quarterly to ensure the backup can be restored.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi 3-2-1 backup rule: 3 copies, 2 media types, 1 offsite. Test restore quarterly untuk verify backup integrity. Encrypt backup data. Monitor backup job daily.",
+    "analogy": "Like a spare tire that is ready to be used when the main tire gets punctured, backup ensures that data can be restored when a problem occurs.",
+    "focusArea": "Information Backup",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information backup'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information backup'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Information backup'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.14",
+    "name": "Diversity of information processing facilities",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Setup redundant servers in different locations and implement load balancing. Test failover regularly and ensure RPO/RTO meets business needs.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Setup redundant server di lokasi berbeda. Implementasi load balancing untuk distribute traffic. Test failover secara berkala. Pastikan RPO dan RTO sesuai business requirement.",
+    "analogy": "Like having two generators that can back up each other, redundancy ensures the system continues to run even if one component fails.",
+    "focusArea": "Processing Facility Redundancy",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Diversity of information processing facilities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Diversity of information processing facilities'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Diversity of information processing facilities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.15",
+    "name": "Logging (Logging)",
+    "type": "Deteksi",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Enable logging for all critical systems and centralize to SIEM. Retain logs for at least 1 year and monitor daily to detect anomalies.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Enable logging untuk semua sistem critical: OS, aplikasi, network device. Centralize log ke SIEM. Retain log minimal 1 tahun. Monitor log untuk anomali daily.",
+    "analogy": "Like an airplane black box that records all activity, a log records every incident for investigation if a problem occurs.",
+    "focusArea": "Logging",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Logging'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Logging'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Logging'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.16",
+    "name": "Monitoring activities",
+    "type": "Deteksi",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Kesinambungan bisnis",
+    "description": "Monitor system and network activity to detect suspicious behavior: logins at unusual times, high volumes of data access, or privilege escalation.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi monitoring untuk deteksi anomali: unusual login time, volume data access tinggi, privilege escalation. Setup alert untuk suspicious activity. Review alert daily oleh SOC team.",
+    "analogy": "Like CCTV that monitors an area 24/7, activity monitoring detects anomalies before they become major incidents.",
+    "focusArea": "Activity Monitoring",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Monitoring activities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Monitoring activity'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Monitoring activities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.17",
+    "name": "Clock synchronization",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Manajemen aset",
+    "description": "Synchronize the clocks of all systems to the same and trusted NTP server. This is important for accurate log analysis and event correlation from multiple sources.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Setup NTP server internal yang sync ke sumber waktu terpercaya. Pastikan semua sistem sync ke NTP server yang sama. Monitor clock drift dan alert jika ada deviasi signifikan.",
+    "analogy": "Just as all clocks at an airport must be in sync for flight schedules, system time must be consistent for accurate analysis.",
+    "focusArea": "Clock Synchronization",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Clock synchronization'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Clock synchronization'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Clock synchronization'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.18",
+    "name": "Use of utility programs",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Limit the use of utility programs that can bypass security controls. Inventory all utilities, limit access to admin only, and log every use.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Inventory semua utility program yang bisa bypass control. Batasi akses utility ke admin saja. Log penggunaan utility. Review necessity utility secara berkala.",
+    "analogy": "Like a wrench that can disassemble anything but only for authorized technicians, utility programs must be tightly controlled.",
+    "focusArea": "Utility Program Control",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Use of utility programs'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Use of utility programs'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Use of utility programs'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.19",
+    "name": "Software installation on operational systems",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Implementation of whitelisting software to control which applications can be installed. Require approval for new software and testing in staging before production.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi whitelisting untuk software yang boleh diinstall. Require approval untuk software baru. Test software di staging sebelum production install. Block unauthorized software installation.",
+    "analogy": "Just as home renovations must not disturb residents, software installation must be carried out without disturbing operations.",
+    "focusArea": "Software Installation Control",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Software installation on operational systems'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Software installation on operational systems'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Software installation on operational systems'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.20",
+    "name": "Network and security",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Network segmentation based on function and data sensitivity. Deploy firewalls at the perimeter and internally, monitor traffic for anomalies, and update rules regularly.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Segmentasi network berdasarkan function dan sensitivity. Deploy firewall di perimeter dan internal. Monitor network traffic untuk anomaly. Update firewall rule secara berkala.",
+    "analogy": "Like toll roads that have gates, signs and security patrols, networks need layers of protection.",
+    "focusArea": "Network Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Network and security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure firewall and related network segments 'Network and security'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Network and security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.21",
+    "name": "Network service security",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Kesinambungan bisnis",
+    "description": "Determine security SLAs for each network service: availability, latency, and protection mechanisms. Encrypt network traffic with TLS and monitor performance.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Define SLA untuk setiap network service: availability, latency, security. Encrypt network traffic dengan TLS. Monitor network performance. Review security control network service annually.",
+    "analogy": "Like bank service standards which must be safe and fast, network services also need clear security SLAs.",
+    "focusArea": "Network Service Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Network service security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure firewall and related network segments 'Network service security'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Network service security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.22",
+    "name": "Network separation",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Manajemen aset",
+    "description": "Separate networks for production, staging, development, and guests. Implement VLAN and firewall rules between segments, limiting cross-segment communication to what is necessary.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Segregasi network: production, staging, development, guest. Implementasi VLAN dan firewall rule antar segment. Batasi cross-segment communication ke yang necessary saja.",
+    "analogy": "Just as ship bulkheads prevent leaks from spreading throughout the ship, network segmentation limits the spread of attacks.",
+    "focusArea": "Network Segregation",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Network decoupling'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure the firewall and associated network segments 'Network separation'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Network separation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.23",
+    "name": "Web filtering (Web filtering)",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Rendah",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Deploy a web proxy with filtering capability to block access to dangerous sites: malware, phishing, or illegal content. Web traffic log for monitoring.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Deploy web proxy dengan filtering capability. Block kategori situs berbahaya: malware, phishing, gambling. Log web traffic untuk monitoring. Update web filter policy monthly.",
+    "analogy": "Like a water filter that removes dirt, a web filter filters out dangerous sites before they are accessed by employees.",
+    "focusArea": "Web Filtering",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Web filtering'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Web filtering'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Web filtering'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.24",
+    "name": "Application development security",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Integrate security into the SDLC: threat modeling, secure coding guidelines, code review, and penetration testing. Use SAST and DAST tools for automated scanning.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Integrasikan security di SDLC: threat modeling, secure coding guideline, code review, penetration testing. Gunakan SAST dan DAST tool. Fix critical vulnerability sebelum release.",
+    "analogy": "Just as engineers calculate building security from design, application security must start from the beginning of development.",
+    "focusArea": "Application Security",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Application development security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Application development security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Application development security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.25",
+    "name": "Principles of safe systems engineering",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Memulihkan",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Apply secure engineering principles: defense in depth, least privilege, and fail safe. Document the security architecture and design review before implementation.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Apply secure design principle: defense in depth, least privilege, fail safe. Document security architecture. Review design sebelum implementasi. Use security pattern dan framework.",
+    "analogy": "Like architects who design earthquake-resistant buildings, systems engineers must build with safety principles in mind.",
+    "focusArea": "Secure Engineering",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Principles of secure systems engineering'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Safe system engineering principles'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Principles of secure systems engineering'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.26",
+    "name": "Application security requirements",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Merespons",
+    "capability": "Kesinambungan bisnis",
+    "description": "Determine security requirements for each application based on the type of data processed. Includes requirements for authentication, authorization, encryption, and logging.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Define security requirement untuk setiap aplikasi berdasarkan data yang diproses. Include requirement: authentication, authorization, encryption, logging. Review requirement sebelum development mulai.",
+    "analogy": "Just like car specifications differ for city cars vs SUVs, application security requirements differ based on data sensitivity.",
+    "focusArea": "Application Security Requirements",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Application security requirements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Application security requirements'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Application security requirements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.27",
+    "name": "Secure coding (Secure coding)",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Rendah",
+    "concept": "Mengatur",
+    "capability": "Manajemen aset",
+    "description": "Developer training on secure coding: OWASP Top 10, input validation, and output encoding. Use secure coding guidelines and implement code reviews with security checklists.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Training developer secure coding: OWASP Top 10, input validation, output encoding. Gunakan secure coding guideline. Implementasi code review dengan security checklist.",
+    "analogy": "Just as welders follow security standards to prevent leaks, developers must code securely to prevent bugs.",
+    "focusArea": "Secure Coding",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Secure coding'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Secure coding'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Secure coding'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.28",
+    "name": "Security testing in development",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Melindungi",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Integrate automated security testing in the CI/CD pipeline: SAST, SCA, and secret scanning. Require security gate before deploying and track vulnerability metrics.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Integrasikan automated security testing di CI/CD pipeline: SAST, SCA, secret scanning. Require security gate sebelum deploy. Track vulnerability metrics.",
+    "analogy": "Just like crash testing a car before being sold, applications must be tested for security before being released.",
+    "focusArea": "Security Testing in Development",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Security testing in development'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Security testing in development'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Security testing in development'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.29",
+    "name": "System security testing",
+    "type": "Deteksi",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengidentifikasi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Perform penetration testing annually or after major changes. Test all critical applications, retest after remediation, and document findings along with the remediation plan.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Lakukan penetration testing annually atau setelah major change. Test semua aplikasi critical. Retest setelah remediation. Document finding dan track remediation.",
+    "analogy": "Like a final exam that tests student understanding, system testing verifies whether security controls are effective.",
+    "focusArea": "System Security Testing",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'System security testing'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'System security testing'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'System security testing'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.30",
+    "name": "Outsourcing development",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Manajemen kerentanan teknis",
+    "description": "Include security requirements in the outsourcing contract. Require vendors to follow a secure development process and request evidence of security testing before acceptance.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Sertakan security requirement di kontrak outsourcing. Require secure development process dari vendor. Request evidence security testing. Audit vendor development process secara berkala.",
+    "analogy": "Just like you still supervise the contractor who builds the house, outsourcing development still requires security supervision.",
+    "focusArea": "Outsourced Development",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Outsourced development'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Outsourced development'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Outsourcing development'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.31",
+    "name": "Separation of development, test, and production environments",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Rendah",
+    "concept": "Memulihkan",
+    "capability": "Kesinambungan bisnis",
+    "description": "Separate development, testing, UAT, and production environments. Limit access between environments, use different credentials, and promote code through pipelines instead of directly to production.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Separate environment: development, testing, UAT, production. Batasi akses antar environment. Gunakan different credential untuk setiap environment. Promote code melalui pipeline, tidak langsung ke production.",
+    "analogy": "Just as a restaurant kitchen is separate from the dining area, the development and production environments must be separated.",
+    "focusArea": "Environment Separation",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Separation of development, test and production environments'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Separation of development, test and production environments'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Separation of development, test and production environments'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.32",
+    "name": "Change management",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Manajemen aset",
+    "description": "Implementation of a structured change management process: request, assess, approve, implement, and review. Document all changes and tests in staging before production.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Implementasi change management process: request, assess, approve, implement, review. Document semua perubahan. Test change di staging sebelum production. Schedule change di maintenance window.",
+    "analogy": "Like the renovation approval process in an apartment which must go through management, system changes require controlled approval.",
+    "focusArea": "Change Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Change management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Change management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Change management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.33",
+    "name": "Project management information",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Keamanan sumber daya manusia",
+    "description": "Manage project information with version control and access control. Share information on a need-to-know basis and periodically back up project data.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Track project artifact dengan version control. Protect project document dengan access control. Share project information berdasarkan need-to-know. Backup project data secara berkala.",
+    "analogy": "Just as a project manager oversees the timeline and budget, project information management oversees security aspects.",
+    "focusArea": "Project Information Management",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Project management information'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information project management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Project management information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "8.34",
+    "name": "Protection of information systems during audit testing",
+    "type": "Pencegahan",
+    "domain": "Teknologi",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Melindungi",
+    "capability": "Keamanan fisik dan lingkungan",
+    "description": "Use test data or anonymized data for audits, protect production data during the audit process. Monitor auditor activity and limit access to only what is necessary.",
+    "exampleEvidence": [
+      "Dokumen kebijakan yang disetujui",
+      "Log tinjauan triwulanan",
+      "Notulen rapat pengesahan oleh manajemen"
+    ],
+    "implementationTips": "Gunakan test data atau anonymized data untuk audit. Protect production data saat audit. Monitor aktivitas auditor. Batasi akses auditor ke yang necessary saja.",
+    "analogy": "Just as food samples are tested in the lab without contaminating the main stock, audits should be conducted without risk to the production system.",
+    "focusArea": "Audit Testing Protection",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Protection of information systems during audit testing' is monitored in the audit report. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information system protection during audit testing'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Protection of information systems during audit testing'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

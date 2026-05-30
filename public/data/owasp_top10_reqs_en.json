@@ -1,0 +1,320 @@
+[
+  {
+    "id": "A01",
+    "chapter": "A01",
+    "chapter_title": "Broken Access Control",
+    "pillar": "Access",
+    "title": "Control access and strictly limit user privileges",
+    "summary": "Ranked first, the problem of access control failure is the biggest threat to the modern web. The impact is that unauthorized information is revealed or data is falsified.",
+    "cadence": "Diperiksa setiap rilis atau perubahan hak akses",
+    "owner": "Developer, Security Tester",
+    "scoring": "Risiko Tinggi - Dampak Signifikan",
+    "appendices": [
+      "Mitigasi Ekstensif",
+      "ASVS V4"
+    ],
+    "focus": [
+      "By default, nish access to app functionality unless set public.",
+      "Implement access control once (centralized) and reuse it.",
+      "Log all access control failures."
+    ],
+    "evidence": [
+      "Evidence of failed horizontal/vertical access (BOLA/IDOR).",
+      "Check the default-deny policy on the gateway router.",
+      "Evidence of warning logs when access bypass attempts occur."
+    ],
+    "reporting": "Kategorisasi sebagai temuan akses prioritas 1",
+    "analogy": "Like the guard post officers who don't check the identity cards of anyone who enters.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Control access and strictly limit user privileges'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Control access and strictly limit user privileges'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Control access and strictly limit user privileges'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A02",
+    "chapter": "A02",
+    "chapter_title": "Cryptographic Failures",
+    "pillar": "Cryptography",
+    "title": "Use strong cryptography to protect sensitive data",
+    "summary": "Cryptographic errors include failure to secure sensitive data both at rest and in transit, such as passwords, credit card numbers, or medical records.",
+    "cadence": "Audit kriptografi berkala",
+    "owner": "Security Architect, Developer",
+    "scoring": "Risiko Sangat Tinggi",
+    "appendices": [
+      "Panduan Kripto",
+      "ASVS V6"
+    ],
+    "focus": [
+      "Classify the data the application processes or stores (Sensitive/Public).",
+      "Don't use outdated algorithms like MD5 or SHA1.",
+      "Use authentic and encrypted connections such as TLS."
+    ],
+    "evidence": [
+      "Unencrypted traffic captures credentials.",
+      "Using a weak hash function can be hacked.",
+      "Use of default keys or weak keys."
+    ],
+    "reporting": "Temuan audit standar enkripsi data perusahaan",
+    "analogy": "Like sending a state secret letter using an open postcard.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Use strong cryptography to protect sensitive data'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Use strong cryptography to protect sensitive data'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Use strong cryptography to protect sensitive data'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A03",
+    "chapter": "A03",
+    "chapter_title": "Injection",
+    "pillar": "Implementation",
+    "title": "Separate data (payload) with command logic",
+    "summary": "Injections including SQL, NoSQL, OS command, and LDAP injection, can occur when untrusted data is sent to the interpreter as part of a query.",
+    "cadence": "Diuji pada setiap pipeline CI/CD (SAST/DAST)",
+    "owner": "Developer",
+    "scoring": "Risiko Tinggi",
+    "appendices": [
+      "ASVS V5",
+      "Defense Cheat Sheet"
+    ],
+    "focus": [
+      "Use secure APIs that avoid interpreters entirely or provide parameterized interfaces.",
+      "Implement positive or allow-list server-side input validation.",
+      "Escape vulnerable characters specific to the intended interpreter."
+    ],
+    "evidence": [
+      "Ability to execute payload in search box input (SQLi).",
+      "Executing OS Code via parameters.",
+      "Review WAF logs that block injection attempts."
+    ],
+    "reporting": "Temuan krusial dalam laporan Vulnerability Assessment.",
+    "analogy": "A blind translator who simply relays deadly orders from a stranger to a general.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Separate data (payload) with command logic'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Separate data (payload) with command logic'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Separate data (payload) with command logic'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A04",
+    "chapter": "A04",
+    "chapter_title": "Insecure Design",
+    "pillar": "Architecture",
+    "title": "Implement protection from the early phases of security architecture design",
+    "summary": "This new category focuses on design defects. 'Shift Left' and the application of threat modeling are needed to find vulnerabilities in the design and logical architecture phases.",
+    "cadence": "Fase SDLC awal (Design Phase)",
+    "owner": "Product Owner, Architect",
+    "scoring": "Risiko Desain Menengah/Tinggi",
+    "appendices": [
+      "Threat Modeling",
+      "SDLC"
+    ],
+    "focus": [
+      "Perform threat modeling for technology procurement or new system design.",
+      "Use safe design patterns and tested reference components.",
+      "Separate layers based on trust and network segmentation."
+    ],
+    "evidence": [
+      "There is no design risk analysis document (Risk Profile).",
+      "Architecture diagram that does not show security layers.",
+      "The architecture review shows a single point of security failure."
+    ],
+    "reporting": "Termasuk dalam approval design readiness perusahaan",
+    "analogy": "Build a safe but place the lock on the inside of the glass room.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Implement protection from the earliest phases of security architecture design'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Implement protection from the initial phase of security architecture design'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document to 'Implement protection from the early phases of security architecture design'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A05",
+    "chapter": "A05",
+    "chapter_title": "Security Misconfiguration",
+    "pillar": "Operations",
+    "title": "Avoid configuration errors with system hardening and automation",
+    "summary": "Occurs when security controls are not configured securely, or on default installations. Occurs at any level from platform, application, to framework.",
+    "cadence": "Check harian / DevSecOps Scanning",
+    "owner": "DevOps, SysAdmin",
+    "scoring": "Risiko Tinggi dan meluas",
+    "appendices": [
+      "Hardening Guide",
+      "ASVS V14"
+    ],
+    "focus": [
+      "Automate the installation process with a hardened environment.",
+      "Remove or do not install unnecessary features/frameworks/features.",
+      "Update and secure CORS configuration, Headers and server logs."
+    ],
+    "evidence": [
+      "Directory display (directory listing) is active.",
+      "The default error page displays the complete stack trace.",
+      "The default admin access password has not been changed."
+    ],
+    "reporting": "Laporan pengujian postur infrastruktur / CSA.",
+    "analogy": "Leaving important documents in the drawer without locking it even though the drawer has a good lock.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Avoid misconfiguration with system hardening and automation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Avoid misconfiguration with system hardening and automation'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Avoid misconfiguration with system hardening and automation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A06",
+    "chapter": "A06",
+    "chapter_title": "Vulnerable and Outdated Components",
+    "pillar": "Operations",
+    "title": "Manage patch lifecycle and monitoring of vulnerable components",
+    "summary": "Components such as libraries, frameworks, or other launch dependencies can have severe vulnerabilities that often consume the entire system if compromised.",
+    "cadence": "Otomatis menggunakan SCA Scanning pada SDLC",
+    "owner": "DevOps, Developer",
+    "scoring": "Risiko Kritikal - Cenderung eksploitasi mudah",
+    "appendices": [
+      "ASVS V14"
+    ],
+    "focus": [
+      "Maintain software bill of materials (SBOM).",
+      "Monitor new component versions or CVEs regularly.",
+      "Remove unused dependencies."
+    ],
+    "evidence": [
+      "The system loads an outdated version of jQuery or Log4J with an active CVE.",
+      "The OS has not been patched for a year.",
+      "Use of the library is no longer supported by the vendor."
+    ],
+    "reporting": "Laporan Software Composition Analysis",
+    "analogy": "Patched the ship's leak but left the foundation hole under the deck to rot.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Manage patch lifecycle and monitoring of vulnerable components'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Manage patch life cycle and monitoring vulnerable components'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Manage patch lifecycle and monitoring of vulnerable components'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A07",
+    "chapter": "A07",
+    "chapter_title": "Identification and Authentication Failures",
+    "pillar": "Access",
+    "title": "Verify and protect user session management credentials",
+    "summary": "Authentication failures can allow attackers to compromise passwords, keys or session tokens and temporarily/permanently use another user's identity.",
+    "cadence": "Sistem rilis otentikasi baru, Penetration Testing rutin",
+    "owner": "Developer, IAM Team",
+    "scoring": "Risiko Tinggi",
+    "appendices": [
+      "ASVS V2",
+      "ASVS V3"
+    ],
+    "focus": [
+      "Implement MFA (Multi-Factor Authentication).",
+      "Use appropriate password length & complexity policies.",
+      "Invalidate session IDs on the server after the user logs out."
+    ],
+    "evidence": [
+      "Vulnerable authentication bypass using brute force.",
+      "The session token is exposed in the url (URL rewrite).",
+      "The application allows the password '123456'."
+    ],
+    "reporting": "Sering menjadi root cause take-over account (ATO).",
+    "analogy": "Keeping a house with a key is complicated, but it's easy to provide a duplicate key if someone else pretends to have lost the key.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Verify and protect user session management credentials'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Verify and protect user session management credentials'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Verify and protect user session management credentials'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A08",
+    "chapter": "A08",
+    "chapter_title": "Software and Data Integrity Failures",
+    "pillar": "Architecture",
+    "title": "Ensure code integrity, updates, and CI/CD pipelines",
+    "summary": "Focuses on making assumptions without verifying the validity of the software. Applications that depend on outdated/unverified modules are vulnerable to supply chain attacks.",
+    "cadence": "Setiap build process / deployment",
+    "owner": "DevOps, Security Architect",
+    "scoring": "Risiko Supply Chain Tinggi",
+    "appendices": [
+      "SDLC"
+    ],
+    "focus": [
+      "Verify the integrity of downloaded modules (e.g. by checksum/hash).",
+      "Use a secure and internally monitored package repository/registry.",
+      "Review CI/CD processes to guarantee that modules are not modified by attackers."
+    ],
+    "evidence": [
+      "Auto-update updates do not have digital signature validation.",
+      "Objects serialized without verification give rise to remote code execution (Insecure Deserialization).",
+      "3rd-party CDN integration which is vulnerable to being injected by attackers."
+    ],
+    "reporting": "Berdampak pada keseluruhan kepercayaan publik atas perangkat lunak/layanan.",
+    "analogy": "Blindly accepting a package of goods even though the stamp has been torn and re-taped by an unknown person.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Ensure code integrity, updates and CI/CD pipeline'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Ensure code integrity, updates and CI/CD pipeline'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Ensure code integrity, updates and CI/CD pipeline'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A09",
+    "chapter": "A09",
+    "chapter_title": "Security Logging and Monitoring Failures",
+    "pillar": "Operations",
+    "title": "Maintain system visibility through comprehensive security logs",
+    "summary": "Without logging and monitoring, data breaches are impossible to detect. Most breaches take ~200 days to be detected, usually from third parties.",
+    "cadence": "Realtime, SOC monitoring",
+    "owner": "SOC, SysAdmin, DevOps",
+    "scoring": "Meningkatkan Risk Impact",
+    "appendices": [
+      "ASVS V7",
+      "Monitoring Guide"
+    ],
+    "focus": [
+      "Log login failures and access failures for anomaly detection.",
+      "Ensure the log format is clear and parsable in the central SIEM log management.",
+      "Set alert responses based on threat activity thresholds."
+    ],
+    "evidence": [
+      "Brute-force attacks went 12 hours without warning alarms.",
+      "The log does not include the user ID of the manipulative transaction.",
+      "Application logs are only stored locally and can be modified by attackers."
+    ],
+    "reporting": "Dituangkan pada laporan insiden dan respons waktu penanganan.",
+    "analogy": "Buildings with expensive safes but don't install CCTV cameras and heat detection systems.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Maintain system visibility via comprehensive security logs'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Maintain system visibility via complete security logs'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Maintain system visibility via complete security logs'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "A10",
+    "chapter": "A10",
+    "chapter_title": "Server-Side Request Forgery",
+    "pillar": "Implementation",
+    "title": "Disciplined server interface request fetch functionality",
+    "summary": "The SSRF flaw occurs when a web application pulls a remote resource without validating the user's supply URI, causing the server to read internal connections behind the scenes.",
+    "cadence": "DAST/SAST pada fitur webhook/metadata parsing",
+    "owner": "Developer, Architect",
+    "scoring": "Risiko Menengah ke Tinggi pada infrastruktur Cloud",
+    "appendices": [
+      "Defense Cheat Sheet",
+      "ASVS V5"
+    ],
+    "focus": [
+      "Isolate resource fetching functions in a separate network to reduce impact.",
+      "Use a deny-by-default policy for intranet/local URL access (e.g. 169.254.169.254 AWS metadata).",
+      "Disable implicit client redirection in the HTTP library."
+    ],
+    "evidence": [
+      "The PDF export service can be used to download the /etc/passwd file on the host's local server.",
+      "An internal bot retrieves AWS metadata tokens from cloud instances.",
+      "The injection payload triggers a call to the bank's internal private IP."
+    ],
+    "reporting": "Penemuan dari BlackBox / GreyBox Testing.",
+    "analogy": "Like a personal bodyguard who is told by his boss to call a strange number without knowing that the number can activate charges on the bodyguard's account.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Disciplining server interface request fetch functionality'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Disciplined server interface request fetch functionality'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Disciplining server interface request fetch functionality'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

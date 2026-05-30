@@ -4,7 +4,7 @@
       class="role-toggle" 
       @click.stop="toggleDropdown"
       :aria-expanded="isDropdownOpen"
-      title="Ubah Kacamata Divisi"
+      :title="$t('role.ubahKacamata')"
     >
       <div class="eyes-icon">
         <i class="fas fa-eye"></i>
@@ -15,7 +15,7 @@
     <div class="role-dropdown" :class="{ 'show': isDropdownOpen }">
       <div class="role-dropdown-header">
         <small>Role-Based Translator</small>
-        <strong>Kacamata Multi-Divisi</strong>
+        <strong>{{ $t('role.kacamataMultiDivisi') }}</strong>
       </div>
       <div class="role-dropdown-body">
         <button 
@@ -29,8 +29,8 @@
             <i :class="`fas ${role.icon}`"></i>
           </div>
           <div class="role-option-text">
-            <strong>{{ role.id === 'default' ? 'Semua (Baku)' : role.label }}</strong>
-            <span>{{ getRoleDescription(role.id) }}</span>
+            <strong>{{ $t(role.labelKey) }}</strong>
+            <span>{{ $t('role.desc' + role.id.charAt(0).toUpperCase() + role.id.slice(1)) }}</span>
           </div>
           <div class="role-option-check" v-if="activeRole === role.id">
             <i class="fas fa-check-circle"></i>

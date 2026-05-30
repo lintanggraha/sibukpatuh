@@ -1,0 +1,759 @@
+[
+  {
+    "id": "PBI.KRK-01",
+    "chapter": "II",
+    "domain": "Kerangka",
+    "article": "Pasal 3-4",
+    "title": "Regulatory targets and basic principles for implementing KKS",
+    "summary": "KKS is directed to prevent and deal with the impact of cyber attacks, improve cyber risk management, and strengthen supervision and collaboration.",
+    "analogy": "Sama kayak fondasi dan blueprint sebelum bangun gedung pencakar langit. If there is no blueprint, the building will easily collapse.",
+    "focus": [
+      "Determine KKS strengthening targets that are in line with the organizer's goals and Bank Indonesia's goals.",
+      "Emphasize clarity of roles and responsibilities, comprehensive strategy, integration of enterprise risk management, KKS culture, and readiness to face incidents.",
+      "Translate basic principles into consistent policies, procedures and supervisory forums."
+    ],
+    "evidence": [
+      "KKS program target document or security strategy charter.",
+      "Cross-unit role and responsibility matrix.",
+      "Management committee minutes on the direction of KKS implementation."
+    ],
+    "reporting": "Pelaporan status kesiapan prinsip dasar dalam laporan tahunan KKS.",
+    "appendices": [
+      "Pasal 3-4"
+    ],
+    "roleTranslations": {
+      "sysadmin": "SysAdmin Mode: Block unauthorized connections and perform regular access monitoring.",
+      "board": "Board Mode: Ensure that PBI 022024 is the main reference in the annual audit.",
+      "legal": "Legal Mode: Prepare accountability documents for OJK reports.",
+      "bod": "Board Mode: Provide strategic oversight over 'Setting objectives and basic principles of PSC implementation'. Make sure these initiatives support business goals and do not disrupt operations."
+    }
+  },
+  {
+    "id": "PBI.KRK-02",
+    "chapter": "II",
+    "domain": "Kerangka",
+    "article": "Pasal 5-6",
+    "title": "Objects of regulation and scope of KKS",
+    "summary": "KKS regulations apply to PJP, PIP, PUVA actors, supporting institutions, KUPVA BB organizers, and other parties regulated and supervised by Bank Indonesia.",
+    "analogy": "Kayak masang patok batas tanah sertifikat. So that it is clear which areas must be guarded by security guards, which are public areas.",
+    "focus": [
+      "Ensure that the entity understands whether it is included in the objects of Bank Indonesia's KKS regulations.",
+      "Map the scope of implementation in the areas of governance, prevention, handling, supervision and collaboration.",
+      "Determine the scope of systems, services and third parties included in the KKS perimeter."
+    ],
+    "evidence": [
+      "Document determining the KKS scope and system perimeter.",
+      "Map of business processes, services, and third parties covered.",
+      "Management decisions regarding classification of entities or service lines."
+    ],
+    "reporting": "Dokumentasi perimeter sistem dalam profil risiko tahunan.",
+    "appendices": [
+      "Pasal 5-6"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Object of regulation and scope of PSC'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'KKS setting objects and scope'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Object of regulation and scope of PSC'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-01",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 8",
+    "title": "KKS strategy and policies",
+    "summary": "KKS strategies and policies must include strategic plans, policies/standards/procedures, and KKS organizational functions.",
+    "focus": [
+      "Establish a formal KKS strategy and policy framework.",
+      "Link KKS strategy with business goals, risks and capability strengthening priorities.",
+      "Ensure strategies and policies are implemented to strengthen the organization's KKS conditions."
+    ],
+    "evidence": [
+      "Approved KKS strategy and policy documents.",
+      "Implementation roadmap or annual KKS work program.",
+      "Implementation status reporting mechanism to management."
+    ],
+    "analogy": "This is the organization's compass and roadmap. If it weren't there, the ship would just wander around in the ocean without direction.",
+    "appendices": [
+      "Pasal 8"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'KKS strategy and policies'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'KKS strategies and policies'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'KKS strategy and policies'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-02",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 9",
+    "title": "KKS strategic plan",
+    "summary": "The KKS strategic plan at least contains strategic direction, a strengthening roadmap, and estimates of human resource, process and technology needs.",
+    "focus": [
+      "Determine the strategic direction for strengthening KKS over a multi-year horizon.",
+      "Develop a roadmap and resource requirements for people, processes and technology.",
+      "Conduct regular evaluations of strategic plans according to cyber risk developments."
+    ],
+    "evidence": [
+      "KKS roadmap document and supporting business case.",
+      "Plan budget needs, human resource capacity and technology.",
+      "Results of regular reviews of roadmap achievements."
+    ],
+    "analogy": "It's like putting together a long-term holiday itinerary. You've planned when to go to the mountains, when to go to the beach, plus the budget.",
+    "appendices": [
+      "Pasal 9"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'KKS strategic plan'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize the 'KKS strategic plan'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'KKS strategic plan'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-03",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 10",
+    "title": "KKS policies, standards and procedures",
+    "summary": "KKS policies must cover data security, application systems, IT infrastructure, third party security, as well as consumer protection and fraud management.",
+    "focus": [
+      "Regulate KKS policies on human, process and technology aspects.",
+      "Ensure the scope of the policy covers data, applications, infrastructure, third parties and fraud.",
+      "Conduct regular evaluations of the adequacy and effectiveness of policies and procedures."
+    ],
+    "evidence": [
+      "Collection of information security policies, standards and SOPs.",
+      "Due diligence controls and third party safeguards.",
+      "Results of policy reviews and document updates."
+    ],
+    "analogy": "Like a recipe book and SOP in a five-star restaurant kitchen. All chefs must cook to the same standards so that the taste is consistent.",
+    "appendices": [
+      "Pasal 10"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'KKS policies, standards and procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'KKS policies, standards and procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'KKS policies, standards and procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-04",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 11-13",
+    "title": "KKS organizational and management functions",
+    "summary": "KKS organizational functions include KKS management, cyber risk management, and KKS audit, with accountability to the highest management.",
+    "focus": [
+      "Establish effective, efficient and accountable KKS organizational functions.",
+      "Placing KKS management as the person responsible for planning, policy, culture, prevention and handling.",
+      "Ensure that KKS function reporting lines lead to the highest management."
+    ],
+    "evidence": [
+      "Organizational structure and job description of KKS functions.",
+      "Organizational charter or mandate of KKS functions.",
+      "Periodic reports from KKS management to the highest management."
+    ],
+    "analogy": "Similar to the distribution of positions on a football team. There must be a striker, defender and goalkeeper. Not everyone can attack.",
+    "appendices": [
+      "Pasal 11-13"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Organizational and management functions of PSC'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'KKS organization and management functions'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Organizational and management functions of PSC'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-05",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 14-15",
+    "title": "Cyber ​​risk management and KKS maturity measurement",
+    "summary": "Cyber ​​risk management must follow best practices, be integrated with risk management processes, and include regular measurements of KKS maturity levels.",
+    "focus": [
+      "Integrate cyber risks into enterprise risk management processes.",
+      "Carrying out cyber risk identification, assessment, mitigation and evaluation of cyber threats and attacks.",
+      "Regularly measure the KKS maturity level and follow up on the results."
+    ],
+    "evidence": [
+      "Cyber ​​risk register and risk assessment methodology.",
+      "KKS assessment results or maturity assessment.",
+      "Cyber ​​risk mitigation plans and follow-up status."
+    ],
+    "analogy": "Like a routine medical check-up. To test how healthy your organization is before the disease becomes chronic.",
+    "appendices": [
+      "Pasal 14-15"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Cyber ​​risk management and KKS maturity measurement' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Cyber ​​risk management and KKS maturity measurement'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Cyber ​​risk management and PSC maturity measurement'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-06",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 16-17",
+    "title": "KKS Audit",
+    "summary": "KKS audits are carried out periodically by internal and/or external parties independently to ensure compliance and control effectiveness.",
+    "focus": [
+      "Develop a KKS audit program that includes governance, prevention and handling.",
+      "Ensure that audits are carried out independently.",
+      "Follow up on audit results to improve control effectiveness."
+    ],
+    "evidence": [
+      "Annual or multi-year KKS audit plan.",
+      "Internal or external audit report.",
+      "List of findings and evidence of completion of follow-up."
+    ],
+    "analogy": "This is like inviting a food vlogger or critic to taste your food objectively, so that it is found to be lacking in salt or sweetness.",
+    "appendices": [
+      "Pasal 16-17"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'KKS Audit' is monitored in the audit report. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'KKS Audit'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'KKS Audit'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.GOV-07",
+    "chapter": "III",
+    "domain": "Tata Kelola",
+    "article": "Pasal 18",
+    "title": "KKS culture",
+    "summary": "KKS culture must increase awareness of cyber risks as well as positive behavior and cyber ethics for internal parties, third parties and consumers.",
+    "focus": [
+      "Carrying out regular KKS culture improvement programs.",
+      "Ensure that KKS cultural materials reach internal parties, third parties and consumers.",
+      "Involving top management as role models in the KKS cultural program."
+    ],
+    "evidence": [
+      "KKS awareness and culture program.",
+      "Outreach materials, training, or awareness campaigns.",
+      "Records participation and evaluates the effectiveness of cultural programs."
+    ],
+    "analogy": "Just like the culture of washing hands before eating. If it becomes a habit, you don't need to be told anymore, everyone will automatically care about cleanliness.",
+    "appendices": [
+      "Pasal 18"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'KKS Culture'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'KKS Culture'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'KKS Culture'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-01",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 21",
+    "title": "Preparation and updating of cyber risk profiles",
+    "summary": "Preventive identification starts from preparing a cyber risk profile through identification, assessment and analysis of business impacts, as well as regular updates.",
+    "focus": [
+      "Compile a cyber risk profile that describes the organization's threats, vulnerabilities and exposures.",
+      "Regularly update the cyber risk profile according to changes in services or threats.",
+      "Using identification results for control prioritization."
+    ],
+    "evidence": [
+      "Cyber ​​risk profile or cyber risk profile document.",
+      "Schedule regular reviews of cyber risk profiles.",
+      "Control priority mapping based on identification results."
+    ],
+    "analogy": "Like making an ID card or medical record specifically for threats. So you know what your specific weaknesses are, for example ransomware allergies.",
+    "appendices": [
+      "Pasal 21"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Creating and updating cyber risk profiles' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Creation and updating of cyber risk profiles'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Creation and updating of cyber risk profiles'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-02",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 23",
+    "title": "Cyber ​​risk assessment",
+    "summary": "Cyber ​​risk assessments should determine relevant methodologies, assess the impact of vulnerabilities and threats, and prioritize mitigations from highest to lowest.",
+    "focus": [
+      "Determine cyber risk assessment methodologies relevant to service characteristics.",
+      "Assess the impact of vulnerabilities and threats to operational services.",
+      "Develop mitigation priorities based on risk level."
+    ],
+    "evidence": [
+      "Documented cyber risk assessment methodology.",
+      "Risk assessment results for critical assets or services.",
+      "List of mitigation priorities and those responsible for them."
+    ],
+    "analogy": "Similar to a what-if simulation before investing. Test if a worst-case scenario occurs, how much loss will be experienced.",
+    "appendices": [
+      "Pasal 23"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Cyber ​​risk assessment' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cyber ​​risk assessment'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Cyber ​​risk assessment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-03",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 24-25",
+    "title": "Analyze business impact and identify vital information infrastructure",
+    "summary": "A business impact analysis should assess financial and nonfinancial impacts, criticality of business functions, and critical information systems that have a broad impact.",
+    "focus": [
+      "Assess the financial, non-financial and financial system stability impacts of cyber disruptions.",
+      "Identify critical business functions and their control priorities.",
+      "Determine vital information infrastructure that has a broad impact."
+    ],
+    "evidence": [
+      "Business impact analysis for critical services and systems.",
+      "List of vital information infrastructure.",
+      "Critical service recovery priority document."
+    ],
+    "analogy": "Just like finding out the vital organs in the body. If your little finger is injured you can still walk, but if your heart stops, it's all over.",
+    "appendices": [
+      "Pasal 24-25"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Business impact analysis and identification of vital information infrastructure'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Business impact analysis and identification of vital information infrastructure'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Business impact analysis and identification of vital information infrastructure'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-04",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 27",
+    "title": "Defense system development",
+    "summary": "The KKS defense system in the human, process and technology aspects must secure internal/third parties, business processes and information system security configurations.",
+    "focus": [
+      "Ensure the safety of personnel and third parties throughout the work cycle as well as education according to their role.",
+      "Effectively implement security controls for business processes.",
+      "Implementing security configurations for the information systems used."
+    ],
+    "evidence": [
+      "Control onboarding, offboarding, and screening of personnel or vendors.",
+      "Baseline security configuration and hardening standards.",
+      "Notes on implementing endpoint security, patching, or network segmentation."
+    ],
+    "analogy": "Like building fortress walls, moats and guard posts around the palace so that the enemy thinks twice before attacking.",
+    "appendices": [
+      "Pasal 27"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Defense system construction'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Defense system development'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Defence system development'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-05",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 28",
+    "title": "Securing and protecting data and information",
+    "summary": "Data and information must be secured at each stage of the life cycle according to data classification and comply with personal data protection provisions.",
+    "focus": [
+      "Determine data classification and security at each data life cycle.",
+      "Control access, use, storage and destruction of data securely.",
+      "Ensure compliance with personal data protection provisions."
+    ],
+    "evidence": [
+      "Data classification scheme and data handling policy.",
+      "Control encryption, backup, and access control for sensitive data.",
+      "Compliance documents or assessments regarding personal data protection."
+    ],
+    "analogy": "It's like putting valuables into a padded safe, plus the key is only held by the person who has the right to do so.",
+    "appendices": [
+      "Pasal 28"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Security and protection of data and information'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Security and protection of data and information'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Security and protection of data and information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-06",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 29-30",
+    "title": "Detection, monitoring and early warning systems",
+    "summary": "Detection includes monitoring, analysis of results, analysis of cyber attacks, analysis of malicious code, and maintenance and testing of detection systems.",
+    "focus": [
+      "Monitor logical and physical access that could potentially lead to cyber attacks.",
+      "Set threshold indicators to trigger early warning systems.",
+      "Conduct cyber vulnerability scans consistently and continuously."
+    ],
+    "evidence": [
+      "Monitoring logs and security dashboard.",
+      "Definition of alert threshold and escalation rules.",
+      "Results of vulnerability scanning or vulnerability monitoring."
+    ],
+    "analogy": "Like an anti-theft alarm and CCTV that is on 24 hours. When there is suspicious movement, the alarm immediately goes off.",
+    "appendices": [
+      "Pasal 29-30"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Detection, monitoring and early warning systems'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Detection, monitoring and early warning systems'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Detection, monitoring and early warning systems'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.PRV-07",
+    "chapter": "IV",
+    "domain": "Pencegahan",
+    "article": "Pasal 31-34",
+    "title": "Analysis of monitoring and testing results of detection systems",
+    "summary": "Organizers must analyze monitoring results, cyberattacks, malicious or unauthorized code, and maintain and test detection systems periodically.",
+    "focus": [
+      "Analyze monitoring results to identify attack patterns and anomalies.",
+      "Evaluate indicators of cyberattacks as well as malicious or unauthorized code.",
+      "Ensure the detection system is always up to date and its reliability is tested."
+    ],
+    "evidence": [
+      "Alert analysis and incident triage procedures.",
+      "Results of malware analysis or unauthorized code review.",
+      "Proof of maintenance of detection tools and test results."
+    ],
+    "analogy": "Just like security guards checking CCTV footage every morning. Maybe last night a cat passed by or a real thief might try.",
+    "appendices": [
+      "Pasal 31-34"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Analysis of detection system monitoring and testing results'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Analysis of detection system monitoring and testing results'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Analysis of detection system monitoring and testing results'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.HDL-01",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 37",
+    "title": "Cyber ​​incident response and recovery plan",
+    "summary": "The cyber incident response and recovery plan must include incident status, response, impact limitations, and a recovery plan that considers RTO and RPO.",
+    "focus": [
+      "Establish documented incident status and response flow.",
+      "Develop impact limitation mechanisms and recovery plans.",
+      "Ensure the plan takes into account recovery time objectives and recovery point objectives."
+    ],
+    "evidence": [
+      "Incident response plan and cyber recovery plan.",
+      "Determination of RTO and RPO for critical services.",
+      "Integrated business continuity plan document."
+    ],
+    "analogy": "Like an earthquake evacuation guidebook. If there was a real earthquake, everyone would know which door to run through without panicking.",
+    "appendices": [
+      "Pasal 37"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Cyber ​​incident response and recovery plan'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Cyber ​​incident response and recovery plans'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for a 'Cyber ​​incident handling and recovery plan' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PBI.HDL-02",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 38-39",
+    "title": "Simulation, testing and evaluation of treatment plans",
+    "summary": "Simulations and trials for handling/recovering cyber incidents are carried out comprehensively and regularly, then evaluated to improve plans.",
+    "focus": [
+      "Carrying out simulations and trials comprehensively and regularly.",
+      "Involve other parties if necessary in implementing the simulation.",
+      "Evaluate effectiveness and improve plans based on test results."
+    ],
+    "evidence": [
+      "Simulation scenarios and exercise schedules.",
+      "Minutes, minutes, or simulation results reports.",
+      "Improvement of treatment plan after exercise evaluation."
+    ],
+    "analogy": "Similar to fire drill training in an office building. So that if there is a real fire, don't rush to the emergency stairs.",
+    "appendices": [
+      "Pasal 38-39"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Simulation, testing and evaluation of treatment plans'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Simulation, testing and evaluation of treatment plans'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Simulation, testing and evaluation of treatment plans'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.HDL-03",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 40",
+    "title": "Handling cyber incidents and mandatory reporting to Bank Indonesia",
+    "summary": "When an incident occurs, the organizer must activate the incident response team, carry out mitigation and forensics, and report it to Bank Indonesia.",
+    "focus": [
+      "Activate a cyber incident response team at the organizational level.",
+      "Submit initial notification no later than 1 hour after the incident is discovered and incident reports no later than 3 calendar days after the incident occurs.",
+      "Carry out incident deepening, impact mitigation, escalation, and handling with internal and/or external resources."
+    ],
+    "evidence": [
+      "Incident response team activation runbook and emergency contact list.",
+      "Initial notification template and incident report to Bank Indonesia.",
+      "Forensic reports, incident chronology, and evidence of mitigation actions."
+    ],
+    "reporting": "Pelaporan kepada Bank Indonesia mencakup notifikasi awal paling lama 1 jam setelah insiden diketahui dan laporan insiden paling lama 3 hari kalender setelah insiden terjadi.",
+    "analogy": "It's like calling the police and fire department when your house is stolen or on fire. You have to report as soon as possible, you can't delay.",
+    "appendices": [
+      "Pasal 40"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Cyber ​​incident handling and mandatory reporting to Bank Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts related to 'Handling cyber incidents and mandatory reporting to Bank Indonesia'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Handling cyber incidents and mandatory reporting to Bank Indonesia' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PBI.HDL-04",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 41",
+    "title": "Communication of cyber incident handling actions",
+    "summary": "Incident handling must be supported by communication strategies and methods to stakeholders, including reporting progress on handling to Bank Indonesia.",
+    "focus": [
+      "Develop strategies and communication methods for incident handling and recovery.",
+      "Delivering appropriate communications to stakeholders.",
+      "Communicate progress in handling incidents to Bank Indonesia."
+    ],
+    "evidence": [
+      "Crisis communication plan or incident communication.",
+      "Stakeholder list and communication escalation scheme.",
+      "Proof of submitting handling updates to the regulator."
+    ],
+    "reporting": "Komunikasi penanganan insiden perlu dapat menunjukkan konsistensi isi, waktu penyampaian, dan pihak penerima yang relevan.",
+    "analogy": "Just like a PR company that makes a press release when there is a crisis. The information must be arranged so that customers do not panic together.",
+    "appendices": [
+      "Pasal 41"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Communication of cyber incident response actions'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Communication of cyber incident response actions'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Communication of cyber incident handling actions' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PBI.HDL-05",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 42-43",
+    "title": "Recovery and return of service to normal conditions",
+    "summary": "Recovery is carried out to restore service according to priority, including the establishment of alternative work locations, separate data centers, and alternative data communications networks.",
+    "focus": [
+      "Set recovery priorities and service return targets.",
+      "Determine alternative work location options, separate data centers, or alternative networks.",
+      "Execute recovery according to incident recovery plan and critical service priorities."
+    ],
+    "evidence": [
+      "Recovery architecture and disaster recovery arrangement documents.",
+      "Failover test results or alternative location activation.",
+      "Evidence of service recovery based on criticality priorities."
+    ],
+    "analogy": "Similar to the process of sweeping up broken glass and rebuilding the roof after being hit by a tornado, until the house can be lived in again.",
+    "appendices": [
+      "Pasal 42-43"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Recovery and return of services to normal conditions'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery and return of service to normal conditions'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Restoration and return of service to normal conditions'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.HDL-06",
+    "chapter": "V",
+    "domain": "Penanganan",
+    "article": "Pasal 44-45",
+    "title": "Continuous improvement and recovery communications",
+    "summary": "After an incident, organizers are required to evaluate the effectiveness of the response, strengthen the KKS, and communicate recovery progress to stakeholders and Bank Indonesia.",
+    "focus": [
+      "Evaluate the effectiveness of incident handling and recovery.",
+      "Implement efforts to strengthen KKS to mitigate similar incidents.",
+      "Communicate incident recovery progress to relevant parties and Bank Indonesia."
+    ],
+    "evidence": [
+      "Post-incident review or lessons learned report.",
+      "List of corrective actions and their implementation status.",
+      "Evidence of recovery communication to regulators and stakeholders."
+    ],
+    "reporting": "Pelaporan kemajuan pemulihan ke Bank Indonesia perlu selaras dengan strategi komunikasi insiden dan menunjukkan progres pengembalian layanan.",
+    "analogy": "It's like treating wounds and then patching holes in the road that cause you to fall. So that tomorrow no one will slip in the same place again.",
+    "appendices": [
+      "Pasal 44-45"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Continuous improvement and recovery communications'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Continuous repair and recovery communication'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Continuous improvement and recovery communications'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.OVS-01",
+    "chapter": "VI",
+    "domain": "Pengawasan",
+    "article": "Pasal 47-52",
+    "title": "Bank Indonesia supervision mechanism",
+    "summary": "Bank Indonesia carries out risk and/or compliance-based supervision through indirect supervision, direct supervision and follow-up supervision.",
+    "focus": [
+      "Prepare the organization for direct and indirect supervision.",
+      "Ensure documents, infrastructure, information systems and other objects are ready for inspection.",
+      "Following up on regulators' requests to do or not do something, including restrictions on activities or services."
+    ],
+    "evidence": [
+      "Repository of documents and evidence of KKS implementation.",
+      "Regulatory inspection preparation procedures.",
+      "Evidence of follow-up on monitoring results."
+    ],
+    "reporting": "Kesiapan pengawasan perlu terlihat dari ketertelusuran data, kecepatan respons, dan penyelesaian tindak lanjut atas hasil pengawasan.",
+    "analogy": "Like a traffic policeman at a crossroads. Monitor whether you're carrying a helmet or not, and be ready to get a ticket if you're reckless.",
+    "appendices": [
+      "Pasal 47-52"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Bank Indonesia supervisory mechanism'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Bank Indonesia supervision mechanism'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Bank Indonesia supervisory mechanism'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.OVS-02",
+    "chapter": "VI",
+    "domain": "Pengawasan",
+    "article": "Pasal 54-55",
+    "title": "Submission of KKS data, information and reports",
+    "summary": "Organizers are required to submit data and information on KKS implementation in the areas of governance, prevention and handling through annual and incidental reporting.",
+    "focus": [
+      "Compile KKS data and information in the form of documents, raw data and/or processed data.",
+      "Submit annual reporting on KKS maturity levels and identification of vital information infrastructure.",
+      "Submit incidental reporting when a cyber incident occurs and ensure compliance to avoid administrative sanctions."
+    ],
+    "evidence": [
+      "KKS maturity level annual reporting template.",
+      "List of vital information infrastructure identification results.",
+      "Proof of submission of incidental and annual reports to Bank Indonesia."
+    ],
+    "reporting": "Pasal ini menegaskan kewajiban pelaporan tahunan dan insidental, dengan risiko sanksi administratif termasuk teguran, kewajiban membayar, penghentian kegiatan, hingga pencabutan izin/persetujuan.",
+    "analogy": "Just like collecting school reports every semester. The report must be honest and show learning progress over the last 6 months.",
+    "appendices": [
+      "Pasal 54-55"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Delivery of KKS data, information and reports'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Delivery of KKS data, information and reports'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Submission of KKS data, information and reports'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PBI.COL-01",
+    "chapter": "VII",
+    "domain": "Kolaborasi",
+    "article": "Pasal 57-58",
+    "title": "Exchange of information on threats, vulnerabilities and cyber incidents",
+    "summary": "The organizers exchange information resulting from identifying vulnerabilities, threats, attacks and cyber incidents that could disrupt the stability of the financial system.",
+    "focus": [
+      "Share information on sources and patterns of cyber threats and attacks.",
+      "Convey information on security gaps that impact cyber vulnerabilities.",
+      "Document lessons learned from how cyber incidents are handled."
+    ],
+    "evidence": [
+      "Threat intelligence sharing procedures.",
+      "Proof of participation in forums or information sharing facilities.",
+      "Controlled incident learning summaries are shared."
+    ],
+    "analogy": "Like a complex siskamling WhatsApp group. If there are thieves in block A, block B will be notified so they can be ready to patrol it.",
+    "appendices": [
+      "Pasal 57-58"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Cyber ​​threat, vulnerability and incident information exchange' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Exchange of cyber threat, vulnerability and incident information'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Exchange of information on cyber threats, vulnerabilities and incidents' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PBI.COL-02",
+    "chapter": "VII",
+    "domain": "Kolaborasi",
+    "article": "Pasal 59-61",
+    "title": "Coordination of incident prevention and cooperation with SROs",
+    "summary": "Collaboration includes coordination of incident prevention and the effects of transmission, cross-party handling readiness, as well as possible technical procedures through SRO.",
+    "focus": [
+      "Support coordination with authorities, institutions and other organizers to prevent incidents and the effects of transmission.",
+      "Prepare participation in simulations or coordinate incident handling readiness.",
+      "Refers to technical and specific KKS procedures that can be prepared through SRO with approval from Bank Indonesia."
+    ],
+    "evidence": [
+      "Minutes of coordination with regulators, SROs, or related institutions.",
+      "Participation in financial sector cyber attack simulations.",
+      "Technical procedures or operational standards referred to from the SRO."
+    ],
+    "analogy": "Similar to cooperation between cross-city fire departments. If the fire is too big, they help each other work on the source of the fire.",
+    "appendices": [
+      "Pasal 59-61"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Incident prevention coordination and collaboration with SROs'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Coordination of incident prevention and cooperation with SRO'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Coordination of incident prevention and cooperation with SRO' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PBI.IMP-01",
+    "chapter": "VIII",
+    "domain": "Penerapan",
+    "article": "Pasal 62",
+    "title": "Implementation of KKS according to organizer classification",
+    "summary": "The implementation of KKS must adapt to the classification of providers, including classification references for PJP, PIP, PUVA, supporting institutions and other parties determined by Bank Indonesia.",
+    "focus": [
+      "Identify the classification of organizers according to applicable regulations.",
+      "Adjusting the intensity and form of KKS implementation with the risk profile or infrastructure classification.",
+      "Ensure internal policies refer to relevant classification and derivative provisions."
+    ],
+    "evidence": [
+      "Organizer classification determination document.",
+      "KKS control mapping based on classification or risk tier.",
+      "Compliance matrix for relevant derivative provisions."
+    ],
+    "analogy": "Like the boxing class classification. You must fight in a class that matches your weight. The rules are adjusted to capacity.",
+    "appendices": [
+      "Pasal 62"
+    ],
+    "reporting": "Pelaporan berkala kepada manajemen dan Bank Indonesia sesuai ketentuan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Implementation of KKS according to provider classification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'KKS implementation according to provider classification'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Implementation of KKS according to provider classification'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

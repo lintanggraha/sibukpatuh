@@ -30,7 +30,7 @@
                     aria-expanded="false"
                   >
                     <i :class="`fas ${group.icon}`" class="nav-icon"></i>
-                    <span>{{ group.label }}</span>
+                    <span>{{ $t(group.labelKey) }}</span>
                   </button>
 
                   <div
@@ -46,19 +46,19 @@
                       @click="closeAllGroups"
                     >
                       <i :class="`fas ${item.icon}`" class="dropdown-icon"></i>
-                      <span>{{ item.label }}</span>
+                      <span>{{ item.labelKey ? $t(item.labelKey) : item.label }}</span>
                     </router-link>
                   </div>
                 </div>
 
                 <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
                   <i class="fas fa-info-circle nav-icon"></i>
-                  <span>Tentang</span>
+                  <span>{{ $t('nav.tentang') }}</span>
                 </router-link>
 
                 <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
                   <i class="fas fa-envelope nav-icon"></i>
-                  <span>Kontak</span>
+                  <span>{{ $t('nav.kontak') }}</span>
                 </router-link>
             </nav>
 
@@ -83,12 +83,12 @@
       <footer class="site-footer" aria-label="Informasi situs">
         <div>
           <strong>SibukPatuh</strong>
-          <span>Referensi edukatif keamanan siber, tata kelola TI, dan kepatuhan digital.</span>
+          <span>{{ $t('footer.description') }}</span>
         </div>
         <nav aria-label="Footer navigation">
-          <router-link to="/about">Tentang</router-link>
-          <router-link to="/privacy-policy">Kebijakan Privasi</router-link>
-          <router-link to="/contact">Kontak</router-link>
+          <router-link to="/about">{{ $t('nav.tentang') }}</router-link>
+          <router-link to="/privacy-policy">{{ $t('nav.kebijakanPrivasi') }}</router-link>
+          <router-link to="/contact">{{ $t('nav.kontak') }}</router-link>
         </nav>
       </footer>
       <!-- Trakteer Tip Floating Button -->
@@ -102,7 +102,7 @@
         <div class="trakteer-pulse"></div>
         <div class="trakteer-content">
           <i class="fas fa-mug-hot"></i>
-          <span>Traktir Kopi</span>
+          <span>{{ $t('action.traktirKopi') }}</span>
         </div>
       </a>
 
@@ -110,10 +110,22 @@
       <button 
         class="theme-toggle-fab" 
         @click.stop="toggleTheme"
-        :aria-label="isDarkTheme ? 'Aktifkan Mode Terang' : 'Aktifkan Mode Gelap'"
+        :aria-label="isDarkTheme ? $t('action.modeTerang') : $t('action.modeGelap')"
       >
         <div class="theme-fab-content">
           <i :class="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </div>
+      </button>
+
+      <!-- Language Toggle Floating Button -->
+      <button 
+        class="lang-toggle-fab" 
+        @click.stop="toggleLanguage"
+        aria-label="Toggle Language"
+      >
+        <div class="theme-fab-content lang-fab-content">
+          <i class="fas fa-language"></i>
+          <span class="lang-text" style="font-size: 0.7rem; font-weight: bold; margin-top: 2px;">{{ currentLang.toUpperCase() }}</span>
         </div>
       </button>
       <Analytics />
@@ -138,9 +150,10 @@ export default {
   data() {
     return {
       isDarkTheme: false,
+      currentLang: localStorage.getItem('language') || 'id',
       frameworkNavGroups: [
         {
-          label: "Nasional",
+          labelKey: "nav.nasional",
           icon: "fa-landmark",
           active: false,
           show: false,
@@ -166,7 +179,7 @@ export default {
           ],
         },
         {
-          label: "Internasional",
+          labelKey: "nav.internasional",
           icon: "fa-globe-asia",
           active: false,
           show: false,
@@ -200,42 +213,42 @@ export default {
           ],
         },
         {
-          label: "Intelijen",
+          labelKey: "nav.intelijen",
           icon: "fa-shield-virus",
           active: false,
           show: false,
           items: [
             {
               routeName: "intelligence_center",
-              label: "Pusat Intelijen",
+              labelKey: "menu.pusatIntelijen", label: "Pusat Intelijen",
               icon: "fa-shield-virus",
             },
           ],
         },
         {
-          label: "Analisis",
+          labelKey: "nav.analisis",
           icon: "fa-chart-pie",
           active: false,
           show: false,
           items: [
             {
               routeName: "cross_mapping",
-              label: "Cross-Mapping",
+              labelKey: "menu.crossMapping", label: "Cross-Mapping",
               icon: "fa-network-wired",
             },
             {
               routeName: "framework_analysis",
-              label: "Komparasi & Gap",
+              labelKey: "menu.komparasiGap", label: "Komparasi & Gap",
               icon: "fa-code-compare",
             },
             {
               routeName: "checklist_tools",
-              label: "Checklist Tools",
+              labelKey: "menu.checklistTools", label: "Checklist Tools",
               icon: "fa-tasks",
             },
             {
               routeName: "simulator",
-              label: "Compliance Simulator",
+              labelKey: "menu.complianceSimulator", label: "Compliance Simulator",
               icon: "fa-gamepad",
             },
           ],
@@ -254,6 +267,11 @@ export default {
     },
   },
   methods: {
+    toggleLanguage() {
+      this.currentLang = this.currentLang === 'id' ? 'en' : 'id';
+      this.$i18n.locale = this.currentLang;
+      localStorage.setItem('language', this.currentLang);
+    },
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme;
       const theme = this.isDarkTheme ? 'dark' : 'light';

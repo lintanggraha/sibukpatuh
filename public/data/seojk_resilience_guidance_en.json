@@ -1,0 +1,169 @@
+[
+  {
+    "id": "DR-01",
+    "title": "Context and Priorities for Digital Resilience",
+    "section": "A. Latar Belakang",
+    "summary": "The Digital Resilience Guide positions digital resilience as a response to operational dependence on digital services, exposure to disruption, and the need to maintain continuity of banking services.",
+    "focus": [
+      "Use threat context and digital dependencies to prioritize the most material control areas.",
+      "Link cyber risk assessments to the impact on the Bank's services, customers and core operations.",
+      "Perform analysis updates when significant changes occur in services, technology, or threat patterns."
+    ],
+    "mapped_pillars": [
+      "Assessment",
+      "Governance",
+      "Reporting"
+    ],
+    "related_requirements": [
+      "II.01",
+      "II.02",
+      "VI.01"
+    ],
+    "analogy": "It's like choosing a security system for your home, you have to know first which rooms store valuables, not install alarms all over the roof.",
+    "roleTranslations": {
+      "sysadmin": "SysAdmin Mode: Configure system auto-failover and daily backups.",
+      "board": "Board Mode: Budget the cost of providing reliable BCP/DRC infrastructure.",
+      "legal": "Legal Mode: Review service continuity procedures in the perspective of OJK regulations.",
+      "bod": "Board Mode: Provide strategic oversight of 'Digital Resilience Context and Priorities'. Make sure these initiatives support business goals and do not disrupt operations."
+    }
+  },
+  {
+    "id": "DR-02",
+    "title": "Digital Resilience Governance and Accountability",
+    "section": "C. Kerangka Ketahanan Digital",
+    "summary": "The guide reinforces the importance of board accountability, policy direction, division of roles across functions, and ongoing monitoring of an organization's digital resilience.",
+    "focus": [
+      "Ensure that the Board of Directors, Board of Commissioners and control functions have a clear mandate on digital resilience.",
+      "Align digital resilience policies and frameworks with business, IT and risk management strategies.",
+      "Build cross-functional coordination so that decision making during disruptions or incidents can take place quickly and be documented."
+    ],
+    "mapped_pillars": [
+      "Governance",
+      "Organization"
+    ],
+    "related_requirements": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "VIII.01",
+      "VIII.02"
+    ],
+    "analogy": "Like appointing a ship captain when a storm comes. If everyone wants to hold the helm, the ship will sink.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Digital Resilience Governance and Accountability'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Digital Resilience Governance and Accountability'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Digital Resilience Governance and Accountability'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DR-03",
+    "title": "Assets, Essential Services, and ICT Dependence",
+    "section": "B. Ketahanan Digital",
+    "summary": "Digital resilience analysis needs to start from critical services, assets, data, processes, and technological dependencies and supporting parties that affect operational continuity.",
+    "focus": [
+      "Maintain an inventory of critical assets and services along with their internal and external dependencies.",
+      "Link threat and vulnerability identification to service criticality and operational impact.",
+      "Use dependency mapping results to determine protection, monitoring, and recovery priorities."
+    ],
+    "mapped_pillars": [
+      "Assessment",
+      "Resilience"
+    ],
+    "related_requirements": [
+      "II.02",
+      "IV.01",
+      "IV.02",
+      "V.03"
+    ],
+    "analogy": "Similar to the anatomy of the human body. You have to know which organs if you get sick will make you faint, so that treatment is prioritized.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Assets, Critical Services and ICT Dependencies'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ICT Assets, Critical Services and Dependencies'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'ICT Assets, Critical Services and Dependencies'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DR-04",
+    "title": "Incident Prevention, Detection and Response",
+    "section": "B. Ketahanan Digital",
+    "summary": "The guidance highlights the need for preventative safeguards, continuous monitoring, incident escalation, and rapid coordination of response actions to maintain the resilience of digital services.",
+    "focus": [
+      "Ensure preventive control, monitoring and incident triage are connected in a consistent operational flow.",
+      "Establish lines of communication, escalation, and decisions in the event of a disruption or cyberattack.",
+      "Use incident lessons learned to update control baselines and response procedures."
+    ],
+    "mapped_pillars": [
+      "Resilience",
+      "Organization"
+    ],
+    "related_requirements": [
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "VIII.02"
+    ],
+    "analogy": "Like installing a smoke detection system and fire extinguisher. As soon as there was a spark, the alarm sounded, and the fire was immediately extinguished before it burned down the entire building.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Incident Prevention, Detection and Response'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incident Prevention, Detection and Response'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident Prevention, Detection and Response' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "DR-05",
+    "title": "Service Recovery and Adaptation",
+    "section": "B. Ketahanan Digital",
+    "summary": "Digital resiliency doesn't stop at containment, but includes service recovery, data recovery, and adapting controls after a disruption or incident occurs.",
+    "focus": [
+      "Set up recovery scenarios for priority services and their supporting assets and data.",
+      "Ensure the recovery process results in learning, updating procedures, and strengthening controls.",
+      "Measure the success of recovery in terms of services, data, and organizational readiness to return to operations."
+    ],
+    "mapped_pillars": [
+      "Resilience",
+      "Reporting"
+    ],
+    "related_requirements": [
+      "IV.04",
+      "V.01",
+      "VI.01"
+    ],
+    "analogy": "Just like a first aid kit and health insurance in case of an accident. You fall, get it treated, keep learning so you don't walk the same potholes.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Service Recovery and Adaptation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Service Recovery and Adaptation'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Service Recovery and Adaptation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DR-06",
+    "title": "Continuous Testing and Improvement",
+    "section": "C. Kerangka Ketahanan Digital",
+    "summary": "The guide reinforces the importance of technical testing, scenario-based exercises, maturity evaluation, and continuous improvement follow-up as the foundation for strengthening digital resilience.",
+    "focus": [
+      "Combine technical testing, scenario exercises, and maturity evaluation in one measurable improvement cycle.",
+      "Ensure that the test results produce an action plan that is monitored until completion.",
+      "Use evaluation results to refine digital resilience investment priorities, competencies and governance."
+    ],
+    "mapped_pillars": [
+      "Testing",
+      "Assessment",
+      "Governance"
+    ],
+    "related_requirements": [
+      "V.01",
+      "V.02",
+      "V.03",
+      "V.04",
+      "VII.01",
+      "VII.02",
+      "VII.03"
+    ],
+    "analogy": "It's like a fire simulation exercise in the office. It's better to panic during training than to be stunned when there's actually a fire.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Continuous Testing and Improvement'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Continuous Testing and Improvement'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Continuous Testing and Improvement'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

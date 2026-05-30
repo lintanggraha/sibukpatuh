@@ -1,0 +1,202 @@
+[
+  {
+    "id": "I.a",
+    "title": "Key Definitions of Payment System Industry Regulations",
+    "type": "Glosarium",
+    "scope": "General requirements",
+    "summary": "List of definitions of terms used in this Board of Governors Member Regulation, including Payment System, PSP, PJP, PIP, Source of Funds, and others.",
+    "contains": [
+      "Payment system",
+      "Payment System Service Provider (PSP)",
+      "Payment Service Provider (PJP)",
+      "Payment System Infrastructure Operator (PIP)",
+      "Source of Funds for Payment",
+      "Digital Financial Services (DFI)",
+      "Self-Regulatory Organization (SRO)",
+      "TIKMI",
+      "Float funds"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Key Regulatory Definitions of the Payment Systems Industry'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Payment System Industry Setting Key Definitions'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Key Definitions of Payment System Industry Regulations'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "I.b",
+    "title": "Electronic Money Value Limit",
+    "type": "Parameter",
+    "scope": "Electronic Money",
+    "summary": "Electronic money value limit: unregistered max IDR 2 million (deposits), IDR 20 million (transactions/month); registered max IDR 20 million (deposits), IDR 40 million (transactions/month).",
+    "contains": [
+      "Unregistered electronic money: maximum deposit IDR 2,000,000, monthly transaction IDR 20,000,000",
+      "Registered electronic money: maximum deposit IDR 20,000,000, monthly transaction IDR 40,000,000",
+      "Incoming transactions are counted towards the transaction limit",
+      "Exceptions for Goods and Services Provider accounts"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Electronic Money Value Limits'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Electronic Money Value Limit'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Electronic Money Value Limit'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "I.c",
+    "title": "Obligation to Place Float Funds",
+    "type": "Kewajiban",
+    "scope": "Electronic Money - Prudential",
+    "summary": "PJP issuing electronic money is required to place float funds: minimum 30% in KBMI 4 bank cash/giro, maximum 70% in securities/CFI.",
+    "contains": [
+      "Bank KBMI 4: minimum 30% on cash",
+      "Non-KBMI 4 and LSB banks: minimum 30% on KBMI 4 bank current accounts",
+      "Maximum 70% on Government/BI securities or BI account",
+      "Recording of float funds in liability posts",
+      "Float funds are user assets (trusted funds)"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Prioritize budget allocation and strategic approval for 'Float Fund Placement Obligations'. Make sure the security ROI is clear.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Float Fund Placement Obligations'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Float Fund Placement Obligations'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.a",
+    "title": "Closed Loop Electronic Money Issuance Permit",
+    "type": "Kewajiban",
+    "scope": "Closed Loop Electronic Money",
+    "summary": "Closed loop electronic money issuers with float funds >= IDR 1 billion are required to have a PJP permit. Risk management & consumer protection is mandatory.",
+    "contains": [
+      "Float funds >= IDR 1,000,000,000 require PJP permission",
+      "Multiple closed loop: the amount of float funds is accumulated",
+      "Implementation of risk management and consumer protection is mandatory",
+      "BI has the authority to carry out inspections on issuers < IDR 1 billion",
+      "LSB may continue during the permit process with restrictions"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Closed Loop Electronic Money Issuance License'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Closed Loop Electronic Money Issuance Permit'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Closed Loop Electronic Money Issuance Permit'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.b",
+    "title": "Issuance of Digital Financial Services (LKD)",
+    "type": "Persyaratan",
+    "scope": "LKD",
+    "summary": "PJP, an electronic money issuer, can become an LKD organizer through collaboration with agents. Must obtain BI approval.",
+    "contains": [
+      "Collaboration with LKD agents (Indonesian business entities/individuals)",
+      "Aspects: risk management, assets & capital, APU/CFT, information systems, complaint monitoring",
+      "LKD agents must have financial capabilities and pass due diligence",
+      "PJP can only work with agents who meet the criteria"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Digital Financial Services (DFI) Issuance'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Digital Financial Services (LKD) Issuance'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Digital Financial Services (DFI) Issuance'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.a",
+    "title": "National Standard for Payment Instruments Using Cards",
+    "type": "Standar",
+    "scope": "Card Payment Tools",
+    "summary": "PJPs that process card transactions are required to use national standards for payment instruments using cards established by Bank Indonesia.",
+    "contains": [
+      "Obligation to use national standards",
+      "The implementing stages are determined by BI",
+      "Includes credit cards, debit cards and ATM cards"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Board: Provide strategic oversight of the 'National Standard for Card Payment Instruments'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'National Standard for Payment Instruments Using Cards'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'National Standards for Card Payment Instruments'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.a",
+    "title": "Innovation Trial Framework (Regulatory Sandbox)",
+    "type": "Framework",
+    "scope": "Payment System Technology Innovation",
+    "summary": "Innovation trial framework: principles (criteria-based, transparency, proportionality, fairness, equality, forward looking), maximum duration 6+6 months, results status.",
+    "contains": [
+      "Principles: criteria-based process, transparency, proportionality, fairness, equality, forward looking",
+      "Duration: maximum 6 months, can be extended 1x6 months",
+      "Source: PSP request/other party or BI initiative",
+      "Innovation centers can be formed or appointed by other parties",
+      "Test result status: successful or unsuccessful",
+      "BI may set certain policies during the test"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Innovation Pilot Framework (Regulatory Sandbox)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Innovation Testing Framework (Regulatory Sandbox)'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for the 'Innovation Trial Framework (Regulatory Sandbox)'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.b",
+    "title": "Innovation Trial Report Requirements",
+    "type": "Format",
+    "scope": "Technological Innovation",
+    "summary": "Supporting documents for trial application: participant profile, innovation data (features, benefits, risks), trial scenario, scope, time period.",
+    "contains": [
+      "Profiles of all prospective participants (entities, contact persons)",
+      "Innovation data: product features, activities, services, business models, innovation elements, benefits",
+      "Aspects of risk management, information security, APU/CFT, infrastructure readiness",
+      "Proposed test scenarios",
+      "Scope: limit on number of users, nominal transactions, regional limits",
+      "Implementation period"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Innovation Trial Report Requirements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Innovation Trial Report Requirements'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Innovation Trial Report Requirements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.a",
+    "title": "Sharia Electronic Money",
+    "type": "Ketentuan Khusus",
+    "scope": "Sharia Electronic Money",
+    "summary": "The administration of electronic money by sharia banks/business units/LSBs must comply with sharia principles. Placement of float funds in the current account of the sharia business unit of KBMI 4 bank.",
+    "contains": [
+      "In accordance with PADG provisions as long as they do not conflict with sharia principles",
+      "Placement of float funds in the current account of the sharia business unit of KBMI 4 bank",
+      "Or a sharia bank that has an ownership relationship with KBMI 4 bank",
+      "BI can adjust its float fund placement policy"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Sharia Electronic Money'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Sharia Electronic Money'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Sharia Electronic Money'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.b",
+    "title": "Receiving and Handling Complaints",
+    "type": "Prosedur",
+    "scope": "Consumer Monitoring",
+    "summary": "Bank Indonesia can receive and submit consumer complaints regarding the implementation of the payment system to PSP for follow-up.",
+    "contains": [
+      "Consumer complaints can be submitted to BI",
+      "BI will submit complaints to the relevant PSP",
+      "PSP is obliged to follow up and report",
+      "Handling time limits are in accordance with applicable regulations"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Complaint Reception and Handling'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Complaint Reception and Handling'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Reception and Handling of Complaints'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

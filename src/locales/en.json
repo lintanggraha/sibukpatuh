@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "nasional": "National",
+    "internasional": "International",
+    "intelijen": "Intelligence",
+    "analisis": "Analysis",
+    "tentang": "About",
+    "kontak": "Contact",
+    "kebijakanPrivasi": "Privacy Policy"
+  },
+  "menu": {
+    "pusatIntelijen": "Intelligence Center",
+    "crossMapping": "Cross-Mapping",
+    "komparasiGap": "Comparison & Gap",
+    "checklistTools": "Checklist Tools",
+    "complianceSimulator": "Compliance Simulator"
+  },
+  "footer": {
+    "description": "Educational reference for cybersecurity, IT governance, and digital compliance."
+  },
+  "action": {
+    "traktirKopi": "Buy me a Coffee",
+    "modeTerang": "Enable Light Mode",
+    "modeGelap": "Enable Dark Mode",
+    "bacaSelengkapnya": "Read More",
+    "kembali": "Back"
+  },
+  "role": {
+    "ubahKacamata": "Change Perspective",
+    "kacamataMultiDivisi": "Multi-Division Perspective",
+    "semuaBaku": "All (Default)",
+    "descDefault": "Standard text from regulatory documents",
+    "descBod": "Business & financial impact summary",
+    "descSysadmin": "Technical instructions & IT configuration",
+    "descLegal": "Compliance risks & legal contracts",
+    "roleBod": "Board of Directors (BoD)",
+    "roleSysadmin": "SysAdmin / Technical Team",
+    "roleLegal": "Legal / Compliance"
+  }
+}

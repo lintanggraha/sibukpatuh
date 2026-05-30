@@ -12,10 +12,10 @@ export const useFrameworkStore = defineStore('framework', {
     // Active Role for Regulation Translator
     activeRole: 'default',
     roles: [
-      { id: 'default', label: 'Default View', icon: 'fa-eye' },
-      { id: 'bod', label: 'Board of Directors', icon: 'fa-user-tie' },
-      { id: 'sysadmin', label: 'SysAdmin', icon: 'fa-terminal' },
-      { id: 'legal', label: 'Legal / GRC', icon: 'fa-balance-scale' }
+      { id: 'default', labelKey: 'role.semuaBaku', icon: 'fa-eye' },
+      { id: 'bod', labelKey: 'role.roleBod', icon: 'fa-user-tie' },
+      { id: 'sysadmin', labelKey: 'role.roleSysadmin', icon: 'fa-terminal' },
+      { id: 'legal', labelKey: 'role.roleLegal', icon: 'fa-balance-scale' }
     ],
     
     // Navigation dropdown states

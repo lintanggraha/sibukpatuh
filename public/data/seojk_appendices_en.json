@@ -1,0 +1,269 @@
+[
+  {
+    "id": "I.a",
+    "title": "Minimum parameters for cybersecurity inherent risk assessment",
+    "type": "Parameter Minimum",
+    "scope": "Inherent cybersecurity risks",
+    "summary": "This attachment is a minimum baseline parameter or indicator that the Bank can use to assess the four inherent risk factors for cyber security.",
+    "contains": [
+      "Technological factors",
+      "Bank product factors",
+      "Organizational characteristics",
+      "Track record of cyber incidents"
+    ],
+    "used_by": [
+      "II.01",
+      "II.02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Cybersecurity inherent risk assessment minimum parameters' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Minimum parameters of cyber security inherent risk assessment'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Minimum parameters for assessing inherent risks of cyber security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.a",
+    "title": "Cybersecurity inherent risk assessment format",
+    "type": "Format Penilaian",
+    "scope": "Inherent cybersecurity risks",
+    "summary": "This appendix provides the official format that the Bank uses to document the results of its assessment of inherent risks related to cybersecurity.",
+    "contains": [
+      "Self-assessment template",
+      "Justification column per factor",
+      "Recap of assessment results"
+    ],
+    "used_by": [
+      "II.01",
+      "II.02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from the 'Cybersecurity inherent risk assessment format' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Cybersecurity inherent risk assessment format'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cybersecurity inherent risk assessment format'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.a",
+    "title": "Definition of cybersecurity inherent risk rating",
+    "type": "Definisi Peringkat",
+    "scope": "Inherent cybersecurity risks",
+    "summary": "This appendix contains definitions of Rank 1 to Rank 5 for determining the inherent risk level of cyber security.",
+    "contains": [
+      "Rank 1 (Low)",
+      "Rank 2 (Low to Moderate)",
+      "Rank 3 (Moderate)",
+      "Rank 4 (Moderate to High)",
+      "Rank 5 (High)"
+    ],
+    "used_by": [
+      "II.01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from the 'Cybersecurity inherent risk ranking definition' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity inherent risk ranking definition'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cybersecurity inherent risk rating definition'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "I.b",
+    "title": "Control the implementation of risk management related to cyber security",
+    "type": "Kontrol Minimum",
+    "scope": "Quality of implementation of cyber risk management",
+    "summary": "This appendix contains the controls used to assess the quality of risk management implementation related to cyber security.",
+    "contains": [
+      "Cyber ​​risk governance",
+      "Risk management framework",
+      "Process, HR, and risk management information system",
+      "Internal control and review"
+    ],
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.01",
+      "V.02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Control the implementation of risk management related to cyber security' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity-related risk management implementation controls'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Control the implementation of cyber security related risk management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "I.c",
+    "title": "Control the implementation of cyber resilience processes",
+    "type": "Kontrol Minimum",
+    "scope": "Quality of implementation of cyber resilience processes",
+    "summary": "This annex is a minimum control reference for assessing the Bank's four cyber resilience processes.",
+    "contains": [
+      "Identify assets, threats and vulnerabilities",
+      "Asset protection",
+      "Cyber ​​incident detection",
+      "Cyber ​​incident response and recovery"
+    ],
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.01",
+      "V.03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cyber ​​resilience process implementation controls'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cyber ​​resilience process implementation control'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Cyber ​​resilience process implementation controls'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.b",
+    "title": "Format for assessing the quality of cyber risk management implementation",
+    "type": "Format Penilaian",
+    "scope": "Quality of cyber risk management",
+    "summary": "This appendix provides a format for assessing the quality of risk management implementation related to cyber security.",
+    "contains": [
+      "Implementation quality scoring format",
+      "Control justification column",
+      "Summary of assessment results"
+    ],
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.01",
+      "V.02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from the 'Cyber ​​risk management implementation quality assessment format' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Cyber ​​risk management implementation quality assessment format'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cyber ​​risk management implementation quality assessment format'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.c",
+    "title": "Cyber ​​resilience process quality assessment format",
+    "type": "Format Penilaian",
+    "scope": "Quality of cyber resilience processes",
+    "summary": "This appendix is ​​used to document the cyber resilience process quality assessment across four key processes.",
+    "contains": [
+      "Endurance process scoring format",
+      "Evaluation column for each process",
+      "Summary of assessment results"
+    ],
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.01",
+      "V.03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Cyber ​​resilience process quality assessment format'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Cyber ​​resilience process quality assessment format'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Cyber ​​resilience process quality assessment format'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.b",
+    "title": "Definition of quality ranking of cyber risk management implementation",
+    "type": "Definisi Peringkat",
+    "scope": "Quality of cyber risk management",
+    "summary": "This appendix contains definitions of Strong to Unsatisfactory ratings for the quality of cybersecurity risk management implementation.",
+    "contains": [
+      "Strong",
+      "Satisfactory",
+      "Fair",
+      "Marginal",
+      "Unsatisfactory"
+    ],
+    "used_by": [
+      "III.01",
+      "III.02",
+      "III.03",
+      "III.04",
+      "V.02",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from the 'Cyber ​​risk management implementation quality rating definition' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Cyber ​​risk management implementation quality rating definition'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cyber ​​risk management implementation quality rating definition'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.c",
+    "title": "Cyber ​​resilience process quality rating definition",
+    "type": "Definisi Peringkat",
+    "scope": "Quality of cyber resilience processes",
+    "summary": "This appendix contains definitions of Strong to Unsatisfactory ratings for cyber resilience process quality.",
+    "contains": [
+      "Strong",
+      "Satisfactory",
+      "Fair",
+      "Marginal",
+      "Unsatisfactory"
+    ],
+    "used_by": [
+      "IV.01",
+      "IV.02",
+      "IV.03",
+      "IV.04",
+      "V.03",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Cyber ​​resilience process quality rating definition'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Cyber ​​resilience process quality rating definition'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cyber ​​resilience process quality rating definition'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.d",
+    "title": "Cybersecurity maturity level definition",
+    "type": "Definisi Tingkat",
+    "scope": "Cybersecurity maturity level",
+    "summary": "This attachment contains definitions of Level 1 to Level 5 for determining the Bank's cyber security maturity.",
+    "contains": [
+      "Level 1",
+      "Level 2",
+      "Level 3",
+      "Level 4",
+      "Level 5"
+    ],
+    "used_by": [
+      "V.01",
+      "V.04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cybersecurity maturity level definition'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity maturity level definition'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cybersecurity maturity level definition'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V",
+    "title": "Reporting format to OJK in the report on the current condition of IT operations",
+    "type": "Format Laporan",
+    "scope": "Official reporting to OJK",
+    "summary": "This attachment is a format for delivering the results of inherent risk, maturity and level of cyber security risk as part of the report on the current condition of the Bank's IT operations.",
+    "contains": [
+      "Cybersecurity inherent risk assessment results",
+      "Cybersecurity maturity level assessment results",
+      "The level of risk related to cyber security",
+      "Reporting section on the current conditions of IT operations"
+    ],
+    "used_by": [
+      "II.01",
+      "V.01",
+      "VI.01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Reporting format to OJK in reports on current conditions of IT operations'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Reporting format to OJK in reports on current conditions of IT operations'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Reporting format to OJK in reports on current conditions of IT operations'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

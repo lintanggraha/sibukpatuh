@@ -1,0 +1,2598 @@
+[
+  {
+    "id": "GV.OC-01",
+    "function": "GOVERN",
+    "category": "Organizational Context (GV.OC)",
+    "title": "The organizational context is understood",
+    "description": "The organization identifies and understands its mission, objectives, and external stakeholders that influence cybersecurity decisions. This includes evaluation of the regulatory requirements, contracts, and business expectations that form the security framework.",
+    "panda_explanation": "Pahami konteks bisnis Anda terlebih dahulu sebelum merancang program keamanan siber.",
+    "evidence": [
+      "Organizational Vision and Mission Document",
+      "Stakeholder Analysis",
+      "Regulatory Requirements Matrix"
+    ],
+    "sp80053": [
+      "PM-01",
+      "PM-08",
+      "PM-09",
+      "PM-10",
+      "PM-11",
+      "PM-12",
+      "PM-14",
+      "PM-16"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Organizational context understood'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understanding organizational context'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Organizational context understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.OC-02",
+    "function": "GOVERN",
+    "category": "Organizational Context (GV.OC)",
+    "title": "The organizational context is informed to stakeholders",
+    "description": "Information about the organizational context, including mission, goals, and security requirements, is communicated effectively to all relevant stakeholders to ensure alignment in cybersecurity implementation.",
+    "panda_explanation": "Komunikasi yang efektif memastikan semua pihak memahami prioritas keamanan organisasi.",
+    "evidence": [
+      "Cybersecurity Governance Document",
+      "Directors' Meeting Minutes",
+      "Stakeholder Communication Report"
+    ],
+    "sp80053": [
+      "PM-02",
+      "PM-07",
+      "PM-11",
+      "PM-13"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Organizational context informed to stakeholders'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Organizational context informed to stakeholders'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Organizational context informed to stakeholders'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.RM-01",
+    "function": "GOVERN",
+    "category": "Risk Management Strategy (GV.RM)",
+    "title": "Risk management strategies are established",
+    "description": "The organization establishes and communicates a cyber risk management strategy that includes risk assessment methodology, risk tolerance, and mitigation approaches. This strategy becomes the basis for cybersecurity decision making throughout the organization.",
+    "panda_explanation": "Definisi strategi risiko yang jelas membantu organisasi fokus pada ancaman paling kritis.",
+    "evidence": [
+      "Risk Management Strategy Document",
+      "Risk Tolerance Matrix",
+      "Cybersecurity Risk Policy"
+    ],
+    "sp80053": [
+      "PM-03",
+      "PM-04",
+      "PM-09",
+      "RA-01",
+      "RA-02",
+      "RA-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Defined risk management strategy' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'defined risk management strategy'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Risk management strategy defined'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.RM-02",
+    "function": "GOVERN",
+    "category": "Risk Management Strategy (GV.RM)",
+    "title": "Porosity to risk is understood",
+    "description": "Organizations identify and understand acceptable cyber risk tolerances, considering potential impacts to missions, assets, and stakeholders. This understanding underlies decisions about investment and security priorities.",
+    "panda_explanation": "Kenali batasan risiko yang dapat ditoleransi organisasi untuk mengalokasikan sumber daya secara optimal.",
+    "evidence": [
+      "Risk Assessment Matrix",
+      "Directors' Risk Appetite Document",
+      "Business Impact Analysis Report"
+    ],
+    "sp80053": [
+      "RA-02",
+      "RA-03",
+      "PM-03",
+      "PM-09",
+      "PM-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Porosity to risk understood' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Porosity to risk is understood'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Porosity to risk understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.RM-03",
+    "function": "GOVERN",
+    "category": "Risk Management Strategy (GV.RM)",
+    "title": "Risk priorities are determined",
+    "description": "Based on risk tolerance and risk assessment, organizations set priorities for risk management activities. This ensures that limited resources are allocated to areas with the highest risk or most significant impact.",
+    "panda_explanation": "Prioritisasi membantu fokus pada risiko yang paling mempengaruhi kelangsungan bisnis.",
+    "evidence": [
+      "Risk Prioritization Document",
+      "Risk Ranking",
+      "Priority Based Mitigation Plan"
+    ],
+    "sp80053": [
+      "RA-01",
+      "RA-02",
+      "RA-05",
+      "PM-04",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Determined risk priorities' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Determined risk priorities'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Risk priorities determined'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.RR-01",
+    "function": "GOVERN",
+    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
+    "title": "Cyber ​​security roles and responsibilities are defined",
+    "description": "The organization defines and communicates cybersecurity roles, responsibilities, and authority for all individuals. This includes assigning management accountability, identifying incident response teams, and clarifying the chain of command.",
+    "panda_explanation": "Jelasnya tanggung jawab mencegah tumpang tindih dan celah dalam pengelolaan keamanan.",
+    "evidence": [
+      "Cybersecurity RACI Matrix",
+      "Job Description",
+      "Security Team Appointment Letter"
+    ],
+    "sp80053": [
+      "PM-01",
+      "PM-02",
+      "PM-11",
+      "PM-13"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Cybersecurity roles and responsibilities defined'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Designated cyber security roles and responsibilities'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cybersecurity roles and responsibilities defined'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.RR-02",
+    "function": "GOVERN",
+    "category": "Roles, Responsibilities, and Authorities (GV.RR)",
+    "title": "Senior accountability for cybersecurity is established",
+    "description": "The organization designates a senior individual with accountability responsibility for cybersecurity. These officials have the authority to allocate resources, make strategic decisions, and ensure compliance with security policies.",
+    "panda_explanation": "Dukungan dan akuntabilitas dari manajemen senior sangat krusial untuk keberhasilan program keamanan.",
+    "evidence": [
+      "CISO/Security Director Appointment Letter",
+      "Directors' Decree",
+      "Authorization Document"
+    ],
+    "sp80053": [
+      "PM-01",
+      "PM-02",
+      "PM-11",
+      "PM-13",
+      "PM-14"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Senior accountability for cyber security established'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Senior accountability for cyber security established'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Senior accountability for cyber security established'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.PO-01",
+    "function": "GOVERN",
+    "category": "Policy (GV.PO)",
+    "title": "Cyber ​​security policy established",
+    "description": "The organization develops and maintains a cybersecurity policy that provides a framework for governance, including organizational structure, coordination mechanisms, and a periodic review process to ensure the policy's relevance and effectiveness.",
+    "panda_explanation": "Kebijakan yang solid menjadi fondasi untuk konsistensi dalam pengelolaan keamanan siber.",
+    "evidence": [
+      "Cybersecurity Policy Book",
+      "IT Governance Document",
+      "Policy Review Procedures"
+    ],
+    "sp80053": [
+      "PL-01",
+      "PL-02",
+      "PM-01",
+      "PM-02",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Established cyber security policy'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize the 'established cyber security policy'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Established cyber security policy'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.PO-02",
+    "function": "GOVERN",
+    "category": "Policy (GV.PO)",
+    "title": "Cyber ​​security policies are communicated",
+    "description": "Cybersecurity policies are communicated effectively to all relevant individuals, including employees, contractors and business partners. Communication includes accessibility, implementation training, and understanding confirmation mechanisms.",
+    "panda_explanation": "Kebijakan hanya efektif jika dipahami dan dapat diakses oleh semua pihak yang terikat.",
+    "evidence": [
+      "Evidence of Policy Communication",
+      "Sign Compliance Contract",
+      "Employee Training Materials"
+    ],
+    "sp80053": [
+      "PL-04",
+      "AT-01",
+      "AT-02",
+      "PM-12"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Communicated cyber security policy'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Communicated cyber security policy'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Cybersecurity policy communicated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.PO-03",
+    "function": "GOVERN",
+    "category": "Policy (GV.PO)",
+    "title": "Cyber ​​security policies are reviewed and updated",
+    "description": "Organizations periodically review and update cybersecurity policies to reflect changes in missions, threats, technology, and regulatory environments. Reviews ensure policies remain relevant and effective.",
+    "panda_explanation": "Kebijakan harus hidup dan beradaptasi dengan perubahan lingkungan bisnis dan ancaman.",
+    "evidence": [
+      "Policy Review Log",
+      "Policy Version Document",
+      "Policy Audit Report"
+    ],
+    "sp80053": [
+      "PL-01",
+      "PL-02",
+      "PM-09",
+      "PM-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Cybersecurity policies reviewed and updated'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity policy reviewed and updated'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Cybersecurity policy reviewed and updated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.OV-01",
+    "function": "GOVERN",
+    "category": "Oversight (GV.OV)",
+    "title": "Cyber ​​security activities are monitored",
+    "description": "The organization monitors and measures cybersecurity performance against established targets and indicators. Monitoring includes collecting metrics, analyzing trends, and evaluating compliance with policies and standards.",
+    "panda_explanation": "Monitoring memungkinkan identifikasi dini masalah dan evaluasi efektivitas kontrol.",
+    "evidence": [
+      "Security Monitoring Dashboard",
+      "Security KPI Reports",
+      "Audit Activity Log"
+    ],
+    "sp80053": [
+      "CA-07",
+      "PM-06",
+      "PM-10",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Monitored cyber security activities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Monitored cyber security activities'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cybersecurity activities monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.OV-02",
+    "function": "GOVERN",
+    "category": "Oversight (GV.OV)",
+    "title": "Cybersecurity activity reported",
+    "description": "Organizations report the results of cybersecurity monitoring and metrics to appropriate decision makers. Reports provide sufficient information for risk evaluation, resource allocation, and security prioritization.",
+    "panda_explanation": "Reporting yang efektif memungkinkan pengambilan keputusan berbasis data di level manajemen.",
+    "evidence": [
+      "Security Status Report",
+      "Presentation to the Board of Directors",
+      "Executive Dashboard"
+    ],
+    "sp80053": [
+      "CA-07",
+      "PM-06",
+      "PM-10",
+      "PM-11",
+      "PM-14"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Reported cyber security activities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Reported cyber security activities'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Reportable cyber security activities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.OV-03",
+    "function": "GOVERN",
+    "category": "Oversight (GV.OV)",
+    "title": "Cyber ​​security monitoring is carried out",
+    "description": "The organization monitors cybersecurity processes and activities through mechanisms such as internal audits, third-party reviews and independent evaluations. Oversight ensures accountability and identifies areas of improvement.",
+    "panda_explanation": "Pengawasan independen memberikan perspektif objektif tentang efektivitas program keamanan.",
+    "evidence": [
+      "Internal Audit Report",
+      "Third Party Assessment Results",
+      "Findings Follow-up Matrix"
+    ],
+    "sp80053": [
+      "CA-07",
+      "PM-10",
+      "PM-14",
+      "PM-15"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cybersecurity oversight carried out'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity monitoring is carried out'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Cybersecurity oversight carried out'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.SC-01",
+    "function": "GOVERN",
+    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
+    "title": "Cyber ​​supply chain risk management program established",
+    "description": "The organization establishes a systematic program to identify, assess, and manage cybersecurity risks in the supply chain. This program includes policies, procedures, and criteria for evaluating and selecting suppliers and vendors.",
+    "panda_explanation": "Rantai pasok sering menjadi titik lemah - pengelolaan risiko vendor yang ketat sangat penting.",
+    "evidence": [
+      "SCRM Program Documents",
+      "Vendor Policy",
+      "Vendor Risk Assessment Matrix"
+    ],
+    "sp80053": [
+      "PM-08",
+      "SA-02",
+      "SA-03",
+      "SA-04",
+      "SA-05",
+      "SA-09",
+      "SA-10",
+      "SA-11",
+      "SA-12",
+      "SA-15",
+      "SA-17",
+      "SR-01",
+      "SR-02",
+      "SR-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Established cyber supply chain risk management program' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize the 'established cyber supply chain risk management program'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Established cyber supply chain risk management program'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.SC-02",
+    "function": "GOVERN",
+    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
+    "title": "Cyber ​​supply chains are monitored",
+    "description": "The organization monitors cybersecurity risks from suppliers and vendors on an ongoing basis. Monitoring includes evaluation of security performance, changes in risk status, and compliance with security contract requirements.",
+    "panda_explanation": "Monitoring berkelanjutan mendeteksi perubahan risiko sebelum menjadi insiden.",
+    "evidence": [
+      "Vendor Assessment Report",
+      "Monitoring Contract Compliance",
+      "Vendor Security Alerts"
+    ],
+    "sp80053": [
+      "PM-08",
+      "SR-02",
+      "SR-03",
+      "SR-04",
+      "SR-05",
+      "SR-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Monitored cyber supply chain'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Monitored cyber supply chain'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Cyber ​​supply chain monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "GV.SC-03",
+    "function": "GOVERN",
+    "category": "Cybersecurity Supply Chain Risk Management (GV.SC)",
+    "title": "Cyber ​​products and services are obtained safely",
+    "description": "Organizations acquire information technology products and services with cybersecurity in mind. This includes pre-acquisition security evaluations, security contract requirements, and verification of the integrity of acquired components.",
+    "panda_explanation": "Keamanan harus dipertimbangkan sejak tahap perencanaan akuisisi, bukan setelah deployment.",
+    "evidence": [
+      "Security Acquisition Checklist",
+      "Security Requirements in Contracts",
+      "Software Integrity Verification"
+    ],
+    "sp80053": [
+      "SA-02",
+      "SA-03",
+      "SA-04",
+      "SA-05",
+      "SA-09",
+      "SA-10",
+      "SA-11",
+      "SA-15",
+      "SR-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cyber ​​products and services procured securely'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Cyber ​​products and services are obtained safely'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Cyber ​​products and services procured safely'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.AM-01",
+    "function": "IDENTIFY",
+    "category": "Asset Management (ID.AM)",
+    "title": "Physical assets are inventoried",
+    "description": "The organization identifies and documents all physical assets that support organizational functions, including hardware, facilities, and critical infrastructure. The inventory includes the location, ownership, and security classification of each asset.",
+    "panda_explanation": "Anda tidak dapat melindungi apa yang tidak Anda ketahui - inventarisasi adalah fondasi keamanan.",
+    "evidence": [
+      "Hardware Asset Registrar",
+      "Data Center Infrastructure Map",
+      "Physical Configuration Document"
+    ],
+    "sp80053": [
+      "CM-08",
+      "CP-02",
+      "PE-01",
+      "PE-02",
+      "PE-03",
+      "PE-04",
+      "PE-05",
+      "PE-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Physical assets inventoried'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Physical assets inventoried'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Physical assets inventoried'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.AM-02",
+    "function": "IDENTIFY",
+    "category": "Asset Management (ID.AM)",
+    "title": "Digital assets are documented",
+    "description": "Organizations identify and document digital assets including software, data, and information systems. Documentation includes versions, owners, dependencies, and security classifications for each digital asset.",
+    "panda_explanation": "Setiap software dan data adalah asset yang perlu dilindungi - ketahui apa yang Anda miliki.",
+    "evidence": [
+      "Software Inventory",
+      "Data Registrar",
+      "System and Application Map"
+    ],
+    "sp80053": [
+      "CM-08",
+      "MA-02",
+      "SA-04",
+      "SA-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Documented digital assets'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Documented digital assets'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Documented digital assets'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.AM-03",
+    "function": "IDENTIFY",
+    "category": "Asset Management (ID.AM)",
+    "title": "The system architecture is understood",
+    "description": "The organization understands and documents the information systems architecture, including network topology, data flow, and interconnections between systems. This understanding is important for assessing risk and designing effective security controls.",
+    "panda_explanation": "Pahami bagaimana sistem terhubung untuk mengidentifikasi celah potensial dalam arsitektur Anda.",
+    "evidence": [
+      "Network Architecture Diagram",
+      "Enterprise Architecture Documentation",
+      "Data Flow Map"
+    ],
+    "sp80053": [
+      "CM-02",
+      "CM-06",
+      "SA-04",
+      "SA-08",
+      "SC-02",
+      "SC-04",
+      "SC-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Understanding system architecture'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understanding system architecture'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'System architecture understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.AM-04",
+    "function": "IDENTIFY",
+    "category": "Asset Management (ID.AM)",
+    "title": "Assets are classified based on their importance to the mission",
+    "description": "Organizations classify assets based on their importance to the organization's business functions and mission. This classification underlies the determination of protection priorities and allocation of security resources.",
+    "panda_explanation": "Tidak semua aset memiliki nilai yang sama - fokuskan perlindungan pada yang paling kritikal.",
+    "evidence": [
+      "Asset Classification Matrix",
+      "Impact Assessment Document",
+      "Protection Priority"
+    ],
+    "sp80053": [
+      "RA-02",
+      "CP-02",
+      "SC-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Assets classified by importance to the mission'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Assets classified by importance to the mission'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Assets classified by importance to mission'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.AM-05",
+    "function": "IDENTIFY",
+    "category": "Asset Management (ID.AM)",
+    "title": "Asset classification is communicated",
+    "description": "The organization communicates asset classification to relevant owners and users. Communication ensures that asset handling complies with established security levels.",
+    "panda_explanation": "Pemilik aset perlu tahu bagaimana mengklasifikasikan dan menangani informasi dengan benar.",
+    "evidence": [
+      "Data Classification Policy",
+      "Employee Training Materials",
+      "Confidentiality Contract"
+    ],
+    "sp80053": [
+      "AC-16",
+      "SC-06",
+      "AT-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Communicated asset classification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Communicated asset classification'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Asset classification communicated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.BE-01",
+    "function": "IDENTIFY",
+    "category": "Business Environment (ID.BE)",
+    "title": "The business environment is understood",
+    "description": "The organization identifies and understands the external and internal factors that influence the ability to achieve the mission. This includes competitor analysis, market conditions, and organizational capabilities.",
+    "panda_explanation": "Konteks bisnis yang jelas membantu merancang strategi keamanan yang aligned dengan tujuan organisasi.",
+    "evidence": [
+      "SWOT Analysis",
+      "Strategic Planning Document",
+      "Business Environment Report"
+    ],
+    "sp80053": [
+      "PM-07",
+      "PM-08",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'understood business environment'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Business environment understood'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Business environment understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.BE-02",
+    "function": "IDENTIFY",
+    "category": "Business Environment (ID.BE)",
+    "title": "The role of the organization is understood",
+    "description": "The organization identifies and understands its role in the broader ecosystem, including responsibilities to customers, partners and regulators. This understanding is important for managing security expectations and obligations.",
+    "panda_explanation": "Kenali posisi Anda dalam rantai nilai - keamanan Anda berdampak pada ekosistem yang lebih luas.",
+    "evidence": [
+      "Organizational Role Analysis",
+      "Contracts and SLAs",
+      "Security Responsibility Matrix"
+    ],
+    "sp80053": [
+      "PM-07",
+      "PM-08",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Organizational role understood'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understanding organizational roles'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Organizational role understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.BE-03",
+    "function": "IDENTIFY",
+    "category": "Business Environment (ID.BE)",
+    "title": "Mission and function priorities are understood",
+    "description": "Organizations identify and prioritize mission, goals, and critical business activities. This understanding enables prioritization in system protection and recovery.",
+    "panda_explanation": "Tentukan apa yang harus terus beroperasi dalam kondisi apapun - itu prioritas utama keamanan.",
+    "evidence": [
+      "Business Priorities Document",
+      "BIA (Business Impact Analysis)",
+      "Critical Function Analysis"
+    ],
+    "sp80053": [
+      "CP-02",
+      "CP-06",
+      "CP-07",
+      "PE-09",
+      "PM-07",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Mission priorities and functions understood'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Mission priorities and functions understood'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Mission priorities and functions understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.BE-04",
+    "function": "IDENTIFY",
+    "category": "Business Environment (ID.BE)",
+    "title": "Dependencies on external services are understood",
+    "description": "The organization identifies and understands dependencies on external services, systems and information. This understanding is important for assessing risks and planning contingencies.",
+    "panda_explanation": "Jika Anda bergantung pada layanan pihak ketiga, risiko mereka menjadi risiko Anda.",
+    "evidence": [
+      "External Dependency Registrar",
+      "SLA Contract",
+      "Vendor Risk Analysis"
+    ],
+    "sp80053": [
+      "CP-02",
+      "PE-09",
+      "PM-08",
+      "SR-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Dependency on external services understood'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Dependencies on external services are understood'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Dependency on external services understood'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.GV-01",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Cyber ​​security policies and procedures are established",
+    "description": "The organization develops and maintains comprehensive cybersecurity policies, procedures, and standards. This governance framework provides a framework for security decision making and accountability.",
+    "panda_explanation": "Kebijakan yang well-defined memastikan konsistensi dalam implementasi keamanan di seluruh organisasi.",
+    "evidence": [
+      "Security Policy Book",
+      "Security Technical Standards",
+      "Operational Procedures"
+    ],
+    "sp80053": [
+      "PL-01",
+      "PL-02",
+      "PL-03",
+      "PL-04",
+      "PM-01",
+      "PM-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Cybersecurity policies and procedures established'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'established cyber security policies and procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Established cyber security policies and procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.GV-02",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Cybersecurity policies and procedures are communicated",
+    "description": "Security policies and procedures are communicated to all relevant individuals in a manner appropriate to their roles. Communication ensures understanding and compliance with security requirements.",
+    "panda_explanation": "Kebijakan tanpa komunikasi efektif tidak akan di-implement dengan benar.",
+    "evidence": [
+      "Evidence of Policy Distribution",
+      "Training Materials",
+      "Confirm Receipt"
+    ],
+    "sp80053": [
+      "AT-01",
+      "AT-02",
+      "PL-04",
+      "PM-12"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Communicated cyber security policies and procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Communicated cyber security policies and procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Cybersecurity policies and procedures communicated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.GV-03",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Cybersecurity policies and procedures are reviewed and adjusted",
+    "description": "Organizations periodically review and adjust security policies to reflect changes in missions, threats, technology, and regulatory environments. Reviews ensure policies remain relevant and effective.",
+    "panda_explanation": "Kebijakan harus evolve seiring dengan perubahan lingkungan ancaman dan bisnis.",
+    "evidence": [
+      "Policy Review Log",
+      "Change Notes",
+      "Directors' Approval"
+    ],
+    "sp80053": [
+      "PL-01",
+      "PL-02",
+      "PM-09",
+      "PM-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Cybersecurity policies and procedures are reviewed and adjusted'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Cybersecurity policies and procedures reviewed and adjusted'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Cybersecurity policies and procedures reviewed and adjusted'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.GV-04",
+    "function": "IDENTIFY",
+    "category": "Governance (ID.GV)",
+    "title": "Compliance with laws and regulations is verified",
+    "description": "The organization verifies compliance with all applicable laws, regulations, and contractual obligations related to cybersecurity. Verification includes necessary documentation and reporting.",
+    "panda_explanation": "Kepatuhan regulasi bukan pilihan - kegagalan dapat mengakibatkan sanksi dan reputasi rusak.",
+    "evidence": [
+      "Compliance Report",
+      "Compliance Audits",
+      "Legal Document Review"
+    ],
+    "sp80053": [
+      "CA-07",
+      "PM-09",
+      "PM-10",
+      "RA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Compliance with laws and regulations verified' is monitored in audit reports. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Compliance with laws and regulations verified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Compliance with laws and regulations verified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-01",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Assets and threats are identified",
+    "description": "The organization identifies assets that need to be protected and potential threats to those assets. Identification includes threat historical analysis, vulnerability evaluation, and mapping of attack scenarios.",
+    "panda_explanation": "Anda tidak dapat menilai risiko tanpa memahami apa yang Anda lindungi dan dari siapa.",
+    "evidence": [
+      "Asset Registrar",
+      "Threat Profile",
+      "Vulnerability Map"
+    ],
+    "sp80053": [
+      "RA-01",
+      "RA-03",
+      "RA-05",
+      "PM-15",
+      "PM-16"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Identified assets and threats' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Assets and threats identified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Assets and threats identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-02",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Impact and feasibility are evaluated",
+    "description": "Organizations evaluate the potential impact and likelihood of a cybersecurity incident occurring. The evaluation considers the financial, operational, reputational and legal aspects of each risk scenario.",
+    "panda_explanation": "Tidak semua risiko memiliki dampak yang sama - kuantifikasi membantu dalam pengambilan keputusan.",
+    "evidence": [
+      "Risk Assessment Matrix",
+      "Financial Impact Analysis",
+      "BIA Documents"
+    ],
+    "sp80053": [
+      "RA-02",
+      "RA-03",
+      "PM-09",
+      "CP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Impact and likelihood evaluated'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Impact and possibility evaluation'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Impact and likelihood evaluated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-03",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Threat and risk trends are identified",
+    "description": "Organizations analyze trends in the threat and risk landscape to identify patterns and predictions. This analysis helps in proactively preparing for emerging threats.",
+    "panda_explanation": "Monitor threat landscape membantu mengantisipasi serangan sebelum terjadi.",
+    "evidence": [
+      "Threat Intelligence Report",
+      "Trend Analysis",
+      "Security Feeds"
+    ],
+    "sp80053": [
+      "RA-03",
+      "RA-04",
+      "RA-05",
+      "PM-15",
+      "PM-16"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Identified threat and risk trends' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Identified threat and risk trends'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Threat trends and risks identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-04",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Risk assessment validated",
+    "description": "The organization validates risk assessment results to ensure accuracy and completeness. Validation includes review by stakeholders and reconciliation with operational data.",
+    "panda_explanation": "Penilaian risiko yang tidak divalidasi bisa miss target dan menghabiskan sumber daya di area yang salah.",
+    "evidence": [
+      "Risk Assessment Review",
+      "Stakeholder Validation",
+      "Comparison Matrix"
+    ],
+    "sp80053": [
+      "RA-02",
+      "RA-03",
+      "CA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Validated risk assessment' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Validated risk assessment'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Validated risk assessment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-05",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Vulnerabilities are identified and categorized",
+    "description": "Organizations identify and categorize vulnerabilities in systems and assets. Categorization considers severity, exploitability, and relevance to the organizational context.",
+    "panda_explanation": "Kerentanan adalah pintu masuk bagi penyerang - identifikasi dan kategori membantu prioritasi perbaikan.",
+    "evidence": [
+      "Vulnerability Assessment Report",
+      "Vulnerability Priority Matrix",
+      "Scan Results"
+    ],
+    "sp80053": [
+      "RA-03",
+      "RA-04",
+      "RA-05",
+      "SI-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Vulnerabilities identified and categorized'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Vulnerabilities identified and categorized'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Vulnerabilities identified and categorized'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RA-06",
+    "function": "IDENTIFY",
+    "category": "Risk Assessment (ID.RA)",
+    "title": "Risk assessments are communicated",
+    "description": "The results of the risk assessment are communicated to decision makers and relevant stakeholders. Communication provides sufficient information to understand and respond to identified risks.",
+    "panda_explanation": "Risiko yang tidak dikomunikasikan tidak akan mendapat perhatian dan sumber daya yang diperlukan.",
+    "evidence": [
+      "Risk Assessment Report",
+      "Presentation to Management",
+      "Risk Dashboard"
+    ],
+    "sp80053": [
+      "PM-09",
+      "PM-11",
+      "RA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Communicated risk assessment' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Communicated risk assessment'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Risk assessment communicated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RM-01",
+    "function": "IDENTIFY",
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "The organization's risk tolerance is established",
+    "description": "The organization establishes an acceptable level of risk tolerance, considering the mission, objectives, and available resources. This tolerance becomes the basis for decisions to accept, mitigate, transfer, or avoid risks.",
+    "panda_explanation": "Toleransi risiko yang jelas menghindari over-protection atau under-protection.",
+    "evidence": [
+      "Risk Tolerance Document",
+      "Directors' Approval",
+      "Risk Appetite Matrix"
+    ],
+    "sp80053": [
+      "PM-03",
+      "PM-04",
+      "PM-09",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Organizational risk tolerance set' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Organizational risk tolerance set'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Organizational risk tolerance defined'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RM-02",
+    "function": "IDENTIFY",
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "Risk priorities are established",
+    "description": "Based on risk tolerance and risk assessment, the organization sets priorities for risk mitigation activities. Prioritization ensures resources are used effectively for risks with the highest impact.",
+    "panda_explanation": "Prioritas yang jelas memastikan fokus pada risiko yang paling kritikal bagi organisasi.",
+    "evidence": [
+      "Risk Prioritization Document",
+      "Mitigation Plan",
+      "Budget Allocation"
+    ],
+    "sp80053": [
+      "PM-04",
+      "PM-11",
+      "RA-02",
+      "RA-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Set risk priorities' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Risk priority set'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Risk priorities established'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.RM-03",
+    "function": "IDENTIFY",
+    "category": "Risk Management Strategy (ID.RM)",
+    "title": "Risk management strategies are developed",
+    "description": "Organizations develop comprehensive strategies to manage cyber risks that cover all phases: identification, analysis, treatment and monitoring. This strategy must be aligned with business goals.",
+    "panda_explanation": "Strategi yang well-defined memastikan konsistensi dalam pengelolaan risiko dari waktu ke waktu.",
+    "evidence": [
+      "Risk Management Strategy Document",
+      "Risk Framework",
+      "Risk Management Policy"
+    ],
+    "sp80053": [
+      "PM-03",
+      "PM-04",
+      "PM-09",
+      "PM-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Developed risk management strategy' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Developed risk management strategy'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Risk management strategy developed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.SC-01",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Supply chain risks are identified",
+    "description": "Organizations identify cybersecurity risks associated with the supply chain, including suppliers, vendors and third-party services. Identification includes analysis of components, services and processes obtained from external parties.",
+    "panda_explanation": "Rantai pasok yang lemah dapat mengkompromikan seluruh posture keamanan organisasi.",
+    "evidence": [
+      "Vendor Registrar",
+      "Supply Chain Risk Analysis",
+      "Vendor Due Diligence"
+    ],
+    "sp80053": [
+      "PM-08",
+      "RA-03",
+      "SR-01",
+      "SR-02",
+      "SR-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Identified supply chain risks' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Identified supply chain risks'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Supply chain risks identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.SC-02",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Security requirements for suppliers are established",
+    "description": "Organizations establish cybersecurity requirements that suppliers and vendors must meet. These requirements must be summarized in the contract and evaluated prior to engagement.",
+    "panda_explanation": "Persyaratan yang jelas memastikan vendor memahami standar keamanan yang diharapkan.",
+    "evidence": [
+      "Security Requirements in Contracts",
+      "Security Requirements Clause",
+      "Security SLAs"
+    ],
+    "sp80053": [
+      "PM-08",
+      "SA-04",
+      "SA-05",
+      "SR-03",
+      "SR-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Security requirements for suppliers are defined'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Security requirements for suppliers are set'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Security requirements for suppliers defined'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.SC-03",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Suppliers are subject to due diligence, right?",
+    "description": "The organization performs due diligence on suppliers to verify their ability to meet security requirements. Due diligence includes evaluating technical capabilities, track record, and security practices.",
+    "panda_explanation": "Due diligence yang thorough mencegah masuknya vendor yang tidak kompeten ke ekosistem Anda.",
+    "evidence": [
+      "Due Diligence Report",
+      "Vendor Certification",
+      "Assessment Results"
+    ],
+    "sp80053": [
+      "PM-08",
+      "SR-02",
+      "SR-03",
+      "SR-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Supplier due diligence'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Supplier due diligence'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Supplier due diligence'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.SC-04",
+    "function": "IDENTIFY",
+    "category": "Supply Chain Risk Management (ID.SC)",
+    "title": "Supply chain risks are mitigated",
+    "description": "Organizations implement controls and mitigations to reduce cybersecurity risks in the supply chain. Mitigation may include contractual requirements, auditing, monitoring, or searching for alternatives.",
+    "panda_explanation": "Mitigasi proaktif lebih cost-effective daripada menanggapi insiden yang berasal dari vendor.",
+    "evidence": [
+      "Vendor Mitigation Plan",
+      "Contracts with Security Clauses",
+      "Vendor Audit Results"
+    ],
+    "sp80053": [
+      "PM-08",
+      "SR-03",
+      "SR-05",
+      "SR-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Supply chain risks mitigated' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Mitigated supply chain risks'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Supply chain risks mitigated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.IM-01",
+    "function": "IDENTIFY",
+    "category": "Improvement (ID.IM)",
+    "title": "Areas of security improvement are identified",
+    "description": "The organization continually identifies areas that require improvement in its cybersecurity posture. Identification is carried out through lessons learned, audit findings, and evaluation of control effectiveness.",
+    "panda_explanation": "Improvement kontinyu memastikan program keamanan tidak stagnan dan terus berkembang.",
+    "evidence": [
+      "Lessons Learned Reports",
+      "Action Items from Audit",
+      "Root Cause Analysis"
+    ],
+    "sp80053": [
+      "CA-05",
+      "CA-07",
+      "PM-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Identified areas of security improvement'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Security improvement areas identified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Security improvement areas identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ID.IM-02",
+    "function": "IDENTIFY",
+    "category": "Improvement (ID.IM)",
+    "title": "Improved risk management processes",
+    "description": "Organizations regularly evaluate and improve their cybersecurity risk management processes. Improvements are based on measurement results, feedback, and threat evolution.",
+    "panda_explanation": "Proses yang terus meningkat menghasilkan hasil yang lebih baik dalam jangka panjang.",
+    "evidence": [
+      "Process Improvement Plans",
+      "Risk Management KPIs",
+      "Review Methodology"
+    ],
+    "sp80053": [
+      "PM-10",
+      "CA-05",
+      "CA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Enhanced risk management processes' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Enhanced risk management process'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Enhanced risk management processes'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-01",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Identity and access are managed",
+    "description": "Organizations manage individual and system identities in a centralized and documented manner. Identity management includes provisioning, modifying, and deprovisioning access according to the principles of least privilege and need-to-know.",
+    "panda_explanation": "Identity is the new perimeter - pengelolaan identitas yang kuat adalah fondasi keamanan modern.",
+    "evidence": [
+      "Identity Management System",
+      "Provisioning/Deprovisioning Procedures",
+      "Access Review Logs"
+    ],
+    "sp80053": [
+      "AC-01",
+      "AC-02",
+      "AC-03",
+      "AC-05",
+      "AC-06",
+      "AC-14",
+      "AC-17",
+      "AC-18",
+      "AC-19",
+      "AC-20",
+      "AC-21",
+      "AC-22",
+      "IA-01",
+      "IA-02",
+      "IA-03",
+      "IA-04",
+      "IA-05",
+      "IA-06",
+      "IA-07",
+      "IA-08",
+      "IA-09",
+      "IA-10",
+      "IA-11",
+      "IA-12"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Managed identity and access'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Managed identity and access'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Managed identity and access'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-02",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Identity is maintained",
+    "description": "Organizations protect identities from compromise through secure credential management, protection against phishing and social engineering, and monitoring of suspicious activity related to identity.",
+    "panda_explanation": "Identitas yang compromise dapat memberikan akses penuh kepada penyerang - proteksi berlapis sangat penting.",
+    "evidence": [
+      "Credential Policy",
+      "MFA Implementation",
+      "Identity Threat Monitoring"
+    ],
+    "sp80053": [
+      "IA-02",
+      "IA-05",
+      "IA-06",
+      "IA-07",
+      "AC-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Identity maintained'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Preserved identity'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Identity maintained'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-03",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Physical access is monitored and controlled",
+    "description": "The organization controls and monitors access to critical facilities and areas. Controls include visitor management, badge systems, and monitoring of unauthorized access.",
+    "panda_explanation": "Akses fisik yang tidak terkontrol dapat bypass semua kontrol keamanan siber digital.",
+    "evidence": [
+      "Access Control Systems",
+      "Visitor Logs",
+      "CCTV Recordings",
+      "Security Patrol Records"
+    ],
+    "sp80053": [
+      "PE-02",
+      "PE-03",
+      "PE-04",
+      "PE-05",
+      "PE-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Physical access is monitored and controlled'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Physical access is monitored and controlled'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Physical access is monitored and controlled'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-04",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Logical access is managed",
+    "description": "Organizations manage logical access to systems, applications, and data based on the principle of least privilege. Management includes periodic permission reviews and prompt removal of excessive privileges.",
+    "panda_explanation": "Excessive privileges adalah salah satu penyebab utama insiden - review berkala adalah keharusan.",
+    "evidence": [
+      "Access Control Lists",
+      "Periodic Access Reviews",
+      "Privilege Monitoring"
+    ],
+    "sp80053": [
+      "AC-02",
+      "AC-03",
+      "AC-06",
+      "AC-17",
+      "AC-18",
+      "AC-19",
+      "AC-20",
+      "AC-21"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Managed logical access'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Managed logical access'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Managed logical access'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-05",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Identity and access verified",
+    "description": "Organizations verify identity before granting access through strong authentication mechanisms. Verification includes the use of multi-factor authentication for sensitive access.",
+    "panda_explanation": "Verifikasi identitas yang robust mencegah unauthorized access bahkan jika credentials tercompromise.",
+    "evidence": [
+      "MFA Policy",
+      "Authentication Logs",
+      "Zero Trust Implementation"
+    ],
+    "sp80053": [
+      "IA-02",
+      "IA-05",
+      "IA-07",
+      "IA-08",
+      "IA-09",
+      "IA-10",
+      "IA-11"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Identity and access verified'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Identity and verified access'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Identity and access verified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AA-06",
+    "function": "PROTECT",
+    "category": "Identity Management, Authentication, and Access Control (PR.AA)",
+    "title": "Identity and access are protected",
+    "description": "Organizations implement controls to protect identities and credentials from compromise, loss, or theft. Protection includes encryption, secure storage, and monitoring for credential abuse.",
+    "panda_explanation": "Credential protection adalah lini pertahanan pertama terhadap unauthorized access.",
+    "evidence": [
+      "Password Vault",
+      "Credential Encryption",
+      "Stolen Credential Monitoring"
+    ],
+    "sp80053": [
+      "IA-05",
+      "IA-06",
+      "SC-12",
+      "SC-13"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Identity and access protected'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Identity and access protected'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Identity and access protected'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AT-01",
+    "function": "PROTECT",
+    "category": "Awareness and Training (PR.AT)",
+    "title": "Individuals receive cybersecurity awareness training",
+    "description": "The organization provides cybersecurity awareness training to all individuals who have access to the organization's systems. Training covers threat recognition, security policies, and incident reporting procedures.",
+    "panda_explanation": "Human error adalah penyebab utama insiden - awareness training mengurangi risiko ini secara signifikan.",
+    "evidence": [
+      "Training Records",
+      "Phishing Simulation Results",
+      "Awareness Materials"
+    ],
+    "sp80053": [
+      "AT-01",
+      "AT-02",
+      "AT-03",
+      "AT-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Individuals receive cybersecurity awareness training'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Individual receive cybersecurity awareness training'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Individuals receive cybersecurity awareness training'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AT-02",
+    "function": "PROTECT",
+    "category": "Awareness and Training (PR.AT)",
+    "title": "Individuals with special responsibilities receive training",
+    "description": "The organization provides additional training for individuals with specific cybersecurity responsibilities, such as incident responders, system administrators, and personnel with access to sensitive data.",
+    "panda_explanation": "Personel dengan tanggung jawab khusus memerlukan skill dan knowledge yang lebih mendalam.",
+    "evidence": [
+      "Role-Based Training Records",
+      "Certifications",
+      "Technical Training Completion"
+    ],
+    "sp80053": [
+      "AT-03",
+      "AT-04",
+      "IR-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Individuals with specific responsibilities receiving training'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Individuals with special responsibilities receive training'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Individuals with specific responsibilities receiving training'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.AT-03",
+    "function": "PROTECT",
+    "category": "Awareness and Training (PR.AT)",
+    "title": "Security awareness programs are evaluated",
+    "description": "Organizations evaluate the effectiveness of cybersecurity awareness programs through behavioral measurements, phishing simulations, and participant feedback. Evaluation underlies continuous program improvement.",
+    "panda_explanation": "Training yang tidak dievaluasi tidak bisa ditingkatkan - pengukuran adalah kunci improvement.",
+    "evidence": [
+      "Phishing Click Rates",
+      "Security Incident Trends",
+      "Training Effectiveness Metrics"
+    ],
+    "sp80053": [
+      "AT-01",
+      "AT-03",
+      "CA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Security awareness programs evaluated'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Evaluated security awareness program'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Security awareness program evaluated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-01",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "Data is protected in transit",
+    "description": "Organizations implement controls to protect data as it is transmitted over the network. Protection includes encryption, secure protocols, and endpoint validation to prevent eavesdropping and tampering.",
+    "panda_explanation": "Data dalam transit sangat rentan terhadap interception - encryption adalah keharusan.",
+    "evidence": [
+      "TLS Configuration",
+      "VPN Usage Logs",
+      "Network Encryption Policy"
+    ],
+    "sp80053": [
+      "SC-08",
+      "SC-12",
+      "SC-13"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Data protected in transit'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data protected in transit'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Data protected in transit'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-02",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "Data is protected while stored",
+    "description": "Organizations implement controls to protect data stored across various media. Protection includes encryption at rest, access controls, and secure deletion procedures.",
+    "panda_explanation": "Data at rest yang tidak terenkripsi bisa diakses jika storage device jatuh ke tangan yang salah.",
+    "evidence": [
+      "Encryption Configuration",
+      "Storage Access Logs",
+      "Data Classification Policy"
+    ],
+    "sp80053": [
+      "SC-28",
+      "SC-12",
+      "SC-13",
+      "MP-03",
+      "MP-04",
+      "MP-05",
+      "MP-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Data is protected while stored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data is protected while stored'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Data is protected while in storage'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-03",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "System configuration is managed",
+    "description": "The organization manages system configuration to ensure a consistent security baseline. Configuration includes hardening, change management, and verification against baseline standards.",
+    "panda_explanation": "Konfigurasi yang tidak terkontrol menciptakan kerentanan yang bisa dieksploitasi.",
+    "evidence": [
+      "Configuration Baseline Documents",
+      "Change Management Logs",
+      "Compliance Scan Results"
+    ],
+    "sp80053": [
+      "CM-02",
+      "CM-06",
+      "CM-07",
+      "CM-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Managed system configuration'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Managed system configuration'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Managed system configuration'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-04",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "Data leaks are prevented",
+    "description": "Organizations implement controls to prevent data leaks, whether intentional or not. Controls include DLP (Data Loss Prevention), access restrictions, and monitoring of data exfiltration.",
+    "panda_explanation": "DLP yang well-implemented dapat mendeteksi dan mencegah kebocoran data sebelum terjadi.",
+    "evidence": [
+      "DLP Policy",
+      "DLP Alert Logs",
+      "Exfiltration Monitoring Data"
+    ],
+    "sp80053": [
+      "AC-04",
+      "AC-05",
+      "SC-07",
+      "SC-08",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Data leaks prevented'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data leaks prevented'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Data leaks prevented'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-05",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "Data integrity is maintained",
+    "description": "The organization implements controls to maintain data integrity from unauthorized modification. Controls include checksums, digital signatures, and audit trails that record all data changes.",
+    "panda_explanation": "Data integrity ensures bahwa informasi yang Anda miliki adalah akurat dan belum dimanipulasi.",
+    "evidence": [
+      "Integrity Verification Logs",
+      "Checksum Records",
+      "Change Audit Trails"
+    ],
+    "sp80053": [
+      "SC-16",
+      "SC-28",
+      "SI-07",
+      "AU-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Data integrity maintained'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data integrity maintained'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Data integrity maintained'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.DS-06",
+    "function": "PROTECT",
+    "category": "Data Security (PR.DS)",
+    "title": "Data is classified",
+    "description": "Organizations classify data based on the level of sensitivity and impact on the organization. Classification underlies the application of proportional security controls to each category of data.",
+    "panda_explanation": "Tidak semua data perlu dilindungi dengan cara yang sama - klasifikasi memungkinkan resource allocation yang efisien.",
+    "evidence": [
+      "Data Classification Policy",
+      "Classification Labels",
+      "Handling Procedures"
+    ],
+    "sp80053": [
+      "AC-16",
+      "SC-06",
+      "MP-02",
+      "MP-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Classified data'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Classified data'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Classified data'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-01",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Cybersecurity procedures are documented",
+    "description": "Organizations document cybersecurity procedures that cover all aspects of protection. Documentation must be up-to-date, accessible, and communicated to all relevant individuals.",
+    "panda_explanation": "Prosedur yang terdokumentasi memastikan konsistensi dalam implementasi dan mendukung training.",
+    "evidence": [
+      "Security Procedures Manual",
+      "Standard Operating Procedures",
+      "Documentation Repository"
+    ],
+    "sp80053": [
+      "PL-02",
+      "PL-07",
+      "PM-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Documented cyber security procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Documented cyber security procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Documented cyber security procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-02",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Security changes are managed",
+    "description": "Organizations manage changes to systems, applications, and configurations through a structured change management process. Every change is evaluated, approved, and documented before implementation.",
+    "panda_explanation": "Uncontrolled changes adalah salah satu penyebab utama outage dan kerentanan.",
+    "evidence": [
+      "Change Request Records",
+      "Change Approval Logs",
+      "Post-Implementation Reviews"
+    ],
+    "sp80053": [
+      "CM-02",
+      "CM-03",
+      "CM-04",
+      "CM-05",
+      "CM-09"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Managed security changes'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Managed security changes'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Managed security changes'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-03",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "The baseline configuration is managed",
+    "description": "The organization establishes and manages baseline configurations for all systems. Baselines are evaluated against safety standards and periodically verified to detect drift.",
+    "panda_explanation": "Configuration drift dapat menciptakan kerentanan yang tidak terdeteksi - monitoring baseline sangat penting.",
+    "evidence": [
+      "Baseline Configuration Standards",
+      "Compliance Scan Results",
+      "Drift Detection Reports"
+    ],
+    "sp80053": [
+      "CM-06",
+      "CM-07",
+      "CM-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Managed baseline configuration'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Managed baseline configuration'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Managed baseline configuration'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-04",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Backup and recovery is performed",
+    "description": "The organization performs data and system state backups periodically in accordance with the specified RTO and RPO. Backups are tested regularly to ensure they can be restored successfully.",
+    "panda_explanation": "Backup yang tidak diuji adalah backup yang tidak bisa diandalkan saat dibutuhkan.",
+    "evidence": [
+      "Backup Logs",
+      "Restore Test Results",
+      "Backup Verification Reports"
+    ],
+    "sp80053": [
+      "CP-09",
+      "CP-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Backup and recovery performed'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Backup and recovery is done'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Backup and recovery performed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-05",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Media controlled",
+    "description": "The organization controls the use and disposal of storage media containing sensitive data. Control includes secure handling, sanitization, and destruction procedures in accordance with classification data.",
+    "panda_explanation": "Media yang tidak dikontrol dengan baik dapat menjadi vector untuk data breach.",
+    "evidence": [
+      "Media Handling Policy",
+      "Sanitization Records",
+      "Disposal Certificates"
+    ],
+    "sp80053": [
+      "MP-01",
+      "MP-02",
+      "MP-03",
+      "MP-04",
+      "MP-05",
+      "MP-06",
+      "MP-07",
+      "MP-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Controlled media'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Media controlled'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Controlled media'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-06",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Data and assets are protected throughout the lifecycle",
+    "description": "Organizations implement consistent security controls throughout the data and asset lifecycle, from creation to destruction. Each phase has corresponding security requirements.",
+    "panda_explanation": "Proteksi yang konsisten dari awal hingga akhir mencegah gap dalam perlindungan data.",
+    "evidence": [
+      "Data Lifecycle Management Policy",
+      "Retention Schedules",
+      "Disposal Procedures"
+    ],
+    "sp80053": [
+      "MP-02",
+      "MP-03",
+      "MP-04",
+      "MP-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Data and assets protected throughout the lifecycle'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data and assets are protected throughout the lifecycle'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Data and assets are protected throughout the lifecycle'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-07",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Incidents are handled according to procedures",
+    "description": "The organization has and implements structured incident response procedures. Procedures include containment, eradication, recovery, and lessons learned for each phase of the incident lifecycle.",
+    "panda_explanation": "Insiden yang tidak ditangani dengan benar dapat meningkatkan dampak secara signifikan.",
+    "evidence": [
+      "Incident Response Plan",
+      "Incident Handling Logs",
+      "Post-Incident Reports"
+    ],
+    "sp80053": [
+      "IR-01",
+      "IR-02",
+      "IR-03",
+      "IR-04",
+      "IR-05",
+      "IR-06",
+      "IR-07",
+      "IR-08",
+      "IR-09",
+      "IR-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Incidents handled according to procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incidents handled according to procedures'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident handled according to procedure' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PR.IP-08",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Security in decommissioning is maintained",
+    "description": "The organization implements appropriate security procedures when decommissioning systems or components. Procedures include data sanitization, access removal, and verification before retirement.",
+    "panda_explanation": "Decommissioning yang tidak aman dapat meninggalkan data sensitif yang dapat diambil oleh pihak tidak berwenang.",
+    "evidence": [
+      "Decommissioning Checklist",
+      "Data Sanitization Records",
+      "Access Removal Verification"
+    ],
+    "sp80053": [
+      "CM-08",
+      "MP-06",
+      "SR-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Decommissioning security is maintained'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Guaranteed security in decommissioning'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Safety in decommissioning is maintained'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IP-09",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Incident response procedures are tested periodically",
+    "description": "The organization regularly tests incident response procedures through tabletop exercises and functional exercises. Testing identifies weaknesses in procedures and increases team readiness.",
+    "panda_explanation": "Tim yang tidak pernah latihan akan struggle saat real incident terjadi.",
+    "evidence": [
+      "Exercise Reports",
+      "Tabletop Exercise Records",
+      "Improvement Action Items"
+    ],
+    "sp80053": [
+      "IR-03",
+      "CP-03",
+      "CP-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Regularly tested incident response procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incident response procedures are tested periodically'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident response procedures are tested periodically' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PR.IP-10",
+    "function": "PROTECT",
+    "category": "Information Protection Processes and Procedures (PR.IP)",
+    "title": "Vulnerability search and evaluation procedures are followed",
+    "description": "Organizations follow systematic procedures to identify, categorize, and prioritize vulnerabilities. Procedures include scanning, assessment and remediation tracking.",
+    "panda_explanation": "Kerentanan yang tidak ditemukan adalah kerentanan yang tidak bisa dimitigasi.",
+    "evidence": [
+      "Vulnerability Scan Reports",
+      "Remediation Tracking",
+      "Risk Acceptance Documentation"
+    ],
+    "sp80053": [
+      "RA-03",
+      "RA-04",
+      "RA-05",
+      "SI-02",
+      "SI-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Vulnerability search and evaluation procedures are followed'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Vulnerability search and evaluation procedures are followed'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Vulnerability search and evaluation procedures followed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.PI-01",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "Boot integrity is maintained",
+    "description": "The organization ensures the integrity of the boot process through secure boot, measured boot, or similar mechanisms. This protection prevents booting from components that are not trusted or have been modified.",
+    "panda_explanation": "Boot integrity memastikan bahwa sistem memulai dari state yang trusted.",
+    "evidence": [
+      "Secure Boot Configuration",
+      "TPM Status Logs",
+      "Boot Measurement Records"
+    ],
+    "sp80053": [
+      "SC-03",
+      "SC-51",
+      "SI-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Boot integrity maintained'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Boot integrity maintained'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Boot integrity maintained'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.PI-02",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "Software integrity verified",
+    "description": "Organizations verify software integrity before execution through digital signatures, checksums, or cryptographic mechanisms. Verification ensures the software has not been modified or compromised.",
+    "panda_explanation": "Software yang tidak terverifikasi bisa jadi malware atau telah di-tamper.",
+    "evidence": [
+      "Code Signing Policy",
+      "Integrity Verification Logs",
+      "Application Whitelisting"
+    ],
+    "sp80053": [
+      "CM-11",
+      "SC-03",
+      "SC-13",
+      "SI-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Software integrity verified'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Software integrity verified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Software integrity verified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.PI-03",
+    "function": "PROTECT",
+    "category": "Platform Integrity (PR.PI)",
+    "title": "The integrity of hardware is monitored",
+    "description": "The organization monitors hardware integrity to detect tampering or unauthorized modifications. Monitoring includes firmware verification and detection of malicious hardware components.",
+    "panda_explanation": "Hardware compromise sangat sulit dideteksi tapi bisa sangat devastating.",
+    "evidence": [
+      "Hardware Integrity Monitoring",
+      "Firmware Verification Logs",
+      "Supply Chain Verification"
+    ],
+    "sp80053": [
+      "CM-08",
+      "PE-06",
+      "SI-07",
+      "SR-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Integrity of hardware monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Integrity of hardware monitored'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Integrity of hardware monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IR-01",
+    "function": "PROTECT",
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Infrastructure classified",
+    "description": "Organizations classify infrastructure based on criticality to the mission and the impact of an outage. Classification underlies protection priorities and recovery efforts.",
+    "panda_explanation": "Tidak semua infrastruktur sama kritikal - klasifikasi memungkinkan fokus pada yang paling penting.",
+    "evidence": [
+      "Infrastructure Classification",
+      "BIA Results",
+      "Critical Asset Register"
+    ],
+    "sp80053": [
+      "CP-02",
+      "CP-06",
+      "PE-09",
+      "SC-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Classified infrastructure'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Classified infrastructure'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Classified infrastructure'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IR-02",
+    "function": "PROTECT",
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Infrastructure is configured in a resilient manner",
+    "description": "Organizations configure infrastructure to increase resilience to failure and attack. Configuration includes redundancy, failover mechanisms, and protection against common failure modes.",
+    "panda_explanation": "Resilient architecture mencegah single point of failure yang dapat menyebabkan outage.",
+    "evidence": [
+      "Redundancy Configuration",
+      "Failover Test Records",
+      "HA Architecture Documentation"
+    ],
+    "sp80053": [
+      "CP-06",
+      "CP-07",
+      "CP-08",
+      "SC-06",
+      "SC-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Resiliently configured infrastructure'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Resiliently configured infrastructure'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Resiliently configured infrastructure'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PR.IR-03",
+    "function": "PROTECT",
+    "category": "Technology Infrastructure Resilience (PR.IR)",
+    "title": "Availability is monitored and protected",
+    "description": "The organization monitors infrastructure availability and implements controls to prevent and respond to disruptions. Monitoring includes uptime tracking, performance monitoring, and alerting.",
+    "panda_explanation": "Availability monitoring mendeteksi masalah sebelum menjadi outage yang signifikan.",
+    "evidence": [
+      "Uptime Reports",
+      "Monitoring Dashboards",
+      "Alert Response Logs"
+    ],
+    "sp80053": [
+      "CP-06",
+      "CP-07",
+      "IR-04",
+      "IR-06",
+      "SC-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Availability is monitored and protected'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Availability is monitored and protected'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Availability monitored and protected'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-01",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "The network is monitored",
+    "description": "Organizations continuously monitor network traffic to detect anomalies, unauthorized connections, and suspicious activity. Monitoring includes both internal and external network traffic.",
+    "panda_explanation": "Jaringan adalah highway untuk data dan attack - visibility di network level sangat critical.",
+    "evidence": [
+      "Network Monitoring Logs",
+      "IDS/IPS Alerts",
+      "NetFlow Analysis"
+    ],
+    "sp80053": [
+      "AC-17",
+      "AC-18",
+      "CA-07",
+      "SC-07",
+      "SC-35",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Network monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure firewall and associated network segments 'Network monitored'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Network monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-02",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "User activity is monitored",
+    "description": "Organizations monitor user activity to detect anomalous or unauthorized behavior that may indicate compromised accounts or insider threats.",
+    "panda_explanation": "User behavior analytics dapat mendeteksi threat yang evade traditional security controls.",
+    "evidence": [
+      "UEBA Reports",
+      "Privileged User Monitoring",
+      "Access Anomaly Alerts"
+    ],
+    "sp80053": [
+      "AC-02",
+      "AC-06",
+      "AC-07",
+      "AU-02",
+      "AU-06",
+      "AU-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'User activity monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'User activity monitored'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'User activity monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-03",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Host security events are monitored",
+    "description": "The organization monitors security events from endpoint devices and servers. Monitoring includes antivirus alerts, firewall logs, and system integrity events.",
+    "panda_explanation": "Endpoint adalah battlefield utama - visibility di endpoint sangat krusial untuk deteksi.",
+    "evidence": [
+      "EDR Alerts",
+      "Endpoint Logs",
+      "HIDS/HIPS Logs"
+    ],
+    "sp80053": [
+      "AC-02",
+      "AC-06",
+      "AU-02",
+      "AU-06",
+      "SI-03",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Security events from monitored hosts'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Security events from the host are monitored'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Security events from hosted are monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-04",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Malicious code activity is monitored",
+    "description": "The organization monitors malicious code indicators and activity through antivirus, EDR, and other security tools. Monitoring includes both known and unknown malware patterns.",
+    "panda_explanation": "Malware adalah vector attack yang paling umum - deteksi yang efektif adalah keharusan.",
+    "evidence": [
+      "Malware Detection Logs",
+      "Sandbox Reports",
+      "YARA Rule Matches"
+    ],
+    "sp80053": [
+      "SC-03",
+      "SC-07",
+      "SC-44",
+      "SI-03",
+      "SI-04",
+      "SI-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Malicious code activity monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Malicious code activity monitored'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Malicious code activity monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-05",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Activity on the wireless network is monitored",
+    "description": "Organizations monitor activity on wireless networks to detect unauthorized access points, rogue devices, and wireless-based attacks.",
+    "panda_explanation": "Wireless networks memiliki footprint yang lebih besar dan lebih sulit dikontrol.",
+    "evidence": [
+      "Wireless Monitoring Logs",
+      "Rogue AP Detection",
+      "Wireless IDS Alerts"
+    ],
+    "sp80053": [
+      "AC-18",
+      "CA-07",
+      "SC-07",
+      "SC-35"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Activity on the monitored wireless network'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure the firewall and related network segments 'Activity on the wireless network is monitored'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Activity on wireless networks is monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-06",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Vulnerabilities are monitored",
+    "description": "Organizations continuously monitor vulnerabilities through scanning, assessment, and threat intelligence. Monitoring allows the identification of new vulnerabilities as they emerge.",
+    "panda_explanation": "Kerentanan baru discovered setiap hari - continuous monitoring adalah keharusan.",
+    "evidence": [
+      "Vulnerability Scan Reports",
+      "Patch Status Reports",
+      "Threat Intel Feeds"
+    ],
+    "sp80053": [
+      "RA-03",
+      "RA-04",
+      "RA-05",
+      "SI-02",
+      "SI-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Vulnerabilities monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Vulnerabilities monitored'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Vulnerabilities monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-07",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Unauthorized mobile code activity is monitored",
+    "description": "The organization monitors to detect the execution of unauthorized mobile code which could be a vector for malicious software.",
+    "panda_explanation": "Mobile code dari sumber tidak dikenal adalah risiko yang sering diabaikan.",
+    "evidence": [
+      "Mobile Code Detection Logs",
+      "Application Whitelisting Alerts",
+      "Execution Policy Violations"
+    ],
+    "sp80053": [
+      "SC-44",
+      "SI-03",
+      "SI-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Unauthorized mobile code activity monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Unauthorized mobile code activity is monitored'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Unauthorized mobile code activity monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.CM-08",
+    "function": "DETECT",
+    "category": "Continuous Monitoring (DE.CM)",
+    "title": "Detection activities are monitored",
+    "description": "The organization monitors the effectiveness of detection mechanisms to ensure continuity of visibility. Monitoring includes coverage analysis and tuning of detection rules.",
+    "panda_explanation": "Detection yang tidak dimonitor bisa miss events yang kritikal - Anda tidak tahu apa yang tidak Anda lihat.",
+    "evidence": [
+      "Detection Coverage Reports",
+      "False Positive Analysis",
+      "Rule Effectiveness Metrics"
+    ],
+    "sp80053": [
+      "CA-07",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Detection activities monitored'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Detection activities monitored'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Detection activities monitored'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.AE-01",
+    "function": "DETECT",
+    "category": "Adverse Event Analysis (DE.AE)",
+    "title": "Anomalies and unexpected events are identified",
+    "description": "The organization identifies anomalies and events that indicate potential security incidents through analysis of collected data and threat intelligence.",
+    "panda_explanation": "Deteksi anomali yang accurate membutuhkan baseline yang baik dan understanding tentang normal behavior.",
+    "evidence": [
+      "Anomaly Detection Reports",
+      "SIEM Correlation Rules",
+      "Behavioral Analysis Results"
+    ],
+    "sp80053": [
+      "SI-04",
+      "SI-05",
+      "AU-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Anomalies and unexpected events identified'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Anomalies and unexpected events identified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Anomalies and unexpected events identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.AE-02",
+    "function": "DETECT",
+    "category": "Adverse Event Analysis (DE.AE)",
+    "title": "Suspicios activity is analyzed",
+    "description": "The organization analyzes suspect events and indicators to determine whether they are true security incidents or false positives.",
+    "panda_explanation": "False positive yang tinggi dapat menyebabkan alert fatigue dan miss real threats.",
+    "evidence": [
+      "Incident Analysis Reports",
+      "Forensic Analysis",
+      "Triage Records"
+    ],
+    "sp80053": [
+      "AU-06",
+      "IR-04",
+      "IR-05",
+      "SI-03",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Suspicios activities analyzed'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Suspicios activity analyzed'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Suspicios activities analyzed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.AE-03",
+    "function": "DETECT",
+    "category": "Adverse Event Analysis (DE.AE)",
+    "title": "Correlation analysis was performed",
+    "description": "Organizations correlate data from various sources to build a complete picture of activities that may constitute a security incident.",
+    "panda_explanation": "Korelasi multi-source dapat reveal pola yang tidak terlihat dari single data source.",
+    "evidence": [
+      "SIEM Correlation Alerts",
+      "Cross-Tool Correlation Reports",
+      "Timeline Analysis"
+    ],
+    "sp80053": [
+      "AU-06",
+      "IR-04",
+      "IR-05",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Correlation analysis performed'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Correlation analysis performed'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Correlation analysis performed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.AE-04",
+    "function": "DETECT",
+    "category": "Adverse Event Analysis (DE.AE)",
+    "title": "Potential impacts are estimated",
+    "description": "The organization estimates the potential impact of identified anomalies to determine severity and appropriate response priorities.",
+    "panda_explanation": "Impact estimation membantu memprioritaskan response dan allocation of resources.",
+    "evidence": [
+      "Impact Assessment Reports",
+      "Severity Classification",
+      "Business Impact Estimation"
+    ],
+    "sp80053": [
+      "CP-02",
+      "IR-04",
+      "RA-02",
+      "RA-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Estimated potential impacts'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Estimated potential impact'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Potential impacts estimated'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "DE.AE-05",
+    "function": "DETECT",
+    "category": "Adverse Event Analysis (DE.AE)",
+    "title": "Initial incident identified",
+    "description": "The organization determines the earliest indicators of an incident to understand the timeline and scope of the compromise. Forensic analysis may be required to identify the initial vector.",
+    "panda_explanation": "Mengetahui kapan incident mulai membantu menentukan scope dan dampak yang sebenarnya.",
+    "evidence": [
+      "Forensic Analysis",
+      "Reconstruction Timeline Log",
+      "Root Cause Analysis"
+    ],
+    "sp80053": [
+      "AU-06",
+      "IR-04",
+      "IR-05",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Initial identified incidents'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Early incident identified'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Initial incident identified'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.MA-01",
+    "function": "RESPOND",
+    "category": "Incident Management (RS.MA)",
+    "title": "Incidents are reported according to procedures",
+    "description": "The organization reports security incidents according to defined procedures that include escalation paths, notification requirements, and documentation standards.",
+    "panda_explanation": "Reporting yang tepat memastikan insiden mendapat perhatian yang diperlukan dari awal.",
+    "evidence": [
+      "Incident Reports",
+      "Escalation Logs",
+      "Notification Records"
+    ],
+    "sp80053": [
+      "IR-06",
+      "IR-07",
+      "IR-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Incidents reported according to procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incidents reported according to procedures'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident reported according to procedure' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.MA-02",
+    "function": "RESPOND",
+    "category": "Incident Management (RS.MA)",
+    "title": "Incidents are monitored",
+    "description": "The organization monitors security incidents that are being handled to ensure visibility and tracking of progress. Monitoring enables appropriate resource allocation.",
+    "panda_explanation": "Insiden tanpa monitoring bisa kehilangan momentum dan scope creep.",
+    "evidence": [
+      "Incident Tracking System",
+      "Status Update Logs",
+      "Resource Allocation Records"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-06",
+      "IR-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Monitored incidents'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Monitored incidents'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident monitored' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.AN-01",
+    "function": "RESPOND",
+    "category": "Incident Analysis (RS.AN)",
+    "title": "Incident analysis is performed",
+    "description": "The organization conducts an investigation to understand the nature, scope, and cause of the incident. In-depth analysis is needed for effective response and prevention in the future.",
+    "panda_explanation": "Understanding what happened adalah prerequisite untuk fixing dan preventing recurrence.",
+    "evidence": [
+      "Incident Analysis Reports",
+      "Forensic Evidence",
+      "Root Cause Analysis"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-05",
+      "AU-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Incident analysis conducted'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incident analysis performed'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident analysis carried out' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.AN-02",
+    "function": "RESPOND",
+    "category": "Incident Analysis (RS.AN)",
+    "title": "Incident correlation is executed",
+    "description": "Organizations correlate incidents with data from other sources to identify patterns, determine scope, and determine whether related incidents are part of a larger campaign.",
+    "panda_explanation": "Correlation dapat reveal bahwa isolated incidents sebenarnya adalah bagian dari coordinated attack.",
+    "evidence": [
+      "Correlation Analysis",
+      "Threat Intel Integration",
+      "Cross-Incident Analysis"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-05",
+      "SI-04"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Board: Berikan pengawasan strategis atas 'Korelasi insiden dieksekusi'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Executed incident correlation'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident correlation executed' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.AN-03",
+    "function": "RESPOND",
+    "category": "Incident Analysis (RS.AN)",
+    "title": "Forensics are performed as needed",
+    "description": "The organization carries out forensic investigations as needed to collect evidence, determine root cause, and support potential legal proceedings.",
+    "panda_explanation": "Proper forensics dapat provide evidence yang diperlukan untuk prosecution atau insurance claims.",
+    "evidence": [
+      "Forensic Reports",
+      "Evidence Preservation Logs",
+      "Chain of Custody Records"
+    ],
+    "sp80053": [
+      "AU-06",
+      "AU-07",
+      "AU-11",
+      "IR-04",
+      "IR-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Forensics conducted as required'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Forensics carried out as needed'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Forensics conducted as required'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.CO-01",
+    "function": "RESPOND",
+    "category": "Incident Response Reporting and Communication (RS.CO)",
+    "title": "Stakeholders are informed according to procedures",
+    "description": "The organization communicates incidents to internal and external stakeholders in accordance with defined procedures and regulatory requirements. Communication includes regular status updates.",
+    "panda_explanation": "Komunikasi yang tepat mencegah misinformation dan memastikan coordinated response.",
+    "evidence": [
+      "Notification Records",
+      "Communication Templates",
+      "Stakeholder Contact Lists"
+    ],
+    "sp80053": [
+      "IR-06",
+      "IR-07",
+      "IR-08",
+      "IR-09"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Stakeholders informed according to procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Stakeholders are informed according to procedures'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Stakeholders informed according to procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.CO-02",
+    "function": "RESPOND",
+    "category": "Incident Response Reporting and Communication (RS.CO)",
+    "title": "Incidents are reported to authorities as required",
+    "description": "The organization reports incidents to relevant authorities (law enforcement, regulators, ISAC) as needed and within the required timeframe.",
+    "panda_explanation": "Beberapa insiden memerlukan pelaporan regulasi dalam timeframe tertentu - ketahui requirements Anda.",
+    "evidence": [
+      "Authority Notification Records",
+      "Regulatory Filing",
+      "Law Enforcement Reports"
+    ],
+    "sp80053": [
+      "IR-06",
+      "IR-07",
+      "IR-08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Incidents reported to authorities as required'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incidents reported to authorities as required'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident reported to authorities as needed' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.CO-03",
+    "function": "RESPOND",
+    "category": "Incident Response Reporting and Communication (RS.CO)",
+    "title": "Information is exchanged according to procedures",
+    "description": "The organization shares relevant incident information with appropriate parties in accordance with sharing agreements and need-to-know principles.",
+    "panda_explanation": "Information sharing dapat membantu others defend against similar attacks.",
+    "evidence": [
+      "ISAC Sharing Reports",
+      "Industry Alerts",
+      "Information Sharing Logs"
+    ],
+    "sp80053": [
+      "IR-06",
+      "IR-08",
+      "PM-15"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Information exchanged according to procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Information is exchanged according to procedures'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Information exchanged according to procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.MI-01",
+    "function": "RESPOND",
+    "category": "Incident Mitigation (RS.MI)",
+    "title": "Incident mitigated",
+    "description": "The organization implements mitigation measures to limit the scope and impact of security incidents. Mitigation is carried out as soon as an incident is identified and confirmed.",
+    "panda_explanation": "Fast mitigation dapat mencegah incident dari becoming a breach atau outage yang besar.",
+    "evidence": [
+      "Mitigation Actions Taken",
+      "Containment Records",
+      "Impact Limitation Reports"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-05",
+      "IR-06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Incidents mitigated'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Incident mitigated'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Incident mitigated' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "RS.MI-02",
+    "function": "RESPOND",
+    "category": "Incident Mitigation (RS.MI)",
+    "title": "Mitigation is monitored for effectiveness",
+    "description": "The organization monitors the effectiveness of mitigation measures and adjusts as needed. Monitoring ensures that mitigation is successful in reducing incident impact.",
+    "panda_explanation": "Mitigasi yang tidak efektif adalah waste of resources - monitor dan adjust sesuai kebutuhan.",
+    "evidence": [
+      "Mitigation Effectiveness Reports",
+      "Re-assessment Results",
+      "Monitoring Logs"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-06",
+      "CA-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Mitigation monitored for effectiveness'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Mitigation monitored for effectiveness'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Mitigation monitored for effectiveness'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.RE-01",
+    "function": "RESPOND",
+    "category": "Incident Recovery Plan Execution (RS.RE)",
+    "title": "Recovery plan executed",
+    "description": "The organization executes recovery plans according to procedures to restore affected systems and operations to operational state. Recovery is carried out methodically to ensure integrity.",
+    "panda_explanation": "Recovery plan yang practiced dapat execute lebih cepat dan lebih effectively saat needed.",
+    "evidence": [
+      "Recovery Execution Logs",
+      "Recovery Progress Reports",
+      "System Restoration Records"
+    ],
+    "sp80053": [
+      "CP-07",
+      "CP-10",
+      "IR-04",
+      "IR-07",
+      "IR-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Recovery plan executed'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery plan executed'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Recovery plan executed'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RS.RE-02",
+    "function": "RESPOND",
+    "category": "Incident Recovery Plan Execution (RS.RE)",
+    "title": "The recovery plan is monitored for effectiveness",
+    "description": "The organization monitors recovery progress and effectiveness to ensure timely restoration to the accepted operational state. Adjustments are made according to lessons learned.",
+    "panda_explanation": "Monitoring recovery progress ensures timely restoration dan identifies issues early.",
+    "evidence": [
+      "Recovery Status Reports",
+      "RTO Achievement Metrics",
+      "Recovery Issues Log"
+    ],
+    "sp80053": [
+      "CP-07",
+      "CP-10",
+      "IR-04",
+      "IR-07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Recovery plan monitored for effectiveness'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery plan monitored for effectiveness'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Recovery plan monitored for effectiveness'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RC.RP-01",
+    "function": "RECOVER",
+    "category": "Incident Recovery Plan Execution (RC.RP)",
+    "title": "A recovery plan is executed after an incident",
+    "description": "The organization executes a formal recovery plan to return systems and operations to baseline functionality. The recovery plan is executed in a coordinated manner and prioritizes critical functions.",
+    "panda_explanation": "Formal recovery plan ensures systematic restoration dengan minimal disruption.",
+    "evidence": [
+      "Recovery Plan Documents",
+      "Execution Logs",
+      "Coordination Records"
+    ],
+    "sp80053": [
+      "CP-07",
+      "CP-10",
+      "IR-04",
+      "IR-07",
+      "IR-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Recovery plan executed after incident'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery plan executed after incident'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Recovery plan executed after incident'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RC.CO-01",
+    "function": "RECOVER",
+    "category": "Incident Recovery Communication (RC.CO)",
+    "title": "Stakeholders are informed throughout the recovery",
+    "description": "The organization communicates recovery status to stakeholders regularly and transparently. Communication includes progress updates, expected timelines, and any changes.",
+    "panda_explanation": "Regular updates mantém stakeholder confidence dan memungkinkan mereka untuk make informed decisions.",
+    "evidence": [
+      "Recovery Communication Records",
+      "Status Update Templates",
+      "Stakeholder Feedback"
+    ],
+    "sp80053": [
+      "IR-06",
+      "IR-07",
+      "IR-08",
+      "IR-09"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Stakeholders informed throughout recovery'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Stakeholders are informed throughout recovery'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Stakeholders informed throughout recovery'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RC.CO-02",
+    "function": "RECOVER",
+    "category": "Incident Recovery Communication (RC.CO)",
+    "title": "Recovery is validated with stakeholders",
+    "description": "The organization validates with stakeholders that recovery has been successful and systems are operating at acceptable levels. Validation ensures stakeholder acceptance of recovery outcomes.",
+    "panda_explanation": "Stakeholder validation prevents disputes about recovery completeness dan quality.",
+    "evidence": [
+      "Validation Records",
+      "Sign-off Documentation",
+      "Acceptance Criteria"
+    ],
+    "sp80053": [
+      "IR-04",
+      "IR-06",
+      "IR-07",
+      "IR-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Recovery validated with stakeholders'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery validated with stakeholders'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Recovery validated with stakeholders'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RC.IM-01",
+    "function": "RECOVER",
+    "category": "Incident Recovery Plan Improvement (RC.IM)",
+    "title": "Lessons learned are collected after the incident",
+    "description": "The organization conducts post-incident reviews to identify lessons learned, successful practices, and areas for improvement. The review involves all relevant parties.",
+    "panda_explanation": "Lessons learned that are not captured will be forgotten and repeated.",
+    "evidence": [
+      "Post-Incident Review Reports",
+      "Lessons Learned Documentation",
+      "Improvement Recommendations"
+    ],
+    "sp80053": [
+      "IR-03",
+      "IR-05",
+      "IR-10",
+      "CA-05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Lessons learned collected after incident'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Lessons learned collected after incident'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Lessons learned collected after incident'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "RC.IM-02",
+    "function": "RECOVER",
+    "category": "Incident Recovery Plan Improvement (RC.IM)",
+    "title": "Recovery plan and procedures updated",
+    "description": "Organization updates recovery plans and procedures based on lessons learned from incidents and exercises. Updates ensure plans remain effective and relevant.",
+    "panda_explanation": "Plans that are not updated become outdated and ineffective.",
+    "evidence": [
+      "Updated Recovery Plans",
+      "Change Control Records",
+      "Version History"
+    ],
+    "sp80053": [
+      "CP-02",
+      "CP-03",
+      "CP-04",
+      "IR-03",
+      "IR-10",
+      "PM-10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Recovery plans and updated procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recovery plan and updated procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Recovery plan and procedures updated'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]
