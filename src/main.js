@@ -3,6 +3,32 @@ import { createPinia } from 'pinia';
 import App from './components/App.vue';
 import router from './router/index.js';
 import VueGtag from 'vue-gtag-next';
+import i18n from './i18n';
+
+// Global Fetch Interceptor for Translations
+const originalFetch = window.fetch;
+window.fetch = async function() {
+  let [resource, config] = arguments;
+  
+  if (typeof resource === 'string' && resource.startsWith('/data/') && resource.endsWith('.json')) {
+    // If language is English, try fetching the _en.json version first
+    const lang = localStorage.getItem('language') || 'id';
+    if (lang === 'en' && !resource.endsWith('_en.json')) {
+      const enResource = resource.replace('.json', '_en.json');
+      try {
+        const enResponse = await originalFetch(enResource, config);
+        if (enResponse.ok) {
+          return enResponse;
+        }
+      } catch (e) {
+        // Fallback to default
+      }
+    }
+  }
+  
+  return originalFetch.apply(this, arguments);
+};
+
 // Vercel Analytics is now handled via component in App.vue
 
 // Import Bootstrap CSS from CDN
@@ -16,6 +42,7 @@ const app = createApp(App);
 
 app.use(router);
 app.use(pinia);
+app.use(i18n);
 
 // Install Google Analytics 4
 import { trackRouter } from 'vue-gtag-next';
@@ -35,22 +62,17 @@ app.config.errorHandler = (error, instance, info) => {
   console.error('Vue Error:', error);
   console.error('Component:', instance?.$options?.name || 'Unknown');
   console.error('Error Info:', info);
-  
-  // In production, you could send this to an error tracking service
-  // e.g., Sentry.captureException(error);
 };
 
 // Global unhandled promise rejection handler
 window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled Promise Rejection:', event.reason);
-  // Prevent default browser error handling
   event.preventDefault();
 });
 
 // Global uncaught error handler
 window.addEventListener('error', (event) => {
   console.error('Uncaught Error:', event.error);
-  // Prevent default browser error handling
   event.preventDefault();
 });
 

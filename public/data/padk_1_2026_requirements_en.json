@@ -1,0 +1,944 @@
+[
+  {
+    "id": "PADK.POKOK-01",
+    "chapter": "Pokok",
+    "pillar": "Foundation",
+    "title": "Use the four PADK attachments as a single setup",
+    "summary": "Article 1 emphasizes that IT implementation guidelines, reporting and permit procedures, report and notification formats, as well as permit and realization formats are an inseparable part of PADK.",
+    "cadence": "Setiap pembacaan dan implementasi PADK",
+    "focus": [
+      "Make Appendix I the substance of operational guidelines.",
+      "Use Appendix II for channels and reporting or licensing deadlines.",
+      "Use Attachments III and IV as the regulatory format that must be used."
+    ],
+    "evidence": [
+      "Regulatory register mapping Appendices I to IV.",
+      "Checklist of report formats and permits referring to PADK."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "LAMP.II",
+      "LAMP.III",
+      "LAMP.IV"
+    ],
+    "reporting": "Menjadi dasar pemetaan kewajiban PADK di seluruh artefak kepatuhan TI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Use the four PADK attachments as one regulatory unit'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Use four PADK attachments as one setup'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Use four PADK annexes as one regulatory unit'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.POKOK-02",
+    "chapter": "Pokok",
+    "pillar": "Foundation",
+    "title": "Adjust existing PPJTI agreements",
+    "summary": "Article 2 requires banks that have used IT service providers before the PADK comes into effect to adjust the agreements that have been made in accordance with the provisions of the PADK.",
+    "cadence": "Transisi setelah PADK berlaku",
+    "focus": [
+      "Inventory of active PPJTI contracts.",
+      "Compare contract clauses with PADK and POJK PTI requirements.",
+      "Establish an amendment plan for inadequate contracts."
+    ],
+    "evidence": [
+      "List of active PPJTI contracts.",
+      "Gap assessment PPJTI clause.",
+      "Addendum or contract adjustment action plan."
+    ],
+    "appendices": [
+      "LAMP.I"
+    ],
+    "reporting": "Siapkan bukti penyesuaian kontrak saat review vendor atau pemeriksaan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Adjust existing PPJTI agreements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Adjust existing PPJTI agreements'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Adjust existing PPJTI agreements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.POKOK-03",
+    "chapter": "Pokok",
+    "pillar": "Reporting",
+    "title": "Submit the latest condition report through OJK reporting provisions",
+    "summary": "Article 3 directs the submission of reports on the current conditions of IT operations in Appendix III format through reporting provisions for conventional commercial banks or sharia commercial banks and sharia business units.",
+    "cadence": "Setiap siklus LKTPTI",
+    "focus": [
+      "Use the PADK format for current condition reports.",
+      "Align channels with relevant bank reporting regimes.",
+      "Ensure cross-unit data owners are ready to supply 3.2 format."
+    ],
+    "evidence": [
+      "OJK reporting calendar.",
+      "Completed LKTPTI template.",
+      "Proof of submission through the OJK reporting system."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F3.2"
+    ],
+    "reporting": "LKTPTI disampaikan pada setiap 21 Januari tahun berikutnya.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Convey current condition reports through OJK reporting requirements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Submit the latest condition report through OJK reporting requirements'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Submit current condition reports through OJK reporting requirements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.POKOK-04",
+    "chapter": "Pokok",
+    "pillar": "Foundation",
+    "title": "Note the implementation of PADK and the revocation of SEOJK 21/2017",
+    "summary": "Article 4 revokes SEOJK 21/SEOJK.03/2017 when PADK comes into force, while Article 5 sets the effective date on March 1 2026.",
+    "cadence": "Saat pembaruan register regulasi",
+    "focus": [
+      "Update regulatory inventory and internal policy references.",
+      "Mark March 1, 2026 as the PADK effective date.",
+      "Avoid using SEOJK 21/2017 as an active reference after revocation."
+    ],
+    "evidence": [
+      "Register the latest version of regulations.",
+      "IT policy reference change memo.",
+      "Notes on socialization of regulations to related units."
+    ],
+    "appendices": [
+      "LAMP.I"
+    ],
+    "reporting": "Tidak ada laporan khusus, tetapi perubahan rujukan harus tercermin pada tata kelola dokumen.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Note the implementation of PADK and revocation of SEOJK 21/2017'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Note the validity of PADK and revocation of SEOJK 21/2017'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP to 'Note the applicability of PADK and revocation of SEOJK 21/2017'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.INTRO-01",
+    "chapter": "I",
+    "pillar": "Foundation",
+    "title": "Use PADK guidelines for the scope of Bank IT implementation",
+    "summary": "Chapter I positions the PADK guidelines as an elaboration of POJK 11 of 2022 concerning IT Implementation by Commercial Banks.",
+    "cadence": "Saat menyusun kerangka kepatuhan TI",
+    "focus": [
+      "Covers IT governance, IT architecture, IT risk, cyber security and resilience, PPJTI, data, IT services, audit, and digital maturity.",
+      "Refer to SEOJK Cyber ​​for cyber resilience and security.",
+      "Refer SEOJK DMAB for Bank digital maturity assessment."
+    ],
+    "evidence": [
+      "IT regulatory map connecting POJK PTI, PADK, SEOJK Cyber, and SEOJK DMAB.",
+      "IT compliance program scope statement."
+    ],
+    "appendices": [
+      "LAMP.I"
+    ],
+    "reporting": "Menjadi konteks bagi RSTI, LRPTI, dan LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Use PADK guidelines for the scope of Bank IT operations'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Use PADK guidelines for the scope of Bank IT operations'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Use PADK guidelines for the scope of Bank IT operations'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.GOV-01",
+    "chapter": "II",
+    "pillar": "Governance",
+    "title": "Implement IT governance that is aligned with the Bank's strategy and risks",
+    "summary": "Chapter II describes factors in implementing IT governance, including business strategy, Bank complexity, the role of IT, resource procurement methods, IT risks, standards and regulatory provisions.",
+    "cadence": "Berkala dan saat strategi berubah",
+    "focus": [
+      "Link IT decisions to the Bank's business objectives.",
+      "Consider the size, complexity, and criticality of IT.",
+      "Establish practices or standards relevant to the Bank's capacity."
+    ],
+    "evidence": [
+      "IT governance documents.",
+      "Assessment of IT governance implementation factors.",
+      "Committee minutes discussing IT strategy."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.2",
+      "F3.2.3"
+    ],
+    "reporting": "Ringkas penerapannya pada laporan kondisi terkini penyelenggaraan TI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Implement IT governance that is aligned with the Bank's strategy and risks' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Implement IT governance that is in line with the Bank's strategy and risks'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs to 'Implement IT governance aligned with Bank strategy and risks'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.GOV-02",
+    "chapter": "II",
+    "pillar": "Governance",
+    "title": "Map aspects of IT governance as a whole",
+    "summary": "IT governance aspects include business processes, organizational structure, policies, standards, procedures, supporting information, human resources, IT culture, as well as infrastructure and applications.",
+    "cadence": "Saat desain dan kaji ulang governance",
+    "focus": [
+      "Determine the division of tasks and segregation of duties.",
+      "Ensure policies, standards and procedures are reviewed according to the Bank's cycle.",
+      "Provide relevant, accurate, secure and timely management information."
+    ],
+    "evidence": [
+      "Organizational structure and job description.",
+      "Register standard IT procedures policies.",
+      "IT management dashboard or report."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.2",
+      "F3.2.3"
+    ],
+    "reporting": "Bukti governance dan kebijakan masuk ke LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Map end-to-end IT governance aspects'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Map comprehensive IT governance aspects'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Map end-to-end IT governance aspects'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.GOV-03",
+    "chapter": "II",
+    "pillar": "Governance",
+    "title": "Affirm the roles of Directors, Commissioners, committees and IT leaders",
+    "summary": "Chapter II outlines the authority and responsibilities of the Board of Directors, Board of Commissioners, IT Steering Committee, and IT work unit leaders.",
+    "cadence": "Terus menerus",
+    "focus": [
+      "Establish active oversight accountability for IT operations.",
+      "Use committees for strategic direction and IT priorities.",
+      "Ensure IT leaders manage planning, development, operations, and monitoring."
+    ],
+    "evidence": [
+      "IT steering committee charter.",
+      "TI RACI Matrix.",
+      "Minutes of Directors or Commissioners meetings related to IT."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.2"
+    ],
+    "reporting": "Peran organisasi dilaporkan sebagai bagian organisasi dan manajemen TI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Assert the role of Directors, Commissioners, committees and IT leaders'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Assert the role of Directors, Commissioners, committees and IT leaders'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Affirm the role of Directors, Commissioners, committees and IT leaders'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.GOV-04",
+    "chapter": "II",
+    "pillar": "Governance",
+    "title": "Manage the IT work unit cycle from planning to monitoring",
+    "summary": "The IT work unit includes the functions of planning, preparing or developing, operating and monitoring IT implementation.",
+    "cadence": "Siklus operasional TI",
+    "focus": [
+      "Manage IT development and change with project and change management policies.",
+      "Control data center, configuration, maintenance, database, repository, information exchange, and disposal.",
+      "Monitor IT performance and follow up on issues."
+    ],
+    "evidence": [
+      "Project governance and change records.",
+      "Configuration of IT assets and operating procedures.",
+      "IT service performance monitoring report."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.5",
+      "F3.2.6",
+      "F3.2.8"
+    ],
+    "reporting": "Informasi operasi dan pengembangan TI mendukung LRPTI dan LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Manage the IT work cycle from planning to monitoring'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Manage the IT work cycle from planning to monitoring'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Manage the IT work unit cycle from planning to monitoring'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.ARC-01",
+    "chapter": "III",
+    "pillar": "Governance",
+    "title": "Arrange a controlled IT architecture",
+    "summary": "Chapter III regulates the considerations and stages of preparing IT architecture starting from planning, design, implementation, to control.",
+    "cadence": "Saat penyusunan dan perubahan arsitektur",
+    "focus": [
+      "Connect business architecture, data, applications, technology, and security.",
+      "Document current conditions and targets.",
+      "Use control stages to maintain architectural alignment."
+    ],
+    "evidence": [
+      "Enterprise or IT architecture blueprint.",
+      "Target architecture roadmap.",
+      "Design review notes and architectural controls."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.5"
+    ],
+    "reporting": "Arsitektur TI menjadi bagian LKTPTI dan bahan perubahan RSTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'Controlled IT architecture'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Controlled IT architecture'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Arrange a controlled IT architecture'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.ARC-02",
+    "chapter": "III",
+    "pillar": "Reporting",
+    "title": "Manage the IT Strategic Plan and changes thereto",
+    "summary": "RSTI contains the direction of IT implementation and can be changed when significant conditions affect the Bank's IT goals and strategies.",
+    "cadence": "Periode RSTI dan saat perubahan signifikan",
+    "focus": [
+      "Prepare vision, mission, environmental analysis, goals, strategies and IT performance evaluation.",
+      "Document the reason for the RSTI change.",
+      "Convey RSTI through the OJK reporting system."
+    ],
+    "evidence": [
+      "RSTI Document.",
+      "RSTI change memo.",
+      "Proof of RSTI submission to OJK."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "LAMP.II"
+    ],
+    "reporting": "RSTI disampaikan paling lambat akhir November tahun sebelum periode awal RSTI dimulai.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Manage IT Strategic Plan and changes'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Manage IT Strategic Plan and changes'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Manage IT Strategic Plan and amendments'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.RSK-01",
+    "chapter": "IV",
+    "pillar": "RiskSecurity",
+    "title": "Execute IT risk management processes",
+    "summary": "Chapter IV maps the process of identifying, measuring, monitoring and controlling IT risks in the Bank's IT operations.",
+    "cadence": "Terus menerus",
+    "focus": [
+      "Identify risks to assets, services, changes and related parties.",
+      "Measure exposure and adequacy of controls.",
+      "Monitor risks and escalation of material issues."
+    ],
+    "evidence": [
+      "IT risk register.",
+      "IT risk assessment methodology.",
+      "Risk monitoring and follow-up reports."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.4"
+    ],
+    "reporting": "Ringkasan manajemen risiko TI dituangkan pada LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Execute IT risk management processes' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Execute IT risk management process'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Execute IT risk management processes'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.RSK-02",
+    "chapter": "IV",
+    "pillar": "RiskSecurity",
+    "title": "Control the security of information and communication networks",
+    "summary": "Securing information requires policies, standards and procedures, while communications networks need to be managed to maintain confidentiality, integrity and availability.",
+    "cadence": "Operasional dan kaji ulang berkala",
+    "focus": [
+      "Define classification, access, logging, and security of information transfer.",
+      "Maintain network and connectivity control.",
+      "Align security controls with the Bank's IT risk profile."
+    ],
+    "evidence": [
+      "Security policy and standards.",
+      "Network security baselines.",
+      "IT security control report."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.9",
+      "F3.2.13",
+      "F3.2.14"
+    ],
+    "reporting": "Aset pengamanan TI, penilaian keamanan siber, dan hasil uji kerentanan masuk format LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Control the security of information and communications networks'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Configure the firewall and associated network segments 'Control the security of information and communication networks'. Close unnecessary open ports and enable traffic logging.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Control the security of information and communication networks'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.RSK-03",
+    "chapter": "IV",
+    "pillar": "RiskSecurity",
+    "title": "Manage Disaster Recovery Plan",
+    "summary": "Banks need to have policies, standards, procedures, testing, maintenance and internal audits related to disaster recovery plans.",
+    "cadence": "Berkala dan saat perubahan layanan kritikal",
+    "focus": [
+      "Define DRPs that align with service continuity needs.",
+      "Test and review the DRP.",
+      "Follow up on weaknesses in test results."
+    ],
+    "evidence": [
+      "DRP Document.",
+      "DRP test results report.",
+      "Register for follow-up DRP review."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.10"
+    ],
+    "reporting": "Informasi DRP dan pengujiannya dilaporkan pada LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Manage Disaster Recovery Plan'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Manage Disaster Recovery Plan'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Manage Disaster Recovery Plan'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.PPJTI-01",
+    "chapter": "V",
+    "pillar": "ThirdParty",
+    "title": "Manage PPJTI needs, selection and collaborative relationships",
+    "summary": "Chapter V regulates policies and procedures for identifying the need for using PPJTI, selecting PPJTI, and managing cooperative relationships.",
+    "cadence": "Sebelum dan selama penggunaan PPJTI",
+    "focus": [
+      "Perform relevant due diligence on IT service needs.",
+      "Make sure the contract contains rights, obligations, SLAs, security, and monitoring access.",
+      "Administer the IT services used."
+    ],
+    "evidence": [
+      "Vendor due diligence.",
+      "PPJTI Contracts and SLAs.",
+      "List of active IT service providers."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.11"
+    ],
+    "reporting": "Penggunaan PPJTI dilaporkan dalam format penyedia jasa TI pada LKTPTI.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Manage PPJTI needs, selection and collaborative relationships'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Manage PPJTI requirements, selection and cooperation relationships'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Manage PPJTI needs, selection and collaborative relationships'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.PPJTI-02",
+    "chapter": "V",
+    "pillar": "ThirdParty",
+    "title": "Manage PPJTI risk, performance, compliance and materiality",
+    "summary": "Banks need to monitor the risks of using PPJTI, assess performance and compliance, and reassess materiality if there are significant changes to PPJTI.",
+    "cadence": "Berkala dan saat perubahan vendor signifikan",
+    "focus": [
+      "Monitor reputation, performance and continuity of service.",
+      "Determine the timing and follow-up of materiality reassessment.",
+      "Use vendor review results for mitigation decisions."
+    ],
+    "evidence": [
+      "Vendor risk assessment.",
+      "PPJTI Scorecard.",
+      "Reassessment of materiality and action plan."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.11"
+    ],
+    "reporting": "Temuan vendor material perlu masuk governance dan risk reporting Bank.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Manage PPJTI risks, performance, compliance and materiality' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Manage risk, performance, compliance and PPJTI materiality'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Manage PPJTI risk, performance, compliance and materiality'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.PPJTI-03",
+    "chapter": "V",
+    "pillar": "ThirdParty",
+    "title": "Maintain supervisory access when using PPJTI outside Indonesia",
+    "summary": "The use of PPJTI outside Indonesian territory must not hinder OJK supervision or inspection and must still follow adequate vendor policies.",
+    "cadence": "Sebelum kontrak dan selama layanan berjalan",
+    "focus": [
+      "Test whether jurisdictions and contracts provide for data access and inspection.",
+      "Document mitigation of jurisdictional differences.",
+      "Ensure regulatory oversight remains effective."
+    ],
+    "evidence": [
+      "Audit access and regulator access clauses.",
+      "Cross-border legal review.",
+      "Country and continuity risk assessment."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F4.1",
+      "F4.3"
+    ],
+    "reporting": "Cross-border placement atau processing memerlukan izin yang relevan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Maintain supervisory access when using PPJTI outside Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Maintain supervised access when using PPJTI outside Indonesia'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP to 'Maintain supervisory access when using PPJTI outside Indonesia'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.LOC-01",
+    "chapter": "VI",
+    "pillar": "ThirdParty",
+    "title": "Place electronic systems in Indonesia unless permission is obtained",
+    "summary": "Banks are required to place Electronic Systems in data centers and disaster recovery centers in Indonesian territory, with the exception of overseas after OJK permission and fulfillment of criteria.",
+    "cadence": "Sebelum penempatan atau perubahan lokasi",
+    "focus": [
+      "Maintain confidentiality, integrity, availability, business continuity and supervisory effectiveness.",
+      "Identify internal management systems that can fit into overseas scenarios.",
+      "Submit permits along with format 4.1 documents if necessary."
+    ],
+    "evidence": [
+      "Electronic system and DC/DRC location map.",
+      "Analyze the needs and risks of overseas placement.",
+      "Documents requesting permission or OJK approval."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "LAMP.II",
+      "F4.1",
+      "F4.2"
+    ],
+    "reporting": "Laporan realisasi penempatan disampaikan paling lama 3 bulan setelah implementasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Place electronic systems in Indonesia unless permission is obtained'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Place electronic systems in Indonesia unless permission is obtained'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Place electronic systems in Indonesia unless permission is obtained'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.LOC-02",
+    "chapter": "VI",
+    "pillar": "ThirdParty",
+    "title": "Control IT-based transaction processing by PPJTI",
+    "summary": "IT-based transaction processing is principally carried out in Indonesia; processing by PPJTI abroad requires OJK permission.",
+    "cadence": "Sebelum outsourcing dan selama operasi",
+    "focus": [
+      "Implement risk management over transaction processing.",
+      "Ensure that the Bank remains responsible and administers transaction documents.",
+      "Pay attention to customer protection and personal data protection."
+    ],
+    "evidence": [
+      "Transaction process flow.",
+      "PPJTI risk assessment and due diligence.",
+      "Permission documents and processing realization."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "LAMP.II",
+      "F4.3",
+      "F4.4"
+    ],
+    "reporting": "Pemrosesan luar negeri membutuhkan laporan realisasi paling lama 3 bulan setelah implementasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Control IT-based transaction processing by PPJTI'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Control IT-based transaction processing by PPJTI'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Control IT-based transaction processing by PPJTI'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.DATA-01",
+    "chapter": "VII",
+    "pillar": "DataPrivacy",
+    "title": "Manage data as a Bank asset",
+    "summary": "Chapter VII calls for effective data management for data acquisition, distribution, processing, maintenance, storage and deletion.",
+    "cadence": "Terus menerus",
+    "focus": [
+      "Affirm data ownership and data stewardship.",
+      "Set data quality standards: accuracy, completeness, consistency, integrity, fairness, currency, and uniqueness.",
+      "Involve people, process and technology."
+    ],
+    "evidence": [
+      "Governance policy data.",
+      "Owner and steward register data.",
+      "Data quality dashboard and issue log."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.5"
+    ],
+    "reporting": "Kebutuhan data mendukung arsitektur TI, risk aggregation, dan pelaporan Bank.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Manage data as a Bank asset'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Manage data as Bank assets'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Manage data as a Bank asset'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.DATA-02",
+    "chapter": "VII",
+    "pillar": "DataPrivacy",
+    "title": "Build a secure and interoperable data management system",
+    "summary": "Data management systems include data architecture, data classification and security, integration and interoperability, data lifecycle, data warehouse or business intelligence, and metadata.",
+    "cadence": "Saat desain dan pengelolaan data",
+    "focus": [
+      "Use data classification to determine security.",
+      "Implement encryption, RBAC, key management, authentication, or other methods according to risk.",
+      "Determine the data lifecycle from creation to disposal."
+    ],
+    "evidence": [
+      "Data architecture and data classification standards.",
+      "Metadata management policy.",
+      "Access control and data retention."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.2.5"
+    ],
+    "reporting": "Dokumentasi data mendukung LKTPTI dan evaluasi pengamanan informasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Build a secure and interoperable data management system'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Build a secure, interoperable data management system'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Build a secure and interoperable data management system'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.PDP-01",
+    "chapter": "VII",
+    "pillar": "DataPrivacy",
+    "title": "Apply the principles of personal data protection and explicit consent",
+    "summary": "The processing of personal data must have a lawful processing basis; For customer approval, requests must be explicit, documented, clear, and not use automatic approval.",
+    "cadence": "Sebelum dan selama pemrosesan data pribadi",
+    "focus": [
+      "Inform the purpose, legality, options and right to withdraw consent.",
+      "Don't make irrelevant consent a condition of service.",
+      "Supervise third parties involved in processing personal data."
+    ],
+    "evidence": [
+      "Consent notice and approval audit trail.",
+      "Privacy notice.",
+      "Third-party privacy oversight records."
+    ],
+    "appendices": [
+      "LAMP.I"
+    ],
+    "reporting": "Bukti PDP disiapkan untuk governance, complaint handling, dan pemeriksaan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Implement the principles of personal data protection and explicit consent'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Enforce the principles of personal data protection and explicit consent'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Apply the principle of personal data protection and explicit consent'."
+    }
+  },
+  {
+    "id": "PADK.PDP-02",
+    "chapter": "VII",
+    "pillar": "DataPrivacy",
+    "title": "Conduct impact analysis and organize personal data exchange",
+    "summary": "Banks need to carry out impact assessments when processing is high risk and have policies, procedures, cooperation agreements, classifications and safeguards for the exchange of personal data.",
+    "cadence": "Saat use case data berisiko atau pertukaran data",
+    "focus": [
+      "Assess the risks of new technology, tracking, large-scale monitoring, or sensitive data.",
+      "Set the scope, duration, objectives, rights, obligations and security aspects in the agreement.",
+      "Classify the type of data exchanged."
+    ],
+    "evidence": [
+      "Protection impact assessment data.",
+      "Data sharing agreement.",
+      "Standard data exchange control."
+    ],
+    "appendices": [
+      "LAMP.I"
+    ],
+    "reporting": "Dokumen analisis dampak dan transfer data menjadi bukti mitigasi risiko privasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Perform impact analysis and organize personal data exchange'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Perform impact analysis and manage private data exchange'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Perform impact analysis and regulate exchange of personal data'."
+    }
+  },
+  {
+    "id": "PADK.SVC-01",
+    "chapter": "VIII",
+    "pillar": "Services",
+    "title": "Limit the provision of IT services by the Bank to permitted recipients",
+    "summary": "Banks can provide IT services to other financial services institutions supervised by the OJK or supervised by local authorities abroad in accordance with provisions.",
+    "cadence": "Sebelum menawarkan jasa TI",
+    "focus": [
+      "Make sure the recipient of the service falls into the permitted category.",
+      "Check application restrictions for financial services institutions other than banks.",
+      "Assess the efficiency and risks of providing IT services."
+    ],
+    "evidence": [
+      "Eligibility assessment of service recipients.",
+      "Business case for providing IT services.",
+      "Approval from authorized Bank officials."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F4.5",
+      "F4.6"
+    ],
+    "reporting": "Rencana penyediaan jasa TI memerlukan izin dan realisasi menggunakan Format 4.5 dan 4.6.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Limit the provision of IT services by the Bank to permitted recipients'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Limit the provision of IT services by the Bank to permitted recipients'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Limit provision of IT services by the Bank to permitted recipients'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.SVC-02",
+    "chapter": "VIII",
+    "pillar": "Services",
+    "title": "Manage Bank IT policies, procedures and service agreements",
+    "summary": "The provision of IT services by the Bank must be supported by contract standards, SLAs, data security and confidentiality, risk sharing, changes or termination of agreements, as well as procedures for defining the needs of service recipients.",
+    "cadence": "Sebelum kontrak dan selama layanan",
+    "focus": [
+      "Involve the legal work unit in drafting the agreement.",
+      "Include early termination clauses for relevant conditions.",
+      "Separate data according to application architecture if the Bank provides application services."
+    ],
+    "evidence": [
+      "Policy for providing IT services.",
+      "Service user agreements and SLAs.",
+      "Risk assessment of IT service provision."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F4.5",
+      "F4.6"
+    ],
+    "reporting": "Dokumen kontrak dan post-implementation review disiapkan pada laporan realisasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Administer the Bank's IT policies, procedures and service agreements'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Manage Bank IT policies, procedures and service agreements'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Set Bank IT policies, procedures and service agreements'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.AUD-01",
+    "chapter": "IX",
+    "pillar": "RiskSecurity",
+    "title": "Execute IT internal controls and audit trail",
+    "summary": "IT SPI must be effective in all aspects of IT use, including evidence and documents for audit trail, general controls, application controls, recovery, and reliable information.",
+    "cadence": "Terus menerus",
+    "focus": [
+      "Make sure an audit trail is available and can be tested.",
+      "Control computer systems, applications and related manual procedures.",
+      "Maintain data quality and retention of transaction records."
+    ],
+    "evidence": [
+      "Audit trail configuration.",
+      "General control testing.",
+      "Retention schedule and evidence review."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "F3.3"
+    ],
+    "reporting": "Kelemahan dan tindak lanjut audit TI dilaporkan dalam format hasil audit.",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Execute IT internal controls and audit trail' is monitored in audit reports. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Execute IT internal controls and audit trail'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Execute IT internal controls and audit trail'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.AUD-02",
+    "chapter": "IX",
+    "pillar": "RiskSecurity",
+    "title": "Carry out the IT internal audit function effectively",
+    "summary": "Internal IT audits are carried out independently and thoroughly based on needs, priorities and results of IT risk analysis at least once a year.",
+    "cadence": "Paling sedikit tahunan",
+    "focus": [
+      "Establish IT audit policies, standards, procedures, scope and competencies.",
+      "Follow up on IT internal audit results.",
+      "Use external auditors if necessary to fulfill the IT internal audit function according to regulations."
+    ],
+    "evidence": [
+      "Annual IT audit plan.",
+      "Audit reports and issue tracker.",
+      "Results of an independent review of the IT internal audit function."
+    ],
+    "appendices": [
+      "LAMP.I",
+      "LAMP.II",
+      "F3.3"
+    ],
+    "reporting": "Hasil audit intern TI dan hasil kaji ulang fungsi audit intern TI disampaikan sesuai ketentuan OJK.",
+    "roleTranslations": {
+      "bod": "Mode Board: Pastikan kepatuhan terhadap 'Laksanakan fungsi audit intern TI secara efektif' termonitor dalam laporan audit. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Execute IT internal audit functions effectively'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Execute IT internal audit function effectively'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.REP-01",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Submit RSTI and LRPTI according to the PADK calendar",
+    "summary": "Appendix II sets RSTI at the end of November before the initial RSTI period, while LRPTI at the end of November before the IT development plan year.",
+    "cadence": "Tahunan atau sesuai periode RSTI",
+    "focus": [
+      "Use RSTI as a basis for LRPTI one year into the future.",
+      "Manage LRPTI changes according to PADK limits and requirements.",
+      "For advanced IT-based banking products, pay attention to change deadlines at the end of March, June and September."
+    ],
+    "evidence": [
+      "Final RSTI.",
+      "LRPTI format 3.1.",
+      "Approval or correspondence for LRPTI changes."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F3.1"
+    ],
+    "reporting": "RSTI dan LRPTI disampaikan secara daring melalui sistem pelaporan OJK.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Deliver RSTI and LRPTI as per PADK calendar'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Deliver RSTI and LRPTI according to PADK calendar'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Deliver RSTI and LRPTI as per PADK calendar'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.REP-02",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Compile LKTPTI with format coverage 3.2",
+    "summary": "LKTPTI contains the Bank's IT implementation conditions and changes during one reporting year in format 3.2 and supporting subformats.",
+    "cadence": "Tahunan",
+    "focus": [
+      "Consolidate organization, policy, risk, architecture, applications, TPE, DC/DRC, security, DRP, service providers, costs, cybersecurity, digital maturity, digital partners, and e-system identification.",
+      "Close data gaps across units before the reporting date.",
+      "Use the OJK reporting system channel."
+    ],
+    "evidence": [
+      "Complete LKTPTI.",
+      "Data owner sign-off per subformat.",
+      "Proof of submission January 21."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F3.2",
+      "F3.2.2",
+      "F3.2.4",
+      "F3.2.8",
+      "F3.2.17"
+    ],
+    "reporting": "LKTPTI disampaikan pada setiap 21 Januari tahun berikutnya.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Compiling LKTPTI with 3.2 format coverage'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Compile LKTPTI with 3.2 format coverage'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Prepare LKTPTI with format 3.2 coverage'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.REP-03",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Report the results of IT internal audits and review the audit function",
+    "summary": "Appendix II regulates the results of the review of the IT internal audit function as part of the independent external party's report and the results of the IT internal audit in Format 3.3.",
+    "cadence": "Sesuai siklus audit dan pelaporan OJK",
+    "focus": [
+      "Link IT audit reports to the provisions of the commercial bank's internal audit function.",
+      "Attach audit scope, weaknesses, follow-up, and completion targets.",
+      "Document external cooperation if the audit is carried out by an external party."
+    ],
+    "evidence": [
+      "Format 3.3.",
+      "Independent external party review report.",
+      "Follow-up tracking of audit results."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F3.3"
+    ],
+    "reporting": "Disampaikan kepada OJK sesuai ketentuan laporan audit intern dan hasil kaji ulang.",
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Report IT internal audit results and audit function review' is monitored in the audit report. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Report IT internal audit results and audit function review'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Report IT internal audit results and audit function review'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.INC-01",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Report non-cyber IT incidents in stages",
+    "summary": "For non-cyber IT incidents that are significant or disrupt operations, the Bank provides initial notification and an IT incident report.",
+    "cadence": "Setiap insiden material",
+    "focus": [
+      "Provide initial notification no later than 24 hours after the incident is discovered.",
+      "Submit an IT incident report no later than 5 working days after the incident is discovered.",
+      "Use other authority rules if the deadline is earlier and send it to OJK at the same time."
+    ],
+    "evidence": [
+      "Initial notification Format 3.4.1.",
+      "Incident report Format 3.4.2.",
+      "Incident timeline and proof of delivery to OJK."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F3.4.1",
+      "F3.4.2"
+    ],
+    "reporting": "Insiden siber tetap mengacu pada SEOJK Siber; format PADK ini untuk insiden nonsiber.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Report non-cyber IT incidents in stages'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Report non-cyber IT incidents in stages'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo to 'Report non-cyber IT incidents in stages' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "PADK.PERMIT-01",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Apply for permits for PADK scenarios that require OJK approval",
+    "summary": "Permits are required for the placement of electronic systems in DCs or DRCs outside Indonesia, IT-based transaction processing by PPJTI outside Indonesia, and the Bank's plans to become an IT service provider.",
+    "cadence": "Sebelum implementasi",
+    "focus": [
+      "Use Format 4.1, 4.3, or 4.5 according to the scenario.",
+      "Submit your application via the OJK integrated licensing and registration system or an alternative channel called PADK.",
+      "Note that OJK permission for overseas placement and processing is granted or rejected no later than 3 months after the documents are complete."
+    ],
+    "evidence": [
+      "Application pack permissions.",
+      "Proof of regulatory submission and correspondence.",
+      "Risk, due diligence, contracts, and architecture attachments."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F4.1",
+      "F4.3",
+      "F4.5"
+    ],
+    "reporting": "Izin harus diperoleh sebelum implementasi skenario yang relevan.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Apply for permits for PADK scenarios that require OJK approval'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Apply for permission for PADK scenarios that require OJK approval'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Apply for permission for PADK scenarios that require OJK approval'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "PADK.PERMIT-02",
+    "chapter": "LII",
+    "pillar": "Reporting",
+    "title": "Realize permits and submit realization reports",
+    "summary": "The permit becomes invalid if realization is not carried out within 6 months of the permit being obtained; the realization report is submitted no later than 3 months after implementation.",
+    "cadence": "Setelah implementasi",
+    "focus": [
+      "Use Format 4.2, 4.4, or 4.6 as permitted.",
+      "Attach post-implementation reviews, agreements, current architecture or flow, and relevant test results.",
+      "Monitor the permit expiry window of 6 months."
+    ],
+    "evidence": [
+      "Realization report.",
+      "PIR and diversion minutes if relevant.",
+      "Proof of submission of realization report."
+    ],
+    "appendices": [
+      "LAMP.II",
+      "F4.2",
+      "F4.4",
+      "F4.6"
+    ],
+    "reporting": "Laporan realisasi disampaikan secara daring melalui sistem pelaporan OJK paling lama 3 bulan setelah implementasi.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Realize permits and submit realization reports'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Realize permissions and submit realization reports'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Realize permits and submit realization reports'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

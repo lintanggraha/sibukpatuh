@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "nasional": "Nasional",
+    "internasional": "Internasional",
+    "intelijen": "Intelijen",
+    "analisis": "Analisis",
+    "tentang": "Tentang",
+    "kontak": "Kontak",
+    "kebijakanPrivasi": "Kebijakan Privasi"
+  },
+  "menu": {
+    "pusatIntelijen": "Pusat Intelijen",
+    "crossMapping": "Cross-Mapping",
+    "komparasiGap": "Komparasi & Gap",
+    "checklistTools": "Checklist Tools",
+    "complianceSimulator": "Compliance Simulator"
+  },
+  "footer": {
+    "description": "Referensi edukatif keamanan siber, tata kelola TI, dan kepatuhan digital."
+  },
+  "action": {
+    "traktirKopi": "Traktir Kopi",
+    "modeTerang": "Aktifkan Mode Terang",
+    "modeGelap": "Aktifkan Mode Gelap",
+    "bacaSelengkapnya": "Baca Selengkapnya",
+    "kembali": "Kembali"
+  },
+  "role": {
+    "ubahKacamata": "Ubah Kacamata Divisi",
+    "kacamataMultiDivisi": "Kacamata Multi-Divisi",
+    "semuaBaku": "Semua (Baku)",
+    "descDefault": "Teks standar dari dokumen regulasi",
+    "descBod": "Ringkasan dampak bisnis & finansial",
+    "descSysadmin": "Instruksi teknis & konfigurasi IT",
+    "descLegal": "Risiko kepatuhan & kontrak legal",
+    "roleBod": "Board of Directors (BoD)",
+    "roleSysadmin": "SysAdmin / Tim Teknis",
+    "roleLegal": "Legal / Compliance"
+  }
+}

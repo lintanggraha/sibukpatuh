@@ -1,0 +1,645 @@
+[
+  {
+    "id": "II.01",
+    "chapter": "II",
+    "chapter_title": "Penilaian Risiko Inheren",
+    "pillar": "Assessment",
+    "title": "Conduct an annual cybersecurity risk assessment",
+    "summary": "The Bank assesses inherent risks related to cyber security for the end-of-December position and may provide updates at any time if necessary.",
+    "cadence": "Tahunan pada posisi akhir Desember",
+    "owner": "Risk management, unit siber, dan Direksi",
+    "scoring": "Peringkat 1-5 (Low sampai High)",
+    "appendices": [
+      "I.a",
+      "II.a",
+      "III.a",
+      "V"
+    ],
+    "focus": [
+      "Use late December positions as an official snapshot of the inherent risk profile.",
+      "Update assessments when there are significant changes to the Bank's risk profile or cyber exposure.",
+      "Enter the assessment results into the report on the current condition of the Bank's IT operations."
+    ],
+    "evidence": [
+      "Cybersecurity inherent risk self-assessment working paper.",
+      "Minutes or memos approving assessment results by management.",
+      "Proof of submitting reports to OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Just as insurance companies determine premiums based on risk, banks must also 'rate' their cyber risks every year. The position at the end of December is like the annual family photo - everyone gathered and smiling to be documented as an official benchmark.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Perform an annual cybersecurity inherent risk assessment' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Perform an annual cybersecurity inherent risk assessment'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document to 'Perform an annual cybersecurity inherent risk assessment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "II.02",
+    "chapter": "II",
+    "chapter_title": "Penilaian Risiko Inheren",
+    "pillar": "Assessment",
+    "title": "Assess four key factors of inherent cybersecurity risk",
+    "summary": "The inherent risk assessment at least takes into account technological factors, bank products, organizational characteristics, and track record of cyber incidents.",
+    "cadence": "Digunakan pada setiap siklus penilaian inheren",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Parameter minimum dapat ditambah sesuai kompleksitas Bank",
+    "appendices": [
+      "I.a",
+      "II.a"
+    ],
+    "focus": [
+      "Use the minimum parameters in Appendix I.a as the assessment baseline.",
+      "Add other indicators if the characteristics and complexity of the Bank's business require a more detailed assessment.",
+      "Make sure each factor has a documented justification."
+    ],
+    "evidence": [
+      "Worksheet of technological, product, organizational and incident track record factors.",
+      "Parameter assessment methodology document.",
+      "Reviewer-signed annual cyber risk profile."
+    ],
+    "reporting": "Hasilnya menjadi input utama tingkat risiko inheren keamanan siber.",
+    "analogy": "Evaluating digital bank risks is like a doctor doing a complete check-up - not just checking one organ, but four vital components: technology (body hardware), product (health services), organization (lifestyle), and illness history (past incidents). The results determine the bank's risk 'health condition'.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from the 'Assess four key factors of inherent cybersecurity risk' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Assess the four main inherent risk factors of cyber security'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document to 'Assess the four key factors of inherent risk of cyber security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.01",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Ensure active supervision of the Board of Directors and Board of Commissioners",
+    "summary": "Risk governance related to cyber security must include active supervision, formulation of risk appetite and risk tolerance, as well as cyber risk culture and awareness.",
+    "cadence": "Berjalan terus-menerus dan ditinjau berkala",
+    "owner": "Direksi dan Dewan Komisaris",
+    "scoring": "Kualitas penerapan dinilai dalam penilaian maturitas",
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
+    "focus": [
+      "Explain the active role of administrators in setting the direction of cyber control.",
+      "Document risk appetite and risk tolerance regarding cyber security.",
+      "Build a consistent culture and security awareness across all lines."
+    ],
+    "evidence": [
+      "Minutes of Directors or Commissioners meetings discussing cyber risks.",
+      "Cyber ​​risk appetite and risk tolerance statement.",
+      "Cyber ​​security awareness and training programs."
+    ],
+    "reporting": "Menjadi bagian dari kualitas penerapan manajemen risiko pada penilaian maturitas.",
+    "analogy": "Imagine a tanker carrying millions of dollars in cargo. It is not enough for the Master (Director) to just sit in the wheelhouse - he must actively monitor sea conditions, listen to crew reports, and set speed limits to dare to be rejected. Likewise, cyber security needs an 'active captain' who doesn't just sit around.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Ensure active supervision of the Board of Directors and Board of Commissioners'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Ensure active supervision of the Board of Directors and Board of Commissioners'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Ensure active supervision of the Board of Directors and Board of Commissioners'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.02",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Build a risk management framework related to cybersecurity",
+    "summary": "The cybersecurity risk management framework includes strategy, adequacy of organizational tools, policies, procedures and setting risk limits.",
+    "cadence": "Ditinjau berkala sesuai perubahan organisasi dan TI",
+    "owner": "Manajemen risiko dan unit siber",
+    "scoring": "Kualitas penerapan dinilai menggunakan definisi peringkat Strong sampai Unsatisfactory",
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
+    "focus": [
+      "Align cyber risk management strategies with the Bank's business and IT strategies.",
+      "Ensure the organizational structure supports the effective implementation of cyber controls.",
+      "Set acceptable risk limits or parameters."
+    ],
+    "evidence": [
+      "Cyber ​​risk management strategy.",
+      "Applicable cybersecurity policies and procedures.",
+      "Risk limit documents and escalation of exceedances."
+    ],
+    "reporting": "Divalidasi pada penilaian kualitas penerapan manajemen risiko keamanan siber.",
+    "analogy": "Building a risk management framework is like building a building - it requires a blueprint (strategy), a strong foundation (organization), walls (policies), doors and windows (procedures), and boundary alarms (risk limits). Without just one element, a building is unsafe to inhabit.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Build a cybersecurity-related risk management framework' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Build a risk management framework related to cyber security'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Establish a risk management framework related to cyber security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.03",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risika",
+    "pillar": "Governance",
+    "title": "Strengthen risk management processes, HR, and risk management information systems",
+    "summary": "Banks are required to ensure risk management processes, adequate human resources and risk management information systems support cyber security management.",
+    "cadence": "Berjalan harian dan dievaluasi berkala",
+    "owner": "Risk management, SDM, dan unit siber",
+    "scoring": "Masuk ke penilaian kualitas penerapan manajemen risiko",
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
+    "focus": [
+      "Ensure adequate HR capacity and competency for the cyber risks faced.",
+      "Use a risk management information system for exposure reporting and monitoring.",
+      "Link the cyber risk management process with the Bank's operational risk register."
+    ],
+    "evidence": [
+      "Cyber ​​personnel competency matrix.",
+      "Risk management information system dashboard or report.",
+      "Risk register that includes risks related to cyber security."
+    ],
+    "reporting": "Menjadi dasar kualitas proses pengelolaan risiko siber pada penilaian maturitas.",
+    "analogy": "A football team needs three components to win: game strategy (process), quality players (HR), and analysts who provide data on the sidelines (information system). Without one, the team will have difficulty winning.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Strengthen risk management processes, HR, and risk management information systems' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Strengthen risk management processes, HR and risk management information systems'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Strengthen risk management processes, HR and risk management information systems'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "III.04",
+    "chapter": "III",
+    "chapter_title": "Penerapan Manajemen Risiko",
+    "pillar": "Governance",
+    "title": "Implement an adequate internal control and review system",
+    "summary": "Cybersecurity risk control systems must include effective internal controls and ongoing reviews of discovered weaknesses.",
+    "cadence": "Berkala dan berbasis tindak lanjut",
+    "owner": "Internal control, audit intern, dan unit siber",
+    "scoring": "Dinilai dalam kualitas penerapan manajemen risiko siber",
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
+    "focus": [
+      "Perform testing and review of material controls.",
+      "Document audit findings and follow-up on the results.",
+      "Monitor the resolution of material weaknesses until completion."
+    ],
+    "evidence": [
+      "Cyber ​​control audit or review program.",
+      "Register findings and follow-up on audit results.",
+      "Material weakness repair verification report."
+    ],
+    "reporting": "Hasil kaji ulang memberi masukan untuk peningkatan kualitas pengendalian risiko siber.",
+    "analogy": "Internal audit is like a family doctor who routinely checks the company's health. Not just a diagnosis, but also making sure the patient takes the prescribed medication and repeats it until he recovers. The weaknesses found are not a disgrace, but an opportunity for improvement.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Execute an adequate system of internal control and review'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Execute an adequate internal control and review system'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Execute an adequate internal control and review system'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.01",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Thoroughly identify assets, threats and vulnerabilities",
+    "summary": "The Bank maintains cyber resilience by inventorying and assessing IT assets, identifying vulnerabilities, monitoring cyber threats and regular cyber security testing.",
+    "cadence": "Berjalan terus-menerus dengan review berkala",
+    "owner": "Unit siber dan pengelola aset TI",
+    "scoring": "Menjadi bagian dari kualitas penerapan proses ketahanan siber",
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
+    "focus": [
+      "Inventory of hardware, software, networks and infrastructure along with configuration.",
+      "Monitor the latest cyber threat developments to update the vulnerability list.",
+      "Use identification results as the basis for all protection controls."
+    ],
+    "evidence": [
+      "CMDB or IT asset inventory.",
+      "Vulnerability identification or threat monitoring reports.",
+      "Regular cybersecurity testing schedule."
+    ],
+    "reporting": "Menjadi salah satu proses utama yang dinilai pada maturitas keamanan siber.",
+    "analogy": "Before going to war, a good general must map the territory (assets), identify the enemy (threat), and look for weaknesses in his own armor (vulnerabilities). Without this intelligence, troops will be blind on the digital battlefield.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Thorough identification of assets, threats and vulnerabilities' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Comprehensive identification of assets, threats and vulnerabilities'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Thorough identification of assets, threats and vulnerabilities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.02",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Protect assets with comprehensive security controls",
+    "summary": "The Bank implements, maintains, improves and updates security controls over IT assets and manages data and information security.",
+    "cadence": "Berkala dan mengikuti hasil identifikasi terbaru",
+    "owner": "Unit siber dan pengelola TI",
+    "scoring": "Masuk ke penilaian kualitas penerapan proses ketahanan siber",
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
+    "focus": [
+      "Use relevant security controls against identified assets, threats and vulnerabilities.",
+      "Perform maintenance and update security controls on a scheduled basis.",
+      "Ensure data and information are managed to maintain confidentiality, integrity and availability."
+    ],
+    "evidence": [
+      "IT asset security control baseline.",
+      "Hardening, patching, and maintenance control records.",
+      "Data and information security management documentation."
+    ],
+    "reporting": "Kualitas pelindungan aset diperiksa pada penilaian proses ketahanan siber.",
+    "analogy": "Protection is like building a fortress with various layers of defense - fences, gates, guards, sensors and alarms. But a fortress without maintenance will collapse. Patching and hardening are 'painting' and 'repairing' the fort so that it remains sturdy.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Protect assets with comprehensive security controls'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Protect assets with comprehensive security control'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Protect assets with comprehensive security controls'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.03",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Timely detection of cyber incidents",
+    "summary": "Banks need to have a cyber incident detection process so that incidents can be recognized, analyzed and escalated according to established communication channels.",
+    "cadence": "Berjalan terus-menerus",
+    "owner": "SOC, unit siber, dan fungsi operasional terkait",
+    "scoring": "Dinilai sebagai proses deteksi pada maturitas keamanan siber",
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
+    "focus": [
+      "Build monitoring and alerting for critical incidents and abuse.",
+      "Ensure the incident analysis process leads to rapid escalation.",
+      "Connect detection processes with incident response and reporting teams."
+    ],
+    "evidence": [
+      "Security monitoring dashboard or SIEM.",
+      "Incident analysis and escalation procedures.",
+      "Log and ticket handling of security alerts."
+    ],
+    "reporting": "Deteksi yang memadai menjadi prasyarat notifikasi awal dan respons yang efektif.",
+    "analogy": "Detection is like a car alarm which is sensitive to vibrations and suspicious movements. An alarm that is too sensitive will cause a false alarm, too slow will cause the thief to run away before being caught. The right balance between early warning and accuracy is key.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Timely detection of cyber incidents'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Timely detection of cyber incidents'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Timely detection of cyber incidents' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "IV.04",
+    "chapter": "IV",
+    "chapter_title": "Proses Ketahanan Siber",
+    "pillar": "Resilience",
+    "title": "Prepare cyber incident response and recovery",
+    "summary": "The Bank determines response and recovery plans, the role of the incident response team, procedures for limiting impacts, escalation, reporting, and post-incident lessons learned.",
+    "cadence": "Diaktifkan saat insiden dan diuji secara berkala",
+    "owner": "Tim tanggap insiden siber dan manajemen krisis",
+    "scoring": "Dinilai pada proses ketahanan siber dan pengujian skenario",
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
+    "focus": [
+      "Define the roles and responsibilities of the cyber incident response team.",
+      "Ensure recovery procedures prevent impact spread with appropriate recovery times.",
+      "Perform post-incident analysis for continuous improvement."
+    ],
+    "evidence": [
+      "Cyber ​​incident response and recovery plan.",
+      "Cyber ​​incident response team role matrix.",
+      "Post-incident lessons learned report."
+    ],
+    "reporting": "Mencakup eskalasi dan pelaporan insiden siber sesuai jalur komunikasi yang ditetapkan.",
+    "analogy": "Have you ever experienced your cellphone falling into water? The first thing to focus on is turning off your cellphone, drying it, don't try to turn it on carelessly. Only when it's dry try turning it on. The incident response team is like an SOP for saving a cellphone: stop the bleeding (containment), stabilize (mitigation), recovery (recovery), and analyze why it fell (lesson learned).",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Prepare cyber incident response and recovery'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Prepare cyber incident response and recovery'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo to 'Prepare cyber incident response and recovery' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "V.01",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Conduct a cybersecurity maturity level assessment annually",
+    "summary": "The cyber security maturity assessment measures the level of maturity that the Bank has achieved and is the basis for improving areas that are still weak.",
+    "cadence": "Tahunan pada posisi akhir Desember",
+    "owner": "Unit siber, risk management, dan manajemen",
+    "scoring": "Tingkat 1-5",
+    "appendices": [
+      "I.b",
+      "I.c",
+      "II.b",
+      "II.c",
+      "III.b",
+      "III.c",
+      "III.d",
+      "V"
+    ],
+    "focus": [
+      "Use the assessment results to see the current state of the Bank's cyber security.",
+      "Identify areas of weakness that require measurable improvement.",
+      "Present the results as part of a report on the current state of IT operations."
+    ],
+    "evidence": [
+      "Cybersecurity maturity assessment working paper.",
+      "Summary of gaps and improvement plans.",
+      "Proof of reporting assessment results to OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Maturity assessment is like a cyber security report card. Not just numbers, but a mirror that shows which areas need additional tutoring. Level 5 does not mean perfect - in fact it must continue to be maintained and developed so that it does not decline.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Perform an annual cybersecurity maturity level assessment'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Perform cybersecurity maturity level assessment every year'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document to 'Perform an annual cybersecurity maturity level assessment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.02",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Assess the quality of implementing risk management related to cyber security",
+    "summary": "Maturitas assesses the quality of the implementation of cyber risk management in four aspects: governance, framework, processes along with human resources and risk management information systems, and control.",
+    "cadence": "Setiap siklus penilaian maturitas",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
+    "appendices": [
+      "I.b",
+      "II.b",
+      "III.b"
+    ],
+    "focus": [
+      "Use the controls in Appendix I.b as a basis for implementation quality analysis.",
+      "Document the assessment of each aspect consistently.",
+      "Maintain traceability between evidence, scores, and conclusions."
+    ],
+    "evidence": [
+      "Worksheet for assessing the quality of implementing cyber risk management.",
+      "List of controls tested against Appendix I.b.",
+      "Minutes of review of assessment results."
+    ],
+    "reporting": "Menjadi dimensi pertama dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "Quality assessment is like inspecting a vehicle before it is used to pick up and pick up passengers. Not just checking whether the engine is running or not, but brake components, tires, lights, seat belts, etc. Each component has a standard, and even one non-compliance can invalidate the roadworthy status.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Assess the quality of implementing risk management related to cyber security' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Quality value of risk management implementation related to cyber security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Assess the quality of implementation of cyber security related risk management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.03",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Assess the quality of implementing cyber resilience processes",
+    "summary": "Maturitas also assesses the quality of implementation of four cyber resilience processes: identification, protection, detection, and response and recovery.",
+    "cadence": "Setiap siklus penilaian maturitas",
+    "owner": "Unit siber dan fungsi operasional keamanan",
+    "scoring": "Strong, Satisfactory, Fair, Marginal, Unsatisfactory",
+    "appendices": [
+      "I.c",
+      "II.c",
+      "III.c"
+    ],
+    "focus": [
+      "Use the controls in Appendix I.c as a process assessment baseline.",
+      "The implementation quality scores for the four resilience processes are consistent.",
+      "Link assessment results to priority improvement areas."
+    ],
+    "evidence": [
+      "Cyber ​​resilience process control checklist.",
+      "Walkthrough results or process design tests.",
+      "Action plans to improve weak processes."
+    ],
+    "reporting": "Menjadi dimensi kedua dalam penilaian tingkat maturitas keamanan siber.",
+    "analogy": "The four resilience processes are like the sequence of services in an emergency hospital: triage (identification), treatment (protection), monitoring the patient's condition (detection), and operation or recovery (response). If a process is weak, patient safety is at risk.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Assess the quality of implementation of cyber resilience processes'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Quality value of cyber resilience process implementation'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Assess the quality of implementation of cyber resilience processes'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.04",
+    "chapter": "V",
+    "chapter_title": "Penilaian Tingkat Maturitas",
+    "pillar": "Assessment",
+    "title": "Use established quality scales and maturity levels",
+    "summary": "The Bank determines the quality level with a rating of Strong to Unsatisfactory and sets the cyber security maturity level at Level 1 to Level 5.",
+    "cadence": "Pada setiap penetapan hasil maturitas",
+    "owner": "Unit siber dan reviewer penilaian",
+    "scoring": "Strong sampai Unsatisfactory dan Level 1 sampai Level 5",
+    "appendices": [
+      "III.b",
+      "III.c",
+      "III.d"
+    ],
+    "focus": [
+      "Use the same ranking definitions to maintain consistency between periods.",
+      "Separate assessment of implementation quality and final maturity level.",
+      "Ensure level decisions are supported by sufficient evidence."
+    ],
+    "evidence": [
+      "Rating definition document used by assessors.",
+      "Summary of scoring justification.",
+      "Map of maturity levels per assessment area."
+    ],
+    "reporting": "Level maturitas dipertimbangkan sebagai indikator tambahan kualitas penerapan manajemen risiko TI.",
+    "analogy": "The grading scale is like the belt system in karate - from white to black. Each level has certain standards that must be met. Consistent grading ensures that all parties understand what level the bank is at and what needs to be done to move up.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Use established quality scales and maturity levels'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Use the specified quality scale and maturity level'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Use established quality scales and maturity levels'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VI.01",
+    "chapter": "VI",
+    "chapter_title": "Tingkat Risiko Keamanan Siber",
+    "pillar": "Reporting",
+    "title": "Determine the cybersecurity risk level of inherent risk and maturity",
+    "summary": "The level of cybersecurity risk is determined based on a combination of an assessment of the inherent risks related to cybersecurity and the level of cybersecurity maturity.",
+    "cadence": "Tahunan setelah penilaian inheren dan maturitas selesai",
+    "owner": "Risk management dan unit siber",
+    "scoring": "Peringkat 1-5 (Low sampai High)",
+    "appendices": [
+      "V"
+    ],
+    "focus": [
+      "Combine the inherent risk and maturity results to obtain the final risk level.",
+      "Use the same rating scale from Low to High.",
+      "Ensure that the final results are submitted to the OJK as part of the report on the current state of IT operations."
+    ],
+    "evidence": [
+      "Cybersecurity risk level determination matrix.",
+      "Document management's decision on the final risk level.",
+      "Proof of reporting risk level to OJK."
+    ],
+    "reporting": "Disampaikan paling lama 15 hari kerja setelah akhir tahun pelaporan.",
+    "analogy": "Determining the final risk is like a doctor determining a patient's health category: we have the basic physical condition (inherent) and the hospital's ability to handle it (maturity). Patients with serious conditions but treated by sophisticated hospitals may be at moderate risk. On the other hand, the condition is mild but the hospital cannot afford high risk. The combination of the two is decisive.",
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Set cybersecurity risk levels from inherent risk and maturity' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Set the cybersecurity risk level of inherent risk and maturity'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Establish cybersecurity risk levels of inherent risk and maturity'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VII.01",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Conduct regular cybersecurity testing",
+    "summary": "The Bank carries out cyber security testing of networks, systems and data to maximize efforts to maintain cyber security.",
+    "cadence": "Berkala berdasarkan evaluasi internal",
+    "owner": "Unit siber, teknis keamanan, dan fungsi audit atau review",
+    "scoring": "Frekuensi menyesuaikan kritikalitas sistem dan perubahan eksposur",
+    "appendices": [],
+    "focus": [
+      "Determine the test frequency based on the criticality level of the system.",
+      "Watch for changes to IT architecture or electronic systems that increase risk exposure.",
+      "Document test results and maintain confidentiality."
+    ],
+    "evidence": [
+      "Annual cybersecurity testing program.",
+      "Test schedule per system or service.",
+      "Test results reports and access control."
+    ],
+    "reporting": "Hasil pengujian menjadi input perbaikan kontrol dan proses ketahanan siber.",
+    "analogy": "Safety testing is like routine car servicing - the brakes, tires and engine are checked periodically. The more often it is used (critical system), the more often it is serviced. A car that has never been serviced may run smoothly today, but the risk of a breakdown on the road increases drastically.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Perform regular cybersecurity testing'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Perform regular cyber security testing'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document to 'Perform periodic cybersecurity testing'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VII.02",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Use vulnerability analysis and penetration tests",
+    "summary": "Testing based on vulnerability analysis looks at the system's weak points and continues with penetration tests on the software and hardware used by the Bank.",
+    "cadence": "Berkala sesuai evaluasi internal dan perubahan eksposur",
+    "owner": "Unit siber, red team, atau pihak penguji yang ditunjuk",
+    "scoring": "Wajib mendapat perhatian khusus untuk layanan digital atau daring",
+    "appendices": [],
+    "focus": [
+      "Starting from identifying vulnerabilities before carrying out a penetration test.",
+      "Test software, hardware, customer service, and connections to third parties.",
+      "Make sure digital banking services or online services are tested regularly."
+    ],
+    "evidence": [
+      "Vulnerability assessment report.",
+      "Penetration test report along with severity of findings.",
+      "Test results remediation plan."
+    ],
+    "reporting": "Temuan pengujian perlu diterjemahkan menjadi tindak lanjut dan verifikasi perbaikan.",
+    "analogy": "VA+PT is like a complete health test: first check blood pressure, cholesterol, blood sugar (vulnerability scanning), then the doctor tries to enter without permission in various ways to prove there is a gap (penetration test). The result is not for punishment, but for appropriate treatment.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Use vulnerability analysis and penetration testing'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Use vulnerability analysis and penetration test'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Use vulnerability analysis and penetration testing'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VII.03",
+    "chapter": "VII",
+    "chapter_title": "Pengujian Keamanan Siber",
+    "pillar": "Testing",
+    "title": "Conduct scenario-based exercises for incident response",
+    "summary": "Scenario-based testing validates the cyber incident response and recovery process, including the Bank's communications plan.",
+    "cadence": "Berkala dan melibatkan fungsi lintas organisasi",
+    "owner": "Tim tanggap insiden, manajemen krisis, komunikasi korporat, dan fungsi bisnis",
+    "scoring": "Dapat berupa tabletop, cyber range, social engineering, atau adversarial attack simulation",
+    "appendices": [],
+    "focus": [
+      "Involve relevant executive officers, business functions, technical teams and service providers.",
+      "Use exercises to test decisions, communication, and cross-functional coordination.",
+      "Document lessons learned to strengthen incident response."
+    ],
+    "evidence": [
+      "Exercise scenario and list of participants.",
+      "After action report or lesson learned.",
+      "Action plan resulting from exercise evaluation."
+    ],
+    "reporting": "Exercise membantu memvalidasi kesiapan tanggap insiden siber Bank.",
+    "analogy": "Fire drills in office buildings - everyone knows the alarms, knows the emergency exits, knows the assembly points. But this practice is important so that when there is a real fire, there is no panic. The evacuation went smoothly because it had been sharpened many times. The incident response exercise does the same thing, but for a cyber scenario.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Perform scenario-based exercises for incident response'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Perform scenario-based exercises for incident response'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo to 'Perform a scenario-based exercise for incident response' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "VIII.01",
+    "chapter": "VIII",
+    "chapter_title": "Unit atau Fungsi Keamanan Siber",
+    "pillar": "Organization",
+    "title": "Form a unit or function that addresses cyber resilience and security",
+    "summary": "The bank established a unit or function that coordinates cyber resilience processes, self-assessment, risk level determination and cyber security testing.",
+    "cadence": "Struktural dan berjalan terus-menerus",
+    "owner": "Direksi dan manajemen organisasi",
+    "scoring": "Kecukupan peran organisasi memengaruhi kualitas penerapan",
+    "appendices": [],
+    "focus": [
+      "Affirm the mandate of the cyber unit or function in the Bank's organizational structure.",
+      "Provide a scope of work that includes assessment, resilience, risk rating, and testing.",
+      "Ensure units have the capacity to coordinate across functions."
+    ],
+    "evidence": [
+      "Organizational structure and job description of the cyber function.",
+      "Decree on the establishment of a cyber security unit or function.",
+      "Cyber ​​unit annual work plan."
+    ],
+    "reporting": "Unit ini menjadi penghubung utama untuk konsolidasi penilaian dan pelaporan siber.",
+    "analogy": "A bank without a cyber unit is like a house without a security guard. That doesn't mean you can't leave the house, but the risk is much higher. A professional security guard who knows his responsibilities, has a clear work schedule, and can coordinate with the environment - that is the ideal cyber function.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Establish a unit or function that addresses cyber resilience and security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Form units or functions that address resilience and cyber security'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Establish a unit or function that addresses cyber resilience and security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VIII.02",
+    "chapter": "VIII",
+    "chapter_title": "Unit atau Fungsi Keamanan Siber",
+    "pillar": "Organization",
+    "title": "Maintain the independence of cyber functions and coordinate incident response teams",
+    "summary": "The cybersecurity function must be independent from the IT management function and coordinate a cyber incident response team with adequate capacity, training and access to information.",
+    "cadence": "Berjalan terus-menerus dan diperkuat lewat latihan rutin",
+    "owner": "Unit siber, manajemen, dan tim tanggap insiden",
+    "scoring": "Kesiapan organisasi menjadi fondasi respons insiden yang efektif",
+    "appendices": [],
+    "focus": [
+      "Separate cyber functions from IT management activities such as IT planning, development, operations and monitoring.",
+      "Ensure the incident response team has capacity, regular training and effective communication channels.",
+      "Build rapid collaboration with legal functions, HR, external communications, business, and third-party providers."
+    ],
+    "evidence": [
+      "RACI or cyber function independence matrix from IT.",
+      "Cyber ​​incident response team documents and routine training agenda.",
+      "Cross-functional and third-party escalation contact lists."
+    ],
+    "reporting": "Kesiapan organisasi mempercepat eskalasi, pelaporan, dan pemulihan saat insiden terjadi.",
+    "analogy": "The independence of cyber functions is like the separation of the functions of referee and coach in sports. If the coach is also a referee, there will be a conflict of interest. The security function must be able to 'blow the whistle' without fear of being fired or transferred. And the incident response team is like a backup medical team - it must be ready to appear at any time with complete equipment.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Maintain independence of cyber functions and coordinate incident response teams'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Maintain independence of cyber functions and coordinate incident response teams'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo to 'Maintain the independence of the cyber function and coordinate the incident response team' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  }
+]

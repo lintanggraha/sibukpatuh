@@ -1,0 +1,195 @@
+[
+  {
+    "id": "REF-01",
+    "type": "Pelaporan Insiden",
+    "article": "Pasal 40",
+    "title": "Early notification of cyber incidents",
+    "summary": "Initial notification must be submitted to Bank Indonesia no later than 1 hour after the cyber incident is known to the organizer.",
+    "timeline": "1 jam sejak insiden diketahui",
+    "owner": "Tim tanggap insiden siber",
+    "deliverables": [
+      "Notifikasi awal insiden siber kepada Bank Indonesia.",
+      "Status awal insiden dan tingkat dampak sementara."
+    ],
+    "linked_requirements": [
+      "PBI.HDL-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Early cyber incident notification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Early cyber incident notification'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Initial cyber incident notification' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "REF-02",
+    "type": "Pelaporan Insiden",
+    "article": "Pasal 40",
+    "title": "Cyber ​​incident report",
+    "summary": "Cyber ​​incident reports must be submitted to Bank Indonesia no later than 3 calendar days after the incident occurs.",
+    "timeline": "3 hari kalender setelah insiden terjadi",
+    "owner": "Tim tanggap insiden siber",
+    "deliverables": [
+      "Laporan insiden siber kepada Bank Indonesia.",
+      "Kronologi, dampak, tindakan mitigasi, dan hasil pendalaman awal."
+    ],
+    "linked_requirements": [
+      "PBI.HDL-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Cyber ​​incident reports'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Cyber ​​incident reports'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Cyber ​​incident report' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "REF-03",
+    "type": "Pelaporan Berkala",
+    "article": "Pasal 54",
+    "title": "Annual reporting of KKS maturity level",
+    "summary": "Annual reporting must contain the KKS maturity level as part of submitting data and information on KKS implementation to Bank Indonesia.",
+    "timeline": "Tahunan",
+    "owner": "Fungsi KKS atau kepatuhan regulasi",
+    "deliverables": [
+      "Laporan tingkat kematangan KKS.",
+      "Dokumen pendukung asesmen maturitas."
+    ],
+    "linked_requirements": [
+      "PBI.GOV-05",
+      "PBI.OVS-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Annual reporting of PSC maturity levels'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Annual reporting of KKS maturity level'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Annual reporting of PSC maturity levels'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "REF-04",
+    "type": "Pelaporan Berkala",
+    "article": "Pasal 54",
+    "title": "Reporting the results of identifying vital information infrastructure",
+    "summary": "Annual reporting also includes the results of identifying vital information infrastructure that has a broad impact on financial system stability.",
+    "timeline": "Tahunan",
+    "owner": "Fungsi KKS, TI, dan risk management",
+    "deliverables": [
+      "Daftar infrastruktur informasi vital.",
+      "Dokumen business impact analysis dan prioritas pengendalian."
+    ],
+    "linked_requirements": [
+      "PBI.PRV-03",
+      "PBI.OVS-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Reporting of vital information infrastructure identification results'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Reporting of vital information infrastructure identification results'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Reporting of vital information infrastructure identification results'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "REF-05",
+    "type": "Pengawasan",
+    "article": "Pasal 49-52",
+    "title": "Indirect supervision and direct supervision",
+    "summary": "Bank Indonesia carries out indirect supervision through reports/data/information and direct supervision through face-to-face meetings or other mechanisms.",
+    "timeline": "Sesuai kebutuhan pengawasan",
+    "owner": "Seluruh pemilik kontrol terkait KKS",
+    "deliverables": [
+      "Dokumen, data, dan bukti implementasi KKS yang siap ditelusuri.",
+      "Tindak lanjut atas hasil pengawasan regulator."
+    ],
+    "linked_requirements": [
+      "PBI.OVS-01",
+      "PBI.OVS-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Indirect supervision and direct supervision'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical control (system configuration/patching) according to server hardening rules to realize 'Indirect supervision and direct supervision'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Indirect supervision and direct supervision'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "REF-06",
+    "type": "Pengawasan",
+    "article": "Pasal 55",
+    "title": "Consequences of non-compliance reporting",
+    "summary": "Non-compliance with reporting obligations may result in administrative sanctions in the form of a warning, obligation to pay, termination of activities, and even revocation of permits or approvals.",
+    "timeline": "Setelah pelanggaran kewajiban laporan",
+    "owner": "Manajemen dan fungsi kepatuhan regulasi",
+    "deliverables": [
+      "Kontrol internal untuk memastikan pelaporan tepat waktu.",
+      "Pemantauan kepatuhan terhadap tenggat laporan regulator."
+    ],
+    "linked_requirements": [
+      "PBI.OVS-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Consequences of reporting non-compliance'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Reporting non-compliance consequences'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Consequences of reporting non-compliance'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "REF-07",
+    "type": "Kolaborasi",
+    "article": "Pasal 57-58",
+    "title": "Exchange of vulnerability, threat and incident information",
+    "summary": "Organizers exchange information regarding the results of identifying cyber vulnerabilities, cyber threats, cyber attacks and cyber incidents that could disrupt the stability of the financial system.",
+    "timeline": "Sesuai kebutuhan kolaborasi",
+    "owner": "Fungsi keamanan siber dan risk management",
+    "deliverables": [
+      "Informasi sumber dan pola ancaman atau serangan siber.",
+      "Pembelajaran penanganan insiden yang dapat dibagikan."
+    ],
+    "linked_requirements": [
+      "PBI.COL-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Vulnerability, threat and incident information exchange' via executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Vulnerability, threat and incident information exchange'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Exchange of vulnerability, threat and incident information' within the time limit according to regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "REF-08",
+    "type": "Kolaborasi",
+    "article": "Pasal 59-60",
+    "title": "Coordination of incident prevention and handling readiness",
+    "summary": "Bank Indonesia can collaborate and coordinate with authorities, institutions and organizers to prevent cyber incidents and ensure readiness to handle them.",
+    "timeline": "Sesuai skenario insiden atau exercise",
+    "owner": "Manajemen KKS dan tim tanggap insiden",
+    "deliverables": [
+      "Partisipasi dalam koordinasi atau simulasi lintas otoritas.",
+      "Mekanisme eskalasi eksternal untuk insiden berdampak luas."
+    ],
+    "linked_requirements": [
+      "PBI.COL-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Coordination of incident prevention and response readiness'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Coordination of incident prevention and response readiness'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Coordination of incident prevention and handling readiness' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "REF-09",
+    "type": "Penerapan",
+    "article": "Pasal 61-62",
+    "title": "Technical procedures through SRO and implementation based on classification",
+    "summary": "The SRO can develop technical and specific KKS procedures with approval from Bank Indonesia, while the implementation of the KKS continues to follow the organizer's classification.",
+    "timeline": "Sesuai kebutuhan teknis dan klasifikasi entitas",
+    "owner": "Manajemen KKS dan fungsi kepatuhan",
+    "deliverables": [
+      "Rujukan prosedur teknis yang berlaku.",
+      "Pemetaan kontrol sesuai klasifikasi penyelenggara."
+    ],
+    "linked_requirements": [
+      "PBI.COL-02",
+      "PBI.IMP-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Technical procedures through SROs and implementation by classification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Technical procedures via SRO and implementation based on classification'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Technical procedures through SRO and implementation by classification'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

@@ -1,0 +1,770 @@
+[
+  {
+    "id": "LAMP.I",
+    "title": "Guidelines for the Implementation of Information Technology by Commercial Banks",
+    "type": "Lampiran PADK",
+    "scope": "Substance of PADK guidelines",
+    "summary": "Appendix I contains guidelines for Bank IT implementation from introduction to internal IT control and audit.",
+    "contains": [
+      "Chapter I Introduction",
+      "Chapter II Bank IT Governance",
+      "Chapter III Bank IT Architecture",
+      "Chapter IV IT Risk Management",
+      "Chapter V Use of PPJTI",
+      "Chapter VI Electronic System Placement and Transaction Processing",
+      "Chapter VII Data Management and Personal Data Protection",
+      "Chapter VIII Provision of IT Services by Banks",
+      "Chapter IX IT Internal Control and Audit"
+    ],
+    "used_by": [
+      "PADK.POKOK-01",
+      "PADK.POKOK-02",
+      "PADK.POKOK-04",
+      "PADK.INTRO-01",
+      "PADK.GOV-01",
+      "PADK.GOV-02",
+      "PADK.GOV-03",
+      "PADK.GOV-04",
+      "PADK.ARC-01",
+      "PADK.ARC-02",
+      "PADK.RSK-01",
+      "PADK.RSK-02",
+      "PADK.RSK-03",
+      "PADK.PPJTI-01",
+      "PADK.PPJTI-02",
+      "PADK.PPJTI-03",
+      "PADK.LOC-01",
+      "PADK.LOC-02",
+      "PADK.DATA-01",
+      "PADK.DATA-02",
+      "PADK.PDP-01",
+      "PADK.PDP-02",
+      "PADK.SVC-01",
+      "PADK.SVC-02",
+      "PADK.AUD-01",
+      "PADK.AUD-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Guidelines for the Implementation of Information Technology by Commercial Banks'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts related to 'Guidelines for the Implementation of Information Technology by Commercial Banks'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Guidelines for the Implementation of Information Technology by Commercial Banks'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "LAMP.II",
+    "title": "Procedures for Submitting Reports and Permit Requests",
+    "type": "Lampiran PADK",
+    "scope": "Reporting, incidents, permits and realization",
+    "summary": "Appendix II determines the channels and deadlines for RSTI, LRPTI, LKTPTI, IT audits, non-cyber IT incidents, licensing and realization reports.",
+    "contains": [
+      "RSTI end of November before the initial period",
+      "LRPTI late November and certain changes",
+      "LKTPTI every January 21 of the following year",
+      "24-hour initial non-cyber incident notification and 5 business day incident reporting",
+      "Permit for system placement, foreign transaction processing, and provision of IT services",
+      "Realization of permits and reports no later than 3 months after implementation"
+    ],
+    "used_by": [
+      "PADK.POKOK-01",
+      "PADK.POKOK-03",
+      "PADK.ARC-02",
+      "PADK.AUD-02",
+      "PADK.REP-01",
+      "PADK.REP-02",
+      "PADK.REP-03",
+      "PADK.INC-01",
+      "PADK.PERMIT-01",
+      "PADK.PERMIT-02",
+      "PADK.LOC-01",
+      "PADK.LOC-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Procedures for Submitting Reports and Permit Requests'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Procedures for Submitting Reports and Permit Requests'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Procedures for Submitting Reports and Permit Requests'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "LAMP.III",
+    "title": "Report and Notification Format",
+    "type": "Lampiran PADK",
+    "scope": "Regulatory report format",
+    "summary": "Appendix III contains Formats 3.1, 3.2 and their subformats, Format 3.3, as well as Formats 3.4.1 and 3.4.2.",
+    "contains": [
+      "IT Development Plan Report",
+      "Report on the Current Condition of IT Implementation",
+      "IT Internal Audit Results Report",
+      "Early Notification of non-cyber IT Incidents",
+      "Non-cyber IT Incident Report"
+    ],
+    "used_by": [
+      "PADK.POKOK-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Report and Notification Formats'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Report and Notification Format'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Report and Notification Format' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "LAMP.IV",
+    "title": "Format for Permit Application and Realization Report",
+    "type": "Lampiran PADK",
+    "scope": "Permission and realization",
+    "summary": "Attachment IV contains the format for permit requests and realization reports for placing electronic systems abroad, processing foreign transactions, and providing IT services by the Bank.",
+    "contains": [
+      "Formats 4.1 to 4.6",
+      "Due diligence and risk analysis documents",
+      "Agreements, architecture, post-implementation review, and related test results"
+    ],
+    "used_by": [
+      "PADK.POKOK-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Permit Application Format and Realization Report'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Permit Request and Realization Report Format'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format of Application for Permit and Realization Report'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.1",
+    "title": "Format 3.1 Information Technology Development Plan Report",
+    "type": "Format Laporan",
+    "scope": "LRPTI",
+    "summary": "Format of a one-year IT development plan that outlines the Bank's RSTI.",
+    "contains": [
+      "Whistleblower information",
+      "IT development plan",
+      "Time plan and supporting information"
+    ],
+    "used_by": [
+      "PADK.REP-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.1 Information Technology Development Plan Report'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.1 Information Technology Development Plan Report'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.1 Information Technology Development Plan Report'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2",
+    "title": "Format 3.2 Report on Current Conditions of IT Implementation",
+    "type": "Format Laporan",
+    "scope": "LKTPTI",
+    "summary": "Main report on the condition of the Bank's IT operations during the reporting year.",
+    "contains": [
+      "List of LKTPTI documents and information",
+      "Subformats 3.2.1 through 3.2.17",
+      "IT conditions and changes during the reporting year"
+    ],
+    "used_by": [
+      "PADK.POKOK-03",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2 Report on Current Conditions of IT Implementation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2 Report on Current Conditions of IT Implementation'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2 Report on Current Conditions of IT Implementation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.1",
+    "title": "Format 3.2.1 Reporting Information",
+    "type": "Format LKTPTI",
+    "scope": "Report identity",
+    "summary": "Bank identity format, contact person, reporting unit, and reporting date.",
+    "contains": [
+      "Bank Name",
+      "Address and telephone",
+      "Contact Person",
+      "Reporting unit",
+      "Reporting date"
+    ],
+    "used_by": [
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.1 Whistleblower Information'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.1 Reporting Information'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.1 Whistleblower Information'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.2",
+    "title": "Format 3.2.2 Organization and Management",
+    "type": "Format LKTPTI",
+    "scope": "IT Governance",
+    "summary": "Organizational format and management of Bank IT operations.",
+    "contains": [
+      "Organizational structure",
+      "IT related work units",
+      "Organizational governance information"
+    ],
+    "used_by": [
+      "PADK.GOV-01",
+      "PADK.GOV-02",
+      "PADK.GOV-03",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.2 Organization and Management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.2 Organization and Management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.2 Organization and Management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.3",
+    "title": "Format 3.2.3 IT Policies, Standards and Procedures",
+    "type": "Format LKTPTI",
+    "scope": "Governance documents",
+    "summary": "List of IT policies, standards and procedures owned by the Bank.",
+    "contains": [
+      "Document name",
+      "Document number",
+      "Effective date",
+      "Information"
+    ],
+    "used_by": [
+      "PADK.GOV-01",
+      "PADK.GOV-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.3 IT Policies, Standards and Procedures'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.3 IT Policies, Standards and Procedures'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.3 IT Policies, Standards and Procedures'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.4",
+    "title": "Format 3.2.4 Risk Management",
+    "type": "Format LKTPTI",
+    "scope": "IT Risk",
+    "summary": "Information format for implementing risk management in IT operations.",
+    "contains": [
+      "IT risk profile",
+      "Identification and control process",
+      "Risk monitoring information"
+    ],
+    "used_by": [
+      "PADK.RSK-01",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Monitor risk exposure from 'Format 3.2.4 Risk Management' via the executive dashboard. Make sure it is aligned with the company's risk appetite.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.4 Risk Management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.4 Risk Management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.5",
+    "title": "Format 3.2.5 IT Architecture",
+    "type": "Format LKTPTI",
+    "scope": "IT and data architecture",
+    "summary": "Bank IT architecture format that supports application, data and technology mapping.",
+    "contains": [
+      "IT architecture information",
+      "Architectural drawing or description",
+      "Data management context"
+    ],
+    "used_by": [
+      "PADK.GOV-04",
+      "PADK.ARC-01",
+      "PADK.DATA-01",
+      "PADK.DATA-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'IT Architecture 3.2.5 Format'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'IT Architecture 3.2.5 Format'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'IT Architecture 3.2.5 Format'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.6",
+    "title": "Format 3.2.6 Application List",
+    "type": "Format LKTPTI",
+    "scope": "Bank Application",
+    "summary": "List of applications used by the Bank in IT operations.",
+    "contains": [
+      "Application name",
+      "Application functions",
+      "Relevant information"
+    ],
+    "used_by": [
+      "PADK.GOV-04",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.6 Application List'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.6 Application List'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.6 Application List'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.7",
+    "title": "Format 3.2.7 Electronic Banking Terminal",
+    "type": "Format LKTPTI",
+    "scope": "TPE",
+    "summary": "Electronic banking terminal formats such as ATM, CDM, CRM, EDC, phone banking, SMS banking, internet or mobile banking.",
+    "contains": [
+      "TPE Type",
+      "Number of units",
+      "Transaction frequency",
+      "Transaction nominal",
+      "Number of users if any"
+    ],
+    "used_by": [
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.7 Electronic Banking Terminal'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.7 Electronic Banking Terminal'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.7 Electronic Banking Terminal'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.8",
+    "title": "Format 3.2.8 Data Center and Disaster Recovery Center",
+    "type": "Format LKTPTI",
+    "scope": "DC and DRC",
+    "summary": "DC or DRC format containing organizer, location, certification, physical controls and environmental controls.",
+    "contains": [
+      "DC or DRC function",
+      "Organizer and address",
+      "Large area if on premise",
+      "Certification",
+      "Physical control",
+      "Environmental control"
+    ],
+    "used_by": [
+      "PADK.GOV-04",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.8 Data Center and Disaster Recovery Center'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Format 3.2.8 Data Center and Disaster Recovery Center'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Format 3.2.8 Data Center and Disaster Recovery Center'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.9",
+    "title": "Format 3.2.9 Information Technology Security",
+    "type": "Format LKTPTI",
+    "scope": "IT security assets",
+    "summary": "List of IT security assets such as security software or hardware.",
+    "contains": [
+      "Asset name",
+      "Asset type",
+      "Description of function, version, or license"
+    ],
+    "used_by": [
+      "PADK.RSK-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.9 Information Technology Security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.2.9 Information Technology Security'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.9 Information Technology Security'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.10",
+    "title": "Format 3.2.10 Disaster Recovery Plan",
+    "type": "Format LKTPTI",
+    "scope": "DRP",
+    "summary": "General DRP information format, team structure, testing, review and follow-up.",
+    "contains": [
+      "Backup location",
+      "Last test date",
+      "DRP team structure",
+      "Test results",
+      "Results of review and follow-up"
+    ],
+    "used_by": [
+      "PADK.RSK-03",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.10 Disaster Recovery Plan'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.10 Disaster Recovery Plan'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.10 Disaster Recovery Plan'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.11",
+    "title": "Format 3.2.11 Information Technology Service Provider",
+    "type": "Format LKTPTI",
+    "scope": "PPJTI and Bank as service providers",
+    "summary": "Format for using PPJTI by Banks and Banks as IT service providers.",
+    "contains": [
+      "Party name",
+      "Address",
+      "Related parties or not",
+      "IT Services",
+      "Collaboration start date"
+    ],
+    "used_by": [
+      "PADK.PPJTI-01",
+      "PADK.PPJTI-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.11 Information Technology Service Providers'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.2.11 Information Technology Service Providers'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.2.11 Information Technology Service Providers'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.12",
+    "title": "Format 3.2.12 Information Technology Costs",
+    "type": "Format LKTPTI",
+    "scope": "IT costs",
+    "summary": "Format of capex and opex charges to profit and loss or balance sheet for related and unrelated parties.",
+    "contains": [
+      "Capex",
+      "Opex",
+      "Profit and loss charges",
+      "Balance sheet charges",
+      "Rupiah value or Rupiah equivalent"
+    ],
+    "used_by": [
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Prioritize budget allocation and strategic approval for 'Format 3.2.12 Information Technology Costs'. Make sure the security ROI is clear.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.2.12 Information Technology Costs'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 3.2.12 Information Technology Fees'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.13",
+    "title": "Format 3.2.13 Assessment Related to Bank Cyber ​​Security",
+    "type": "Format LKTPTI",
+    "scope": "SEOJK Cyber",
+    "summary": "The reference format for the working paper and results of the Bank's cyber security assessment submitted is in accordance with SEOJK Cyber.",
+    "contains": [
+      "Inherent cybersecurity risks",
+      "Cyber ​​security assessment results",
+      "Quality of cyber risk management",
+      "Quality of cyber resilience processes"
+    ],
+    "used_by": [
+      "PADK.RSK-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.13 Bank Cybersecurity Related Assessments'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.13 Assessment Related to Bank Cyber ​​Security'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 3.2.13 Bank Cybersecurity Related Assessment'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.14",
+    "title": "Format 3.2.14 Cybersecurity Test Results Based on Vulnerability Analysis",
+    "type": "Format LKTPTI",
+    "scope": "Vulnerability testing",
+    "summary": "Format of test scope, findings, follow-up status, and supporting information.",
+    "contains": [
+      "The type of asset being tested",
+      "Purpose and test methods",
+      "Findings and criticality",
+      "Follow-up status"
+    ],
+    "used_by": [
+      "PADK.RSK-02",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.14 Cybersecurity Testing Results Based on Vulnerability Analysis'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.14 Cybersecurity Test Results Based on Vulnerability Analysis'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Format 3.2.14 Cybersecurity Test Results Based on Vulnerability Analysis'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.15",
+    "title": "Format 3.2.15 Self-Assessment of Digital Maturity Level",
+    "type": "Format LKTPTI",
+    "scope": "SEOJK DMAB",
+    "summary": "Format of the quality working paper for digital maturity aspects and digital maturity level results.",
+    "contains": [
+      "Digital maturity working paper",
+      "Digital maturity level assessment results"
+    ],
+    "used_by": [
+      "PADK.INTRO-01",
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.15 Self-Assessment of Digital Maturity Levels'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.15 Self-Assessment of Digital Maturity Level'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 3.2.15 Self-Assessment of Digital Maturity Level'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.16",
+    "title": "Format 3.2.16 List of Bank Partners in Digital Service Collaboration",
+    "type": "Format LKTPTI",
+    "scope": "Digital service partner",
+    "summary": "List of names of bank partners and types of digital services collaborated with.",
+    "contains": [
+      "Bank partner name",
+      "Types of digital services"
+    ],
+    "used_by": [
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.16 List of Bank Partners in Digital Services Cooperation'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.16 List of Bank Partners in Digital Service Cooperation'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 3.2.16 List of Bank Partners in Digital Services Cooperation'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.2.17",
+    "title": "Format 3.2.17 Electronic System Identification Results",
+    "type": "Format LKTPTI",
+    "scope": "Vital information infrastructure",
+    "summary": "Bank profile format and identification of Electronic Systems related to vital information infrastructure.",
+    "contains": [
+      "Bank profile and contact person",
+      "Type and name of Electronic System",
+      "Managed data",
+      "Third party dependencies",
+      "Service continuity plan",
+      "Categories and impact of electronic systems"
+    ],
+    "used_by": [
+      "PADK.REP-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.2.17 Electronic System Identification Results'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 3.2.17 Electronic System Identification Results'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 3.2.17 Electronic System Identification Results'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.3",
+    "title": "Format 3.3 Report on Information Technology Internal Audit Results",
+    "type": "Format Laporan",
+    "scope": "IT internal audit",
+    "summary": "IT audit results format containing the audit team, external collaboration if any, audit scope, weaknesses, follow-up, and time targets.",
+    "contains": [
+      "Whistleblower information",
+      "Audit team members",
+      "Audit coverage",
+      "IT Weaknesses",
+      "Follow-up and targets"
+    ],
+    "used_by": [
+      "PADK.AUD-01",
+      "PADK.AUD-02",
+      "PADK.REP-03"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Ensure compliance with 'Format 3.3 Information Technology Internal Audit Report' is monitored in the audit report. Failure could trigger regulatory sanctions.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.3 Information Technology Internal Audit Results Report'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 3.3 Information Technology Internal Audit Report'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F3.4.1",
+    "title": "Format 3.4.1 Non-Cyber ​​IT Incident Initial Notification",
+    "type": "Format Notifikasi",
+    "scope": "Initial incident notification",
+    "summary": "Initial information format for non-cyber IT incidents that is submitted no later than 24 hours after the incident is discovered.",
+    "contains": [
+      "Bank Information",
+      "General incident information",
+      "Initial impact",
+      "Receiving authority or institution where relevant"
+    ],
+    "used_by": [
+      "PADK.INC-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.4.1 Initial Notification of Non-Cyber ​​IT Incidents'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.4.1 Initial Notification of Non-Cyber ​​IT Incidents'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Format 3.4.1 Initial Notification of Non-Cyber ​​IT Incidents' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "F3.4.2",
+    "title": "Format 3.4.2 Non-Cyber ​​IT Incident Report",
+    "type": "Format Notifikasi",
+    "scope": "Incident report",
+    "summary": "Non-cyber IT incident follow-up report format that is more complete than the initial notification.",
+    "contains": [
+      "Incident details",
+      "Impact analysis",
+      "Countermeasures",
+      "Recovery",
+      "Submission date"
+    ],
+    "used_by": [
+      "PADK.INC-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 3.4.2 Non-Cyber ​​IT Incident Report'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'Format 3.4.2 Non-Cyber ​​IT Incident Report'.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Format 3.4.2 Non-Cyber ​​IT Incident Report' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "F4.1",
+    "title": "Format 4.1 Application for Permit to Place an Electronic System in a DC or DRC Outside Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Electronic system placement permit",
+    "summary": "Application format for cross-border placement permits at data centers or disaster recovery centers.",
+    "contains": [
+      "Applicant information",
+      "Data center information or DRC",
+      "Electronic Systems Information",
+      "Due diligence and risk analysis",
+      "Agreement concept",
+      "IT Architecture",
+      "Regulatory access statement"
+    ],
+    "used_by": [
+      "PADK.PPJTI-03",
+      "PADK.LOC-01",
+      "PADK.PERMIT-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.1 Application for Permit for Placement of Electronic Systems in DC or DRC Outside Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.1 Application for Permit for Placement of Electronic Systems in DC or DRC Outside Indonesia'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 4.1 Application for Permit to Place an Electronic System in a DC or DRC Outside Indonesia'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F4.2",
+    "title": "Format 4.2 Report on Realization of Electronic System Placement in DC or DRC Outside Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Realization of electronic system placement",
+    "summary": "Placement realization format containing location, agreement, current risks, PIR, DRC test results, event news and latest architecture.",
+    "contains": [
+      "Whistleblower information",
+      "Data center and DRC locations",
+      "Latest security and risk analysis",
+      "Post-implementation review",
+      "Test results",
+      "Minutes of transfer",
+      "Latest architecture"
+    ],
+    "used_by": [
+      "PADK.LOC-01",
+      "PADK.PERMIT-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.2 Report on Realization of Electronic System Placement in DC or DRC Outside Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.2 Realization Report on Electronic System Placement in DC or DRC Outside Indonesia'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Format 4.2 Report on Realization of Electronic System Placement in DC or DRC Outside Indonesia'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F4.3",
+    "title": "Format 4.3 Application for IT-Based Transaction Processing Permit by PPJTI Outside Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Transaction processing permission",
+    "summary": "IT-based transaction processing outsourcing permit format to PPJTI abroad.",
+    "contains": [
+      "Applicant information",
+      "SOPs and flow charts",
+      "Processing location",
+      "Due diligence",
+      "Risk analysis and safeguards",
+      "Agreement concept",
+      "Cost benefit analysis",
+      "Aspects of customer protection"
+    ],
+    "used_by": [
+      "PADK.PPJTI-03",
+      "PADK.LOC-02",
+      "PADK.PERMIT-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.3 Application for IT-Based Transaction Processing Permit by PPJTI Outside Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.3 Application for IT-Based Transaction Processing Permit by PPJTI Outside Indonesia'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 4.3 Application for IT-Based Transaction Processing Permit by PPJTI Outside Indonesia'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F4.4",
+    "title": "Format 4.4 Report on the Realization of IT-Based Transaction Processing by PPJTI Outside Indonesia",
+    "type": "Format Perizinan",
+    "scope": "Realization of transaction processing",
+    "summary": "Format for the realization of foreign transaction processing which contains the latest security, agreements, flow, PIR, test results, minutes and the latest reporting flow.",
+    "contains": [
+      "Whistleblower information",
+      "DC or DRC location",
+      "Location and organizer of processing",
+      "Security analysis",
+      "Agreement",
+      "Post-implementation review",
+      "Test results",
+      "Latest process flow"
+    ],
+    "used_by": [
+      "PADK.LOC-02",
+      "PADK.PERMIT-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.4 Realization Report on IT-Based Transaction Processing by PPJTI Outside Indonesia'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.4 Realization Report on IT-Based Transaction Processing by PPJTI Outside Indonesia'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 4.4 Realization Report on IT-Based Transaction Processing by PPJTI Outside Indonesia'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F4.5",
+    "title": "Format 4.5 Application for License to Provide IT Services by Bank",
+    "type": "Format Perizinan",
+    "scope": "Bank license as an IT service provider",
+    "summary": "Format of application for permission to provide IT services by the Bank to other financial services institutions.",
+    "contains": [
+      "Types of IT services",
+      "The service recipient",
+      "Location of implementation",
+      "List of application services",
+      "Capacity analysis",
+      "Cost benefit analysis",
+      "Risk analysis",
+      "Agreement concept"
+    ],
+    "used_by": [
+      "PADK.SVC-01",
+      "PADK.SVC-02",
+      "PADK.PERMIT-01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.5 Application for License to Provide IT Services by Bank'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.5 Application for License to Providing IT Services by Bank'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 4.5 Application for License to Providing IT Services by Bank'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "F4.6",
+    "title": "Format 4.6 Report on the Realization of Provision of IT Services by Banks",
+    "type": "Format Perizinan",
+    "scope": "Realization of Bank IT services",
+    "summary": "IT service realization format by the Bank which contains the type of service, user, location, agreement, minutes and PIR.",
+    "contains": [
+      "Types of IT services realized",
+      "Service users",
+      "Location of implementation",
+      "List of application services",
+      "Agreement",
+      "News",
+      "Post-implementation review and SLA"
+    ],
+    "used_by": [
+      "PADK.SVC-01",
+      "PADK.SVC-02",
+      "PADK.PERMIT-02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Format 4.6 Report on the Realization of Provision of IT Services by the Bank'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Format 4.6 Report on the Realization of Provision of IT Services by the Bank'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Format 4.6 Report on Realization of Provision of IT Services by Banks'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

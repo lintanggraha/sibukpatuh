@@ -1,0 +1,914 @@
+[
+  {
+    "id": "4.1",
+    "name": "Business context and bribery risk",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Pemahaman konteks organisasi",
+    "description": "Organizations need to read internal and external conditions that can influence the risk of bribery, starting from business models, operating areas, ownership structures, to how the organization interacts with external parties.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure this context map is used in strategic decisions, especially market expansion, new collaborations, and business areas prone to conflicts of interest.",
+      "sysadmin": "The technical team can help provide supporting data such as a list of procurement applications, access to payment systems, and digital transaction traces that are relevant for risk mapping.",
+      "legal": "Legal/GRC needs to link this context to applicable anti-corruption regulations, contracts, jurisdictions and reporting obligations."
+    },
+    "exampleEvidence": [
+      "Dokumen analisis konteks organisasi",
+      "Peta proses bisnis dan pihak berkepentingan",
+      "Daftar area operasi atau transaksi berisiko"
+    ],
+    "implementationTips": "Mulai dari workshop lintas fungsi untuk memetakan area yang paling banyak berhubungan dengan uang, izin, pengadaan, hadiah, sponsor, atau perantara. Perbarui konteks saat ada produk, negara, vendor, atau channel baru.",
+    "analogy": "Like reading the terrain before opening a new branch, organizations need to know where the slippery slope is before people start walking there.",
+    "focusArea": "Analisis Konteks"
+  },
+  {
+    "id": "4.2",
+    "name": "Stakeholder expectations",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Stakeholder compliance",
+    "description": "Organizations need to identify parties who have an interest in anti-bribery programs, such as regulators, customers, shareholders, employees, partners, auditors and the communities in which the organization operates.",
+    "roleTranslations": {
+      "bod": "Boards need to view stakeholder expectations as a reputational and business license risk, not just a list of external communications.",
+      "sysadmin": "The technical team can ensure complaint channels, vendor portals, and compliance document repositories can be accessed according to role.",
+      "legal": "Legal/GRC needs to translate stakeholder expectations into contractual obligations, internal policies and compliance registers."
+    },
+    "exampleEvidence": [
+      "Register pemangku kepentingan",
+      "Matriks kebutuhan dan kewajiban compliance",
+      "Notulen evaluasi ekspektasi regulator atau pelanggan"
+    ],
+    "implementationTips": "Buat register sederhana: siapa stakeholder-nya, apa tuntutannya, bukti apa yang biasa diminta, siapa pemilik internalnya, dan seberapa sering perlu ditinjau.",
+    "analogy": "If an organization is a large event, stakeholders are important guests who have entry rules, security expectations, and standards of behavior.",
+    "focusArea": "Kebutuhan Stakeholder"
+  },
+  {
+    "id": "4.3",
+    "name": "Limits of the scope of the anti-bribery system",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Scope management",
+    "description": "The scope of the system needs to be clearly defined: which units, processes, locations, subsidiaries, transactions and business relationships are included in anti-bribery management.",
+    "roleTranslations": {
+      "bod": "The board needs to agree on a scope that is realistic but not downplay high-risk areas just to make it appear easier to pass an audit.",
+      "sysadmin": "SysAdmins need to know which systems are in scope so that access, logs, and technical evidence can be prepared.",
+      "legal": "Legal/GRC needs to ensure the scope is aligned with the legal entity structure, contracts and regulatory obligations."
+    },
+    "exampleEvidence": [
+      "Pernyataan lingkup ABMS",
+      "Daftar unit/proses/lokasi dalam scope",
+      "Justifikasi pengecualian jika ada"
+    ],
+    "implementationTips": "Tulis scope dalam bahasa yang bisa diuji auditor. Hindari kalimat terlalu umum; sebutkan batas organisasi, proses kritis, dan pihak ketiga yang relevan.",
+    "analogy": "Scope is a work fence. Too narrow risks slipping through; too broad makes the team run out of energy.",
+    "focusArea": "Lingkup Sistem"
+  },
+  {
+    "id": "4.4",
+    "name": "Anti-bribery management system",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mengatur",
+    "capability": "ABMS operating model",
+    "description": "Organizations need to build interconnected systems: policies, processes, controls, roles, reporting, audits and improvements designed to prevent, discover and address bribery risks.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure ABMS has a sponsor, a budget, and measures of success that don't stop at the policy document.",
+      "sysadmin": "The technical team assists with access control, workflow approval, audit trail, and data integration supporting anti-bribery controls.",
+      "legal": "Legal/GRC is the link between legal obligations, internal procedures and operational evidence."
+    },
+    "exampleEvidence": [
+      "Manual atau blueprint ABMS",
+      "Peta proses anti-penyuapan",
+      "Daftar kebijakan, SOP, dan kontrol terkait"
+    ],
+    "implementationTips": "Bangun model PDCA yang jelas: rencanakan risiko, jalankan kontrol, ukur performa, lalu perbaiki. Jangan biarkan ABMS menjadi folder dokumen yang jarang dibuka.",
+    "analogy": "Anti-bribery programs are not integrity posters on the wall; it's more like a brake system, sensors, and emergency procedures in one vehicle.",
+    "focusArea": "Model Operasi"
+  },
+  {
+    "id": "4.5",
+    "name": "Bribery risk assessment",
+    "type": "Deteksi",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Bribery risk assessment",
+    "description": "Organizations need to regularly assess bribery risks, looking at possible scenarios, level of exposure, existing controls and additional actions required.",
+    "roleTranslations": {
+      "bod": "Boards should require easy-to-read risk heatmaps and ask for concrete actions for red areas.",
+      "sysadmin": "SysAdmin can provide transaction data, user activity, and exception logs to strengthen evidence-based assessments.",
+      "legal": "Legal/GRC needs to maintain methodology, risk criteria, decision documentation, and follow-up on assessment results."
+    },
+    "exampleEvidence": [
+      "Metodologi penilaian risiko penyuapan",
+      "Risk register dan heatmap",
+      "Rencana mitigasi per area risiko"
+    ],
+    "implementationTips": "Gunakan skenario konkret: tender, vendor onboarding, perizinan, donasi, perjalanan dinas, komisi agen, dan pembayaran mendesak. Beri owner dan due date untuk tiap mitigasi.",
+    "analogy": "Risk assessment is an integrity program blood pressure check. Without numbers and trends, organizations are just making healthy guesses.",
+    "focusArea": "Risk Assessment"
+  },
+  {
+    "id": "5.1.1",
+    "name": "Supervision of the steering committee",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Board oversight",
+    "description": "The steering committee needs to demonstrate oversight of anti-bribery policies, goals, resources and effectiveness of the system.",
+    "roleTranslations": {
+      "bod": "This is the immediate Board area: request regular reports, challenge risk assumptions, and ensure the compliance function is not left to run alone.",
+      "sysadmin": "The technical team supports the board's report with clean, traceable data, particularly from procurement and financial systems.",
+      "legal": "Legal/GRC needs to prepare a reporting package that is concise, risk-based and accountable."
+    },
+    "exampleEvidence": [
+      "Agenda rapat dewan tentang ABMS",
+      "Laporan kinerja anti-penyuapan",
+      "Keputusan atau arahan dewan"
+    ],
+    "implementationTips": "Buat dashboard triwulanan yang menunjukkan risiko utama, status mitigasi, pelaporan dugaan pelanggaran, hasil audit, dan kebutuhan keputusan dari dewan.",
+    "analogy": "The board is not a VIP passenger; in ABMS, the board is the track guard so that the organization does not go off the rails.",
+    "focusArea": "Governance"
+  },
+  {
+    "id": "5.1.2",
+    "name": "Top management commitment",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mengatur",
+    "capability": "Tone from the top",
+    "description": "Top management needs to ensure anti-bribery programs are embedded in business processes, resourced and communicated as part of the way the organization works.",
+    "roleTranslations": {
+      "bod": "Directors need to set an example, resolve conflicts of interest, and not pressure the team to pursue targets in a gray manner.",
+      "sysadmin": "SysAdmin supports workflows that force approval and logging, rather than just relying on ethical advice.",
+      "legal": "Legal/GRC needs to ensure leadership messages are translated into policies, procedures, training, and disciplinary consequences."
+    },
+    "exampleEvidence": [
+      "Pernyataan komitmen manajemen",
+      "Bukti alokasi sumber daya",
+      "Komunikasi internal dari pimpinan"
+    ],
+    "implementationTips": "Jangan berhenti di email tahunan. Masukkan pesan anti-suap ke town hall, KPI, onboarding, vendor meeting, dan keputusan bisnis berisiko tinggi.",
+    "analogy": "A culture of integrity follows the loudest voice in the room. If the leadership is silent, the rules can easily be considered a formality.",
+    "focusArea": "Leadership Commitment"
+  },
+  {
+    "id": "5.2",
+    "name": "Anti-bribery policy",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Rendah",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Anti-bribery policy",
+    "description": "Organizations need to have policies that prohibit bribery, explain compliance commitments, open reporting channels, and establish consequences when rules are violated.",
+    "roleTranslations": {
+      "bod": "The board needs to agree on policies that are clear and leave no room for informal exceptions.",
+      "sysadmin": "SysAdmin can help publish policies on the internal portal and ensure proof of employee acceptance is stored.",
+      "legal": "Legal/GRC needs to ensure policies are compatible with anti-corruption laws, employment contracts and disciplinary policies."
+    },
+    "exampleEvidence": [
+      "Dokumen kebijakan anti-penyuapan",
+      "Bukti sosialisasi dan penerimaan kebijakan",
+      "Catatan review berkala kebijakan"
+    ],
+    "implementationTips": "Tulis kebijakan dengan bahasa lugas. Jelaskan contoh larangan, kanal tanya, perlindungan pelapor, dan hubungan kebijakan dengan hadiah, donasi, sponsorship, serta pihak ketiga.",
+    "analogy": "Policy is the main beacon. People still need roads, but signs make safe boundaries visible before it's too late.",
+    "focusArea": "Policy"
+  },
+  {
+    "id": "5.3.1",
+    "name": "Roles and accountability",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Roles and responsibilities",
+    "description": "Anti-bribery responsibilities need to be clearly divided so that each function knows its obligations, limits of authority, and how to escalate when risks are discovered.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure that there are no important areas that do not have an owner, especially procurement, sales, finance and business development.",
+      "sysadmin": "SysAdmin needs to translate roles into system roles: maker-checker, approver, viewer and administrator must be separated.",
+      "legal": "Legal/GRC needs to maintain RACI and ensure responsibilities are included in the job description or function mandate."
+    },
+    "exampleEvidence": [
+      "RACI anti-penyuapan",
+      "Job description terkait compliance",
+      "Matriks kewenangan dan eskalasi"
+    ],
+    "implementationTips": "Buat RACI untuk proses sensitif. Pastikan owner tahu apa yang harus dilakukan saat ada red flag, bukan hanya tahu namanya tertulis di dokumen.",
+    "analogy": "In a professional kitchen, everyone has a station. Chaos begins to emerge when everyone feels 'not part of me'.",
+    "focusArea": "Accountability"
+  },
+  {
+    "id": "5.3.2",
+    "name": "Anti-bribery compliance function",
+    "type": "Deteksi",
+    "domain": "Kepemimpinan",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Compliance function independence",
+    "description": "The anti-bribery compliance function needs to be given sufficient mandate, competency, access and independence to advise, monitor systems and report on program performance.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure the compliance function has direct access to serious issues and is not easily pressured by commercial targets.",
+      "sysadmin": "SysAdmin helps access data required by compliance without providing excessive access to sensitive information.",
+      "legal": "Legal/GRC is usually the owner of this function or its main partner; ensure written mandates, SLAs and reporting lines."
+    },
+    "exampleEvidence": [
+      "Mandat fungsi kepatuhan",
+      "Struktur pelaporan compliance",
+      "Laporan monitoring ABMS"
+    ],
+    "implementationTips": "Tetapkan siapa yang berwenang memberi advice, menghentikan transaksi berisiko, meminta dokumen, dan melapor ke pimpinan. Hindari fungsi compliance yang hanya menjadi stempel.",
+    "analogy": "Compliance functions like a referee. He needs to be close to the game, but cannot play for either team.",
+    "focusArea": "Compliance Function"
+  },
+  {
+    "id": "5.3.3",
+    "name": "Delegated decisions",
+    "type": "Pencegahan",
+    "domain": "Kepemimpinan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Delegated authority control",
+    "description": "Delegated decisions need to be controlled with adequate limits of authority, criteria and supervision, especially when the decision may give rise to a risk of bribery.",
+    "roleTranslations": {
+      "bod": "The board needs to see whether delegation of authority still makes sense when the transaction value, country of operation, or business model changes.",
+      "sysadmin": "SysAdmin needs to ensure that the approval matrix in the system complies with official authority and cannot be bypassed without a trace.",
+      "legal": "Legal/GRC needs to review delegation in policies, power of attorney, contracts, and approval procedures."
+    },
+    "exampleEvidence": [
+      "Matriks delegasi wewenang",
+      "Workflow approval transaksi",
+      "Log override atau exception approval"
+    ],
+    "implementationTips": "Pisahkan kewenangan berdasarkan nilai, tipe transaksi, dan risk rating. Buat exception approval yang ketat untuk kondisi mendesak.",
+    "analogy": "The delegation is like giving the key to the room. The more sensitive the room, the clearer it is who can enter and when.",
+    "focusArea": "Delegation"
+  },
+  {
+    "id": "6.1",
+    "name": "Action on risks and opportunities",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Risk treatment planning",
+    "description": "The results of the risk analysis need to be translated into clear actions, so that opportunities for improvement are exploited and the potential for bribery is controlled before it becomes an incident.",
+    "roleTranslations": {
+      "bod": "The board should monitor actions for high risks and ask for reasons when critical mitigations continue to be delayed.",
+      "sysadmin": "SysAdmin can assist with technical actions such as mandatory approval, log review, data retention, and separation of access.",
+      "legal": "Legal/GRC needs to ensure that risk treatment is included in the action plan, has an owner, a time target and proof of completion."
+    },
+    "exampleEvidence": [
+      "Rencana perlakuan risiko",
+      "Daftar action item dan owner",
+      "Status mitigasi risiko penyuapan"
+    ],
+    "implementationTips": "Hubungkan setiap risiko tinggi dengan kontrol spesifik. Jangan hanya menulis 'akan dimonitor'; jelaskan siapa melakukan apa, kapan, dan bukti apa yang membuktikan selesai.",
+    "analogy": "Knowing the risks without an action plan is like seeing a leaking roof and then just noting the weather.",
+    "focusArea": "Risk Treatment"
+  },
+  {
+    "id": "6.2",
+    "name": "Anti-bribery goals",
+    "type": "Pencegahan",
+    "domain": "Konteks & Risiko",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Compliance objectives",
+    "description": "Organizations need to set anti-bribery targets that are measurable, relevant, monitored, communicated and have a plan for achieving them.",
+    "roleTranslations": {
+      "bod": "Boards need to ask for meaningful targets, such as due diligence coverage or training for high-risk roles, not cosmetic numbers.",
+      "sysadmin": "SysAdmin can support indicators with dashboards, data completion rates, and report integration.",
+      "legal": "Legal/GRC needs to oversee the definition of KPIs, targets, owners, and review frequency."
+    },
+    "exampleEvidence": [
+      "Daftar sasaran ABMS",
+      "KPI compliance dan realisasinya",
+      "Rencana kerja pencapaian sasaran"
+    ],
+    "implementationTips": "Gunakan indikator yang bisa ditindaklanjuti: persentase vendor high-risk yang selesai due diligence, jumlah training selesai, waktu penyelesaian investigasi, dan closure rate audit finding.",
+    "analogy": "The goal is the scoreboard. Without scores, it's hard for an organization to know whether the program is winning or just busy moving forward.",
+    "focusArea": "Objectives"
+  },
+  {
+    "id": "7.1",
+    "name": "Program resources",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Resource management",
+    "description": "Anti-bribery programs require adequate resources, including people, budget, technology, management time, and access to information.",
+    "roleTranslations": {
+      "bod": "Boards need to ensure high expectations for compliance are balanced with reasonable resources.",
+      "sysadmin": "SysAdmin needs to estimate system requirements, data access, evidence storage, and workflow support.",
+      "legal": "Legal/GRC needs to propose resource requirements based on risk, not just last year's habits."
+    },
+    "exampleEvidence": [
+      "Anggaran program anti-penyuapan",
+      "Rencana kebutuhan SDM dan tools",
+      "Dokumen persetujuan resource"
+    ],
+    "implementationTips": "Prioritaskan resource untuk area risiko tinggi. Bila anggaran terbatas, mulai dari due diligence, kanal pelaporan, training, dan audit trail transaksi sensitif.",
+    "analogy": "An integrity program without resources is like a security post without officers, lights or radios.",
+    "focusArea": "Resources"
+  },
+  {
+    "id": "7.2.1",
+    "name": "General competency",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mencegah",
+    "capability": "Competency management",
+    "description": "People carrying out work that impacts ABMS need to have appropriate and demonstrable competencies.",
+    "roleTranslations": {
+      "bod": "Boards need to ensure key positions are filled by people who understand integrity risks, not just pursuing operational targets.",
+      "sysadmin": "SysAdmins can ensure the teams managing approval and log systems understand the importance of audit trails.",
+      "legal": "Legal/GRC needs to establish competency criteria, briefing materials and evaluation evidence."
+    },
+    "exampleEvidence": [
+      "Matriks kompetensi per peran",
+      "Sertifikat atau catatan pelatihan",
+      "Evaluasi efektivitas kompetensi"
+    ],
+    "implementationTips": "Bedakan kompetensi dasar untuk seluruh karyawan dan kompetensi khusus untuk procurement, sales, finance, government relation, dan compliance.",
+    "analogy": "Not everyone needs to be a legal expert, but people in vulnerable spots need to know when to stop and ask.",
+    "focusArea": "Competence"
+  },
+  {
+    "id": "7.2.2",
+    "name": "Recruitment and placement process",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "People screening",
+    "description": "The process of hiring and placing people in particular roles needs to take account of the risk of bribery, including proportionate vetting for sensitive positions.",
+    "roleTranslations": {
+      "bod": "The board needs to support screening for high-risk positions even though the process is a little longer.",
+      "sysadmin": "SysAdmin helps ensure system access is granted after recruitment status and approval are complete.",
+      "legal": "Legal/GRC needs to ensure screening complies with employment laws, privacy and internal policies."
+    },
+    "exampleEvidence": [
+      "Prosedur pre-employment screening",
+      "Daftar posisi high-risk",
+      "Bukti deklarasi konflik kepentingan"
+    ],
+    "implementationTips": "Tentukan posisi yang butuh pemeriksaan tambahan: pembelian, pembayaran, tender, sales enterprise, relasi pemerintah, dan manajemen proyek besar.",
+    "analogy": "For cash rooms, organizations usually select custodians more carefully. The same principle applies to bribery-prone positions.",
+    "focusArea": "Hiring Controls"
+  },
+  {
+    "id": "7.3",
+    "name": "Care and training",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Awareness and training",
+    "description": "Employees and related parties need to understand anti-bribery policies, risk scenarios, how to report, and consequences for violations.",
+    "roleTranslations": {
+      "bod": "Leaders need to take part in training so that the message of integrity is not heard as only applying to staff.",
+      "sysadmin": "SysAdmin can manage LMS, reminders, and proof of training completion.",
+      "legal": "Legal/GRC needs to create material that is close to everyday cases and measures participants' understanding."
+    },
+    "exampleEvidence": [
+      "Materi pelatihan anti-penyuapan",
+      "Daftar peserta dan completion rate",
+      "Hasil kuis atau evaluasi pemahaman"
+    ],
+    "implementationTips": "Gunakan skenario nyata: hadiah vendor, fee perantara, uang pelicin, sponsor acara, donasi, dan permintaan tidak wajar dari pejabat atau pelanggan.",
+    "analogy": "Good training such as evacuation drills. When incidents arise, people no longer frantically look for the exit.",
+    "focusArea": "Training"
+  },
+  {
+    "id": "7.4",
+    "name": "Program communication",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mencegah",
+    "capability": "Compliance communication",
+    "description": "Organizations need to determine what is communicated about anti-bribery, to whom, when, through what channels, and who is responsible.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure external communications are aligned with organizational commitments and do not overclaim.",
+      "sysadmin": "SysAdmin supports communication channels such as intranet, email, vendor portal, and policy repository.",
+      "legal": "Legal/GRC needs to review messaging to employees, vendors, customers and regulators."
+    },
+    "exampleEvidence": [
+      "Rencana komunikasi ABMS",
+      "Publikasi kebijakan di kanal internal/eksternal",
+      "Template komunikasi kepada pihak ketiga"
+    ],
+    "implementationTips": "Segmentasikan pesan. Karyawan butuh panduan tindakan, vendor butuh kewajiban kontraktual, pimpinan butuh risiko dan keputusan, regulator butuh bukti kepatuhan.",
+    "analogy": "The right message to the wrong person remains ineffective. Communication needs a clear address.",
+    "focusArea": "Communication"
+  },
+  {
+    "id": "7.5.1",
+    "name": "Documented information needs",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Documented information",
+    "description": "Organizations need to determine what documents and records are required for an ABMS to be executed, proven, and reviewed.",
+    "roleTranslations": {
+      "bod": "The board needs to request evidence that is concise but sufficient to show the program is working.",
+      "sysadmin": "SysAdmins need to ensure document repositories are secure, structured, and have access controls.",
+      "legal": "Legal/GRC needs to maintain a list of mandatory and retention documents according to legal requirements."
+    },
+    "exampleEvidence": [
+      "Daftar dokumen ABMS",
+      "Register rekaman compliance",
+      "Kebijakan retensi dokumen"
+    ],
+    "implementationTips": "Buat document register yang memuat pemilik, versi, lokasi, masa simpan, dan status review. Ini akan sangat membantu saat audit.",
+    "analogy": "Documents are the memory of an organization. Without it, it all depends on who happens to still remember.",
+    "focusArea": "Documentation"
+  },
+  {
+    "id": "7.5.2",
+    "name": "Document creation and updating",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Rendah",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Document lifecycle",
+    "description": "ABMS documents need to be created and updated with clear identity, format, review and approval.",
+    "roleTranslations": {
+      "bod": "The board does not need to approve all documents, but strategic documents such as policies must have appropriate approval.",
+      "sysadmin": "SysAdmin helps with versioning, access, and document metadata in document management systems.",
+      "legal": "Legal/GRC needs to ensure the review and approval process is documented."
+    },
+    "exampleEvidence": [
+      "Template dokumen ABMS",
+      "Riwayat versi dan approval",
+      "Log review dokumen"
+    ],
+    "implementationTips": "Gunakan naming convention dan workflow approval yang konsisten. Hindari banyak versi kebijakan beredar di email.",
+    "analogy": "A document without a version is like a map without a date; can be true, it can also lead people to the old path.",
+    "focusArea": "Document Control"
+  },
+  {
+    "id": "7.5.3",
+    "name": "Control of documents and records",
+    "type": "Pencegahan",
+    "domain": "Dukungan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mengatur",
+    "capability": "Record protection",
+    "description": "Documented information needs to be protected from unauthorized access, loss, uncontrolled changes and use of incorrect versions.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure that evidence of compliance is not easily lost when there is a change in personnel or an incident.",
+      "sysadmin": "SysAdmin handles backup, access control, audit logs, and recovery of important documents.",
+      "legal": "Legal/GRC needs to determine which documents are sensitive, their storage period, and the rules for their destruction."
+    },
+    "exampleEvidence": [
+      "Matriks akses dokumen",
+      "Log perubahan dokumen",
+      "Bukti backup dan retensi"
+    ],
+    "implementationTips": "Pisahkan dokumen publik, internal, rahasia, dan investigasi. Rekaman investigasi dan pelaporan perlu kontrol akses lebih ketat.",
+    "analogy": "Proof of compliance such as notary records; Not only must it exist, but its authenticity must also be maintained.",
+    "focusArea": "Information Control"
+  },
+  {
+    "id": "8.1",
+    "name": "Operational planning and control",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Operational control",
+    "description": "Operational processes relevant to the risk of bribery need to be planned, controlled and executed according to established criteria.",
+    "roleTranslations": {
+      "bod": "The board needs to ensure operational controls are not weakened by the pressure of revenue targets or project deadlines.",
+      "sysadmin": "SysAdmin ensures procurement, payment and approval systems follow specified controls.",
+      "legal": "Legal/GRC needs to align operational SOPs with risk treatment and contract requirements."
+    },
+    "exampleEvidence": [
+      "SOP proses high-risk",
+      "Kriteria approval operasional",
+      "Bukti pelaksanaan kontrol"
+    ],
+    "implementationTips": "Prioritaskan proses dengan aliran uang atau keputusan bisnis signifikan: tender, vendor onboarding, pembayaran, hadiah, sponsor, donasi, dan agen.",
+    "analogy": "Operational controls are guardrails on busy roads. People can still move fast, but they are not free to break the rules.",
+    "focusArea": "Operations"
+  },
+  {
+    "id": "8.2",
+    "name": "Test the suitability of parties and transactions",
+    "type": "Deteksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Due diligence",
+    "description": "Organizations need to conduct proportionate due diligence on transactions, projects, certain employees and business partners that pose a higher risk of bribery.",
+    "roleTranslations": {
+      "bod": "The board needs to support the decision to postpone or reject a business opportunity if due diligence indicates unacceptable risks.",
+      "sysadmin": "SysAdmin can support workflow screening, master vendor integration, and storage of due diligence evidence.",
+      "legal": "Legal/GRC needs to determine red flag criteria, data sources, approval, and follow-up on screening results."
+    },
+    "exampleEvidence": [
+      "Prosedur due diligence",
+      "Checklist dan hasil screening pihak ketiga",
+      "Catatan keputusan atas red flag"
+    ],
+    "implementationTips": "Gunakan risk-based due diligence. Vendor low-risk tidak perlu proses berlebihan, tapi agen, konsultan, distributor, atau pihak yang berhubungan dengan pejabat perlu pemeriksaan lebih dalam.",
+    "analogy": "Due diligence is like checking your background before entrusting the office keys to someone new.",
+    "focusArea": "Due Diligence"
+  },
+  {
+    "id": "8.3",
+    "name": "Financial control",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Financial controls",
+    "description": "Financial transactions need to be controlled so that payments, recording, reimbursement and approval do not become hidden routes for bribery.",
+    "roleTranslations": {
+      "bod": "The board needs to require assurance that high-risk payments have a maker-checker, supporting documentation, and exception review.",
+      "sysadmin": "SysAdmins need to maintain separate access to the finance system and ensure the audit trail is not easily deleted.",
+      "legal": "Legal/GRC needs to collaborate with Finance to review unusual transactions and contract payment clauses."
+    },
+    "exampleEvidence": [
+      "Matrix approval pembayaran",
+      "Log maker-checker transaksi",
+      "Sample review pembayaran berisiko"
+    ],
+    "implementationTips": "Perkuat kontrol untuk pembayaran tunai, reimbursement, vendor baru, split invoice, biaya entertainment, komisi, success fee, dan pembayaran mendesak.",
+    "analogy": "Financial control is a cashier's door with a camera. Not to hinder payments, but to ensure the money goes through the right channel.",
+    "focusArea": "Finance Control"
+  },
+  {
+    "id": "8.4",
+    "name": "Non-financial controls",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Non-financial controls",
+    "description": "Non-financial decisions such as vendor selection, granting access, tenders, receipt of goods, and project approval need to be controlled because they can be a risk of bribery.",
+    "roleTranslations": {
+      "bod": "Boards need to understand that the risk of bribery does not always appear as payment; Technical and operational decisions can also be influenced.",
+      "sysadmin": "SysAdmin supports non-financial control through workflow, segregation of duties, and master data change logs.",
+      "legal": "Legal/GRC needs to ensure that the SOP for procurement, selection and acceptance of goods contains anti-bribery red flags."
+    },
+    "exampleEvidence": [
+      "SOP procurement dan vendor selection",
+      "Berita acara evaluasi vendor",
+      "Log perubahan vendor master data"
+    ],
+    "implementationTips": "Periksa area seperti perubahan spesifikasi tender, evaluasi teknis, penerimaan barang, penunjukan langsung, dan akses data sensitif.",
+    "analogy": "Not all 'value' is in the form of money. Sometimes small decisions can have big value for certain parties.",
+    "focusArea": "Operational Integrity"
+  },
+  {
+    "id": "8.5",
+    "name": "Control over controlled organizations and business partners",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Third-party control alignment",
+    "description": "Organizations need to ensure controlled entities and relevant business associates implement anti-bribery controls commensurate with the risks of the relationship.",
+    "roleTranslations": {
+      "bod": "The board needs to pay attention to the risks of groups, joint ventures, agents, distributors and strategic partners that could drag down the organization's reputation.",
+      "sysadmin": "SysAdmin supports vendor portals, third party proof of commitment, and external party access monitoring.",
+      "legal": "Legal/GRC needs to include anti-bribery requirements in contracts and assess the adequacy of partner controls."
+    },
+    "exampleEvidence": [
+      "Klausul anti-penyuapan dalam kontrak",
+      "Hasil penilaian kontrol pihak ketiga",
+      "Bukti komitmen atau sertifikasi mitra"
+    ],
+    "implementationTips": "Bagi mitra berdasarkan risiko. Untuk yang high-risk, mintakan kebijakan, training, beneficial ownership, hak audit, dan komitmen kontraktual yang jelas.",
+    "analogy": "Business associates are like people who carry the name of an organization outside the office. His behavior can still come back to our reputation.",
+    "focusArea": "Third Party"
+  },
+  {
+    "id": "8.6",
+    "name": "Anti-bribery commitment of related parties",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mencegah",
+    "capability": "Anti-bribery commitments",
+    "description": "For certain relationships or transactions, organizations need to obtain anti-bribery commitments from employees, business partners or related parties according to the level of risk.",
+    "roleTranslations": {
+      "bod": "Boards need to support the principle that business opportunities that defy basic commitments to integrity are questionable.",
+      "sysadmin": "SysAdmin can create e-acknowledgement mechanisms and store proof of approval.",
+      "legal": "Legal/GRC needs to prepare commitment wording, termination clauses and consequences for violations."
+    },
+    "exampleEvidence": [
+      "Form komitmen anti-penyuapan",
+      "Klausul integritas dalam kontrak",
+      "Bukti acknowledgement karyawan atau vendor"
+    ],
+    "implementationTips": "Gunakan komitmen tertulis untuk pihak high-risk, termasuk agen, konsultan, distributor, vendor strategis, dan posisi internal sensitif.",
+    "analogy": "A written commitment is not a guarantee that everything is safe, but it makes the line harder to deny.",
+    "focusArea": "Commitment"
+  },
+  {
+    "id": "8.7",
+    "name": "Hadiah, jamuan, donasi, dan manfaat serupa",
+    "type": "Pencegahan",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mencegah",
+    "capability": "Gift and hospitality control",
+    "description": "Organizations need to regulate gifts, entertainment, travel, donations, sponsorships and other benefits so that they are not used as a cover for bribery or undue influence.",
+    "roleTranslations": {
+      "bod": "Boards need to set an example by declaring rewards and rejecting inappropriate special treatment.",
+      "sysadmin": "SysAdmin can support gift registration and approval workflows for sponsorship, donations, or entertainment.",
+      "legal": "Legal/GRC needs to set value limits, absolute prohibitions, approvals, and documentation of business reasons."
+    },
+    "exampleEvidence": [
+      "Kebijakan hadiah dan hospitality",
+      "Register hadiah, donasi, dan sponsor",
+      "Approval untuk pengecualian atau nilai tinggi"
+    ],
+    "implementationTips": "Tentukan threshold, larangan untuk cash/cash equivalent, aturan pejabat publik, dan kewajiban deklarasi. Buat contoh kasus agar tidak multitafsir.",
+    "analogy": "A small gift can be polite; a poorly timed gift can be a danger signal.",
+    "focusArea": "Gifts & Hospitality"
+  },
+  {
+    "id": "8.8",
+    "name": "When control is inadequate",
+    "type": "Koreksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Merespons",
+    "capability": "Control insufficiency handling",
+    "description": "Jika kontrol anti-penyuapan dinilai tidak cukup untuk menurunkan risiko, organisasi perlu mengambil tindakan seperti menambah kontrol, menunda transaksi, atau menghentikan hubungan.",
+    "roleTranslations": {
+      "bod": "Boards need to be prepared to support unpopular decisions if integrity risks cannot be managed.",
+      "sysadmin": "SysAdmin can apply hold, block, or enhanced approval to the system for transactions that do not meet controls.",
+      "legal": "Legal/GRC needs to document the reasons for the decision and mitigation or termination options."
+    },
+    "exampleEvidence": [
+      "Daftar kontrol tidak memadai",
+      "Keputusan hold/terminate transaksi",
+      "Rencana kontrol tambahan"
+    ],
+    "implementationTips": "Buat mekanisme stop/go untuk transaksi high-risk. Keputusan lanjut harus berbasis evidence, approval senior, dan mitigasi yang jelas.",
+    "analogy": "If the brakes feel like they are failing, the healthy choice is not to keep speeding, but to stop and repair them.",
+    "focusArea": "Risk Decision"
+  },
+  {
+    "id": "8.9",
+    "name": "Reporting and awareness channel",
+    "type": "Deteksi",
+    "domain": "Operasi",
+    "difficulty": "Sedang",
+    "priority": "Kritis",
+    "concept": "Mendeteksi",
+    "capability": "Speak-up mechanism",
+    "description": "Organizations need to provide a safe way for people to ask questions, seek advice, or report suspected bribery without fear of retaliation.",
+    "roleTranslations": {
+      "bod": "Boards need to ensure whistleblowing is not display. Serious reports must reach the appropriate level and whistleblowers are protected.",
+      "sysadmin": "SysAdmins need to maintain channel confidentiality, limited access, logging, and reporting data security.",
+      "legal": "Legal/GRC needs to manage intake procedures, triage, whistleblower protection and follow-up documentation."
+    },
+    "exampleEvidence": [
+      "Prosedur whistleblowing",
+      "Kanal pelaporan aktif",
+      "Log laporan dan tindak lanjut anonim/agregat"
+    ],
+    "implementationTips": "Sediakan lebih dari satu kanal dan jelaskan apa yang terjadi setelah laporan masuk. Orang lebih berani bicara jika prosesnya jelas dan adil.",
+    "analogy": "The reporting channel is a smoke alarm. It must be easy to reach before the fire spreads.",
+    "focusArea": "Reporting"
+  },
+  {
+    "id": "8.10",
+    "name": "Investigating and handling allegations of bribery",
+    "type": "Koreksi",
+    "domain": "Operasi",
+    "difficulty": "Tinggi",
+    "priority": "Kritis",
+    "concept": "Merespons",
+    "capability": "Investigation management",
+    "description": "Allegations of bribery need to be assessed, investigated objectively, handled according to the level of risk, and closed with documented action.",
+    "roleTranslations": {
+      "bod": "Boards need to ensure major case investigations are independent, not pressured, and have appropriate escalation pathways.",
+      "sysadmin": "SysAdmin helps preserve evidence such as access logs, email metadata, transactions and system data without damaging the chain of custody.",
+      "legal": "Legal/GRC needs to lead or supervise investigation procedures, privileges, discipline and reporting obligations."
+    },
+    "exampleEvidence": [
+      "Prosedur investigasi",
+      "Case register dan status penyelesaian",
+      "Laporan investigasi dan tindakan korektif"
+    ],
+    "implementationTips": "Definisikan intake, triage, investigator, konflik kepentingan, penyimpanan bukti, wawancara, legal hold, dan kriteria penutupan kasus.",
+    "analogy": "Investigations are like checking for cracks in a bridge. The goal is not to find a scapegoat, but to find the facts and prevent collapse.",
+    "focusArea": "Investigation"
+  },
+  {
+    "id": "9.1",
+    "name": "Performance monitoring and measurement",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mendeteksi",
+    "capability": "Performance monitoring",
+    "description": "Organizations need to monitor, measure, analyze and evaluate whether the ABMS is running effectively and producing information that is useful for decisions.",
+    "roleTranslations": {
+      "bod": "Boards need to ask for indicators that address effectiveness, not just the number of activities.",
+      "sysadmin": "SysAdmin supports data quality, dashboards, and integration of monitoring data sources.",
+      "legal": "Legal/GRC needs to determine indicators, measurement methods, frequency and interpretation of results."
+    },
+    "exampleEvidence": [
+      "Dashboard KPI ABMS",
+      "Laporan monitoring berkala",
+      "Analisis tren red flag atau laporan"
+    ],
+    "implementationTips": "Pantau indikator seperti due diligence completion, training high-risk role, exception payment, laporan masuk, waktu investigasi, audit finding, dan closure rate.",
+    "analogy": "The compliance dashboard is like a vehicle's instrument panel. It doesn't drive, but it tells you when the engine is getting hot.",
+    "focusArea": "Monitoring"
+  },
+  {
+    "id": "9.2",
+    "name": "ABMS internal audit",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Tinggi",
+    "priority": "Tinggi",
+    "concept": "Mendeteksi",
+    "capability": "Internal audit",
+    "description": "Internal audits need to be conducted to assess the suitability and effectiveness of the ABMS, with objective auditors and a risk-based audit program.",
+    "roleTranslations": {
+      "bod": "The board needs to read audit findings as a signal of system improvement, not simply a list of unit errors.",
+      "sysadmin": "SysAdmin needs to provide technical evidence and read-only access according to the auditor's needs.",
+      "legal": "Legal/GRC needs to ensure the audit scope, criteria, independence and follow-up to findings are clear."
+    },
+    "exampleEvidence": [
+      "Program audit internal",
+      "Checklist dan laporan audit",
+      "Corrective action atas temuan"
+    ],
+    "implementationTips": "Pilih area audit berdasarkan risiko: procurement, payment, agent, donation, tender, gifts, dan investigasi. Pastikan auditor tidak mengaudit pekerjaannya sendiri.",
+    "analogy": "Internal audits are like medical check-ups. It's better to find a problem while it can still be easily fixed.",
+    "focusArea": "Audit"
+  },
+  {
+    "id": "9.3.1",
+    "name": "Top management review",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Management review",
+    "description": "Top management needs to review the ABMS periodically to ensure suitability, adequacy, effectiveness, and the need for changes.",
+    "roleTranslations": {
+      "bod": "Directors need to make management reviews a decision forum, not just a routine report.",
+      "sysadmin": "SysAdmin supports the technical control data and status that goes into the review package.",
+      "legal": "Legal/GRC needs to prepare input, agenda, decisions and action items resulting from the review."
+    },
+    "exampleEvidence": [
+      "Agenda dan materi tinjauan manajemen",
+      "Notulen keputusan",
+      "Action tracker hasil review"
+    ],
+    "implementationTips": "Masukkan perubahan risiko, hasil audit, laporan dugaan pelanggaran, status objective, efektivitas kontrol, dan kebutuhan resource.",
+    "analogy": "Management review is a pit stop. The team stopped for a moment so they could continue more quickly and safely.",
+    "focusArea": "Management Review"
+  },
+  {
+    "id": "9.3.2",
+    "name": "Steering board review",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Mengatur",
+    "capability": "Governing body review",
+    "description": "The steering board needs to review important information about ABMS performance in order to provide direction and oversight at a strategic level.",
+    "roleTranslations": {
+      "bod": "This is the Board's forum to test whether the system is truly adequate to the risks, not just look at the green slide.",
+      "sysadmin": "SysAdmin only needs to prepare supporting data when requested, especially evidence from critical systems.",
+      "legal": "Legal/GRC needs to present the issues concisely: key risks, decisions required, and business consequences."
+    },
+    "exampleEvidence": [
+      "Board pack terkait ABMS",
+      "Risalah tinjauan dewan",
+      "Arahan dan tindak lanjut dewan"
+    ],
+    "implementationTips": "Gunakan format executive: risiko utama, tren, kasus material, status mitigasi, gap resource, dan keputusan yang perlu disetujui.",
+    "analogy": "The council looked at the map from above. Details are still important, but what you're looking for is direction and big danger.",
+    "focusArea": "Board Review"
+  },
+  {
+    "id": "9.4",
+    "name": "Overview of compliance functions",
+    "type": "Deteksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Mendeteksi",
+    "capability": "Compliance function review",
+    "description": "The anti-bribery compliance function needs to assess the performance of the ABMS and report on whether the system is still adequate to manage organizational risks.",
+    "roleTranslations": {
+      "bod": "The board needs to pay attention to compliance opinions, especially if there are limited resources or independence constraints.",
+      "sysadmin": "SysAdmin helps provide the data the compliance function needs to assess the effectiveness of controls.",
+      "legal": "Legal/GRC needs to document compliance function reviews and recommendations."
+    },
+    "exampleEvidence": [
+      "Laporan review fungsi kepatuhan",
+      "Rekomendasi perbaikan ABMS",
+      "Status tindak lanjut rekomendasi"
+    ],
+    "implementationTips": "Review sebaiknya tidak hanya menyebut kegiatan selesai, tetapi juga apakah kontrol bekerja, apakah red flag ditindaklanjuti, dan apakah fungsi compliance punya akses cukup.",
+    "analogy": "Compliance functions like a program doctor. He needs to give a diagnosis, not just record a control schedule.",
+    "focusArea": "Compliance Review"
+  },
+  {
+    "id": "10.1",
+    "name": "Nonconformities and corrective actions",
+    "type": "Koreksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Tinggi",
+    "concept": "Meningkatkan",
+    "capability": "Corrective action",
+    "description": "When there are discrepancies or control weaknesses, organizations need to respond, control the impact, get to the root of the problem, and take corrective action.",
+    "roleTranslations": {
+      "bod": "Boards need to ensure recurring findings are addressed to the root of the problem, rather than just given administrative answers.",
+      "sysadmin": "SysAdmin helps fix technical root causes such as role conflicts, log gaps, or workflow bypasses.",
+      "legal": "Legal/GRC needs to ensure the CAPA is documented, verified and not closed before it becomes effective."
+    },
+    "exampleEvidence": [
+      "Log ketidaksesuaian",
+      "Root cause analysis",
+      "Corrective action plan dan verifikasi"
+    ],
+    "implementationTips": "Gunakan CAPA sederhana: masalah, dampak, akar penyebab, koreksi cepat, tindakan permanen, owner, due date, dan bukti efektivitas.",
+    "analogy": "Patching the symptom without repairing the pipe leaves the floor dry for a moment, then wet again.",
+    "focusArea": "Corrective Action"
+  },
+  {
+    "id": "10.2",
+    "name": "Continuous improvement",
+    "type": "Koreksi",
+    "domain": "Evaluasi & Peningkatan",
+    "difficulty": "Sedang",
+    "priority": "Sedang",
+    "concept": "Meningkatkan",
+    "capability": "Continual improvement",
+    "description": "The ABMS needs to be continuously improved to remain in line with changes in risk, organizational structure, business models, regulations, and experience from audits or incidents.",
+    "roleTranslations": {
+      "bod": "Boards need to encourage improvement as part of business resilience and reputation, not just a certification project.",
+      "sysadmin": "SysAdmin can propose system automation, monitoring and control that reduces error-prone manual work.",
+      "legal": "Legal/GRC needs to maintain a backlog of improvement and ensure learning from cases feeds into policy and training."
+    },
+    "exampleEvidence": [
+      "Roadmap peningkatan ABMS",
+      "Lesson learned dari audit/investigasi",
+      "Bukti update kebijakan, kontrol, atau training"
+    ],
+    "implementationTips": "Tutup loop perbaikan: temuan menjadi action, action diverifikasi, pembelajaran masuk ke training, dan perubahan proses dicatat di dokumen resmi.",
+    "analogy": "Anti-bribery programs like fitness. Once you pass the test, it doesn't mean you can stop practicing.",
+    "focusArea": "Improvement"
+  }
+]

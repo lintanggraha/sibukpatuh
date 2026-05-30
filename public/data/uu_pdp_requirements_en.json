@@ -1,0 +1,752 @@
+[
+  {
+    "id": "I.01",
+    "chapter": "I",
+    "chapter_title": "Ketentuan Umum",
+    "pillar": "Reference",
+    "title": "Understand the definition of Personal Data",
+    "summary": "Personal Data is data about an identified or identifiable natural person. Personal Data Protection is the overall effort to protect Personal Data throughout the processing process.",
+    "cadence": "Referensi foundational",
+    "owner": "Semua pihak yang terkait",
+    "scoring": "Pemahaman konseptual",
+    "appendices": [],
+    "focus": [
+      "Understand the difference between Personal Data and Specific Personal Data",
+      "Get to know the role of Personal Data Controllers and Processors",
+      "Understand the rights and obligations of Personal Data Subjects"
+    ],
+    "evidence": [
+      "Internal organization glossary",
+      "PDP awareness training materials"
+    ],
+    "reporting": "Dasar pemahaman untuk seluruh implementasi UU PDP",
+    "analogy": "The PDP Law is like the rules of the game in a community - before you can play correctly, everyone needs to understand the basic definitions. Personal Data is like our 'identity' in the digital world. Without a clear definition, it is difficult to apply the rules.",
+    "roleTranslations": {
+      "sysadmin": "SysAdmin Mode: Encrypt customer databases (at rest and in transit) and implement role-based access.",
+      "board": "Board Mode: Appoint a Data Protection Officer (DPO) to ensure the company is not fined.",
+      "legal": "Legal Mode: Update the Privacy Policy and ensure there is a valid consent mechanism.",
+      "bod": "Board Mode: Provide strategic oversight over 'Understand the definition of Personal Data'. Make sure these initiatives support business goals and do not disrupt operations."
+    }
+  },
+  {
+    "id": "II.01",
+    "chapter": "II",
+    "chapter_title": "Asas",
+    "pillar": "Reference",
+    "title": "Understand the principles of personal data protection",
+    "summary": "The PDP Law is based on 8 principles: protection, legal certainty, public interest, benefit, prudence, balance, accountability and confidentiality.",
+    "cadence": "Referensi foundational",
+    "owner": "Semua pihak yang terkait",
+    "scoring": "Pemahaman konseptual",
+    "appendices": [],
+    "focus": [
+      "Implementation of the principle of protection in every processing activity",
+      "Guarantee legal certainty in every action",
+      "Balance business interests with individual rights"
+    ],
+    "evidence": [
+      "Organizational PDP policy",
+      "Data processing SOP"
+    ],
+    "reporting": "Dasar evaluasi kepatuhan seluruh aktivitas PDP",
+    "analogy": "These eight principles are like navigation compass stars - every data processing journey must always refer to these eight directions. Without a compass, the ship went astray. With clear principles, every data processing decision has a clear direction.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Understand the principles of personal data protection'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Understand the principles of personal data protection'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Understand the principles of personal data protection'."
+    }
+  },
+  {
+    "id": "III.01",
+    "chapter": "III",
+    "chapter_title": "Jenis Data Pribadi",
+    "pillar": "Classification",
+    "title": "Identification of Specific Personal Data",
+    "summary": "Specific Personal Data includes: health data, biometrics, genetics, criminal records, child data and personal financial data that require extra protection.",
+    "cadence": "Saat inventarisasi data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Klasifikasi data yang tepat",
+    "appendices": [],
+    "focus": [
+      "Inventory and classify sensitive data",
+      "Apply tighter controls to specific data",
+      "Document the processing basis for each category"
+    ],
+    "evidence": [
+      "Personal Data Registrar",
+      "Data classification and sensitivity labels",
+      "Control matrix per data category"
+    ],
+    "reporting": "Bagian dari laporan kepatuhan berkala",
+    "analogy": "Specific data is like valuables in a safe - it requires special handling compared to ordinary items. Health or biometric data is more sensitive than full names, so requires a higher level of protection. Like treating diamonds differently from iron.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Identification of Specific Personal Data'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Identification of Specific Personal Data'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Identification of Specific Personal Data'."
+    }
+  },
+  {
+    "id": "III.02",
+    "chapter": "III",
+    "chapter_title": "Jenis Data Pribadi",
+    "pillar": "Classification",
+    "title": "General Personal Data Identification",
+    "summary": "General Personal Data includes: full name, gender, nationality, religion, marital status and data combined for identification.",
+    "cadence": "Saat inventarisasi data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Klasifikasi data yang tepat",
+    "appendices": [],
+    "focus": [
+      "Identify common data in the system",
+      "Understand that combinations of general data can become specific",
+      "Define basic controls for common data"
+    ],
+    "evidence": [
+      "General personal data inventory",
+      "Data combination documentation"
+    ],
+    "reporting": "Bagian dari laporan kepatuhan berkala",
+    "analogy": "General data is like basic building blocks - on its own it may not be dangerous, but combined with others it can become something powerful. Mobile number + email address + full name can be enough for unique identification. You need to remain alert even though it looks 'normal'.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'General Personal Data Identification'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'General Personal Data Identification'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'General Personal Data Identification'."
+    }
+  },
+  {
+    "id": "IV.01",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Realize the right to information and transparency",
+    "summary": "Personal Data Subjects have the right to obtain information about the clarity of the identity of the requester, the basis of legal interest, the purpose of use, and the accountability of the requesting party.",
+    "cadence": "Setiap kali permintaan data",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas transparansi kepada subjek",
+    "appendices": [],
+    "focus": [
+      "Provide clear information when collecting data",
+      "Transparently explain the purpose of processing",
+      "Document the legal basis for processing"
+    ],
+    "evidence": [
+      "Accessible privacy policy",
+      "Consent form with complete information",
+      "Processing contract or agreement"
+    ],
+    "reporting": "Audit trail transparansi",
+    "analogy": "Transparency is like nutrition labels on food - consumers have the right to know what they are 'consuming'. Organizations must be honest about what is being taken, for what purpose, and who is accessing it. Without labels, trust will not exist.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Making information rights and transparency a reality'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement technical controls (system configuration/patching) according to server hardening rules to realize 'Realize information rights and transparency'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Realize the right to information and transparency'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.02",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Realize the right to correction and update",
+    "summary": "Personal Data Subjects have the right to complete, update and correct errors or inaccuracies in data within 3x24 hours.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Respons time dan akurasi koreksi",
+    "appendices": [],
+    "focus": [
+      "Build an easy correction request mechanism",
+      "Verify requests securely",
+      "Meet the 3x24 hour deadline"
+    ],
+    "evidence": [
+      "Correction request procedure",
+      "Log request and response time",
+      "Proof of data subject verification"
+    ],
+    "reporting": "Metrics respons terhadap permintaan subjek",
+    "analogy": "Data correction is like servicing a vehicle - if something is damaged or worn, it must be repaired immediately to keep it running well. Inaccurate data can lead to wrong decisions, much like GPS showing an incorrect location.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Realize correction and update rights'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Realize correction and update rights'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Realize the right to correction and update'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.03",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Realize access rights and portability",
+    "summary": "Personal Data Subjects have the right to obtain access, data copy and data portability in a format that can be read by electronic systems.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas layanan akses data",
+    "appendices": [],
+    "focus": [
+      "Provide a data access request mechanism",
+      "Provide data in a useful format",
+      "Document all access granted"
+    ],
+    "evidence": [
+      "Data access self-service portal",
+      "Log access requests and grants",
+      "Data export format"
+    ],
+    "reporting": "Statistik permintaan akses",
+    "analogy": "Data access is like going to a safe deposit box - the owner has full rights to enter and take what he has at any time. Banks may not deny legitimate access, but can verify identity first. Data 'belongs' to the subject, not the organization.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Make access rights and portability a reality'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'Make access privileges and portability possible'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Make access rights and portability a reality'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.04",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Exercise the right to erasure and destruction",
+    "summary": "Personal Data Subjects have the right to end processing, delete or destroy their personal data in accordance with statutory regulations.",
+    "cadence": "Saat permintaan atau masa retensi berakhir",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Efektivitas penghapusan",
+    "appendices": [],
+    "focus": [
+      "Set a clear retention schedule",
+      "Create a secure deletion procedure",
+      "Verify the deletion is complete"
+    ],
+    "evidence": [
+      "Data retention policy",
+      "Deletion and destruction logs",
+      "Data destruição certificate"
+    ],
+    "reporting": "Audit penghapusan berkala",
+    "analogy": "Data deletion is like an office document shredder - once it is no longer useful, it must be shredded properly, not just thrown in the trash. This prevents 'identity theft' or misuse of data that is no longer relevant.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Realize the right of erasure and destruction'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Realize deletion and destruction rights'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Realize the right to erasure and destruction'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.05",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Implement the right to withdraw consent",
+    "summary": "Personal Data Subjects have the right to withdraw the data processing consent that has been given. Termination is carried out no later than 3x24 hours.",
+    "cadence": "Saat permintaan subjek",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Responsiveness terhadap penarikan",
+    "appendices": [],
+    "focus": [
+      "Create an easy withdrawal mechanism",
+      "Respect unconditional withdrawal of consent",
+      "Perform related deletion after withdrawal"
+    ],
+    "evidence": [
+      "Consent withdrawal procedure",
+      "Withdrawal log and confirmation",
+      "Further deletion actions"
+    ],
+    "reporting": "Statistik penarikan persetujuan",
+    "analogy": "Withdrawing consent is like canceling an unsubscribe - once cancelled, the company may not continue to send emails or use data for that purpose. easy to withdraw is important for trust.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Realize the right to withdraw consent'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Realize the right to withdraw consent'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Realize the right to withdraw consent'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IV.06",
+    "chapter": "IV",
+    "chapter_title": "Hak Subjek Data Pribadi",
+    "pillar": "Rights",
+    "title": "Realize the right to object and limit",
+    "summary": "Personal Data Subjects have the right to object to automated decisions and to delay or limit processing proportionally.",
+    "cadence": "Saat ada keputusan otomatis atau permintaan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Penanganan keberatan",
+    "appendices": [],
+    "focus": [
+      "Identify automated decision-making systems",
+      "Create a clear objection mechanism",
+      "Review automated decisions manually if necessary"
+    ],
+    "evidence": [
+      "Automated decision policy",
+      "Objection handling procedures",
+      "Manual review logs"
+    ],
+    "reporting": "Statistik keberatan dan penundaan",
+    "analogy": "Objecting to an automated decision is like appealing to a judge after an AI verdict - even if the technology decides, humans still have the right to ask for a review. The machine's decision should not be absolute without the option of appeal.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Realize the right of objection and restriction'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Realize the right of objection and restriction'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Realize the right of objection and restriction'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.01",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Comply with lawful processing principles",
+    "summary": "Data processing must be carried out in a limited, specific, lawful, transparent, purposeful, accurate and responsible manner.",
+    "cadence": "Setiap aktivitas pemrosesan",
+    "owner": "Pengendali dan Prosesor Data Pribadi",
+    "scoring": "Kepatuhan terhadap prinsip",
+    "appendices": [],
+    "focus": [
+      "Make sure there is a legal basis for any processing",
+      "Collect only necessary data",
+      "Document all processing activities"
+    ],
+    "evidence": [
+      "Documented legal basis for processing",
+      "DPIA for high-risk processing",
+      "Records of Processing Activities (RoPA)"
+    ],
+    "reporting": "RoPA dan audit kepatuhan",
+    "analogy": "The processing principle is like medical ethics - the patient must consent, the doctor must explain, and only perform necessary actions. Informed consent is not just a signature, but a full understanding of what will be done.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Comply with lawful processing principles'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Comply with lawful processing principles'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Comply with lawful processing principles'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.02",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Manage approvals properly",
+    "summary": "Consent must be explicit, informed, unambiguous, and revocable. Consent that does not meet the requirements is declared null and void by law.",
+    "cadence": "Saat pengumpulan data baru",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas mekanisme persetujuan",
+    "appendices": [],
+    "focus": [
+      "Consent design is clear and in simple language",
+      "Separate consent for different purposes",
+      "Provide an easy withdrawal mechanism"
+    ],
+    "evidence": [
+      "Valid consent records",
+      "Audit consent trail",
+      "Withdrawal procedure"
+    ],
+    "reporting": "Consent metrics dan audit",
+    "analogy": "A good consent is like a signature on a contract that is clearly legible - not detailed print that cannot be read. If people don't really understand what is being agreed to, that consent can be void. Organizations must invest in clarity.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Manage approvals right'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Manage approvals properly'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Manage approvals properly'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "V.03",
+    "chapter": "V",
+    "chapter_title": "Pemrosesan Data Pribadi",
+    "pillar": "Processing",
+    "title": "Protect data on children and vulnerable groups",
+    "summary": "Processing of data of children and persons with disabilities must be carried out specifically with appropriate consent.",
+    "cadence": "Saat memproses data minor atau disabilitas",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Perlindungan khusus kelompok rentan",
+    "appendices": [],
+    "focus": [
+      "Verify age before processing child data",
+      "Get parent/guardian approval",
+      "Implement restricted access for sensitive data"
+    ],
+    "evidence": [
+      "Special child policy",
+      "Verify age and parental consent",
+      "Limited access procedures"
+    ],
+    "reporting": "Review berkala perlindungan kelompok rentan",
+    "analogy": "Protecting children's data is like parental control rules on smartTVs - parents must be aware of and approve of the content their children consume. Children cannot give full consent because they are not old enough to understand the implications.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Protect data of children and vulnerable groups'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Protect data of children and vulnerable groups'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for 'Protect data of children and vulnerable groups'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VI.01",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Have a lawful basis for processing",
+    "summary": "Personal Data Controllers are required to have a basis for processing which includes consent, agreement, law, vital interests, public duties, or other legitimate interests.",
+    "cadence": "Setiap aktivitas pemrosesan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan dasar pemrosesan",
+    "appendices": [],
+    "focus": [
+      "Identify and document the basis for processing",
+      "Choose the most appropriate basis for each activity",
+      "Periodic review of basic eligibility"
+    ],
+    "evidence": [
+      "Legal basis documentation",
+      "Basic processing matrix per activity",
+      "Periodic legal review of the basis"
+    ],
+    "reporting": "RoPA dengan legal basis",
+    "analogy": "The basis for processing is like the 'reason for entry' at reception - cannot enter without a clear reason. Consumers, contracts, laws, or vital interests – one or the other must be present. Without this, processing is invalid.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Have a lawful basis for processing'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Have a valid processing basis'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Have a lawful basis for processing'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VI.02",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Conduct a PDP impact assessment",
+    "summary": "Personal Data Controllers are required to carry out an impact assessment (DPIA) when processing has a potentially high risk to the data subject.",
+    "cadence": "Sebelum pemrosesan berisiko tinggi baru",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kualitas DPIA",
+    "appendices": [],
+    "focus": [
+      "Identify the processing that requires DPIA",
+      "Carry out a comprehensive risk assessment",
+      "Implement necessary mitigations"
+    ],
+    "evidence": [
+      "DPIA documents",
+      "Risk assessment reports",
+      "Mitigation action plans"
+    ],
+    "reporting": "DPIA register dan hasil review",
+    "analogy": "DPIA is like an environmental impact assessment before development - you cannot just start a project that could have a big impact. High risk = requires deeper study before proceeding.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Perform a PDP impact assessment'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Perform PDP impact assessment'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Perform a PDP impact assessment'."
+    }
+  },
+  {
+    "id": "VI.03",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Protect personal data security",
+    "summary": "Personal Data Controllers are required to protect data with operational technical measures and determine the level of security according to data risk.",
+    "cadence": "Berkesinambungan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecukupan kontrol keamanan",
+    "appendices": [],
+    "focus": [
+      "Implement encryption and access control",
+      "Monitor and detect threats",
+      "Set a security baseline according to risk level"
+    ],
+    "evidence": [
+      "Security policies and procedures",
+      "Encryption implementation",
+      "Access control lists and logs"
+    ],
+    "reporting": "Security audit dan incident reports",
+    "analogy": "Data security is like a bank safe - not one lock, but multiple layers. Digital vaults need encryption as steel, access control as the key, and monitoring as CCTV. The level of security must match the contents of the safe.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Protect personal data security'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit to 'Protect personal data security'. Schedule regular backups.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Protect the security of personal data'."
+    }
+  },
+  {
+    "id": "VI.04",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Record all processing activities",
+    "summary": "Personal Data Controllers are required to record all processing activities for audit trail and accountability.",
+    "cadence": "Berkesinambungan",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan records",
+    "appendices": [],
+    "focus": [
+      "Implement comprehensive logging",
+      "Save logs with secure storage",
+      "Ensure traceability from collection to deletion"
+    ],
+    "evidence": [
+      "Processing records (RoPA)",
+      "Audit logs",
+      "Access and modify logs"
+    ],
+    "reporting": "RoPA dan compliance audit",
+    "analogy": "Recording processing is like CCTV in a shop - not to monitor everyone, but to be able to trace if a problem occurs. With records, you can prove what happened and who did what.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Recorder of all processing activities'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Recording of all processing activities'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'Recorder of all processing activities'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VI.05",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Data breach notification",
+    "summary": "In the event of data protection failure, the Controller is obliged to notify the data subject and institution within 3x24 hours.",
+    "cadence": "Saat terjadi breach",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecepatan dan kualitas respons",
+    "appendices": [],
+    "focus": [
+      "Build an incident response plan",
+      "Define escalation and notification procedures",
+      "Train the team for rapid response"
+    ],
+    "evidence": [
+      "Incident response plan",
+      "Breach notification records",
+      "Communication templates"
+    ],
+    "reporting": "Incident logs dan breach notifications",
+    "analogy": "A breach notification is like a medical emergency - if someone is injured, someone must know immediately and be able to help. Delays can be fatal. Same with data breach - subjects need to know as quickly as possible so they can take steps to protect themselves.",
+    "roleTranslations": {
+      "bod": "Board Mode: Prioritize budget allocation and strategic approval for 'Data breach notification'. Make sure the security ROI is clear.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Data breach notification'. Schedule regular backups.",
+      "legal": "Legal Mode: Prepare an incident notification template to OJK/Kominfo for 'Data breach notification' within the time limit according to the regulatory SLA (example: 3x24 hours)."
+    }
+  },
+  {
+    "id": "VI.06",
+    "chapter": "VI",
+    "chapter_title": "Kewajiban Pengendali Data Pribadi",
+    "pillar": "Obligation",
+    "title": "Appoint a DPO/PDP officer",
+    "summary": "Personal Data Controllers are required to appoint PDP officials or officers in certain conditions such as public services or large-scale processing.",
+    "cadence": "Sesuai kebutuhan organisasi",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kecukupan struktur governance",
+    "appendices": [],
+    "focus": [
+      "Evaluate the need for appointment of a DPO",
+      "Select candidates with the right qualifications",
+      "Provide sufficient independence and resources"
+    ],
+    "evidence": [
+      "Decree on the appointment of DPO/PDP officers",
+      "Job description and scope",
+      "Training records"
+    ],
+    "reporting": "Organizational structure dan responsibilities",
+    "analogy": "A DPO is like a compliance officer in a company - someone whose job is to ensure everything goes according to the rules. He needs access to management, independence, and cannot be intervened. Without this, compliance becomes a window.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Appoint DPO/PDP officers'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Appoint DPO/PDP officer'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Appoint DPO/PDP officer'."
+    }
+  },
+  {
+    "id": "VII.01",
+    "chapter": "VII",
+    "chapter_title": "Transfer Data Pribadi",
+    "pillar": "Transfer",
+    "title": "Manage domestic data transfers",
+    "summary": "Data transfer within Indonesian territory must be carried out with PDP protection in accordance with the law. Both parties are responsible.",
+    "cadence": "Saat ada transfer antar organisasi",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan agreement",
+    "appendices": [],
+    "focus": [
+      "Document all data transfers",
+      "Make sure there is a data processing agreement",
+      "Monitor recipient compliance"
+    ],
+    "evidence": [
+      "Data transfer agreements",
+      "List of data recipients",
+      "Monitoring records"
+    ],
+    "reporting": "Transfer register",
+    "analogy": "Domestic data transfer is like sending a package via JNE - the package remains domestic, but still requires a receipt and can be tracked. You can't just send it without knowing where the data will go.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Manage domestic data transfer'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Manage domestic data transfer'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Manage domestic data transfer'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VII.02",
+    "chapter": "VII",
+    "chapter_title": "Transfer Data Pribadi",
+    "pillar": "Transfer",
+    "title": "Manage overseas data transfers",
+    "summary": "Transfers out of Indonesia must ensure that the destination country has equivalent or higher protection, or that there are adequate safeguards.",
+    "cadence": "Saat ada transfer lintas negara",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kelengkapan assessment dan safeguards",
+    "appendices": [],
+    "focus": [
+      "Assess the level of protection of the destination country",
+      "Implement safeguards if necessary",
+      "Document the legal basis for the transfer"
+    ],
+    "evidence": [
+      "Country assessment",
+      "Safeguard agreements",
+      "Standard contractual clauses"
+    ],
+    "reporting": "Cross-border transfer register",
+    "analogy": "Cross-border transfers are like sending a package abroad - there are customs, customs regulations, and if the destination country is not safe, you need extra insurance. Data leaving Indonesia needs protection that cannot be lower than that within the country.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Manage overseas data transfers'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Ensure encryption (AES-256) is running when data is at-rest & in-transit for 'Manage overseas data transfer'. Schedule regular backups.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'Manage overseas data transfer'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "VIII.01",
+    "chapter": "VIII",
+    "chapter_title": "Sanksi Administratif",
+    "pillar": "Sanction",
+    "title": "Understand administrative sanctions",
+    "summary": "Violations of PDP provisions are subject to administrative sanctions: written warning, temporary suspension, deletion/destruction, and/or a fine of up to 2% of annual income.",
+    "cadence": "Referensi saat audit",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Awareness terhadap risiko sanksi",
+    "appendices": [],
+    "focus": [
+      "Understand the list of violations and sanctions",
+      "Implement compliance program",
+      "Carry out regular self-assessments"
+    ],
+    "evidence": [
+      "Compliance self-assessment",
+      "Remediation plans",
+      "Audit reports"
+    ],
+    "reporting": "Compliance status reports",
+    "analogy": "Administrative sanctions are like traffic tickets - not a serious crime, but still serious. A fine of 2% of revenue is significant for large companies. It is better to comply than to be punished.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Understand administrative sanctions'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understand administrative sanctions'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Understand administrative sanctions'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "IX.01",
+    "chapter": "IX",
+    "chapter_title": "Kelembagaan",
+    "pillar": "Governance",
+    "title": "Understand the role of PDP institutions",
+    "summary": "PDP institutions appointed by the President carry out policy formulation, supervision, administrative law enforcement and facilitation of dispute resolution.",
+    "cadence": "Referensi struktural",
+    "owner": "Semua pihak",
+    "scoring": "Pemahaman peran lembaga",
+    "appendices": [],
+    "focus": [
+      "Understand the authority of the supervisory agency",
+      "Prepare yourself for an audit or inspection",
+      "Take advantage of dispute resolution mechanisms"
+    ],
+    "evidence": [
+      "Contact with the institution",
+      "Complaint handling procedures"
+    ],
+    "reporting": "Komunikasi dengan lembaga",
+    "analogy": "PDP institutions are like special cyber police - those who guard the rules of the game in the world of data. They can audit, fine, even stop operations if they violate it. Just like companies are required to comply with Ministry of Transportation regulations.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Understand the role of PDP institutions'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understand the role of the PDP institution'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations to 'Understand the role of PDP institutions'."
+    }
+  },
+  {
+    "id": "X.01",
+    "chapter": "X",
+    "chapter_title": "Penyelesaian Sengketa",
+    "pillar": "Resolution",
+    "title": "Understand dispute resolution mechanisms",
+    "summary": "PDP dispute resolution can be through arbitration, court, or alternative dispute resolution institutions in accordance with statutory provisions.",
+    "cadence": "Saat terjadi sengketa",
+    "owner": "Pengendali Data Pribadi",
+    "scoring": "Kesiapan penyelesaian",
+    "appendices": [],
+    "focus": [
+      "Understand the available resolution options",
+      "Prepare documentation for defense",
+      "Consider alternative dispute resolution"
+    ],
+    "evidence": [
+      "Legal defense documentation",
+      "Communication records"
+    ],
+    "reporting": "Legal compliance reports",
+    "analogy": "Dispute resolution is like normal legal channels - it can be through mediation, arbitration or court. But it's best not to let the conflict go there. Prevention is better than cure.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Understand dispute resolution mechanisms'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understand the dispute resolution mechanism'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Understand dispute resolution mechanisms'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "XII.01",
+    "chapter": "XII",
+    "chapter_title": "Ketentuan Pidana",
+    "pillar": "Criminal",
+    "title": "Understand the criminal provisions",
+    "summary": "PDP criminal violations include: obtaining/collecting (5 years/Rp. 5M), disclosing (4 years/Rp. 4M), using (5 years/Rp. 5M), falsifying (6 years/Rp. 6M).",
+    "cadence": "Referensi risk awareness",
+    "owner": "Semua pihak",
+    "scoring": "Awareness terhadap risiko pidana",
+    "appendices": [],
+    "focus": [
+      "Educate employees about criminal provisions",
+      "Implementation of controls to prevent violations",
+      "Perform due diligence on third parties"
+    ],
+    "evidence": [
+      "Training records",
+      "Due diligence documentation",
+      "Internal controls"
+    ],
+    "reporting": "Compliance and awareness reports",
+    "analogy": "Criminal provisions are like an ultimatum - companies can get fines, but individuals can go to prison. This is serious. It's not just a matter of money, but you can lose your freedom. So prevention must be strict.",
+    "roleTranslations": {
+      "bod": "Board Mode: Prioritize budget allocation and strategic approval to 'Understand criminal provisions'. Make sure the security ROI is clear.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Understand the criminal provisions'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents to 'Understand criminal provisions'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "XIV.01",
+    "chapter": "XIV",
+    "chapter_title": "Ketentuan Peralihan",
+    "pillar": "Implementation",
+    "title": "Adaptation to the PDP Law",
+    "summary": "Personal Data Controllers and Processors are required to comply with the PDP Law no later than 2 years after its promulgation (October 2022).",
+    "cadence": "October 2024 deadline",
+    "owner": "Semua pengendali dan prosesor",
+    "scoring": "Status implementasi compliance",
+    "appendices": [],
+    "focus": [
+      "Carry out a gap assessment",
+      "Create a compliance roadmap",
+      "Implement needed changes"
+    ],
+    "evidence": [
+      "Gap assessment report",
+      "Implementation roadmap",
+      "Compliance checklist"
+    ],
+    "reporting": "Progress reports ke manajemen",
+    "analogy": "Adapting the PDP Law is like preparing for an exam - the October 2024 deadline is like 'assignment submission deadline'. Those who do not submit will be subject to sanctions. The faster you get there, the more ready you are.",
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Adaptation to the PDP Law'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Adaptation to the PDP Law'.",
+      "legal": "Legal Mode: Ensure the availability of valid consent and privacy policy addendum in accordance with PDP regulations for 'Adaptation to the PDP Law'."
+    }
+  }
+]

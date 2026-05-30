@@ -1,0 +1,110 @@
+[
+  {
+    "id": "L1",
+    "type": "Tingkat Keamanan",
+    "title": "Level 1 (Fundamental Defense)",
+    "scope": "Starter Apps and Low Risk Internal Systems",
+    "summary": "ASVS Level 1 is dedicated to basic defense. It includes a first layer of protection against absolute attacks (such as Injection or Broken Auth) that are relatively easy to find by automated analysis tools (DAST/SAST) without deep modification.",
+    "contains": [
+      "Securing Default Access Endpoints",
+      "Ensuring Minimum Tapping Standards",
+      "Coverage of the Majority of Automated Testing"
+    ],
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Level 1 (Fundamental Defense)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Level 1 (Fundamental Defense)'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Level 1 (Fundamental Defense)'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "L2",
+    "type": "Tingkat Keamanan",
+    "title": "Level 2 (Standard Enterprise)",
+    "scope": "B to B Commercial Software and Typical Sensitive Processing",
+    "summary": "The standard (default) security level that the majority of today's enterprise applications must strive for. It contains ~70% of the ASVS control cumulation and relies on manual verification of business logic in addition to automated tools.",
+    "contains": [
+      "Obligation to Use Approved Cryptography",
+      "Ecosystem Risk Assessment (Dependency Analysis)",
+      "Vertical/Horizontal Access Defect Logic Verification"
+    ],
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Level 2 (Standard Enterprise)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Level 2 (Enterprise Standard)'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Level 2 (Standard Enterprise)'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "L3",
+    "type": "Tingkat Keamanan",
+    "title": "Level 3 (High Assurance)",
+    "scope": "Financial, Medical, Government and Critical Infrastructure Applications",
+    "summary": "The strictest level of guarantee (Highest Level) for applications that must be explosion-proof or targeted attacks (Targeted Attacks). Requires manual audit review of architectural layers beyond surface testing control.",
+    "contains": [
+      "Verification of Intrinsic Fraud Detection Mechanisms",
+      "High Coated Anti-Tampering Protection",
+      "Super Specific Regulatory Compliance (e.g. PCI-DSS, HIPAA compliance)"
+    ],
+    "used_by": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over 'Level 3 (High Assurance)'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Level 3 (High Assurance)'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Level 3 (High Assurance)'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]

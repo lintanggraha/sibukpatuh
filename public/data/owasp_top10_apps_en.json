@@ -1,0 +1,275 @@
+[
+  {
+    "id": "Mitigasi Ekstensif",
+    "type": "Implementation Guide",
+    "title": "OWASP's Extensive Access Mitigation Guidelines",
+    "scope": "Role-Based Access Control, Attribute-Based Access Control",
+    "summary": "An in-depth guide on how to design an RBAC or ABAC model to achieve a reusable, authorization-centric architecture.",
+    "contains": [
+      "Principle of Least Privilege",
+      "Access Control Matrix Design",
+      "Mitigation of Insecure Direct Object Reference"
+    ],
+    "used_by": [
+      "A01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'OWASP's Extensive Access Mitigation Guidelines'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'OWASP's Extensive Access Mitigation Guidelines'.",
+      "legal": "Legal Mode: Review and ratify the policy document/SOP for 'OWASP's Extensive Access Mitigation Guidelines'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "Panduan Kripto",
+    "type": "Cheat Sheet",
+    "title": "OWASP Cryptographic Storage Cheat Sheet",
+    "scope": "Hash Algorithms, Encryption, Key Management",
+    "summary": "The quick reference determines current strong algorithms (such as Argon2 for passwords, AES-GCM for data) and minimum key length recommendations.",
+    "contains": [
+      "Selection of Modern Hashing Algorithms",
+      "Proper Password Storage",
+      "Salt and Key Security"
+    ],
+    "used_by": [
+      "A02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight over the 'OWASP Cryptographic Storage Cheat Sheet'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'OWASP Cryptographic Storage Cheat Sheet'.",
+      "legal": "Legal Mode: Review and ratify the policy/SOP document for 'OWASP Cryptographic Storage Cheat Sheet'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "Defense Cheat Sheet",
+    "type": "Cheat Sheet",
+    "title": "OWASP Injection Prevention & SSRF Prevention Cheat Sheet",
+    "scope": "SQLi, NoSQLi, SSRF",
+    "summary": "List of daily preventative steps for developers to counteract cross-language injection attacks and server fetching vulnerabilities.",
+    "contains": [
+      "Use of Prepared Statements",
+      "Allow-list vs Deny-list validation",
+      "Internal Network Isolation"
+    ],
+    "used_by": [
+      "A03",
+      "A10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'OWASP Injection Prevention & SSRF Prevention Cheat Sheet'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "Threat Modeling",
+    "type": "Implementation Guide",
+    "title": "OWASP Threat Modeling Initiative",
+    "scope": "System Design, Topology Architecture",
+    "summary": "STRIDE or DREAD methodology document in designing cyber threat scenarios from the initial phase of the software system blueprint to avoid Insecure Design.",
+    "contains": [
+      "Data Flow Diagram Mapping",
+      "Analysis of the Impact of Cross-Trust System Design",
+      "Logical Defect Repair Matrix"
+    ],
+    "used_by": [
+      "A04"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'OWASP Threat Modeling Initiative'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'OWASP Threat Modeling Initiative'.",
+      "legal": "Legal Mode: Review and ratify policy documents/SOPs for the 'OWASP Threat Modeling Initiative'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "SDLC",
+    "type": "Implementation Guide",
+    "title": "Secure Software Development Lifecycle",
+    "scope": "CI/CD Pipelines, DevSecOps",
+    "summary": "Integrate security tools (SAST, DAST, SCA) into the application release supply chain so that every update or component procurement remains certified for integrity.",
+    "contains": [
+      "SCA Absorption in the Build Process",
+      "Artifact Library Digital Signer",
+      "Open Code vs Third Party Libraries"
+    ],
+    "used_by": [
+      "A04",
+      "A08"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of the 'Secure Software Development Lifecycle'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize the 'Secure Software Development Lifecycle'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Secure Software Development Lifecycle'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "Hardening Guide",
+    "type": "Cheat Sheet",
+    "title": "Infrastructure Security Hardening",
+    "scope": "Cloud, Server, Default Framework",
+    "summary": "Specific steps disable default functionality, change default ports, delete testing directories, and narrow the attack surface in the OS and Middleware.",
+    "contains": [
+      "Security Headers Settings",
+      "Strict CORS (Cross Origin Resource Sharing) Configuration",
+      "Stack Trace and Error Message Protection"
+    ],
+    "used_by": [
+      "A05"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'Infrastructure Security Hardening'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'Infrastructure Security Hardening'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'Infrastructure Security Hardening'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "Monitoring Guide",
+    "type": "Implementation Guide",
+    "title": "OWASP Logging Vocabulary and Guidelines",
+    "scope": "Log Analytics, SIEM",
+    "summary": "A reference list of what metadata needs to be logged to make it easier to detect repeated threats without touching the distribution of confidential user data (no-PII logging).",
+    "contains": [
+      "Log Format Enrichment (JSON base)",
+      "Automatic Redaction of Tokens/Passwords from Logs",
+      "Warning Anomaly Rules (Alarm Tuning)"
+    ],
+    "used_by": [
+      "A09"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'OWASP Logging Vocabulary and Guidelines'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'OWASP Logging Vocabulary and Guidelines'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'OWASP Logging Vocabulary and Guidelines'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V2",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 2: Authentication",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A07 meets ASVS formal verification standards regarding Authentication failures.",
+    "contains": [
+      "Identity Complexity Verification",
+      "Biometric Validation"
+    ],
+    "used_by": [
+      "A07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 2: Authentication'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ASVS Chapter 2: Authentication'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 2: Authentication'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V3",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 3: Session Management",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A07 meets ASVS formal verification standards regarding session management and identity token protection.",
+    "contains": [
+      "Inactive Session Duration Determination",
+      "Cookie Protection (HttpOnly & Secure)"
+    ],
+    "used_by": [
+      "A07"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 3: Session Management'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ASVS Chapter 3: Session Management'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 3: Session Management'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V4",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 4: Access Control",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A01 meets ASVS verification standards to validate user filter effectiveness.",
+    "contains": [
+      "Separation of Admin Services from the Public"
+    ],
+    "used_by": [
+      "A01"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 4: Access Control'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Implement RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) to support 'ASVS Chapter 4: Access Control'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 4: Access Control'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V5",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 5: Validation, Sanitization, Encoding",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A03 & A10 meeting point for formal testing of character input filter mechanisms.",
+    "contains": [
+      "SSRF Testing",
+      "Input Injection Filters"
+    ],
+    "used_by": [
+      "A03",
+      "A10"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 5: Validation, Sanitization, Encoding'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ASVS Chapter 5: Validation, Sanitization, Encoding'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 5: Validation, Sanitization, Encoding'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V6",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 6: Stored Cryptography",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A02 correlation that explains the details of algorithm testing.",
+    "contains": [
+      "List of Allowed Algorithms"
+    ],
+    "used_by": [
+      "A02"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 6: Stored Cryptography'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ASVS Chapter 6: Stored Cryptography'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 6: Stored Cryptography'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V7",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 7: Error Handling and Logging",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 A09 correlations related to specific event logging.",
+    "contains": [
+      "Audit Trail Integrity Testing"
+    ],
+    "used_by": [
+      "A09"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 7: Error Handling and Logging'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Enable centralized logging (SIEM) and automatic anomaly alerts regarding 'ASVS Chapter 7: Error Handling and Logging'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 7: Error Handling and Logging'. Ensure compliance with legal and compliance aspects."
+    }
+  },
+  {
+    "id": "ASVS V14",
+    "type": "Standard Mapping",
+    "title": "ASVS Chapter 14: Configuration",
+    "scope": "ASVS L1-L3 Verification Standard",
+    "summary": "OWASP Top 10 Correlation A05 & A06 tests production environments for outdated components and server misconfigurations.",
+    "contains": [
+      "Dependency Audit"
+    ],
+    "used_by": [
+      "A05",
+      "A06"
+    ],
+    "roleTranslations": {
+      "bod": "Board Mode: Provide strategic oversight of 'ASVS Chapter 14: Configuration'. Make sure these initiatives support business goals and do not disrupt operations.",
+      "sysadmin": "SysAdmin Mode: Apply technical controls (system configuration/patching) according to server hardening rules to realize 'ASVS Chapter 14: Configuration'.",
+      "legal": "Legal Mode: Review and ratify policy/SOP documents for 'ASVS Chapter 14: Configuration'. Ensure compliance with legal and compliance aspects."
+    }
+  }
+]
