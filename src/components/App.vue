@@ -60,6 +60,10 @@
                   <i class="fas fa-envelope nav-icon"></i>
                   <span>{{ $t('nav.kontak') }}</span>
                 </router-link>
+                <button @click.stop="toggleLanguage" class="framework-nav-toggle" style="text-decoration: none; border: none; background: transparent; cursor: pointer;">
+                  <i class="fas fa-language nav-icon"></i>
+                  <span>{{ currentLang === 'id' ? 'English' : 'Indonesia' }}</span>
+                </button>
             </nav>
 
             <div class="framework-tools">
