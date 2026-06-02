@@ -3,9 +3,9 @@
     <div class="iso-shell">
       <div class="iso-hero">
         <div class="iso-hero-content">
-          <span class="iso-kicker">Alat Audit & Kepatuhan</span>
-          <h1 class="iso-title">Checklist Tools & AI Gap Analysis</h1>
-          <p class="iso-lede">Buat checklist mandiri berdasarkan gabungan regulasi yang Anda pilih, isi implementasi Anda, dan gunakan AI untuk menganalisa *gap* secara instan. Data Anda aman 100% dan hanya disimpan di browser lokal Anda (Local Storage).</p>
+          <span class="iso-kicker">{{ ui.kicker }}</span>
+          <h1 class="iso-title">{{ ui.title }}</h1>
+          <p class="iso-lede">{{ ui.lede }}</p>
         </div>
       </div>
 
@@ -13,10 +13,10 @@
         <!-- Step 1: Framework Selection -->
         <section class="iso-panel" v-if="currentStep === 1">
           <div class="iso-panel-head">
-            <h3>1. Pilih Regulasi Rujukan</h3>
-            <span class="iso-chip">Tahap 1/2</span>
+            <h3>1. {{ ui.chooseRegulations }}</h3>
+            <span class="iso-chip">{{ ui.stepOne }}</span>
           </div>
-          <p class="iso-panel-copy">Pilih regulasi atau standar yang digunakan di perusahaan Anda untuk digabungkan menjadi satu checklist audit terpadu.</p>
+          <p class="iso-panel-copy">{{ ui.chooseCopy }}</p>
           
           <div class="checklist-framework-selector">
             <label class="framework-checkbox" v-for="fw in availableFrameworks" :key="fw.id">
@@ -25,7 +25,7 @@
                 <i :class="`fas ${fw.icon}`"></i>
                 <div>
                   <strong>{{ fw.name }}</strong>
-                  <span>{{ fw.desc }}</span>
+                  <span>{{ fw.desc[$i18n.locale] || fw.desc.id }}</span>
                 </div>
               </div>
             </label>
@@ -33,7 +33,7 @@
 
           <div class="mt-4 d-flex justify-content-end">
             <button class="btn-primary-custom" @click="generateChecklist" :disabled="selectedFrameworks.length === 0 || loading">
-              {{ loading ? 'Membuat Checklist...' : 'Buat Checklist Sekarang' }} <i class="fas fa-arrow-right ms-2"></i>
+              {{ loading ? ui.creating : ui.createNow }} <i class="fas fa-arrow-right ms-2"></i>
             </button>
           </div>
         </section>
@@ -42,29 +42,29 @@
         <template v-if="currentStep === 2">
           <section class="iso-panel" style="grid-column: 1 / -1;">
             <div class="iso-panel-head">
-              <h3>2. Workspace Checklist Mandiri</h3>
+              <h3>2. {{ ui.workspace }}</h3>
               <div>
-                <button class="btn btn-sm btn-outline-secondary me-2" @click="currentStep = 1"><i class="fas fa-arrow-left me-1"></i> Kembali</button>
-                <button class="btn btn-sm btn-outline-danger me-2" @click="resetChecklist"><i class="fas fa-trash-alt me-1"></i> Mulai Ulang (Clear)</button>
-                <button class="btn btn-sm btn-success" @click="analyzeWithAI" :disabled="aiLoading"><i class="fas fa-robot me-1"></i> {{ aiLoading ? 'Menganalisa...' : 'Analisa Gap dengan AI' }}</button>
+                <button class="btn btn-sm btn-outline-secondary me-2" @click="currentStep = 1"><i class="fas fa-arrow-left me-1"></i> {{ ui.back }}</button>
+                <button class="btn btn-sm btn-outline-danger me-2" @click="resetChecklist"><i class="fas fa-trash-alt me-1"></i> {{ ui.clear }}</button>
+                <button class="btn btn-sm btn-success" @click="analyzeWithAI" :disabled="aiLoading"><i class="fas fa-robot me-1"></i> {{ aiLoading ? ui.analyzing : ui.analyze }}</button>
               </div>
             </div>
             
             <div class="checklist-summary mb-3">
               <div class="summary-item">
-                <small>Total Kontrol</small>
+                <small>{{ ui.totalControls }}</small>
                 <strong>{{ checklistData.length }}</strong>
               </div>
               <div class="summary-item">
-                <small>Sudah Implementasi</small>
+                <small>{{ ui.implemented }}</small>
                 <strong class="text-success">{{ countStatus('Sudah') }}</strong>
               </div>
               <div class="summary-item">
-                <small>Belum / Parsial</small>
+                <small>{{ ui.notPartial }}</small>
                 <strong class="text-warning">{{ countStatus('Belum') + countStatus('Parsial') }}</strong>
               </div>
               <div class="summary-item">
-                <small>Progress</small>
+                <small>{{ ui.progress }}</small>
                 <strong>{{ Math.round((countStatus('Sudah') / (checklistData.length || 1)) * 100) }}%</strong>
               </div>
             </div>
@@ -73,10 +73,10 @@
               <table class="checklist-table">
                 <thead>
                   <tr>
-                    <th width="15%">ID Kontrol</th>
-                    <th width="35%">Deskripsi Regulasi</th>
-                    <th width="20%">Status Implementasi</th>
-                    <th width="30%">Catatan / Bukti (Evidens)</th>
+                    <th width="15%">{{ ui.controlId }}</th>
+                    <th width="35%">{{ ui.regDescription }}</th>
+                    <th width="20%">{{ ui.implementationStatus }}</th>
+                    <th width="30%">{{ ui.evidence }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -110,7 +110,7 @@
                         class="form-control form-control-sm" 
                         v-model="item.evidence" 
                         @blur="saveToLocal"
-                        placeholder="Contoh: Kami sudah memiliki kebijakan X yang tertuang pada dokumen Y..."
+                        :placeholder="ui.evidencePlaceholder"
                         rows="2"
                       ></textarea>
                     </td>
@@ -126,11 +126,11 @@
       <div v-if="aiResult" class="iso-grid mt-3">
         <section class="iso-panel" style="grid-column: 1 / -1; background: #fffaf2; border-color: #f59e0b;">
           <div class="iso-panel-head">
-            <h3><i class="fas fa-robot text-warning me-2"></i> Hasil Analisa Gap AI</h3>
+            <h3><i class="fas fa-robot text-warning me-2"></i> {{ ui.aiResult }}</h3>
             <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-danger" @click="exportToPDF"><i class="fas fa-file-pdf me-1"></i> Cetak PDF</button>
-              <button class="btn btn-sm btn-outline-primary" @click="exportToWord"><i class="fas fa-file-word me-1"></i> Download Word</button>
-              <button class="btn btn-sm btn-outline-secondary" @click="aiResult = null">Tutup</button>
+              <button class="btn btn-sm btn-outline-danger" @click="exportToPDF"><i class="fas fa-file-pdf me-1"></i> {{ ui.printPdf }}</button>
+              <button class="btn btn-sm btn-outline-primary" @click="exportToWord"><i class="fas fa-file-word me-1"></i> {{ ui.downloadWord }}</button>
+              <button class="btn btn-sm btn-outline-secondary" @click="aiResult = null">{{ ui.close }}</button>
             </div>
           </div>
           <div class="ai-report-content" id="ai-report-content" v-html="formattedAiResult"></div>
@@ -153,24 +153,55 @@ export default {
       aiLoading: false,
       aiResult: null,
       availableFrameworks: [
-        { id: 'iso27001', name: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt', file: 'iso27001.json' },
-        { id: 'iso37001', name: 'ISO 37001:2016', desc: 'Sistem Manajemen Anti-Penyuapan', icon: 'fa-handshake', file: 'iso37001.json' },
-        { id: 'cobit', name: 'COBIT 2019', desc: 'Framework Tata Kelola IT Perusahaan', icon: 'fa-project-diagram', file: 'cobit_2019.json' },
-        { id: 'seojk', name: 'SEOJK 29/03/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark', file: 'seojk_29_2022_requirements.json' },
-        { id: 'nist', name: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-network-wired', file: 'nist_csf.json' },
-        { id: 'pbi', name: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
-        { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: 'Resiliensi Digital OJK', icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },
-        { id: 'padg', name: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract', file: 'padg_requirements.json' },
-        { id: 'padk', name: 'PADK 1 Tahun 2026', desc: 'Penyelenggaraan TI Bank Umum', icon: 'fa-server', file: 'padk_1_2026_requirements.json' },
-        { id: 'owasp_top10', name: 'OWASP Top 10', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug', file: 'owasp_top10_reqs.json' },
-        { id: 'owasp_asvs', name: 'OWASP ASVS', desc: 'Verifikasi Keamanan Aplikasi', icon: 'fa-list-check', file: 'owasp_asvs_reqs.json' },
-        { id: 'pdp', name: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield', file: 'uu_pdp_requirements.json' }
+        { id: 'iso27001', name: 'ISO 27001:2022', desc: { id: 'Standar Internasional Keamanan Informasi', en: 'International information security standard' }, icon: 'fa-shield-alt', file: 'iso27001.json' },
+        { id: 'iso37001', name: 'ISO 37001:2016', desc: { id: 'Sistem Manajemen Anti-Penyuapan', en: 'Anti-bribery management system' }, icon: 'fa-handshake', file: 'iso37001.json' },
+        { id: 'cobit', name: 'COBIT 2019', desc: { id: 'Framework Tata Kelola IT Perusahaan', en: 'Enterprise IT governance framework' }, icon: 'fa-project-diagram', file: 'cobit_2019.json' },
+        { id: 'seojk', name: 'SEOJK 29/03/2022', desc: { id: 'Regulasi Keamanan Siber OJK', en: 'OJK cybersecurity regulation' }, icon: 'fa-landmark', file: 'seojk_29_2022_requirements.json' },
+        { id: 'nist', name: 'NIST CSF 2.0', desc: { id: 'Framework Keamanan Siber NIST', en: 'NIST cybersecurity framework' }, icon: 'fa-network-wired', file: 'nist_csf.json' },
+        { id: 'pbi', name: 'PBI 02/2024', desc: { id: 'Peraturan Bank Indonesia', en: 'Bank Indonesia regulation' }, icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
+        { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: { id: 'Resiliensi Digital OJK', en: 'OJK digital resilience' }, icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },
+        { id: 'padg', name: 'PADG 32/2025', desc: { id: 'Pedoman Keamanan Siber BI', en: 'BI cybersecurity guidance' }, icon: 'fa-file-contract', file: 'padg_requirements.json' },
+        { id: 'padk', name: 'PADK 1 Tahun 2026', desc: { id: 'Penyelenggaraan TI Bank Umum', en: 'IT operations for commercial banks' }, icon: 'fa-server', file: 'padk_1_2026_requirements.json' },
+        { id: 'owasp_top10', name: 'OWASP Top 10', desc: { id: 'Standar Keamanan Aplikasi Web', en: 'Web application security standard' }, icon: 'fa-bug', file: 'owasp_top10_reqs.json' },
+        { id: 'owasp_asvs', name: 'OWASP ASVS', desc: { id: 'Verifikasi Keamanan Aplikasi', en: 'Application security verification' }, icon: 'fa-list-check', file: 'owasp_asvs_reqs.json' },
+        { id: 'pdp', name: 'UU PDP No. 27/2022', desc: { id: 'Pelindungan Data Pribadi', en: 'Personal data protection' }, icon: 'fa-user-shield', file: 'uu_pdp_requirements.json' }
       ],
       selectedFrameworks: [],
       checklistData: []
     };
   },
   computed: {
+    ui() {
+      const en = this.$i18n.locale === 'en';
+      return {
+        kicker: en ? 'Audit & Compliance Tool' : 'Alat Audit & Kepatuhan',
+        title: 'Checklist Tools & AI Gap Analysis',
+        lede: en ? 'Create a self-assessment checklist from selected regulations, fill in your implementation status, and use AI to analyze gaps instantly. Your data stays in your browser local storage.' : 'Buat checklist mandiri berdasarkan gabungan regulasi yang Anda pilih, isi implementasi Anda, dan gunakan AI untuk menganalisa gap secara instan. Data Anda aman 100% dan hanya disimpan di browser lokal Anda (Local Storage).',
+        chooseRegulations: en ? 'Choose Reference Regulations' : 'Pilih Regulasi Rujukan',
+        stepOne: en ? 'Step 1/2' : 'Tahap 1/2',
+        chooseCopy: en ? 'Choose the regulations or standards used in your company to merge them into one integrated audit checklist.' : 'Pilih regulasi atau standar yang digunakan di perusahaan Anda untuk digabungkan menjadi satu checklist audit terpadu.',
+        creating: en ? 'Creating Checklist...' : 'Membuat Checklist...',
+        createNow: en ? 'Create Checklist Now' : 'Buat Checklist Sekarang',
+        workspace: en ? 'Self-Assessment Checklist Workspace' : 'Workspace Checklist Mandiri',
+        back: en ? 'Back' : 'Kembali',
+        clear: en ? 'Start Over (Clear)' : 'Mulai Ulang (Clear)',
+        analyzing: en ? 'Analyzing...' : 'Menganalisa...',
+        analyze: en ? 'Analyze Gap with AI' : 'Analisa Gap dengan AI',
+        totalControls: en ? 'Total Controls' : 'Total Kontrol',
+        implemented: en ? 'Implemented' : 'Sudah Implementasi',
+        notPartial: en ? 'Not / Partial' : 'Belum / Parsial',
+        progress: 'Progress',
+        controlId: en ? 'Control ID' : 'ID Kontrol',
+        regDescription: en ? 'Regulatory Description' : 'Deskripsi Regulasi',
+        implementationStatus: en ? 'Implementation Status' : 'Status Implementasi',
+        evidence: en ? 'Notes / Evidence' : 'Catatan / Bukti (Evidens)',
+        evidencePlaceholder: en ? 'Example: We already have policy X documented in document Y...' : 'Contoh: Kami sudah memiliki kebijakan X yang tertuang pada dokumen Y...',
+        aiResult: en ? 'AI Gap Analysis Result' : 'Hasil Analisa Gap AI',
+        printPdf: en ? 'Print PDF' : 'Cetak PDF',
+        downloadWord: 'Download Word',
+        close: en ? 'Close' : 'Tutup'
+      };
+    },
     formattedAiResult() {
       if (!this.aiResult) return '';
       return marked(this.aiResult);

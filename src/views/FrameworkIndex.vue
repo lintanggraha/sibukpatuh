@@ -2,10 +2,10 @@
   <div class="frx-shell">
     <section class="frx-hero">
       <div class="frx-hero-content">
-        <span class="frx-kicker"><i class="fas fa-compass"></i> SibukPatuh - Platform Edukatif</span>
-        <h1 class="frx-title">Ruang Belajar Framework & Regulasi Siber</h1>
+        <span class="frx-kicker"><i class="fas fa-compass"></i> {{ $t('home.kicker') }}</span>
+        <h1 class="frx-title">{{ $t('home.title') }}</h1>
         <p class="frx-copy">
-          Memahami struktur dan konsep acuan keamanan siber (ISO, NIST, COBIT) dan regulasi nasional (OJK, BI) dalam satu antarmuka terintegrasi.
+          {{ $t('home.copy') }}
         </p>
       </div>
     </section>
@@ -16,7 +16,7 @@
       </div>
       <div class="frx-disclaimer-copy">
         <p>
-          <strong>Disclaimer:</strong> Materi <strong>ISO 27001</strong>, <strong>ISO 37001</strong>, dan <strong>COBIT 2019</strong> di SibukPatuh disusun murni sebagai <strong>ringkasan edukatif, interpretasi, dan bahan pembelajaran</strong>. Konten ini bukan merupakan teks resmi dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA. Harap merujuk pada dokumen standar resmi yang berlaku untuk keperluan formal.
+          <strong>Disclaimer:</strong> {{ $t('home.disclaimer') }}
         </p>
       </div>
     </section>
@@ -24,37 +24,37 @@
     <!-- Deskripsi Edukatif (penting untuk SEO & AdSense) -->
     <section class="frx-description" aria-label="Deskripsi platform">
       <div class="frx-description-inner">
-        <h2 class="frx-desc-title">Apa itu SibukPatuh?</h2>
+        <h2 class="frx-desc-title">{{ $t('home.whatTitle') }}</h2>
         <p class="frx-desc-text">
-          <strong>SibukPatuh</strong> adalah platform referensi edukatif berbahasa Indonesia yang dirancang untuk membantu praktisi IT, auditor, <em>compliance officer</em>, dan pelajar dalam memahami berbagai framework keamanan siber dan regulasi teknologi informasi. Platform ini menyajikan ringkasan yang terstruktur, mudah dipahami, dan dapat digunakan sebagai titik awal eksplorasi.
+          {{ $t('home.whatCopy') }}
         </p>
         <div class="frx-desc-grid">
           <div class="frx-desc-item">
             <span class="frx-desc-icon"><i class="fas fa-book-open"></i></span>
             <div>
-              <h3 class="frx-desc-item-title">Framework Internasional</h3>
-              <p class="frx-desc-item-text">Pelajari ISO 27001:2022, ISO 37001:2016, NIST CSF 2.0, dan COBIT 2019 melalui ringkasan kontrol, domain, dan panduan pembacaan struktural dalam bahasa Indonesia.</p>
+              <h3 class="frx-desc-item-title">{{ $t('home.cards.internationalTitle') }}</h3>
+              <p class="frx-desc-item-text">{{ $t('home.cards.internationalText') }}</p>
             </div>
           </div>
           <div class="frx-desc-item">
             <span class="frx-desc-icon"><i class="fas fa-landmark"></i></span>
             <div>
-              <h3 class="frx-desc-item-title">Regulasi Nasional</h3>
-              <p class="frx-desc-item-text">Navigasi kewajiban SEOJK 29/2022, PBI 02/2024, PADG 32/2025, PADK 1 Tahun 2026, dan UU PDP 27/2022 dengan peta kewajiban yang terstruktur.</p>
+              <h3 class="frx-desc-item-title">{{ $t('home.cards.nationalTitle') }}</h3>
+              <p class="frx-desc-item-text">{{ $t('home.cards.nationalText') }}</p>
             </div>
           </div>
           <div class="frx-desc-item">
             <span class="frx-desc-icon"><i class="fas fa-tools"></i></span>
             <div>
-              <h3 class="frx-desc-item-title">Alat Bantu Kepatuhan</h3>
-              <p class="frx-desc-item-text">Gunakan Cross-Mapping, Gap Analysis, Checklist Tools, dan Compliance Simulator untuk mengevaluasi dan mensimulasikan tingkat kepatuhan organisasi Anda.</p>
+              <h3 class="frx-desc-item-title">{{ $t('home.cards.toolsTitle') }}</h3>
+              <p class="frx-desc-item-text">{{ $t('home.cards.toolsText') }}</p>
             </div>
           </div>
           <div class="frx-desc-item">
             <span class="frx-desc-icon"><i class="fas fa-shield-alt"></i></span>
             <div>
-              <h3 class="frx-desc-item-title">Intelligence Center</h3>
-              <p class="frx-desc-item-text">Monitor ancaman siber terkini melalui threat feed OTX AlienVault, daftar CISA KEV, dan analisis CVE berbasis AI untuk konteks regulasi Indonesia.</p>
+              <h3 class="frx-desc-item-title">{{ $t('home.cards.intelTitle') }}</h3>
+              <p class="frx-desc-item-text">{{ $t('home.cards.intelText') }}</p>
             </div>
           </div>
         </div>
@@ -68,12 +68,12 @@
             <span class="frx-card-icon"><i :class="`fas ${fw.icon}`"></i></span>
             <div class="frx-card-info">
               <h3>{{ fw.name }}</h3>
-              <p>{{ fw.summary }}</p>
+              <p>{{ fw.summary[$i18n.locale] || fw.summary.id }}</p>
             </div>
           </div>
           <div class="frx-card-metric">
             <span class="frx-card-count">{{ fw.metric_value !== null ? formatNumber(fw.metric_value) : '-' }}</span>
-            <span class="frx-card-label">{{ fw.metric_label }}</span>
+            <span class="frx-card-label">{{ $t(fw.metric_label_key) }}</span>
           </div>
         </router-link>
       </article>
@@ -114,8 +114,8 @@ export default {
           routeName: "iso27001",
           name: "ISO 27001:2022",
           subtitle: "Ringkasan kontrol keamanan informasi",
-          summary: "Ringkasan edukatif Annex A, domain kontrol, dan konteks pembacaan awal.",
-          metric_label: "Kontrol",
+          summary: { id: "Ringkasan edukatif Annex A, domain kontrol, dan konteks pembacaan awal.", en: "Educational summary of Annex A, control domains, and initial reading context." },
+          metric_label_key: "home.metric.controls",
           metric_value: 93,
           accent: "#0f766e",
           icon: "fa-shield-alt",
@@ -124,8 +124,8 @@ export default {
           routeName: "iso37001",
           name: "ISO 37001:2016",
           subtitle: "Ringkasan sistem manajemen anti-penyuapan",
-          summary: "Ringkasan edukatif ABMS, due diligence, kontrol operasional, pelaporan, audit, dan peningkatan.",
-          metric_label: "Butir",
+          summary: { id: "Ringkasan edukatif ABMS, due diligence, kontrol operasional, pelaporan, audit, dan peningkatan.", en: "Educational summary of ABMS, due diligence, operational controls, reporting, audit, and improvement." },
+          metric_label_key: "home.metric.items",
           metric_value: 38,
           accent: "#b45309",
           icon: "fa-handshake",
@@ -134,8 +134,8 @@ export default {
           routeName: "nist",
           name: "NIST CSF 2.0",
           subtitle: "Kerangka belajar fungsi dan subkategori",
-          summary: "GOVERN hingga RECOVER untuk membantu membaca struktur dan istilah inti.",
-          metric_label: "Subkategori",
+          summary: { id: "GOVERN hingga RECOVER untuk membantu membaca struktur dan istilah inti.", en: "From GOVERN to RECOVER to help read the structure and core terminology." },
+          metric_label_key: "home.metric.subcategories",
           metric_value: 106,
           accent: "#144e72",
           icon: "fa-compass",
@@ -144,8 +144,8 @@ export default {
           routeName: "cobit",
           name: "COBIT 2019",
           subtitle: "Ringkasan governance of enterprise I&T",
-          summary: "Ringkasan edukatif prinsip, design factor, core model, dan alur pembacaan.",
-          metric_label: "Objektif",
+          summary: { id: "Ringkasan edukatif prinsip, design factor, core model, dan alur pembacaan.", en: "Educational summary of principles, design factors, core model, and reading flow." },
+          metric_label_key: "home.metric.objectives",
           metric_value: 40,
           accent: "#15803d",
           icon: "fa-project-diagram",
@@ -154,8 +154,8 @@ export default {
           routeName: "seojk",
           name: "SEOJK 29/2022",
           subtitle: "Ringkasan ketahanan siber perbankan",
-          summary: "Peta kewajiban, lampiran penilaian, dan konteks pembacaan regulasi.",
-          metric_label: "Kewajiban",
+          summary: { id: "Peta kewajiban, lampiran penilaian, dan konteks pembacaan regulasi.", en: "Obligation map, assessment appendices, and regulatory reading context." },
+          metric_label_key: "home.metric.requirements",
           metric_value: null,
           accent: "#b45309",
           icon: "fa-landmark",
@@ -164,8 +164,8 @@ export default {
           routeName: "padk",
           name: "PADK 1 Tahun 2026",
           subtitle: "Penyelenggaraan TI oleh bank umum",
-          summary: "Pedoman tata kelola TI, pelaporan, perizinan, insiden, dan format regulator OJK.",
-          metric_label: "Kewajiban",
+          summary: { id: "Pedoman tata kelola TI, pelaporan, perizinan, insiden, dan format regulator OJK.", en: "Guidance on IT governance, reporting, licensing, incidents, and OJK regulator formats." },
+          metric_label_key: "home.metric.requirements",
           metric_value: null,
           accent: "#0f766e",
           icon: "fa-server",
@@ -174,8 +174,8 @@ export default {
           routeName: "resilience",
           name: "Resiliensi OJK",
           subtitle: "Panduan belajar digital resilience",
-          summary: "Referensi tematik untuk memahami ketahanan digital tata kelola dan operasional.",
-          metric_label: "Kewajiban",
+          summary: { id: "Referensi tematik untuk memahami ketahanan digital tata kelola dan operasional.", en: "Thematic reference for understanding governance and operational digital resilience." },
+          metric_label_key: "home.metric.requirements",
           metric_value: null,
           accent: "#7c3aed",
           icon: "fa-layer-group",
@@ -184,8 +184,8 @@ export default {
            routeName: "pbi",
            name: "PBI 02/2024",
            subtitle: "Ringkasan KKS dan ketahanan siber BI",
-           summary: "Kewajiban KKS, pelaporan insiden, dan konteks pembacaan regulasi BI.",
-           metric_label: "Kewajiban",
+           summary: { id: "Kewajiban KKS, pelaporan insiden, dan konteks pembacaan regulasi BI.", en: "KKS obligations, incident reporting, and BI regulatory reading context." },
+           metric_label_key: "home.metric.requirements",
            metric_value: null,
            accent: "#b91c1c",
            icon: "fa-university",
@@ -194,8 +194,8 @@ export default {
            routeName: "padg",
            name: "PADG 32/2025",
            subtitle: "Pengaturan Industri Sistem Pembayaran",
-           summary: "Kewajiban penyelenggaraan sistem pembayaran, produk, inovasi, pricing, pengawasan, dan koordinasi.",
-           metric_label: "Kewajiban",
+           summary: { id: "Kewajiban penyelenggaraan sistem pembayaran, produk, inovasi, pricing, pengawasan, dan koordinasi.", en: "Obligations for payment system operations, products, innovation, pricing, supervision, and coordination." },
+           metric_label_key: "home.metric.requirements",
            metric_value: null,
            accent: "#0d9488",
            icon: "fa-credit-card",
@@ -204,8 +204,8 @@ export default {
            routeName: "owasp_top10",
            name: "OWASP Top 10 2025",
            subtitle: "10 kerentanan aplikasi web paling kritis",
-           summary: "Eksplorasi kerentanan keamanan web, analogi penyerang, dan spesifikasi mitigasi pengembangan.",
-           metric_label: "Kerentanan",
+           summary: { id: "Eksplorasi kerentanan keamanan web, analogi penyerang, dan spesifikasi mitigasi pengembangan.", en: "Explore web security vulnerabilities, attacker analogies, and development mitigation guidance." },
+           metric_label_key: "home.metric.vulnerabilities",
            metric_value: null,
            accent: "#b91c1c",
            icon: "fa-bug",
@@ -214,8 +214,8 @@ export default {
            routeName: "owasp_asvs",
            name: "OWASP ASVS 5.0.0",
            subtitle: "Standar pengujian & verifikasi keamanan",
-           summary: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.",
-           metric_label: "Kategori Uji",
+           summary: { id: "Kriteria pengujian kontrol arsitektur maupun operasional berdasarkan level risiko aplikasi.", en: "Testing criteria for architectural and operational controls based on application risk levels." },
+           metric_label_key: "home.metric.testCategories",
            metric_value: null,
            accent: "#1d4ed8",
            icon: "fa-check-double",
@@ -224,8 +224,8 @@ export default {
            routeName: "simulator",
            name: "Compliance Simulator",
            subtitle: "What-If Compliance Analysis",
-           summary: "Simulasikan skenario infrastruktur dan operasional Anda untuk melihat gap kepatuhan secara instan.",
-           metric_label: "Skenario",
+           summary: { id: "Simulasikan skenario infrastruktur dan operasional Anda untuk melihat gap kepatuhan secara instan.", en: "Simulate infrastructure and operational scenarios to instantly see compliance gaps." },
+           metric_label_key: "home.metric.scenarios",
            metric_value: 6,
            accent: "#0f766e",
            icon: "fa-gamepad",

@@ -8,46 +8,25 @@
               <i class="fas fa-graduation-cap"></i>
             </div>
           </div>
-          <h1 class="about-title">Tentang SibukPatuh</h1>
-          <p class="about-subtitle">Platform Navigasi & Eksplorasi Framework Keamanan Siber</p>
+          <h1 class="about-title">{{ $t('about.title') }}</h1>
+          <p class="about-subtitle">{{ $t('about.subtitle') }}</p>
         </div>
 
         <div class="about-card mb-4">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4"><i class="fas fa-book-reader text-primary me-2"></i> Rangkuman Edukatif</h3>
+            <h3 class="mb-4"><i class="fas fa-book-reader text-primary me-2"></i> {{ $t('about.summaryTitle') }}</h3>
 
-            <p><strong>SibukPatuh</strong> adalah aplikasi web edukatif untuk mempelajari struktur, istilah, dan konteks berbagai framework serta regulasi teknologi informasi, baik nasional maupun internasional.</p>
+            <p>{{ $t('about.p1') }}</p>
 
-            <p>Setiap halaman disusun sebagai materi belajar mandiri: ada ringkasan, pengelompokan domain, contoh cara membaca kewajiban, dan penjelasan praktis agar pembaca tidak hanya melihat daftar pasal atau kontrol, tetapi juga memahami hubungan antara tata kelola, risiko, bukti audit, dan implementasi operasional.</p>
+            <p>{{ $t('about.p2') }}</p>
 
-            <p>Aplikasi ini dibuat untuk membantu tim IT, auditor, dan compliance officer dalam:</p>
+            <p>{{ $t('about.help') }}</p>
             <div class="feature-grid mb-5">
-              <div class="feature-item">
+              <div class="feature-item" v-for="(feature, index) in $tm('about.features')" :key="index">
                 <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
                 <div class="feature-content">
-                  <h5 class="fw-bold mb-1">Memahami struktur materi</h5>
-                  <p class="mb-0 text-muted small">Dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                <div class="feature-content">
-                  <h5 class="fw-bold mb-1">Membaca ringkasan edukatif</h5>
-                  <p class="mb-0 text-muted small">Tanpa harus membuka dokumen satu per satu di tahap awal pencarian referensi</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                <div class="feature-content">
-                  <h5 class="fw-bold mb-1">Menelusuri istilah utama</h5>
-                  <p class="mb-0 text-muted small">Per domain, kategori, atau topik untuk mempermudah pemahaman tim</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                <div class="feature-content">
-                  <h5 class="fw-bold mb-1">Membandingkan acuan</h5>
-                  <p class="mb-0 text-muted small">Sebagai bahan belajar kros-mapping dan diskusi internal manajemen risiko</p>
+                  <h5 class="fw-bold mb-1">{{ feature[0] }}</h5>
+                  <p class="mb-0 text-muted small">{{ feature[1] }}</p>
                 </div>
               </div>
             </div>
@@ -55,18 +34,16 @@
             <div class="alert alert-warning d-flex align-items-start shadow-sm border-0 rounded-4" role="alert">
               <i class="fas fa-exclamation-triangle fs-3 me-3 mt-1 text-warning"></i>
               <div>
-                <h5 class="alert-heading fw-bold">Catatan Penting</h5>
-                <p class="mb-0 text-dark">Konten di dalam SibukPatuh disusun murni sebagai <strong>referensi pembelajaran dan edukasi</strong> untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk <strong>ISO 27001:2022</strong>, <strong>ISO 37001:2016</strong>, dan <strong>COBIT 2019</strong>, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).</p>
+                <h5 class="alert-heading fw-bold">{{ $t('about.importantTitle') }}</h5>
+                <p class="mb-0 text-dark">{{ $t('about.importantText') }}</p>
               </div>
             </div>
 
             <div class="editorial-note mt-4">
-              <h4><i class="fas fa-pen-nib me-2"></i> Metodologi Editorial</h4>
-              <p>
-                Konten SibukPatuh dibuat dengan pendekatan kurasi edukatif. Dokumen publik, standar, dan referensi industri dibaca ulang, dipetakan ke kategori pembelajaran, lalu ditulis kembali dalam bahasa yang lebih mudah dipahami oleh praktisi. Untuk standar berlisensi seperti ISO dan COBIT, SibukPatuh tidak menyalin teks resmi; yang ditampilkan adalah interpretasi, struktur belajar, dan konteks penggunaan.
-              </p>
+              <h4><i class="fas fa-pen-nib me-2"></i> {{ $t('about.editorialTitle') }}</h4>
+              <p>{{ $t('about.editorialP1') }}</p>
               <p class="mb-0">
-                Jika ada perubahan regulasi, kekeliruan ringkasan, atau sumber yang perlu diperbaiki, pembaca dapat mengirim koreksi melalui halaman <router-link to="/contact">Kontak</router-link>.
+                {{ $t('about.editorialP2') }}
               </p>
             </div>
           </div>
@@ -74,7 +51,7 @@
 
         <div class="about-card bg-light-gradient mt-5">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 header-with-line"><i class="fas fa-user-shield text-info me-2"></i> Siapa di Balik SibukPatuh?</h3>
+            <h3 class="mb-4 header-with-line"><i class="fas fa-user-shield text-info me-2"></i> {{ $t('about.creatorTitle') }}</h3>
             <div class="creator-profile d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4">
               <div class="creator-avatar flex-shrink-0">
                 <div class="avatar-circle">
@@ -83,9 +60,9 @@
               </div>
               <div>
                 <h4 class="fw-bold mb-1">Lintang</h4>
-                <p class="text-primary fw-medium mb-3">Risk Management Professional</p>
+                <p class="text-primary fw-medium mb-3">{{ $t('about.creatorRole') }}</p>
                 <p class="text-muted lh-lg">
-                  Berangkat dari pengalaman sehari-hari dalam menavigasi berbagai persyaratan kepatuhan (<em>compliance</em>) dan manajemen risiko, saya menyadari perlunya sebuah ruang interaktif yang bisa menjembatani antara teori dokumen PDF yang tebal dengan pemahaman praktis di lapangan. SibukPatuh dibangun sebagai wujud dedikasi untuk terus berbagi wawasan seputar <em>cybersecurity</em> dan mempermudah tim untuk menyelaraskan operasi dan kebijakan dengan best practice internasional.
+                  {{ $t('about.creatorText') }}
                 </p>
 
                 <div class="contact-links mt-4 d-flex flex-wrap gap-3">
@@ -93,7 +70,7 @@
                     <i class="fas fa-envelope me-2"></i> lintanggraha@gmail.com
                   </a>
                   <a href="https://www.linkedin.com/in/lintanggraha/" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill px-4 btn-contact">
-                    <i class="fab fa-linkedin me-2"></i> Terhubung di LinkedIn
+                    <i class="fab fa-linkedin me-2"></i> {{ $t('about.linkedin') }}
                   </a>
                   <a href="https://github.com/lintanggraha/sibukpatuh" target="_blank" rel="noopener noreferrer" class="btn btn-dark rounded-pill px-4 btn-contact">
                     <i class="fab fa-github me-2"></i> GitHub Repository

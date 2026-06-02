@@ -22,6 +22,7 @@
     "traktirKopi": "Traktir Kopi",
     "modeTerang": "Aktifkan Mode Terang",
     "modeGelap": "Aktifkan Mode Gelap",
+    "gantiBahasa": "Ganti bahasa",
     "bacaSelengkapnya": "Baca Selengkapnya",
     "kembali": "Kembali"
   },
@@ -36,5 +37,183 @@
     "roleBod": "Board of Directors (BoD)",
     "roleSysadmin": "SysAdmin / Tim Teknis",
     "roleLegal": "Legal / Compliance"
-  }
+  },
+  "home": {
+    "kicker": "SibukPatuh - Platform Edukatif",
+    "title": "Ruang Belajar Framework & Regulasi Siber",
+    "copy": "Memahami struktur dan konsep acuan keamanan siber (ISO, NIST, COBIT) dan regulasi nasional (OJK, BI) dalam satu antarmuka terintegrasi.",
+    "disclaimer": "Materi ISO 27001, ISO 37001, dan COBIT 2019 di SibukPatuh disusun murni sebagai ringkasan edukatif, interpretasi, dan bahan pembelajaran. Konten ini bukan merupakan teks resmi dan bukan pengganti dokumen berlisensi dari ISO, BSN, atau ISACA. Harap merujuk pada dokumen standar resmi yang berlaku untuk keperluan formal.",
+    "whatTitle": "Apa itu SibukPatuh?",
+    "whatCopy": "SibukPatuh adalah platform referensi edukatif berbahasa Indonesia yang dirancang untuk membantu praktisi IT, auditor, compliance officer, dan pelajar dalam memahami berbagai framework keamanan siber dan regulasi teknologi informasi. Platform ini menyajikan ringkasan yang terstruktur, mudah dipahami, dan dapat digunakan sebagai titik awal eksplorasi.",
+    "cards": {
+      "internationalTitle": "Framework Internasional",
+      "internationalText": "Pelajari ISO 27001:2022, ISO 37001:2016, NIST CSF 2.0, dan COBIT 2019 melalui ringkasan kontrol, domain, dan panduan pembacaan struktural dalam bahasa Indonesia.",
+      "nationalTitle": "Regulasi Nasional",
+      "nationalText": "Navigasi kewajiban SEOJK 29/2022, PBI 02/2024, PADG 32/2025, PADK 1 Tahun 2026, dan UU PDP 27/2022 dengan peta kewajiban yang terstruktur.",
+      "toolsTitle": "Alat Bantu Kepatuhan",
+      "toolsText": "Gunakan Cross-Mapping, Gap Analysis, Checklist Tools, dan Compliance Simulator untuk mengevaluasi dan mensimulasikan tingkat kepatuhan organisasi Anda.",
+      "intelTitle": "Intelligence Center",
+      "intelText": "Monitor ancaman siber terkini melalui threat feed OTX AlienVault, daftar CISA KEV, dan analisis CVE berbasis AI untuk konteks regulasi Indonesia."
+    },
+    "metric": {
+      "controls": "Kontrol",
+      "items": "Butir",
+      "subcategories": "Subkategori",
+      "objectives": "Objektif",
+      "requirements": "Kewajiban",
+      "vulnerabilities": "Kerentanan",
+      "testCategories": "Kategori Uji",
+      "scenarios": "Skenario"
+    }
+  },
+  "about": {
+    "title": "Tentang SibukPatuh",
+    "subtitle": "Platform Navigasi & Eksplorasi Framework Keamanan Siber",
+    "summaryTitle": "Rangkuman Edukatif",
+    "p1": "SibukPatuh adalah aplikasi web edukatif untuk mempelajari struktur, istilah, dan konteks berbagai framework serta regulasi teknologi informasi, baik nasional maupun internasional.",
+    "p2": "Setiap halaman disusun sebagai materi belajar mandiri: ada ringkasan, pengelompokan domain, contoh cara membaca kewajiban, dan penjelasan praktis agar pembaca tidak hanya melihat daftar pasal atau kontrol, tetapi juga memahami hubungan antara tata kelola, risiko, bukti audit, dan implementasi operasional.",
+    "help": "Aplikasi ini dibuat untuk membantu tim IT, auditor, dan compliance officer dalam:",
+    "importantTitle": "Catatan Penting",
+    "importantText": "Konten di dalam SibukPatuh disusun murni sebagai referensi pembelajaran dan edukasi untuk memperdalam pemahaman, bukan sebagai panduan resmi yang absolut. Khusus untuk ISO 27001:2022, ISO 37001:2016, dan COBIT 2019, materi yang tersedia merupakan rangkuman dan interpretasi edukatif, bukan reproduksi dokumen resmi. Untuk keperluan audit, sertifikasi, atau pengambilan keputusan hukum, pengguna diwajibkan untuk selalu merujuk pada dokumen standar resmi yang berlaku yang diterbitkan oleh masing-masing institusi (BSN, OJK, BI, ISO, ISACA).",
+    "editorialTitle": "Metodologi Editorial",
+    "editorialP1": "Konten SibukPatuh dibuat dengan pendekatan kurasi edukatif. Dokumen publik, standar, dan referensi industri dibaca ulang, dipetakan ke kategori pembelajaran, lalu ditulis kembali dalam bahasa yang lebih mudah dipahami oleh praktisi. Untuk standar berlisensi seperti ISO dan COBIT, SibukPatuh tidak menyalin teks resmi; yang ditampilkan adalah interpretasi, struktur belajar, dan konteks penggunaan.",
+    "editorialP2": "Jika ada perubahan regulasi, kekeliruan ringkasan, atau sumber yang perlu diperbaiki, pembaca dapat mengirim koreksi melalui halaman Kontak.",
+    "creatorTitle": "Siapa di Balik SibukPatuh?",
+    "creatorRole": "Risk Management Professional",
+    "creatorText": "Berangkat dari pengalaman sehari-hari dalam menavigasi berbagai persyaratan kepatuhan (compliance) dan manajemen risiko, saya menyadari perlunya sebuah ruang interaktif yang bisa menjembatani antara teori dokumen PDF yang tebal dengan pemahaman praktis di lapangan. SibukPatuh dibangun sebagai wujud dedikasi untuk terus berbagi wawasan seputar cybersecurity dan mempermudah tim untuk menyelaraskan operasi dan kebijakan dengan best practice internasional.",
+    "linkedin": "Terhubung di LinkedIn",
+    "features": [
+      [
+        "Memahami struktur materi",
+        "Dari berbagai framework kepatuhan (SEOJK, PBI, ISO, NIST, COBIT)"
+      ],
+      [
+        "Membaca ringkasan edukatif",
+        "Tanpa harus membuka dokumen satu per satu di tahap awal pencarian referensi"
+      ],
+      [
+        "Menelusuri istilah utama",
+        "Per domain, kategori, atau topik untuk mempermudah pemahaman tim"
+      ],
+      [
+        "Membandingkan acuan",
+        "Sebagai bahan belajar kros-mapping dan diskusi internal manajemen risiko"
+      ]
+    ]
+  },
+  "contact": {
+    "kicker": "Kontak & Redaksi",
+    "title": "Hubungi Pengelola SibukPatuh",
+    "intro": "Gunakan halaman ini untuk mengirim koreksi konten, masukan sumber regulasi, pertanyaan privasi, atau laporan bug pada fitur edukatif SibukPatuh.",
+    "main": "Kontak Utama",
+    "siteOwner": "Pengelola situs",
+    "requestTypes": "Jenis Permintaan",
+    "items": [
+      "Koreksi ringkasan framework, regulasi, atau istilah teknis.",
+      "Permintaan penghapusan data yang tidak seharusnya tampil.",
+      "Pertanyaan tentang privasi, cookie, atau penggunaan layanan pihak ketiga.",
+      "Usulan topik edukatif baru untuk keamanan siber dan kepatuhan TI."
+    ],
+    "responseTitle": "Komitmen Respons",
+    "responseText": "Setiap laporan akan ditinjau secara manual. Koreksi yang berdampak pada akurasi materi akan diprioritaskan, terutama jika menyangkut referensi regulasi, standar, atau risiko keamanan yang dapat menyesatkan pembaca."
+  },
+  "privacy": {
+    "kicker": "Kebijakan Privasi",
+    "title": "Privacy Policy SibukPatuh",
+    "intro": "Halaman ini menjelaskan bagaimana SibukPatuh mengelola data teknis, cookie, layanan pihak ketiga, dan informasi yang dikirim pengguna saat memakai alat edukatif di situs ini.",
+    "updated": "Terakhir diperbarui: 13 Mei 2026",
+    "sections": [
+      [
+        "Ringkasan Penggunaan Data",
+        "SibukPatuh adalah situs edukasi dan referensi pembelajaran keamanan siber. Kami tidak menjual data pribadi pengguna. Data yang diproses dipakai untuk menjalankan fitur situs, memahami performa halaman, mencegah penyalahgunaan, dan menampilkan layanan pihak ketiga yang relevan."
+      ],
+      [
+        "Layanan Pihak Ketiga",
+        "Beberapa fitur mengambil data dari sumber publik atau API pihak ketiga, seperti CISA KEV, MITRE, OTX AlienVault, Pulsedive, atau layanan AI. Saat fitur tersebut dipakai, permintaan dapat diteruskan ke layanan terkait agar hasil pencarian atau analisis dapat ditampilkan."
+      ],
+      [
+        "Kontak",
+        "Untuk pertanyaan tentang kebijakan privasi, hubungi pengelola melalui"
+      ]
+    ],
+    "processedTitle": "Informasi yang Dapat Diproses",
+    "processedItems": [
+      "Data teknis seperti alamat IP, user agent, halaman yang dikunjungi, waktu akses, dan metrik performa.",
+      "Data yang pengguna masukkan secara sukarela, misalnya alamat email pada fitur breach checker atau pertanyaan pada fitur AI analyst.",
+      "Data penyimpanan lokal browser, misalnya preferensi tema tampilan."
+    ],
+    "processedWarning": "Jangan memasukkan password, token, API key, rahasia perusahaan, atau data pribadi sensitif ke fitur pencarian, simulator, maupun AI assistant.",
+    "cookiesTitle": "Cookie, Analytics, dan Iklan",
+    "cookiesP1": "Situs ini dapat memakai layanan analitik, speed insights, dan Google AdSense. Layanan tersebut dapat menggunakan cookie, web beacon, alamat IP, atau identifier browser untuk mengukur performa, mencegah fraud, dan menayangkan iklan.",
+    "cookiesP2": "Google dan pihak ketiga dapat menempatkan atau membaca cookie pada browser pengguna sebagai bagian dari penayangan iklan. Pengguna dapat mempelajari cara Google menggunakan data melalui",
+    "controlsTitle": "Kontrol Pengguna",
+    "controlsItems": [
+      "Pengguna dapat menghapus cookie dan local storage melalui pengaturan browser.",
+      "Pengguna dapat menonaktifkan personalisasi iklan melalui pengaturan akun Google atau browser.",
+      "Pengguna dapat menghubungi pengelola situs untuk pertanyaan privasi atau permintaan koreksi informasi."
+    ]
+  },
+  "tools": {
+    "analysisTitle": "Analisis Framework",
+    "analysisDesc": "Bandingkan framework secara side-by-side atau lakukan evaluasi Gap Analysis.",
+    "frameworkA": "Framework A (Baseline)",
+    "frameworkB": "Framework B (Target Evaluasi)",
+    "sideBySide": "Side-by-Side Comparison",
+    "gapAnalysis": "Gap Analysis",
+    "crossTitle": "Cross-Mapping Visual",
+    "crossDesc": "Eksplorasi hubungan antar kontrol dari 6 framework kepatuhan TI.",
+    "resetView": "Reset View",
+    "filterFramework": "Filter Framework",
+    "crossHint": "Minimal 2 framework harus aktif untuk melihat relasi. Klik pada node kontrol untuk menyorot relasinya.",
+    "equivalent": "Ekuivalen di framework aktif:",
+    "chooseOneOrMore": "Pilih satu atau lebih",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "startOver": "Mulai Ulang"
+  },
+  "auto_0": "Global Intelligence Center",
+  "auto_1": "Unified Threat Intelligence",
+  "auto_2": "Your ultimate cyber radar! Dashboard ini ngasih lo visibility penuh buat mantau kerentanan global dari CISA KEV, indikator ancaman real-time via OTX AlienVault, plus pantauan kebocoran data. Everything you need to stay proactive and keep the bad guys out, all in one screen.",
+  "auto_3": "CISA KEV",
+  "auto_4": "Vulnerabilities",
+  "auto_5": "OTX Events",
+  "auto_6": "Recent Pulses",
+  "auto_7": "Active IOCs",
+  "auto_8": "Threat Indicators",
+  "auto_9": "Threat Feed",
+  "auto_10": "Vulnerability Intel",
+  "auto_11": "BREACH CHECKER",
+  "auto_12": "Integrasi database intelijen kebocoran data real-time.",
+  "auto_13": "Email aman dalam pantauan kami.",
+  "auto_14": "Salin",
+  "auto_15": "Activity Distribution",
+  "auto_16": "Active Indicators (IOC)",
+  "auto_17": "TYPE",
+  "auto_18": "INDICATOR VALUE",
+  "auto_19": "SIGHTS",
+  "auto_20": "Context & Pulse Title",
+  "auto_21": "External Source",
+  "auto_22": "View on OTX",
+  "auto_23": "Email to analyze...",
+  "auto_24": "Search IOC...",
+  "auto_25": "Ringkasan Pemenuhan (Coverage)",
+  "auto_26": "Export CSV",
+  "auto_27": "Covered",
+  "auto_28": "Partial",
+  "auto_29": "Gap",
+  "auto_30": "Total Baseline",
+  "auto_31": "Detail Gap Analysis",
+  "auto_32": "Status",
+  "auto_33": "Covered",
+  "auto_34": "Partial",
+  "auto_35": "Gap",
+  "auto_36": "Aspek yang Belum Terpenuhi (Gap):",
+  "auto_37": "Tidak ditemukan kontrol yang memadai pada target.",
+  "auto_38": "Tidak ada data evaluasi (Baseline tidak memiliki kontrol ini).",
+  "auto_39": "Filter Topik:",
+  "auto_40": "Semua Topik",
+  "auto_41": "Ekuivalen",
+  "auto_42": "Hanya ada di salah satu",
+  "auto_43": "Tidak ada kontrol yang berkesesuaian",
+  "auto_44": "Tidak ada kontrol yang berkesesuaian"
 }

@@ -4,9 +4,9 @@
     <div class="card shadow-sm mb-4 border-0">
       <div class="card-body">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h5 class="card-title mb-0">Ringkasan Pemenuhan (Coverage)</h5>
+          <h5 class="card-title mb-0">{{ $t('auto_25') }}</h5>
           <button class="btn btn-sm btn-outline-success" @click="exportCSV">
-            <i class="fa-solid fa-file-csv me-1"></i> Export CSV
+            <i class="fa-solid fa-file-csv me-1"></i> {{ $t('auto_26') }}
           </button>
         </div>
         
@@ -31,7 +31,7 @@
               role="button"
             >
               <h2 class="text-success fw-bold mb-1">{{ stats.covered }}</h2>
-              <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-check text-success me-1"></i> Covered</span>
+              <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-check text-success me-1"></i> {{ $t('auto_27') }}</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -42,7 +42,7 @@
               role="button"
             >
               <h2 class="text-warning fw-bold mb-1">{{ stats.partial }}</h2>
-              <span class="text-muted small fw-bold"><i class="fa-solid fa-triangle-exclamation text-warning me-1"></i> Partial</span>
+              <span class="text-muted small fw-bold"><i class="fa-solid fa-triangle-exclamation text-warning me-1"></i> {{ $t('auto_28') }}</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -53,7 +53,7 @@
               role="button"
             >
               <h2 class="text-danger fw-bold mb-1">{{ stats.gap }}</h2>
-              <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-xmark text-danger me-1"></i> Gap</span>
+              <span class="text-muted small fw-bold"><i class="fa-solid fa-circle-xmark text-danger me-1"></i> {{ $t('auto_29') }}</span>
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -64,7 +64,7 @@
               role="button"
             >
               <h2 class="text-secondary fw-bold mb-1">{{ stats.total }}</h2>
-              <span class="text-muted small fw-bold"><i class="fa-solid fa-list-check text-secondary me-1"></i> Total Baseline</span>
+              <span class="text-muted small fw-bold"><i class="fa-solid fa-list-check text-secondary me-1"></i> {{ $t('auto_30') }}</span>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@
     <!-- Detail Table -->
     <div class="card shadow-sm border-0">
       <div class="card-header bg-white py-3 border-bottom">
-        <h5 class="card-title mb-0">Detail Gap Analysis</h5>
+        <h5 class="card-title mb-0">{{ $t('auto_31') }}</h5>
       </div>
       <div class="card-body p-0">
         <div class="table-responsive">
@@ -82,7 +82,7 @@
             <thead class="table-light">
               <tr>
                 <th style="width: 40%;" class="p-3">Kebutuhan Baseline ({{ getFrameworkName(sourceFwId) }})</th>
-                <th style="width: 15%;" class="text-center p-3">Status</th>
+                <th style="width: 15%;" class="text-center p-3">{{ $t('auto_32') }}</th>
                 <th style="width: 45%;" class="p-3">Keterangan Target ({{ getFrameworkName(targetFwId) }})</th>
               </tr>
             </thead>
@@ -96,13 +96,13 @@
                 </td>
                 <td class="text-center p-3">
                   <div v-if="item.status === 'Covered'" class="badge bg-success bg-opacity-10 text-success border border-success rounded-pill w-100 py-2 fs-6">
-                    <i class="fa-solid fa-check me-1"></i> Covered
+                    <i class="fa-solid fa-check me-1"></i> {{ $t('auto_33') }}
                   </div>
                   <div v-else-if="item.status === 'Partial'" class="badge bg-warning bg-opacity-10 text-warning border border-warning rounded-pill w-100 py-2 fs-6" style="color: #b78103 !important;">
-                    <i class="fa-solid fa-exclamation me-1"></i> Partial
+                    <i class="fa-solid fa-exclamation me-1"></i> {{ $t('auto_34') }}
                   </div>
                   <div v-else class="badge bg-danger bg-opacity-10 text-danger border border-danger rounded-pill w-100 py-2 fs-6">
-                    <i class="fa-solid fa-xmark me-1"></i> Gap
+                    <i class="fa-solid fa-xmark me-1"></i> {{ $t('auto_35') }}
                   </div>
                 </td>
                 <td class="p-3">
@@ -114,12 +114,12 @@
                     <span class="badge bg-secondary mb-1">{{ item.targetRef }}</span>
                     <p class="mb-1 fw-medium">{{ item.targetNote }}</p>
                     <div class="alert alert-warning py-2 px-3 mb-0 mt-2 small border-warning bg-warning bg-opacity-10 d-inline-block">
-                      <div class="fw-bold mb-1"><i class="fa-solid fa-circle-info me-1"></i> Aspek yang Belum Terpenuhi (Gap):</div>
+                      <div class="fw-bold mb-1"><i class="fa-solid fa-circle-info me-1"></i> {{ $t('auto_36') }}</div>
                       {{ item.partialReason || 'Target hanya mencakup sebagian aspek dari baseline, atau tidak sedetail spesifikasi acuan.' }}
                     </div>
                   </div>
                   <div v-else class="text-danger small fw-bold mt-2">
-                    <i class="fa-solid fa-circle-exclamation me-1"></i> Tidak ditemukan kontrol yang memadai pada target.
+                    <i class="fa-solid fa-circle-exclamation me-1"></i> {{ $t('auto_37') }}
                   </div>
                 </td>
               </tr>
@@ -127,7 +127,7 @@
                 <td colspan="3" class="text-center p-5 text-muted">
                   <i class="fa-solid fa-clipboard-question fs-1 mb-3"></i>
                   <p class="mb-0 fs-5" v-if="analysisResults.length > 0">Tidak ada data yang sesuai dengan filter ({{ selectedFilter }}).</p>
-                  <p class="mb-0 fs-5" v-else>Tidak ada data evaluasi (Baseline tidak memiliki kontrol ini).</p>
+                  <p class="mb-0 fs-5" v-else>{{ $t('auto_38') }}</p>
                 </td>
               </tr>
             </tbody>

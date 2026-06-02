@@ -3,9 +3,9 @@
     <div class="iso-shell">
       <div class="iso-hero">
         <div class="iso-hero-content">
-          <span class="iso-kicker">Interactive Tool</span>
+          <span class="iso-kicker">{{ ui.kicker }}</span>
           <h1 class="iso-title">"What-If" Compliance Simulator</h1>
-          <p class="iso-lede">Pilih skenario arsitektur dan operasional Anda. Evaluasi secara instan potensi celah kepatuhan lintas regulasi berdasarkan multi-dimensi parameter yang Anda terapkan.</p>
+          <p class="iso-lede">{{ ui.lede }}</p>
         </div>
       </div>
 
@@ -33,7 +33,7 @@
             <!-- Current Step Content -->
             <div class="iso-panel-head mb-3">
               <h3>{{ currentStep }}. {{ currentStepData.title }}</h3>
-              <span class="iso-pill">Pilih satu atau lebih</span>
+              <span class="iso-pill">{{ ui.chooseOneOrMore }}</span>
             </div>
             
             <p class="text-muted mb-4" style="font-size: 0.9rem;">{{ currentStepData.desc }}</p>
@@ -62,7 +62,7 @@
                 @click="currentStep--" 
                 :style="{ visibility: currentStep > 1 ? 'visible' : 'hidden' }"
               >
-                <i class="fas fa-arrow-left me-2"></i> Kembali
+                <i class="fas fa-arrow-left me-2"></i> {{ ui.back }}
               </button>
               
               <button 
@@ -71,11 +71,11 @@
                 :disabled="scenario[currentStepData.field].length === 0"
               >
                 <template v-if="currentStep < 5">
-                  Lanjut <i class="fas fa-arrow-right ms-2"></i>
+                  {{ ui.next }} <i class="fas fa-arrow-right ms-2"></i>
                 </template>
                 <template v-else>
                   <i class="fas" :class="isSimulating ? 'fa-spinner fa-spin' : 'fa-play'"></i> 
-                  {{ isSimulating ? 'Menyimulasikan...' : 'Jalankan Simulasi' }}
+                  {{ isSimulating ? ui.simulating : ui.runSimulation }}
                 </template>
               </button>
             </div>
@@ -87,36 +87,36 @@
           <!-- Parameter Summary Panel -->
           <section class="iso-panel" style="grid-column: 1 / -1;">
             <div class="iso-panel-head">
-              <h3>Ringkasan Parameter Anda</h3>
-              <button class="btn btn-sm btn-outline-primary" @click="resetSimulation"><i class="fas fa-redo me-1"></i> Mulai Ulang</button>
+              <h3>{{ ui.parameterSummary }}</h3>
+              <button class="btn btn-sm btn-outline-primary" @click="resetSimulation"><i class="fas fa-redo me-1"></i> {{ ui.startOver }}</button>
             </div>
             <div class="sim-scenario-summary-grid">
                <div class="summary-col">
-                 <small>Industri</small>
+                 <small>{{ ui.industry }}</small>
                  <div class="tag-cloud">
                    <span class="iso-pill compact" v-for="item in scenario.industries" :key="item">{{ item }}</span>
                  </div>
                </div>
                <div class="summary-col">
-                 <small>Lokasi Data</small>
+                 <small>{{ ui.dataLocation }}</small>
                  <div class="tag-cloud">
                    <span class="iso-pill compact" v-for="item in scenario.locations" :key="item">{{ item }}</span>
                  </div>
                </div>
                <div class="summary-col">
-                 <small>Tipe Data</small>
+                 <small>{{ ui.dataType }}</small>
                  <div class="tag-cloud">
                    <span class="iso-pill compact" v-for="item in scenario.dataTypes" :key="item">{{ item }}</span>
                  </div>
                </div>
                <div class="summary-col">
-                 <small>Pengelola</small>
+                 <small>{{ ui.manager }}</small>
                  <div class="tag-cloud">
                    <span class="iso-pill compact" v-for="item in scenario.usages" :key="item">{{ item }}</span>
                  </div>
                </div>
                <div class="summary-col" v-if="scenario.targets.length">
-                 <small>Target Regulasi</small>
+                 <small>{{ ui.regulatoryTarget }}</small>
                  <div class="tag-cloud">
                    <span class="iso-pill compact" v-for="item in scenario.targets" :key="item">{{ item }}</span>
                  </div>
@@ -127,7 +127,7 @@
           <!-- Result Cards Panel -->
           <section class="iso-panel mt-3" style="grid-column: 1 / -1; background: transparent; border: none; padding: 0; box-shadow: none;">
             <div class="iso-panel-head mb-3">
-              <h3 style="font-size: 1.4rem;"><i class="fas fa-radar me-2 text-primary"></i> Temuan Kepatuhan (Gap Analysis)</h3>
+              <h3 style="font-size: 1.4rem;"><i class="fas fa-radar me-2 text-primary"></i> {{ ui.findings }}</h3>
             </div>
             <div class="sim-results">
               <div v-for="(res, idx) in simulationResult" :key="idx" class="sim-result-card" :class="res.severity">
@@ -141,7 +141,7 @@
                   </div>
                   <p class="sim-message">{{ res.message }}</p>
                   <div v-if="res.recommendation" class="sim-recommendation">
-                    <strong>Tindakan / Rekomendasi: </strong> {{ res.recommendation }}
+                    <strong>{{ ui.recommendation }}: </strong> {{ res.recommendation }}
                   </div>
                 </div>
               </div>
@@ -242,7 +242,103 @@ export default {
       ]
     };
   },
+  created() {
+    if (this.$i18n.locale === 'en') {
+      this.steps = [
+        {
+          shortTitle: 'Industry',
+          title: 'Industry Sector',
+          desc: 'Choose the industry sector where your organization operates.',
+          field: 'industries',
+          options: [
+            { id: 'Perbankan', label: 'Banking', desc: 'Commercial / Islamic banks', icon: 'fa-university' },
+            { id: 'Fintech', label: 'Digital Financial Services', desc: 'P2P lending, e-wallets', icon: 'fa-mobile-alt' },
+            { id: 'Kesehatan', label: 'Healthcare / Medical', desc: 'Hospitals, clinics', icon: 'fa-hospital' },
+            { id: 'E-Commerce', label: 'E-Commerce / Retail', desc: 'Online stores, logistics', icon: 'fa-shopping-cart' },
+            { id: 'Pemerintahan', label: 'Government / SOE', desc: 'Public institutions', icon: 'fa-building' }
+          ]
+        },
+        {
+          shortTitle: 'Server Location',
+          title: 'Data Placement Location',
+          desc: 'Where are your primary and backup data stored?',
+          field: 'locations',
+          options: [
+            { id: 'On-Premise', label: 'On-Premise (Local)', desc: 'Physical servers in your own office', icon: 'fa-server' },
+            { id: 'Cloud ID', label: 'Indonesia Cloud', desc: 'Data center within Indonesia', icon: 'fa-cloud' },
+            { id: 'Singapura', label: 'Singapore / Asia Cloud', desc: 'AWS/GCP/Azure SG', icon: 'fa-globe-asia' },
+            { id: 'US', label: 'United States Cloud', desc: 'US data center', icon: 'fa-flag-usa' },
+            { id: 'Eropa', label: 'Europe Cloud', desc: 'European Union data center', icon: 'fa-euro-sign' }
+          ]
+        },
+        {
+          shortTitle: 'Data Class',
+          title: 'Processed Data Types',
+          desc: 'What kinds of data are stored by your system?',
+          field: 'dataTypes',
+          options: [
+            { id: 'Publik', label: 'Public Data', desc: 'General information, news, portfolio', icon: 'fa-bullhorn' },
+            { id: 'Pribadi Umum', label: 'General Personal Data', desc: 'Name, email, phone number', icon: 'fa-address-card' },
+            { id: 'Pribadi Spesifik', label: 'Specific Personal Data', desc: 'Medical, biometric, religion', icon: 'fa-fingerprint' },
+            { id: 'Finansial', label: 'Financial Data', desc: 'Credit cards, account transactions', icon: 'fa-credit-card' },
+            { id: 'HAKI', label: 'Trade Secrets', desc: 'Source code, secret recipes', icon: 'fa-user-secret' }
+          ]
+        },
+        {
+          shortTitle: 'Manager',
+          title: 'System Managers & Access',
+          desc: 'Who has access to manage systems and databases?',
+          field: 'usages',
+          options: [
+            { id: 'Tim Internal', label: 'Internal Team (Local)', desc: 'Local employees / office team', icon: 'fa-users' },
+            { id: 'Tim Remote', label: 'Cross-Border Remote Team', desc: 'Remote workers abroad', icon: 'fa-laptop-house' },
+            { id: 'Vendor Cloud', label: 'Cloud Provider Vendor', desc: 'AWS, Google, Microsoft', icon: 'fa-cloud-meatball' },
+            { id: 'Pihak Ketiga', label: 'Other Third Parties', desc: 'Analytics, marketing agencies', icon: 'fa-handshake' }
+          ]
+        },
+        {
+          shortTitle: 'Target',
+          title: 'Standards & Regulations (Optional)',
+          desc: 'Which regulations are your main compliance targets?',
+          field: 'targets',
+          options: [
+            { id: 'ISO 27001', label: 'ISO 27001:2022', desc: 'International information security standard', icon: 'fa-shield-alt' },
+            { id: 'NIST', label: 'NIST CSF 2.0', desc: 'NIST cybersecurity framework', icon: 'fa-compass' },
+            { id: 'COBIT', label: 'COBIT 2019', desc: 'Enterprise IT governance', icon: 'fa-project-diagram' },
+            { id: 'SEOJK', label: 'SEOJK 29/2022', desc: 'OJK cybersecurity regulation', icon: 'fa-landmark' },
+            { id: 'PBI', label: 'PBI 02/2024', desc: 'Bank Indonesia regulation', icon: 'fa-building-columns' },
+            { id: 'PADG', label: 'PADG 32/2025', desc: 'BI cybersecurity guidance', icon: 'fa-file-contract' },
+            { id: 'PADK', label: 'PADK 1 Tahun 2026', desc: 'IT operations for commercial banks', icon: 'fa-server' },
+            { id: 'Resiliensi', label: 'OJK Resilience', desc: 'OJK digital resilience guidance', icon: 'fa-shield-heart' },
+            { id: 'OWASP', label: 'OWASP (Top 10 / ASVS)', desc: 'Web application security standards', icon: 'fa-bug' },
+            { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Personal data protection', icon: 'fa-user-shield' }
+          ]
+        }
+      ];
+    }
+  },
   computed: {
+    ui() {
+      const en = this.$i18n.locale === 'en';
+      return {
+        kicker: en ? 'Interactive Tool' : 'Interactive Tool',
+        lede: en ? 'Choose your architecture and operational scenario. Instantly evaluate potential cross-regulation compliance gaps based on the parameters you apply.' : 'Pilih skenario arsitektur dan operasional Anda. Evaluasi secara instan potensi celah kepatuhan lintas regulasi berdasarkan multi-dimensi parameter yang Anda terapkan.',
+        chooseOneOrMore: en ? 'Choose one or more' : 'Pilih satu atau lebih',
+        back: en ? 'Back' : 'Kembali',
+        next: en ? 'Next' : 'Lanjut',
+        simulating: en ? 'Simulating...' : 'Menyimulasikan...',
+        runSimulation: en ? 'Run Simulation' : 'Jalankan Simulasi',
+        parameterSummary: en ? 'Your Parameter Summary' : 'Ringkasan Parameter Anda',
+        startOver: en ? 'Start Over' : 'Mulai Ulang',
+        industry: en ? 'Industry' : 'Industri',
+        dataLocation: en ? 'Data Location' : 'Lokasi Data',
+        dataType: en ? 'Data Type' : 'Tipe Data',
+        manager: en ? 'Manager' : 'Pengelola',
+        regulatoryTarget: en ? 'Regulatory Target' : 'Target Regulasi',
+        findings: en ? 'Compliance Findings (Gap Analysis)' : 'Temuan Kepatuhan (Gap Analysis)',
+        recommendation: en ? 'Action / Recommendation' : 'Tindakan / Rekomendasi'
+      };
+    },
     currentStepData() {
       return this.steps[this.currentStep - 1] || {};
     }
@@ -290,6 +386,7 @@ export default {
     calculateResult() {
       const results = [];
       const { industries, locations, dataTypes, usages, targets } = this.scenario;
+      const en = this.$i18n.locale === 'en';
 
       // Helper functions
       const hasForeignCloud = locations.includes('Singapura') || locations.includes('US') || locations.includes('Eropa');
@@ -300,64 +397,64 @@ export default {
       const hasRemote = usages.includes('Tim Remote');
 
       // 1. Kebutuhan Kebijakan & Administratif (Policies & SOPs)
-      let policiesMsg = 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
-      let policiesRec = 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
+      let policiesMsg = en ? 'Based on your profile, the following policy documents should be owned and approved by top management:' : 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
+      let policiesRec = en ? 'Access Management SOP, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), and Incident Response SOP.' : 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
       
       const hasOJK = targets.includes('SEOJK') || targets.includes('PBI') || targets.includes('PADG') || targets.includes('Resiliensi') || targets.includes('PADK');
 
       if (targets.includes('ISO 27001') || targets.includes('NIST') || targets.includes('COBIT')) {
-          policiesRec += ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset, dan Dokumentasi Tata Kelola TI & Manajemen Risiko (COBIT).';
+          policiesRec += en ? ' ISMS documents, Cryptography Policy, Asset Classification SOP, and IT Governance & Risk Management documentation (COBIT).' : ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset, dan Dokumentasi Tata Kelola TI & Manajemen Risiko (COBIT).';
       }
       if (targets.includes('PDP') || hasPersonalData) {
-          policiesRec += ' Penunjukan DPO (Data Protection Officer), Privacy Policy Eksternal, Kebijakan Retensi Data, dan SOP Pemenuhan Hak Subjek Data.';
+          policiesRec += en ? ' DPO appointment, external Privacy Policy, Data Retention Policy, and Data Subject Rights Fulfillment SOP.' : ' Penunjukan DPO (Data Protection Officer), Privacy Policy Eksternal, Kebijakan Retensi Data, dan SOP Pemenuhan Hak Subjek Data.';
       }
       if (hasOJK || hasFinancialSect) {
-          policiesRec += ' Kebijakan Tata Kelola TI sesuai Regulasi Finansial (OJK/BI), Pembentukan Komite Pengarah TI (IT Steering Committee).';
+          policiesRec += en ? ' IT Governance Policy aligned with financial regulations (OJK/BI), including an IT Steering Committee.' : ' Kebijakan Tata Kelola TI sesuai Regulasi Finansial (OJK/BI), Pembentukan Komite Pengarah TI (IT Steering Committee).';
       }
       results.push({
-          framework: 'Tata Kelola & Kebijakan (Governance)',
+          framework: en ? 'Governance & Policy' : 'Tata Kelola & Kebijakan (Governance)',
           severity: 'warning',
           message: policiesMsg,
           recommendation: policiesRec
       });
 
       // 2. Kebutuhan Tools & Infrastruktur Teknis (Tools)
-      let toolsMsg = 'Untuk memenuhi kontrol teknis regulasi, arsitektur Anda membutuhkan perangkat (tools) keamanan spesifik:';
-      let toolsRec = 'Next-Gen Firewall (NGFW), Antivirus/EDR di Endpoint, dan enkripsi Data at Rest & in Transit (TLS 1.2+).';
+      let toolsMsg = en ? 'To satisfy regulatory technical controls, your architecture requires specific security tools:' : 'Untuk memenuhi kontrol teknis regulasi, arsitektur Anda membutuhkan perangkat (tools) keamanan spesifik:';
+      let toolsRec = en ? 'Next-Gen Firewall (NGFW), endpoint Antivirus/EDR, and encryption for data at rest and in transit (TLS 1.2+).' : 'Next-Gen Firewall (NGFW), Antivirus/EDR di Endpoint, dan enkripsi Data at Rest & in Transit (TLS 1.2+).';
       
       if (hasPersonalData || dataTypes.includes('Finansial')) {
-          toolsRec += ' Sistem Data Masking / Obfuscator di level database (terutama lingkungan dev), dan Data Loss Prevention (DLP) untuk mencegah eksfiltrasi.';
+          toolsRec += en ? ' Database-level data masking/obfuscation, especially for development environments, and DLP to prevent exfiltration.' : ' Sistem Data Masking / Obfuscator di level database (terutama lingkungan dev), dan Data Loss Prevention (DLP) untuk mencegah eksfiltrasi.';
       }
       if (hasRemote) {
-          toolsRec += ' VPN Enterprise dengan otentikasi MFA (Multi-Factor Authentication), solusi MDM (Mobile Device Management) untuk BYOD.';
+          toolsRec += en ? ' Enterprise VPN with MFA and MDM for BYOD devices.' : ' VPN Enterprise dengan otentikasi MFA (Multi-Factor Authentication), solusi MDM (Mobile Device Management) untuk BYOD.';
       }
       if (targets.includes('OWASP')) {
-          toolsRec += ' SAST/DAST Tooling terintegrasi dalam CI/CD pipeline, Web Application Firewall (WAF), dan implementasi prinsip Secure Coding.';
+          toolsRec += en ? ' SAST/DAST tooling integrated into the CI/CD pipeline, Web Application Firewall (WAF), and secure coding practices.' : ' SAST/DAST Tooling terintegrasi dalam CI/CD pipeline, Web Application Firewall (WAF), dan implementasi prinsip Secure Coding.';
       } else if (hasOJK || hasFinancialSect) {
-          toolsRec += ' Web Application Firewall (WAF), sistem PAM (Privileged Access Management) untuk akses database/server oleh admin, FIM (File Integrity Monitoring).';
+          toolsRec += en ? ' Web Application Firewall (WAF), PAM for privileged database/server access, and FIM (File Integrity Monitoring).' : ' Web Application Firewall (WAF), sistem PAM (Privileged Access Management) untuk akses database/server oleh admin, FIM (File Integrity Monitoring).';
       }
       results.push({
-          framework: 'Kontrol Teknis & Infrastruktur',
+          framework: en ? 'Technical Controls & Infrastructure' : 'Kontrol Teknis & Infrastruktur',
           severity: 'danger',
           message: toolsMsg,
           recommendation: toolsRec
       });
 
       // 3. Kebutuhan Tim & Pengawasan Operasional (SOC & Tim)
-      let opsMsg = 'Tuntutan regulasi mengharuskan pengawasan dan evaluasi keamanan secara berkelanjutan (Continuous Monitoring):';
-      let opsRec = 'Pengecekan log jaringan harian dan Vulnerability Assessment internal minimal setahun sekali.';
+      let opsMsg = en ? 'Regulatory expectations require continuous security monitoring and evaluation:' : 'Tuntutan regulasi mengharuskan pengawasan dan evaluasi keamanan secara berkelanjutan (Continuous Monitoring):';
+      let opsRec = en ? 'Daily network log review and internal vulnerability assessment at least once a year.' : 'Pengecekan log jaringan harian dan Vulnerability Assessment internal minimal setahun sekali.';
       
       if (hasOJK || targets.includes('ISO 27001') || targets.includes('PADG') || hasFinancialSect) {
-          opsRec = 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin minimal tahunan.';
+          opsRec = en ? 'Implement SIEM for log centralization, 24/7 SOC operations (in-house or MSSP), and routine penetration testing at least annually.' : 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin minimal tahunan.';
       }
       if (targets.includes('NIST') || hasOJK || targets.includes('Resiliensi')) {
-          opsRec += ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun, serta simulasi DRP tahunan.';
+          opsRec += en ? ' Annual security awareness training, phishing simulations, 3-5 year log retention, and annual DRP simulation.' : ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun, serta simulasi DRP tahunan.';
       }
       if (targets.includes('ISO 27001') || hasOJK || targets.includes('COBIT')) {
-          opsRec += ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler untuk validasi sertifikasi atau kepatuhan.';
+          opsRec += en ? ' Regular independent third-party IT audits for certification or compliance validation.' : ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler untuk validasi sertifikasi atau kepatuhan.';
       }
       results.push({
-          framework: 'Operasional, Tim (SOC) & Audit',
+          framework: en ? 'Operations, SOC Team & Audit' : 'Operasional, Tim (SOC) & Audit',
           severity: 'warning',
           message: opsMsg,
           recommendation: opsRec
@@ -365,22 +462,22 @@ export default {
 
       // 4. Manajemen Risiko Pihak Ketiga & Lokalisasi Data
       if (hasThirdParty || hasForeignCloud) {
-          let vendorMsg = 'Penggunaan layanan pihak ketiga atau server cloud memicu kewajiban kontrol kepatuhan hukum:';
-          let vendorRec = 'Perjanjian SLA ketat, NDA, dan klausa Right to Audit dengan vendor.';
+          let vendorMsg = en ? 'Use of third-party services or cloud servers triggers legal compliance control obligations:' : 'Penggunaan layanan pihak ketiga atau server cloud memicu kewajiban kontrol kepatuhan hukum:';
+          let vendorRec = en ? 'Strict SLA, NDA, and Right to Audit clauses with vendors.' : 'Perjanjian SLA ketat, NDA, dan klausa Right to Audit dengan vendor.';
           let sev = 'warning';
           
           if (hasForeignCloud && hasFinancialSect) {
               sev = 'danger';
-              vendorMsg = 'PELANGGARAN LOKALISASI OJK/BI: Regulasi Finansial mewajibkan Sistem & Data Center Utama di Indonesia.';
-              vendorRec = 'Migrasikan server Core System ke Data Center Indonesia. Backup/DRC di luar negeri harus dengan izin OJK/BI.';
+              vendorMsg = en ? 'OJK/BI LOCALIZATION BREACH: Financial regulations require primary systems and data centers to be in Indonesia.' : 'PELANGGARAN LOKALISASI OJK/BI: Regulasi Finansial mewajibkan Sistem & Data Center Utama di Indonesia.';
+              vendorRec = en ? 'Migrate core system servers to an Indonesian data center. Overseas backup/DRC requires OJK/BI approval.' : 'Migrasikan server Core System ke Data Center Indonesia. Backup/DRC di luar negeri harus dengan izin OJK/BI.';
           } else if (hasForeignCloud && (targets.includes('PDP') || hasPersonalData)) {
               sev = 'danger';
-              vendorMsg = 'Transfer Data Lintas Batas (Cross-Border Data Transfer) terkait UU PDP No. 27/2022.';
-              vendorRec = 'Dapatkan persetujuan eksplisit dari pengguna, ATAU pastikan negara cloud tujuan memiliki standar pelindungan data setara/lebih tinggi dari Indonesia (wajib DPIA).';
+              vendorMsg = en ? 'Cross-border data transfer issue under UU PDP No. 27/2022.' : 'Transfer Data Lintas Batas (Cross-Border Data Transfer) terkait UU PDP No. 27/2022.';
+              vendorRec = en ? 'Obtain explicit user consent or ensure the destination country has equal/higher data protection standards than Indonesia, supported by a DPIA.' : 'Dapatkan persetujuan eksplisit dari pengguna, ATAU pastikan negara cloud tujuan memiliki standar pelindungan data setara/lebih tinggi dari Indonesia (wajib DPIA).';
           }
           
           results.push({
-              framework: 'Manajemen Vendor & Kedaulatan Data',
+              framework: en ? 'Vendor Management & Data Sovereignty' : 'Manajemen Vendor & Kedaulatan Data',
               severity: sev,
               message: vendorMsg,
               recommendation: vendorRec
@@ -399,9 +496,10 @@ export default {
       return 'fa-check-circle text-success';
     },
     getSeverityText(severity) {
-      if (severity === 'danger') return 'Pelanggaran / Risiko Tinggi';
-      if (severity === 'warning') return 'Perhatian / Warning';
-      return 'Aman / Compliant';
+      const en = this.$i18n.locale === 'en';
+      if (severity === 'danger') return en ? 'Violation / High Risk' : 'Pelanggaran / Risiko Tinggi';
+      if (severity === 'warning') return en ? 'Attention / Warning' : 'Perhatian / Warning';
+      return en ? 'Safe / Compliant' : 'Aman / Compliant';
     }
   }
 };
