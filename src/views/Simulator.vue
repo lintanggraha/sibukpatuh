@@ -153,20 +153,7 @@
     </div>
   </div>
 </template>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </template>
-
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
+<script>
 export default {
   name: 'Simulator',
   data() {
