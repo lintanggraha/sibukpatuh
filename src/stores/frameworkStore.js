@@ -9,6 +9,9 @@ export const useFrameworkStore = defineStore('framework', {
     // Current active framework group
     activeFrameworkGroup: null, // 'nasional' | 'internasional' | null
     
+    // Current language - synced from App.vue
+    currentLanguage: localStorage.getItem('language') || 'id',
+    
     // Active Role for Regulation Translator
     activeRole: 'default',
     roles: [

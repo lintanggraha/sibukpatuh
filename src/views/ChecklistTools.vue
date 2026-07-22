@@ -251,7 +251,10 @@ export default {
           const fwDef = this.availableFrameworks.find(f => f.id === fwId);
           if (!fwDef) continue;
           
-          const res = await fetch(`/data/${fwDef.file}`);
+          const localizedFile = localStorage.getItem('language') === 'en'
+            ? fwDef.file.replace(/\.json$/, '_en.json')
+            : fwDef.file;
+          const res = await fetch(`/data/${localizedFile}`);
           if (!res.ok) throw new Error(`Gagal memuat ${fwDef.name}`);
           
           const json = await res.json();

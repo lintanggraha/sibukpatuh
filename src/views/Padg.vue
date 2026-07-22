@@ -373,8 +373,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch('/data/padg_requirements.json'),
-          fetch('/data/padg_appendices.json')
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padg_requirements_en.json' : 'padg_requirements.json'}?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padg_appendices_en.json' : 'padg_appendices.json'}?t=${new Date().getTime()}`)
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();

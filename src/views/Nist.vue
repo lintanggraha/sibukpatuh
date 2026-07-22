@@ -369,8 +369,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [ctrlRes, spRes] = await Promise.all([
-          fetch(`/data/nist_csf.json?t=${new Date().getTime()}`),
-          fetch(`/data/sp800_53.json?t=${new Date().getTime()}`)
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'nist_csf_en.json' : 'nist_csf.json'}?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'sp800_53_en.json' : 'sp800_53.json'}?t=${new Date().getTime()}`)
         ]);
         if (ctrlRes.ok) {
           const data = await ctrlRes.json();

@@ -386,8 +386,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch(`/data/owasp_top10_reqs.json?t=${new Date().getTime()}`),
-          fetch(`/data/owasp_top10_apps.json?t=${new Date().getTime()}`)
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'owasp_top10_reqs_en.json' : 'owasp_top10_reqs.json'}?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'owasp_top10_apps_en.json' : 'owasp_top10_apps.json'}?t=${new Date().getTime()}`)
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();

@@ -109,7 +109,14 @@
             <section class="iso-panel">
               <div class="iso-panel-head"><h3>Daftar kontrol</h3><span class="iso-chip">Klik untuk buka inspector</span></div>
               <div class="iso-list">
-                <button v-for="ctrl in paginatedControls" :key="ctrl.id" type="button" class="iso-item" :class="{ active: explorerState.selectedId === ctrl.id }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="explorerState.selectedId = ctrl.id"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
+                <template v-for="(ctrl, idx) in paginatedControls" :key="controlKey(ctrl)">
+                  <div v-if="shouldShowSectionHeader(ctrl, idx)" class="iso-section-header">
+                    <span>{{ sectionLabel(ctrl) }}</span>
+                    <strong>{{ sectionTitle(ctrl) }}</strong>
+                    <em>{{ sectionDescription(ctrl) }}</em>
+                  </div>
+                  <button type="button" class="iso-item" :class="{ active: explorerState.selectedKey === controlKey(ctrl) }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="selectExplorerControl(ctrl)"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
+                </template>
                 <div v-if="paginatedControls.length === 0" class="iso-empty">Tidak ada kontrol yang cocok dengan filter saat ini.</div>
                 
                 <!-- Pagination Controls -->
@@ -167,7 +174,7 @@
                   <section class="iso-panel iso-inspector-panel">
                     <div class="iso-panel-head"><h3>Kontrol terkait</h3><span class="iso-chip">Auto-filterd by concept</span></div>
                     <div class="iso-list">
-                      <button v-for="ctrl in conceptFilteredControls" :key="ctrl.id" type="button" class="iso-item" :class="{ active: conceptState.selectedId === ctrl.id }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="conceptState.selectedId = ctrl.id"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
+                      <button v-for="ctrl in conceptFilteredControls" :key="controlKey(ctrl)" type="button" class="iso-item" :class="{ active: conceptState.selectedKey === controlKey(ctrl) }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="selectConceptControl(ctrl)"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
                       <div v-if="conceptFilteredControls.length === 0" class="iso-empty">Belum ada kontrol yang dipetakan ke konsep ini.</div>
                     </div>
                   </section>
@@ -206,6 +213,116 @@
 import { mapState } from 'pinia';
 import { useFrameworkStore } from '../stores/frameworkStore';
 
+const clauseGuidance = {
+  id: {
+    analogyPrefix: 'Anggap SMKI seperti program keselamatan gedung.',
+    implementationPrefix: 'Mulai dengan workshop lintas fungsi, tetapkan owner, bukti minimum, dan ritme review.',
+    priority: 'Tinggi',
+    difficulty: 'Sedang',
+  },
+  en: {
+    analogyPrefix: 'Think of the ISMS as a building safety program.',
+    implementationPrefix: 'Start with a cross-functional workshop, define owners, minimum evidence, and a review cadence.',
+    priority: 'High',
+    difficulty: 'Medium',
+  },
+};
+
+const clauseDetails = {
+  '4.1': {
+    id: ['Organisasi perlu membaca kondisi bisnis, teknologi, vendor, regulasi, ancaman, budaya kerja, dan batasan internal sebelum menentukan kontrol. Tanpa konteks ini, SMKI mudah menjadi checklist generik yang tidak menjawab risiko nyata.', 'Petakan isu internal dan eksternal dengan PESTLE/SWOT, hubungkan tiap isu ke risiko keamanan informasi, lalu review saat ada perubahan bisnis, layanan, teknologi, atau regulasi.'],
+    en: ['The organization needs to read business, technology, vendor, regulatory, threat, cultural, and internal constraints before selecting controls. Without that context, the ISMS becomes a generic checklist instead of a risk-based program.', 'Map internal and external issues with PESTLE/SWOT, link each issue to information security risk, then review it when business, services, technology, or regulation changes.'],
+  },
+  '4.2': {
+    id: ['Pihak berkepentingan adalah semua pihak yang bisa memberi tuntutan keamanan: pelanggan, regulator, pemegang saham, vendor, auditor, karyawan, dan partner. Setiap tuntutan perlu diterjemahkan menjadi persyaratan yang bisa diuji.', 'Buat register stakeholder, catat requirement keamanan, sumber kewajiban, owner pemenuhan, bukti, dan status pemantauan. Sinkronkan dengan kontrak, SLA, regulasi, dan hasil audit.'],
+    en: ['Interested parties are everyone who can impose security expectations: customers, regulators, shareholders, vendors, auditors, employees, and partners. Each expectation must become a testable requirement.', 'Create a stakeholder register with security requirements, obligation sources, accountable owners, evidence, and monitoring status. Align it with contracts, SLAs, regulations, and audit results.'],
+  },
+  '4.3': {
+    id: ['Ruang lingkup adalah pagar program SMKI. Ia menjelaskan proses, lokasi, sistem, data, unit, dan pihak ketiga mana yang masuk atau keluar cakupan agar audit dan implementasi tidak melebar tanpa kendali.', 'Susun scope statement, boundary diagram, daftar aset utama, dependency pihak ketiga, dan justifikasi pengecualian. Pastikan scope disetujui manajemen dan konsisten dengan SoA, risk assessment, serta kontrak layanan.'],
+    en: ['Scope is the fence around the ISMS program. It states which processes, locations, systems, data, units, and third parties are in or out so audit and implementation do not drift.', 'Prepare a scope statement, boundary diagram, key asset list, third-party dependencies, and exclusion rationale. Ensure management approval and alignment with the SoA, risk assessment, and service contracts.'],
+  },
+  '4.4': {
+    id: ['SMKI bukan satu dokumen, melainkan sistem kerja yang menghubungkan kebijakan, risiko, kontrol, bukti, audit, corrective action, dan peningkatan berkelanjutan.', 'Definisikan proses inti SMKI, kalender aktivitas, KPI/KRI, forum governance, repository dokumen, serta mekanisme perubahan. Pastikan semua proses punya input, output, owner, dan bukti yang jelas.'],
+    en: ['An ISMS is not a single document; it is an operating system connecting policy, risk, controls, evidence, audit, corrective action, and continual improvement.', 'Define core ISMS processes, activity calendar, KPIs/KRIs, governance forums, document repository, and change mechanisms. Ensure every process has clear inputs, outputs, owners, and evidence.'],
+  },
+  '5.1': {
+    id: ['Komitmen pimpinan adalah bahan bakar SMKI. Tanpa arahan, budget, keputusan prioritas, dan contoh perilaku dari atas, kontrol biasanya berhenti sebagai dokumen.', 'Minta top management menetapkan sasaran keamanan, menyetujui resource, memimpin review berkala, menghapus blocker lintas fungsi, dan memasukkan keamanan ke keputusan bisnis penting.'],
+    en: ['Leadership commitment is the fuel of the ISMS. Without direction, budget, prioritization, and visible behavior from the top, controls often stop at documentation.', 'Have top management set security objectives, approve resources, lead periodic reviews, remove cross-functional blockers, and include security in major business decisions.'],
+  },
+  '5.2': {
+    id: ['Kebijakan keamanan adalah kontrak arah antara manajemen dan organisasi. Isinya harus cukup jelas untuk memandu keputusan, tetapi cukup ringkas agar benar-benar dibaca.', 'Tulis kebijakan yang sesuai tujuan bisnis, risiko, kewajiban hukum, dan komitmen improvement. Publikasikan, sosialisasikan, minta acknowledgement, dan review minimal tahunan atau saat ada perubahan besar.'],
+    en: ['The security policy is a direction-setting agreement between management and the organization. It must be clear enough to guide decisions and concise enough to be read.', 'Write a policy aligned with business objectives, risks, legal obligations, and improvement commitments. Publish, socialize, collect acknowledgement, and review it at least annually or after major changes.'],
+  },
+  '5.3': {
+    id: ['Peran yang kabur membuat pekerjaan keamanan jatuh di antara kursi. Clause ini memastikan siapa yang memutuskan, menjalankan, mengawasi, dan melaporkan sudah jelas.', 'Buat RACI SMKI, job description, SK/mandate forum keamanan, jalur eskalasi, dan pengganti saat owner tidak tersedia. Cocokkan dengan struktur organisasi dan proses HR.'],
+    en: ['Unclear roles make security work fall between chairs. This clause ensures decision makers, operators, reviewers, and reporters are explicit.', 'Create an ISMS RACI, job descriptions, security forum mandate, escalation paths, and backups when owners are unavailable. Align them with the org structure and HR processes.'],
+  },
+  '6.1': {
+    id: ['Perencanaan risiko adalah radar SMKI. Organisasi harus tahu skenario buruk apa yang mungkin terjadi, peluangnya, dampaknya, dan treatment yang masuk akal.', 'Tetapkan metodologi risk assessment, risk criteria, risk owner, risk register, treatment plan, approval residual risk, dan siklus review. Hubungkan hasilnya ke pemilihan kontrol Annex A dan SoA.'],
+    en: ['Risk planning is the ISMS radar. The organization must understand likely adverse scenarios, likelihood, impact, and reasonable treatment.', 'Define risk assessment methodology, risk criteria, risk owners, risk register, treatment plan, residual risk approval, and review cycle. Link results to Annex A control selection and the SoA.'],
+  },
+  '6.2': {
+    id: ['Sasaran keamanan membuat program bisa diukur. Tanpa target, organisasi hanya tahu sudah punya aktivitas, tetapi tidak tahu apakah aktivitas itu berhasil.', 'Tetapkan objective yang SMART, misalnya waktu pencabutan akses, cakupan training, penyelesaian vulnerability, atau kepatuhan backup. Beri owner, baseline, target, due date, dan pelaporan.'],
+    en: ['Security objectives make the program measurable. Without targets, an organization may have activity but cannot tell whether it works.', 'Set SMART objectives such as access revocation time, training coverage, vulnerability remediation, or backup compliance. Assign owners, baselines, targets, due dates, and reporting.'],
+  },
+  '6.3': {
+    id: ['Perubahan SMKI perlu dikendalikan seperti perubahan aplikasi produksi. Perubahan scope, proses, vendor, teknologi, atau regulasi bisa menggeser risiko.', 'Buat change log SMKI, impact assessment, approval path, komunikasi, dan update dokumen terkait. Pastikan perubahan besar memicu review risk assessment dan SoA.'],
+    en: ['ISMS changes should be controlled like production application changes. Scope, process, vendor, technology, or regulatory changes can shift risk.', 'Maintain an ISMS change log, impact assessment, approval path, communication, and related document updates. Major changes should trigger risk assessment and SoA review.'],
+  },
+  '7.1': {
+    id: ['Resource adalah bukti bahwa keamanan bukan sekadar niat. Program membutuhkan orang, waktu, budget, tools, pelatihan, dan dukungan manajemen.', 'Buat resource plan tahunan, gap kapasitas, kebutuhan tooling, training plan, dan justifikasi budget berbasis risiko. Review kecukupan resource saat management review.'],
+    en: ['Resources prove that security is more than intent. The program needs people, time, budget, tools, training, and management support.', 'Create an annual resource plan, capacity gaps, tooling needs, training plan, and risk-based budget rationale. Review adequacy during management review.'],
+  },
+  '7.2': {
+    id: ['Kompetensi memastikan tugas keamanan dijalankan oleh orang yang paham tanggung jawabnya. Ini berlaku untuk tim security, IT, legal, HR, procurement, dan owner proses bisnis.', 'Petakan kompetensi per role, lakukan training atau mentoring, simpan bukti sertifikat/attendance, dan ukur efektivitas melalui kuis, simulasi, atau hasil audit.'],
+    en: ['Competence ensures security tasks are performed by people who understand their responsibilities. This covers security, IT, legal, HR, procurement, and business process owners.', 'Map competencies by role, provide training or mentoring, keep certificates/attendance evidence, and measure effectiveness through quizzes, simulations, or audit results.'],
+  },
+  '7.3': {
+    id: ['Awareness membuat kebijakan hidup di perilaku harian. Orang perlu tahu risiko, aturan, konsekuensi, dan cara melapor saat melihat kejadian mencurigakan.', 'Bangun program awareness berbasis risiko: onboarding, phishing simulation, kampanye singkat, poster, town hall, dan reminder untuk topik sensitif seperti data pribadi dan password.'],
+    en: ['Awareness turns policy into daily behavior. People need to know risks, rules, consequences, and how to report suspicious events.', 'Build risk-based awareness: onboarding, phishing simulation, short campaigns, posters, town halls, and reminders for sensitive topics such as personal data and passwords.'],
+  },
+  '7.4': {
+    id: ['Komunikasi menentukan siapa perlu tahu apa, kapan, lewat kanal mana, dan dengan bahasa seperti apa. Tanpa ini, isu keamanan sering terlambat naik ke pihak yang tepat.', 'Buat communication matrix untuk insiden, perubahan kebijakan, audit, risiko tinggi, vendor, dan regulator. Cantumkan audience, owner, frekuensi, kanal, dan template pesan.'],
+    en: ['Communication defines who needs to know what, when, through which channel, and in what language. Without it, security issues are escalated too late.', 'Create a communication matrix for incidents, policy changes, audits, high risks, vendors, and regulators. Include audience, owner, frequency, channel, and message templates.'],
+  },
+  '7.5': {
+    id: ['Dokumen adalah memori organisasi. Ia harus cukup terkendali agar auditor percaya versinya benar, tetapi cukup mudah diakses agar tim bisa bekerja.', 'Tetapkan document control: penomoran, owner, versi, approval, distribusi, retensi, klasifikasi, dan review periodik. Gunakan repository terpusat dengan hak akses sesuai kebutuhan.'],
+    en: ['Documents are organizational memory. They must be controlled enough for auditors to trust the version and accessible enough for teams to work.', 'Define document control: numbering, owner, version, approval, distribution, retention, classification, and periodic review. Use a central repository with need-based access.'],
+  },
+  '8.1': {
+    id: ['Operasi adalah tempat rencana SMKI benar-benar diuji. Proses harian harus menjalankan risk treatment, kontrol, dan perubahan sesuai desain.', 'Turunkan risk treatment menjadi SOP, runbook, checklist, control owner, jadwal eksekusi, dan bukti operasional. Pantau deviasi dan eskalasikan jika kontrol tidak berjalan.'],
+    en: ['Operations are where the ISMS plan is truly tested. Daily processes must execute risk treatment, controls, and changes as designed.', 'Translate risk treatment into SOPs, runbooks, checklists, control owners, schedules, and operational evidence. Monitor deviations and escalate when controls do not operate.'],
+  },
+  '8.2': {
+    id: ['Risk assessment perlu berulang karena ancaman dan bisnis berubah. Assessment sekali setahun saja tidak cukup jika ada sistem baru, insiden, vendor baru, atau regulasi baru.', 'Jalankan assessment berkala dan event-driven, gunakan kriteria konsisten, libatkan owner aset/proses, dokumentasikan asumsi, dan pastikan hasilnya masuk ke treatment plan.'],
+    en: ['Risk assessment must repeat because threats and business conditions change. Annual assessment alone is insufficient when new systems, incidents, vendors, or regulations appear.', 'Run periodic and event-driven assessments, use consistent criteria, involve asset/process owners, document assumptions, and ensure results feed the treatment plan.'],
+  },
+  '8.3': {
+    id: ['Risk treatment adalah keputusan: hindari, mitigasi, transfer, atau terima risiko. Keputusan ini harus jelas, disetujui, dan bisa dibuktikan progresnya.', 'Buat treatment plan dengan kontrol, owner, due date, resource, dependency, residual risk, approval, dan status. Update SoA untuk menjelaskan kontrol Annex A yang dipilih atau tidak dipilih.'],
+    en: ['Risk treatment is a decision: avoid, mitigate, transfer, or accept risk. The decision must be clear, approved, and traceable.', 'Create a treatment plan with controls, owners, due dates, resources, dependencies, residual risk, approval, and status. Update the SoA to explain selected or excluded Annex A controls.'],
+  },
+  '9.1': {
+    id: ['Monitoring menjawab pertanyaan: apakah SMKI bekerja. Organisasi perlu indikator, data, dan review yang menunjukkan kontrol efektif atau perlu diperbaiki.', 'Tentukan KPI/KRI, sumber data, frekuensi pengukuran, threshold, owner, dan forum pelaporan. Gunakan hasilnya untuk corrective action dan prioritas improvement.'],
+    en: ['Monitoring answers whether the ISMS works. The organization needs indicators, data, and reviews showing controls are effective or need improvement.', 'Define KPIs/KRIs, data sources, measurement frequency, thresholds, owners, and reporting forums. Use results for corrective action and improvement priorities.'],
+  },
+  '9.2': {
+    id: ['Audit internal adalah latihan sebelum audit eksternal dan alat kontrol manajemen. Ia harus independen, berbasis risiko, dan menghasilkan temuan yang bisa ditindaklanjuti.', 'Buat audit program, scope, criteria, auditor independence, checklist, sampling, evidence log, report, corrective action, dan follow-up closure. Prioritaskan area risiko tinggi.'],
+    en: ['Internal audit is rehearsal before external audit and a management control tool. It should be independent, risk-based, and produce actionable findings.', 'Create an audit program, scope, criteria, auditor independence, checklist, sampling, evidence log, report, corrective action, and closure follow-up. Prioritize high-risk areas.'],
+  },
+  '9.3': {
+    id: ['Management review adalah rapat steering SMKI. Pimpinan menilai performa, risiko, insiden, audit, resource, dan keputusan improvement.', 'Siapkan agenda tetap, pack data, keputusan, action item, owner, due date, dan notulen. Pastikan output review menjadi perubahan nyata pada resource, prioritas, kebijakan, atau treatment.'],
+    en: ['Management review is the ISMS steering meeting. Leaders assess performance, risks, incidents, audits, resources, and improvement decisions.', 'Prepare a fixed agenda, data pack, decisions, action items, owners, due dates, and minutes. Ensure outputs become real changes to resources, priorities, policies, or treatment.'],
+  },
+  '10.1': {
+    id: ['Improvement memastikan SMKI tidak membeku. Organisasi harus memperbaiki kelemahan dari audit, insiden, perubahan risiko, feedback, dan hasil monitoring.', 'Kelola improvement backlog, kategorikan prioritas, tetapkan owner, target, dan bukti closure. Gunakan trend temuan untuk memperbaiki akar masalah, bukan hanya menutup tiket.'],
+    en: ['Improvement keeps the ISMS from freezing. The organization must improve weaknesses from audits, incidents, risk changes, feedback, and monitoring.', 'Manage an improvement backlog, categorize priorities, assign owners, targets, and closure evidence. Use finding trends to address root causes, not merely close tickets.'],
+  },
+  '10.2': {
+    id: ['Nonconformity adalah sinyal bahwa proses tidak berjalan sesuai harapan. Tindakan korektif harus mencari akar masalah, memperbaiki dampak, dan mencegah pengulangan.', 'Gunakan RCA, containment, corrective action, preventive action, owner, due date, evidence closure, dan effectiveness check. Laporkan status temuan secara berkala ke manajemen.'],
+    en: ['Nonconformity signals that a process is not operating as expected. Corrective action must find root cause, fix impact, and prevent recurrence.', 'Use RCA, containment, corrective action, preventive action, owner, due date, closure evidence, and effectiveness checks. Report finding status periodically to management.'],
+  },
+};
+
 export default {
   name: 'Iso27001',
   data() {
@@ -219,9 +336,16 @@ export default {
         'Orang': { id: 'PPL', color: '#2563eb', summary: 'Kesadaran, perilaku, dan akuntabilitas personel.' },
         'Fisik': { id: 'PHY', color: '#c2410c', summary: 'Lokasi, perangkat, dan perlindungan lingkungan operasional.' },
         'Teknologi': { id: 'TEC', color: '#1d3557', summary: 'Identitas, monitoring, hardening, dan operasional teknis.' },
+        'Organizational Context': { id: 'C4', color: '#0f766e', summary: 'External/internal context, interested parties, scope, and ISMS boundaries.' },
+        'Leadership': { id: 'C5', color: '#2563eb', summary: 'Management commitment, policy direction, roles, and accountability.' },
+        'Planning': { id: 'C6', color: '#a16207', summary: 'Risk planning, security objectives, and controlled ISMS changes.' },
+        'Support': { id: 'C7', color: '#7c3aed', summary: 'Resources, competence, awareness, communication, and documented information.' },
+        'Operation': { id: 'C8', color: '#c2410c', summary: 'Operational control, risk assessment, and risk treatment execution.' },
+        'Performance Evaluation': { id: 'C9', color: '#1d4ed8', summary: 'Monitoring, internal audit, and management review.' },
+        'Improvement': { id: 'C10', color: '#15803d', summary: 'Continual improvement, nonconformity handling, and corrective action.' },
       },
-      typeMeta: { 'Pencegahan': { color: '#0f766e' }, 'Deteksi': { color: '#a16207' }, 'Koreksi': { color: '#c2410c' } },
-      priorityMeta: { 'Kritis': { color: '#b91c1c' }, 'Tinggi': { color: '#c2410c' }, 'Sedang': { color: '#2563eb' }, 'Rendah': { color: '#15803d' } },
+      typeMeta: { 'Klausa': { color: '#1d4ed8' }, 'Clause': { color: '#1d4ed8' }, 'Pencegahan': { color: '#0f766e' }, 'Deteksi': { color: '#a16207' }, 'Koreksi': { color: '#c2410c' } },
+      priorityMeta: { 'Kritis': { color: '#b91c1c' }, 'Critical': { color: '#b91c1c' }, 'Tinggi': { color: '#c2410c' }, 'High': { color: '#c2410c' }, 'Sedang': { color: '#2563eb' }, 'Medium': { color: '#2563eb' }, 'Rendah': { color: '#15803d' }, 'Low': { color: '#15803d' } },
       conceptMeta: {
         'Mengidentifikasi': { key: 'Identify', color: '#2563eb', icon: 'fa-compass', summary: 'Memahami aset, eksposur, dan konteks bisnis yang harus dijaga.' },
         'Melindungi': { key: 'Protect', color: '#0f766e', icon: 'fa-shield-alt', summary: 'Menjaga layanan, data, dan akses dengan pengamanan yang konsisten.' },
@@ -235,15 +359,16 @@ export default {
       filterPrio: 'All',
       filterDiff: 'All',
       filterSearch: '',
-      explorerState: { selectedId: null },
-      conceptState: { active: null, selectedId: null },
+      explorerState: { selectedId: null, selectedKey: null },
+      conceptState: { active: null, selectedId: null, selectedKey: null },
       // Pagination
       currentPage: 1,
       itemsPerPage: 25,
     };
   },
   computed: {
-    ...mapState(useFrameworkStore, ['activeRole']),
+    ...mapState(useFrameworkStore, ['activeRole', 'currentLanguage']),
+    isEn() { return this.currentLanguage === 'en'; },
     totalControls() { return this.controls.length; },
     domainBreakdown() {
       return Object.entries(this.domainMeta).map(([name, meta]) => ({ name, id: meta.id, color: meta.color, summary: meta.summary, count: this.controls.filter(c => c.domain === name).length })).filter(d => d.count > 0);
@@ -259,7 +384,7 @@ export default {
     conceptBreakdown() {
       return Object.entries(this.conceptMeta).map(([name, meta]) => ({ name, key: meta.key, color: meta.color, icon: meta.icon, summary: meta.summary, count: this.controls.filter(c => c.concept === name).length }));
     },
-    criticalControls() { return this.controls.filter(c => c.priority === 'Kritis').length; },
+    criticalControls() { return this.controls.filter(c => ['Kritis', 'Critical'].includes(c.priority)).length; },
     evidenceCount() { return this.controls.reduce((sum, c) => sum + (c.exampleEvidence || []).length, 0); },
     filteredControls() {
       return this.controls.filter(c => {
@@ -283,9 +408,9 @@ export default {
       if (this.filterSearch) parts.push(`cari "${this.filterSearch}"`);
       return parts.length ? `Filter aktif: ${parts.join(', ')}.` : 'Semua kontrol sedang ditampilkan.';
     },
-    selectedExplorerControl() { return this.filteredControls.find(c => c.id === this.explorerState.selectedId) || null; },
+    selectedExplorerControl() { return this.filteredControls.find(c => this.controlKey(c) === this.explorerState.selectedKey) || this.filteredControls.find(c => c.id === this.explorerState.selectedId) || null; },
     conceptFilteredControls() { return this.controls.filter(c => c.concept === this.conceptState.active); },
-    selectedConceptControl() { return this.conceptFilteredControls.find(c => c.id === this.conceptState.selectedId) || null; },
+    selectedConceptControl() { return this.conceptFilteredControls.find(c => this.controlKey(c) === this.conceptState.selectedKey) || this.conceptFilteredControls.find(c => c.id === this.conceptState.selectedId) || null; },
     // Pagination computed properties
     totalPages() { return Math.ceil(this.filteredControls.length / this.itemsPerPage); },
     paginatedControls() {
@@ -295,6 +420,59 @@ export default {
     },
   },
   methods: {
+    localizedDataFile(baseName) {
+      return this.isEn ? `${baseName}_en.json` : `${baseName}.json`;
+    },
+    controlKey(ctrl) {
+      return ctrl?._key || `${this.sectionKind(ctrl)}:${ctrl?.id || ''}:${ctrl?.type || ''}`;
+    },
+    sectionKind(ctrl) {
+      const type = (ctrl?.type || '').toLowerCase();
+      if (type === 'klausa' || type === 'clause') return 'clause';
+      return 'annex';
+    },
+    sectionLabel(ctrl) {
+      return this.sectionKind(ctrl) === 'clause' ? (this.isEn ? 'Clause' : 'Klausa') : 'Annex A';
+    },
+    sectionTitle(ctrl) {
+      return this.sectionKind(ctrl) === 'clause'
+        ? (this.isEn ? 'Management System Requirements' : 'Persyaratan Sistem Manajemen')
+        : (this.isEn ? 'Reference Controls' : 'Kontrol Referensi');
+    },
+    sectionDescription(ctrl) {
+      return this.sectionKind(ctrl) === 'clause'
+        ? (this.isEn ? 'Clauses 4-10 explain the ISMS governance system that must be established, operated, evaluated, and improved.' : 'Klausa 4-10 menjelaskan sistem tata kelola SMKI yang harus dibangun, dijalankan, dievaluasi, dan diperbaiki.')
+        : (this.isEn ? 'Annex A contains control objectives used as risk treatment references through the Statement of Applicability.' : 'Annex A berisi kontrol yang digunakan sebagai referensi perlakuan risiko melalui Statement of Applicability.');
+    },
+    shouldShowSectionHeader(ctrl, idx) {
+      if (idx === 0) return true;
+      const prev = this.paginatedControls[idx - 1];
+      return this.sectionKind(prev) !== this.sectionKind(ctrl);
+    },
+    selectExplorerControl(ctrl) {
+      this.explorerState.selectedId = ctrl.id;
+      this.explorerState.selectedKey = this.controlKey(ctrl);
+    },
+    selectConceptControl(ctrl) {
+      this.conceptState.selectedId = ctrl.id;
+      this.conceptState.selectedKey = this.controlKey(ctrl);
+    },
+    enrichControl(control) {
+      if (this.sectionKind(control) !== 'clause') return control;
+      const lang = this.isEn ? 'en' : 'id';
+      const details = clauseDetails[control.id]?.[lang];
+      if (!details) return control;
+      const base = clauseGuidance[lang];
+      return {
+        ...control,
+        priority: control.priority || base.priority,
+        difficulty: control.difficulty || base.difficulty,
+        concept: control.concept || (this.isEn ? 'Govern' : 'Mengatur'),
+        capability: control.capability || (this.isEn ? 'ISMS governance' : 'Tata kelola SMKI'),
+        analogy: control.analogy || `${base.analogyPrefix} ${details[0]}`,
+        implementationTips: control.implementationTips || `${base.implementationPrefix} ${details[1]}`,
+      };
+    },
     getRoleIcon(roleId) {
       const icons = { 'bod': 'fa-user-tie', 'sysadmin': 'fa-terminal', 'legal': 'fa-balance-scale' };
       return icons[roleId] || 'fa-eye';
@@ -309,7 +487,7 @@ export default {
     getConceptKey(name) { return this.conceptMeta[name]?.key || name; },
     getConceptSummary(name) { return this.conceptMeta[name]?.summary || ''; },
     getConceptControlCount(name) { return this.controls.filter(c => c.concept === name).length; },
-    getPillClass(priority) { return { 'danger': 'Kritis', 'warning': 'Tinggi', 'sky': 'Sedang', 'success': 'Rendah' }[priority] || 'neutral'; },
+    getPillClass(priority) { return { 'Kritis': 'danger', 'Critical': 'danger', 'Tinggi': 'warning', 'High': 'warning', 'Sedang': 'sky', 'Medium': 'sky', 'Rendah': 'success', 'Low': 'success' }[priority] || 'neutral'; },
     jumpToTheme(theme) { this.filterTheme = theme; this.activeTab = 'explorer'; },
     resetFilters() { 
       this.filterTheme = 'All'; 
@@ -327,11 +505,18 @@ export default {
         this.loading = true;
         this.error = null;
         // Tambahkan timestamp untuk menghindari cache agresif browser pada file statis di public/
-        const response = await fetch(`/data/iso27001.json?t=${new Date().getTime()}`);
+        const response = await fetch(`/data/${this.localizedDataFile('iso27001')}?t=${new Date().getTime()}`);
         if (response.ok) {
           const data = await response.json();
-          this.controls = Array.isArray(data) ? data : data.controls || [];
-          if (this.controls.length > 0) this.explorerState.selectedId = this.controls[0].id;
+          this.controls = (Array.isArray(data) ? data : data.controls || [])
+            .map((control, idx) => this.enrichControl({
+              ...control,
+              _key: `${this.sectionKind(control)}:${control.id}:${control.type || ''}:${idx}`,
+            }));
+          if (this.controls.length > 0) {
+            this.explorerState.selectedId = this.controls[0].id;
+            this.explorerState.selectedKey = this.controlKey(this.controls[0]);
+          }
         } else {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
@@ -344,15 +529,20 @@ export default {
     },
   },
   watch: {
+    currentLanguage() {
+      this.loadData();
+    },
     filteredControls() {
       this.currentPage = 1; // Reset to first page when filters change
-      if (this.filteredControls.length && !this.filteredControls.find(c => c.id === this.explorerState.selectedId)) {
+      if (this.filteredControls.length && !this.filteredControls.find(c => this.controlKey(c) === this.explorerState.selectedKey)) {
         this.explorerState.selectedId = this.filteredControls[0]?.id || null;
+        this.explorerState.selectedKey = this.filteredControls[0] ? this.controlKey(this.filteredControls[0]) : null;
       }
       if (this.conceptState.active) {
         const cList = this.conceptFilteredControls;
-        if (cList.length && !cList.find(c => c.id === this.conceptState.selectedId)) {
+        if (cList.length && !cList.find(c => this.controlKey(c) === this.conceptState.selectedKey)) {
           this.conceptState.selectedId = cList[0]?.id || null;
+          this.conceptState.selectedKey = cList[0] ? this.controlKey(cList[0]) : null;
         }
       }
     },
@@ -452,6 +642,10 @@ export default {
 .iso-list{max-height:760px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(15,118,110,0.3) transparent;padding-right:.2rem}
 .iso-item{position:relative;width:100%;padding:.7rem .8rem .68rem .88rem;margin-bottom:.55rem;border-radius:14px;border:1px solid rgba(19,34,56,.08);background:#fff;text-align:left;cursor:pointer;content-visibility:auto;contain-intrinsic-size:auto 80px}
 .iso-item:last-child{margin-bottom:0}
+.iso-section-header{margin:.25rem 0 .65rem;padding:.72rem .82rem;border-radius:16px;border:1px solid rgba(15,118,110,.18);background:linear-gradient(135deg,rgba(15,118,110,.1) 0%,rgba(37,99,235,.08) 100%)}
+.iso-section-header span{display:block;color:#0f766e;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.iso-section-header strong{display:block;margin-top:.18rem;color:var(--ink);font-size:.9rem;font-weight:900}
+.iso-section-header em{display:block;margin-top:.18rem;color:var(--muted);font-size:.76rem;font-style:normal;line-height:1.45}
 .iso-item.active{border-color:rgba(15,118,110,.35);border-left-width:.28rem;background:rgba(238,245,245,.6)}
 .iso-item::before{content:'';position:absolute;left:0;top:.68rem;bottom:.68rem;width:.18rem;border-radius:999px;background:var(--accent)}
 .iso-item-top{display:flex;flex-wrap:wrap;gap:.52rem;align-items:center;justify-content:space-between}

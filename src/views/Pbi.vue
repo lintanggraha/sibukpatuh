@@ -967,8 +967,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, refRes] = await Promise.all([
-          fetch(`/data/pbi_022024_requirements.json?t=${new Date().getTime()}`),
-          fetch(`/data/pbi_022024_references.json?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'pbi_022024_requirements_en.json' : 'pbi_022024_requirements.json'}?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'pbi_022024_references_en.json' : 'pbi_022024_references.json'}?t=${new Date().getTime()}`),
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();
