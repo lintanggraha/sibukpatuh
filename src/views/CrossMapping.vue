@@ -2,19 +2,19 @@
   <div class="container-fluid py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <div>
-        <h2 class="mb-1"><i class="fa-solid fa-network-wired text-primary me-2"></i> Cross-Mapping Visual</h2>
-        <p class="text-muted mb-0">Eksplorasi hubungan antar kontrol dari 6 framework kepatuhan TI.</p>
+        <h2 class="mb-1"><i class="fa-solid fa-network-wired text-primary me-2"></i> {{ $t('tools.crossTitle') }}</h2>
+        <p class="text-muted mb-0">{{ $t('tools.crossDesc') }}</p>
       </div>
       <div>
         <button class="btn btn-outline-secondary" @click="resetView">
-          <i class="fa-solid fa-rotate-right me-1"></i> Reset View
+          <i class="fa-solid fa-rotate-right me-1"></i> {{ $t('tools.resetView') }}
         </button>
       </div>
     </div>
 
     <div class="card shadow-sm mb-4">
       <div class="card-body">
-        <h5 class="card-title mb-3">Filter Framework</h5>
+        <h5 class="card-title mb-3">{{ $t('tools.filterFramework') }}</h5>
         <div class="d-flex flex-wrap gap-3">
           <div 
             v-for="fw in availableFrameworks" 
@@ -37,7 +37,7 @@
           </div>
         </div>
         <small class="text-muted mt-3 d-block">
-          <i class="fa-solid fa-circle-info me-1"></i> Minimal 2 framework harus aktif untuk melihat relasi. <strong>Klik</strong> pada node kontrol untuk menyorot relasinya.
+          <i class="fa-solid fa-circle-info me-1"></i> {{ $t('tools.crossHint') }}
         </small>
       </div>
     </div>
@@ -61,7 +61,7 @@
             <p class="mb-2 small">{{ tooltip.data.desc }}</p>
             <div v-if="tooltip.related.length > 0">
               <hr class="my-2">
-              <small class="text-muted fw-bold d-block mb-1">Ekuivalen di framework aktif:</small>
+              <small class="text-muted fw-bold d-block mb-1">{{ $t('tools.equivalent') }}</small>
               <ul class="list-unstyled mb-0 small">
                 <li v-for="(rel, idx) in tooltip.related" :key="idx" class="mb-1">
                   <i class="fa-solid fa-link me-1" :style="{ color: getFrameworkColor(rel.framework) }"></i>

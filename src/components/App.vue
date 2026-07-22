@@ -63,8 +63,13 @@
             </nav>
 
             <div class="framework-tools">
+              <button @click.stop="toggleLanguage" class="language-toggle" aria-label="Ganti Bahasa">
+                <i class="fas fa-language"></i>
+                <span>{{ currentLang === 'id' ? 'EN' : 'ID' }}</span>
+              </button>
               <div class="nav-divider"></div>
               <RoleSelector />
+
             </div>
           </div>
         </div>
@@ -73,7 +78,7 @@
       <main class="framework-page">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
-            <div :key="$route.fullPath" class="route-wrapper">
+            <div :key="`${$route.fullPath}:${currentLang}`" class="route-wrapper">
               <component :is="Component" />
             </div>
           </transition>
@@ -117,17 +122,6 @@
         </div>
       </button>
 
-      <!-- Language Toggle Floating Button -->
-      <button 
-        class="lang-toggle-fab" 
-        @click.stop="toggleLanguage"
-        aria-label="Toggle Language"
-      >
-        <div class="theme-fab-content lang-fab-content">
-          <i class="fas fa-language"></i>
-          <span class="lang-text" style="font-size: 0.7rem; font-weight: bold; margin-top: 2px;">{{ currentLang.toUpperCase() }}</span>
-        </div>
-      </button>
       <Analytics />
       <SpeedInsights />
     </div>
@@ -146,6 +140,10 @@ export default {
     Analytics,
     SpeedInsights,
     RoleSelector
+  },
+  setup() {
+    const frameworkStore = useFrameworkStore();
+    return { frameworkStore };
   },
   data() {
     return {
@@ -271,6 +269,9 @@ export default {
       this.currentLang = this.currentLang === 'id' ? 'en' : 'id';
       this.$i18n.locale = this.currentLang;
       localStorage.setItem('language', this.currentLang);
+      document.documentElement.setAttribute('lang', this.currentLang);
+      // Sync to Pinia store so all views can reactively update UI text
+      this.frameworkStore.currentLanguage = this.currentLang;
     },
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme;
@@ -350,6 +351,7 @@ export default {
     }
 
     this.updateActiveGroups();
+    document.documentElement.setAttribute('lang', this.currentLang);
     document.addEventListener("click", this.handleClickOutside);
     document.addEventListener("keydown", this.handleKeydown);
   },
@@ -725,6 +727,42 @@ body {
   gap: 0.35rem;
   width: auto;
   flex: 0 0 auto;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 4.1rem;
+  height: 2.35rem;
+  padding: 0 0.7rem;
+  border: 1px solid rgba(20, 78, 114, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--active);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+  transition: all 0.18s ease;
+}
+
+.language-toggle i {
+  font-size: 0.95rem;
+}
+
+.language-toggle:hover,
+.language-toggle:focus {
+  border-color: var(--active);
+  background: rgba(20, 78, 114, 0.08);
+}
+
+[data-bs-theme="dark"] .language-toggle {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #48cae4;
 }
 
 .framework-dropdown {

@@ -1,47 +1,36 @@
 <template>
   <article class="policy-page">
     <header class="policy-hero">
-      <span class="policy-kicker"><i class="fas fa-shield-alt"></i> Kebijakan Privasi</span>
-      <h1>Privacy Policy SibukPatuh</h1>
+      <span class="policy-kicker"><i class="fas fa-shield-alt"></i> {{ $t('privacy.kicker') }}</span>
+      <h1>{{ $t('privacy.title') }}</h1>
       <p>
-        Halaman ini menjelaskan bagaimana SibukPatuh mengelola data teknis, cookie, layanan pihak ketiga,
-        dan informasi yang dikirim pengguna saat memakai alat edukatif di situs ini.
+        {{ $t('privacy.intro') }}
       </p>
-      <small>Terakhir diperbarui: 13 Mei 2026</small>
+      <small>{{ $t('privacy.updated') }}</small>
     </header>
 
     <section class="policy-section">
-      <h2>Ringkasan Penggunaan Data</h2>
-      <p>
-        SibukPatuh adalah situs edukasi dan referensi pembelajaran keamanan siber. Kami tidak menjual data
-        pribadi pengguna. Data yang diproses dipakai untuk menjalankan fitur situs, memahami performa halaman,
-        mencegah penyalahgunaan, dan menampilkan layanan pihak ketiga yang relevan.
-      </p>
+      <h2>{{ $tm('privacy.sections')[0][0] }}</h2>
+      <p>{{ $tm('privacy.sections')[0][1] }}</p>
     </section>
 
     <section class="policy-section">
-      <h2>Informasi yang Dapat Diproses</h2>
+      <h2>{{ $t('privacy.processedTitle') }}</h2>
       <ul>
-        <li>Data teknis seperti alamat IP, user agent, halaman yang dikunjungi, waktu akses, dan metrik performa.</li>
-        <li>Data yang pengguna masukkan secara sukarela, misalnya alamat email pada fitur breach checker atau pertanyaan pada fitur AI analyst.</li>
-        <li>Data penyimpanan lokal browser, misalnya preferensi tema tampilan.</li>
+        <li v-for="item in $tm('privacy.processedItems')" :key="item">{{ item }}</li>
       </ul>
       <p>
-        Jangan memasukkan password, token, API key, rahasia perusahaan, atau data pribadi sensitif ke fitur pencarian,
-        simulator, maupun AI assistant.
+        {{ $t('privacy.processedWarning') }}
       </p>
     </section>
 
     <section class="policy-section">
-      <h2>Cookie, Analytics, dan Iklan</h2>
+      <h2>{{ $t('privacy.cookiesTitle') }}</h2>
       <p>
-        Situs ini dapat memakai layanan analitik, speed insights, dan Google AdSense. Layanan tersebut dapat
-        menggunakan cookie, web beacon, alamat IP, atau identifier browser untuk mengukur performa, mencegah fraud,
-        dan menayangkan iklan.
+        {{ $t('privacy.cookiesP1') }}
       </p>
       <p>
-        Google dan pihak ketiga dapat menempatkan atau membaca cookie pada browser pengguna sebagai bagian dari
-        penayangan iklan. Pengguna dapat mempelajari cara Google menggunakan data melalui
+        {{ $t('privacy.cookiesP2') }}
         <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
           How Google uses information from sites or apps that use our services
         </a>.
@@ -49,27 +38,21 @@
     </section>
 
     <section class="policy-section">
-      <h2>Layanan Pihak Ketiga</h2>
-      <p>
-        Beberapa fitur mengambil data dari sumber publik atau API pihak ketiga, seperti CISA KEV, MITRE, OTX AlienVault,
-        Pulsedive, atau layanan AI. Saat fitur tersebut dipakai, permintaan dapat diteruskan ke layanan terkait agar
-        hasil pencarian atau analisis dapat ditampilkan.
-      </p>
+      <h2>{{ $tm('privacy.sections')[1][0] }}</h2>
+      <p>{{ $tm('privacy.sections')[1][1] }}</p>
     </section>
 
     <section class="policy-section">
-      <h2>Kontrol Pengguna</h2>
+      <h2>{{ $t('privacy.controlsTitle') }}</h2>
       <ul>
-        <li>Pengguna dapat menghapus cookie dan local storage melalui pengaturan browser.</li>
-        <li>Pengguna dapat menonaktifkan personalisasi iklan melalui pengaturan akun Google atau browser.</li>
-        <li>Pengguna dapat menghubungi pengelola situs untuk pertanyaan privasi atau permintaan koreksi informasi.</li>
+        <li v-for="item in $tm('privacy.controlsItems')" :key="item">{{ item }}</li>
       </ul>
     </section>
 
     <section class="policy-section">
-      <h2>Kontak</h2>
+      <h2>{{ $tm('privacy.sections')[2][0] }}</h2>
       <p>
-        Untuk pertanyaan tentang kebijakan privasi, hubungi pengelola melalui
+        {{ $tm('privacy.sections')[2][1] }}
         <a href="mailto:lintanggraha@gmail.com">lintanggraha@gmail.com</a>.
       </p>
     </section>

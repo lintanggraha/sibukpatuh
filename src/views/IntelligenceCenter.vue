@@ -3,25 +3,25 @@
     <!-- Hero Section -->
     <section class="intel-hero">
       <div class="hero-content">
-        <span class="hero-kicker"><i class="fas fa-shield-virus"></i> Global Intelligence Center</span>
-        <h1 class="hero-title">Unified Threat Intelligence</h1>
-        <p class="hero-lede">Your ultimate cyber radar! Dashboard ini ngasih lo visibility penuh buat mantau kerentanan global dari CISA KEV, indikator ancaman real-time via OTX AlienVault, plus pantauan kebocoran data. Everything you need to stay proactive and keep the bad guys out, all in one screen.</p>
+        <span class="hero-kicker"><i class="fas fa-shield-virus"></i> {{ $t('auto_0') }}</span>
+        <h1 class="hero-title">{{ $t('auto_1') }}</h1>
+        <p class="hero-lede">{{ $t('auto_2') }}</p>
       </div>
       <div class="hero-stats-grid">
         <div class="hero-stat-card">
-          <label>CISA KEV</label>
+          <label>{{ $t('auto_3') }}</label>
           <strong>{{ cves.length || '...' }}</strong>
-          <span>Vulnerabilities</span>
+          <span>{{ $t('auto_4') }}</span>
         </div>
         <div class="hero-stat-card">
-          <label>OTX Events</label>
+          <label>{{ $t('auto_5') }}</label>
           <strong>{{ metrics.totalEvents || '...' }}</strong>
-          <span>Recent Pulses</span>
+          <span>{{ $t('auto_6') }}</span>
         </div>
         <div class="hero-stat-card">
-          <label>Active IOCs</label>
+          <label>{{ $t('auto_7') }}</label>
           <strong>{{ metrics.activeIocs || '...' }}</strong>
-          <span>Threat Indicators</span>
+          <span>{{ $t('auto_8') }}</span>
         </div>
       </div>
     </section>
@@ -35,7 +35,7 @@
         @click="activeTab = 'otx'"
       >
         <i class="fas fa-satellite-dish"></i>
-        <strong>Threat Feed</strong>
+        <strong>{{ $t('auto_9') }}</strong>
       </button>
       <button 
         class="intel-tab" 
@@ -44,7 +44,7 @@
         @click="activeTab = 'cve'"
       >
         <i class="fas fa-bug"></i>
-        <strong>Vulnerability Intel</strong>
+        <strong>{{ $t('auto_10') }}</strong>
       </button>
     </div>
 
@@ -60,12 +60,12 @@
           <div class="col-lg-6">
             <div class="panel-card p-3 border border-danger-subtle h-100">
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="fw-800 text-danger mb-0 x-small ls-1"><i class="fas fa-user-shield me-2"></i>BREACH CHECKER</h6>
+                <h6 class="fw-800 text-danger mb-0 x-small ls-1"><i class="fas fa-user-shield me-2"></i>{{ $t('auto_11') }}</h6>
                 <div v-if="rateLimitCountdown > 0" class="badge bg-warning text-dark x-small">
                   Limit: {{ rateLimitCountdown }}s
                 </div>
               </div>
-              <p class="text-muted x-small mb-3">Integrasi database intelijen kebocoran data real-time.</p>
+              <p class="text-muted x-small mb-3">{{ $t('auto_12') }}</p>
 
               <div class="input-group input-group-sm rounded-3 overflow-hidden border shadow-sm mb-2">
                 <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-envelope text-muted"></i></span>
@@ -73,7 +73,7 @@
                   type="email" 
                   class="form-control border-0 py-2" 
                   v-model="userTerm" 
-                  placeholder="Email to analyze..."
+                  :placeholder="$t('auto_23')"
                   :disabled="isChecking"
                   @keyup.enter="checkBreachStatus"
                 >
@@ -94,12 +94,12 @@
               <!-- Compact Results -->
               <div v-if="checkResult" class="mt-2 animate-fade-in x-small">
                 <div v-if="!checkResult.found" class="p-2 bg-success bg-opacity-10 text-success rounded">
-                  <i class="fas fa-check-circle me-1"></i> Email aman dalam pantauan kami.
+                  <i class="fas fa-check-circle me-1"></i> {{ $t('auto_13') }}
                 </div>
                 <div v-else>
                   <div class="p-2 bg-danger bg-opacity-10 text-danger rounded d-flex justify-content-between align-items-center mb-2">
                     <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran.</span>
-                    <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">Salin</button>
+                    <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">{{ $t('auto_14') }}</button>
                   </div>
                   <!-- Detil Kebocoran -->
                   <div class="border rounded px-2 py-1 bg-light mt-1" style="max-height: 120px; overflow-y: auto;">
@@ -122,7 +122,7 @@
           <div class="col-lg-6">
             <div class="panel-card shadow-sm p-3 h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h6 class="fw-800 text-muted text-uppercase ls-1 x-small mb-0">Activity Distribution</h6>
+                <h6 class="fw-800 text-muted text-uppercase ls-1 x-small mb-0">{{ $t('auto_15') }}</h6>
                 <button class="btn btn-ai-mini" @click="fetchAllIntelData" :disabled="isIntelLoading">
                   <i class="fas fa-sync-alt" :class="{ 'fa-spin': isIntelLoading }"></i>
                 </button>
@@ -163,18 +163,18 @@
           <div class="col-lg-6">
             <div class="panel-card shadow-sm h-100 overflow-hidden">
               <div class="p-2 px-3 bg-light border-bottom d-flex justify-content-between align-items-center">
-                <span class="x-small fw-800 text-muted text-uppercase ls-1">Active Indicators (IOC)</span>
+                <span class="x-small fw-800 text-muted text-uppercase ls-1">{{ $t('auto_16') }}</span>
                 <div class="input-group input-group-sm w-50">
-                  <input type="text" class="form-control form-control-sm bg-white border-0" v-model="otxSearchQuery" placeholder="Search IOC..." @keyup.enter="performSearch">
+                  <input type="text" class="form-control form-control-sm bg-white border-0" v-model="otxSearchQuery" :placeholder="$t('auto_24')" @keyup.enter="performSearch">
                 </div>
               </div>
               <div class="table-responsive" style="max-height: 400px;">
                 <table class="table table-custom mb-0">
                   <thead>
                     <tr>
-                      <th>TYPE</th>
-                      <th>INDICATOR VALUE</th>
-                      <th class="text-end">SIGHTS</th>
+                      <th>{{ $t('auto_17') }}</th>
+                      <th>{{ $t('auto_18') }}</th>
+                      <th class="text-end">{{ $t('auto_19') }}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -189,16 +189,16 @@
                           <div class="p-3">
                             <div class="row g-3">
                               <div class="col-md-8">
-                                <label class="detail-label-mini">Context & Pulse Title</label>
+                                <label class="detail-label-mini">{{ $t('auto_20') }}</label>
                                 <div class="fw-700 text-navy mb-2">{{ ioc.Event?.info || 'N/A' }}</div>
                                 <div class="d-flex flex-wrap gap-1 mb-2">
                                   <span v-for="tag in ioc.Tag" :key="tag.id" class="badge-tag">{{ tag.name }}</span>
                                 </div>
                               </div>
                               <div class="col-md-4 text-end">
-                                <label class="detail-label-mini">External Source</label>
+                                <label class="detail-label-mini">{{ $t('auto_21') }}</label>
                                 <a :href="`https://otx.alienvault.com/indicator/${ioc.type}/${ioc.value}`" target="_blank" class="btn btn-xs btn-outline-primary d-block mt-1">
-                                  View on OTX <i class="fas fa-external-link-alt ms-1"></i>
+                                  {{ $t('auto_22') }} <i class="fas fa-external-link-alt ms-1"></i>
                                 </a>
                               </div>
                             </div>

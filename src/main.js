@@ -10,11 +10,14 @@ const originalFetch = window.fetch;
 window.fetch = async function() {
   let [resource, config] = arguments;
   
-  if (typeof resource === 'string' && resource.startsWith('/data/') && resource.endsWith('.json')) {
-    // If language is English, try fetching the _en.json version first
+  if (typeof resource === 'string' && resource.includes('/data/') && resource.includes('.json')) {
+    // Handle query parameters like ?t=...
+    const [path, query] = resource.split('?');
     const lang = localStorage.getItem('language') || 'id';
-    if (lang === 'en' && !resource.endsWith('_en.json')) {
-      const enResource = resource.replace('.json', '_en.json');
+    
+    if (lang === 'en' && !path.endsWith('_en.json')) {
+      const enPath = path.replace('.json', '_en.json');
+      const enResource = query ? `${enPath}?${query}` : enPath;
       try {
         const enResponse = await originalFetch(enResource, config);
         if (enResponse.ok) {

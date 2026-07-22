@@ -5,14 +5,14 @@
       <div class="card-body bg-light rounded">
         <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
           <div>
-            <label class="form-label fw-bold mb-2">Filter Topik:</label>
+            <label class="form-label fw-bold mb-2">{{ $t('auto_39') }}</label>
             <div class="d-flex flex-wrap gap-2">
               <button 
                 class="btn btn-sm rounded-pill"
                 :class="selectedTopic === 'all' ? 'btn-primary' : 'btn-outline-secondary'"
                 @click="selectedTopic = 'all'"
               >
-                Semua Topik
+                {{ $t('auto_40') }}
               </button>
               <button 
                 v-for="topic in topics" 
@@ -28,11 +28,11 @@
           <div class="d-flex flex-wrap gap-3">
             <div class="d-flex align-items-center">
               <div class="legend-box bg-success bg-opacity-25 border-success me-2"></div>
-              <small class="text-muted fw-bold">Ekuivalen</small>
+              <small class="text-muted fw-bold">{{ $t('auto_41') }}</small>
             </div>
             <div class="d-flex align-items-center">
               <div class="legend-box bg-warning bg-opacity-25 border-warning me-2"></div>
-              <small class="text-muted fw-bold">Hanya ada di salah satu</small>
+              <small class="text-muted fw-bold">{{ $t('auto_42') }}</small>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
                       <p class="mb-0">{{ row[frameworkA].desc }}</p>
                     </div>
                     <div v-else class="text-muted small fst-italic">
-                      <i class="fa-solid fa-minus me-1"></i> Tidak ada kontrol yang berkesesuaian
+                      <i class="fa-solid fa-minus me-1"></i> {{ $t('auto_43') }}
                     </div>
                   </td>
                   <td class="p-3">
@@ -80,7 +80,7 @@
                       <p class="mb-0">{{ row[frameworkB].desc }}</p>
                     </div>
                     <div v-else class="text-muted small fst-italic">
-                      <i class="fa-solid fa-minus me-1"></i> Tidak ada kontrol yang berkesesuaian
+                      <i class="fa-solid fa-minus me-1"></i> {{ $t('auto_44') }}
                     </div>
                   </td>
                 </tr>

@@ -1,19 +1,18 @@
 <template>
   <article class="contact-page">
     <header class="contact-hero">
-      <span class="contact-kicker"><i class="fas fa-envelope-open-text"></i> Kontak & Redaksi</span>
-      <h1>Hubungi Pengelola SibukPatuh</h1>
+      <span class="contact-kicker"><i class="fas fa-envelope-open-text"></i> {{ $t('contact.kicker') }}</span>
+      <h1>{{ $t('contact.title') }}</h1>
       <p>
-        Gunakan halaman ini untuk mengirim koreksi konten, masukan sumber regulasi, pertanyaan privasi,
-        atau laporan bug pada fitur edukatif SibukPatuh.
+        {{ $t('contact.intro') }}
       </p>
     </header>
 
     <section class="contact-grid">
       <div class="contact-panel">
-        <h2>Kontak Utama</h2>
+        <h2>{{ $t('contact.main') }}</h2>
         <p>
-          Pengelola situs: <strong>Lintang</strong><br>
+          {{ $t('contact.siteOwner') }}: <strong>Lintang</strong><br>
           Email: <a href="mailto:lintanggraha@gmail.com">lintanggraha@gmail.com</a><br>
           LinkedIn:
           <a href="https://www.linkedin.com/in/lintanggraha/" target="_blank" rel="noopener noreferrer">
@@ -23,21 +22,17 @@
       </div>
 
       <div class="contact-panel">
-        <h2>Jenis Permintaan</h2>
+        <h2>{{ $t('contact.requestTypes') }}</h2>
         <ul>
-          <li>Koreksi ringkasan framework, regulasi, atau istilah teknis.</li>
-          <li>Permintaan penghapusan data yang tidak seharusnya tampil.</li>
-          <li>Pertanyaan tentang privasi, cookie, atau penggunaan layanan pihak ketiga.</li>
-          <li>Usulan topik edukatif baru untuk keamanan siber dan kepatuhan TI.</li>
+          <li v-for="item in $tm('contact.items')" :key="item">{{ item }}</li>
         </ul>
       </div>
     </section>
 
     <section class="contact-panel">
-      <h2>Komitmen Respons</h2>
+      <h2>{{ $t('contact.responseTitle') }}</h2>
       <p>
-        Setiap laporan akan ditinjau secara manual. Koreksi yang berdampak pada akurasi materi akan diprioritaskan,
-        terutama jika menyangkut referensi regulasi, standar, atau risiko keamanan yang dapat menyesatkan pembaca.
+        {{ $t('contact.responseText') }}
       </p>
     </section>
   </article>

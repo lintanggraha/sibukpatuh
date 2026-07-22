@@ -22,6 +22,7 @@
     "traktirKopi": "Buy me a Coffee",
     "modeTerang": "Enable Light Mode",
     "modeGelap": "Enable Dark Mode",
+    "gantiBahasa": "Change language",
     "bacaSelengkapnya": "Read More",
     "kembali": "Back"
   },
@@ -36,5 +37,183 @@
     "roleBod": "Board of Directors (BoD)",
     "roleSysadmin": "SysAdmin / Technical Team",
     "roleLegal": "Legal / Compliance"
-  }
+  },
+  "home": {
+    "kicker": "SibukPatuh - Educational Platform",
+    "title": "Learning Space for Cyber Frameworks & Regulations",
+    "copy": "Understand cybersecurity reference frameworks (ISO, NIST, COBIT) and Indonesian regulations (OJK, BI) in one integrated interface.",
+    "disclaimer": "The ISO 27001, ISO 37001, and COBIT 2019 materials in SibukPatuh are prepared purely as educational summaries, interpretations, and learning aids. This content is not official text and does not replace licensed documents from ISO, BSN, or ISACA. Please refer to the applicable official standards for formal purposes.",
+    "whatTitle": "What is SibukPatuh?",
+    "whatCopy": "SibukPatuh is an Indonesian educational reference platform designed to help IT practitioners, auditors, compliance officers, and students understand cybersecurity frameworks and information technology regulations. It provides structured, approachable summaries that can be used as a starting point for exploration.",
+    "cards": {
+      "internationalTitle": "International Frameworks",
+      "internationalText": "Learn ISO 27001:2022, ISO 37001:2016, NIST CSF 2.0, and COBIT 2019 through summaries of controls, domains, and structural reading guidance.",
+      "nationalTitle": "National Regulations",
+      "nationalText": "Navigate SEOJK 29/2022, PBI 02/2024, PADG 32/2025, PADK 1 Tahun 2026, and UU PDP 27/2022 with structured obligation maps.",
+      "toolsTitle": "Compliance Tools",
+      "toolsText": "Use Cross-Mapping, Gap Analysis, Checklist Tools, and Compliance Simulator to evaluate and simulate your organization's compliance posture.",
+      "intelTitle": "Intelligence Center",
+      "intelText": "Monitor current cyber threats through OTX AlienVault feeds, CISA KEV lists, and AI-based CVE analysis in the context of Indonesian regulations."
+    },
+    "metric": {
+      "controls": "Controls",
+      "items": "Items",
+      "subcategories": "Subcategories",
+      "objectives": "Objectives",
+      "requirements": "Requirements",
+      "vulnerabilities": "Vulnerabilities",
+      "testCategories": "Test Categories",
+      "scenarios": "Scenarios"
+    }
+  },
+  "about": {
+    "title": "About SibukPatuh",
+    "subtitle": "Cybersecurity Framework Navigation & Exploration Platform",
+    "summaryTitle": "Educational Summary",
+    "p1": "SibukPatuh is an educational web application for learning the structure, terminology, and context of information technology frameworks and regulations, both national and international.",
+    "p2": "Each page is arranged as self-guided learning material: summaries, domain grouping, examples of how to read obligations, and practical explanations so readers understand the relationship between governance, risk, audit evidence, and operational implementation.",
+    "help": "This application was built to help IT teams, auditors, and compliance officers:",
+    "importantTitle": "Important Note",
+    "importantText": "Content in SibukPatuh is prepared purely as learning and educational reference material to deepen understanding, not as absolute official guidance. For ISO 27001:2022, ISO 37001:2016, and COBIT 2019, the available materials are educational summaries and interpretations, not reproductions of official documents. For audits, certifications, or legal decisions, users must always refer to official standards issued by the relevant institutions (BSN, OJK, BI, ISO, ISACA).",
+    "editorialTitle": "Editorial Methodology",
+    "editorialP1": "SibukPatuh content is created through educational curation. Public documents, standards, and industry references are reread, mapped into learning categories, then rewritten in language that is easier for practitioners to understand. For licensed standards such as ISO and COBIT, SibukPatuh does not copy official text; it presents interpretations, learning structure, and usage context.",
+    "editorialP2": "If regulations change, a summary is incorrect, or a source needs improvement, readers can send corrections through the Contact page.",
+    "creatorTitle": "Who is Behind SibukPatuh?",
+    "creatorRole": "Risk Management Professional",
+    "creatorText": "From daily experience navigating compliance requirements and risk management, I saw the need for an interactive space that bridges dense PDF theory with practical understanding in the field. SibukPatuh was built as a dedication to sharing cybersecurity insight and helping teams align operations and policies with international best practices.",
+    "linkedin": "Connect on LinkedIn",
+    "features": [
+      [
+        "Understand material structure",
+        "Across compliance frameworks such as SEOJK, PBI, ISO, NIST, and COBIT"
+      ],
+      [
+        "Read educational summaries",
+        "Without opening every document one by one during early reference discovery"
+      ],
+      [
+        "Explore key terms",
+        "By domain, category, or topic to make team understanding easier"
+      ],
+      [
+        "Compare references",
+        "As learning material for cross-mapping and internal risk management discussions"
+      ]
+    ]
+  },
+  "contact": {
+    "kicker": "Contact & Editorial",
+    "title": "Contact the SibukPatuh Maintainer",
+    "intro": "Use this page to submit content corrections, regulatory source suggestions, privacy questions, or bug reports for SibukPatuh's educational features.",
+    "main": "Primary Contact",
+    "siteOwner": "Site maintainer",
+    "requestTypes": "Request Types",
+    "items": [
+      "Corrections to framework summaries, regulations, or technical terms.",
+      "Requests to remove data that should not be displayed.",
+      "Questions about privacy, cookies, or third-party service usage.",
+      "Suggestions for new educational topics on cybersecurity and IT compliance."
+    ],
+    "responseTitle": "Response Commitment",
+    "responseText": "Every report will be reviewed manually. Corrections that affect material accuracy will be prioritized, especially when they involve regulatory references, standards, or security risks that could mislead readers."
+  },
+  "privacy": {
+    "kicker": "Privacy Policy",
+    "title": "SibukPatuh Privacy Policy",
+    "intro": "This page explains how SibukPatuh handles technical data, cookies, third-party services, and information submitted by users while using educational tools on this site.",
+    "updated": "Last updated: May 13, 2026",
+    "sections": [
+      [
+        "Data Usage Summary",
+        "SibukPatuh is an educational and cybersecurity learning reference site. We do not sell users' personal data. Processed data is used to run site features, understand page performance, prevent abuse, and display relevant third-party services."
+      ],
+      [
+        "Third-Party Services",
+        "Some features retrieve data from public sources or third-party APIs such as CISA KEV, MITRE, OTX AlienVault, Pulsedive, or AI services. When these features are used, requests may be forwarded to the relevant services so search or analysis results can be displayed."
+      ],
+      [
+        "Contact",
+        "For questions about this privacy policy, contact the maintainer at"
+      ]
+    ],
+    "processedTitle": "Information That May Be Processed",
+    "processedItems": [
+      "Technical data such as IP address, user agent, visited pages, access time, and performance metrics.",
+      "Data users voluntarily enter, such as an email address in the breach checker or questions in the AI analyst feature.",
+      "Browser local storage data, such as display theme preferences."
+    ],
+    "processedWarning": "Do not enter passwords, tokens, API keys, company secrets, or sensitive personal data into search features, the simulator, or the AI assistant.",
+    "cookiesTitle": "Cookies, Analytics, and Ads",
+    "cookiesP1": "This site may use analytics, speed insights, and Google AdSense. These services may use cookies, web beacons, IP addresses, or browser identifiers to measure performance, prevent fraud, and serve ads.",
+    "cookiesP2": "Google and third parties may place or read cookies in users' browsers as part of ad delivery. Users can learn how Google uses data through",
+    "controlsTitle": "User Controls",
+    "controlsItems": [
+      "Users can delete cookies and local storage through browser settings.",
+      "Users can disable ad personalization through Google account or browser settings.",
+      "Users can contact the site maintainer for privacy questions or information correction requests."
+    ]
+  },
+  "tools": {
+    "analysisTitle": "Framework Analysis",
+    "analysisDesc": "Compare frameworks side-by-side or run a Gap Analysis evaluation.",
+    "frameworkA": "Framework A (Baseline)",
+    "frameworkB": "Framework B (Evaluation Target)",
+    "sideBySide": "Side-by-Side Comparison",
+    "gapAnalysis": "Gap Analysis",
+    "crossTitle": "Cross-Mapping Visual",
+    "crossDesc": "Explore relationships between controls across 6 IT compliance frameworks.",
+    "resetView": "Reset View",
+    "filterFramework": "Framework Filter",
+    "crossHint": "At least 2 frameworks must be active to view relationships. Click a control node to highlight its relationships.",
+    "equivalent": "Equivalent in active frameworks:",
+    "chooseOneOrMore": "Choose one or more",
+    "back": "Back",
+    "next": "Next",
+    "startOver": "Start Over"
+  },
+  "auto_0": "Global Intelligence Center",
+  "auto_1": "Unified Threat Intelligence",
+  "auto_2": "Your ultimate cyber radar! This dashboard gives you full visibility for global vulnerability monitoring from CISA KEV, real-time threat indicators via AlienVault OTX, plus data leak monitoring. Everything you need to stay proactive and keep the bad guys out, all in one screen.",
+  "auto_3": "CISA KEV",
+  "auto_4": "Vulnerabilities",
+  "auto_5": "OTX Events",
+  "auto_6": "Recent Pulses",
+  "auto_7": "Active IOCs",
+  "auto_8": "Threat Indicators",
+  "auto_9": "Threat Feed",
+  "auto_10": "Intel Vulnerabilities",
+  "auto_11": "BREACH CHECKER",
+  "auto_12": "Real-time data leak intelligence database integration.",
+  "auto_13": "Email is safe under our control.",
+  "auto_14": "Copy",
+  "auto_15": "Activity Distribution",
+  "auto_16": "Active Indicators (IOC)",
+  "auto_17": "TYPE",
+  "auto_18": "VALUE INDICATORS",
+  "auto_19": "SIGHTS",
+  "auto_20": "Context & Pulse Title",
+  "auto_21": "External Source",
+  "auto_22": "View on OTX",
+  "auto_23": "Email to analyze...",
+  "auto_24": "Search IOC...",
+  "auto_25": "Fulfillment Summary (Coverage)",
+  "auto_26": "Export CSV",
+  "auto_27": "Covered",
+  "auto_28": "Partials",
+  "auto_29": "Gap",
+  "auto_30": "Baseline Totals",
+  "auto_31": "Detailed Gap Analysis",
+  "auto_32": "Status",
+  "auto_33": "Covered",
+  "auto_34": "Partials",
+  "auto_35": "Gap",
+  "auto_36": "Unfulfilled Aspects (Gap):",
+  "auto_37": "No adequate controls were found on the target.",
+  "auto_38": "No evaluation data (Baseline does not have this control).",
+  "auto_39": "Topic Filters:",
+  "auto_40": "All Topics",
+  "auto_41": "Equivalent",
+  "auto_42": "Only in one",
+  "auto_43": "There are no appropriate controls",
+  "auto_44": "There are no appropriate controls"
 }

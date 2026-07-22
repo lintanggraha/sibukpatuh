@@ -1,5 +1,356 @@
 [
   {
+    "id": "4.1",
+    "name": "Understanding the organization and its context",
+    "type": "Clause",
+    "domain": "Organizational Context",
+    "description": "The organization must determine external and internal issues that are relevant to its purpose and that affect its ability to achieve the intended outcomes of its ISMS.",
+    "exampleEvidence": [
+      "Context analysis document (PESTLE/SWOT)",
+      "Management review minutes"
+    ],
+    "roleTranslations": {
+      "bod": "Understand internal and external challenges affecting the organization's security posture.",
+      "sysadmin": "Provide input regarding relevant technology trends or operational challenges.",
+      "legal": "Ensure regulatory changes are included in the context analysis."
+    }
+  },
+  {
+    "id": "4.2",
+    "name": "Understanding the needs and expectations of interested parties",
+    "type": "Clause",
+    "domain": "Organizational Context",
+    "description": "Determining interested parties relevant to the ISMS and their requirements related to information security.",
+    "exampleEvidence": [
+      "List of interested parties and their requirements",
+      "SLA with vendors/clients"
+    ],
+    "roleTranslations": {
+      "bod": "Ensure client and regulatory expectations regarding security are understood.",
+      "sysadmin": "Implement technical requirements from third parties/regulators.",
+      "legal": "Map out legal obligations demanded by stakeholders."
+    }
+  },
+  {
+    "id": "4.3",
+    "name": "Determining the scope of the ISMS",
+    "type": "Clause",
+    "domain": "Organizational Context",
+    "description": "Determining the boundaries and applicability of the ISMS to establish its scope clearly.",
+    "exampleEvidence": [
+      "ISMS Scope Statement",
+      "Network and physical boundaries map"
+    ],
+    "roleTranslations": {
+      "bod": "Approve which business areas/systems are the primary focus of security.",
+      "sysadmin": "Ensure logical and physical boundaries of in-scope systems are clearly defined.",
+      "legal": "Verify scope alignment with business agreements."
+    }
+  },
+  {
+    "id": "4.4",
+    "name": "Information security management system",
+    "type": "Clause",
+    "domain": "Organizational Context",
+    "description": "Establishing, implementing, maintaining, and continually improving the ISMS.",
+    "exampleEvidence": [
+      "ISMS Manual",
+      "Process documentation and interactions"
+    ],
+    "roleTranslations": {
+      "bod": "Provide ongoing commitment to the administration of the security system.",
+      "sysadmin": "Apply a cycle of continuous improvement to operational IT processes.",
+      "legal": "Ensure the framework complies with national/international standards."
+    }
+  },
+  {
+    "id": "5.1",
+    "name": "Leadership and commitment",
+    "type": "Clause",
+    "domain": "Leadership",
+    "description": "Top management must demonstrate leadership and commitment to the ISMS, including ensuring integration with business processes.",
+    "exampleEvidence": [
+      "Information security policy signed by the board",
+      "Resource allocation evidence"
+    ],
+    "roleTranslations": {
+      "bod": "Provide full support (budget, resources, direction) for information security initiatives.",
+      "sysadmin": "Report resource constraints to top management.",
+      "legal": "Ensure the board's responsibility for security is accommodated in corporate governance."
+    }
+  },
+  {
+    "id": "5.2",
+    "name": "Policy",
+    "type": "Clause",
+    "domain": "Leadership",
+    "description": "Top management must establish an information security policy that is appropriate to the purpose and context of the organization.",
+    "exampleEvidence": [
+      "Information Security Policy Document"
+    ],
+    "roleTranslations": {
+      "bod": "Ratify the main policy and strategic direction of corporate security.",
+      "sysadmin": "Use the policy as a basis for drafting configuration standards.",
+      "legal": "Ensure the main policy does not contradict laws/industry regulations."
+    }
+  },
+  {
+    "id": "5.3",
+    "name": "Organizational roles, responsibilities and authorities",
+    "type": "Clause",
+    "domain": "Leadership",
+    "description": "Ensuring relevant roles and responsibilities are assigned and communicated within the organization.",
+    "exampleEvidence": [
+      "Organizational Chart",
+      "Job Descriptions (RACI)"
+    ],
+    "roleTranslations": {
+      "bod": "Establish who is responsible (CISO/Security Manager) at the executive level.",
+      "sysadmin": "Understand the limits of administrative authority in the system.",
+      "legal": "Review the alignment of job duties with labor laws/contracts."
+    }
+  },
+  {
+    "id": "6.1",
+    "name": "Actions to address risks and opportunities",
+    "type": "Clause",
+    "domain": "Planning",
+    "description": "Determining risks and opportunities related to the ISMS, and planning actions to address them (Risk Assessment & Treatment).",
+    "exampleEvidence": [
+      "Risk Assessment Report",
+      "Risk Treatment Plan (RTP)",
+      "Statement of Applicability (SoA)"
+    ],
+    "roleTranslations": {
+      "bod": "Approve the acceptable level of risk (Risk Appetite) and RTP.",
+      "sysadmin": "Mitigate technical risks (patching, reconfiguration) based on risk assessments.",
+      "legal": "Assess legal/compliance risks from existing security threats."
+    }
+  },
+  {
+    "id": "6.2",
+    "name": "Information security objectives and planning to achieve them",
+    "type": "Clause",
+    "domain": "Planning",
+    "description": "Establishing information security objectives (KPIs) at relevant functions and levels, and planning how to achieve them.",
+    "exampleEvidence": [
+      "Information Security Objectives/KPI Document",
+      "KPI monitoring dashboard"
+    ],
+    "roleTranslations": {
+      "bod": "Ensure security KPIs align with overall business KPIs.",
+      "sysadmin": "Target operational metrics (e.g., 99.9% uptime, zero unpatched critical bugs).",
+      "legal": "Target zero compliance breaches as one of the objectives."
+    }
+  },
+  {
+    "id": "7.1",
+    "name": "Resources",
+    "type": "Clause",
+    "domain": "Support",
+    "description": "Determining and providing the resources needed for the establishment, implementation, maintenance, and improvement of the ISMS.",
+    "exampleEvidence": [
+      "Budget Plan (CAPEX/OPEX)",
+      "List of security tools"
+    ],
+    "roleTranslations": {
+      "bod": "Allocate sufficient budget and staffing for security.",
+      "sysadmin": "Submit requirements for security software licenses (EDR, SIEM) or hardware.",
+      "legal": "Allocate budget for legal consultants if necessary."
+    }
+  },
+  {
+    "id": "7.2",
+    "name": "Competence",
+    "type": "Clause",
+    "domain": "Support",
+    "description": "Ensuring personnel have appropriate competence based on adequate education, training, or experience.",
+    "exampleEvidence": [
+      "Training certificates (CEH, CISSP)",
+      "Performance evaluation records"
+    ],
+    "roleTranslations": {
+      "bod": "Invest in team capacity building programs.",
+      "sysadmin": "Attend IT security training/certifications regularly.",
+      "legal": "Understand the professional certifications or licenses the team must possess."
+    }
+  },
+  {
+    "id": "7.3",
+    "name": "Awareness",
+    "type": "Clause",
+    "domain": "Support",
+    "description": "Everyone must be aware of the security policy, their contribution to the effectiveness of the ISMS, and the implications of non-conformance.",
+    "exampleEvidence": [
+      "Security Awareness Materials",
+      "Socialization attendance logs",
+      "Phishing simulation results"
+    ],
+    "roleTranslations": {
+      "bod": "Participate in security socialization and demonstrate top-down commitment.",
+      "sysadmin": "Provide practical technical education to users about the dangers of clicking links/phishing.",
+      "legal": "Educate staff on the legal consequences of leaking corporate data."
+    }
+  },
+  {
+    "id": "7.4",
+    "name": "Communication",
+    "type": "Clause",
+    "domain": "Support",
+    "description": "Determining the internal and external communication needs relevant to the ISMS (what, when, with whom, and who communicates).",
+    "exampleEvidence": [
+      "Communication Plan / Matrix",
+      "Email blast/announcement evidence"
+    ],
+    "roleTranslations": {
+      "bod": "Act as spokesperson if there is a security crisis affecting clients.",
+      "sysadmin": "Communicate maintenance schedules or incidents to all users.",
+      "legal": "Determine how to communicate with regulators (e.g., reporting incidents to authorities)."
+    }
+  },
+  {
+    "id": "7.5",
+    "name": "Documented information",
+    "type": "Clause",
+    "domain": "Support",
+    "description": "Creating, updating, and controlling documented information (policies, procedures, records) required by ISO 27001.",
+    "exampleEvidence": [
+      "Master Document List",
+      "Document Control SOP"
+    ],
+    "roleTranslations": {
+      "bod": "Formally sign strategic level documents.",
+      "sysadmin": "Manage versioning and backups of the document repository.",
+      "legal": "Ensure document retention periods comply with archiving laws."
+    }
+  },
+  {
+    "id": "8.1",
+    "name": "Operational planning and control",
+    "type": "Clause",
+    "domain": "Operation",
+    "description": "Planning, implementing, and controlling processes needed to meet ISMS requirements.",
+    "exampleEvidence": [
+      "IT Security Operational SOP",
+      "Daily activity logs"
+    ],
+    "roleTranslations": {
+      "bod": "Oversee the smooth operation of security through routine reports.",
+      "sysadmin": "Execute day-to-day operations (monitoring, backup, patching) according to standards.",
+      "legal": "Ensure third-party vendor operations comply with legal SLAs."
+    }
+  },
+  {
+    "id": "8.2",
+    "name": "Information security risk assessment",
+    "type": "Clause",
+    "domain": "Operation",
+    "description": "Performing risk assessments at planned intervals or when significant changes occur, following the defined methodology.",
+    "exampleEvidence": [
+      "Annual Risk Assessment Report",
+      "New Application Risk Assessment Report"
+    ],
+    "roleTranslations": {
+      "bod": "Review shifts in the risk landscape periodically.",
+      "sysadmin": "Identify technical vulnerabilities (vuln scans) as input for risk assessments.",
+      "legal": "Assess compliance risks in every new process/system."
+    }
+  },
+  {
+    "id": "8.3",
+    "name": "Information security risk treatment",
+    "type": "Clause",
+    "domain": "Operation",
+    "description": "Implementing the risk treatment plan for identified risks.",
+    "exampleEvidence": [
+      "RTP implementation progress report"
+    ],
+    "roleTranslations": {
+      "bod": "Evaluate whether the RTP budget has been used effectively.",
+      "sysadmin": "Implement technical controls to mitigate risks.",
+      "legal": "Choose risk transfer options (cyber insurance) if necessary."
+    }
+  },
+  {
+    "id": "9.1",
+    "name": "Monitoring, measurement, analysis and evaluation",
+    "type": "Clause",
+    "domain": "Performance Evaluation",
+    "description": "Evaluating the performance and effectiveness of the ISMS through defined monitoring and measurement.",
+    "exampleEvidence": [
+      "Metrics/KPI Reports",
+      "Security Dashboard"
+    ],
+    "roleTranslations": {
+      "bod": "Use performance metrics for decision making.",
+      "sysadmin": "Provide log, uptime, and incident data as materials for metric measurement.",
+      "legal": "Ensure measurement methods are valid and evidence is not manipulated."
+    }
+  },
+  {
+    "id": "9.2",
+    "name": "Internal audit",
+    "type": "Clause",
+    "domain": "Performance Evaluation",
+    "description": "Conducting internal audits at planned intervals to ensure the ISMS conforms to ISO 27001 requirements and is effectively implemented.",
+    "exampleEvidence": [
+      "Internal Audit Program",
+      "Audit Findings Report (NCR)"
+    ],
+    "roleTranslations": {
+      "bod": "Ensure the internal audit team is independent and objective.",
+      "sysadmin": "Prepare evidence and system configurations when requested by auditors.",
+      "legal": "Follow up on findings that potentially constitute legal violations."
+    }
+  },
+  {
+    "id": "9.3",
+    "name": "Management review",
+    "type": "Clause",
+    "domain": "Performance Evaluation",
+    "description": "Top management reviews the organization's ISMS at planned intervals to ensure its continuing suitability, adequacy, and effectiveness.",
+    "exampleEvidence": [
+      "Management Review Minutes"
+    ],
+    "roleTranslations": {
+      "bod": "Lead management review meetings and make strategic decisions.",
+      "sysadmin": "Present summaries of incidents and IT performance metrics.",
+      "legal": "Provide updates on compliance trends or sanctions from regulators."
+    }
+  },
+  {
+    "id": "10.1",
+    "name": "Nonconformity and corrective action",
+    "type": "Clause",
+    "domain": "Improvement",
+    "description": "Reacting to nonconformities (including incidents) and taking corrective action to eliminate root causes so they do not recur.",
+    "exampleEvidence": [
+      "Corrective Action Form (CAR/CAPA)",
+      "Root Cause Analysis Report"
+    ],
+    "roleTranslations": {
+      "bod": "Ensure root causes are truly resolved, not just symptoms.",
+      "sysadmin": "Implement permanent technical fixes to close security gaps.",
+      "legal": "Ensure corrective processes do not violate client SLAs or insurance agreements."
+    }
+  },
+  {
+    "id": "10.2",
+    "name": "Continual improvement",
+    "type": "Clause",
+    "domain": "Improvement",
+    "description": "Continually improving the suitability, adequacy, and effectiveness of the ISMS.",
+    "exampleEvidence": [
+      "Evidence of Security Innovation",
+      "Maturity Assessment Report"
+    ],
+    "roleTranslations": {
+      "bod": "Foster a culture of continuous improvement throughout the organization.",
+      "sysadmin": "Automate manual processes and upgrade technology to the latest standards.",
+      "legal": "Continually refine contract structures and compliance procedures over time."
+    }
+  },
+  {
     "id": "5.1",
     "name": "Information security policy",
     "type": "Pencegahan",
@@ -15,9 +366,9 @@
       "legal": "Ensure that an obligation to comply with this security policy clause is included in every new employee employment contract and third-party vendor collaboration agreement."
     },
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security policy",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Mulai dengan membuat draft kebijakan yang sederhana dan relevan dengan bisnis. Libatkan C-level untuk approval, lalu sosialisasi ke seluruh karyawan melalui email blast dan briefing. Review kebijakan minimal setahun sekali atau saat ada perubahan regulasi signifikan.",
     "analogy": "Like a compass that provides direction on a journey, a security policy provides clear guidance to the entire organization about what to protect and how.",
@@ -34,9 +385,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Clearly explain who is responsible for what aspect of security. Each role must have specific tasks that are neatly recorded, so that there are no overlaps or gaps in responsibilities.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security roles and responsibilities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat RACI matrix yang jelas untuk setiap aspek keamanan informasi. Tetapkan CISO atau security champion. Dokumentasikan job description setiap role dan komunikasikan melalui onboarding session.",
     "analogy": "Just as a soccer team has specific positions—goalkeeper, defender, striker—everyone in the organization must know their role in maintaining information security.",
@@ -63,9 +414,9 @@
       "legal": "Make sure there are no findings of violations of separation of duties as this is often a critical finding by external auditors that can result in a reprimand."
     },
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Separation of duties",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi fungsi-fungsi yang berpotensi konflik (misal: developer vs deployer, buyer vs payer). Implementasi segregation of duties matrix di sistem. Lakukan review akses berkala setiap 6 bulan.",
     "analogy": "As in a restaurant, the chef who cooks is not the same as the cashier who handles the money—this separation prevents fraud and ensures quality.",
@@ -82,9 +433,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Organizational leaders must actively ensure that all employees follow the established security rules. Not only making rules, but also ensuring consistent implementation.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Management responsibilities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Manajemen harus memberikan contoh dengan mengikuti training keamanan terlebih dahulu. Sertakan KPI keamanan dalam performance review. Adakan town hall meeting quarterly untuk update progress keamanan.",
     "analogy": "Like a team coach who not only provides strategies but also ensures that each player carries them out, management must actively encourage the implementation of information security.",
@@ -106,9 +457,9 @@
     "capability": "Manajemen aset",
     "description": "Prepare a list of important contacts such as BSSN, police (cybercrime unit), or related regulatory agencies. This good relationship is very useful when the organization needs assistance or reports incidents.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Contact with competent authorities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat daftar kontak BSSAN, POLRI (unit cybercrime), dan Kominfo. Simpan dalam kontak darurat yang mudah diakses. Lakukan silaturahmi rutin minimal setahun sekali untuk membangun relasi.",
     "analogy": "Like having an emergency telephone number ready to call when a problem occurs, contact with authorities helps organizations respond appropriately to incidents.",
@@ -130,9 +481,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Join a cybersecurity professional community such as ID-SIRTII or the Indonesian CISO forum. From here, the team can get updates on the latest threats and share experiences with other practitioners.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Contact with special interest groups",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Gabung dengan ID-SIRTII, MALSPINDO, atau komunitas CISO Indonesia. Aktif di forum sharing ancaman siber. Hadiri minimal 2 event keamanan informasi per tahun untuk update best practices.",
     "analogy": "Just like joining a community of doctors to stay updated on the latest treatment methods, joining a security forum helps organizations stay updated on the latest threats.",
@@ -154,9 +505,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Gather information about active cyber threats, then analyze their impact on the organization. Threat intelligence helps teams prepare before an attack actually occurs.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Threat intelligence",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Subscribe ke feed threat intelligence gratis seperti MISP atau AlienVault OTB. Tetapkan tim kecil yang bertugas menganalisis threat feed mingguan. Buat briefing bulanan tentang ancaman terbaru yang relevan dengan industri.",
     "analogy": "Just as meteorological agencies monitor the weather to predict storms, threat intelligence helps organizations anticipate attacks before they occur.",
@@ -178,9 +529,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Every project—regardless of type—must include information security aspects from the start of planning. Don't wait until the project is finished to think about security.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security in project management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Tambahkan checklist keamanan di project charter setiap proyek. Libatkan tim security di kick-off meeting. Sertakan security review sebagai gate di stage-gate process proyek.",
     "analogy": "Just as seat belts must be worn in any car, information security must be part of every project, regardless of type.",
@@ -229,9 +580,9 @@
     "capability": "Manajemen aset",
     "description": "Create clear rules about how employees can use company IT assets. For example, office laptops can be used for remote work, but not for cryptocurrency mining.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Acceptable use of assets",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat AUP yang jelas menyebutkan apa yang boleh dan tidak boleh dilakukan dengan aset IT. Minta karyawan tanda tangan AUP saat onboarding. Sosialisasikan dengan contoh kasus pelanggaran yang sering terjadi.",
     "analogy": "Like the rules for using company vehicles—allowed for business use only, not personal vacations—IT assets also need clear usage limits.",
@@ -253,9 +604,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "When employees resign or move divisions, make sure all loaned assets—laptops, system access, ID cards—are returned. Create a checklist that is integrated with HR processes.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Return on assets",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat checklist exit clearance yang mencakup pengembalian laptop, ID card, token, dan akses sistem. Integrasikan dengan proses HR saat resign. Tetapkan timeline 1-3 hari kerja untuk pengembalian semua aset.",
     "analogy": "Like returning apartment keys at check-out, all organizational assets must be returned when employees leave or finish work.",
@@ -277,9 +628,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Classify data based on its sensitivity: which can be public, which is internal, which is confidential. This classification is the basis for determining the level of protection.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information classification",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Definisikan 3-4 level klasifikasi: Public, Internal, Confidential, Restricted. Buat kriteria yang jelas untuk setiap level. Mulai klasifikasi dari data paling kritis dulu, lalu ekspansi bertahap.",
     "analogy": "Like hospital triage systems that prioritize patients based on severity, information classification helps prioritize data protection.",
@@ -301,9 +652,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Label or mark each document or file according to its classification. This label reminds anyone handling the level of caution required.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information labeling",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasikan label digital (header/footer dokumen, email subject tag) dan fisik (stiker pada dokumen kertas). Gunakan watermark untuk dokumen confidential. Otomatisasi labeling dengan DLP jika memungkinkan.",
     "analogy": "Just as a 'fragile' label on a package reminds the courier to be careful, classification labels tell employees how to handle information.",
@@ -325,9 +676,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "When sending data—whether via email, USB, or the cloud—use a secure method appropriate to the sensitivity of the data. Confidential data should not be sent via regular email without encryption.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information transfer",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Tetapkan metode transfer aman: SFTP untuk file besar, encrypted email untuk data sensitif, secure portal untuk sharing eksternal. Larang penggunaan personal email atau USB untuk transfer data perusahaan.",
     "analogy": "Like sending money with an anti-theft safe, transferring information requires special protection so that it is not stolen in the middle of the road.",
@@ -349,9 +700,9 @@
     "capability": "Manajemen aset",
     "description": "Set who can access certain information and assets. The principle: provide access only to the extent needed to carry out the task (least privilege).",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Access management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Terapkan prinsip least privilege dari awal. Buat workflow approval untuk request akses baru. Review akses user setiap 3-6 bulan, terutama untuk sistem kritis.",
     "analogy": "Like the access card system in hotels—guests can only enter their own rooms, not other people's rooms—access should be based on need.",
@@ -373,9 +724,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Manage employee digital identities from entry to exit from the company. Including account creation, role changes, and removing access when resigning.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Identity management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Integrasikan sistem HR dengan Active Directory untuk automate provisioning/deprovisioning. Pastikan proses join-mover-leaver berjalan lancar. Audit identitas user yang tidak aktif setiap bulan.",
     "analogy": "Just like creating a new KTP, extending it, and revoking it when moving cities, digital identity also needs to be managed from start to finish.",
@@ -397,9 +748,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Tightly manage authentication information such as passwords, tokens, or digital certificates. Require the use of strong passwords and multi-factor authentication for critical systems.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Authentication information",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Wajibkan password minimal 12 karakter dengan kompleksitas. Implementasi MFA untuk semua sistem critical. Gunakan password manager enterprise. Rotasi password setiap 90 hari untuk akun privileged.",
     "analogy": "Just as ATM passwords must be kept secret and changed periodically, authentication information needs to be managed tightly to prevent misuse.",
@@ -421,9 +772,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Determine each user's access rights based on their position, and routinely review whether access is still appropriate. Revoke access when no longer needed or when a user changes roles.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Access rights",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat prosedur formal untuk grant, modify, dan revoke access. Implementasi role-based access control (RBAC). Lakukan recertification akses quarterly untuk sistem yang mengandung data sensitif.",
     "analogy": "Like keys that must be taken back when an employee resigns, access rights must also be revoked immediately so that they are not misused.",
@@ -445,9 +796,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Evaluate security risks that may arise from collaboration with vendors or suppliers. Make sure the contract includes security obligations and audit rights.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security in relations with suppliers",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat questionnaire security assessment untuk vendor baru. Sertakan klausul keamanan di kontrak. Lakukan audit atau request bukti compliance vendor sebelum onboard.",
     "analogy": "Just as you check a contractor's reputation before hiring them, a supplier's security risks should be evaluated before collaborating.",
@@ -469,9 +820,9 @@
     "capability": "Manajemen aset",
     "description": "When using cloud services, understand the shared responsibility model. Configure security settings correctly and monitor cloud activity regularly.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security management for cloud services",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Pahami shared responsibility model untuk setiap cloud provider. Konfigurasi security group dan IAM dengan benar dari awal. Enable logging dan monitoring untuk semua layanan cloud.",
     "analogy": "It's like renting a safe at a bank—you have to trust the bank to look after it, but also make sure that what you store is allowed there.",
@@ -493,9 +844,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Monitor security along the IT supply chain. If any vendor becomes a weak point, the risk can spread to the organization. Diversify vendors to reduce risk.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security in the IT supply chain",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Map seluruh supply chain TI dan identifikasi single point of failure. Request business continuity plan dari vendor kritis. Diversifikasi vendor untuk mengurangi risiko ketergantungan.",
     "analogy": "Just as restaurants must ensure their food suppliers are safe, organizations must ensure their IT supply chain does not become a security weak point.",
@@ -517,9 +868,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Routinely check whether security implementation is in accordance with established policies and standards. Create a compliance checklist and track the progress of remediation findings.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Compliance with information security policies, rules and standards",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat compliance checklist berdasarkan kebijakan internal. Lakukan self-assessment berkala setiap quarter. Track remediation plan untuk temuan yang belum ditutup.",
     "analogy": "Like annual vehicle fitness tests, regular compliance reviews ensure an organization's security is still on track.",
@@ -541,9 +892,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Actively share threat information with other organizations via forums or ISAC. This collaboration helps all parties be better prepared to face the same threats.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Relations with the information and security community",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Aktif berpartisipasi di ISAC (Information Sharing and Analysis Center) sektor industri Anda. Share anonymized threat data untuk membantu komunitas. Manfaatkan intelligence yang didapat untuk improve defense.",
     "analogy": "Just as RT systems share environmental security information with each other, security communities help organizations share threat information with each other.",
@@ -565,9 +916,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Prepare an information security plan that supports business continuity during a crisis. Identify critical processes and determine how long the system can be down.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Business continuity information security planning and preparation",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi business process kritis dan Maximum Tolerable Downtime. Buat BCP yang mencakup skenario worst-case. Lakukan tabletop exercise minimal setahun sekali untuk uji kesiapan.",
     "analogy": "Just as fire drills train evacuations before a real disaster, continuity planning prepares an organization for a crisis.",
@@ -589,9 +940,9 @@
     "capability": "Manajemen aset",
     "description": "Identify all legal and regulatory obligations that apply to the organization, such as the PDP Law or OJK provisions. Create a compliance matrix and assign PICs for each requirement.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Initial compliance assessments and decisions",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Inventory semua kewajiban hukum yang berlaku (UU PDP, PP 71/2019, dll). Buat compliance matrix dan assign PIC untuk setiap requirement. Review legal compliance saat ada regulasi baru.",
     "analogy": "Like a health check before starting a gym, an initial compliance assessment ensures the organization is ready to meet all safety obligations.",
@@ -613,9 +964,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Continue to monitor regulatory changes that impact information security. Subscribe to the BSSN, OJK, or legal consultant newsletter to stay updated.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Legal, regulatory and contractual requirements",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Subscribe ke update regulasi dari OJK, Kominfo, atau BSSN. Buat legal register yang diupdate quarterly. Konsultasi dengan legal counsel untuk interpretasi requirement yang ambigu.",
     "analogy": "Like a list of traffic rules that drivers must comply with, security legal requirements must be known to organizations and adhere to.",
@@ -637,9 +988,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Protect important documents from unauthorized deletion or modification. Determine how long documents should be kept and how to destroy them safely.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Immutability and disposition of recorded information",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Definisikan retention period untuk setiap jenis dokumen berdasarkan hukum dan bisnis. Implementasi automated retention di DMS. Pastikan proses disposal dilakukan dengan secure destruction.",
     "analogy": "Like important records stored in fireproof cabinets, recorded information must be protected from being lost or carelessly altered.",
@@ -661,9 +1012,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Identify personal data managed by the organization and ensure its protection in accordance with applicable privacy laws. Appoint a DPO if the volume of personal data processed is large.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Privacy assurance and PII protection",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Lakukan data mapping untuk tahu di mana PII disimpan. Implementasi privacy by design di setiap sistem baru. Tunjuk DPO jika volume PII yang diproses besar.",
     "analogy": "Like doctors who protect patient confidentiality, organizations are obliged to protect the personal data entrusted to them.",
@@ -685,9 +1036,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Invite an independent party to periodically review the effectiveness of the information security program. External audits provide an objective perspective that internal teams may miss.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Independent assessment of information security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Jadwalkan audit internal minimal setahun sekali oleh tim independen. Gunakan framework audit yang recognized (ISO 27001, NIST). Tindak lanjuti temuan dengan remediation plan yang terukur.",
     "analogy": "Like a financial audit by an external accountant, an independent assessment provides an objective view of security effectiveness.",
@@ -709,9 +1060,9 @@
     "capability": "Manajemen aset",
     "description": "Integrate security requirements into the IT system development process. Perform threat modeling and security reviews before new features are released.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security requirements in the ICT development process",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Integrasikan security checkpoint di SDLC. Wajibkan threat modeling untuk setiap fitur baru. Lakukan code review dan security testing sebelum release.",
     "analogy": "Just as the foundation of a building must be strong from the start, security must be built in from the start in system development, not added later.",
@@ -733,9 +1084,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Ensure all legal aspects of security implementation have been consulted with the legal team. Including contract clauses with vendors and internal policies that impact employees.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Legal development and control",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Review semua kontrak dan perjanjian dari aspek keamanan informasi. Pastikan ada klausul right-to-audit untuk vendor. Konsultasi legal sebelum implementasi kontrol yang berdampak ke karyawan.",
     "analogy": "Just like building permits must be met before building, legal aspects must be controlled before implementing the system.",
@@ -757,9 +1108,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Manage software licenses and intellectual property rights neatly. Use tools for tracking usage and make sure there is no pirated software installed.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Management of intellectual property rights",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Inventory semua software yang digunakan dan cek lisensinya. Gunakan software asset management tool untuk track license compliance. Lakukan audit software internal setiap 6 bulan.",
     "analogy": "Like respecting musicians' copyrights by purchasing original songs, organizations must respect the licenses of the software used.",
@@ -781,9 +1132,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Protect important records such as system logs, CCTV, or backup data from unauthorized access or modification. Store in a safe and controlled place.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Record protection",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi records yang wajib dilindungi berdasarkan hukum. Implementasi access control dan encryption untuk records sensitif. Buat backup terpisah untuk records penting.",
     "analogy": "Like CCTV footage stored in a locked room, system footage must be protected from being manipulated.",
@@ -805,9 +1156,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Ensure privacy and personal data (PII) protection is implemented according to regulations. Create procedures to handle data subject requests such as access rights or deletion.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Privacy and PII protection",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat privacy notice yang jelas untuk data subject. Implementasi consent management system. Pastikan ada prosedur untuk handle request hak data subject (akses, hapus, rectifikasi).",
     "analogy": "Like private letters that cannot be read by other people, personal data must also be kept confidential.",
@@ -829,9 +1180,9 @@
     "capability": "Manajemen aset",
     "description": "Conduct an independent assessment of the maturity of the information security program. Use a certified assessor to get a credible evaluation.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Independent review of information security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Lakukan gap analysis terhadap ISO 27001 secara berkala. Gunakan assessor bersertifikasi untuk audit eksternal. Benchmark dengan organisasi sejenis untuk improve maturity.",
     "analogy": "Like a second opinion from a specialist, an independent review provides a new perspective on safety effectiveness.",
@@ -853,9 +1204,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Regularly monitor compliance with security policies. Create metrics that are easy for management to understand and report progress regularly.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Compliance with information security policies and standards",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat metrics untuk track compliance (misal: % user yang sudah training). Implementasi automated compliance checking di mana memungkinkan. Report compliance status ke management secara berkala.",
     "analogy": "Like routine vehicle checks that ensure all systems are working, compliance reviews ensure security remains effective.",
@@ -877,9 +1228,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Manage security documentation with a neat version control system. Make sure the documents used by the team are always the latest version and have been approved.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Document operating procedures",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Gunakan Document Management System dengan version control. Tetapkan document owner untuk setiap prosedur. Review dan update dokumen saat ada perubahan proses atau insiden.",
     "analogy": "Like aircraft manuals which must always be updated and controlled, security documentation must be managed well.",
@@ -901,9 +1252,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Conduct background checks on employee candidates in accordance with applicable law. Check identity, education and work history. For positions that handle sensitive data, consider more in-depth checks.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Background filtering",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Lakukan background check sesuai hukum ketenagakerjaan: cek identitas, pendidikan, dan riwayat kerja. Untuk posisi sensitif, tambah cek kriminal dan kredit. Dokumentasikan hasil screening dan simpan secara confidential.",
     "analogy": "Like checking references before hiring a babysitter, background screening ensures the person you hire can be trusted.",
@@ -925,9 +1276,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Include information security obligations in employment contracts. Employees must know from day one that they are responsible for maintaining the confidentiality and security of company data.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Terms and conditions of employment",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Sertakan klausul keamanan informasi di employment contract: kewajiban menjaga kerahasiaan, larangan penggunaan aset untuk pribadi, dan konsekuensi pelanggaran. Review kontrak saat ada perubahan regulasi.",
     "analogy": "Just as a rental contract states the rules for using the property, an employment contract should state information security obligations.",
@@ -949,9 +1300,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Have a multi-layered security training program: onboarding training for new employees, monthly newsletters, annual refreshments, and phishing simulations to test awareness.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security awareness, training, and education",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat program awareness berlapis: onboarding training untuk karyawan baru, monthly newsletter, annual refresher, dan targeted training untuk role spesifik. Ukur efektivitas dengan phishing simulation.",
     "analogy": "Just as firefighting training prepares employees for fires, security training prepares them for cyber threats.",
@@ -973,9 +1324,9 @@
     "capability": "Manajemen aset",
     "description": "Create clear sanctions mechanisms for security violations, ranging from verbal warnings to severe disciplinary action. Socialize these consequences so that employees understand the risks.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Disciplinary process",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Definisikan gradasi sanksi sesuai severity pelanggaran: warning pertama, kedua, hingga PHD. Sosialisasikan konsekuensi di employee handbook. Pastikan proses disipliner sesuai hukum ketenagakerjaan.",
     "analogy": "Like a ticket for traffic violators, the disciplinary process provides consequences for those who violate safety rules.",
@@ -997,9 +1348,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Remind employees who will resign about their confidentiality obligations which still apply even if they no longer work for the company. For critical positions, consider garden leave.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Responsibilities after termination or change of employment",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Sertakan klausa non-disclosure yang tetap berlaku setelah resign. Lakukan exit interview yang mengingatkan kewajiban kerahasiaan. Untuk posisi kritis, pertimbangkan garden leave.",
     "analogy": "Like the obligation to maintain company secrets even after resigning, security responsibilities do not end when employees leave.",
@@ -1021,9 +1372,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Request the signature of a confidentiality agreement (NDA) from all parties who will access sensitive information: employees, contractors, even visitors who enter restricted areas.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Confidentiality or non-disclosure agreement",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat NDA yang spesifik menyebutkan scope informasi yang dilindungi, durasi, dan sanksi pelanggaran. Minta tanda tangan NDA untuk karyawan, kontraktor, dan visitor yang akses informasi sensitif.",
     "analogy": "Like a promise not to divulge a restaurant's secret recipe, an NDA protects sensitive information from leaks.",
@@ -1045,9 +1396,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Create a special policy for remote work that includes the obligation to use a VPN, prohibiting access from public WiFi, and guidelines for setting up security at home.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Remote work",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat WFH policy yang mencakup: wajib VPN, larangan pakai public WiFi untuk kerja, secure home network setup, dan clear desk policy di rumah. Provide security guidelines untuk setup home office.",
     "analogy": "Like carrying a mini safe when working at a cafe, remote work requires extra protection for company data.",
@@ -1069,9 +1420,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Provide easily accessible incident reporting channels: dedicated email, hotline, or ticketing system. Make sure employees do not hesitate to report because the process is non-judgmental.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information security incident reporting",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Sediakan multiple channel pelaporan: email khusus, hotline, dan ticketing system. Pastikan proses pelaporan mudah dan tidak menghakimi. Reward karyawan yang report insiden untuk encourage culture.",
     "analogy": "Like the easy-to-call emergency number 112, security reporting mechanisms should be easily accessible to all employees.",
@@ -1093,9 +1444,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Determine the physical boundaries of the area that needs to be protected: building fences, server room walls, or other barriers. Make sure there are no gaps that can pass undetected.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Physical security boundaries",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi dan map physical boundary: pagar, dinding, atau barrier lainnya. Install fencing untuk area kritis. Pastikan tidak ada blind spot yang bisa dilewati tanpa terdeteksi.",
     "analogy": "Like factory fences that limit who can enter, physical boundaries protect assets from unauthorized access.",
@@ -1117,9 +1468,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Install access control systems at all entrances: access cards, biometrics, or security guards. Record all visitors and ensure they are accompanied when entering sensitive areas.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Physical entry",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi access card atau biometric di semua entry point. Buat visitor management system dengan log buku tamu dan escort policy. Review access log secara berkala.",
     "analogy": "Just as security in a building checks IDs before allowing entry, physical access controls filter who can enter.",
@@ -1141,9 +1492,9 @@
     "capability": "Manajemen aset",
     "description": "Strengthen the physical security of offices and critical spaces: secure door locks, alarms, and reinforcement for walls or windows in critical areas.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Securing offices, rooms and facilities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Lakukan risk assessment untuk identifikasi vulnerability fisik. Reinforce door, window, dan wall untuk ruang server. Install secure lock dan alarm untuk area sensitif.",
     "analogy": "Just like a house has locks, alarms and fences, offices also need layers of security that match the threat.",
@@ -1165,9 +1516,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Install CCTV at strategic points: entrances, corridors, server rooms and parking areas. Make sure records are kept for at least 30 days and monitored in real-time.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Physical security monitoring",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Install CCTV di strategic points: entry, exit, corridor, dan area kritis. Pastikan coverage 24/7 dengan retention minimal 30 hari. Monitor CCTV oleh security team secara real-time.",
     "analogy": "Like a security guard patrolling an area, continuous monitoring detects threats before they act.",
@@ -1189,9 +1540,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Identify environmental risks such as floods, earthquakes, or fires. Install fire suppression, water detection, and lightning arresters according to relevant threats.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Protection against physical and environmental threats",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi risiko lingkungan: banjir, gempa, kebakaran. Install fire suppression system, water detection, dan lightning arrester. Buat mitigation plan untuk setiap risiko yang teridentifikasi.",
     "analogy": "Like earthquake-resistant buildings in vulnerable zones, facilities must be protected from environmental and physical threats.",
@@ -1213,9 +1564,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Apply strict rules for anyone working in a secure area: mandatory badge, no personal devices, no photos. Regular compliance audits.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Work in a safe area",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Tetapkan aturan untuk kerja di secure area: wajib badge, tidak boleh bawa device pribadi, tidak boleh foto. Implementasi clean desk policy. Audit kepatuhan secara berkala.",
     "analogy": "Like the sterile rules in a hospital operating room, safe areas have special requirements that everyone must comply with.",
@@ -1237,9 +1588,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Make sure supporting utilities such as electricity, water, internet and AC are always available. Redundancy setup for critical utilities: UPS, generator, or dual ISP.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Utility support",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Identifikasi semua utility yang critical: listrik, air, internet, AC. Setup redundancy untuk critical utility: UPS, generator, dual ISP. Buat maintenance schedule untuk semua utility.",
     "analogy": "Like a backup generator that is ready when PLN power goes out, utilities must have backups to maintain operations.",
@@ -1261,9 +1612,9 @@
     "capability": "Manajemen aset",
     "description": "Schedule routine maintenance for all security equipment: CCTV, access control, fire suppression. Track maintenance logs and use trusted vendors.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Equipment maintenance",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat maintenance schedule untuk semua equipment keamanan: CCTV, access control, fire suppression. Track maintenance log dan set reminder untuk preventive maintenance. Gunakan vendor terpercaya untuk service.",
     "analogy": "Just as regular car servicing prevents breakdowns on the road, equipment maintenance prevents system failure.",
@@ -1285,9 +1636,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "For assets taken outside the office, require encryption and a clear security policy. Track mobile device location with GPS if possible.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Off-site asset security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat policy untuk kerja di luar kantor: wajib encrypt laptop, tidak boleh akses dari public computer, wajib lock screen saat meninggalkan device. Track aset mobile dengan GPS jika memungkinkan.",
     "analogy": "Like insurance and a GPS tracker for laptops you travel with, assets outside the office still need protection.",
@@ -1309,9 +1660,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Limit the use of external storage media such as USB flash drives. If necessary, require encryption and create safe disposal procedures.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Erasable storage media and transmission media",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Batasi penggunaan USB drive dengan policy GPO. Untuk yang necessary, wajib encrypt. Buat prosedur disposal media yang aman: physical destruction atau degaussing untuk media yang berisi data sensitif.",
     "analogy": "Just like confidential documents that must be destroyed before being thrown away, storage media need to be properly secured or destroyed.",
@@ -1333,9 +1684,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Create an emergency response plan that includes evacuation routes, assembly points, and emergency contacts. Conduct drills at least twice a year to ensure readiness.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Support for emergency plans",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat emergency response plan yang mencakup: evakuasi, assembly point, emergency contact. Install emergency lighting dan exit sign. Lakukan drill minimal 2 kali setahun.",
     "analogy": "Like ready-to-use evacuation routes and assembly points, emergency plans need supporting infrastructure.",
@@ -1357,9 +1708,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Protect power and data cables from tampering or eavesdropping: use conduits, raised floors, or locked cable trays. Install a surge protector for extra protection.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Cables and power",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Route kabel power dan data melalui conduit atau raised floor. Pisahkan kabel power dan data untuk hindari interference. Install surge protector dan lightning protection.",
     "analogy": "Just like electrical cables are embedded in walls to prevent rats from biting them, data cables must also be protected.",
@@ -1381,9 +1732,9 @@
     "capability": "Manajemen aset",
     "description": "Periodic inspection of facilities: check structural integrity, fire safety systems, and access control functions. Track findings and ensure remediation is carried out in a timely manner.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Facility maintenance and inspection",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat checklist inspeksi facility: structural integrity, fire safety, access control functionality. Lakukan inspeksi berkala: monthly untuk area kritis, quarterly untuk area lain. Track temuan dan remediation.",
     "analogy": "Just as an annual building inspection ensures the structure is still strong, a facility inspection ensures safety is maintained.",
@@ -1405,9 +1756,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "When relocating offices or equipment, create a plan that includes safe packing, transportation in a secure vehicle, and security setup at the new location without downtime.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Physical security during termination or relocation",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat relocation plan yang mencakup: packing aman, transport dengan kendaraan secure, setup security di lokasi baru. Pastikan tidak ada downtime untuk security monitoring selama transisi.",
     "analogy": "Just like moving house requires extra supervision, office relocation also requires strict security.",
@@ -1429,9 +1780,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Protect all end user devices—laptops, cellphones, tablets—with EDR (Endpoint Detection & Response). Require full disk encryption and remote wipe capability.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to End user device",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Install EDR (Endpoint Detection & Response) di semua device. Wajibkan full disk encryption. Enable remote wipe capability untuk mobile device. Patch OS dan aplikasi secara berkala.",
     "analogy": "Just like smartphones have PINs, encryption, and remote wipe, endpoint devices must have layers of protection.",
@@ -1453,9 +1804,9 @@
     "capability": "Manajemen aset",
     "description": "Strictly manage privileged accounts (admin, root). Use a PAM (Privileged Access Management) solution and require approval for each use.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Access privileges",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi PAM solution untuk manage privileged account. Wajibkan approval untuk setiap penggunaan privileged access. Record session privileged access untuk audit trail.",
     "analogy": "Like a master key that is only held by the head of security, admin rights must be limited so that they are not misused.",
@@ -1477,9 +1828,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Limit access to information based on the need-to-know principle. Review permissions regularly and remove unnecessary default or guest access.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Restrictions on access to information",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi access control list (ACL) berdasarkan need-to-know. Review permission secara berkala. Remove default account atau guest access yang tidak diperlukan.",
     "analogy": "Like the VIP lounge which is only for invited guests, sensitive information must only be accessed by authorized persons.",
@@ -1501,9 +1852,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Restrict access to source code to authorized developers only. Use version control with branch protection and require code review before merging.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Access to source code",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Gunakan version control system (Git) dengan branch protection. Batasi access ke production code. Require code review dan approval sebelum merge ke main branch.",
     "analogy": "Like Coca-Cola's secret recipe that only a few people know, access to the source code must be restricted.",
@@ -1525,9 +1876,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Implementation of strong authentication mechanisms: MFA for all systems, strict password policy, and monitoring failed login attempts for brute force detection.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Secure authentication",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi MFA untuk semua sistem. Gunakan passwordless authentication jika memungkinkan. Monitor failed login attempt untuk deteksi brute force attack.",
     "analogy": "Like a fingerprint that is unique to each person, authentication ensures that only valid identities can log in.",
@@ -1549,9 +1900,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Monitor system resource usage—CPU, memory, disk, network—and setup alerting if it approaches full capacity. Create a capacity plan for the next 6-12 months.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Capacity management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Monitor resource utilization: CPU, memory, disk, network. Setup threshold alerting (80% usage). Buat capacity plan untuk 6-12 bulan ke depan berdasarkan growth trend.",
     "analogy": "Like traffic monitoring to predict congestion, capacity management anticipates system load before it overloads.",
@@ -1573,9 +1924,9 @@
     "capability": "Manajemen aset",
     "description": "Install antivirus/anti-malware on all endpoints and servers. Update signatures daily, enable real-time scanning, and educate users about the dangers of clicking suspicious links.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Protection against malware",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Install antivirus/anti-malware di semua endpoint dan server. Update signature daily. Enable real-time scanning. Lakukan scan full system weekly. Educate user untuk tidak click suspicious link.",
     "analogy": "Just as the immune system fights viruses, malware protection protects the system from malicious software threats.",
@@ -1597,9 +1948,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Run vulnerability scans regularly (at least monthly) for all systems. Prioritize remediation based on risk score and patch critical vulnerabilities within 7 days.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Technical vulnerability management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Run vulnerability scan monthly untuk semua sistem. Prioritize remediation berdasarkan risk score. Patch critical vulnerability dalam 7 hari. Retest setelah patch untuk verify fix.",
     "analogy": "Just as a health check finds problems before they get worse, vulnerability management finds weaknesses before they are exploited.",
@@ -1621,9 +1972,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Create a configuration baseline for all hardware. Disable unnecessary services and ports, document configurations, and audit regularly.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Hardware configuration",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat baseline configuration untuk semua hardware. Disable unnecessary service dan port. Document semua konfigurasi dan track perubahan. Audit konfigurasi secara berkala.",
     "analogy": "Like optimal factory settings for electronic devices, hardware configurations must be standardized and secured.",
@@ -1645,9 +1996,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Create secure data deletion procedures: overwrite for HDD, crypto-shred for SSD. Use a certified vendor for disposal of large quantities of media.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Removal of information",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Buat prosedur secure deletion: overwrite untuk HDD, crypto-shred untuk SSD. Document proses deletion dan buat destruction certificate. Gunakan third-party certified disposal vendor untuk media besar.",
     "analogy": "Just like confidential documents that must be destroyed with a shredder, data deletion must be done safely.",
@@ -1669,9 +2020,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Implement data masking to hide sensitive information: use scramble or substitute techniques for testing data, and dynamic data masking for production queries.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Data masking",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi data masking untuk testing environment: scramble atau substitute sensitive data. Gunakan dynamic data masking untuk production query. Mask PII, financial data, dan confidential information.",
     "analogy": "Like the KTP number which is only partially displayed (XXX-XXX-1234), masking data hides sensitive information.",
@@ -1693,9 +2044,9 @@
     "capability": "Manajemen aset",
     "description": "Deploy DLP (Data Leak Prevention) solutions to detect and prevent unauthorized data transfers. Monitor email, web uploads, and USB transfers to detect violations.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Data leak prevention",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Deploy DLP solution untuk monitor dan block unauthorized data transfer. Define policy untuk classified data. Monitor email, web upload, dan USB transfer. Alert dan block jika ada violation.",
     "analogy": "Like an alarm in a shop that sounds if goods are taken out without payment, DLP detects data that has been left without permission.",
@@ -1717,9 +2068,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Routine data backup follows the 3-2-1 rule: 3 copies, 2 types of media, 1 offsite. Test restore quarterly to ensure the backup can be restored.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Information backup",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi 3-2-1 backup rule: 3 copies, 2 media types, 1 offsite. Test restore quarterly untuk verify backup integrity. Encrypt backup data. Monitor backup job daily.",
     "analogy": "Like a spare tire that is ready to be used when the main tire gets punctured, backup ensures that data can be restored when a problem occurs.",
@@ -1741,9 +2092,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Setup redundant servers in different locations and implement load balancing. Test failover regularly and ensure RPO/RTO meets business needs.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Diversity of information processing facilities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Setup redundant server di lokasi berbeda. Implementasi load balancing untuk distribute traffic. Test failover secara berkala. Pastikan RPO dan RTO sesuai business requirement.",
     "analogy": "Like having two generators that can back up each other, redundancy ensures the system continues to run even if one component fails.",
@@ -1765,9 +2116,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Enable logging for all critical systems and centralize to SIEM. Retain logs for at least 1 year and monitor daily to detect anomalies.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Logging (Logging)",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Enable logging untuk semua sistem critical: OS, aplikasi, network device. Centralize log ke SIEM. Retain log minimal 1 tahun. Monitor log untuk anomali daily.",
     "analogy": "Like an airplane black box that records all activity, a log records every incident for investigation if a problem occurs.",
@@ -1789,9 +2140,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Monitor system and network activity to detect suspicious behavior: logins at unusual times, high volumes of data access, or privilege escalation.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Monitoring activities",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi monitoring untuk deteksi anomali: unusual login time, volume data access tinggi, privilege escalation. Setup alert untuk suspicious activity. Review alert daily oleh SOC team.",
     "analogy": "Like CCTV that monitors an area 24/7, activity monitoring detects anomalies before they become major incidents.",
@@ -1813,9 +2164,9 @@
     "capability": "Manajemen aset",
     "description": "Synchronize the clocks of all systems to the same and trusted NTP server. This is important for accurate log analysis and event correlation from multiple sources.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Clock synchronization",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Setup NTP server internal yang sync ke sumber waktu terpercaya. Pastikan semua sistem sync ke NTP server yang sama. Monitor clock drift dan alert jika ada deviasi signifikan.",
     "analogy": "Just as all clocks at an airport must be in sync for flight schedules, system time must be consistent for accurate analysis.",
@@ -1837,9 +2188,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Limit the use of utility programs that can bypass security controls. Inventory all utilities, limit access to admin only, and log every use.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Use of utility programs",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Inventory semua utility program yang bisa bypass control. Batasi akses utility ke admin saja. Log penggunaan utility. Review necessity utility secara berkala.",
     "analogy": "Like a wrench that can disassemble anything but only for authorized technicians, utility programs must be tightly controlled.",
@@ -1861,9 +2212,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Implementation of whitelisting software to control which applications can be installed. Require approval for new software and testing in staging before production.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Software installation on operational systems",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi whitelisting untuk software yang boleh diinstall. Require approval untuk software baru. Test software di staging sebelum production install. Block unauthorized software installation.",
     "analogy": "Just as home renovations must not disturb residents, software installation must be carried out without disturbing operations.",
@@ -1885,9 +2236,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Network segmentation based on function and data sensitivity. Deploy firewalls at the perimeter and internally, monitor traffic for anomalies, and update rules regularly.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Network and security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Segmentasi network berdasarkan function dan sensitivity. Deploy firewall di perimeter dan internal. Monitor network traffic untuk anomaly. Update firewall rule secara berkala.",
     "analogy": "Like toll roads that have gates, signs and security patrols, networks need layers of protection.",
@@ -1909,9 +2260,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Determine security SLAs for each network service: availability, latency, and protection mechanisms. Encrypt network traffic with TLS and monitor performance.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Network service security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Define SLA untuk setiap network service: availability, latency, security. Encrypt network traffic dengan TLS. Monitor network performance. Review security control network service annually.",
     "analogy": "Like bank service standards which must be safe and fast, network services also need clear security SLAs.",
@@ -1933,9 +2284,9 @@
     "capability": "Manajemen aset",
     "description": "Separate networks for production, staging, development, and guests. Implement VLAN and firewall rules between segments, limiting cross-segment communication to what is necessary.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Network separation",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Segregasi network: production, staging, development, guest. Implementasi VLAN dan firewall rule antar segment. Batasi cross-segment communication ke yang necessary saja.",
     "analogy": "Just as ship bulkheads prevent leaks from spreading throughout the ship, network segmentation limits the spread of attacks.",
@@ -1957,9 +2308,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Deploy a web proxy with filtering capability to block access to dangerous sites: malware, phishing, or illegal content. Web traffic log for monitoring.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Web filtering (Web filtering)",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Deploy web proxy dengan filtering capability. Block kategori situs berbahaya: malware, phishing, gambling. Log web traffic untuk monitoring. Update web filter policy monthly.",
     "analogy": "Like a water filter that removes dirt, a web filter filters out dangerous sites before they are accessed by employees.",
@@ -1981,9 +2332,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Integrate security into the SDLC: threat modeling, secure coding guidelines, code review, and penetration testing. Use SAST and DAST tools for automated scanning.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Application development security",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Integrasikan security di SDLC: threat modeling, secure coding guideline, code review, penetration testing. Gunakan SAST dan DAST tool. Fix critical vulnerability sebelum release.",
     "analogy": "Just as engineers calculate building security from design, application security must start from the beginning of development.",
@@ -2005,9 +2356,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Apply secure engineering principles: defense in depth, least privilege, and fail safe. Document the security architecture and design review before implementation.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Principles of safe systems engineering",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Apply secure design principle: defense in depth, least privilege, fail safe. Document security architecture. Review design sebelum implementasi. Use security pattern dan framework.",
     "analogy": "Like architects who design earthquake-resistant buildings, systems engineers must build with safety principles in mind.",
@@ -2029,9 +2380,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Determine security requirements for each application based on the type of data processed. Includes requirements for authentication, authorization, encryption, and logging.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Application security requirements",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Define security requirement untuk setiap aplikasi berdasarkan data yang diproses. Include requirement: authentication, authorization, encryption, logging. Review requirement sebelum development mulai.",
     "analogy": "Just like car specifications differ for city cars vs SUVs, application security requirements differ based on data sensitivity.",
@@ -2053,9 +2404,9 @@
     "capability": "Manajemen aset",
     "description": "Developer training on secure coding: OWASP Top 10, input validation, and output encoding. Use secure coding guidelines and implement code reviews with security checklists.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Secure coding (Secure coding)",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Training developer secure coding: OWASP Top 10, input validation, output encoding. Gunakan secure coding guideline. Implementasi code review dengan security checklist.",
     "analogy": "Just as welders follow security standards to prevent leaks, developers must code securely to prevent bugs.",
@@ -2077,9 +2428,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Integrate automated security testing in the CI/CD pipeline: SAST, SCA, and secret scanning. Require security gate before deploying and track vulnerability metrics.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Security testing in development",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Integrasikan automated security testing di CI/CD pipeline: SAST, SCA, secret scanning. Require security gate sebelum deploy. Track vulnerability metrics.",
     "analogy": "Just like crash testing a car before being sold, applications must be tested for security before being released.",
@@ -2101,9 +2452,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Perform penetration testing annually or after major changes. Test all critical applications, retest after remediation, and document findings along with the remediation plan.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to System security testing",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Lakukan penetration testing annually atau setelah major change. Test semua aplikasi critical. Retest setelah remediation. Document finding dan track remediation.",
     "analogy": "Like a final exam that tests student understanding, system testing verifies whether security controls are effective.",
@@ -2125,9 +2476,9 @@
     "capability": "Manajemen kerentanan teknis",
     "description": "Include security requirements in the outsourcing contract. Require vendors to follow a secure development process and request evidence of security testing before acceptance.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Outsourcing development",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Sertakan security requirement di kontrak outsourcing. Require secure development process dari vendor. Request evidence security testing. Audit vendor development process secara berkala.",
     "analogy": "Just like you still supervise the contractor who builds the house, outsourcing development still requires security supervision.",
@@ -2149,9 +2500,9 @@
     "capability": "Kesinambungan bisnis",
     "description": "Separate development, testing, UAT, and production environments. Limit access between environments, use different credentials, and promote code through pipelines instead of directly to production.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Separation of development, test, and production environments",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Separate environment: development, testing, UAT, production. Batasi akses antar environment. Gunakan different credential untuk setiap environment. Promote code melalui pipeline, tidak langsung ke production.",
     "analogy": "Just as a restaurant kitchen is separate from the dining area, the development and production environments must be separated.",
@@ -2173,9 +2524,9 @@
     "capability": "Manajemen aset",
     "description": "Implementation of a structured change management process: request, assess, approve, implement, and review. Document all changes and tests in staging before production.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Change management",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Implementasi change management process: request, assess, approve, implement, review. Document semua perubahan. Test change di staging sebelum production. Schedule change di maintenance window.",
     "analogy": "Like the renovation approval process in an apartment which must go through management, system changes require controlled approval.",
@@ -2197,9 +2548,9 @@
     "capability": "Keamanan sumber daya manusia",
     "description": "Manage project information with version control and access control. Share information on a need-to-know basis and periodically back up project data.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Project management information",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Track project artifact dengan version control. Protect project document dengan access control. Share project information berdasarkan need-to-know. Backup project data secara berkala.",
     "analogy": "Just as a project manager oversees the timeline and budget, project information management oversees security aspects.",
@@ -2221,9 +2572,9 @@
     "capability": "Keamanan fisik dan lingkungan",
     "description": "Use test data or anonymized data for audits, protect production data during the audit process. Monitor auditor activity and limit access to only what is necessary.",
     "exampleEvidence": [
-      "Dokumen kebijakan yang disetujui",
-      "Log tinjauan triwulanan",
-      "Notulen rapat pengesahan oleh manajemen"
+      "SOP / Policy related to Protection of information systems during audit testing",
+      "Technical implementation logs / Meeting minutes",
+      "Periodic evaluation reports"
     ],
     "implementationTips": "Gunakan test data atau anonymized data untuk audit. Protect production data saat audit. Monitor aktivitas auditor. Batasi akses auditor ke yang necessary saja.",
     "analogy": "Just as food samples are tested in the lab without contaminating the main stock, audits should be conducted without risk to the production system.",

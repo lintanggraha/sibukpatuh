@@ -3,8 +3,8 @@
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center mb-4">
       <div>
-        <h2 class="mb-1"><i class="fa-solid fa-code-compare text-primary me-2"></i> Analisis Framework</h2>
-        <p class="text-muted mb-0">Bandingkan framework secara side-by-side atau lakukan evaluasi Gap Analysis.</p>
+        <h2 class="mb-1"><i class="fa-solid fa-code-compare text-primary me-2"></i> {{ $t('tools.analysisTitle') }}</h2>
+        <p class="text-muted mb-0">{{ $t('tools.analysisDesc') }}</p>
       </div>
     </div>
 
@@ -14,7 +14,7 @@
         <div class="row g-3">
           <div class="col-md-6">
             <label class="form-label fw-bold">
-              <i class="fa-solid fa-bullseye text-primary me-1"></i> Framework A (Baseline)
+              <i class="fa-solid fa-bullseye text-primary me-1"></i> {{ $t('tools.frameworkA') }}
             </label>
             <select class="form-select border-primary" v-model="frameworkA">
               <option v-for="fw in availableFrameworks" :key="fw.id" :value="fw.id" :disabled="fw.id === frameworkB">
@@ -24,7 +24,7 @@
           </div>
           <div class="col-md-6">
             <label class="form-label fw-bold">
-              <i class="fa-solid fa-magnifying-glass text-warning me-1"></i> Framework B (Target Evaluasi)
+              <i class="fa-solid fa-magnifying-glass text-warning me-1"></i> {{ $t('tools.frameworkB') }}
             </label>
             <select class="form-select border-warning" v-model="frameworkB">
               <option v-for="fw in availableFrameworks" :key="fw.id" :value="fw.id" :disabled="fw.id === frameworkA">
@@ -45,7 +45,7 @@
           @click="activeTab = 'comparison'"
           type="button" role="tab"
         >
-          <i class="fa-solid fa-table-columns me-2"></i> Side-by-Side Comparison
+          <i class="fa-solid fa-table-columns me-2"></i> {{ $t('tools.sideBySide') }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -55,7 +55,7 @@
           @click="activeTab = 'gap'"
           type="button" role="tab"
         >
-          <i class="fa-solid fa-scale-balanced me-2"></i> Gap Analysis
+          <i class="fa-solid fa-scale-balanced me-2"></i> {{ $t('tools.gapAnalysis') }}
         </button>
       </li>
     </ul>
