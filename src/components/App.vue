@@ -133,6 +133,7 @@ import { Analytics } from '@vercel/analytics/vue';
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
 import RoleSelector from './RoleSelector.vue';
+import { applyDomTranslations } from '../utils/domTranslator';
 
 export default {
   name: "App",
@@ -149,6 +150,8 @@ export default {
     return {
       isDarkTheme: false,
       currentLang: localStorage.getItem('language') || 'id',
+      translationObserver: null,
+      translationQueued: false,
       frameworkNavGroups: [
         {
           labelKey: "nav.nasional",
@@ -262,6 +265,10 @@ export default {
   watch: {
     $route() {
       this.updateActiveGroups();
+      this.queueDomTranslation();
+    },
+    currentLang() {
+      this.queueDomTranslation();
     },
   },
   methods: {
@@ -276,6 +283,7 @@ export default {
       document.documentElement.setAttribute('lang', this.currentLang);
       // Sync to Pinia store so all views can reactively update UI text
       this.frameworkStore.currentLanguage = this.currentLang;
+      this.queueDomTranslation();
     },
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme;
@@ -341,6 +349,16 @@ export default {
       const store = useFrameworkStore();
       store.updateActiveGroups(route.name);
     },
+    queueDomTranslation() {
+      if (this.translationQueued) return;
+      this.translationQueued = true;
+      window.setTimeout(() => {
+        this.translationQueued = false;
+        applyDomTranslations(this.currentLang);
+      }, 0);
+      window.setTimeout(() => applyDomTranslations(this.currentLang), 250);
+      window.setTimeout(() => applyDomTranslations(this.currentLang), 900);
+    },
   },
   mounted() {
     const savedTheme = localStorage.getItem('theme');
@@ -362,12 +380,18 @@ export default {
     }
     this.frameworkStore.currentLanguage = this.currentLang;
     document.documentElement.setAttribute('lang', this.currentLang);
+    this.queueDomTranslation();
+    this.translationObserver = new MutationObserver(() => {
+      if (this.currentLang === 'en') this.queueDomTranslation();
+    });
+    this.translationObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
     document.addEventListener("click", this.handleClickOutside);
     document.addEventListener("keydown", this.handleKeydown);
   },
   beforeUnmount() {
     document.removeEventListener("click", this.handleClickOutside);
     document.removeEventListener("keydown", this.handleKeydown);
+    if (this.translationObserver) this.translationObserver.disconnect();
   },
 };
 </script>
