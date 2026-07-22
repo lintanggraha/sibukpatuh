@@ -156,7 +156,7 @@ export default {
         { id: 'iso27001', name: 'ISO 27001:2022', desc: { id: 'Standar Internasional Keamanan Informasi', en: 'International information security standard' }, icon: 'fa-shield-alt', file: 'iso27001.json' },
         { id: 'iso37001', name: 'ISO 37001:2016', desc: { id: 'Sistem Manajemen Anti-Penyuapan', en: 'Anti-bribery management system' }, icon: 'fa-handshake', file: 'iso37001.json' },
         { id: 'cobit', name: 'COBIT 2019', desc: { id: 'Framework Tata Kelola IT Perusahaan', en: 'Enterprise IT governance framework' }, icon: 'fa-project-diagram', file: 'cobit_2019.json' },
-        { id: 'seojk', name: 'SEOJK 29/03/2022', desc: { id: 'Regulasi Keamanan Siber OJK', en: 'OJK cybersecurity regulation' }, icon: 'fa-landmark', file: 'seojk_29_2022_requirements.json' },
+        { id: 'seojk', name: 'SEOJK 29/03/2022', desc: { id: 'Regulasi Keamanan Siber OJK', en: 'OJK cybersecurity regulation' }, icon: 'fa-landmark', file: 'seojk_requirements.json' },
         { id: 'nist', name: 'NIST CSF 2.0', desc: { id: 'Framework Keamanan Siber NIST', en: 'NIST cybersecurity framework' }, icon: 'fa-network-wired', file: 'nist_csf.json' },
         { id: 'pbi', name: 'PBI 02/2024', desc: { id: 'Peraturan Bank Indonesia', en: 'Bank Indonesia regulation' }, icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
         { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: { id: 'Resiliensi Digital OJK', en: 'OJK digital resilience' }, icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },

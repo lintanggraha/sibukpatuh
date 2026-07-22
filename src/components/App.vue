@@ -60,13 +60,13 @@
                   <i class="fas fa-envelope nav-icon"></i>
                   <span>{{ $t('nav.kontak') }}</span>
                 </router-link>
-                <button @click.stop="toggleLanguage" class="framework-nav-toggle" style="text-decoration: none; border: none; background: transparent; cursor: pointer;">
-                  <i class="fas fa-language nav-icon"></i>
-                  <span>{{ currentLang === 'id' ? 'English' : 'Indonesia' }}</span>
-                </button>
             </nav>
 
             <div class="framework-tools">
+              <button @click.stop="toggleLanguage" class="language-toggle" aria-label="Ganti Bahasa">
+                <i class="fas fa-language"></i>
+                <span>{{ currentLang === 'id' ? 'EN' : 'ID' }}</span>
+              </button>
               <div class="nav-divider"></div>
               <RoleSelector />
 
@@ -140,6 +140,10 @@ export default {
     Analytics,
     SpeedInsights,
     RoleSelector
+  },
+  setup() {
+    const frameworkStore = useFrameworkStore();
+    return { frameworkStore };
   },
   data() {
     return {
@@ -266,6 +270,8 @@ export default {
       this.$i18n.locale = this.currentLang;
       localStorage.setItem('language', this.currentLang);
       document.documentElement.setAttribute('lang', this.currentLang);
+      // Sync to Pinia store so all views can reactively update UI text
+      this.frameworkStore.currentLanguage = this.currentLang;
     },
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme;

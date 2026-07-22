@@ -154,6 +154,18 @@
   </div>
 </template>
 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </template>
+
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
 export default {
   name: 'Simulator',
@@ -168,83 +180,13 @@ export default {
         usages: [],
         targets: []
       },
-      simulationResult: null,
-      steps: [
-        {
-          shortTitle: 'Industri',
-          title: 'Sektor Industri',
-          desc: 'Pilih sektor industri tempat organisasi Anda beroperasi.',
-          field: 'industries',
-          options: [
-            { id: 'Perbankan', label: 'Perbankan', desc: 'Bank Umum / Syariah', icon: 'fa-university' },
-            { id: 'Fintech', label: 'Layanan Keuangan Digital', desc: 'P2P Lending, E-Wallet', icon: 'fa-mobile-alt' },
-            { id: 'Kesehatan', label: 'Kesehatan / Medis', desc: 'Rumah Sakit, Klinik', icon: 'fa-hospital' },
-            { id: 'E-Commerce', label: 'E-Commerce / Retail', desc: 'Toko Online, Ekspedisi', icon: 'fa-shopping-cart' },
-            { id: 'Pemerintahan', label: 'Pemerintahan / BUMN', desc: 'Instansi Publik', icon: 'fa-building' }
-          ]
-        },
-        {
-          shortTitle: 'Lokasi Server',
-          title: 'Lokasi Penempatan Data',
-          desc: 'Di mana data utama dan cadangan Anda disimpan?',
-          field: 'locations',
-          options: [
-            { id: 'On-Premise', label: 'On-Premise (Lokal)', desc: 'Server fisik di kantor sendiri', icon: 'fa-server' },
-            { id: 'Cloud ID', label: 'Cloud Indonesia', desc: 'Data Center di wilayah NKRI', icon: 'fa-cloud' },
-            { id: 'Singapura', label: 'Cloud Singapura / Asia', desc: 'AWS/GCP/Azure SG', icon: 'fa-globe-asia' },
-            { id: 'US', label: 'Cloud United States', desc: 'Data Center Amerika', icon: 'fa-flag-usa' },
-            { id: 'Eropa', label: 'Cloud Eropa', desc: 'Data Center wilayah Uni Eropa', icon: 'fa-euro-sign' }
-          ]
-        },
-        {
-          shortTitle: 'Klasifikasi Data',
-          title: 'Tipe Data yang Diproses',
-          desc: 'Jenis data apa saja yang ditampung oleh sistem Anda?',
-          field: 'dataTypes',
-          options: [
-            { id: 'Publik', label: 'Data Publik', desc: 'Info umum, berita, portofolio', icon: 'fa-bullhorn' },
-            { id: 'Pribadi Umum', label: 'Data Pribadi Umum', desc: 'Nama, Email, No HP', icon: 'fa-address-card' },
-            { id: 'Pribadi Spesifik', label: 'Data Pribadi Spesifik', desc: 'Medis, Biometrik, Agama', icon: 'fa-fingerprint' },
-            { id: 'Finansial', label: 'Data Finansial', desc: 'Kartu Kredit, Mutasi Rek', icon: 'fa-credit-card' },
-            { id: 'HAKI', label: 'Rahasia Dagang', desc: 'Source code, resep rahasia', icon: 'fa-user-secret' }
-          ]
-        },
-        {
-          shortTitle: 'Pengelola',
-          title: 'Pihak Pengelola & Akses',
-          desc: 'Siapa yang memiliki akses untuk mengelola sistem dan database?',
-          field: 'usages',
-          options: [
-            { id: 'Tim Internal', label: 'Tim Internal (Lokal)', desc: 'Karyawan WFO / Lokal', icon: 'fa-users' },
-            { id: 'Tim Remote', label: 'Tim Remote Lintas Negara', desc: 'WFA di luar negeri', icon: 'fa-laptop-house' },
-            { id: 'Vendor Cloud', label: 'Vendor Cloud Provider', desc: 'AWS, Google, Microsoft', icon: 'fa-cloud-meatball' },
-            { id: 'Pihak Ketiga', label: 'Pihak Ketiga Lainnya', desc: 'Analytics, Marketing Agency', icon: 'fa-handshake' }
-          ]
-        },
-        {
-          shortTitle: 'Target Regulasi',
-          title: 'Standar & Regulasi (Opsional)',
-          desc: 'Regulasi apa yang secara spesifik menjadi target utama kepatuhan Anda?',
-          field: 'targets',
-          options: [
-            { id: 'ISO 27001', label: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt' },
-            { id: 'NIST', label: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-compass' },
-            { id: 'COBIT', label: 'COBIT 2019', desc: 'Tata Kelola TI Perusahaan', icon: 'fa-project-diagram' },
-            { id: 'SEOJK', label: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark' },
-            { id: 'PBI', label: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns' },
-            { id: 'PADG', label: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract' },
-            { id: 'PADK', label: 'PADK 1 Tahun 2026', desc: 'Penyelenggaraan TI Bank Umum', icon: 'fa-server' },
-            { id: 'Resiliensi', label: 'Resiliensi OJK', desc: 'Panduan Resiliensi Digital OJK', icon: 'fa-shield-heart' },
-            { id: 'OWASP', label: 'OWASP (Top 10 / ASVS)', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug' },
-            { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield' }
-          ]
-        }
-      ]
+      simulationResult: null
     };
   },
-  created() {
-    if (this.$i18n.locale === 'en') {
-      this.steps = [
+  computed: {
+    steps() {
+      const en = this.$i18n.locale === 'en';
+      return en ? [
         {
           shortTitle: 'Industry',
           title: 'Industry Sector',
@@ -314,10 +256,78 @@ export default {
             { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Personal data protection', icon: 'fa-user-shield' }
           ]
         }
+      ] : [
+        {
+          shortTitle: 'Industri',
+          title: 'Sektor Industri',
+          desc: 'Pilih sektor industri tempat organisasi Anda beroperasi.',
+          field: 'industries',
+          options: [
+            { id: 'Perbankan', label: 'Perbankan', desc: 'Bank Umum / Syariah', icon: 'fa-university' },
+            { id: 'Fintech', label: 'Layanan Keuangan Digital', desc: 'P2P Lending, E-Wallet', icon: 'fa-mobile-alt' },
+            { id: 'Kesehatan', label: 'Kesehatan / Medis', desc: 'Rumah Sakit, Klinik', icon: 'fa-hospital' },
+            { id: 'E-Commerce', label: 'E-Commerce / Retail', desc: 'Toko Online, Ekspedisi', icon: 'fa-shopping-cart' },
+            { id: 'Pemerintahan', label: 'Pemerintahan / BUMN', desc: 'Instansi Publik', icon: 'fa-building' }
+          ]
+        },
+        {
+          shortTitle: 'Lokasi Server',
+          title: 'Lokasi Penempatan Data',
+          desc: 'Di mana data utama dan cadangan Anda disimpan?',
+          field: 'locations',
+          options: [
+            { id: 'On-Premise', label: 'On-Premise (Lokal)', desc: 'Server fisik di kantor sendiri', icon: 'fa-server' },
+            { id: 'Cloud ID', label: 'Cloud Indonesia', desc: 'Data Center di wilayah NKRI', icon: 'fa-cloud' },
+            { id: 'Singapura', label: 'Cloud Singapura / Asia', desc: 'AWS/GCP/Azure SG', icon: 'fa-globe-asia' },
+            { id: 'US', label: 'Cloud United States', desc: 'Data Center Amerika', icon: 'fa-flag-usa' },
+            { id: 'Eropa', label: 'Cloud Eropa', desc: 'Data Center wilayah Uni Eropa', icon: 'fa-euro-sign' }
+          ]
+        },
+        {
+          shortTitle: 'Klasifikasi Data',
+          title: 'Tipe Data yang Diproses',
+          desc: 'Jenis data apa saja yang ditampung oleh sistem Anda?',
+          field: 'dataTypes',
+          options: [
+            { id: 'Publik', label: 'Data Publik', desc: 'Info umum, berita, portofolio', icon: 'fa-bullhorn' },
+            { id: 'Pribadi Umum', label: 'Data Pribadi Umum', desc: 'Nama, Email, No HP', icon: 'fa-address-card' },
+            { id: 'Pribadi Spesifik', label: 'Data Pribadi Spesifik', desc: 'Medis, Biometrik, Agama', icon: 'fa-fingerprint' },
+            { id: 'Finansial', label: 'Data Finansial', desc: 'Kartu Kredit, Mutasi Rek', icon: 'fa-credit-card' },
+            { id: 'HAKI', label: 'Rahasia Dagang', desc: 'Source code, resep rahasia', icon: 'fa-user-secret' }
+          ]
+        },
+        {
+          shortTitle: 'Pengelola',
+          title: 'Pihak Pengelola & Akses',
+          desc: 'Siapa yang memiliki akses untuk mengelola sistem dan database?',
+          field: 'usages',
+          options: [
+            { id: 'Tim Internal', label: 'Tim Internal (Lokal)', desc: 'Karyawan WFO / Lokal', icon: 'fa-users' },
+            { id: 'Tim Remote', label: 'Tim Remote Lintas Negara', desc: 'WFA di luar negeri', icon: 'fa-laptop-house' },
+            { id: 'Vendor Cloud', label: 'Vendor Cloud Provider', desc: 'AWS, Google, Microsoft', icon: 'fa-cloud-meatball' },
+            { id: 'Pihak Ketiga', label: 'Pihak Ketiga Lainnya', desc: 'Analytics, Marketing Agency', icon: 'fa-handshake' }
+          ]
+        },
+        {
+          shortTitle: 'Target Regulasi',
+          title: 'Standar & Regulasi (Opsional)',
+          desc: 'Regulasi apa yang secara spesifik menjadi target utama kepatuhan Anda?',
+          field: 'targets',
+          options: [
+            { id: 'ISO 27001', label: 'ISO 27001:2022', desc: 'Standar Internasional Keamanan Informasi', icon: 'fa-shield-alt' },
+            { id: 'NIST', label: 'NIST CSF 2.0', desc: 'Framework Keamanan Siber NIST', icon: 'fa-compass' },
+            { id: 'COBIT', label: 'COBIT 2019', desc: 'Tata Kelola TI Perusahaan', icon: 'fa-project-diagram' },
+            { id: 'SEOJK', label: 'SEOJK 29/2022', desc: 'Regulasi Keamanan Siber OJK', icon: 'fa-landmark' },
+            { id: 'PBI', label: 'PBI 02/2024', desc: 'Peraturan Bank Indonesia', icon: 'fa-building-columns' },
+            { id: 'PADG', label: 'PADG 32/2025', desc: 'Pedoman Keamanan Siber BI', icon: 'fa-file-contract' },
+            { id: 'PADK', label: 'PADK 1 Tahun 2026', desc: 'Penyelenggaraan TI Bank Umum', icon: 'fa-server' },
+            { id: 'Resiliensi', label: 'Resiliensi OJK', desc: 'Panduan Resiliensi Digital OJK', icon: 'fa-shield-heart' },
+            { id: 'OWASP', label: 'OWASP (Top 10 / ASVS)', desc: 'Standar Keamanan Aplikasi Web', icon: 'fa-bug' },
+            { id: 'PDP', label: 'UU PDP No. 27/2022', desc: 'Pelindungan Data Pribadi', icon: 'fa-user-shield' }
+          ]
+        }
       ];
-    }
-  },
-  computed: {
+    },
     ui() {
       const en = this.$i18n.locale === 'en';
       return {
