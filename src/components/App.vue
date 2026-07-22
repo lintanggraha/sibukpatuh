@@ -267,7 +267,11 @@ export default {
   methods: {
     toggleLanguage() {
       this.currentLang = this.currentLang === 'id' ? 'en' : 'id';
-      this.$i18n.locale = this.currentLang;
+      if (this.$i18n?.locale && typeof this.$i18n.locale === 'object') {
+        this.$i18n.locale.value = this.currentLang;
+      } else if (this.$i18n) {
+        this.$i18n.locale = this.currentLang;
+      }
       localStorage.setItem('language', this.currentLang);
       document.documentElement.setAttribute('lang', this.currentLang);
       // Sync to Pinia store so all views can reactively update UI text
@@ -351,6 +355,12 @@ export default {
     }
 
     this.updateActiveGroups();
+    if (this.$i18n?.locale && typeof this.$i18n.locale === 'object') {
+      this.$i18n.locale.value = this.currentLang;
+    } else if (this.$i18n) {
+      this.$i18n.locale = this.currentLang;
+    }
+    this.frameworkStore.currentLanguage = this.currentLang;
     document.documentElement.setAttribute('lang', this.currentLang);
     document.addEventListener("click", this.handleClickOutside);
     document.addEventListener("keydown", this.handleKeydown);

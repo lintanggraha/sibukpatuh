@@ -519,7 +519,8 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        const response = await fetch(`/data/seojk_resilience_guidance.json?t=${new Date().getTime()}`);
+        const file = localStorage.getItem('language') === 'en' ? 'seojk_resilience_guidance_en.json' : 'seojk_resilience_guidance.json';
+        const response = await fetch(`/data/${file}?t=${new Date().getTime()}`);
         if (response.ok) {
           const data = await response.json();
           this.themes = Array.isArray(data)

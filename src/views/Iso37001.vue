@@ -327,7 +327,8 @@ export default {
         this.loading = true;
         this.error = null;
         // Tambahkan timestamp untuk menghindari cache agresif browser pada file statis di public/
-        const response = await fetch(`/data/iso37001.json?t=${new Date().getTime()}`);
+        const file = localStorage.getItem('language') === 'en' ? 'iso37001_en.json' : 'iso37001.json';
+        const response = await fetch(`/data/${file}?t=${new Date().getTime()}`);
         if (response.ok) {
           const data = await response.json();
           this.controls = Array.isArray(data) ? data : data.controls || [];

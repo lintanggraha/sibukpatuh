@@ -283,7 +283,8 @@ export default {
       try {
         this.loading = true;
         this.error = null;
-        const res = await fetch(`/data/uu_pdp_requirements.json?t=${new Date().getTime()}`);
+        const file = localStorage.getItem('language') === 'en' ? 'uu_pdp_requirements_en.json' : 'uu_pdp_requirements.json';
+        const res = await fetch(`/data/${file}?t=${new Date().getTime()}`);
         if (!res.ok) throw new Error(`Failed to load UU PDP data: HTTP ${res.status}`);
         const data = await res.json();
         this.requirements = Array.isArray(data) ? data : [];

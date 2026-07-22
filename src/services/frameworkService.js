@@ -6,6 +6,12 @@
 
 const BASE_URL = '/data';
 
+function localizedEndpoint(endpoint) {
+  const lang = localStorage.getItem('language') || 'id';
+  if (lang !== 'en' || endpoint.endsWith('_en.json')) return endpoint;
+  return endpoint.replace(/\.json$/, '_en.json');
+}
+
 /**
  * Generic fetch helper with error handling
  * @param {string} endpoint - Data endpoint path
@@ -14,7 +20,7 @@ const BASE_URL = '/data';
  */
 async function fetchData(endpoint, errorMessage = 'Failed to load data') {
   try {
-    const response = await fetch(`${BASE_URL}/${endpoint}`);
+    const response = await fetch(`${BASE_URL}/${localizedEndpoint(endpoint)}`);
     
     if (!response.ok) {
       throw new Error(`${errorMessage}: HTTP ${response.status}`);

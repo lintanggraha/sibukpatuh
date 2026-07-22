@@ -385,8 +385,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch(`/data/padk_1_2026_requirements.json?t=${new Date().getTime()}`),
-          fetch(`/data/padk_1_2026_appendices.json?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padk_1_2026_requirements_en.json' : 'padk_1_2026_requirements.json'}?t=${new Date().getTime()}`),
+          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padk_1_2026_appendices_en.json' : 'padk_1_2026_appendices.json'}?t=${new Date().getTime()}`),
         ]);
         if (!reqRes.ok) throw new Error(`Failed to load PADK requirements: HTTP ${reqRes.status}`);
         if (!appRes.ok) throw new Error(`Failed to load PADK appendices: HTTP ${appRes.status}`);
