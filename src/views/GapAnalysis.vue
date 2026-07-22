@@ -81,9 +81,9 @@
           <table class="table table-hover align-middle mb-0">
             <thead class="table-light">
               <tr>
-                <th style="width: 40%;" class="p-3">Kebutuhan Baseline ({{ getFrameworkName(sourceFwId) }})</th>
+                <th style="width: 40%;" class="p-3">{{ ui.baselineRequirement }} ({{ getFrameworkName(sourceFwId) }})</th>
                 <th style="width: 15%;" class="text-center p-3">{{ $t('auto_32') }}</th>
-                <th style="width: 45%;" class="p-3">Keterangan Target ({{ getFrameworkName(targetFwId) }})</th>
+                <th style="width: 45%;" class="p-3">{{ ui.targetDetail }} ({{ getFrameworkName(targetFwId) }})</th>
               </tr>
             </thead>
             <tbody>
@@ -115,7 +115,7 @@
                     <p class="mb-1 fw-medium">{{ item.targetNote }}</p>
                     <div class="alert alert-warning py-2 px-3 mb-0 mt-2 small border-warning bg-warning bg-opacity-10 d-inline-block">
                       <div class="fw-bold mb-1"><i class="fa-solid fa-circle-info me-1"></i> {{ $t('auto_36') }}</div>
-                      {{ item.partialReason || 'Target hanya mencakup sebagian aspek dari baseline, atau tidak sedetail spesifikasi acuan.' }}
+                      {{ item.partialReason || ui.partialFallback }}
                     </div>
                   </div>
                   <div v-else class="text-danger small fw-bold mt-2">
@@ -126,7 +126,7 @@
               <tr v-if="filteredResults.length === 0">
                 <td colspan="3" class="text-center p-5 text-muted">
                   <i class="fa-solid fa-clipboard-question fs-1 mb-3"></i>
-                  <p class="mb-0 fs-5" v-if="analysisResults.length > 0">Tidak ada data yang sesuai dengan filter ({{ selectedFilter }}).</p>
+                  <p class="mb-0 fs-5" v-if="analysisResults.length > 0">{{ ui.noFilteredData }} ({{ selectedFilter }}).</p>
                   <p class="mb-0 fs-5" v-else>{{ $t('auto_38') }}</p>
                 </td>
               </tr>
@@ -141,6 +141,100 @@
 <script setup>
 import { computed, ref } from 'vue';
 import { gapData } from '../data/gapData';
+
+const controlTextEn = {
+  'req-01': 'Primary information security policy.',
+  'req-02': 'Security structure and responsibilities.',
+  'req-03': 'Asset inventory and management.',
+  'req-04': 'User access rights control.',
+  'req-05': 'Use of cryptography and encryption.',
+  'req-06': 'Physical security for buildings and devices.',
+  'req-07': 'Secure standard IT operating procedures.',
+  'req-08': 'Network and communication security.',
+  'req-09': 'Security within the SDLC lifecycle.',
+  'req-10': 'Vendor and third-party risk management.',
+  'req-11': 'Incident response and reporting.',
+  'req-12': 'Business continuity and disaster recovery.',
+  'req-13': 'Compliance with regulations and audit.',
+  'req-14': 'Vulnerability and patch management.',
+  'req-15': 'Continuous cyber threat analysis.',
+  'req-16': 'Personal data protection.',
+  'req-17': 'Mobile device/BYOD security.',
+  'req-18': 'Remote/WFH access security.',
+  'req-19': 'Log monitoring and SOC.',
+  'req-20': 'Employee security awareness training.',
+  'req-21': 'Secure device configuration and hardening.',
+  'req-22': 'Data backup and restore testing.',
+  'req-23': 'Multifactor authentication implementation.',
+  'req-24': 'Data masking and anonymization.',
+  'req-25': 'System capacity management for availability.',
+};
+
+const textMapEn = {
+  'Panduan Resiliensi OJK': 'OJK Resilience Guidance',
+  'Di luar cakupan': 'Out of scope',
+  'Tidak diatur spesifik': 'Not specifically regulated',
+  'Kebijakan Keamanan': 'Security Policy',
+  'Pengorganisasian Keamanan': 'Security Organization',
+  'Manajemen Aset': 'Asset Management',
+  'Manajemen Akses': 'Access Management',
+  'Kriptografi': 'Cryptography',
+  'Keamanan Fisik': 'Physical Security',
+  'Keamanan Operasional': 'Operational Security',
+  'Keamanan Komunikasi': 'Communication Security',
+  'Pengembangan Sistem': 'System Development',
+  'Hubungan Pihak Ketiga': 'Third-Party Relationships',
+  'Manajemen Insiden': 'Incident Management',
+  'Kelangsungan Bisnis': 'Business Continuity',
+  'Kepatuhan': 'Compliance',
+  'Manajemen Kerentanan': 'Vulnerability Management',
+  'Pelatihan Keamanan': 'Security Training',
+  'Hardening Sistem': 'System Hardening',
+  'Backup Data': 'Data Backup',
+  'Otentikasi Multi-Faktor': 'Multifactor Authentication',
+  'Manajemen Kapasitas': 'Capacity Management',
+  'Kebijakan Pelindungan Data Pribadi': 'Personal Data Protection Policy',
+  'Penunjukan Pejabat PDP (DPO)': 'Appointment of PDP Officer (DPO)',
+  'Inventarisasi data pribadi': 'Personal data inventory',
+  'Pembatasan hak akses ke data pribadi': 'Restriction of access rights to personal data',
+  'Enkripsi data pribadi': 'Personal data encryption',
+  'SOP Pemrosesan Data': 'Data Processing SOP',
+  'Perjanjian pemrosesan dengan prosesor': 'Processing agreement with processors',
+  'Mencegah eksposur data sensitif': 'Preventing sensitive data exposure',
+  'Perlindungan data sensitif': 'Sensitive data protection',
+};
+
+const isEn = computed(() => localStorage.getItem('language') === 'en');
+const ui = computed(() => ({
+  baselineRequirement: isEn.value ? 'Baseline Requirement' : 'Kebutuhan Baseline',
+  targetDetail: isEn.value ? 'Target Detail' : 'Keterangan Target',
+  partialFallback: isEn.value ? 'The target only covers part of the baseline or is less detailed than the reference specification.' : 'Target hanya mencakup sebagian aspek dari baseline, atau tidak sedetail spesifikasi acuan.',
+  noFilteredData: isEn.value ? 'No data matches the selected filter' : 'Tidak ada data yang sesuai dengan filter',
+}));
+
+function translateText(text) {
+  if (!isEn.value || !text) return text;
+  if (textMapEn[text]) return textMapEn[text];
+  return text
+    .replace(/\bBab\b/g, 'Chapter')
+    .replace(/\bPasal\b/g, 'Article')
+    .replace(/Hanya mengatur/g, 'Only regulates')
+    .replace(/Hanya mewajibkan/g, 'Only requires')
+    .replace(/Tidak mencakup/g, 'Does not cover')
+    .replace(/tidak mencakup/g, 'does not cover')
+    .replace(/Mewajibkan/g, 'Requires')
+    .replace(/namun/g, 'but')
+    .replace(/secara umum/g, 'in general')
+    .replace(/secara spesifik/g, 'specifically')
+    .replace(/regulasi/g, 'regulation')
+    .replace(/data pribadi/g, 'personal data')
+    .replace(/akses/g, 'access');
+}
+
+function localizeReq(req) {
+  if (!req || !isEn.value) return req;
+  return { ...req, desc: controlTextEn[req.id] || req.desc };
+}
 
 const props = defineProps({
   sourceFwId: {
@@ -157,7 +251,7 @@ const availableFrameworks = gapData.frameworks;
 
 const getFrameworkName = (id) => {
   const fw = availableFrameworks.find(f => f.id === id);
-  return fw ? fw.name : id;
+  return fw ? translateText(fw.name) : id;
 };
 
 const selectedFilter = ref('All');
@@ -185,13 +279,13 @@ const analysisResults = computed(() => {
     }
     
     results.push({
-      req,
+      req: localizeReq(req),
       sourceRef: sourceCtrl.ref,
-      sourceNote: sourceCtrl.note,
+      sourceNote: translateText(sourceCtrl.note),
       status: evalStatus,
       targetRef: targetCtrl && targetCtrl.status !== 'N' ? targetCtrl.ref : '-',
-      targetNote: targetCtrl && targetCtrl.status !== 'N' ? targetCtrl.note : '',
-      partialReason: targetCtrl && targetCtrl.status === 'P' ? targetCtrl.partialReason : null
+      targetNote: targetCtrl && targetCtrl.status !== 'N' ? translateText(targetCtrl.note) : '',
+      partialReason: targetCtrl && targetCtrl.status === 'P' ? translateText(targetCtrl.partialReason) : null
     });
   });
   

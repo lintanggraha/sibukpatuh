@@ -81,6 +81,67 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import * as d3 from 'd3';
 import { crossMappingData } from '../data/crossMappingData';
 
+const crossMappingEn = {
+  'iso-5.1': { name: '5.1 Policies for information security', desc: 'Information security policies must be established, approved, and published.' },
+  'iso-5.15': { name: '5.15 Access control', desc: 'Rules for controlling physical and logical access to information and assets.' },
+  'iso-8.8': { name: '8.8 Management of vulnerabilities', desc: 'Technical vulnerabilities must be evaluated and treated with preventive action.' },
+  'iso-8.11': { name: '8.11 Data masking', desc: 'Data masking must be used according to access policy to protect sensitive data.' },
+  'iso-5.24': { name: '5.24 Incident management', desc: 'Procedures ensure fast, effective, and orderly responses to incidents.' },
+  'nist-gv.oc-01': { name: 'GV.OC-01', desc: 'The organizational mission is understood and informs cybersecurity risk management.' },
+  'nist-pr.aa-01': { name: 'PR.AA-01', desc: 'Identities and credentials for users and services are properly managed.' },
+  'nist-id.ra-01': { name: 'ID.RA-01', desc: 'Asset vulnerabilities are identified, validated, and recorded routinely.' },
+  'nist-pr.ds-01': { name: 'PR.DS-01', desc: 'Confidentiality, integrity, and availability of data at rest are protected.' },
+  'nist-rs.ma-01': { name: 'RS.MA-01', desc: 'Incident response plans are executed in a coordinated way after declaration.' },
+  'cobit-apo01.01': { name: 'APO01.01 Design management system', desc: 'Design an enterprise I&T management system that meets organizational requirements.' },
+  'cobit-dss05.04': { name: 'DSS05.04 Manage user identity', desc: 'Ensure users have access rights aligned with business needs.' },
+  'cobit-apo12.01': { name: 'APO12.01 Collect risk data', desc: 'Identify and collect IT risk data for analysis and reporting.' },
+  'cobit-apo03.02': { name: 'APO03.02 Define baseline architecture', desc: 'Define baseline architecture for data and technology domains to support protection.' },
+  'cobit-dss02.05': { name: 'DSS02.05 Resolve incidents', desc: 'Ensure IT incidents are resolved and business operations recover on time.' },
+  'seojk-1.1': { name: 'Security Policy', desc: 'Electronic system providers must have an approved security policy.' },
+  'seojk-2.1': { name: 'Access Management', desc: 'Access granting and revocation procedures must be closely monitored.' },
+  'seojk-3.1': { name: 'Vulnerability Management', desc: 'Vulnerability scanning and penetration testing must be performed periodically.' },
+  'seojk-4.1': { name: 'Cryptography', desc: 'Strong cryptographic algorithms should be implemented for sensitive data.' },
+  'seojk-5.1': { name: 'Incident Management', desc: 'Cyber incident handling procedures and high-impact incident reporting.' },
+  'pbi-bab2': { name: 'IT Governance', desc: 'Banks must implement IT governance with active oversight by the Board of Directors.' },
+  'pbi-bab3': { name: 'Access Control', desc: 'Ensure segregation of duties and least privilege in access provisioning.' },
+  'pbi-bab4': { name: 'IT Risk Management', desc: 'Identify, measure, monitor, and control IT risks.' },
+  'pbi-bab5': { name: 'Customer Data Protection', desc: 'Maintain the confidentiality, integrity, and availability of customer data.' },
+  'pbi-bab6': { name: 'Cyber Incident Handling', desc: 'Maintain cyber incident response and system recovery functions.' },
+  'resilience-1': { name: 'Digital Governance', desc: 'Establish an integrated digital resilience governance framework.' },
+  'resilience-2': { name: 'Identity & Access Management', desc: 'Apply strict access controls including multifactor authentication.' },
+  'resilience-3': { name: 'Threat Intelligence', desc: 'Continuously analyze cyber threats and vulnerabilities.' },
+  'resilience-4': { name: 'Infrastructure Protection', desc: 'Protect systems and infrastructure, including data, for critical services.' },
+  'resilience-5': { name: 'Business Continuity', desc: 'Ensure business continuity during cyber incident disruptions.' },
+  'padg-1': { name: 'Security Governance', desc: 'Policies and procedures for Bank Indonesia IT security governance.' },
+  'padg-2': { name: 'Identity Access Control', desc: 'Management of access rights and authentication for banking systems.' },
+  'padg-3': { name: 'Risk Monitoring', desc: 'Identification and assessment of payment system security risks.' },
+  'padg-4': { name: 'Data Security & Cryptography', desc: 'Protection of data confidentiality and integrity.' },
+  'padg-5': { name: 'Operational Incident Response', desc: 'Procedures for handling and reporting security incidents.' },
+  'owasp-a01': { name: 'A01: Broken Access Control', desc: 'Policies to prevent access restriction failures.' },
+  'owasp-a07': { name: 'A07: Identification Failures', desc: 'Prevention of authentication and identity failures.' },
+  'owasp-a06': { name: 'A06: Vulnerable Components', desc: 'Management of vulnerable and outdated components.' },
+  'owasp-a02': { name: 'A02: Cryptographic Failures', desc: 'Prevention of sensitive data and cryptographic protection failures.' },
+  'owasp-a09': { name: 'A09: Security Logging Failures', desc: 'Logging and monitoring failures that obstruct incident response.' },
+  'asvs-v1': { name: 'V1: Architecture', desc: 'Application security architecture and design requirements.' },
+  'asvs-v2': { name: 'V2: Authentication', desc: 'Security requirements for user identity verification.' },
+  'asvs-v14': { name: 'V14: Configuration', desc: 'Secure configuration and vulnerability management.' },
+  'asvs-v6': { name: 'V6: Cryptography', desc: 'Requirements for cryptographic implementation.' },
+  'asvs-v7': { name: 'V7: Error Handling', desc: 'Error handling and logging for security response.' },
+  'pdp-pasal16': { name: 'Article 16: PDP Policy', desc: 'Obligation to maintain a personal data protection policy.' },
+  'pdp-pasal35': { name: 'Article 35: Data Access', desc: 'Restriction of access rights to personal data.' },
+  'pdp-pasal39': { name: 'Article 39: Impact Assessment', desc: 'Personal data protection impact assessment (DPIA).' },
+  'pdp-pasal43': { name: 'Article 43: Data Security', desc: 'Obligation to protect personal data from unauthorized access.' },
+  'pdp-pasal46': { name: 'Article 46: Incident Notification', desc: 'Obligation to report personal data protection failures.' },
+  'padk-kebijakan': { name: 'Bank IT Governance', desc: 'Policies and operating procedures for commercial bank information technology.' },
+  'padk-akses': { name: 'Access & Identity Management', desc: 'Management of logical access to commercial bank systems.' },
+  'padk-risiko': { name: 'IT Risk Assessment', desc: 'Information technology risk management and mitigation.' },
+  'padk-kripto': { name: 'Data Security & Encryption', desc: 'Confidentiality protection using cryptography.' },
+  'padk-insiden': { name: 'Incident Response & BCP', desc: 'Incident handling, disaster recovery, and business continuity.' },
+};
+
+const isEnglish = () => localStorage.getItem('language') === 'en';
+const localizeControl = (ctrl) => isEnglish() && crossMappingEn[ctrl.id] ? { ...ctrl, ...crossMappingEn[ctrl.id] } : ctrl;
+
 const graphContainer = ref(null);
 const svg = ref(null);
 
@@ -132,6 +193,7 @@ const getFilteredData = () => {
   // 2. Buat node anak (Kontrol)
   const controlNodes = crossMappingData.controls
     .filter(ctrl => activeFwSet.has(ctrl.framework))
+    .map(localizeControl)
     .map(ctrl => ({
       id: ctrl.id,
       framework: ctrl.framework,

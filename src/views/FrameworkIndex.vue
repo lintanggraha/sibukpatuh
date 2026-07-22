@@ -68,7 +68,7 @@
             <span class="frx-card-icon"><i :class="`fas ${fw.icon}`"></i></span>
             <div class="frx-card-info">
               <h3>{{ fw.name }}</h3>
-              <p>{{ fw.summary[$i18n.locale] || fw.summary.id }}</p>
+              <p>{{ fw.summary[currentLocale] || fw.summary.id }}</p>
             </div>
           </div>
           <div class="frx-card-metric">
@@ -243,17 +243,24 @@ export default {
     totalRecords() {
       return this.frameworks.reduce((sum, f) => sum + (f.metric_value || 0), 0);
     },
+    currentLocale() {
+      return this.$i18n?.locale?.value || this.$i18n?.locale || localStorage.getItem('language') || 'id';
+    },
   },
   methods: {
+    localizedDataUrl(url) {
+      if (this.currentLocale !== 'en') return url;
+      return url.replace(/\.json$/, '_en.json');
+    },
     formatNumber(value) {
-      return new Intl.NumberFormat("id-ID").format(value);
+      return new Intl.NumberFormat(this.currentLocale === 'en' ? "en-US" : "id-ID").format(value);
     },
   },
   async mounted() {
     // Load real metrics from JSON files
     const loadData = async (url, keyPath) => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(this.localizedDataUrl(url));
         if (response.ok) {
           const data = await response.json();
           // Support nested data structures
