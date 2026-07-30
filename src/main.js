@@ -4,33 +4,9 @@ import App from './components/App.vue';
 import router from './router/index.js';
 import VueGtag from 'vue-gtag-next';
 import i18n from './i18n';
+import { installRegulationDataFetchTranslator } from './utils/regulationDataTranslator';
 
-// Global Fetch Interceptor for Translations
-const originalFetch = window.fetch;
-window.fetch = async function() {
-  let [resource, config] = arguments;
-  
-  if (typeof resource === 'string' && resource.includes('/data/') && resource.includes('.json')) {
-    // Handle query parameters like ?t=...
-    const [path, query] = resource.split('?');
-    const lang = localStorage.getItem('language') || 'id';
-    
-    if (lang === 'en' && !path.endsWith('_en.json')) {
-      const enPath = path.replace('.json', '_en.json');
-      const enResource = query ? `${enPath}?${query}` : enPath;
-      try {
-        const enResponse = await originalFetch(enResource, config);
-        if (enResponse.ok) {
-          return enResponse;
-        }
-      } catch (e) {
-        // Fallback to default
-      }
-    }
-  }
-  
-  return originalFetch.apply(this, arguments);
-};
+installRegulationDataFetchTranslator();
 
 // Vercel Analytics is now handled via component in App.vue
 
