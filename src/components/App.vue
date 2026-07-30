@@ -63,13 +63,6 @@
             </nav>
 
             <div class="framework-tools">
-              <button @click.stop="toggleLanguage" class="language-toggle" aria-label="Ganti Bahasa">
-                <i class="fas fa-language"></i>
-                <span>{{ currentLang === 'id' ? 'EN' : 'ID' }}</span>
-              </button>
-              <div class="nav-divider"></div>
-              <RoleSelector />
-
             </div>
           </div>
         </div>
@@ -132,15 +125,13 @@
 import { Analytics } from '@vercel/analytics/vue';
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
-import RoleSelector from './RoleSelector.vue';
 import { applyDomTranslations } from '../utils/domTranslator';
 
 export default {
   name: "App",
   components: {
     Analytics,
-    SpeedInsights,
-    RoleSelector
+    SpeedInsights
   },
   setup() {
     const frameworkStore = useFrameworkStore();
