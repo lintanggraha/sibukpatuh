@@ -136,20 +136,85 @@
           <section class="iso-panel mt-3" style="grid-column: 1 / -1; background: transparent; border: none; padding: 0; box-shadow: none;">
             <div class="iso-panel-head mb-3">
               <h3 style="font-size: 1.4rem;"><i class="fas fa-radar me-2 text-primary"></i> {{ ui.findings }}</h3>
+              <span class="sim-findings-count">{{ simulationResult.length }} {{ ui.findingsCount }}</span>
             </div>
+
+            <!-- Risk Summary Bar -->
+            <div class="sim-risk-summary">
+              <div class="sim-risk-item danger">
+                <i class="fas fa-times-circle"></i>
+                <strong>{{ simulationResult.filter(r => r.severity === 'danger').length }}</strong>
+                <span>{{ ui.critical }}</span>
+              </div>
+              <div class="sim-risk-item warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>{{ simulationResult.filter(r => r.severity === 'warning').length }}</strong>
+                <span>{{ ui.moderate }}</span>
+              </div>
+              <div class="sim-risk-item success">
+                <i class="fas fa-check-circle"></i>
+                <strong>{{ simulationResult.filter(r => r.severity === 'success').length }}</strong>
+                <span>{{ ui.compliant }}</span>
+              </div>
+            </div>
+
             <div class="sim-results">
               <div v-for="(res, idx) in simulationResult" :key="idx" class="sim-result-card" :class="res.severity">
-                <div class="sim-result-icon">
-                  <i class="fas" :class="getSeverityIcon(res.severity)"></i>
-                </div>
-                <div class="sim-result-content">
-                  <div class="sim-result-header">
-                    <span class="sim-framework">{{ res.framework }}</span>
-                    <span class="sim-status-badge" :class="res.severity">{{ getSeverityText(res.severity) }}</span>
+                <!-- Card Header -->
+                <div class="sim-card-header">
+                  <div class="sim-card-header-left">
+                    <div class="sim-severity-icon" :class="res.severity">
+                      <i class="fas" :class="getSeverityIcon(res.severity)"></i>
+                    </div>
+                    <div>
+                      <span class="sim-framework">{{ res.framework }}</span>
+                      <div class="sim-reg-refs" v-if="res.regulations && res.regulations.length">
+                        <span v-for="reg in res.regulations" :key="reg" class="sim-reg-tag">{{ reg }}</span>
+                      </div>
+                    </div>
                   </div>
-                  <p class="sim-message">{{ res.message }}</p>
-                  <div v-if="res.recommendation" class="sim-recommendation">
-                    <strong>{{ ui.recommendation }}: </strong> {{ res.recommendation }}
+                  <div class="sim-card-header-right">
+                    <span class="sim-status-badge" :class="res.severity">{{ getSeverityText(res.severity) }}</span>
+                    <span class="sim-criticality-score" :class="res.severity">{{ ui.criticalityLabel }}: {{ res.criticalityScore }}/10</span>
+                  </div>
+                </div>
+
+                <!-- Why This Matters -->
+                <div class="sim-why-block">
+                  <div class="sim-block-label"><i class="fas fa-exclamation-circle"></i> {{ ui.whyLabel }}</div>
+                  <p class="sim-why-text">{{ res.why }}</p>
+                </div>
+
+                <!-- Impact if Ignored -->
+                <div class="sim-impact-block" v-if="res.impact">
+                  <div class="sim-block-label impact"><i class="fas fa-bolt"></i> {{ ui.impactLabel }}</div>
+                  <p class="sim-impact-text">{{ res.impact }}</p>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="sim-rec-block" v-if="res.recommendations && res.recommendations.length">
+                  <div class="sim-block-label rec"><i class="fas fa-tasks"></i> {{ ui.actionsLabel }}</div>
+                  <ul class="sim-rec-list">
+                    <li v-for="(rec, rIdx) in res.recommendations" :key="rIdx">
+                      <span class="sim-rec-priority" :class="rec.priority">{{ getPriorityLabel(rec.priority) }}</span>
+                      <span class="sim-rec-text">{{ rec.action }}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Effort Indicator -->
+                <div class="sim-effort-row">
+                  <div class="sim-effort-item">
+                    <span class="sim-effort-label">{{ ui.effortLabel }}</span>
+                    <span class="sim-effort-val" :class="res.effort">{{ getEffortLabel(res.effort) }}</span>
+                  </div>
+                  <div class="sim-effort-item">
+                    <span class="sim-effort-label">{{ ui.timelineLabel }}</span>
+                    <span class="sim-effort-val">{{ res.timeline }}</span>
+                  </div>
+                  <div class="sim-effort-item" v-if="res.owner">
+                    <span class="sim-effort-label">{{ ui.ownerLabel }}</span>
+                    <span class="sim-effort-val">{{ res.owner }}</span>
                   </div>
                 </div>
               </div>
@@ -344,7 +409,18 @@ export default {
         manager: en ? 'Manager' : 'Pengelola',
         regulatoryTarget: en ? 'Regulatory Target' : 'Target Regulasi',
         findings: en ? 'Compliance Findings (Gap Analysis)' : 'Temuan Kepatuhan (Gap Analysis)',
-        recommendation: en ? 'Action / Recommendation' : 'Tindakan / Rekomendasi'
+        recommendation: en ? 'Action / Recommendation' : 'Tindakan / Rekomendasi',
+        findingsCount: en ? 'findings identified' : 'temuan teridentifikasi',
+        critical: en ? 'Critical' : 'Kritis',
+        moderate: en ? 'Moderate' : 'Perhatian',
+        compliant: en ? 'Compliant' : 'Aman',
+        criticalityLabel: en ? 'Criticality' : 'Kritikalitas',
+        whyLabel: en ? 'Why This Matters' : 'Mengapa Ini Penting',
+        impactLabel: en ? 'Risk if Ignored' : 'Risiko Jika Diabaikan',
+        actionsLabel: en ? 'Recommended Actions' : 'Tindakan yang Direkomendasikan',
+        effortLabel: en ? 'Implementation Effort' : 'Upaya Implementasi',
+        timelineLabel: en ? 'Timeline' : 'Timeline',
+        ownerLabel: en ? 'Responsible Party' : 'Penanggung Jawab'
       };
     },
     currentStepData() {
@@ -402,106 +478,261 @@ export default {
       const { industries, locations, dataTypes, usages, targets } = this.scenario;
       const en = this.$i18n.locale === 'en';
 
-      // Helper functions
       const hasForeignCloud = locations.includes('Singapura') || locations.includes('US') || locations.includes('Eropa');
       const hasPersonalData = dataTypes.includes('Pribadi Umum') || dataTypes.includes('Pribadi Spesifik');
       const hasSpecificData = dataTypes.includes('Pribadi Spesifik');
       const hasFinancialSect = industries.includes('Perbankan') || industries.includes('Fintech');
       const hasThirdParty = usages.includes('Vendor Cloud') || usages.includes('Pihak Ketiga');
       const hasRemote = usages.includes('Tim Remote');
-
-      // 1. Kebutuhan Kebijakan & Administratif (Policies & SOPs)
-      let policiesMsg = en ? 'Based on your profile, the following policy documents should be owned and approved by top management:' : 'Berdasarkan profil Anda, dokumen kebijakan berikut wajib dimiliki dan disahkan oleh Manajemen Puncak (Direksi):';
-      let policiesRec = en ? 'Access Management SOP, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), and Incident Response SOP.' : 'SOP Manajemen Akses, BCP (Business Continuity Plan), DRP (Disaster Recovery Plan), dan SOP Respons Insiden.';
-      
       const hasOJK = targets.includes('SEOJK') || targets.includes('PBI') || targets.includes('PADG') || targets.includes('Resiliensi') || targets.includes('PADK');
+      const hasISO = targets.includes('ISO 27001');
+      const hasNIST = targets.includes('NIST');
+      const hasCOBIT = targets.includes('COBIT');
+      const hasPDP = targets.includes('PDP') || hasPersonalData;
 
-      if (targets.includes('ISO 27001') || targets.includes('NIST') || targets.includes('COBIT')) {
-          policiesRec += en ? ' ISMS documents, Cryptography Policy, Asset Classification SOP, and IT Governance & Risk Management documentation (COBIT).' : ' Dokumen ISMS (Information Security Management System), Kebijakan Kriptografi, SOP Klasifikasi Aset, dan Dokumentasi Tata Kelola TI & Manajemen Risiko (COBIT).';
+      // ─── 1. TATA KELOLA & KEBIJAKAN ───────────────────────────────────────
+      const policiesRegs = [];
+      if (hasISO) policiesRegs.push('ISO 27001:2022 A.5');
+      if (hasNIST) policiesRegs.push('NIST CSF GV.PO');
+      if (hasCOBIT) policiesRegs.push('COBIT APO01');
+      if (hasOJK) policiesRegs.push('SEOJK 29/2022 Pasal 7');
+      if (hasPDP) policiesRegs.push('UU PDP Pasal 20');
+      if (!policiesRegs.length) policiesRegs.push('ISO 27001:2022', 'Best Practice');
+
+      const policiesRecs = [
+        { priority: 'immediate', action: en ? 'Formalize and ratify Access Management SOP, Incident Response SOP, and BCP/DRP signed by the Board of Directors.' : 'Formalisasi dan sahkan SOP Manajemen Akses, SOP Respons Insiden, dan BCP/DRP yang ditandatangani Direksi.' },
+        { priority: 'short', action: en ? 'Conduct an annual internal policy review cycle and document all changes in a version control system.' : 'Lakukan siklus review kebijakan internal tahunan dan dokumentasikan semua perubahan dalam version control.' },
+      ];
+      if (hasISO || hasNIST || hasCOBIT) {
+        policiesRecs.push({ priority: 'short', action: en ? 'Develop ISMS documentation, Cryptography Policy, Asset Classification SOP, and IT Risk Management framework (COBIT APO12).' : 'Susun dokumentasi ISMS, Kebijakan Kriptografi, SOP Klasifikasi Aset, dan kerangka Manajemen Risiko TI (COBIT APO12).' });
       }
-      if (targets.includes('PDP') || hasPersonalData) {
-          policiesRec += en ? ' DPO appointment, external Privacy Policy, Data Retention Policy, and Data Subject Rights Fulfillment SOP.' : ' Penunjukan DPO (Data Protection Officer), Privacy Policy Eksternal, Kebijakan Retensi Data, dan SOP Pemenuhan Hak Subjek Data.';
+      if (hasPDP) {
+        policiesRecs.push({ priority: 'immediate', action: en ? 'Appoint a Data Protection Officer (DPO), publish an external Privacy Policy, and create a Data Subject Rights Fulfillment SOP.' : 'Tunjuk DPO (Data Protection Officer), terbitkan Privacy Policy eksternal, dan buat SOP Pemenuhan Hak Subjek Data.' });
       }
       if (hasOJK || hasFinancialSect) {
-          policiesRec += en ? ' IT Governance Policy aligned with financial regulations (OJK/BI), including an IT Steering Committee.' : ' Kebijakan Tata Kelola TI sesuai Regulasi Finansial (OJK/BI), Pembentukan Komite Pengarah TI (IT Steering Committee).';
+        policiesRecs.push({ priority: 'short', action: en ? 'Establish an IT Steering Committee and align IT Governance Policy with OJK/BI regulatory requirements.' : 'Bentuk Komite Pengarah TI (IT Steering Committee) dan selaraskan Kebijakan Tata Kelola TI dengan persyaratan OJK/BI.' });
       }
+
       results.push({
-          framework: en ? 'Governance & Policy' : 'Tata Kelola & Kebijakan (Governance)',
-          severity: 'warning',
-          message: policiesMsg,
-          recommendation: policiesRec
+        framework: en ? 'Governance & Policy (Administrative)' : 'Tata Kelola & Kebijakan (Administratif)',
+        severity: hasOJK || hasFinancialSect ? 'danger' : 'warning',
+        criticalityScore: hasOJK || hasFinancialSect ? 8 : 6,
+        regulations: policiesRegs,
+        why: en
+          ? 'Regulatory frameworks universally require documented, board-approved policies as the foundation of any compliance program. Without formal governance documents, your organization cannot demonstrate due diligence during audits or regulatory inspections.'
+          : 'Semua regulasi mensyaratkan kebijakan yang terdokumentasi dan disetujui Direksi sebagai fondasi program kepatuhan. Tanpa dokumen tata kelola yang formal, organisasi Anda tidak dapat membuktikan itikad baik (due diligence) saat audit atau inspeksi regulator.',
+        impact: en
+          ? 'Absence of formal policies can result in regulatory sanctions, failed certification audits (ISO 27001), and personal liability for executives. In financial sectors, OJK/BI can issue administrative sanctions including fines or license revocation.'
+          : 'Ketiadaan kebijakan formal dapat berujung pada sanksi regulasi, gagal audit sertifikasi (ISO 27001), dan tanggung jawab pribadi bagi eksekutif. Di sektor keuangan, OJK/BI dapat menerbitkan sanksi administratif termasuk denda atau pencabutan izin.',
+        recommendations: policiesRecs,
+        effort: 'medium',
+        timeline: en ? '1–3 months' : '1–3 bulan',
+        owner: en ? 'CISO / Compliance Team' : 'CISO / Tim Kepatuhan'
       });
 
-      // 2. Kebutuhan Tools & Infrastruktur Teknis (Tools)
-      let toolsMsg = en ? 'To satisfy regulatory technical controls, your architecture requires specific security tools:' : 'Untuk memenuhi kontrol teknis regulasi, arsitektur Anda membutuhkan perangkat (tools) keamanan spesifik:';
-      let toolsRec = en ? 'Next-Gen Firewall (NGFW), endpoint Antivirus/EDR, and encryption for data at rest and in transit (TLS 1.2+).' : 'Next-Gen Firewall (NGFW), Antivirus/EDR di Endpoint, dan enkripsi Data at Rest & in Transit (TLS 1.2+).';
-      
+      // ─── 2. KONTROL TEKNIS & INFRASTRUKTUR ───────────────────────────────
+      const toolsRegs = [];
+      if (hasISO) toolsRegs.push('ISO 27001:2022 A.8');
+      if (hasNIST) toolsRegs.push('NIST CSF PR.AC, PR.DS');
+      if (hasOJK) toolsRegs.push('SEOJK 29/2022 Pasal 12');
+      if (targets.includes('OWASP')) toolsRegs.push('OWASP Top 10');
+      if (!toolsRegs.length) toolsRegs.push('ISO 27001:2022 A.8', 'NIST CSF');
+
+      const toolsRecs = [
+        { priority: 'immediate', action: en ? 'Deploy Next-Gen Firewall (NGFW) with IPS/IDS capability and endpoint Antivirus/EDR on all devices.' : 'Deploy Next-Gen Firewall (NGFW) dengan kemampuan IPS/IDS dan Antivirus/EDR di semua endpoint.' },
+        { priority: 'immediate', action: en ? 'Enforce encryption for all data at rest (AES-256) and in transit (TLS 1.2+ minimum). Disable legacy protocols (TLS 1.0/1.1, SSLv3).' : 'Terapkan enkripsi untuk semua data at rest (AES-256) dan in transit (TLS 1.2+ minimum). Nonaktifkan protokol lama (TLS 1.0/1.1, SSLv3).' },
+        { priority: 'short', action: en ? 'Implement Multi-Factor Authentication (MFA) for all privileged access and remote connections.' : 'Implementasikan Multi-Factor Authentication (MFA) untuk semua akses privileged dan koneksi remote.' },
+      ];
       if (hasPersonalData || dataTypes.includes('Finansial')) {
-          toolsRec += en ? ' Database-level data masking/obfuscation, especially for development environments, and DLP to prevent exfiltration.' : ' Sistem Data Masking / Obfuscator di level database (terutama lingkungan dev), dan Data Loss Prevention (DLP) untuk mencegah eksfiltrasi.';
+        toolsRecs.push({ priority: 'short', action: en ? 'Implement database-level Data Masking/Obfuscation (especially in dev/staging environments) and DLP (Data Loss Prevention) to prevent unauthorized data exfiltration.' : 'Implementasikan Data Masking/Obfuscation di level database (terutama lingkungan dev/staging) dan DLP (Data Loss Prevention) untuk mencegah eksfiltrasi data tidak sah.' });
       }
       if (hasRemote) {
-          toolsRec += en ? ' Enterprise VPN with MFA and MDM for BYOD devices.' : ' VPN Enterprise dengan otentikasi MFA (Multi-Factor Authentication), solusi MDM (Mobile Device Management) untuk BYOD.';
+        toolsRecs.push({ priority: 'immediate', action: en ? 'Deploy Enterprise VPN with MFA for all remote workers. Implement MDM (Mobile Device Management) for BYOD devices accessing corporate resources.' : 'Deploy VPN Enterprise dengan MFA untuk semua pekerja remote. Implementasikan MDM (Mobile Device Management) untuk perangkat BYOD yang mengakses sumber daya perusahaan.' });
       }
       if (targets.includes('OWASP')) {
-          toolsRec += en ? ' SAST/DAST tooling integrated into the CI/CD pipeline, Web Application Firewall (WAF), and secure coding practices.' : ' SAST/DAST Tooling terintegrasi dalam CI/CD pipeline, Web Application Firewall (WAF), dan implementasi prinsip Secure Coding.';
+        toolsRecs.push({ priority: 'short', action: en ? 'Integrate SAST/DAST tools into the CI/CD pipeline and deploy a Web Application Firewall (WAF). Enforce secure coding standards (OWASP ASVS).' : 'Integrasikan SAST/DAST ke dalam CI/CD pipeline dan deploy Web Application Firewall (WAF). Terapkan standar secure coding (OWASP ASVS).' });
       } else if (hasOJK || hasFinancialSect) {
-          toolsRec += en ? ' Web Application Firewall (WAF), PAM for privileged database/server access, and FIM (File Integrity Monitoring).' : ' Web Application Firewall (WAF), sistem PAM (Privileged Access Management) untuk akses database/server oleh admin, FIM (File Integrity Monitoring).';
+        toolsRecs.push({ priority: 'short', action: en ? 'Deploy WAF, implement PAM (Privileged Access Management) for admin-level database/server access, and FIM (File Integrity Monitoring) on critical servers.' : 'Deploy WAF, implementasikan PAM (Privileged Access Management) untuk akses admin ke database/server, dan FIM (File Integrity Monitoring) di server kritis.' });
       }
+
       results.push({
-          framework: en ? 'Technical Controls & Infrastructure' : 'Kontrol Teknis & Infrastruktur',
-          severity: 'danger',
-          message: toolsMsg,
-          recommendation: toolsRec
+        framework: en ? 'Technical Controls & Infrastructure' : 'Kontrol Teknis & Infrastruktur',
+        severity: 'danger',
+        criticalityScore: hasFinancialSect || hasOJK ? 9 : 8,
+        regulations: toolsRegs,
+        why: en
+          ? 'Technical controls are the first line of defense against cyberattacks. Regulations such as ISO 27001 Annex A.8, SEOJK 29/2022, and NIST CSF explicitly mandate specific security tools as minimum requirements. Without them, your systems are exposed to known, preventable attack vectors.'
+          : 'Kontrol teknis adalah lini pertahanan pertama terhadap serangan siber. Regulasi seperti ISO 27001 Annex A.8, SEOJK 29/2022, dan NIST CSF secara eksplisit mewajibkan perangkat keamanan spesifik sebagai persyaratan minimum. Tanpanya, sistem Anda terekspos pada vektor serangan yang diketahui dan dapat dicegah.',
+        impact: en
+          ? 'A single unmitigated vulnerability can lead to data breaches, ransomware attacks, and service disruption. For financial institutions, a breach can trigger mandatory OJK incident reporting within 1x24 hours, reputational damage, and customer compensation obligations. Fines under UU PDP can reach 2% of annual revenue.'
+          : 'Satu celah yang tidak dimitigasi dapat menyebabkan kebocoran data, serangan ransomware, dan gangguan layanan. Bagi lembaga keuangan, pelanggaran memicu kewajiban pelaporan insiden OJK dalam 1x24 jam, kerusakan reputasi, dan kewajiban kompensasi nasabah. Denda berdasarkan UU PDP dapat mencapai 2% dari pendapatan tahunan.',
+        recommendations: toolsRecs,
+        effort: 'high',
+        timeline: en ? '1–6 months (phased)' : '1–6 bulan (bertahap)',
+        owner: en ? 'IT Security / Infrastructure Team' : 'Tim Keamanan TI / Infrastruktur'
       });
 
-      // 3. Kebutuhan Tim & Pengawasan Operasional (SOC & Tim)
-      let opsMsg = en ? 'Regulatory expectations require continuous security monitoring and evaluation:' : 'Tuntutan regulasi mengharuskan pengawasan dan evaluasi keamanan secara berkelanjutan (Continuous Monitoring):';
-      let opsRec = en ? 'Daily network log review and internal vulnerability assessment at least once a year.' : 'Pengecekan log jaringan harian dan Vulnerability Assessment internal minimal setahun sekali.';
-      
-      if (hasOJK || targets.includes('ISO 27001') || targets.includes('PADG') || hasFinancialSect) {
-          opsRec = en ? 'Implement SIEM for log centralization, 24/7 SOC operations (in-house or MSSP), and routine penetration testing at least annually.' : 'Implementasi SIEM untuk sentralisasi log, operasional Tim SOC (Security Operations Center) 24/7 (in-house atau MSSP), dan Penetration Testing rutin minimal tahunan.';
+      // ─── 3. OPERASIONAL, SOC & AUDIT ─────────────────────────────────────
+      const opsRegs = [];
+      if (hasISO) opsRegs.push('ISO 27001:2022 A.8.16');
+      if (hasNIST) opsRegs.push('NIST CSF DE.CM, RS.AN');
+      if (hasOJK) opsRegs.push('SEOJK 29/2022 Pasal 15');
+      if (targets.includes('Resiliensi')) opsRegs.push('Panduan Resiliensi OJK');
+      if (!opsRegs.length) opsRegs.push('ISO 27001:2022', 'Best Practice');
+
+      const opsScore = (hasOJK || hasISO || hasFinancialSect) ? 8 : 6;
+      const opsRecs = [];
+      if (hasOJK || hasISO || targets.includes('PADG') || hasFinancialSect) {
+        opsRecs.push({ priority: 'short', action: en ? 'Implement a SIEM (Security Information and Event Management) system for centralized log collection and real-time threat correlation.' : 'Implementasikan SIEM (Security Information and Event Management) untuk sentralisasi log dan korelasi ancaman secara real-time.' });
+        opsRecs.push({ priority: 'short', action: en ? 'Establish a 24/7 SOC (Security Operations Center) — either in-house or via an MSSP (Managed Security Service Provider).' : 'Bangun SOC (Security Operations Center) 24/7 — secara in-house atau melalui MSSP (Managed Security Service Provider).' });
+        opsRecs.push({ priority: 'medium', action: en ? 'Conduct routine Penetration Testing at least annually (or after major system changes) by a certified third-party provider.' : 'Lakukan Penetration Testing rutin minimal tahunan (atau setelah perubahan sistem besar) oleh penyedia pihak ketiga bersertifikat.' });
+      } else {
+        opsRecs.push({ priority: 'short', action: en ? 'Establish daily network log review procedures and conduct an internal Vulnerability Assessment at least once a year.' : 'Tetapkan prosedur review log jaringan harian dan lakukan Vulnerability Assessment internal minimal setahun sekali.' });
       }
-      if (targets.includes('NIST') || hasOJK || targets.includes('Resiliensi')) {
-          opsRec += en ? ' Annual security awareness training, phishing simulations, 3-5 year log retention, and annual DRP simulation.' : ' Pelatihan Security Awareness tahunan untuk seluruh pegawai, simulasi Phishing, dan Retensi Log minimal 3-5 tahun, serta simulasi DRP tahunan.';
+      if (hasNIST || hasOJK || targets.includes('Resiliensi')) {
+        opsRecs.push({ priority: 'short', action: en ? 'Conduct annual Security Awareness Training for all employees, including phishing simulations. Retain security logs for a minimum of 3–5 years.' : 'Lakukan Security Awareness Training tahunan untuk seluruh pegawai, termasuk simulasi Phishing. Simpan log keamanan minimal 3–5 tahun.' });
+        opsRecs.push({ priority: 'medium', action: en ? 'Run an annual DRP (Disaster Recovery Plan) simulation to validate RTO/RPO targets and update the plan based on findings.' : 'Jalankan simulasi DRP (Disaster Recovery Plan) tahunan untuk memvalidasi target RTO/RPO dan perbarui rencana berdasarkan temuan.' });
       }
-      if (targets.includes('ISO 27001') || hasOJK || targets.includes('COBIT')) {
-          opsRec += en ? ' Regular independent third-party IT audits for certification or compliance validation.' : ' Audit IT Independen dari Pihak Ketiga (3rd Party Audit) secara reguler untuk validasi sertifikasi atau kepatuhan.';
+      if (hasISO || hasOJK || hasCOBIT) {
+        opsRecs.push({ priority: 'medium', action: en ? 'Schedule regular independent third-party IT audits (at least every 2 years) to validate certifications and regulatory compliance.' : 'Jadwalkan audit TI independen pihak ketiga secara berkala (minimal setiap 2 tahun) untuk memvalidasi sertifikasi dan kepatuhan regulasi.' });
       }
+
       results.push({
-          framework: en ? 'Operations, SOC Team & Audit' : 'Operasional, Tim (SOC) & Audit',
-          severity: 'warning',
-          message: opsMsg,
-          recommendation: opsRec
+        framework: en ? 'Operations, SOC Team & Audit' : 'Operasional, Tim SOC & Audit',
+        severity: (hasOJK || hasFinancialSect) ? 'danger' : 'warning',
+        criticalityScore: opsScore,
+        regulations: opsRegs,
+        why: en
+          ? 'Continuous monitoring is not optional — it is a regulatory mandate. Threats evolve daily, and without a SOC or SIEM, your organization is effectively "flying blind." Regulators expect evidence of active monitoring, not just policy documents.'
+          : 'Pemantauan berkelanjutan bukan opsional — ini adalah mandat regulasi. Ancaman berkembang setiap hari, dan tanpa SOC atau SIEM, organisasi Anda secara efektif "buta." Regulator mengharapkan bukti pemantauan aktif, bukan hanya dokumen kebijakan.',
+        impact: en
+          ? 'Without continuous monitoring, breaches can go undetected for months (the industry average is 197 days). Late detection dramatically increases breach costs and regulatory penalties. For OJK-regulated entities, failure to detect and report incidents within the mandated timeframe results in direct administrative sanctions.'
+          : 'Tanpa pemantauan berkelanjutan, pelanggaran dapat tidak terdeteksi selama berbulan-bulan (rata-rata industri adalah 197 hari). Deteksi terlambat secara dramatis meningkatkan biaya pelanggaran dan penalti regulasi. Bagi entitas yang diatur OJK, kegagalan mendeteksi dan melaporkan insiden dalam jangka waktu yang diamanatkan mengakibatkan sanksi administratif langsung.',
+        recommendations: opsRecs,
+        effort: 'high',
+        timeline: en ? '3–9 months' : '3–9 bulan',
+        owner: en ? 'SOC Lead / IT Operations' : 'SOC Lead / Operasional TI'
       });
 
-      // 4. Manajemen Risiko Pihak Ketiga & Lokalisasi Data
+      // ─── 4. MANAJEMEN VENDOR & KEDAULATAN DATA ────────────────────────────
       if (hasThirdParty || hasForeignCloud) {
-          let vendorMsg = en ? 'Use of third-party services or cloud servers triggers legal compliance control obligations:' : 'Penggunaan layanan pihak ketiga atau server cloud memicu kewajiban kontrol kepatuhan hukum:';
-          let vendorRec = en ? 'Strict SLA, NDA, and Right to Audit clauses with vendors.' : 'Perjanjian SLA ketat, NDA, dan klausa Right to Audit dengan vendor.';
-          let sev = 'warning';
-          
-          if (hasForeignCloud && hasFinancialSect) {
-              sev = 'danger';
-              vendorMsg = en ? 'OJK/BI LOCALIZATION BREACH: Financial regulations require primary systems and data centers to be in Indonesia.' : 'PELANGGARAN LOKALISASI OJK/BI: Regulasi Finansial mewajibkan Sistem & Data Center Utama di Indonesia.';
-              vendorRec = en ? 'Migrate core system servers to an Indonesian data center. Overseas backup/DRC requires OJK/BI approval.' : 'Migrasikan server Core System ke Data Center Indonesia. Backup/DRC di luar negeri harus dengan izin OJK/BI.';
-          } else if (hasForeignCloud && (targets.includes('PDP') || hasPersonalData)) {
-              sev = 'danger';
-              vendorMsg = en ? 'Cross-border data transfer issue under UU PDP No. 27/2022.' : 'Transfer Data Lintas Batas (Cross-Border Data Transfer) terkait UU PDP No. 27/2022.';
-              vendorRec = en ? 'Obtain explicit user consent or ensure the destination country has equal/higher data protection standards than Indonesia, supported by a DPIA.' : 'Dapatkan persetujuan eksplisit dari pengguna, ATAU pastikan negara cloud tujuan memiliki standar pelindungan data setara/lebih tinggi dari Indonesia (wajib DPIA).';
-          }
-          
-          results.push({
-              framework: en ? 'Vendor Management & Data Sovereignty' : 'Manajemen Vendor & Kedaulatan Data',
-              severity: sev,
-              message: vendorMsg,
-              recommendation: vendorRec
-          });
+        const vendorRegs = [];
+        if (hasPDP) vendorRegs.push('UU PDP No. 27/2022 Pasal 56');
+        if (hasOJK || hasFinancialSect) vendorRegs.push('SEOJK 29/2022 Pasal 22', 'PBI 02/2024');
+        if (hasISO) vendorRegs.push('ISO 27001:2022 A.5.19');
+        if (!vendorRegs.length) vendorRegs.push('ISO 27001:2022 A.5.19', 'Best Practice');
+
+        let sev = 'warning';
+        let vendorScore = 6;
+        let vendorWhy, vendorImpact;
+        const vendorRecs = [];
+
+        if (hasForeignCloud && hasFinancialSect) {
+          sev = 'danger';
+          vendorScore = 10;
+          vendorWhy = en
+            ? 'OJK Regulation (SEOJK 29/2022) and Bank Indonesia (PBI 02/2024) explicitly mandate that primary systems and data centers for financial institutions must be located within Indonesian territory. Using foreign cloud servers for core systems is a direct regulatory violation.'
+            : 'Regulasi OJK (SEOJK 29/2022) dan Bank Indonesia (PBI 02/2024) secara eksplisit mewajibkan sistem utama dan data center lembaga keuangan berada di wilayah Indonesia. Menggunakan server cloud luar negeri untuk sistem inti adalah pelanggaran regulasi langsung.';
+          vendorImpact = en
+            ? 'This is the highest-risk finding. Non-compliance can result in immediate OJK/BI sanctions, mandatory migration orders, operational suspension, and public disclosure of violations. There is no grace period for this requirement.'
+            : 'Ini adalah temuan dengan risiko tertinggi. Ketidakpatuhan dapat mengakibatkan sanksi OJK/BI segera, perintah migrasi wajib, penghentian operasional, dan pengungkapan publik atas pelanggaran. Tidak ada masa tenggang untuk persyaratan ini.';
+          vendorRecs.push({ priority: 'immediate', action: en ? 'Immediately initiate migration of all core system servers to an Indonesian-domiciled data center (IDC/Tier III+). Target completion within 6 months.' : 'Segera inisiasi migrasi semua server Core System ke data center berdomisili Indonesia (IDC/Tier III+). Target penyelesaian dalam 6 bulan.' });
+          vendorRecs.push({ priority: 'immediate', action: en ? 'Obtain written approval from OJK/BI before using any overseas backup or DRC (Disaster Recovery Center) facility.' : 'Dapatkan persetujuan tertulis dari OJK/BI sebelum menggunakan fasilitas backup atau DRC (Disaster Recovery Center) di luar negeri.' });
+        } else if (hasForeignCloud && hasPDP) {
+          sev = 'danger';
+          vendorScore = 9;
+          vendorWhy = en
+            ? 'UU PDP No. 27/2022 (Article 56) regulates cross-border personal data transfers. Storing Indonesian citizens\' personal data on foreign servers without fulfilling legal requirements constitutes a violation, regardless of the cloud provider\'s reputation.'
+            : 'UU PDP No. 27/2022 (Pasal 56) mengatur transfer data pribadi lintas batas. Menyimpan data pribadi warga negara Indonesia di server luar negeri tanpa memenuhi persyaratan hukum merupakan pelanggaran, terlepas dari reputasi penyedia cloud.';
+          vendorImpact = en
+            ? 'Violations of UU PDP cross-border transfer provisions can result in administrative fines up to 2% of annual revenue, criminal sanctions for executives (up to 6 years imprisonment for intentional violations), and mandatory data deletion orders.'
+            : 'Pelanggaran ketentuan transfer lintas batas UU PDP dapat mengakibatkan denda administratif hingga 2% dari pendapatan tahunan, sanksi pidana bagi eksekutif (hingga 6 tahun penjara untuk pelanggaran disengaja), dan perintah penghapusan data wajib.';
+          vendorRecs.push({ priority: 'immediate', action: en ? 'Conduct a DPIA (Data Protection Impact Assessment) for all cross-border data flows. Document legal basis for each transfer.' : 'Lakukan DPIA (Data Protection Impact Assessment) untuk semua aliran data lintas batas. Dokumentasikan dasar hukum untuk setiap transfer.' });
+          vendorRecs.push({ priority: 'short', action: en ? 'Obtain explicit, granular consent from data subjects for cross-border transfers OR verify that the destination country has equivalent data protection standards.' : 'Dapatkan persetujuan eksplisit dan granular dari subjek data untuk transfer lintas batas ATAU verifikasi bahwa negara tujuan memiliki standar perlindungan data yang setara.' });
+        } else {
+          vendorWhy = en
+            ? 'Third-party vendors and cloud providers have access to your systems and data, but operate outside your direct control. Without formal contractual controls, you cannot enforce security standards on them, creating a significant supply chain risk.'
+            : 'Vendor pihak ketiga dan penyedia cloud memiliki akses ke sistem dan data Anda, tetapi beroperasi di luar kendali langsung Anda. Tanpa kontrol kontraktual formal, Anda tidak dapat menegakkan standar keamanan pada mereka, menciptakan risiko rantai pasokan yang signifikan.';
+          vendorImpact = en
+            ? 'Third-party breaches are increasingly common and can expose your organization to liability even when the breach originates from the vendor. ISO 27001 and SEOJK explicitly require documented vendor risk management processes.'
+            : 'Pelanggaran pihak ketiga semakin umum dan dapat mengekspos organisasi Anda pada kewajiban bahkan ketika pelanggaran berasal dari vendor. ISO 27001 dan SEOJK secara eksplisit mensyaratkan proses manajemen risiko vendor yang terdokumentasi.';
+          vendorRecs.push({ priority: 'short', action: en ? 'Establish a Vendor Risk Management framework. Include strict SLA, NDA, and Right-to-Audit clauses in all third-party contracts.' : 'Bangun kerangka Vendor Risk Management. Sertakan SLA ketat, NDA, dan klausa Right-to-Audit dalam semua kontrak pihak ketiga.' });
+          vendorRecs.push({ priority: 'medium', action: en ? 'Conduct annual vendor security assessments (questionnaire or on-site audit) for all critical vendors.' : 'Lakukan penilaian keamanan vendor tahunan (kuesioner atau audit on-site) untuk semua vendor kritis.' });
+        }
+
+        if (hasRemote) {
+          vendorRecs.push({ priority: 'short', action: en ? 'Define and enforce a Remote Work Security Policy covering acceptable use, device requirements, and data handling for cross-border remote employees.' : 'Tetapkan dan terapkan Kebijakan Keamanan Kerja Remote yang mencakup penggunaan yang dapat diterima, persyaratan perangkat, dan penanganan data untuk karyawan remote lintas negara.' });
+        }
+
+        results.push({
+          framework: en ? 'Vendor Management & Data Sovereignty' : 'Manajemen Vendor & Kedaulatan Data',
+          severity: sev,
+          criticalityScore: vendorScore,
+          regulations: vendorRegs,
+          why: vendorWhy,
+          impact: vendorImpact,
+          recommendations: vendorRecs,
+          effort: sev === 'danger' ? 'high' : 'medium',
+          timeline: sev === 'danger' ? (en ? '1–6 months (urgent)' : '1–6 bulan (mendesak)') : (en ? '2–4 months' : '2–4 bulan'),
+          owner: en ? 'Legal / Procurement / IT Security' : 'Legal / Pengadaan / Keamanan TI'
+        });
       }
 
-      // Sort by severity (danger first, then warning, then success)
+      // ─── 5. PERLINDUNGAN DATA PRIBADI (UU PDP) ───────────────────────────
+      if (hasSpecificData && !hasForeignCloud) {
+        results.push({
+          framework: en ? 'Specific Personal Data Protection (UU PDP)' : 'Perlindungan Data Pribadi Spesifik (UU PDP)',
+          severity: 'danger',
+          criticalityScore: 9,
+          regulations: ['UU PDP No. 27/2022 Pasal 4', 'PP 71/2019'],
+          why: en
+            ? 'Specific personal data (medical records, biometrics, religion, financial data) carries the highest protection requirements under UU PDP No. 27/2022. Processing this category of data requires explicit consent, purpose limitation, and significantly stronger technical safeguards than general personal data.'
+            : 'Data pribadi spesifik (rekam medis, biometrik, agama, data keuangan) membawa persyaratan perlindungan tertinggi di bawah UU PDP No. 27/2022. Pemrosesan kategori data ini memerlukan persetujuan eksplisit, pembatasan tujuan, dan perlindungan teknis yang jauh lebih kuat daripada data pribadi umum.',
+          impact: en
+            ? 'Unauthorized processing or breach of specific personal data carries criminal penalties of up to 5 years imprisonment and/or fines up to IDR 5 billion for individuals, plus administrative sanctions for the organization. Class action lawsuits from affected data subjects are also possible.'
+            : 'Pemrosesan tidak sah atau pelanggaran data pribadi spesifik membawa sanksi pidana hingga 5 tahun penjara dan/atau denda hingga Rp 5 miliar untuk individu, ditambah sanksi administratif bagi organisasi. Gugatan class action dari subjek data yang terdampak juga dimungkinkan.',
+          recommendations: [
+            { priority: 'immediate', action: en ? 'Map all specific personal data flows (data mapping) and document the legal basis for each processing activity.' : 'Petakan semua aliran data pribadi spesifik (data mapping) dan dokumentasikan dasar hukum untuk setiap aktivitas pemrosesan.' },
+            { priority: 'immediate', action: en ? 'Implement data minimization: only collect specific personal data that is strictly necessary for the stated purpose.' : 'Terapkan minimisasi data: hanya kumpulkan data pribadi spesifik yang benar-benar diperlukan untuk tujuan yang dinyatakan.' },
+            { priority: 'short', action: en ? 'Conduct a mandatory DPIA (Data Protection Impact Assessment) before any new processing of specific personal data.' : 'Lakukan DPIA (Data Protection Impact Assessment) wajib sebelum pemrosesan baru data pribadi spesifik.' },
+            { priority: 'short', action: en ? 'Implement technical controls: pseudonymization, encryption at rest, strict access controls, and audit logging for all access to specific personal data.' : 'Implementasikan kontrol teknis: pseudonimisasi, enkripsi at rest, kontrol akses ketat, dan audit logging untuk semua akses ke data pribadi spesifik.' },
+          ],
+          effort: 'high',
+          timeline: en ? '2–4 months' : '2–4 bulan',
+          owner: en ? 'DPO / Legal / IT Security' : 'DPO / Legal / Keamanan TI'
+        });
+      }
+
+      // ─── 6. KEAMANAN APLIKASI WEB (OWASP) ────────────────────────────────
+      if (targets.includes('OWASP') && (industries.includes('E-Commerce') || industries.includes('Fintech') || industries.includes('Perbankan'))) {
+        results.push({
+          framework: en ? 'Web Application Security (OWASP)' : 'Keamanan Aplikasi Web (OWASP)',
+          severity: 'danger',
+          criticalityScore: 8,
+          regulations: ['OWASP Top 10 2021', 'OWASP ASVS 4.0'],
+          why: en
+            ? 'Web applications are the most common attack surface for financial and e-commerce organizations. OWASP Top 10 vulnerabilities (SQL Injection, XSS, Broken Authentication, etc.) are responsible for the majority of successful breaches. Regulators increasingly reference OWASP standards in their requirements.'
+            : 'Aplikasi web adalah permukaan serangan paling umum bagi organisasi keuangan dan e-commerce. Kerentanan OWASP Top 10 (SQL Injection, XSS, Broken Authentication, dll.) bertanggung jawab atas mayoritas pelanggaran yang berhasil. Regulator semakin merujuk standar OWASP dalam persyaratan mereka.',
+          impact: en
+            ? 'A single exploited OWASP vulnerability can lead to complete database compromise, customer account takeover, and financial fraud. For fintech and banking, this triggers mandatory OJK incident reporting, potential license suspension, and significant reputational damage.'
+            : 'Satu kerentanan OWASP yang dieksploitasi dapat menyebabkan kompromi database lengkap, pengambilalihan akun nasabah, dan penipuan keuangan. Untuk fintech dan perbankan, ini memicu pelaporan insiden OJK wajib, potensi penangguhan izin, dan kerusakan reputasi yang signifikan.',
+          recommendations: [
+            { priority: 'immediate', action: en ? 'Conduct an immediate OWASP Top 10 vulnerability assessment on all public-facing web applications.' : 'Lakukan penilaian kerentanan OWASP Top 10 segera pada semua aplikasi web yang menghadap publik.' },
+            { priority: 'short', action: en ? 'Integrate SAST (Static Application Security Testing) into the development pipeline and DAST (Dynamic Application Security Testing) in staging/pre-production.' : 'Integrasikan SAST (Static Application Security Testing) ke dalam pipeline pengembangan dan DAST (Dynamic Application Security Testing) di staging/pre-production.' },
+            { priority: 'short', action: en ? 'Deploy a Web Application Firewall (WAF) with OWASP Core Rule Set (CRS) in front of all public-facing applications.' : 'Deploy Web Application Firewall (WAF) dengan OWASP Core Rule Set (CRS) di depan semua aplikasi yang menghadap publik.' },
+            { priority: 'medium', action: en ? 'Establish a mandatory Secure Development Lifecycle (SDL) and conduct OWASP ASVS-based security reviews for all new features.' : 'Tetapkan Secure Development Lifecycle (SDL) wajib dan lakukan review keamanan berbasis OWASP ASVS untuk semua fitur baru.' },
+          ],
+          effort: 'medium',
+          timeline: en ? '1–3 months' : '1–3 bulan',
+          owner: en ? 'Development Team / AppSec' : 'Tim Pengembangan / AppSec'
+        });
+      }
+
+      // Sort by severity then criticalityScore
       return results.sort((a, b) => {
         const priority = { danger: 1, warning: 2, success: 3 };
-        return priority[a.severity] - priority[b.severity];
+        if (priority[a.severity] !== priority[b.severity]) return priority[a.severity] - priority[b.severity];
+        return (b.criticalityScore || 0) - (a.criticalityScore || 0);
       });
     },
     getSeverityIcon(severity) {
@@ -511,9 +742,22 @@ export default {
     },
     getSeverityText(severity) {
       const en = this.$i18n.locale === 'en';
-      if (severity === 'danger') return en ? 'Violation / High Risk' : 'Pelanggaran / Risiko Tinggi';
-      if (severity === 'warning') return en ? 'Attention / Warning' : 'Perhatian / Warning';
+      if (severity === 'danger') return en ? 'Critical / High Risk' : 'Kritis / Risiko Tinggi';
+      if (severity === 'warning') return en ? 'Moderate / Warning' : 'Sedang / Perhatian';
       return en ? 'Safe / Compliant' : 'Aman / Compliant';
+    },
+    getPriorityLabel(priority) {
+      const en = this.$i18n.locale === 'en';
+      if (priority === 'immediate') return en ? 'Immediate' : 'Segera';
+      if (priority === 'short') return en ? 'Short-term' : 'Jangka Pendek';
+      if (priority === 'medium') return en ? 'Mid-term' : 'Jangka Menengah';
+      return en ? 'Long-term' : 'Jangka Panjang';
+    },
+    getEffortLabel(effort) {
+      const en = this.$i18n.locale === 'en';
+      if (effort === 'high') return en ? 'High Effort' : 'Upaya Tinggi';
+      if (effort === 'medium') return en ? 'Medium Effort' : 'Upaya Sedang';
+      return en ? 'Low Effort' : 'Upaya Rendah';
     }
   }
 };
@@ -597,39 +841,89 @@ export default {
 .summary-col small { display: block; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem; }
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 
-/* Result Cards */
-.sim-results { display: grid; gap: 1rem; }
-.sim-result-card { display: flex; gap: 1rem; padding: 1.25rem; border-radius: 16px; border: 1px solid var(--line); background: #fff; animation: slideUp 0.4s ease forwards; opacity: 0; transform: translateY(10px); }
-[data-bs-theme="dark"] .sim-result-card { background: rgba(30,41,59,0.7); }
+/* Risk Summary Bar */
+.sim-risk-summary { display: flex; gap: 0.75rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.sim-risk-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1rem; border-radius: 10px; font-size: 0.85rem; font-weight: 700; border: 1px solid; }
+.sim-risk-item.danger { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.2); color: #b91c1c; }
+.sim-risk-item.warning { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.2); color: #b45309; }
+.sim-risk-item.success { background: rgba(16,185,129,0.08); border-color: rgba(16,185,129,0.2); color: #047857; }
+[data-bs-theme="dark"] .sim-risk-item.danger { color: #fca5a5; }
+[data-bs-theme="dark"] .sim-risk-item.warning { color: #fcd34d; }
+[data-bs-theme="dark"] .sim-risk-item.success { color: #6ee7b7; }
+.sim-findings-count { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
 
+/* Result Cards */
+.sim-results { display: grid; gap: 1.25rem; }
+.sim-result-card { border-radius: 16px; border: 1px solid var(--line); background: #fff; animation: slideUp 0.4s ease forwards; opacity: 0; transform: translateY(10px); overflow: hidden; }
+[data-bs-theme="dark"] .sim-result-card { background: rgba(30,41,59,0.7); }
 .sim-result-card:nth-child(1) { animation-delay: 0.1s; }
 .sim-result-card:nth-child(2) { animation-delay: 0.2s; }
 .sim-result-card:nth-child(3) { animation-delay: 0.3s; }
 .sim-result-card:nth-child(4) { animation-delay: 0.4s; }
+.sim-result-card:nth-child(5) { animation-delay: 0.5s; }
+.sim-result-card:nth-child(6) { animation-delay: 0.6s; }
+.sim-result-card.danger { border-left: 5px solid #ef4444; }
+.sim-result-card.warning { border-left: 5px solid #f59e0b; }
+.sim-result-card.success { border-left: 5px solid #10b981; }
 
-.sim-result-card.danger { border-left: 4px solid #ef4444; background: linear-gradient(90deg, rgba(239,68,68,0.05) 0%, rgba(255,255,255,0) 100%); }
-[data-bs-theme="dark"] .sim-result-card.danger { background: linear-gradient(90deg, rgba(239,68,68,0.1) 0%, rgba(30,41,59,0) 100%); }
-.sim-result-card.warning { border-left: 4px solid #f59e0b; background: linear-gradient(90deg, rgba(245,158,11,0.05) 0%, rgba(255,255,255,0) 100%); }
-[data-bs-theme="dark"] .sim-result-card.warning { background: linear-gradient(90deg, rgba(245,158,11,0.1) 0%, rgba(30,41,59,0) 100%); }
-.sim-result-card.success { border-left: 4px solid #10b981; background: linear-gradient(90deg, rgba(16,185,129,0.05) 0%, rgba(255,255,255,0) 100%); }
-[data-bs-theme="dark"] .sim-result-card.success { background: linear-gradient(90deg, rgba(16,185,129,0.1) 0%, rgba(30,41,59,0) 100%); }
-
-.sim-result-icon { font-size: 1.5rem; padding-top: 0.2rem; }
-.sim-result-content { flex: 1; }
-
-.sim-result-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
-.sim-framework { font-size: 0.85rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
-
-.sim-status-badge { font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 6px; text-transform: uppercase; }
+/* Card Header */
+.sim-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.25rem 0.75rem; flex-wrap: wrap; }
+.sim-card-header-left { display: flex; align-items: flex-start; gap: 0.75rem; flex: 1; }
+.sim-card-header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; flex-shrink: 0; }
+.sim-severity-icon { width: 2.5rem; height: 2.5rem; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.sim-severity-icon.danger { background: rgba(239,68,68,0.12); color: #ef4444; }
+.sim-severity-icon.warning { background: rgba(245,158,11,0.12); color: #f59e0b; }
+.sim-severity-icon.success { background: rgba(16,185,129,0.12); color: #10b981; }
+.sim-framework { display: block; font-size: 0.95rem; font-weight: 800; color: var(--ink); letter-spacing: 0.01em; }
+.sim-reg-refs { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
+.sim-reg-tag { font-size: 0.68rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 5px; background: rgba(15,118,110,0.08); color: #0f766e; border: 1px solid rgba(15,118,110,0.15); }
+[data-bs-theme="dark"] .sim-reg-tag { background: rgba(72,202,228,0.1); color: #48cae4; border-color: rgba(72,202,228,0.2); }
+.sim-status-badge { font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 6px; text-transform: uppercase; white-space: nowrap; }
 .sim-status-badge.danger { background: rgba(239,68,68,0.1); color: #b91c1c; }
-[data-bs-theme="dark"] .sim-status-badge.danger { color: #fca5a5; }
+[data-bs-theme="dark"] .sim-status-badge.danger { color: #fca5a5; background: rgba(239,68,68,0.15); }
 .sim-status-badge.warning { background: rgba(245,158,11,0.1); color: #b45309; }
-[data-bs-theme="dark"] .sim-status-badge.warning { color: #fcd34d; }
+[data-bs-theme="dark"] .sim-status-badge.warning { color: #fcd34d; background: rgba(245,158,11,0.15); }
 .sim-status-badge.success { background: rgba(16,185,129,0.1); color: #047857; }
-[data-bs-theme="dark"] .sim-status-badge.success { color: #6ee7b7; }
+[data-bs-theme="dark"] .sim-status-badge.success { color: #6ee7b7; background: rgba(16,185,129,0.15); }
+.sim-criticality-score { font-size: 0.72rem; font-weight: 800; white-space: nowrap; }
+.sim-criticality-score.danger { color: #ef4444; }
+.sim-criticality-score.warning { color: #f59e0b; }
+.sim-criticality-score.success { color: #10b981; }
 
-.sim-message { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.45; }
-.sim-recommendation { font-size: 0.85rem; color: var(--muted); line-height: 1.5; padding-top: 0.6rem; border-top: 1px dashed var(--line); }
+/* Why / Impact / Rec blocks */
+.sim-why-block, .sim-impact-block, .sim-rec-block { padding: 0.85rem 1.25rem; border-top: 1px solid var(--line); }
+.sim-block-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.45rem; display: flex; align-items: center; gap: 0.35rem; }
+.sim-block-label.impact { color: #b45309; }
+[data-bs-theme="dark"] .sim-block-label.impact { color: #fcd34d; }
+.sim-block-label.rec { color: #0f766e; }
+[data-bs-theme="dark"] .sim-block-label.rec { color: #48cae4; }
+.sim-why-text, .sim-impact-text { font-size: 0.875rem; color: var(--ink); line-height: 1.65; margin: 0; }
+.sim-impact-text { color: #92400e; }
+[data-bs-theme="dark"] .sim-impact-text { color: #fde68a; }
+
+/* Recommendations list */
+.sim-rec-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.sim-rec-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.875rem; color: var(--ink); line-height: 1.55; }
+.sim-rec-priority { flex-shrink: 0; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 5px; text-transform: uppercase; margin-top: 0.15rem; }
+.sim-rec-priority.immediate { background: rgba(239,68,68,0.1); color: #b91c1c; }
+[data-bs-theme="dark"] .sim-rec-priority.immediate { color: #fca5a5; background: rgba(239,68,68,0.15); }
+.sim-rec-priority.short { background: rgba(245,158,11,0.1); color: #b45309; }
+[data-bs-theme="dark"] .sim-rec-priority.short { color: #fcd34d; background: rgba(245,158,11,0.15); }
+.sim-rec-priority.medium { background: rgba(59,130,246,0.1); color: #1d4ed8; }
+[data-bs-theme="dark"] .sim-rec-priority.medium { color: #93c5fd; background: rgba(59,130,246,0.15); }
+.sim-rec-priority.long { background: rgba(100,116,139,0.1); color: #475569; }
+[data-bs-theme="dark"] .sim-rec-priority.long { color: #94a3b8; }
+.sim-rec-text { flex: 1; }
+
+/* Effort row */
+.sim-effort-row { display: flex; gap: 1.5rem; padding: 0.75rem 1.25rem; background: rgba(15,23,42,0.03); border-top: 1px solid var(--line); flex-wrap: wrap; }
+[data-bs-theme="dark"] .sim-effort-row { background: rgba(255,255,255,0.03); }
+.sim-effort-item { display: flex; flex-direction: column; gap: 0.15rem; }
+.sim-effort-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.sim-effort-val { font-size: 0.8rem; font-weight: 700; color: var(--ink); }
+.sim-effort-val.high { color: #ef4444; }
+.sim-effort-val.medium { color: #f59e0b; }
+.sim-effort-val.low { color: #10b981; }
 
 @keyframes slideUp {
   to { opacity: 1; transform: translateY(0); }
