@@ -5,6 +5,7 @@ import router from './router/index.js';
 import VueGtag from 'vue-gtag-next';
 import i18n from './i18n';
 import { installRegulationDataFetchTranslator } from './utils/regulationDataTranslator';
+import { seoPlugin } from './plugins/seoPlugin.js';
 
 installRegulationDataFetchTranslator();
 
@@ -22,6 +23,7 @@ const app = createApp(App);
 app.use(router);
 app.use(pinia);
 app.use(i18n);
+app.use(seoPlugin, { router }); // Auto-inject per-page SEO schema
 
 // Install Google Analytics 4
 import { trackRouter } from 'vue-gtag-next';

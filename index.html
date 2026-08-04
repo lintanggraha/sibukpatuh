@@ -27,6 +27,14 @@
   <meta name="twitter:title" content="SibukPatuh - Referensi Edukatif Kepatuhan Siber dan Tata Kelola TI">
   <meta name="twitter:description" content="Ruang belajar framework, regulasi, dan praktik kepatuhan keamanan siber untuk praktisi Indonesia.">
   <meta name="twitter:site" content="@sibukpatuh">
+  <meta name="twitter:image" content="https://sibukpatuh.net/og-image.png">
+  <meta property="og:image" content="https://sibukpatuh.net/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SibukPatuh - Referensi Edukatif Kepatuhan Siber Indonesia">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/src/main.js" as="script">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,6 +103,88 @@
           "OWASP ASVS"
         ]
       }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Structured Data untuk rich snippets di Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Apa itu ISO 27001?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ISO 27001:2022 adalah standar internasional untuk Sistem Manajemen Keamanan Informasi (SMKI) yang memuat 93 kontrol keamanan dalam 4 tema: Organizational, People, Physical, dan Technological Controls. Di Indonesia diadopsi sebagai SNI ISO/IEC 27001:2022."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa itu NIST CSF 2.0?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NIST Cybersecurity Framework 2.0 adalah kerangka kerja keamanan siber dari NIST Amerika Serikat dengan 6 fungsi: Govern, Identify, Protect, Detect, Respond, dan Recover. Versi 2.0 dirilis Februari 2024 dengan penambahan fungsi Govern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa itu SEOJK 29/2022?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEOJK No. 29/SEOJK.03/2022 adalah Surat Edaran OJK tentang Ketahanan dan Keamanan Siber bagi Bank Umum yang mewajibkan implementasi kerangka kerja keamanan siber, self-assessment, dan pelaporan insiden siber kepada OJK."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa itu UU PDP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "UU PDP (Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi) adalah regulasi perlindungan data pribadi Indonesia yang mengatur hak subjek data, kewajiban pengendali data, dan sanksi pelanggaran. Berlaku penuh sejak Oktober 2024."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa itu COBIT 2019?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "COBIT 2019 adalah framework tata kelola dan manajemen TI dari ISACA dengan 40 tujuan yang dikelompokkan dalam 5 domain: EDM, APO, BAI, DSS, dan MEA. Digunakan sebagai referensi audit TI perbankan di Indonesia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apa itu Gap Analysis kepatuhan siber?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gap Analysis kepatuhan siber adalah proses evaluasi untuk mengidentifikasi kesenjangan antara kondisi keamanan siber organisasi saat ini dengan persyaratan standar atau regulasi yang berlaku seperti ISO 27001, NIST CSF, atau SEOJK."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList untuk navigasi Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Framework dan Regulasi Kepatuhan Siber",
+    "description": "Daftar lengkap framework internasional dan regulasi nasional kepatuhan siber di SibukPatuh",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ISO 27001:2022", "url": "https://sibukpatuh.net/frameworks/iso27001"},
+      {"@type": "ListItem", "position": 2, "name": "NIST CSF 2.0", "url": "https://sibukpatuh.net/frameworks/nist-csf-2"},
+      {"@type": "ListItem", "position": 3, "name": "COBIT 2019", "url": "https://sibukpatuh.net/frameworks/cobit-2019"},
+      {"@type": "ListItem", "position": 4, "name": "SEOJK 29/2022", "url": "https://sibukpatuh.net/frameworks/seojk"},
+      {"@type": "ListItem", "position": 5, "name": "PBI 02/2024", "url": "https://sibukpatuh.net/frameworks/pbi-02-2024"},
+      {"@type": "ListItem", "position": 6, "name": "PADK 1/2026", "url": "https://sibukpatuh.net/frameworks/padk-1-2026"},
+      {"@type": "ListItem", "position": 7, "name": "PADG 32/2025", "url": "https://sibukpatuh.net/frameworks/padg-32-2025"},
+      {"@type": "ListItem", "position": 8, "name": "UU PDP 27/2022", "url": "https://sibukpatuh.net/frameworks/uu-pdp-27-2022"},
+      {"@type": "ListItem", "position": 9, "name": "OWASP Top 10", "url": "https://sibukpatuh.net/frameworks/owasp-top-10"},
+      {"@type": "ListItem", "position": 10, "name": "OWASP ASVS", "url": "https://sibukpatuh.net/frameworks/owasp-asvs"},
+      {"@type": "ListItem", "position": 11, "name": "ISO 37001:2016", "url": "https://sibukpatuh.net/frameworks/iso37001"}
     ]
   }
   </script>
