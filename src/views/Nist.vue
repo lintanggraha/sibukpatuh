@@ -1,9 +1,17 @@
 <template>
   <div class="nst-page">
-    <div v-if="loading" class="loading-state">
-      <div class="loading-spinner">
-        <i class="fas fa-spinner fa-spin"></i>
-        <p>Loading NIST CSF data...</p>
+    <!-- Skeleton loader dengan dimensi sama persis seperti konten asli untuk mencegah CLS -->
+    <div v-if="loading" class="skeleton-shell" aria-hidden="true" aria-label="Loading...">
+      <div class="skeleton-hero">
+        <div class="skeleton-block" style="height:2rem;width:55%;border-radius:8px;"></div>
+        <div class="skeleton-block" style="height:1rem;width:90%;border-radius:6px;margin-top:0.75rem;"></div>
+        <div class="skeleton-block" style="height:1rem;width:75%;border-radius:6px;margin-top:0.4rem;"></div>
+        <div class="skeleton-metrics">
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+        </div>
       </div>
     </div>
     <div v-else-if="error" class="error-state">
@@ -554,4 +562,14 @@ export default {
 .modal-slide-enter-active{transition:transform .25s ease-out,opacity .25s ease-out}
 .modal-slide-leave-active{transition:transform .2s ease-in,opacity .2s ease-in}
 .modal-slide-enter-from,.modal-slide-leave-to{transform:translateY(16px) scale(.97);opacity:0}
+
+/* Skeleton loader — mencegah CLS dengan mempertahankan dimensi layout */
+.skeleton-shell { padding: 1.5rem; }
+.skeleton-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; min-height: 320px; }
+.skeleton-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem; }
+.skeleton-metric { height: 5rem; border-radius: 12px; }
+.skeleton-block { background: linear-gradient(90deg, rgba(20,38,59,0.08) 25%, rgba(20,38,59,0.04) 50%, rgba(20,38,59,0.08) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; border-radius: 8px; }
+@keyframes skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+[data-bs-theme="dark"] .skeleton-block { background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.06) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; }
+@media (max-width: 767.98px) { .skeleton-hero { grid-template-columns: 1fr; } .skeleton-metrics { grid-template-columns: repeat(2, 1fr); } }
 </style>

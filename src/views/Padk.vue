@@ -1,9 +1,23 @@
 <template>
   <div class="sej-page">
-    <div v-if="loading" class="loading-state">
-      <div class="loading-spinner">
-        <i class="fas fa-spinner fa-spin"></i>
-        <p>Loading PADK data...</p>
+    <!-- Skeleton loader dengan dimensi sama persis seperti konten asli untuk mencegah CLS -->
+    <div v-if="loading" class="sej-shell" aria-hidden="true" aria-label="Loading...">
+      <div class="sej-hero sej-skeleton-hero">
+        <div>
+          <div class="sej-skeleton-block" style="height:1.5rem;width:55%;border-radius:8px;"></div>
+          <div class="sej-skeleton-block" style="height:1rem;width:90%;border-radius:6px;margin-top:0.75rem;"></div>
+          <div class="sej-skeleton-block" style="height:1rem;width:75%;border-radius:6px;margin-top:0.4rem;"></div>
+          <div class="sej-metrics" style="margin-top:1.1rem;">
+            <div class="sej-metric sej-skeleton-block" style="height:5rem;"></div>
+            <div class="sej-metric sej-skeleton-block" style="height:5rem;"></div>
+            <div class="sej-metric sej-skeleton-block" style="height:5rem;"></div>
+            <div class="sej-metric sej-skeleton-block" style="height:5rem;"></div>
+          </div>
+        </div>
+        <div class="sej-side-stack">
+          <div class="sej-side sej-skeleton-block" style="height:8rem;"></div>
+          <div class="sej-side sej-skeleton-block" style="height:8rem;"></div>
+        </div>
       </div>
     </div>
     <div v-else-if="error" class="error-state">
@@ -433,4 +447,9 @@ export default {
 .modal-fade-enter-active,.modal-fade-leave-active{transition:opacity .2s ease}.modal-fade-enter-from,.modal-fade-leave-to{opacity:0}
 [data-bs-theme="dark"] .sej-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);background:linear-gradient(180deg,#0f172a,#1e293b)}[data-bs-theme="dark"] .sej-metric,[data-bs-theme="dark"] .sej-side,[data-bs-theme="dark"] .sej-panel,[data-bs-theme="dark"] .sej-mini,[data-bs-theme="dark"] .sej-tab,[data-bs-theme="dark"] .sej-item,[data-bs-theme="dark"] .sej-pillar,[data-bs-theme="dark"] .sej-card,[data-bs-theme="dark"] .sej-callout{background:rgba(30,41,59,.65);border-color:rgba(255,255,255,.1)}[data-bs-theme="dark"] .sej-note,[data-bs-theme="dark"] .sej-item.active,[data-bs-theme="dark"] .sej-pillar.active{background:rgba(30,41,59,.88);border-color:var(--accent,#48cae4)}[data-bs-theme="dark"] .sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}[data-bs-theme="dark"] .sej-modal-artifact-list li{background:rgba(255,255,255,.05)}
 @media (max-width:991.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{min-height:auto}}@media (max-width:1199.98px){.sej-hero,.sej-nav,.sej-grid.two,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot{grid-template-columns:1fr}}@media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-form{flex-direction:column;align-items:stretch}.sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-list,.sej-inspector-body{max-height:none;overflow:visible}}
+/* Skeleton loader — mencegah CLS dengan mempertahankan dimensi layout */
+.sej-skeleton-block { background: linear-gradient(90deg, rgba(20,38,59,0.08) 25%, rgba(20,38,59,0.04) 50%, rgba(20,38,59,0.08) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; border-radius: 8px; }
+@keyframes skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.sej-skeleton-hero { min-height: 368px; pointer-events: none; }
+[data-bs-theme="dark"] .sej-skeleton-block { background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.06) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; }
 </style>

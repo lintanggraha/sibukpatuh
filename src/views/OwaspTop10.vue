@@ -1,9 +1,17 @@
 <template>
   <div class="sej-page">
-    <div v-if="loading" class="loading-state">
-      <div class="loading-spinner">
-        <i class="fas fa-spinner fa-spin"></i>
-        <p>Loading OWASP Top 10 data...</p>
+    <!-- Skeleton loader dengan dimensi sama persis seperti konten asli untuk mencegah CLS -->
+    <div v-if="loading" class="skeleton-shell" aria-hidden="true" aria-label="Loading...">
+      <div class="skeleton-hero">
+        <div class="skeleton-block" style="height:2rem;width:55%;border-radius:8px;"></div>
+        <div class="skeleton-block" style="height:1rem;width:90%;border-radius:6px;margin-top:0.75rem;"></div>
+        <div class="skeleton-block" style="height:1rem;width:75%;border-radius:6px;margin-top:0.4rem;"></div>
+        <div class="skeleton-metrics">
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+        </div>
       </div>
     </div>
     <div v-else-if="error" class="error-state">
@@ -555,4 +563,14 @@ export default {
 [data-bs-theme="dark"] .sej-modal-artifact-list li,[data-bs-theme="dark"] .sej-modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
 [data-bs-theme="dark"] .sej-modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
 [data-bs-theme="dark"] .sej-modal-req-btn{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1);color:var(--ink)}
+
+/* Skeleton loader — mencegah CLS dengan mempertahankan dimensi layout */
+.skeleton-shell { padding: 1.5rem; }
+.skeleton-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; min-height: 320px; }
+.skeleton-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem; }
+.skeleton-metric { height: 5rem; border-radius: 12px; }
+.skeleton-block { background: linear-gradient(90deg, rgba(20,38,59,0.08) 25%, rgba(20,38,59,0.04) 50%, rgba(20,38,59,0.08) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; border-radius: 8px; }
+@keyframes skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+[data-bs-theme="dark"] .skeleton-block { background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.06) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; }
+@media (max-width: 767.98px) { .skeleton-hero { grid-template-columns: 1fr; } .skeleton-metrics { grid-template-columns: repeat(2, 1fr); } }
 </style>
