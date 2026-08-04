@@ -34,7 +34,8 @@
   "devDependencies": {
     "@vercel/node": "^5.9.5",
     "@vitejs/plugin-vue": "^6.0.1",
-    "vite": "^7.1.8"
+    "vite": "^7.1.8",
+    "vite-prerender-plugin": "^0.5.13"
   },
   "overrides": {
     "js-yaml": ">=5.2.3",
