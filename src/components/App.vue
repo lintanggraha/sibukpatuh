@@ -612,6 +612,9 @@ body {
   overflow: visible;
   margin-bottom: 0.8rem;
   padding: 0.85rem 1rem;
+  /* min-height eksplisit mencegah CLS saat font/icon belum load */
+  min-height: 64px;
+  box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
   background: rgba(255, 251, 246, 0.85);

@@ -1,9 +1,17 @@
 <template>
   <div class="sej-page">
-    <div v-if="loading" class="loading-state">
-      <div class="loading-spinner">
-        <i class="fas fa-spinner fa-spin"></i>
-        <p>Loading SEOJK data...</p>
+    <!-- Skeleton loader dengan dimensi sama persis seperti konten asli untuk mencegah CLS -->
+    <div v-if="loading" class="skeleton-shell" aria-hidden="true" aria-label="Loading...">
+      <div class="skeleton-hero">
+        <div class="skeleton-block" style="height:2rem;width:55%;border-radius:8px;"></div>
+        <div class="skeleton-block" style="height:1rem;width:90%;border-radius:6px;margin-top:0.75rem;"></div>
+        <div class="skeleton-block" style="height:1rem;width:75%;border-radius:6px;margin-top:0.4rem;"></div>
+        <div class="skeleton-metrics">
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+          <div class="skeleton-block skeleton-metric"></div>
+        </div>
       </div>
     </div>
     <div v-else-if="error" class="error-state">
@@ -643,4 +651,14 @@ export default {
 @media (max-width:991.98px){.sej-workspace,.sej-refspace{grid-template-columns:1fr}.sej-inspector{position:static;min-height:auto}}
 @media (max-width:1199.98px){.sej-hero,.sej-metric,.sej-side{min-height:auto}.sej-hero,.sej-nav,.sej-grid.two,.sej-refspace,.sej-metrics,.sej-mini-row,.sej-cards{grid-template-columns:1fr}.sej-bar,.sej-hotspot,.sej-family{grid-template-columns:1fr}}
 @media (max-width:767.98px){.sej-hero,.sej-panel{padding:1.2rem;border-radius:22px}.sej-pillar-grid{grid-template-columns:1fr}.sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-dialog{max-width:100%}}
+
+/* Skeleton loader — mencegah CLS dengan mempertahankan dimensi layout */
+.skeleton-shell { padding: 1.5rem; }
+.skeleton-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; min-height: 320px; }
+.skeleton-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem; }
+.skeleton-metric { height: 5rem; border-radius: 12px; }
+.skeleton-block { background: linear-gradient(90deg, rgba(20,38,59,0.08) 25%, rgba(20,38,59,0.04) 50%, rgba(20,38,59,0.08) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; border-radius: 8px; }
+@keyframes skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+[data-bs-theme="dark"] .skeleton-block { background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.06) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; }
+@media (max-width: 767.98px) { .skeleton-hero { grid-template-columns: 1fr; } .skeleton-metrics { grid-template-columns: repeat(2, 1fr); } }
 </style>
