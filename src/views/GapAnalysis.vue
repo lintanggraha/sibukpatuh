@@ -5,9 +5,17 @@
       <div class="card-body">
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h5 class="card-title mb-0">{{ $t('auto_25') }}</h5>
-          <button class="btn btn-sm btn-outline-success" @click="exportCSV">
-            <i class="fa-solid fa-file-csv me-1"></i> {{ $t('auto_26') }}
-          </button>
+          <div class="d-flex gap-2 align-items-center flex-wrap">
+            <button class="btn btn-sm btn-outline-success" @click="exportCSV">
+              <i class="fa-solid fa-file-csv me-1"></i> {{ $t('auto_26') }}
+            </button>
+            <ReportExporter
+              type="gap-analysis"
+              :payload="exportPayload"
+              :is-en="isEn"
+              trigger-class="btn-outline-primary btn-sm"
+            />
+          </div>
         </div>
         
         <div class="progress mb-4 rounded-pill shadow-inner" style="height: 35px; font-size: 1rem; font-weight: bold;">
@@ -141,6 +149,7 @@
 <script setup>
 import { computed, ref } from 'vue';
 import { gapData } from '../data/gapData';
+import ReportExporter from '../components/ReportExporter.vue';
 
 const controlTextEn = {
   'req-01': 'Primary information security policy.',
@@ -315,6 +324,13 @@ const stats = computed(() => {
     gapPct: Math.round((gap / total) * 100)
   };
 });
+
+const exportPayload = computed(() => ({
+  sourceName: getFrameworkName(props.sourceFwId),
+  targetName: getFrameworkName(props.targetFwId),
+  stats: stats.value,
+  results: analysisResults.value,
+}));
 
 const exportCSV = () => {
   const headers = ['Requirement', 'Baseline Source', 'Status', 'Target Reference', 'Target Detail', 'Gap Reason'];
