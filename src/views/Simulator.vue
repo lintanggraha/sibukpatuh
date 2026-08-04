@@ -88,7 +88,15 @@
           <section class="iso-panel" style="grid-column: 1 / -1;">
             <div class="iso-panel-head">
               <h3>{{ ui.parameterSummary }}</h3>
-              <button class="btn btn-sm btn-outline-primary" @click="resetSimulation"><i class="fas fa-redo me-1"></i> {{ ui.startOver }}</button>
+              <div class="d-flex gap-2 align-items-center flex-wrap">
+                <ReportExporter
+                  type="simulator"
+                  :payload="exportPayload"
+                  :is-en="$i18n.locale === 'en'"
+                  trigger-class="btn-outline-primary btn-sm"
+                />
+                <button class="btn btn-sm btn-outline-secondary" @click="resetSimulation"><i class="fas fa-redo me-1"></i> {{ ui.startOver }}</button>
+              </div>
             </div>
             <div class="sim-scenario-summary-grid">
                <div class="summary-col">
@@ -154,7 +162,10 @@
   </div>
 </template>
 <script>
+import ReportExporter from '../components/ReportExporter.vue';
+
 export default {
+  components: { ReportExporter },
   name: 'Simulator',
   data() {
     return {
@@ -338,6 +349,12 @@ export default {
     },
     currentStepData() {
       return this.steps[this.currentStep - 1] || {};
+    },
+    exportPayload() {
+      return {
+        scenario: this.scenario,
+        results: this.simulationResult || [],
+      };
     }
   },
   methods: {
