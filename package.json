@@ -29,8 +29,16 @@
     "vue3-apexcharts": "^1.11.1"
   },
   "devDependencies": {
-    "@vercel/node": "^5.7.13",
+    "@vercel/node": "^5.9.5",
     "@vitejs/plugin-vue": "^6.0.1",
     "vite": "^7.1.8"
+  },
+  "overrides": {
+    "js-yaml": ">=5.2.3",
+    "smol-toml": ">=1.7.1",
+    "undici": ">=6.28.0",
+    "minimatch": ">=10.2.3",
+    "path-to-regexp": ">=8.0.0",
+    "ajv": ">=8.17.2"
   }
 }
