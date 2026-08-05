@@ -7,6 +7,7 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import ExcelJS from 'exceljs';
+import { generateRoadmap } from './roadmapService';
 
 // ─── Konstanta Branding ───────────────────────────────────────────────────────
 const BRAND = {
@@ -416,7 +417,7 @@ export async function exportGapAnalysisExcel({ sourceName, targetName, stats, re
 // ─────────────────────────────────────────────────────────────────────────────
 //  EXPORT: Compliance Simulator → PDF
 // ─────────────────────────────────────────────────────────────────────────────
-export function exportSimulatorPDF({ scenario, results, isEn = false }) {
+export function exportSimulatorPDF({ scenario, results, isEn = false, includeRoadmap = false }) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
@@ -532,6 +533,11 @@ export function exportSimulatorPDF({ scenario, results, isEn = false }) {
     margin: { left: 14, right: 14 },
   });
 
+  // ── Compliance Roadmap ─────────────────────────────────────────────────────
+  if (includeRoadmap) {
+    addRoadmapSection(doc, results, pageWidth, isEn);
+  }
+
   const totalPages = doc.internal.getNumberOfPages();
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
@@ -540,6 +546,142 @@ export function exportSimulatorPDF({ scenario, results, isEn = false }) {
 
   const filename = `ComplianceSimulator_${new Date().toISOString().slice(0, 10)}.pdf`;
   doc.save(filename);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  PDF Section: Compliance Roadmap (12 bulan)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Memetakan warna fase (hex) ke tuple RGB yang dipahami jsPDF.
+ */
+const PHASE_PDF_COLORS = {
+  '#dc2626': [220, 38, 38],
+  '#ea580c': [234, 88, 12],
+  '#ca8a04': [202, 138, 4],
+  '#16a34a': [22, 163, 74],
+};
+
+function priorityPdfLabel(priority, isEn) {
+  const map = {
+    immediate: isEn ? 'IMMEDIATE' : 'SEGERA',
+    short: isEn ? 'SHORT TERM' : 'JANGKA PENDEK',
+    medium: isEn ? 'MID TERM' : 'JANGKA MENENGAH',
+  };
+  return map[priority] || priority;
+}
+
+/**
+ * Menyisipkan halaman roadmap eksekusi ke dalam dokumen PDF simulator.
+ * Roadmap disusun per fase dengan kolom jendela waktu, area, penanggung jawab,
+ * dan prioritas agar dapat langsung dipakai sebagai lampiran rapat manajemen.
+ */
+function addRoadmapSection(doc, results, pageWidth, isEn) {
+  const { tasks, phases, stats } = generateRoadmap(results, { isEn });
+  if (!tasks.length) return;
+
+  doc.addPage();
+  addPdfHeader(
+    doc,
+    isEn ? 'Compliance Execution Roadmap' : 'Roadmap Eksekusi Kepatuhan',
+    isEn ? '12-Month Execution Plan' : 'Rencana Eksekusi 12 Bulan',
+    pageWidth,
+  );
+
+  let y = 36;
+
+  // ── Ringkasan roadmap ──────────────────────────────────────────────────────
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(10);
+  doc.setTextColor(...BRAND.colors.dark);
+  doc.text(isEn ? 'Roadmap Summary' : 'Ringkasan Roadmap', 14, y);
+  y += 5;
+
+  autoTable(doc, {
+    startY: y,
+    body: [[
+      { content: `${stats.totalTasks} ${isEn ? 'Tasks' : 'Task'}`, styles: { halign: 'center', fontStyle: 'bold', fillColor: BRAND.colors.light } },
+      { content: `${stats.immediateCount} ${isEn ? 'Immediate' : 'Segera'}`, styles: { halign: 'center', fontStyle: 'bold', textColor: BRAND.colors.danger, fillColor: [254, 242, 242] } },
+      { content: `${stats.criticalTaskCount} ${isEn ? 'High Criticality' : 'Kritikalitas Tinggi'}`, styles: { halign: 'center', fontStyle: 'bold', textColor: BRAND.colors.warning, fillColor: [255, 251, 235] } },
+      { content: `${stats.uniqueOwners.length} ${isEn ? 'Teams' : 'Tim'}`, styles: { halign: 'center', fontStyle: 'bold', fillColor: BRAND.colors.light } },
+    ]],
+    theme: 'grid',
+    styles: { fontSize: 9, cellPadding: 3.5 },
+    margin: { left: 14, right: 14 },
+  });
+  y = doc.lastAutoTable.finalY + 7;
+
+  // ── Tabel task per fase ────────────────────────────────────────────────────
+  phases.forEach((phase) => {
+    const phaseTasks = tasks
+      .filter((t) => t.phaseId === phase.id)
+      .sort((a, b) => a.startMonth - b.startMonth || b.criticalityScore - a.criticalityScore);
+    if (!phaseTasks.length) return;
+
+    const phaseLabel = isEn ? phase.labelEn : phase.labelId;
+    const monthRange = `${isEn ? 'Month' : 'Bulan'} ${phase.startMonth}\u2013${phase.endMonth}`;
+
+    autoTable(doc, {
+      startY: y,
+      head: [[{ content: `${phaseLabel}   |   ${monthRange}`, colSpan: 5 }]],
+      body: [],
+      theme: 'plain',
+      headStyles: {
+        fillColor: PHASE_PDF_COLORS[phase.color] || BRAND.colors.primary,
+        textColor: BRAND.colors.white,
+        fontStyle: 'bold',
+        fontSize: 8.5,
+        cellPadding: 2.5,
+      },
+      margin: { left: 14, right: 14 },
+    });
+    y = doc.lastAutoTable.finalY;
+
+    autoTable(doc, {
+      startY: y,
+      head: [[
+        isEn ? 'Window' : 'Jendela',
+        isEn ? 'Task' : 'Task',
+        isEn ? 'Area' : 'Area',
+        isEn ? 'Owner' : 'Penanggung Jawab',
+        isEn ? 'Priority' : 'Prioritas',
+      ]],
+      body: phaseTasks.map((t) => [
+        `M${t.startMonth}\u2013M${t.endMonth}`,
+        t.fullAction,
+        t.area,
+        t.owner,
+        priorityPdfLabel(t.priority, isEn),
+      ]),
+      theme: 'striped',
+      headStyles: {
+        fillColor: BRAND.colors.light,
+        textColor: BRAND.colors.dark,
+        fontStyle: 'bold',
+        fontSize: 7.5,
+      },
+      bodyStyles: { fontSize: 7, cellPadding: 2.2, valign: 'top' },
+      columnStyles: {
+        0: { cellWidth: 16, halign: 'center', fontStyle: 'bold' },
+        1: { cellWidth: 62 },
+        2: { cellWidth: 36 },
+        3: { cellWidth: 32 },
+        4: { cellWidth: 'auto', halign: 'center', fontSize: 6.5 },
+      },
+      margin: { left: 14, right: 14 },
+    });
+    y = doc.lastAutoTable.finalY + 6;
+  });
+
+  // ── Catatan metodologi ─────────────────────────────────────────────────────
+  doc.setFont('helvetica', 'italic');
+  doc.setFontSize(7);
+  doc.setTextColor(...BRAND.colors.muted);
+  const note = isEn
+    ? 'Scheduling is derived from regulatory priority, criticality score, and implementation effort. Actual timelines depend on organizational capacity, budget, and vendor availability. Validate with your compliance and internal audit functions before adoption.'
+    : 'Penjadwalan diturunkan dari prioritas regulasi, skor kritikalitas, dan upaya implementasi. Timeline aktual bergantung pada kapasitas organisasi, anggaran, dan ketersediaan vendor. Validasikan dengan fungsi kepatuhan dan audit internal sebelum diadopsi.';
+  doc.text(doc.splitTextToSize(note, pageWidth - 28), 14, y + 2);
+  doc.setTextColor(...BRAND.colors.dark);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -220,17 +220,30 @@
               </div>
             </div>
           </section>
+
+          <!-- Compliance Roadmap Panel -->
+          <section
+            v-if="hasActionableFindings"
+            class="iso-panel mt-3"
+            style="grid-column: 1 / -1; background: transparent; border: none; padding: 0; box-shadow: none;"
+          >
+            <RoadmapTimeline
+              :findings="simulationResult"
+              :is-en="$i18n.locale === 'en'"
+            />
+          </section>
         </template>
 
       </div>
     </div>
   </div>
 </template>
-<script>
+<script>
 import ReportExporter from '../components/ReportExporter.vue';
+import RoadmapTimeline from '../components/RoadmapTimeline.vue';
 
 export default {
-  components: { ReportExporter },
+  components: { ReportExporter, RoadmapTimeline },
   name: 'Simulator',
   data() {
     return {
@@ -426,10 +439,16 @@ export default {
     currentStepData() {
       return this.steps[this.currentStep - 1] || {};
     },
+    hasActionableFindings() {
+      return (this.simulationResult || []).some(
+        (r) => r.severity !== 'success' && Array.isArray(r.recommendations) && r.recommendations.length > 0,
+      );
+    },
     exportPayload() {
       return {
         scenario: this.scenario,
         results: this.simulationResult || [],
+        includeRoadmap: this.hasActionableFindings,
       };
     }
   },
