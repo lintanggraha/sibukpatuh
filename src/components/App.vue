@@ -63,6 +63,16 @@
             </nav>
 
             <div class="framework-tools">
+              <button
+                type="button"
+                class="gsearch-trigger"
+                :aria-label="currentLang === 'en' ? 'Search controls' : 'Cari kontrol'"
+                @click.stop="openSearch"
+              >
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <span class="gsearch-trigger-text">{{ currentLang === 'en' ? 'Search' : 'Cari' }}</span>
+                <kbd class="gsearch-trigger-kbd">{{ shortcutHint }}</kbd>
+              </button>
             </div>
           </div>
         </div>
@@ -115,6 +125,12 @@
         </div>
       </button>
 
+      <GlobalSearch
+        :open="searchOpen"
+        :lang="currentLang"
+        @close="searchOpen = false"
+      />
+
       <Analytics />
       <SpeedInsights />
     </div>
@@ -126,12 +142,14 @@ import { Analytics } from '@vercel/analytics/vue';
 import { useFrameworkStore } from '../stores/frameworkStore';
 import { SpeedInsights } from '@vercel/speed-insights/vue';
 import { applyDomTranslations } from '../utils/domTranslator';
+import GlobalSearch from './GlobalSearch.vue';
 
 export default {
   name: "App",
   components: {
     Analytics,
-    SpeedInsights
+    SpeedInsights,
+    GlobalSearch
   },
   setup() {
     const frameworkStore = useFrameworkStore();
@@ -140,6 +158,7 @@ export default {
   data() {
     return {
       isDarkTheme: false,
+      searchOpen: false,
       currentLang: localStorage.getItem('language') || 'id',
       translationObserver: null,
       translationQueued: false,
@@ -252,6 +271,13 @@ export default {
     activeGroup() {
       return this.frameworkNavGroups.find(group => group.active);
     },
+    /** Tampilkan pintasan sesuai sistem operasi pengguna. */
+    shortcutHint() {
+      if (typeof navigator === 'undefined') return 'Ctrl K';
+      return /Mac|iPod|iPhone|iPad/.test(navigator.platform || navigator.userAgent)
+        ? '\u2318 K'
+        : 'Ctrl K';
+    },
   },
   watch: {
     $route() {
@@ -288,8 +314,48 @@ export default {
         this.closeAllGroups();
       }
     },
+    openSearch() {
+      this.closeAllGroups();
+      this.searchOpen = true;
+    },
+    /** Jangan rebut pintasan saat pengguna sedang mengisi kolom teks. */
+    isTypingContext(target) {
+      if (!target) return false;
+      const tag = target.tagName;
+      return (
+        tag === 'INPUT' ||
+        tag === 'TEXTAREA' ||
+        tag === 'SELECT' ||
+        target.isContentEditable === true
+      );
+    },
     handleKeydown(event) {
+      // Ctrl+K atau Cmd+K membuka pencarian global dari halaman mana pun.
+      if ((event.ctrlKey || event.metaKey) && (event.key === 'k' || event.key === 'K')) {
+        event.preventDefault();
+        this.searchOpen ? (this.searchOpen = false) : this.openSearch();
+        return;
+      }
+
+      // Garis miring sebagai pintasan cepat, mengikuti kebiasaan aplikasi dokumentasi.
+      if (
+        event.key === '/' &&
+        !this.searchOpen &&
+        !event.ctrlKey &&
+        !event.metaKey &&
+        !event.altKey &&
+        !this.isTypingContext(event.target)
+      ) {
+        event.preventDefault();
+        this.openSearch();
+        return;
+      }
+
       if (event.key === "Escape") {
+        if (this.searchOpen) {
+          this.searchOpen = false;
+          return;
+        }
         this.closeAllGroups();
       }
     },
@@ -404,6 +470,57 @@ html {
 @media (min-width: 1400px) {
   .container-xl {
     max-width: 1200px !important;
+  }
+}
+
+/*
+ * Sorot hasil deep-link dari Global Search.
+ *
+ * Dipasang oleh mixin `searchDeepLink` pada elemen dengan atribut
+ * `data-search-id` yang cocok dengan query `?q=`. Sengaja didefinisikan di
+ * blok style global (non-scoped) karena elemen targetnya tersebar di 12 view
+ * berbeda yang semuanya memakai `<style scoped>`.
+ *
+ * `!important` diperlukan agar sorot tetap menang atas aturan `.active` dan
+ * warna aksen per-framework yang memakai selector lebih spesifik.
+ */
+@keyframes search-deeplink-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.search-deeplink-hit {
+  position: relative;
+  outline: 2px solid #2563eb !important;
+  outline-offset: 2px;
+  border-radius: 12px;
+  animation: search-deeplink-pulse 1.4s ease-out 2;
+  scroll-margin-top: 96px;
+}
+
+/* Kontras sorot pada tema gelap. */
+@media (prefers-color-scheme: dark) {
+  .search-deeplink-hit {
+    outline-color: #60a5fa !important;
+  }
+}
+
+[data-theme='dark'] .search-deeplink-hit,
+.dark-mode .search-deeplink-hit {
+  outline-color: #60a5fa !important;
+}
+
+/* Hormati preferensi pengguna yang membatasi animasi. */
+@media (prefers-reduced-motion: reduce) {
+  .search-deeplink-hit {
+    animation: none;
   }
 }
 
@@ -757,6 +874,51 @@ body {
   flex: 0 0 auto;
 }
 
+.gsearch-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.35rem;
+  padding: 0 0.65rem;
+  border: 1px solid rgba(20, 78, 114, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--active);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
+  transition: all 0.18s ease;
+}
+.gsearch-trigger i {
+  font-size: 0.85rem;
+}
+.gsearch-trigger:hover,
+.gsearch-trigger:focus {
+  border-color: var(--active);
+  background: rgba(20, 78, 114, 0.08);
+}
+.gsearch-trigger-kbd {
+  padding: 0.1rem 0.32rem;
+  border: 1px solid rgba(20, 78, 114, 0.18);
+  border-radius: 5px;
+  background: rgba(20, 78, 114, 0.06);
+  color: var(--muted);
+  font-size: 0.6rem;
+  font-weight: 800;
+  font-family: inherit;
+  white-space: nowrap;
+}
+[data-bs-theme="dark"] .gsearch-trigger {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #48cae4;
+}
+[data-bs-theme="dark"] .gsearch-trigger-kbd {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
 .language-toggle {
   display: inline-flex;
   align-items: center;
@@ -1192,6 +1354,16 @@ body {
 
   .framework-tools .nav-divider {
     display: none;
+  }
+
+  /* Pintasan keyboard tidak berlaku di perangkat sentuh */
+  .gsearch-trigger-kbd {
+    display: none;
+  }
+
+  .gsearch-trigger {
+    flex: 1 1 auto;
+    justify-content: center;
   }
 }
 

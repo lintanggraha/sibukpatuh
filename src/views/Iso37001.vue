@@ -117,7 +117,7 @@
             <section class="iso-panel">
               <div class="iso-panel-head"><h3>Daftar kontrol</h3><span class="iso-chip">Klik untuk buka inspector</span></div>
               <div class="iso-list">
-                <button v-for="ctrl in paginatedControls" :key="ctrl.id" type="button" class="iso-item" :class="{ active: explorerState.selectedId === ctrl.id }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="explorerState.selectedId = ctrl.id"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
+                <button v-for="ctrl in paginatedControls" :data-search-id="ctrl.id" :key="ctrl.id" type="button" class="iso-item" :class="{ active: explorerState.selectedId === ctrl.id }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="explorerState.selectedId = ctrl.id"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
                 <div v-if="paginatedControls.length === 0" class="iso-empty">Tidak ada butir yang cocok dengan filter saat ini.</div>
                 
                 <!-- Pagination Controls -->
@@ -213,9 +213,11 @@
 <script>
 import { mapState } from 'pinia';
 import { useFrameworkStore } from '../stores/frameworkStore';
+import searchDeepLink from '../mixins/searchDeepLink';
 
 export default {
   name: 'Iso37001',
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -349,6 +351,7 @@ export default {
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },
