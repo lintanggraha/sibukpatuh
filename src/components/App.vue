@@ -795,8 +795,8 @@ body {
 
 .framework-nav-area {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.6rem;
   flex: 1 1 auto;
   min-width: 0;
@@ -806,10 +806,10 @@ body {
   display: flex;
   flex-wrap: nowrap;
   gap: 0.1rem;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   min-width: 0;
-  width: 100%;
+  flex: 1 1 auto;
 }
 
 .framework-nav-group {
@@ -870,8 +870,9 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 0.35rem;
-  width: auto;
   flex: 0 0 auto;
+  padding-left: 0.5rem;
+  border-left: 1px solid rgba(20, 78, 114, 0.1);
 }
 
 .gsearch-trigger {
@@ -909,6 +910,9 @@ body {
   font-weight: 800;
   font-family: inherit;
   white-space: nowrap;
+}
+[data-bs-theme="dark"] .framework-tools {
+  border-left-color: rgba(255, 255, 255, 0.1);
 }
 [data-bs-theme="dark"] .gsearch-trigger {
   background: rgba(30, 41, 59, 0.8);
@@ -1350,6 +1354,8 @@ body {
   .framework-tools {
     width: 100%;
     justify-content: flex-start;
+    border-left: none;
+    padding-left: 0;
   }
 
   .framework-tools .nav-divider {
