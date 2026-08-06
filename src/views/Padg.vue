@@ -114,7 +114,7 @@
             <article class="padg-panel">
               <div class="padg-head"><h3>Daftar kewajiban</h3><span class="padg-chip">{{ filteredRequirements.length }} entri</span></div>
               <div class="padg-list">
-                <button v-for="req in filteredRequirements" :key="req.id" type="button" class="padg-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="padg-item-top"><span class="padg-item-code">{{ req.id }}</span><span class="padg-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="padg-item-name">{{ req.title || '-' }}</div><div class="padg-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} lampiran</span></div></button>
+                <button v-for="req in filteredRequirements" :data-search-id="req.id" :key="req.id" type="button" class="padg-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="padg-item-top"><span class="padg-item-code">{{ req.id }}</span><span class="padg-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="padg-item-name">{{ req.title || '-' }}</div><div class="padg-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} lampiran</span></div></button>
                 <div v-if="filteredRequirements.length === 0" class="padg-empty">Tidak ada kewajiban yang cocok dengan filter saat ini.</div>
               </div>
             </article>
@@ -242,8 +242,10 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 export default {
   name: 'Padg',
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -402,6 +404,7 @@ export default {
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },

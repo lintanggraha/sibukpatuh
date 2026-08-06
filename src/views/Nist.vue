@@ -96,7 +96,7 @@
             <article class="nst-panel">
               <div class="nst-head"><h3>Daftar subkategori</h3><span class="nst-chip">{{ filteredControls.length }} entri</span></div>
               <div class="nst-list">
-                <button v-for="ctrl in paginatedControls" :key="ctrl.id" type="button" class="nst-item" :class="{ active: activeControlId === ctrl.id }" :style="{ '--accent': getFunctionColor(ctrl.function) }" @click="setActiveControl(ctrl.id)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ getFunctionLabel(ctrl.function) }}</span></div><div class="nst-item-name">{{ ctrl.title || '-' }}</div><div class="nst-item-meta"><span>{{ ctrl.category || '-' }}</span><span>{{ (ctrl.sp80053 || []).length }} referensi</span></div></button>
+                <button v-for="ctrl in paginatedControls" :data-search-id="ctrl.id" :key="ctrl.id" type="button" class="nst-item" :class="{ active: activeControlId === ctrl.id }" :style="{ '--accent': getFunctionColor(ctrl.function) }" @click="setActiveControl(ctrl.id)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ getFunctionLabel(ctrl.function) }}</span></div><div class="nst-item-name">{{ ctrl.title || '-' }}</div><div class="nst-item-meta"><span>{{ ctrl.category || '-' }}</span><span>{{ (ctrl.sp80053 || []).length }} referensi</span></div></button>
                 <div v-if="paginatedControls.length === 0" class="nst-empty">Tidak ada subkategori yang cocok dengan filter saat ini.</div>
                 <!-- Pagination Controls -->
                 <div v-if="totalPages > 1" class="nst-pagination">
@@ -147,7 +147,7 @@
             <article class="nst-panel">
               <div class="nst-head"><h3>Referensi SP 800-53</h3><span class="nst-chip">{{ filteredSp800.length }} entri</span></div>
               <div class="nst-list">
-                <button v-for="ctrl in filteredSp800" :key="ctrl.id" type="button" class="nst-item" @click="openSp800Modal(ctrl)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ ctrl.family }}</span></div><div class="nst-item-name">{{ ctrl.family_name || '-' }}</div><div class="nst-item-meta"><span>{{ (ctrl.nist_references || []).length }} referensi NIST</span></div></button>
+                <button v-for="ctrl in filteredSp800" :data-search-id="ctrl.id" :key="ctrl.id" type="button" class="nst-item" @click="openSp800Modal(ctrl)"><div class="nst-item-top"><span class="nst-item-code">{{ ctrl.id }}</span><span class="nst-pill">{{ ctrl.family }}</span></div><div class="nst-item-name">{{ ctrl.family_name || '-' }}</div><div class="nst-item-meta"><span>{{ (ctrl.nist_references || []).length }} referensi NIST</span></div></button>
                 <div v-if="filteredSp800.length === 0" class="nst-empty">Tidak ada kontrol SP 800-53 yang cocok dengan filter saat ini.</div>
               </div>
             </article>
@@ -204,11 +204,13 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 import { mapState } from "pinia";
 import { useFrameworkStore } from "../stores/frameworkStore";
 
 export default {
   name: 'Nist',
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -331,13 +333,34 @@ export default {
   },
   watch: {
     filteredControls() {
-      this.currentPage = 1;
+      // Saat deep-link dari Global Search sedang diproses, halaman sudah
+      // diarahkan ke posisi kontrol target sehingga tidak boleh direset.
+      if (!this.searchDeepLinkPending) {
+        this.currentPage = 1;
+      }
       if (this.paginatedControls.length && !this.paginatedControls.find(c => c.id === this.activeControlId)) {
         this.activeControlId = this.paginatedControls[0]?.id || null;
       }
     },
   },
   methods: {
+    /**
+     * Hook mixin searchDeepLink: siapkan tampilan sebelum kontrol disorot.
+     *
+     * Tab 'explorer' berpaginasi 25 entri, sehingga perlu melompat ke halaman
+     * yang memuat kontrol target. Tab 'reference' (SP 800-53) tidak
+     * berpaginasi, tetapi difilter, sehingga kueri diisi ke kolom filter agar
+     * entri target ikut tampil.
+     */
+    searchDeepLinkPrepare(rawQuery) {
+      if (this.activeTab === 'reference') {
+        this.sp800Search = rawQuery;
+        return;
+      }
+      const page = this.searchDeepLinkFindPage(this.filteredControls, this.itemsPerPage);
+      if (page) this.currentPage = page;
+    },
+
     getRoleIcon(roleId) {
       if (roleId === "sysadmin") return "fa-user-shield";
       if (roleId === "legal") return "fa-balance-scale";
@@ -398,6 +421,7 @@ export default {
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },

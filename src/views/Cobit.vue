@@ -306,7 +306,7 @@
               </div>
               <div class="sej-list">
                 <button
-                  v-for="concept in filteredConcepts"
+                  v-for="concept in filteredConcepts" :data-search-id="concept.id"
                   :key="concept.id"
                   type="button"
                   class="sej-item"
@@ -619,6 +619,7 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 import { mapState } from "pinia";
 import { useFrameworkStore } from "../stores/frameworkStore";
 
@@ -888,6 +889,7 @@ const implementationPhaseEnhancements = {
 
 export default {
   name: "Cobit",
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -1149,6 +1151,7 @@ export default {
         this.error = error.message || "Failed to load data";
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },

@@ -337,7 +337,7 @@
               </div>
               <div class="sej-list">
                 <button
-                  v-for="req in filteredRequirements"
+                  v-for="req in filteredRequirements" :data-search-id="req.id"
                   :key="req.id"
                   type="button"
                   class="sej-item"
@@ -617,11 +617,13 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 import { mapState } from "pinia";
 import { useFrameworkStore } from "../stores/frameworkStore";
 
 export default {
   name: "Pbi",
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -999,6 +1001,7 @@ export default {
         this.error = error.message || "Failed to load data";
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },

@@ -258,7 +258,7 @@
               </div>
               <div class="orj-list">
                 <button
-                  v-for="theme in filteredThemes"
+                  v-for="theme in filteredThemes" :data-search-id="theme.id"
                   :key="theme.id"
                   type="button"
                   class="orj-item"
@@ -349,11 +349,13 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 import { mapState } from "pinia";
 import { useFrameworkStore } from "../stores/frameworkStore";
 
 export default {
   name: "OjkResilience",
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -545,6 +547,7 @@ export default {
         this.error = error.message || "Failed to load data";
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },

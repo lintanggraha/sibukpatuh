@@ -123,7 +123,7 @@
                     <strong>{{ sectionTitle(ctrl) }}</strong>
                     <em>{{ sectionDescription(ctrl) }}</em>
                   </div>
-                  <button type="button" class="iso-item" :class="{ active: explorerState.selectedKey === controlKey(ctrl) }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="selectExplorerControl(ctrl)"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
+                  <button type="button" class="iso-item" :data-search-id="ctrl.id" :class="{ active: explorerState.selectedKey === controlKey(ctrl) }" :style="{ '--accent': getDomainColor(ctrl.domain) }" @click="selectExplorerControl(ctrl)"><div class="iso-item-top"><span class="iso-item-code">{{ ctrl.id }}</span><span class="iso-pill" :class="[`compact`, getPillClass(ctrl.priority)]">{{ ctrl.priority || '-' }}</span></div><div class="iso-item-name">{{ ctrl.name || '-' }}</div><div class="iso-item-meta-line"><span>{{ ctrl.domain || '-' }}</span><span>{{ ctrl.type || '-' }}</span><span>{{ ctrl.difficulty || '-' }}</span></div></button>
                 </template>
                 <div v-if="paginatedControls.length === 0" class="iso-empty">Tidak ada kontrol yang cocok dengan filter saat ini.</div>
                 
@@ -220,6 +220,7 @@
 <script>
 import { mapState } from 'pinia';
 import { useFrameworkStore } from '../stores/frameworkStore';
+import searchDeepLink from '../mixins/searchDeepLink';
 
 const clauseGuidance = {
   id: {
@@ -333,11 +334,13 @@ const clauseDetails = {
 
 export default {
   name: 'Iso27001',
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
       error: null,
       activeTab: 'overview',
+
       controls: [],
       domainMeta: {
         'Organisasional': { id: 'ORG', color: '#0f766e', summary: 'Kebijakan, tata kelola, kontrak, dan keputusan manajemen.' },
@@ -508,6 +511,14 @@ export default {
     retryLoad() {
       this.loadData();
     },
+    /**
+     * Hook mixin searchDeepLink: lompat ke halaman paginasi yang memuat
+     * kontrol target sebelum proses sorot dijalankan.
+     */
+    searchDeepLinkPrepare() {
+      const page = this.searchDeepLinkFindPage(this.filteredControls, this.itemsPerPage);
+      if (page) this.currentPage = page;
+    },
     async loadData() {
       try {
         this.loading = true;
@@ -533,6 +544,7 @@ export default {
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },
@@ -541,6 +553,9 @@ export default {
       this.loadData();
     },
     filteredControls() {
+      // Jangan reset halaman saat deep-link pencarian sedang melompat ke
+      // halaman yang memuat kontrol target.
+      if (this.searchDeepLinkPending) return;
       this.currentPage = 1; // Reset to first page when filters change
       if (this.filteredControls.length && !this.filteredControls.find(c => this.controlKey(c) === this.explorerState.selectedKey)) {
         this.explorerState.selectedId = this.filteredControls[0]?.id || null;

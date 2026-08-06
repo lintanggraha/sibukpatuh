@@ -103,7 +103,7 @@
             <article class="sej-panel">
               <div class="sej-head"><h3>{{ ui.reqList }}</h3><span class="sej-chip">{{ filteredRequirements.length }} entri</span></div>
               <div class="sej-list">
-                <button v-for="req in filteredRequirements" :key="req.id" type="button" class="sej-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="sej-item-top"><span class="sej-item-code">{{ req.id }}</span><span class="sej-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="sej-item-name">{{ req.title || '-' }}</div><div class="sej-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} lampiran</span></div></button>
+                <button v-for="req in filteredRequirements" :data-search-id="req.id" :key="req.id" type="button" class="sej-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="sej-item-top"><span class="sej-item-code">{{ req.id }}</span><span class="sej-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="sej-item-name">{{ req.title || '-' }}</div><div class="sej-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} lampiran</span></div></button>
                 <div v-if="filteredRequirements.length === 0" class="sej-empty">{{ ui.reqEmpty }}</div>
               </div>
             </article>
@@ -241,11 +241,13 @@
 </template>
 
 <script>
+import searchDeepLink from '../mixins/searchDeepLink';
 import { mapState } from "pinia";
 import { useFrameworkStore } from "../stores/frameworkStore";
 
 export default {
   name: 'Seojk',
+  mixins: [searchDeepLink],
   data() {
     return {
       loading: true,
@@ -491,6 +493,7 @@ export default {
         this.error = error.message || 'Failed to load data';
       } finally {
         this.loading = false;
+        this.searchDeepLinkAfterDataLoaded();
       }
     },
   },
