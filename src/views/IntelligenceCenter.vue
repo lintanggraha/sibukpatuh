@@ -471,6 +471,9 @@ export default {
       userInput: "",
       isTyping: false,
       messages: [],
+      aiRequestCount: 0,
+      aiLastRequestTime: 0,
+      aiCooldownUntil: 0,
       aiSuggestions: [
         "Apa dampaknya untuk organisasi di Indonesia?",
         "Bagaimana cara mitigasinya?",
@@ -692,6 +695,35 @@ export default {
     async sendAiQuery(text) {
       if (!text || !text.trim() || this.isTyping || !this.selectedCve) return;
       const query = text.trim();
+
+      // Client-side rate limit: max 8 request per menit
+      const now = Date.now();
+      if (now < this.aiCooldownUntil) {
+        const secsLeft = Math.ceil((this.aiCooldownUntil - now) / 1000);
+        this.messages.push({ role: 'assistant', text: `⏳ Terlalu banyak permintaan. Tunggu ${secsLeft} detik sebelum mencoba lagi.` });
+        this.scrollToBottom();
+        return;
+      }
+      if (now - this.aiLastRequestTime < 60000) {
+        this.aiRequestCount++;
+      } else {
+        this.aiRequestCount = 1;
+        this.aiLastRequestTime = now;
+      }
+      if (this.aiRequestCount > 8) {
+        this.aiCooldownUntil = now + 60000;
+        this.messages.push({ role: 'assistant', text: '⏳ Batas 8 permintaan per menit tercapai. Tunggu 1 menit sebelum melanjutkan.' });
+        this.scrollToBottom();
+        return;
+      }
+
+      // Input length validation
+      if (query.length > 1500) {
+        this.messages.push({ role: 'assistant', text: '⚠️ Pertanyaan terlalu panjang. Maksimal 1.500 karakter.' });
+        this.scrollToBottom();
+        return;
+      }
+
       this.userInput = "";
       this.messages.push({ role: "user", text: query });
       this.isTyping = true;
