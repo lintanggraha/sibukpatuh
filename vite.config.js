@@ -44,28 +44,70 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       proxy: {
-        // Proxy for local development to match Vercel serverless functions
-        '/api/otx': {
-          target: 'http://localhost:3000',
-          changeOrigin: true,
-        },
-        '/api/breach': {
-          target: 'http://localhost:3000',
-          changeOrigin: true,
-        },
-        '/api/cisa': {
-          target: 'http://localhost:3000',
-          changeOrigin: true,
-        },
-        '/api/gemini': {
-          target: 'http://localhost:3000',
-          changeOrigin: true,
-        }
+        '/api/otx': { target: 'http://localhost:3000', changeOrigin: true },
+        '/api/breach': { target: 'http://localhost:3000', changeOrigin: true },
+        '/api/cisa': { target: 'http://localhost:3000', changeOrigin: true },
+        '/api/gemini': { target: 'http://localhost:3000', changeOrigin: true }
       }
     },
     base: '/',
     build: {
-      chunkSizeWarningLimit: 1600,
+      // Target browser modern — menghilangkan polyfill legacy yang tidak perlu
+      target: 'es2020',
+      // Aktifkan minifikasi CSS
+      cssMinify: true,
+      // Naikkan limit warning agar tidak noise, tapi kita sudah split manual
+      chunkSizeWarningLimit: 800,
+      // Nonaktifkan modulepreload otomatis untuk vendor berat
+      // agar tidak di-inject ke semua halaman prerendered
+      modulePreload: {
+        // Hanya preload chunk yang benar-benar dibutuhkan halaman tersebut
+        // Vendor berat (charts, excel, pdf) akan dimuat on-demand
+        resolveDependencies: (filename, deps) => {
+          // Jangan preload vendor berat di semua halaman
+          const heavyVendors = ['vendor-charts', 'vendor-excel', 'vendor-pdf', 'vendor-html2canvas'];
+          if (heavyVendors.some(v => filename.includes(v))) return [];
+          return deps.filter(dep => !heavyVendors.some(v => dep.includes(v)));
+        }
+      },
+      rollupOptions: {
+        output: {
+          // Manual chunk splitting: pisahkan vendor berat ke chunk terpisah
+          // agar halaman yang tidak butuh library tersebut tidak memuatnya
+          manualChunks(id) {
+            // jsPDF + autotable + ExcelJS — hanya dibutuhkan saat export
+            if (id.includes('jspdf') || id.includes('jsPDF') || id.includes('autotable')) {
+              return 'vendor-pdf';
+            }
+            if (id.includes('exceljs')) {
+              return 'vendor-excel';
+            }
+            // ApexCharts — hanya dibutuhkan di IntelligenceCenter
+            if (id.includes('apexcharts') || id.includes('vue3-apexcharts')) {
+              return 'vendor-charts';
+            }
+            // html2canvas — hanya dibutuhkan saat screenshot/export
+            if (id.includes('html2canvas')) {
+              return 'vendor-html2canvas';
+            }
+            // DOMPurify — kecil tapi bisa dipisah
+            if (id.includes('dompurify') || id.includes('purify')) {
+              return 'vendor-dompurify';
+            }
+            // Vue core + router + pinia — selalu dibutuhkan, gabung jadi satu vendor
+            if (id.includes('node_modules/vue/') ||
+                id.includes('node_modules/@vue/') ||
+                id.includes('node_modules/vue-router') ||
+                id.includes('node_modules/pinia')) {
+              return 'vendor-vue';
+            }
+            // Bootstrap CSS sudah di-inline, skip
+            if (id.includes('bootstrap')) {
+              return 'vendor-bootstrap';
+            }
+          }
+        }
+      }
     }
   };
 });
