@@ -20,29 +20,54 @@
       "PADK.POKOK-01",
       "PADK.POKOK-02",
       "PADK.POKOK-04",
-      "PADK.INTRO-01",
-      "PADK.GOV-01",
-      "PADK.GOV-02",
-      "PADK.GOV-03",
-      "PADK.GOV-04",
-      "PADK.ARC-01",
-      "PADK.ARC-02",
-      "PADK.RSK-01",
-      "PADK.RSK-02",
-      "PADK.RSK-03",
-      "PADK.PPJTI-01",
-      "PADK.PPJTI-02",
-      "PADK.PPJTI-03",
-      "PADK.LOC-01",
-      "PADK.LOC-02",
-      "PADK.DATA-01",
-      "PADK.DATA-02",
-      "PADK.PDP-01",
-      "PADK.PDP-02",
-      "PADK.SVC-01",
-      "PADK.SVC-02",
-      "PADK.AUD-01",
-      "PADK.AUD-02"
+      "PADK.I-01",
+      "PADK.II-01",
+      "PADK.II-02",
+      "PADK.II-03",
+      "PADK.II-04",
+      "PADK.II-05",
+      "PADK.II-06",
+      "PADK.II-07",
+      "PADK.II-08",
+      "PADK.II-09",
+      "PADK.II-10",
+      "PADK.II-11",
+      "PADK.II-12",
+      "PADK.II-13",
+      "PADK.II-14",
+      "PADK.II-15",
+      "PADK.III-01",
+      "PADK.III-02",
+      "PADK.III-03",
+      "PADK.III-04",
+      "PADK.IV-01",
+      "PADK.IV-02",
+      "PADK.IV-03",
+      "PADK.IV-04",
+      "PADK.IV-05",
+      "PADK.IV-06",
+      "PADK.IV-07",
+      "PADK.IV-08",
+      "PADK.IV-09",
+      "PADK.IV-10",
+      "PADK.IV-11",
+      "PADK.IV-12",
+      "PADK.V-01",
+      "PADK.V-02",
+      "PADK.V-03",
+      "PADK.V-04",
+      "PADK.V-05",
+      "PADK.V-06",
+      "PADK.VII-01",
+      "PADK.VII-02",
+      "PADK.VII-03",
+      "PADK.VII-04",
+      "PADK.VII-05",
+      "PADK.VIII-02",
+      "PADK.IX-01",
+      "PADK.IX-02",
+      "PADK.IX-03",
+      "PADK.IX-04"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Pedoman Penyelenggaraan Teknologi Informasi oleh Bank Umum'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
@@ -67,16 +92,19 @@
     "used_by": [
       "PADK.POKOK-01",
       "PADK.POKOK-03",
-      "PADK.ARC-02",
-      "PADK.AUD-02",
-      "PADK.REP-01",
-      "PADK.REP-02",
-      "PADK.REP-03",
-      "PADK.INC-01",
-      "PADK.PERMIT-01",
-      "PADK.PERMIT-02",
-      "PADK.LOC-01",
-      "PADK.LOC-02"
+      "PADK.II-09",
+      "PADK.II-12",
+      "PADK.III-04",
+      "PADK.III-05",
+      "PADK.IV-12",
+      "PADK.VI-01",
+      "PADK.VI-02",
+      "PADK.VIII-01",
+      "PADK.VIII-02",
+      "PADK.IX-03",
+      "PADK.LII-01",
+      "PADK.LII-02",
+      "PADK.LII-03"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Tata Cara Penyampaian Laporan dan Permohonan Izin'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
@@ -98,7 +126,11 @@
       "Laporan Insiden TI nonsiber"
     ],
     "used_by": [
-      "PADK.POKOK-01"
+      "PADK.POKOK-01",
+      "PADK.POKOK-03",
+      "PADK.IV-12",
+      "PADK.LII-01",
+      "PADK.LII-02"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Format Laporan dan Notifikasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
@@ -118,7 +150,11 @@
       "Perjanjian, arsitektur, post-implementation review, dan hasil uji terkait"
     ],
     "used_by": [
-      "PADK.POKOK-01"
+      "PADK.POKOK-01",
+      "PADK.VI-01",
+      "PADK.VI-02",
+      "PADK.VIII-01",
+      "PADK.LII-03"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Format Permohonan Izin dan Laporan Realisasi'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
@@ -201,10 +237,9 @@
       "Informasi tata kelola organisasi"
     ],
     "used_by": [
-      "PADK.GOV-01",
-      "PADK.GOV-02",
-      "PADK.GOV-03",
-      "PADK.REP-02"
+      "PADK.II-09",
+      "PADK.III-04",
+      "PADK.III-05"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Format 3.2.2 Organisasi dan Manajemen'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
@@ -225,9 +260,8 @@
       "Keterangan"
     ],
     "used_by": [
-      "PADK.GOV-01",
-      "PADK.GOV-02",
-      "PADK.REP-02"
+      "PADK.III-04",
+      "PADK.III-05"
     ],
     "roleTranslations": {
       "bod": "Mode Board: Berikan pengawasan strategis atas 'Format 3.2.3 Kebijakan, Standar, dan Prosedur TI'. Pastikan inisiatif ini mendukung tujuan bisnis dan tidak mengganggu operasional.",
