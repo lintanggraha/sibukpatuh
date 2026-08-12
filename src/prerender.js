@@ -11,13 +11,13 @@
 const ROUTE_CONTENT = {
   '/': {
     title: 'SibukPatuh - Referensi Edukatif Kepatuhan Siber dan Tata Kelola TI',
-    description: 'Platform referensi edukatif berbahasa Indonesia untuk ISO 27001, NIST CSF, COBIT 2019, SEOJK, PBI, UU PDP, dan OWASP.',
+    description: 'Platform referensi edukatif berbahasa Indonesia untuk ISO 27001, NIST CSF, COBIT 2019, SEOJK, POJK, PBI, UU PDP, dan OWASP.',
     h1: 'Ruang Belajar Framework & Regulasi Siber',
     body: `
       <main>
         <h1>Ruang Belajar Framework &amp; Regulasi Siber</h1>
         <p>SibukPatuh adalah platform referensi edukatif berbahasa Indonesia yang dirancang untuk membantu praktisi IT, auditor, compliance officer, dan pelajar dalam memahami berbagai framework keamanan siber dan regulasi teknologi informasi.</p>
-        <p>Platform ini menyajikan ringkasan terstruktur dari standar internasional seperti ISO 27001:2022, NIST Cybersecurity Framework 2.0, COBIT 2019, serta regulasi nasional Indonesia seperti SEOJK 29/2022, PBI 02/2024, PADG 32/2025, PADK 1/2026, dan UU PDP No. 27/2022.</p>
+        <p>Platform ini menyajikan ringkasan terstruktur dari standar internasional seperti ISO 27001:2022, NIST Cybersecurity Framework 2.0, COBIT 2019, serta regulasi nasional Indonesia seperti SEOJK 29/2022, POJK 11/2022, PBI 02/2024, PADG 32/2025, PADK 1/2026, dan UU PDP No. 27/2022.</p>
         <p>Tersedia pula alat interaktif seperti Gap Analysis, Compliance Simulator, Cross-Mapping Framework, dan Intelligence Center untuk mendukung pemahaman praktis kepatuhan siber.</p>
         <h2>Framework Internasional</h2>
         <ul>
@@ -31,6 +31,7 @@ const ROUTE_CONTENT = {
         <h2>Regulasi Nasional Indonesia</h2>
         <ul>
           <li><a href="/frameworks/seojk">SEOJK 29/2022 — Ketahanan siber perbankan OJK</a></li>
+          <li><a href="/frameworks/pojk-11-2022">POJK 11/2022 — Penyelenggaraan TI Bank Umum</a></li>
           <li><a href="/frameworks/pbi-02-2024">PBI 02/2024 — Keamanan siber Bank Indonesia</a></li>
           <li><a href="/frameworks/padk-1-2026">PADK 1/2026 — Penyelenggaraan TI bank umum</a></li>
           <li><a href="/frameworks/padg-32-2025">PADG 32/2025 — Sistem pembayaran Bank Indonesia</a></li>
@@ -195,6 +196,28 @@ const ROUTE_CONTENT = {
           <li>Pelaporan insiden siber kepada OJK</li>
         </ul>
         <p>Regulasi ini berlaku efektif sejak 2022 dan menjadi acuan utama audit keamanan siber perbankan Indonesia.</p>
+      </main>
+    `,
+  },
+  '/frameworks/pojk-11-2022': {
+    title: 'POJK 11/2022 - Penyelenggaraan Teknologi Informasi Bank Umum | SibukPatuh',
+    description: 'Panduan POJK 11/POJK.03/2022 untuk tata kelola TI, ketahanan siber, pihak ketiga, data, audit, perizinan, dan pelaporan Bank Umum kepada OJK.',
+    h1: 'POJK 11/2022 — Penyelenggaraan Teknologi Informasi oleh Bank Umum',
+    body: `
+      <main>
+        <h1>POJK 11/2022 — Penyelenggaraan Teknologi Informasi oleh Bank Umum</h1>
+        <p>POJK Nomor 11/POJK.03/2022 mengatur penyelenggaraan teknologi informasi oleh Bank Umum secara menyeluruh. Cakupannya meliputi tata kelola TI, arsitektur dan rencana strategis, manajemen risiko, pengamanan informasi, ketahanan siber, penggunaan pihak penyedia jasa TI, lokasi Sistem Elektronik, pengelolaan data, audit, serta pelaporan kepada OJK.</p>
+        <h2>Area Kewajiban Utama</h2>
+        <ul>
+          <li>Tata kelola TI, peran Direksi dan Dewan Komisaris, Komite Pengarah TI, serta satuan kerja penyelenggara TI.</li>
+          <li>Arsitektur TI dan rencana strategis TI yang mendukung rencana korporasi Bank.</li>
+          <li>Manajemen risiko TI, pengamanan informasi, jaringan, dan Rencana Pemulihan Bencana.</li>
+          <li>Ketahanan dan keamanan siber, termasuk self-assessment maturitas dan pengujian keamanan siber.</li>
+          <li>Pengawasan penyedia jasa TI, perizinan lokasi/pemrosesan luar negeri, data pribadi, pengendalian intern, audit, dan pelaporan.</li>
+        </ul>
+        <h2>Batas Waktu Kritis</h2>
+        <p>POJK ini memuat antara lain notifikasi awal insiden TI signifikan paling lama 24 jam setelah diketahui, laporan insiden paling lama 5 hari kerja, laporan hasil pengujian berbasis skenario paling lama 10 hari kerja, serta laporan kondisi terkini penyelenggaraan TI paling lama 15 hari kerja setelah akhir tahun pelaporan.</p>
+        <p>Konten SibukPatuh bersifat edukatif. Gunakan naskah peraturan dan ketentuan pelaksanaan OJK yang berlaku sebagai acuan formal.</p>
       </main>
     `,
   },

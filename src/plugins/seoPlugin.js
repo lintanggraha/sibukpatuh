@@ -67,6 +67,12 @@ const ROUTE_SEO_CONFIG = {
     keywords: 'SEOJK 29 2022, ketahanan siber perbankan, OJK cybersecurity, regulasi bank Indonesia',
     dateModified: '2026-08-04',
   },
+  '/frameworks/pojk-11-2022': {
+    type: 'TechArticle',
+    breadcrumb: ['Beranda', 'Regulasi Nasional', 'POJK 11/2022'],
+    keywords: 'POJK 11 2022, POJK 11 POJK.03 2022, penyelenggaraan teknologi informasi bank umum, tata kelola TI bank, ketahanan siber bank, pelaporan TI OJK',
+    dateModified: '2026-08-12',
+  },
   '/frameworks/pbi-02-2024': {
     type: 'TechArticle',
     breadcrumb: ['Beranda', 'Regulasi Nasional', 'PBI 02/2024'],

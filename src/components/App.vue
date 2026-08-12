@@ -175,6 +175,11 @@ export default {
               icon: "fa-landmark",
             },
             {
+              routeName: "pojk11",
+              label: "POJK 11/2022",
+              icon: "fa-microchip",
+            },
+            {
               routeName: "padk",
               label: "PADK 1 Tahun 2026",
               icon: "fa-server",
