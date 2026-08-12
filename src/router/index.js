@@ -92,6 +92,16 @@ export const routes = [
         }
     },
     {
+        path: '/frameworks/pojk-11-2022',
+        name: 'pojk11',
+        component: () => import('../views/Pojk.vue'),
+        meta: {
+            title: 'POJK 11/2022 - Penyelenggaraan Teknologi Informasi Bank Umum | SibukPatuh',
+            description: 'Panduan komprehensif POJK 11/POJK.03/2022 tentang penyelenggaraan teknologi informasi oleh bank umum: tata kelola, ketahanan siber, pihak ketiga, data, audit, perizinan, dan pelaporan OJK.',
+            keywords: 'POJK 11 2022, POJK 11 POJK.03 2022, penyelenggaraan teknologi informasi bank umum, tata kelola TI bank, pelaporan TI OJK, ketahanan siber bank'
+        }
+    },
+    {
         path: '/frameworks/padk-1-2026',
         name: 'padk',
         component: () => import('../views/Padk.vue'),

@@ -1,0 +1,453 @@
+[
+  {
+    "id": "REF-01",
+    "title": "Cakupan dan istilah utama POJK 11/2022",
+    "type": "Cakupan Regulasi",
+    "scope": "Pasal 1 dan konteks peraturan",
+    "summary": "Referensi definisi Bank, TI, Sistem Elektronik, Pusat Data, Pusat Pemulihan Bencana, Rencana Pemulihan Bencana, Direksi, dan Dewan Komisaris yang menjadi fondasi pembacaan POJK.",
+    "contains": [
+      "Definisi dan pihak yang dicakup",
+      "Hubungan TI, Sistem Elektronik, Pusat Data, dan DRC",
+      "Konteks penerapan bagi bank umum, cabang bank asing, dan UUS"
+    ],
+    "used_by": [],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Cakupan dan istilah utama POJK 11/2022” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Cakupan dan istilah utama POJK 11/2022” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Cakupan dan istilah utama POJK 11/2022” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-02",
+    "title": "Peta tata kelola TI dan akuntabilitas organ Bank",
+    "type": "Dokumen Tata Kelola",
+    "scope": "Bab II, Pasal 2–10",
+    "summary": "Peta dokumen dan forum untuk menerapkan tata kelola TI, tujuh aspek tata kelola, mandat pengurus, Komite Pengarah TI, serta unit penyelenggara TI.",
+    "contains": [
+      "Kebijakan, standar, prosedur, dan siklus pengkinian",
+      "RACI dan struktur organisasi TI",
+      "Piagam Komite Pengarah TI dan register keputusan"
+    ],
+    "used_by": [
+      "POJK-02",
+      "POJK-03",
+      "POJK-04",
+      "POJK-05",
+      "POJK-06",
+      "POJK-07",
+      "POJK-08"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Peta tata kelola TI dan akuntabilitas organ Bank” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Peta tata kelola TI dan akuntabilitas organ Bank” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Peta tata kelola TI dan akuntabilitas organ Bank” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-03",
+    "title": "Arsitektur TI dan rencana strategis TI",
+    "type": "Dokumen Tata Kelola",
+    "scope": "Bab III, Pasal 11–14",
+    "summary": "Referensi artefak arsitektur TI, roadmap, rencana strategis, perubahan signifikan, dan jadwal penyampaian rencana strategis kepada OJK.",
+    "contains": [
+      "Baseline dan target architecture",
+      "Roadmap serta rencana strategis TI",
+      "Bukti penyampaian atau perubahan rencana strategis TI"
+    ],
+    "used_by": [
+      "POJK-05",
+      "POJK-07",
+      "POJK-08",
+      "POJK-11",
+      "POJK-12-13"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Arsitektur TI dan rencana strategis TI” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Arsitektur TI dan rencana strategis TI” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Arsitektur TI dan rencana strategis TI” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-04",
+    "title": "Manajemen risiko, pengamanan informasi, jaringan, dan DRP",
+    "type": "Dokumen Tata Kelola",
+    "scope": "Bab IV, Pasal 15–20",
+    "summary": "Kumpulan artefak manajemen risiko TI dan pengamanan operasi, termasuk risk register, keamanan informasi, kontrol jaringan, BIA, DRP, serta hasil pengujian.",
+    "contains": [
+      "Metodologi risiko TI dan dashboard risiko",
+      "Kebijakan keamanan informasi dan standar jaringan",
+      "BIA, DRP, hasil uji, dan review tahunan"
+    ],
+    "used_by": [
+      "POJK-15",
+      "POJK-16",
+      "POJK-17",
+      "POJK-18",
+      "POJK-19",
+      "POJK-37"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Manajemen risiko, pengamanan informasi, jaringan, dan DRP” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Manajemen risiko, pengamanan informasi, jaringan, dan DRP” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Manajemen risiko, pengamanan informasi, jaringan, dan DRP” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-05",
+    "title": "Program ketahanan dan keamanan siber",
+    "type": "Dokumen Tata Kelola",
+    "scope": "Bab V, Pasal 21–28",
+    "summary": "Referensi program siklus ketahanan siber, self-assessment maturitas, pengujian keamanan siber, scenario exercise, dan independensi fungsi siber.",
+    "contains": [
+      "Inventaris aset/ancaman/kerentanan dan playbook respons",
+      "Working paper maturitas keamanan siber",
+      "Laporan vulnerability testing dan scenario exercise"
+    ],
+    "used_by": [
+      "POJK-21",
+      "POJK-22",
+      "POJK-23-24",
+      "POJK-25",
+      "POJK-26"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Program ketahanan dan keamanan siber” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Program ketahanan dan keamanan siber” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Program ketahanan dan keamanan siber” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-06",
+    "title": "Manajemen penyedia jasa TI dan exit strategy",
+    "type": "Dokumen Pihak Ketiga",
+    "scope": "Bab VI, Pasal 29–34",
+    "summary": "Referensi untuk mengelola pihak penyedia jasa TI dari identifikasi kebutuhan, pemilihan, kontrak, pengawasan, reassessment materialitas, sampai kondisi kritis dan exit.",
+    "contains": [
+      "Due diligence dan klasifikasi materialitas",
+      "Klausul kontrak, SLA, audit, subkontrak, kerahasiaan, dan akses OJK",
+      "Vendor monitoring, contingency plan, serta exit plan"
+    ],
+    "used_by": [
+      "POJK-29",
+      "POJK-30",
+      "POJK-31",
+      "POJK-32",
+      "POJK-36",
+      "POJK-39"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Manajemen penyedia jasa TI dan exit strategy” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Manajemen penyedia jasa TI dan exit strategy” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Manajemen penyedia jasa TI dan exit strategy” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-07",
+    "title": "Penempatan Sistem Elektronik, Pusat Data, dan DRC",
+    "type": "Perizinan & Lokasi",
+    "scope": "Bab VII, Pasal 35–42",
+    "summary": "Peta keputusan lokasi Sistem Elektronik dan persyaratan keberlangsungan usaha untuk Pusat Data maupun Pusat Pemulihan Bencana.",
+    "contains": [
+      "Inventaris lokasi sistem dan data-flow",
+      "Kriteria penempatan di luar Indonesia",
+      "Bukti kesiapan Pusat Data/DRC dan kelangsungan usaha"
+    ],
+    "used_by": [
+      "POJK-35",
+      "POJK-36",
+      "POJK-37",
+      "POJK-39"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Penempatan Sistem Elektronik, Pusat Data, dan DRC” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Penempatan Sistem Elektronik, Pusat Data, dan DRC” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Penempatan Sistem Elektronik, Pusat Data, dan DRC” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-08",
+    "title": "Checklist permohonan izin kegiatan TI lintas negara",
+    "type": "Perizinan & Lokasi",
+    "scope": "Pasal 36 dan Pasal 39",
+    "summary": "Checklist persyaratan untuk penempatan Sistem Elektronik/DRC atau pemrosesan transaksi berbasis TI di luar Indonesia, termasuk country risk, perlindungan rahasia Bank, pilihan hukum, pengawasan OJK, dan manfaat bisnis.",
+    "contains": [
+      "Country risk assessment dan data-flow",
+      "Pernyataan pengawasan OJK dan akses pemeriksaan",
+      "Kontrak penyedia, pilihan hukum, dan rencana SDM"
+    ],
+    "used_by": [
+      "POJK-35",
+      "POJK-36",
+      "POJK-39"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Checklist permohonan izin kegiatan TI lintas negara” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Checklist permohonan izin kegiatan TI lintas negara” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Checklist permohonan izin kegiatan TI lintas negara” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-09",
+    "title": "Kanal perizinan dan batas implementasi enam bulan",
+    "type": "Perizinan & Lokasi",
+    "scope": "Pasal 40–41 dan Pasal 49–50",
+    "summary": "Referensi kanal permohonan izin daring/alternatif serta batas waktu implementasi enam bulan setelah izin OJK diperoleh; izin tidak berlaku jika tidak direalisasikan dalam jangka waktu tersebut.",
+    "contains": [
+      "Sistem perizinan dan registrasi terintegrasi OJK",
+      "Alternatif sistem pelaporan OJK",
+      "Register izin, target go-live, dan bukti realisasi"
+    ],
+    "used_by": [
+      "POJK-35",
+      "POJK-36",
+      "POJK-39",
+      "POJK-40-41",
+      "POJK-48",
+      "POJK-49-50"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Kanal perizinan dan batas implementasi enam bulan” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Kanal perizinan dan batas implementasi enam bulan” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Kanal perizinan dan batas implementasi enam bulan” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-10",
+    "title": "Data governance dan pelindungan data pribadi",
+    "type": "Dokumen Data & Privasi",
+    "scope": "Bab VIII, Pasal 43–47",
+    "summary": "Referensi ownership dan kualitas data, sistem/sumber daya pengelolaan data, penerapan prinsip pelindungan data pribadi, DPIA, dan pertukaran data pribadi.",
+    "contains": [
+      "Data governance operating model",
+      "DPIA dan mitigasi risiko pemrosesan berisiko tinggi",
+      "Data-sharing agreement, consent, dan sarana transfer aman"
+    ],
+    "used_by": [
+      "POJK-16",
+      "POJK-43",
+      "POJK-44",
+      "POJK-45"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Data governance dan pelindungan data pribadi” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Data governance dan pelindungan data pribadi” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Data governance dan pelindungan data pribadi” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-11",
+    "title": "Penyediaan jasa TI oleh Bank",
+    "type": "Perizinan & Lokasi",
+    "scope": "Bab IX, Pasal 48–52",
+    "summary": "Referensi batas penerima jasa, kewajiban kehati-hatian, analisis biaya-manfaat, izin OJK, serta ketentuan aplikasi kepada lembaga jasa keuangan dalam satu grup.",
+    "contains": [
+      "Kelayakan calon pengguna jasa",
+      "Analisis kehati-hatian dan biaya-manfaat",
+      "Dokumen izin dan bukti implementasi layanan"
+    ],
+    "used_by": [
+      "POJK-48",
+      "POJK-49-50"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Penyediaan jasa TI oleh Bank” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Penyediaan jasa TI oleh Bank” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Penyediaan jasa TI oleh Bank” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-12",
+    "title": "Kalender pelaporan rutin penyelenggaraan TI",
+    "type": "Pelaporan Regulator",
+    "scope": "Bab XI, Pasal 58–59 dan 62",
+    "summary": "Referensi tata kelola laporan rencana pengembangan TI dan laporan kondisi terkini penyelenggaraan TI yang menghimpun hasil kewajiban POJK lainnya.",
+    "contains": [
+      "Rencana pengembangan TI sebelum tahun rencana",
+      "Laporan kondisi terkini TI",
+      "Mekanisme konsolidasi, review, approval, dan bukti submit"
+    ],
+    "used_by": [
+      "POJK-02",
+      "POJK-05",
+      "POJK-12-13",
+      "POJK-15",
+      "POJK-22",
+      "POJK-23-24",
+      "POJK-53",
+      "POJK-54",
+      "POJK-55",
+      "POJK-58",
+      "POJK-59",
+      "POJK-61-62",
+      "POJK-66"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Kalender pelaporan rutin penyelenggaraan TI” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Kalender pelaporan rutin penyelenggaraan TI” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Kalender pelaporan rutin penyelenggaraan TI” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-13",
+    "title": "Kalender SLA pelaporan dan notifikasi",
+    "type": "Batas Waktu",
+    "scope": "Pasal 25, 58–60, 63",
+    "summary": "Daftar tenggat utama: laporan uji skenario 10 hari kerja, rencana pengembangan TI akhir November, laporan kondisi terkini 15 hari kerja setelah akhir tahun, notifikasi insiden 24 jam, serta laporan insiden 5 hari kerja.",
+    "contains": [
+      "Matriks peristiwa, tenggat, owner, dan kanal",
+      "Alert sebelum batas waktu",
+      "Bukti submit serta pencatatan waktu diketahui/selesai"
+    ],
+    "used_by": [
+      "POJK-21",
+      "POJK-22",
+      "POJK-25",
+      "POJK-32",
+      "POJK-58",
+      "POJK-59",
+      "POJK-60",
+      "POJK-61-62",
+      "POJK-63-64"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Kalender SLA pelaporan dan notifikasi” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Kalender SLA pelaporan dan notifikasi” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Kalender SLA pelaporan dan notifikasi” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-14",
+    "title": "Laporan realisasi kegiatan TI berizin",
+    "type": "Pelaporan Regulator",
+    "scope": "Pasal 61–62",
+    "summary": "Referensi laporan realisasi penempatan Sistem Elektronik/DRC luar negeri, pemrosesan transaksi luar negeri, dan kegiatan Bank sebagai penyedia jasa TI, paling lama tiga bulan setelah implementasi.",
+    "contains": [
+      "Identifikasi kegiatan berizin yang telah diimplementasikan",
+      "Data realisasi, tanggal implementasi, dan eviden pendukung",
+      "Bukti pengiriman melalui sistem pelaporan OJK"
+    ],
+    "used_by": [
+      "POJK-18",
+      "POJK-29",
+      "POJK-30",
+      "POJK-31",
+      "POJK-32",
+      "POJK-35",
+      "POJK-36",
+      "POJK-40-41",
+      "POJK-48",
+      "POJK-49-50",
+      "POJK-61-62"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Laporan realisasi kegiatan TI berizin” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Laporan realisasi kegiatan TI berizin” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Laporan realisasi kegiatan TI berizin” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-15",
+    "title": "Matriks konsekuensi pelanggaran dan kualitas pelaporan",
+    "type": "Sanksi Administratif",
+    "scope": "Pasal 9, 14, 20, 27, 33, 42, 46, 51, 56, 63–64, dan 66",
+    "summary": "Referensi konsekuensi administratif atas kewajiban yang tidak dipenuhi, termasuk teguran tertulis dan, jika ketidakpatuhan berlanjut, larangan produk baru, pembekuan kegiatan tertentu, dan/atau penurunan faktor tata kelola; juga mencakup risiko kesalahan informasi pada laporan tidak lengkap.",
+    "contains": [
+      "Matriks pasal kewajiban dan sanksi",
+      "Eskalasi sebelum jatuh tempo atau saat terjadi deviasi",
+      "Rencana remediasi dan bukti pemenuhan"
+    ],
+    "used_by": [
+      "POJK-60",
+      "POJK-63-64"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Matriks konsekuensi pelanggaran dan kualitas pelaporan” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Matriks konsekuensi pelanggaran dan kualitas pelaporan” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Matriks konsekuensi pelanggaran dan kualitas pelaporan” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-16",
+    "title": "Matriks kepatuhan dan bukti POJK 11/2022",
+    "type": "Dokumen Tata Kelola",
+    "scope": "Seluruh bab operasional",
+    "summary": "Matriks kerja internal untuk menghubungkan setiap pasal kewajiban dengan pemilik kontrol, kebijakan/prosedur, bukti, frekuensi, status gap, risiko, dan kewajiban pelaporan.",
+    "contains": [
+      "Katalog requirement dan interpretasi internal",
+      "Owner, evidence, frequency, dan status gap",
+      "Register action plan, approval, dan retensi bukti"
+    ],
+    "used_by": [
+      "POJK-02",
+      "POJK-03",
+      "POJK-04",
+      "POJK-05",
+      "POJK-06",
+      "POJK-07",
+      "POJK-08",
+      "POJK-11",
+      "POJK-12-13",
+      "POJK-15",
+      "POJK-16",
+      "POJK-17",
+      "POJK-18",
+      "POJK-19",
+      "POJK-21",
+      "POJK-22",
+      "POJK-23-24",
+      "POJK-25",
+      "POJK-26",
+      "POJK-29",
+      "POJK-30",
+      "POJK-31",
+      "POJK-32",
+      "POJK-35",
+      "POJK-36",
+      "POJK-37",
+      "POJK-39",
+      "POJK-40-41",
+      "POJK-43",
+      "POJK-44",
+      "POJK-45",
+      "POJK-48",
+      "POJK-49-50",
+      "POJK-53",
+      "POJK-54",
+      "POJK-55",
+      "POJK-58",
+      "POJK-59",
+      "POJK-60",
+      "POJK-61-62",
+      "POJK-63-64",
+      "POJK-66",
+      "POJK-67-69",
+      "POJK-70-73"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Matriks kepatuhan dan bukti POJK 11/2022” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Matriks kepatuhan dan bukti POJK 11/2022” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Matriks kepatuhan dan bukti POJK 11/2022” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  },
+  {
+    "id": "REF-17",
+    "title": "Ketentuan peralihan dan penutup",
+    "type": "Transisi & Ketentuan",
+    "scope": "Bab XIII–XIV, Pasal 67–73",
+    "summary": "Referensi penyesuaian kebijakan dan kontrak yang telah ada, penyesuaian rencana strategis, penerapan perdana ketentuan tertentu, hubungan dengan POJK lama, pencabutan, serta tanggal berlaku.",
+    "contains": [
+      "Gap assessment dan evidence penyesuaian historis",
+      "Register regulasi aktif/dicabut",
+      "Monitoring ketentuan lanjutan OJK"
+    ],
+    "used_by": [
+      "POJK-67-69",
+      "POJK-70-73"
+    ],
+    "roleTranslations": {
+      "bod": "Mode Direksi/Dewan Komisaris: gunakan “Ketentuan peralihan dan penutup” untuk mengawasi keputusan, risiko, dan tindak lanjut yang material.",
+      "sysadmin": "Mode Tim TI: jadikan “Ketentuan peralihan dan penutup” sebagai daftar kerja dan bukti operasional yang dapat ditelusuri.",
+      "legal": "Mode Legal & Compliance: gunakan “Ketentuan peralihan dan penutup” untuk memastikan dasar hukum, dokumen, dan komunikasi regulator terjaga."
+    }
+  }
+]
