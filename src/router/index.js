@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import FrameworkIndex from '../views/FrameworkIndex.vue';
 
 export const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import('../views/FrameworkIndex.vue'),
+        component: FrameworkIndex,
         meta: {
             title: 'SibukPatuh - Referensi Edukatif Kepatuhan Siber dan Tata Kelola TI',
             description: 'Ruang belajar framework, regulasi, dan praktik kepatuhan keamanan siber untuk praktisi Indonesia. Mencakup ISO 27001, NIST CSF, COBIT 2019, SEOJK, PBI, UU PDP, dan OWASP.',
