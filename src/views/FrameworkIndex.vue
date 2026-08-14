@@ -57,6 +57,13 @@
               <p class="frx-desc-item-text">{{ $t('home.cards.intelText') }}</p>
             </div>
           </div>
+          <router-link to="/panduan-praktis" class="frx-desc-item frx-guide-card">
+            <span class="frx-desc-icon"><i class="fas fa-compass"></i></span>
+            <div>
+              <h3 class="frx-desc-item-title">Panduan Praktis</h3>
+              <p class="frx-desc-item-text">Analisis original untuk mengubah kewajiban menjadi evidence, baseline, dan rencana perbaikan yang dapat dijalankan.</p>
+            </div>
+          </router-link>
         </div>
       </div>
     </section>
@@ -392,4 +399,5 @@ export default {
   .frx-desc-grid { grid-template-columns: 1fr; }
   .frx-description { padding: 1rem; }
 }
+.frx-guide-card{display:flex;align-items:flex-start;text-decoration:none;color:inherit;border:1px solid rgba(15,118,110,.2);background:linear-gradient(135deg,rgba(240,253,250,.92),rgba(239,246,255,.9))}.frx-guide-card:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(15,118,110,.12)}
 </style>

@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
           '/about',
           '/privacy-policy',
           '/contact',
+          '/panduan-praktis',
           '/frameworks/iso27001',
           '/frameworks/iso37001',
           '/frameworks/nist-csf-2',
