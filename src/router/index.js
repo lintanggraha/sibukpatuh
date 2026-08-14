@@ -43,6 +43,16 @@ export const routes = [
         }
     },
     {
+        path: '/panduan-praktis',
+        name: 'guides',
+        component: () => import('../views/GuidesView.vue'),
+        meta: {
+            title: 'Panduan Praktis Kepatuhan Siber untuk Tim Indonesia | SibukPatuh',
+            description: 'Panduan original SibukPatuh tentang mengubah regulasi dan framework keamanan siber menjadi baseline, evidence, dan rencana perbaikan yang dapat dijalankan.',
+            keywords: 'panduan kepatuhan siber, evidence audit, baseline kontrol, NIST CSF, ISO 27001, OWASP, GRC Indonesia'
+        }
+    },
+    {
         path: '/frameworks/iso27001',
         name: 'iso27001',
         component: () => import('../views/Iso27001.vue'),

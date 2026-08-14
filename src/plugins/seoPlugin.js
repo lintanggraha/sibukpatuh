@@ -25,6 +25,12 @@ const ROUTE_SEO_CONFIG = {
     type: 'WebPage',
     breadcrumb: ['Beranda', 'Kebijakan Privasi'],
   },
+  '/panduan-praktis': {
+    type: 'TechArticle',
+    breadcrumb: ['Beranda', 'Panduan Praktis'],
+    keywords: 'panduan kepatuhan siber, evidence audit, baseline kontrol, GRC Indonesia',
+    dateModified: '2026-08-15',
+  },
   '/frameworks/iso27001': {
     type: 'TechArticle',
     breadcrumb: ['Beranda', 'Framework Internasional', 'ISO 27001:2022'],

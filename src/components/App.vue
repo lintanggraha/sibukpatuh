@@ -50,6 +50,11 @@
                   </div>
                 </div>
 
+                <router-link to="/panduan-praktis" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('guides') }" @click="closeAllGroups">
+                  <i class="fas fa-compass nav-icon"></i>
+                  <span>Panduan</span>
+                </router-link>
+
                 <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
                   <i class="fas fa-info-circle nav-icon"></i>
                   <span>{{ $t('nav.tentang') }}</span>
