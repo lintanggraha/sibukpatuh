@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.runtime.esm-bundler.js',
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
