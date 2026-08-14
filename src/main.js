@@ -2,7 +2,6 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './components/App.vue';
 import router from './router/index.js';
-import VueGtag from 'vue-gtag-next';
 import i18n from './i18n';
 import { installRegulationDataFetchTranslator } from './utils/regulationDataTranslator';
 import { seoPlugin } from './plugins/seoPlugin.js';
@@ -25,18 +24,8 @@ app.use(pinia);
 app.use(i18n);
 app.use(seoPlugin, { router }); // Auto-inject per-page SEO schema
 
-// Install Google Analytics 4
-import { trackRouter } from 'vue-gtag-next';
-const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
-if (gaId && gaId !== 'G-XXXXXXXXXX') {
-  app.use(VueGtag, {
-    property: { id: gaId },
-    appName: 'SibukPatuh'
-  });
-  trackRouter(router);
-} else {
-  console.warn('Google Analytics is disabled (VITE_GA_MEASUREMENT_ID is missing or default).');
-}
+// Analytics is intentionally not initialized in the app runtime. A blocked
+// third-party analytics script must never prevent the Vue application from mounting.
 
 // Global error handler for uncaught errors
 app.config.errorHandler = (error, instance, info) => {
