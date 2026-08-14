@@ -1,98 +1,69 @@
+import { guardRequest } from '../server/security.js';
+
 /**
- * Vercel Serverless Function: Breach Directory Proxy
- * Security Rating: A (SonarQube)
- * Reliability: High (Timeout & Error Handling)
+ * Vercel Serverless Function: Breach Directory Proxy.
+ * The endpoint never fabricates breach results when the upstream is unavailable.
  */
 export default async function handler(req, res) {
-  const { email } = req.query;
+  if (!guardRequest(req, res, { methods: ['GET'], rateLimit: { windowMs: 60_000, max: 10 } })) {
+    return;
+  }
 
-  // SECURITY: Optimized Regex to prevent ReDoS (Regular Expression Denial of Service)
+  const email = String(req.query?.email || '').trim();
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!email || !emailRegex.test(email)) {
-    return res.status(400).json({ 
-      success: false, 
-      error: "A valid email address is required" 
+  if (!email || email.length > 254 || !emailRegex.test(email)) {
+    return res.status(400).json({
+      success: false,
+      error: 'A valid email address is required',
     });
   }
 
-  const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
-  if (!RAPIDAPI_KEY) {
-    // RELIABILITY: Fail gracefully if environment is not configured
-    console.error("CRITICAL ERROR: RAPIDAPI_KEY is not defined in environment variables.");
-    return res.status(500).json({ 
-      success: false, 
-      error: "Internal server configuration error" 
+  const rapidApiKey = String(process.env.RAPIDAPI_KEY || '').trim();
+  if (!rapidApiKey) {
+    return res.status(503).json({
+      success: false,
+      error: 'Breach lookup is not configured.',
     });
   }
 
   try {
     const url = `https://breachdirectory.p.rapidapi.com/?func=auto&term=${encodeURIComponent(email)}`;
-    
-    // RELIABILITY: Fetch from external API
     const response = await fetch(url, {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': RAPIDAPI_KEY,
-        'x-rapidapi-host': 'breachdirectory.p.rapidapi.com'
-      }
+        'x-rapidapi-key': rapidApiKey,
+        'x-rapidapi-host': 'breachdirectory.p.rapidapi.com',
+      },
+      signal: AbortSignal.timeout(10_000),
     });
 
-    // RELIABILITY: Handle rate limits with SMART FALLBACK
-    // If RapidAPI blocks us with 429, we return realistic mock data
     if (response.status === 429) {
-      console.warn(`[Breach API] Rate limit hit (429). Triggering Smart Fallback for ${email}`);
-      
-      const mockResult = [
-        {
-          line_number: 1,
-          sources: ["Tokopedia", "E-commerce Leak 2020"],
-          passwords: ["(Hash MD5/SHA1 Terenkripsi)"],
-          hash: ["2a9...8f0"]
-        },
-        {
-          line_number: 2,
-          sources: ["Canva", "Graphic Design Platform Breach 2019"],
-          passwords: ["(Telah di-salt dan hash)"],
-          hash: ["1b3...9a1"]
-        },
-        {
-          line_number: 3,
-          sources: ["LinkedIn", "Data Scrape 2021"],
-          passwords: ["(Informasi Profil Publik)"],
-          hash: ["8c4...2d5"]
-        }
-      ];
-
-      return res.status(200).json({
-        success: true,
-        found: mockResult.length,
-        result: mockResult
+      res.setHeader('Retry-After', '60');
+      return res.status(429).json({
+        success: false,
+        error: 'Breach database rate limit reached. Please retry later.',
       });
     }
 
     if (!response.ok) {
-      console.warn(`External API Error: Status ${response.status}`);
-      return res.status(response.status).json({ 
-        success: false, 
-        error: "External security database is currently unavailable" 
+      console.warn(`[Breach API] Upstream returned ${response.status}`);
+      return res.status(502).json({
+        success: false,
+        error: 'External security database is currently unavailable.',
       });
     }
 
     const data = await response.json();
-    
-    // MAINTAINABILITY: Standardized response structure
     return res.status(200).json({
       success: true,
-      found: data.found || 0,
-      result: data.result || []
+      found: Number(data.found || 0),
+      result: Array.isArray(data.result) ? data.result : [],
     });
-
   } catch (error) {
-    // SECURITY: Log the error internally but don't expose stack traces to the client
-    console.error("Internal Proxy Error:", error.message);
-    return res.status(500).json({ 
-      success: false, 
-      error: "An unexpected error occurred during the security check" 
+    console.error('[Breach API] Proxy error:', error instanceof Error ? error.message : 'Unknown error');
+    return res.status(502).json({
+      success: false,
+      error: 'External security database is currently unavailable.',
     });
   }
 }

@@ -1,0 +1,9 @@
+/* TEAM */
+Owner: Lintang
+Site: https://sibukpatuh.net
+Contact: mailto:lintanggraha@gmail.com
+
+/* SITE */
+Name: SibukPatuh
+Description: Referensi edukatif kepatuhan siber dan tata kelola TI.
+Language: Indonesian

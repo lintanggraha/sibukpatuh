@@ -1,0 +1,19 @@
+{
+  "name": "SibukPatuh",
+  "short_name": "SibukPatuh",
+  "description": "Referensi edukatif kepatuhan siber dan tata kelola TI.",
+  "lang": "id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

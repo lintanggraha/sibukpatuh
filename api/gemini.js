@@ -12,6 +12,11 @@
  *  8. Error response tidak bocorkan detail internal
  */
 
+import { guardRequest } from '../server/security.js';
+
+// ---------------------------------------------------------------------------
+// Legacy validation helpers remain below for compatibility; request guarding
+// is centralized in server/security.js.
 // ---------------------------------------------------------------------------
 // 1. ORIGIN ALLOWLIST
 // ---------------------------------------------------------------------------
@@ -244,22 +249,11 @@ function isAllowedOrigin(origin) {
 // MAIN HANDLER
 // ---------------------------------------------------------------------------
 export default async function handler(req, res) {
-  // Method check
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-
-  // Origin check
-  const origin = getRequestOrigin(req.headers);
-  if (!origin || !isAllowedOrigin(origin)) {
-    return res.status(403).json({ error: 'Forbidden.' });
-  }
-
-  // Rate limiting
-  const clientIp = getClientIp(req);
-  const rateCheck = checkRateLimit(clientIp);
-  if (rateCheck.limited) {
-    return res.status(429).json({ error: rateCheck.reason });
+  if (!guardRequest(req, res, {
+    methods: ['POST'],
+    rateLimit: { windowMs: 60_000, max: 10 },
+  })) {
+    return;
   }
 
   // API key check
@@ -269,7 +263,12 @@ export default async function handler(req, res) {
   }
 
   // Input validation
-  const { messages, cveContext } = req.body || {};
+  const requestBody = req.body || {};
+  if (JSON.stringify(requestBody).length > 30_000) {
+    return res.status(413).json({ error: 'Request body is too large.' });
+  }
+
+  const { messages, cveContext } = requestBody;
 
   const safeMessages = normalizeMessages(messages);
   if (!safeMessages) {
@@ -351,10 +350,13 @@ Jawab dalam Bahasa Indonesia yang natural. Fokus pada edukasi keamanan siber dan
   };
 
   try {
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
     const response = await fetch(apiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': apiKey,
+      },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(25000), // 25 detik timeout
     });
