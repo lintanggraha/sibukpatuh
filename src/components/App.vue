@@ -1,5 +1,4 @@
 <template>
-  <Analytics />
   <div class="framework-shell">
     <div class="container-xl">
       <header class="framework-header">
@@ -131,24 +130,18 @@
         @close="searchOpen = false"
       />
 
-      <Analytics />
-      <SpeedInsights />
     </div>
   </div>
 </template>
 
 <script>
-import { Analytics } from '@vercel/analytics/vue';
 import { useFrameworkStore } from '../stores/frameworkStore';
-import { SpeedInsights } from '@vercel/speed-insights/vue';
 import { applyDomTranslations } from '../utils/domTranslator';
 import GlobalSearch from './GlobalSearch.vue';
 
 export default {
   name: "App",
   components: {
-    Analytics,
-    SpeedInsights,
     GlobalSearch
   },
   setup() {
