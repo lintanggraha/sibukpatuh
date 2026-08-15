@@ -100,7 +100,7 @@
         <!-- Tab 2: Eksplorasi -->
         <div v-if="activeTab === 'explorer'" key="explorer-tab">
           <div class="iso-workspace">
-            <aside class="iso-panel iso-filter-panel" style="position: sticky; top: 1rem;">
+            <aside class="iso-panel iso-filter-panel">
               <div class="iso-panel-head"><h3>Filter Workspace</h3></div>
               <div class="iso-quick-themes mb-3">
                 <button v-for="domain in domainBreakdown" :key="domain.name" type="button" class="iso-quick-theme" :style="{ '--accent': domain.color }" @click="filterTheme = domain.name"><strong>{{ domain.name === 'Organisasional' ? 'Organisasi' : domain.name }}</strong><span>{{ domain.count }} kontrol</span></button>
