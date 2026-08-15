@@ -26,7 +26,7 @@
                     :class="{ 'is-active': group.active }"
                     type="button"
                     @click.stop="toggleGroup(group)"
-                    aria-expanded="false"
+                    :aria-expanded="group.show ? 'true' : 'false'"
                   >
                     <i :class="`fas ${group.icon}`" class="nav-icon"></i>
                     <span>{{ $t(group.labelKey) }}</span>
@@ -55,15 +55,6 @@
                   <span>Panduan</span>
                 </router-link>
 
-                <router-link to="/about" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('about') }" @click="closeAllGroups">
-                  <i class="fas fa-info-circle nav-icon"></i>
-                  <span>{{ $t('nav.tentang') }}</span>
-                </router-link>
-
-                <router-link to="/contact" class="framework-nav-toggle" style="text-decoration: none;" :class="{ 'is-active': isActiveRoute('contact') }" @click="closeAllGroups">
-                  <i class="fas fa-envelope nav-icon"></i>
-                  <span>{{ $t('nav.kontak') }}</span>
-                </router-link>
             </nav>
 
             <div class="framework-tools">
@@ -267,6 +258,16 @@ export default {
             },
           ],
         },
+        {
+          labelKey: "nav.tentang",
+          icon: "fa-info-circle",
+          active: false,
+          show: false,
+          items: [
+            { routeName: "about", labelKey: "nav.tentang", label: "Tentang", icon: "fa-circle-info" },
+            { routeName: "contact", labelKey: "nav.kontak", label: "Kontak", icon: "fa-envelope" },
+          ],
+        },
       ],
     };
   },
@@ -404,6 +405,9 @@ export default {
         route.name === "framework_analysis" ||
         route.name === "checklist_tools" ||
         route.name === "simulator";
+      this.frameworkNavGroups[4].active =
+        route.name === "about" ||
+        route.name === "contact";
       
       // Sync with Pinia store
       const store = useFrameworkStore();
