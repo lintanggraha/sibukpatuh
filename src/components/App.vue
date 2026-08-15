@@ -813,7 +813,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   gap: 0.1rem;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-width: 0;
   flex: 1 1 auto;
