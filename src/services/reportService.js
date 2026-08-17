@@ -59,6 +59,47 @@ function statusLabel(status, isEn = false) {
   return map[status] || status;
 }
 
+function priorityLabel(priority, isEn = false) {
+  const map = {
+    immediate: isEn ? 'IMMEDIATE' : 'SEGERA',
+    short: isEn ? 'SHORT TERM' : 'JANGKA PENDEK',
+    medium: isEn ? 'MID TERM' : 'JANGKA MENENGAH',
+  };
+  return map[priority] || priority || '-';
+}
+
+function formatRecommendations(recommendations, isEn = false, separator = '\n') {
+  if (!Array.isArray(recommendations) || recommendations.length === 0) return '-';
+  return recommendations
+    .map((rec, index) => `${index + 1}. [${priorityLabel(rec.priority, isEn)}] ${rec.action || '-'}`)
+    .join(separator);
+}
+
+function findingNarrative(res, isEn = false) {
+  const whyLabel = isEn ? 'Why it matters' : 'Mengapa penting';
+  const impactLabel = isEn ? 'Impact if ignored' : 'Dampak jika diabaikan';
+  const sections = [];
+  if (res.why) sections.push(`${whyLabel}: ${res.why}`);
+  if (res.impact) sections.push(`${impactLabel}: ${res.impact}`);
+  if (res.message && sections.length === 0) sections.push(res.message);
+  return sections.join('\n\n') || '-';
+}
+
+function findingRegulations(res) {
+  return Array.isArray(res.regulations) && res.regulations.length
+    ? res.regulations.join(', ')
+    : '-';
+}
+
+function findingRecommendations(res, isEn = false) {
+  if (Array.isArray(res.recommendations)) return formatRecommendations(res.recommendations, isEn);
+  return res.recommendation || '-';
+}
+
+function findingEffort(res) {
+  return res.effort || '-';
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 //  PDF: Header & Footer helper
 // ─────────────────────────────────────────────────────────────────────────────
@@ -491,17 +532,26 @@ export function exportSimulatorPDF({ scenario, results, isEn = false, includeRoa
   const findingsHead = [[
     '#',
     isEn ? 'Area / Framework' : 'Area / Framework',
-    isEn ? 'Risk Level' : 'Tingkat Risiko',
-    isEn ? 'Finding' : 'Temuan',
-    isEn ? 'Recommendation' : 'Rekomendasi',
+    isEn ? 'Risk / Score / References' : 'Risiko / Skor / Referensi',
+    isEn ? 'Why It Matters / Impact' : 'Mengapa Penting / Dampak',
+    isEn ? 'Recommended Actions / Execution' : 'Tindakan Rekomendasi / Eksekusi',
   ]];
 
   const findingsBody = results.map((res, idx) => [
     idx + 1,
-    res.framework,
-    statusLabel(res.severity, isEn),
-    res.message,
-    res.recommendation || '-',
+    res.framework || '-',
+    [
+      statusLabel(res.severity, isEn),
+      `${isEn ? 'Criticality' : 'Kritikalitas'}: ${res.criticalityScore ?? '-'}/10`,
+      `${isEn ? 'References' : 'Referensi'}: ${findingRegulations(res)}`,
+    ].join('\n'),
+    findingNarrative(res, isEn),
+    [
+      `${isEn ? 'Actions' : 'Tindakan'}:\n${findingRecommendations(res, isEn)}`,
+      `${isEn ? 'Effort' : 'Upaya'}: ${findingEffort(res)}`,
+      `${isEn ? 'Timeline' : 'Timeline'}: ${res.timeline || '-'}`,
+      `${isEn ? 'Owner' : 'Penanggung Jawab'}: ${res.owner || '-'}`,
+    ].join('\n\n'),
   ]);
 
   autoTable(doc, {
@@ -518,9 +568,9 @@ export function exportSimulatorPDF({ scenario, results, isEn = false, includeRoa
     bodyStyles: { fontSize: 7.5, cellPadding: 2.5 },
     columnStyles: {
       0: { cellWidth: 8, halign: 'center' },
-      1: { cellWidth: 38 },
-      2: { cellWidth: 28, halign: 'center' },
-      3: { cellWidth: 55 },
+      1: { cellWidth: 34 },
+      2: { cellWidth: 43, halign: 'center' },
+      3: { cellWidth: 78 },
       4: { cellWidth: 'auto' },
     },
     didParseCell(data) {
@@ -734,9 +784,9 @@ export async function exportSimulatorExcel({ scenario, results, isEn = false }) 
   // ── Sheet 2: Findings ──────────────────────────────────────────────────────
   const wsFindings = wb.addWorksheet(isEn ? 'Findings' : 'Temuan');
 
-  wsFindings.mergeCells('A1:E1');
+  wsFindings.mergeCells('A1:K1');
   const fTitle = wsFindings.getCell('A1');
-  fTitle.value = isEn ? 'Compliance Findings' : 'Temuan Kepatuhan';
+  fTitle.value = isEn ? 'Compliance Findings — Full Detail' : 'Temuan Kepatuhan — Detail Lengkap';
   fTitle.font = { bold: true, size: 12, color: { argb: 'FFFFFFFF' } };
   fTitle.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2563EB' } };
   fTitle.alignment = { horizontal: 'center', vertical: 'middle' };
@@ -748,8 +798,14 @@ export async function exportSimulatorExcel({ scenario, results, isEn = false }) 
     '#',
     isEn ? 'Area / Framework' : 'Area / Framework',
     isEn ? 'Risk Level' : 'Tingkat Risiko',
-    isEn ? 'Finding' : 'Temuan',
-    isEn ? 'Recommendation' : 'Rekomendasi',
+    isEn ? 'Criticality Score' : 'Skor Kritikalitas',
+    isEn ? 'Regulatory References' : 'Referensi Regulasi',
+    isEn ? 'Why It Matters' : 'Mengapa Penting',
+    isEn ? 'Impact if Ignored' : 'Dampak Jika Diabaikan',
+    isEn ? 'Recommended Actions' : 'Tindakan yang Direkomendasikan',
+    isEn ? 'Effort' : 'Upaya',
+    'Timeline',
+    isEn ? 'Owner' : 'Penanggung Jawab',
   ]);
   fHeader.eachCell((cell) => {
     cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
@@ -771,10 +827,16 @@ export async function exportSimulatorExcel({ scenario, results, isEn = false }) 
   results.forEach((res, idx) => {
     const row = wsFindings.addRow([
       idx + 1,
-      res.framework,
+      res.framework || '-',
       statusLabel(res.severity, isEn),
-      res.message,
-      res.recommendation || '-',
+      res.criticalityScore ?? '-',
+      findingRegulations(res),
+      res.why || res.message || '-',
+      res.impact || '-',
+      findingRecommendations(res, isEn),
+      findingEffort(res),
+      res.timeline || '-',
+      res.owner || '-',
     ]);
 
     row.getCell(1).alignment = { horizontal: 'center' };
@@ -789,8 +851,89 @@ export async function exportSimulatorExcel({ scenario, results, isEn = false }) 
   });
 
   wsFindings.columns = [
-    { width: 6 }, { width: 35 }, { width: 24 }, { width: 60 }, { width: 60 },
+    { width: 6 }, { width: 34 }, { width: 24 }, { width: 16 }, { width: 34 },
+    { width: 62 }, { width: 62 }, { width: 72 }, { width: 14 }, { width: 18 }, { width: 28 },
   ];
+  wsFindings.autoFilter = { from: 'A3', to: `K${Math.max(3, results.length + 2)}` };
+  wsFindings.views = [{ state: 'frozen', ySplit: 3 }];
+
+  // ── Sheet 3: Roadmap eksekusi ───────────────────────────────────────────────
+  const wsRoadmap = wb.addWorksheet(isEn ? 'Execution Roadmap' : 'Roadmap Eksekusi');
+  const roadmap = generateRoadmap(results, { isEn });
+  wsRoadmap.mergeCells('A1:H1');
+  const rTitle = wsRoadmap.getCell('A1');
+  rTitle.value = isEn ? 'Compliance Execution Roadmap — 12 Months' : 'Roadmap Eksekusi Kepatuhan — 12 Bulan';
+  rTitle.font = { bold: true, size: 12, color: { argb: 'FFFFFFFF' } };
+  rTitle.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2563EB' } };
+  rTitle.alignment = { horizontal: 'center', vertical: 'middle' };
+  wsRoadmap.getRow(1).height = 24;
+
+  wsRoadmap.addRow([]);
+  wsRoadmap.addRow([
+    isEn ? 'Total Tasks' : 'Total Task', roadmap.stats.totalTasks,
+    isEn ? 'Immediate' : 'Segera', roadmap.stats.immediateCount,
+    isEn ? 'High Criticality' : 'Kritikalitas Tinggi', roadmap.stats.criticalTaskCount,
+    isEn ? 'Teams' : 'Tim', roadmap.stats.uniqueOwners.length,
+  ]);
+  wsRoadmap.getRow(3).eachCell((cell) => {
+    cell.font = { bold: true };
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF1F5F9' } };
+    cell.alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
+  });
+
+  const rHeader = wsRoadmap.addRow([
+    isEn ? 'Window' : 'Jendela',
+    isEn ? 'Phase' : 'Fase',
+    isEn ? 'Task / Full Action' : 'Task / Tindakan Lengkap',
+    isEn ? 'Area' : 'Area',
+    isEn ? 'References' : 'Referensi',
+    isEn ? 'Owner' : 'Penanggung Jawab',
+    isEn ? 'Priority' : 'Prioritas',
+    isEn ? 'Criticality' : 'Kritikalitas',
+  ]);
+  rHeader.eachCell((cell) => {
+    cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1E3A5F' } };
+    cell.alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
+  });
+
+  roadmap.tasks.forEach((task, idx) => {
+    const phase = roadmap.phases.find((item) => item.id === task.phaseId);
+    const phaseLabel = phase ? (isEn ? phase.labelEn : phase.labelId) : '-';
+    const row = wsRoadmap.addRow([
+      `M${task.startMonth}–M${task.endMonth}`,
+      phaseLabel,
+      task.fullAction || task.title || '-',
+      task.area || '-',
+      Array.isArray(task.regulations) ? task.regulations.join(', ') : '-',
+      task.owner || '-',
+      priorityLabel(task.priority, isEn),
+      task.criticalityScore ?? '-',
+    ]);
+    if (idx % 2 === 0) {
+      row.eachCell((cell) => {
+        cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF8FAFC' } };
+      });
+    }
+    row.eachCell((cell) => {
+      cell.alignment = { wrapText: true, vertical: 'top' };
+      cell.border = { bottom: { style: 'hair', color: { argb: 'FFE2E8F0' } } };
+    });
+    row.height = 42;
+  });
+
+  if (!roadmap.tasks.length) {
+    const emptyRow = wsRoadmap.addRow([
+      isEn ? 'No actionable findings were generated.' : 'Tidak ada temuan yang memerlukan tindakan.',
+    ]);
+    wsRoadmap.mergeCells(`A${emptyRow.number}:H${emptyRow.number}`);
+  }
+
+  wsRoadmap.columns = [
+    { width: 14 }, { width: 30 }, { width: 72 }, { width: 34 },
+    { width: 34 }, { width: 28 }, { width: 20 }, { width: 14 },
+  ];
+  wsRoadmap.views = [{ state: 'frozen', ySplit: 4 }];
 
   // ── Download ───────────────────────────────────────────────────────────────
   const buffer = await wb.xlsx.writeBuffer();
