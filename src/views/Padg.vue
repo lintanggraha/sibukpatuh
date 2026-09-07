@@ -27,12 +27,13 @@
         <div>
           <span class="padg-kicker"><i class="fas fa-landmark"></i>Bank Indonesia</span>
           <h1 class="padg-title">PADG 32/2025 - Pengaturan Industri Sistem Pembayaran</h1>
-          <p class="padg-lede">Time to decode the payment ecosystem rules! Halaman ini membedah PADG 32/2025 dengan presisi. Kita map out seluruh kewajiban per bab, analisis implementasi teknisnya, plus reference lampiran yang lo butuhin. Jadikan ini kompas lo buat comply sama standar industri sistem pembayaran tanpa kehilangan agility bisnis.</p>
+          <p class="padg-lede">Halaman ini membedah PADG 32/2025 per kewajiban dan menerjemahkannya menjadi langkah implementasi, contoh evidence, serta uji efektivitas kontrol. Gunakan sebagai working guide; penetapan status comply tetap memerlukan review terhadap teks resmi PADG dan petunjuk teknis BI.</p>
+          <a class="padg-source" href="https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_322025.aspx" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>Sumber resmi BI · berlaku 31 Maret 2026</a>
           <div class="padg-metrics">
             <div class="padg-metric"><label>Total Bab</label><strong>{{ totalChapters }}</strong><span>BAB I sampai XII yang mengatur berbagai aspek sistem pembayaran.</span></div>
             <div class="padg-metric"><label>Total Kewajiban</label><strong>{{ totalRequirements }}</strong><span>Pasal-pasal yang dapat ditinjau satu per satu dalam eksplorasi.</span></div>
             <div class="padg-metric"><label>Lampiran</label><strong>{{ totalAppendices }}</strong><span>Definisi, parameter, dan kerangka implementasi penting.</span></div>
-            <div class="padg-metric"><label>Batas Pelaporan</label><strong>{{ reportingSla }}</strong><span>Hari kerja untuk penyampaian laporan setelah akhir periode.</span></div>
+            <div class="padg-metric"><label>Panduan Evidence</label><strong>{{ evidenceCoverage }}%</strong><span>{{ totalEvidenceExamples }} kewajiban sudah memiliki contoh evidence.</span></div>
           </div>
         </div>
         <div class="padg-side-stack">
@@ -45,6 +46,7 @@
         <button class="padg-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Regulasi</strong><span>Peta pilar, bab regulasi, dan elemen kewajiban inti.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter kewajiban, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>Lampiran & Referensi</strong><span>Board referensi lampiran, definisi, dan format.</span></span></button>
+        <button class="padg-tab" :class="{ active: activeTab === 'playbook' }" type="button" role="tab" @click="activeTab = 'playbook'"><i class="fas fa-clipboard-check"></i><span><strong>Playbook Implementasi</strong><span>Langkah kerja, evidence minimum, dan uji efektivitas.</span></span></button>
       </div>
 
       <div class="tab-content padg-grid">
@@ -82,7 +84,7 @@
                 <div class="padg-mini"><label>Prioritas</label><strong>Stabilitas & Inovasi</strong><span>Kestabilan sistem pembayaran sambil dorong inovasi digital.</span></div>
                 <div class="padg-mini"><label>Sifat Aturan</label><strong>Mandatory</strong><span>Kepatuhan wajib dengan sanksi administratif bagi pelanggar.</span></div>
               </div>
-              <div class="padg-note">Setiap PSP wajib menyelenggarakan sistem pembayaran sesuai ketentuan PADG ini.</div>
+              <div class="padg-note">Contoh evidence di halaman ini adalah evidence cue untuk persiapan audit, bukan bukti kepatuhan aktual. Organisasi tetap perlu melakukan self-assessment, menetapkan owner, dan menyimpan artefak pada repository yang dikendalikan.</div>
             </article>
 
             <article class="padg-panel">
@@ -93,6 +95,17 @@
                 <div class="x-small fw-bold">10 Dokumen Teknis</div>
                 <div class="x-small text-muted">Tersedia di tab Lampiran</div>
               </div>
+            </article>
+
+            <article class="padg-panel padg-playbook-preview">
+              <div class="padg-head"><h3>Playbook Implementasi</h3><span class="padg-chip">{{ implementationDomains.length }} domain</span></div>
+              <p class="padg-copy">Mulai dari applicability, bentuk kontrol, lalu buktikan efektivitasnya. Pilih domain untuk membuka kewajiban terkait.</p>
+              <div class="padg-playbook-steps">
+                <div><span>01</span><strong>Petakan</strong><small>Regulatory obligation register, owner, proses terdampak, dan due date.</small></div>
+                <div><span>02</span><strong>Jalankan</strong><small>Kebijakan/SOP, checklist, approval gate, dan log pelaksanaan kontrol.</small></div>
+                <div><span>03</span><strong>Buktikan</strong><small>Evidence, control test, temuan, remediation, dan review berkala.</small></div>
+              </div>
+              <button type="button" class="btn btn-outline-primary mt-3" @click="activeTab = 'playbook'"><i class="fas fa-arrow-right me-2"></i>Buka playbook per domain</button>
             </article>
           </div>
         </div>
@@ -124,8 +137,12 @@
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
                 <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
                 <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
-                <div class="padg-callout"><span class="padg-label">Fokus Implementasi</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="padg-callout padg-implementation-callout"><span class="padg-label">Fokus Implementasi · {{ activeRequirement?.implementation_domain || 'Operational guidance' }}</span><p class="mb-2">{{ activeRequirement?.implementation_focus || 'Tidak ada fokus implementasi tambahan.' }}</p><ol class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.implementation_steps && activeRequirement.implementation_steps.length ? activeRequirement.implementation_steps : (activeRequirement?.focus || []))" :key="idx">{{ item }}</li></ol></div>
                 <div class="padg-callout"><span class="padg-label">Contoh Evidence</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
+                <div class="padg-callout"><span class="padg-label">Evidence Owner & Cadence</span><div class="padg-owner-grid"><div><strong>{{ activeRequirement?.evidence_owner || '-' }}</strong><small>{{ activeRequirement?.evidence_cadence || '-' }}</small></div><span class="padg-status"><i class="fas fa-hourglass-half"></i>{{ activeRequirement?.evidence_status || 'Belum dinilai' }}</span></div></div>
+                <div v-if="activeRequirement?.key_dates?.length" class="padg-callout"><span class="padg-label">Tanggal / Trigger Kunci</span><ul class="padg-plain"><li v-for="date in activeRequirement.key_dates" :key="date">{{ date }}</li></ul></div>
+                <div class="padg-callout"><span class="padg-label">Uji Efektivitas Kontrol</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement?.control_test || [])" :key="idx">{{ item }}</li></ul></div>
+                <p class="padg-disclaimer"><i class="fas fa-info-circle me-1"></i>{{ activeRequirement?.evidence_disclaimer || 'Evidence cue bersifat panduan dan tidak membuktikan kepatuhan aktual.' }}</p>
                 <div class="padg-callout"><span class="padg-label">Lampiran Terkait</span><div class="padg-refs"><span v-for="ref in (activeRequirement?.appendices || [])" :key="ref" class="padg-ref">{{ ref }}</span><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="padg-empty w-100">Kewajiban ini tidak menunjuk lampiran spesifik.</span></div></div>
               </div>
             </article>
@@ -148,14 +165,20 @@
           </div>
         </div>
 
-        <!-- Tab 4: Asesmen Mandiri -->
-        <div v-if="activeTab === 'assessment'" key="assessment-tab">
-          <div class="padg-panel text-center py-5">
-            <i class="fas fa-clipboard-check mb-3" style="font-size: 3rem; color: #cbd5e1;"></i>
-            <h4 class="fw-800 text-navy mb-2">Modul Asesmen Dalam Pengembangan</h4>
-            <p class="text-muted" style="max-width: 500px; margin: 0 auto;">
-              Fitur kalkulator gap-analysis dan checklist audit kepatuhan untuk PADG 32/2025 sedang dipersiapkan. Modul ini akan membantu Anda mengukur tingkat kesiapan secara otomatis.
-            </p>
+        <!-- Tab 4: Playbook Implementasi -->
+        <div v-if="activeTab === 'playbook'" key="playbook-tab">
+          <div class="padg-panel">
+            <div class="padg-head"><div><h3>Playbook implementasi & evidence</h3><p class="padg-copy mb-0">Paket di bawah adalah pola kerja minimum untuk mengubah kewajiban menjadi kontrol yang dapat diuji. Status evidence selalu dimulai dari “Belum dinilai”.</p></div><span class="padg-chip">{{ totalEvidenceExamples }}/{{ totalRequirements }} terpetakan</span></div>
+            <div class="padg-domain-grid">
+              <button v-for="domain in implementationDomains" :key="domain.key" type="button" class="padg-domain-card" :style="{ '--accent': domain.color }" @click="jumpImplementationDomain(domain.label)">
+                <span class="padg-domain-icon"><i :class="['fas', domain.icon]"></i></span><span><strong>{{ domain.label }}</strong><small>{{ domain.count }} kewajiban · contoh evidence tersedia</small></span><i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="padg-guide-grid mt-4">
+              <div class="padg-guide-card"><span class="padg-label">Evidence minimum yang diminta auditor</span><strong>Artefak + metadata + hasil uji</strong><p>Jangan hanya mengunggah kebijakan. Sertakan versi, owner, tanggal berlaku, approval, bukti pelaksanaan, hasil monitoring/pengujian, dan tindak lanjut temuan.</p></div>
+              <div class="padg-guide-card"><span class="padg-label">Status yang disarankan</span><strong>Belum dinilai → Sebagian → Efektif</strong><p>Perbarui status setelah evidence direview. Status guidance pada dataset tidak sama dengan status kepatuhan organisasi.</p></div>
+              <div class="padg-guide-card"><span class="padg-label">Sumber dan batas penggunaan</span><strong>PADG + Juknis BI + bukti internal</strong><p>Gunakan <a href="https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_322025.aspx" target="_blank" rel="noopener noreferrer">halaman resmi BI</a> dan petunjuk teknis terbaru sebagai sumber normatif utama.</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -318,6 +341,24 @@ export default {
     },
     maxChapterCount() { return Math.max(...this.chapterBreakdown.map(c => c.count), 1); },
     activeRequirement() { return this.requirements.find(r => r.id === this.activeRequirementId) || null; },
+    totalEvidenceExamples() { return this.requirements.filter(r => Array.isArray(r.evidence) && r.evidence.length > 0).length; },
+    evidenceCoverage() { return this.totalRequirements ? Math.round((this.totalEvidenceExamples / this.totalRequirements) * 100) : 0; },
+    implementationDomains() {
+      const palette = [
+        ['TIKMI', '#0f766e', 'fa-shield-alt'],
+        ['Pelaporan', '#2563eb', 'fa-calendar-check'],
+        ['Perizinan', '#7c3aed', 'fa-stamp'],
+        ['Kerja sama', '#a16207', 'fa-handshake'],
+        ['Perlindungan', '#059669', 'fa-user-shield'],
+        ['Inovasi', '#dc2626', 'fa-flask'],
+        ['Tata kelola', '#144e72', 'fa-sitemap']
+      ];
+      const domains = [...new Set(this.requirements.map(r => r.implementation_domain).filter(Boolean))];
+      return domains.map((label, index) => {
+        const preset = palette.find(([key]) => label.includes(key)) || palette[index % palette.length];
+        return { key: label, label, color: preset[1], icon: preset[2], count: this.requirements.filter(r => r.implementation_domain === label).length };
+      }).sort((a, b) => b.count - a.count);
+    },
     filteredRequirements() {
       let result = this.requirements;
       if (this.activePillar) {
@@ -333,7 +374,9 @@ export default {
           const title = (r.title || '').toLowerCase();
           const summary = (r.summary || '').toLowerCase();
           const appendices = (r.appendices || []).join(' ').toLowerCase();
-          return id.includes(search) || title.includes(search) || summary.includes(search) || appendices.includes(search);
+          const domain = (r.implementation_domain || '').toLowerCase();
+          const evidence = (r.evidence || []).join(' ').toLowerCase();
+          return id.includes(search) || title.includes(search) || summary.includes(search) || appendices.includes(search) || domain.includes(search) || evidence.includes(search);
         });
       }
       return result;
@@ -355,6 +398,12 @@ export default {
     jumpAppendix(id = '') {
       this.appendixSearch = id || '';
       this.activeTab = 'reference';
+    },
+    jumpImplementationDomain(domain) {
+      this.activePillar = '';
+      this.chapterFilter = '';
+      this.requirementSearch = domain || '';
+      this.activeTab = 'explorer';
     },
     openAppendixModal(app) { this.selectedAppendix = app; this.showAppendixModal = true; },
     jumpToRequirement(id) {
@@ -514,6 +563,11 @@ export default {
 .padg-ref{border:1px solid rgba(20,38,59,.12);background:rgba(255,255,255,.82);color:var(--ink);font-size:.70rem;cursor:pointer}
 .padg-empty{padding:.9rem;border-radius:16px;border:1px dashed rgba(20,38,59,.18);background:rgba(255,255,255,.6);color:var(--muted);text-align:center;line-height:1.55}
 
+.padg-source{display:inline-flex;align-items:center;gap:.45rem;margin-top:.85rem;color:#fffaf2;font-size:.78rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:.18rem}.padg-source:hover{color:#fff;border-color:#fff}
+.padg-playbook-preview{grid-column:1 / -1}.padg-playbook-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.padg-playbook-steps>div{display:grid;grid-template-columns:auto 1fr;column-gap:.6rem;align-items:center;padding:.8rem;border-radius:15px;background:rgba(238,245,245,.65)}.padg-playbook-steps span{grid-row:span 2;color:#0f766e;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800}.padg-playbook-steps strong{font-size:.86rem;color:var(--ink)}.padg-playbook-steps small{color:var(--muted);font-size:.75rem;line-height:1.45}
+.padg-domain-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin-top:1rem}.padg-domain-card{display:flex;align-items:center;gap:.7rem;width:100%;padding:.82rem;border:1px solid var(--line);border-left:.25rem solid var(--accent);border-radius:16px;background:rgba(255,255,255,.72);color:var(--ink);text-align:left;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease}.padg-domain-card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(20,38,59,.1)}.padg-domain-card>span:nth-child(2){flex:1}.padg-domain-card strong,.padg-domain-card small{display:block}.padg-domain-card strong{font-size:.84rem}.padg-domain-card small{margin-top:.18rem;color:var(--muted);font-size:.72rem}.padg-domain-card>i{color:var(--accent)}.padg-domain-icon{display:flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border-radius:12px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+.padg-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}.padg-guide-card{padding:.85rem;border-radius:16px;border:1px solid var(--line);background:rgba(238,245,245,.5)}.padg-guide-card strong{display:block;margin-top:.3rem;font-size:.88rem}.padg-guide-card p{margin:.45rem 0 0;color:var(--muted);font-size:.78rem;line-height:1.55}.padg-guide-card a{color:#0f766e;font-weight:700}.padg-owner-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:.65rem;margin-top:.3rem}.padg-owner-grid strong,.padg-owner-grid small{display:block}.padg-owner-grid strong{font-size:.8rem;color:var(--ink)}.padg-owner-grid small{margin-top:.22rem;color:var(--muted);font-size:.74rem;line-height:1.45}.padg-status{display:inline-flex;align-items:center;gap:.35rem;flex-shrink:0;padding:.25rem .45rem;border-radius:999px;background:rgba(161,98,7,.1);color:#92400e;font-size:.68rem;font-weight:800}.padg-disclaimer{margin:0;padding:.65rem .75rem;border-left:.2rem solid #a16207;border-radius:0 12px 12px 0;background:rgba(255,247,237,.8);color:#78520d;font-size:.72rem;line-height:1.55}.padg-implementation-callout{border-color:rgba(15,118,110,.24);background:linear-gradient(135deg,rgba(236,253,245,.78),rgba(240,249,255,.72))}
+
 /* Modal Styles */
 .sej-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(15,23,42,.56)}.sej-modal-dialog{width:100%;max-width:780px}.sej-modal-shell{display:flex;flex-direction:column;height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}[data-bs-theme=dark] .sej-modal-shell{background:#1e293b;color:#f8fafc}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-close:hover{background:rgba(255,255,255,.35)}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem}.sej-modal-id{font-size:1.1rem;font-weight:800}.sej-modal-main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0}.sej-modal-header{flex-shrink:0;padding:1.15rem 1.5rem 1rem;border-bottom:1px solid rgba(0,0,0,.08)}.sej-modal-title{display:block;color:#144e72;font-size:1rem;font-weight:800;margin:0}[data-bs-theme=dark] .sej-modal-title{color:#7dd3fc}.sej-modal-body{flex:1;padding:1.25rem 1.5rem;overflow-y:auto;-webkit-overflow-scrolling:touch}.sej-modal-section{margin-bottom:1.25rem}.sej-modal-section-header{display:flex;gap:.55rem;padding-bottom:.5rem;margin-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.08);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}.sej-modal-scope{display:inline-block;margin-bottom:.55rem;padding:.28rem .55rem;border-radius:999px;background:rgba(20,78,114,.08);color:#144e72;font-size:.72rem;font-weight:700}.sej-modal-summary{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}.sej-modal-artifact-list{display:grid;gap:.45rem;list-style:none;margin:0;padding:0}.sej-modal-artifact-list li{display:flex;gap:.55rem;padding:.62rem .75rem;border-radius:12px;background:rgba(238,245,245,.5);font-size:.84rem}[data-bs-theme=dark] .sej-modal-artifact-list li{background:rgba(255,255,255,.05)}.sej-modal-artifact-list i{margin-top:.18rem;color:#0f766e;flex-shrink:0}.sej-modal-requirements{display:flex;flex-wrap:wrap;gap:.45rem}.sej-modal-req-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .72rem;border:1px solid rgba(0,0,0,.12);border-radius:999px;background:rgba(255,255,255,.85);color:#1e293b;font-size:.76rem;font-weight:700;cursor:pointer;transition:all .15s ease}.sej-modal-req-btn:hover{background:#144e72;color:#fff;border-color:#144e72}.sej-modal-empty{padding:.9rem 1rem;border:1px dashed rgba(20,38,59,.18);border-radius:12px;color:var(--muted);font-size:.84rem}.sej-fade-enter-active,.sej-fade-leave-active{transition:opacity .2s ease,transform .2s ease}.sej-fade-enter-from,.sej-fade-leave-to{opacity:0;transform:scale(.96)}
 
@@ -526,9 +580,9 @@ export default {
 
 @media (max-width:1440px){.padg-hero { min-height: 280px; padding: 1.25rem; } .padg-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin: 0.8rem 0 0.5rem; } .padg-metric { min-height: 80px; padding: 0.55rem 0.65rem; } .padg-metric strong { font-size: 1.35rem; } .padg-list, .padg-inspector { min-height: auto; max-height: 520px; }}
 @media (max-height:850px) and (min-width:1024px){.padg-hero { min-height: 240px; padding: 1.15rem; } .padg-metrics { margin-top: 0.6rem; } .padg-list, .padg-inspector { max-height: calc(100vh - 280px); } .padg-inspector-body { padding-top: 0.5rem; }}
-@media (max-width:991.98px){.padg-workspace,.padg-refspace{grid-template-columns:1fr}.padg-inspector{position:static;min-height:auto}}
+@media (max-width:991.98px){.padg-workspace,.padg-refspace{grid-template-columns:1fr}.padg-inspector{position:static;min-height:auto}.padg-guide-grid{grid-template-columns:1fr}}
 @media (max-width:1199.98px){.padg-hero,.padg-metric,.padg-side{min-height:auto}.padg-hero,.padg-nav,.padg-grid.two,.padg-refspace,.padg-metrics,.padg-mini-row,.padg-cards{grid-template-columns:1fr}.padg-bar,.padg-hotspot,.padg-family{grid-template-columns:1fr}}
-@media (max-width:767.98px){.padg-hero,.padg-panel{padding:1.2rem;border-radius:22px}.padg-pillar-grid{grid-template-columns:1fr}.sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-dialog{max-width:100%}}
+@media (max-width:767.98px){.padg-hero,.padg-panel{padding:1.2rem;border-radius:22px}.padg-pillar-grid{grid-template-columns:1fr}.padg-playbook-steps,.padg-domain-grid{grid-template-columns:1fr}.sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}.sej-modal-sidebar{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:.85rem;padding:1rem 1.5rem;color:#fffaf2;text-align:left;flex-shrink:0}.sej-modal-icon{width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.2);font-size:1.05rem;margin-bottom:0}.sej-modal-close{position:absolute;top:50%;transform:translateY(-50%);right:1.25rem;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;transition:all .2s ease}.sej-modal-dialog{max-width:100%}}
 
 [data-bs-theme="dark"] .padg-page{--ink:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.1);--shell:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);--accent-muted:rgba(255,255,255,0.05)}
 [data-bs-theme="dark"] .padg-metric,[data-bs-theme="dark"] .padg-side,[data-bs-theme="dark"] .padg-panel,[data-bs-theme="dark"] .padg-mini,[data-bs-theme="dark"] .padg-side-card{background:rgba(30,41,59,0.5);border-color:rgba(255,255,255,0.1)}
@@ -546,6 +600,10 @@ export default {
 [data-bs-theme="dark"] .padg-note{background:rgba(30,41,59,0.7);border-color:var(--accent,#48cae4)}
 [data-bs-theme="dark"] .padg-ref{background:rgba(30,41,59,0.8);border-color:rgba(255,255,255,0.1)}
 [data-bs-theme="dark"] .padg-empty{background:rgba(30,41,59,0.3);border-color:rgba(255,255,255,0.1)}
+[data-bs-theme="dark"] .padg-playbook-steps>div,[data-bs-theme="dark"] .padg-domain-card,[data-bs-theme="dark"] .padg-guide-card{background:rgba(30,41,59,.6);border-color:rgba(255,255,255,.1)}
+[data-bs-theme="dark"] .padg-domain-card strong,[data-bs-theme="dark"] .padg-owner-grid strong{color:var(--ink)}
+[data-bs-theme="dark"] .padg-implementation-callout{background:rgba(15,118,110,.12)}
+[data-bs-theme="dark"] .padg-disclaimer{background:rgba(120,82,13,.18);color:#f5d48a}
 [data-bs-theme="dark"] .sej-modal-shell{display:grid;grid-template-rows:auto minmax(0, 1fr);max-height:85vh;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 24px 64px rgba(15,23,42,.24),0 8px 24px rgba(15,23,42,.12)}
 [data-bs-theme="dark"] .sej-modal-artifact-list li,[data-bs-theme="dark"] .sej-modal-empty{background:rgba(255,255,255,0.05);color:var(--ink)}
 [data-bs-theme="dark"] .sej-modal-scope{background:rgba(255,255,255,0.1);color:#48cae4}
