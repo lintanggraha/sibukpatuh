@@ -35,7 +35,6 @@ const ROUTE_CONTENT = {
           <li><a href="/frameworks/pbi-02-2024">PBI 02/2024 — Keamanan siber Bank Indonesia</a></li>
           <li><a href="/frameworks/padk-1-2026">PADK 1/2026 — Penyelenggaraan TI bank umum</a></li>
           <li><a href="/frameworks/padg-32-2025">PADG 32/2025 — Sistem pembayaran Bank Indonesia</a></li>
-          <li><a href="/frameworks/panduan-resiliensi-ojk">Panduan Resiliensi Digital OJK</a></li>
           <li><a href="/frameworks/uu-pdp-27-2022">UU PDP 27/2022 — Perlindungan data pribadi</a></li>
         </ul>
         <h2>Alat Interaktif</h2>

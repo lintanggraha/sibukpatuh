@@ -159,7 +159,6 @@ export default {
         { id: 'seojk', name: 'SEOJK 29/03/2022', desc: { id: 'Regulasi Keamanan Siber OJK', en: 'OJK cybersecurity regulation' }, icon: 'fa-landmark', file: 'seojk_requirements.json' },
         { id: 'nist', name: 'NIST CSF 2.0', desc: { id: 'Framework Keamanan Siber NIST', en: 'NIST cybersecurity framework' }, icon: 'fa-network-wired', file: 'nist_csf.json' },
         { id: 'pbi', name: 'PBI 02/2024', desc: { id: 'Peraturan Bank Indonesia', en: 'Bank Indonesia regulation' }, icon: 'fa-building-columns', file: 'pbi_022024_requirements.json' },
-        { id: 'resilience', name: 'Panduan Resiliensi OJK', desc: { id: 'Resiliensi Digital OJK', en: 'OJK digital resilience' }, icon: 'fa-shield-heart', file: 'seojk_resilience_guidance.json' },
         { id: 'padg', name: 'PADG 32/2025', desc: { id: 'Pedoman Keamanan Siber BI', en: 'BI cybersecurity guidance' }, icon: 'fa-file-contract', file: 'padg_requirements.json' },
         { id: 'padk', name: 'PADK 1 Tahun 2026', desc: { id: 'Penyelenggaraan TI Bank Umum', en: 'IT operations for commercial banks' }, icon: 'fa-server', file: 'padk_1_2026_requirements.json' },
         { id: 'owasp_top10', name: 'OWASP Top 10', desc: { id: 'Standar Keamanan Aplikasi Web', en: 'Web application security standard' }, icon: 'fa-bug', file: 'owasp_top10_reqs.json' },
