@@ -5,7 +5,6 @@ export const gapData = {
     { id: 'cobit', name: 'COBIT 2019' },
     { id: 'seojk', name: 'SEOJK 29/03/2022' },
     { id: 'pbi', name: 'PBI 02/2024' },
-    { id: 'resilience', name: 'Panduan Resiliensi OJK' },
     { id: 'padg', name: 'PADG 32/2025' },
     { id: 'owasp_top10', name: 'OWASP Top 10' },
     { id: 'owasp_asvs', name: 'OWASP ASVS' },
@@ -177,7 +176,7 @@ export const gapData = {
   }
 };
 
-const frameworksWithoutCoverage = ['cobit', 'pbi', 'resilience', 'padg', 'owasp_asvs'];
+const frameworksWithoutCoverage = ['cobit', 'pbi', 'padg', 'owasp_asvs'];
 frameworksWithoutCoverage.forEach(fwId => {
   gapData.coverage[fwId] = [];
   gapData.controls.forEach((ctrl, index) => {

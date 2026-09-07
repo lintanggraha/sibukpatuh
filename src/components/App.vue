@@ -173,11 +173,6 @@ export default {
               label: "PADK 1 Tahun 2026",
               icon: "fa-server",
             },
-            {
-              routeName: "resilience",
-              label: "Panduan Resiliensi OJK",
-              icon: "fa-layer-group",
-            },
             { routeName: "pbi", label: "PBI 02/2024", icon: "fa-university" },
             { routeName: "padg", label: "PADG 32/2025", icon: "fa-credit-card" },
             { routeName: "pdp", label: "UU PDP No. 27/2022", icon: "fa-user-shield" },
@@ -387,7 +382,6 @@ export default {
       this.frameworkNavGroups[0].active =
         route.name === "seojk" ||
         route.name === "padk" ||
-        route.name === "resilience" ||
         route.name === "pbi" ||
         route.name === "padg" ||
         route.name === "pdp";

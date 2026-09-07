@@ -187,16 +187,6 @@ export default {
           accent: "#0f766e",
           icon: "fa-server",
         },
-        {
-          routeName: "resilience",
-          name: "Resiliensi OJK",
-          subtitle: "Panduan belajar digital resilience",
-          summary: { id: "Referensi tematik untuk memahami ketahanan digital tata kelola dan operasional.", en: "Thematic reference for understanding governance and operational digital resilience." },
-          metric_label_key: "home.metric.requirements",
-          metric_value: null,
-          accent: "#7c3aed",
-          icon: "fa-layer-group",
-        },
          {
            routeName: "pbi",
            name: "PBI 02/2024",
@@ -216,6 +206,16 @@ export default {
            metric_value: null,
            accent: "#0d9488",
            icon: "fa-credit-card",
+         },
+         {
+           routeName: "pdp",
+           name: "UU PDP 27/2022",
+           subtitle: "Pelindungan Data Pribadi",
+           summary: { id: "Hak subjek data, kewajiban pengendali/prosesor, keamanan, transfer data, dan sanksi.", en: "Data subject rights, controller/processor duties, security, data transfers, and sanctions." },
+           metric_label_key: "home.metric.requirements",
+           metric_value: null,
+           accent: "#7c3aed",
+           icon: "fa-user-shield",
          },
          {
            routeName: "owasp_top10",
@@ -308,10 +308,9 @@ export default {
       cobitCount,
       seojkCount,
       pojkCount,
-      padkCount,
-      resilienceCount,
       pbiCount,
       padgCount,
+      pdpCount,
       owaspTop10Count,
       owaspAsvsCount,
       simulatorCount,
@@ -323,9 +322,9 @@ export default {
       loadData("/data/seojk_requirements.json"),
       loadData("/data/pojk_11_2022_requirements.json"),
       loadData("/data/padk_1_2026_requirements.json"),
-      loadData("/data/seojk_resilience_guidance.json"),
       loadData("/data/pbi_022024_requirements.json"),
       loadData("/data/padg_requirements.json"),
+      loadData("/data/uu_pdp_requirements.json"),
       loadData("/data/owasp_top10_reqs.json"),
       loadData("/data/owasp_asvs_reqs.json"),
       Promise.resolve(6), // Constant for now
@@ -338,9 +337,9 @@ export default {
     this.frameworks[4].metric_value = seojkCount || 0;
     this.frameworks[5].metric_value = pojkCount || 0;
     this.frameworks[6].metric_value = padkCount || 0;
-    this.frameworks[7].metric_value = resilienceCount || 0;
-    this.frameworks[8].metric_value = pbiCount || 0;
-    this.frameworks[9].metric_value = padgCount || 0;
+    this.frameworks[7].metric_value = pbiCount || 0;
+    this.frameworks[8].metric_value = padgCount || 0;
+    this.frameworks[9].metric_value = pdpCount || 0;
     this.frameworks[10].metric_value = owaspTop10Count || 10;
     this.frameworks[11].metric_value = owaspAsvsCount || 8;
     this.frameworks[12].metric_value = simulatorCount || 6;

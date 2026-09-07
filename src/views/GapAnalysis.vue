@@ -180,7 +180,6 @@ const controlTextEn = {
 };
 
 const textMapEn = {
-  'Panduan Resiliensi OJK': 'OJK Resilience Guidance',
   'Di luar cakupan': 'Out of scope',
   'Tidak diatur spesifik': 'Not specifically regulated',
   'Kebijakan Keamanan': 'Security Policy',

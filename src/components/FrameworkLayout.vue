@@ -243,7 +243,6 @@
             'active' => request()->routeIs('frameworks.seojk') || request()->routeIs('frameworks.cis') || request()->routeIs('frameworks.pbi'),
             'items' => [
                 ['route' => 'frameworks.seojk', 'label' => 'SEOJK 29 03/2022', 'icon' => 'fa-landmark'],
-                ['route' => 'frameworks.cis', 'label' => 'Panduan Resiliensi OJK', 'icon' => 'fa-layer-group'],
                 ['route' => 'frameworks.pbi', 'label' => 'PBI 02/2024', 'icon' => 'fa-university'],
             ],
         ],

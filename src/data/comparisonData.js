@@ -5,7 +5,6 @@ export const comparisonData = {
     { id: 'cobit', name: 'COBIT 2019' },
     { id: 'seojk', name: 'SEOJK 29/03/2022' },
     { id: 'pbi', name: 'PBI 02/2024' },
-    { id: 'resilience', name: 'Panduan Resiliensi OJK' },
     { id: 'padg', name: 'PADG 32/2025' },
     { id: 'owasp_top10', name: 'OWASP Top 10' },
     { id: 'owasp_asvs', name: 'OWASP ASVS' },
