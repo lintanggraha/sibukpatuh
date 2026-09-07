@@ -77,7 +77,23 @@
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">
             <div :key="`${$route.fullPath}:${currentLang}`" class="route-wrapper">
-              <component :is="Component" />
+              <div v-if="routeError" class="route-error" role="alert">
+                <i class="fas fa-triangle-exclamation"></i>
+                <strong>Halaman tidak dapat ditampilkan.</strong>
+                <span>Silakan muat ulang halaman ini.</span>
+                <button type="button" class="btn btn-sm btn-primary" @click="reloadRoute">Muat ulang</button>
+              </div>
+              <Suspense v-else timeout="0">
+                <template #default>
+                  <component :is="Component" />
+                </template>
+                <template #fallback>
+                  <div class="route-loading" role="status" aria-live="polite">
+                    <span class="route-loading-spinner" aria-hidden="true"></span>
+                    <span>Memuat halaman...</span>
+                  </div>
+                </template>
+              </Suspense>
             </div>
           </transition>
         </router-view>
@@ -148,6 +164,7 @@ export default {
     return {
       isDarkTheme: false,
       searchOpen: false,
+      routeError: '',
       currentLang: localStorage.getItem('language') || 'id',
       translationObserver: null,
       translationQueued: false,
@@ -280,6 +297,7 @@ export default {
   },
   watch: {
     $route() {
+      this.routeError = '';
       this.updateActiveGroups();
       this.queueDomTranslation();
     },
@@ -417,6 +435,9 @@ export default {
       window.setTimeout(() => applyDomTranslations(this.currentLang), 250);
       window.setTimeout(() => applyDomTranslations(this.currentLang), 900);
     },
+    reloadRoute() {
+      window.location.reload();
+    },
   },
   mounted() {
     const savedTheme = localStorage.getItem('theme');
@@ -450,6 +471,11 @@ export default {
     document.removeEventListener("click", this.handleClickOutside);
     document.removeEventListener("keydown", this.handleKeydown);
     if (this.translationObserver) this.translationObserver.disconnect();
+  },
+  errorCaptured(error, instance, info) {
+    console.error('[App] Route component error:', info, error);
+    this.routeError = 'route-error';
+    return false;
   },
 };
 </script>
@@ -1081,6 +1107,47 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.route-loading {
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: .7rem;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.route-loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid rgba(20, 78, 114, .16);
+  border-top-color: var(--active);
+  border-radius: 50%;
+  animation: route-loading-spin .8s linear infinite;
+}
+
+@keyframes route-loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+.route-error {
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: .55rem;
+  padding: 2rem;
+  color: #991b1b;
+  text-align: center;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 18px;
+}
+
+.route-error i { font-size: 1.6rem; }
+.route-error span { color: #7f1d1d; font-size: .85rem; }
 
 .alert ul {
   margin-bottom: 0;

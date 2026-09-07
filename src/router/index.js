@@ -218,7 +218,7 @@ export const routes = [
         component: () => import('../views/ChecklistTools.vue'),
         meta: {
             title: 'Checklist Tools - Alat Evaluasi Gap Analysis Kepatuhan Siber | SibukPatuh',
-            description: 'Alat evaluasi gap analysis mandiri untuk mengukur tingkat kepatuhan siber organisasi Anda. Export laporan ke PDF/Word. Mencakup ISO, NIST, OJK, dan regulasi BI.',
+            description: 'Alat evaluasi gap analysis mandiri untuk mengukur tingkat kepatuhan siber organisasi Anda. Buat checklist, export/import XLSX, dan analisis gap dengan AI. Mencakup ISO, NIST, OJK, dan regulasi BI.',
             keywords: 'gap analysis kepatuhan, checklist compliance, evaluasi kepatuhan siber, audit tools, compliance checklist Indonesia'
         }
     },
@@ -251,6 +251,22 @@ const router = createRouter({
       // Keep route changes instant. Smooth scrolling can feel sluggish on
       // content-heavy pages and forces extra work on Firefox/mobile browsers.
       return { top: 0 };
+    }
+});
+
+router.onError((error, to) => {
+    const message = String(error?.message || error || '');
+    const isChunkLoadError = /Failed to fetch dynamically imported module|Importing a module script failed|Unable to preload CSS|dynamically imported module/i.test(message);
+    if (!isChunkLoadError || typeof window === 'undefined') return;
+
+    const reloadKey = 'sibukpatuh:route-chunk-reload';
+    const previousTarget = sessionStorage.getItem(reloadKey);
+    if (previousTarget !== to.fullPath) {
+        sessionStorage.setItem(reloadKey, to.fullPath);
+        window.location.reload();
+    } else {
+        sessionStorage.removeItem(reloadKey);
+        console.error('[router] Lazy route failed after one reload attempt:', error);
     }
 });
 

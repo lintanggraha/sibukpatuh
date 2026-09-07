@@ -1,5 +1,20 @@
 import { guardRequest } from '../server/security.js';
 
+const MAX_DISPLAY_RESULTS = 100;
+
+function normalizeResultItem(item) {
+  const sources = Array.isArray(item?.sources)
+    ? item.sources.map((source) => String(source).trim()).filter(Boolean)
+    : item?.sources
+      ? [String(item.sources).trim()]
+      : [];
+
+  return {
+    sources,
+    hasPassword: Boolean(item?.password || item?.hash_password || item?.passwords),
+  };
+}
+
 /**
  * Vercel Serverless Function: Breach Directory Proxy.
  * The endpoint never fabricates breach results when the upstream is unavailable.
@@ -54,10 +69,16 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
+    const found = Number(data.found || 0);
+    const result = Array.isArray(data.result)
+      ? data.result.slice(0, MAX_DISPLAY_RESULTS).map(normalizeResultItem)
+      : [];
+
     return res.status(200).json({
       success: true,
-      found: Number(data.found || 0),
-      result: Array.isArray(data.result) ? data.result : [],
+      found,
+      result,
+      truncated: found > result.length,
     });
   } catch (error) {
     console.error('[Breach API] Proxy error:', error instanceof Error ? error.message : 'Unknown error');
