@@ -98,7 +98,7 @@
                 </div>
                 <div v-else>
                   <div class="p-2 bg-danger bg-opacity-10 text-danger rounded d-flex justify-content-between align-items-center mb-2">
-                    <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran.</span>
+                      <span><i class="fas fa-exclamation-circle me-1"></i> Ditemukan {{ checkResult.size }} kebocoran<span v-if="checkResult.truncated"> (menampilkan {{ checkResult.list.length }} teratas)</span>.</span>
                     <button class="btn btn-xs btn-danger p-1 px-2" @click="copyAllSources">{{ $t('auto_14') }}</button>
                   </div>
                   <!-- Detil Kebocoran -->
@@ -106,10 +106,10 @@
                     <div v-for="(item, idx) in checkResult.list" :key="idx" class="border-bottom py-1 last-border-0">
                       <div class="d-flex align-items-center gap-1 mb-1">
                         <i class="fas fa-database text-muted"></i>
-                        <span class="fw-bold text-dark">{{ item.sources ? item.sources.join(', ') : 'Unknown Source' }}</span>
+                        <span class="fw-bold text-dark">{{ item.sources?.join(', ') || 'Unknown Source' }}</span>
                       </div>
                       <div class="text-muted" style="font-size: 0.65rem;">
-                        <i class="fas fa-key me-1"></i> {{ item.passwords && item.passwords.length ? item.passwords[0] : 'Data terkompromi' }}
+                        <i class="fas fa-key me-1"></i> {{ item.hasPassword ? 'Password exposure terindikasi (detail disembunyikan)' : 'Data terkompromi' }}
                       </div>
                     </div>
                   </div>
@@ -436,6 +436,7 @@ export default {
       // OTX & BREACH SECTION
       userTerm: "",
       isChecking: false,
+      breachRequestId: 0,
       checkResult: null,
       emailError: "",
       rateLimitCountdown: 0,
@@ -507,21 +508,45 @@ export default {
       this.emailError = "";
       this.isChecking = true;
       this.checkResult = null;
+      const requestId = ++this.breachRequestId;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15_000);
       try {
-        const response = await fetch(`/api/breach?email=${encodeURIComponent(sanitized)}`);
-        const data = await response.json();
+        const response = await fetch(`/api/breach?email=${encodeURIComponent(sanitized)}`, {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        });
+        const contentType = response.headers.get('content-type') || '';
+        const data = contentType.includes('application/json')
+          ? await response.json()
+          : { success: false, error: 'Respons dari server tidak valid.' };
+        if (requestId !== this.breachRequestId) return;
         if (response.status === 429) {
-          this.emailError = "Limit tercapai. Silakan coba lagi nanti.";
+          this.emailError = data.error || "Limit tercapai. Silakan coba lagi nanti.";
           this.startRateLimit();
           return;
         }
-        if (data.success) {
-          this.checkResult = data.found > 0 ? { found: true, size: data.found, list: data.result || [] } : { found: false };
+        if (!response.ok || data.success !== true) {
+          this.emailError = data.error || `Pemeriksaan gagal (HTTP ${response.status}). Silakan coba lagi.`;
+          return;
         }
+        const list = Array.isArray(data.result) ? data.result.map((item) => ({
+          sources: Array.isArray(item?.sources)
+            ? item.sources.map((source) => String(source).trim()).filter(Boolean)
+            : item?.sources ? [String(item.sources).trim()] : [],
+          hasPassword: Boolean(item?.hasPassword),
+        })) : [];
+        this.checkResult = Number(data.found || 0) > 0
+          ? { found: true, size: Number(data.found), list, truncated: Boolean(data.truncated) }
+          : { found: false, list: [] };
       } catch (err) {
-        this.emailError = "Gagal terhubung ke database OSINT.";
+        if (requestId !== this.breachRequestId) return;
+        this.emailError = err.name === 'AbortError'
+          ? "Pemeriksaan timeout. Database eksternal sedang lambat, silakan coba lagi."
+          : "Gagal terhubung ke database OSINT. Silakan coba lagi.";
       } finally {
-        this.isChecking = false;
+        clearTimeout(timeoutId);
+        if (requestId === this.breachRequestId) this.isChecking = false;
       }
     },
     startRateLimit() {
@@ -533,7 +558,7 @@ export default {
     },
     copyAllSources() {
       if (!this.checkResult?.list) return;
-      const allSources = [...new Set(this.checkResult.list.flatMap(i => i.sources))];
+      const allSources = [...new Set(this.checkResult.list.flatMap((item) => Array.isArray(item.sources) ? item.sources : []))];
       navigator.clipboard.writeText(allSources.join(', '));
       this.showToast("Semua sumber disalin ke clipboard", "info");
     },

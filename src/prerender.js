@@ -401,7 +401,7 @@ const ROUTE_CONTENT = {
           <li>PBI 02/2024 — Keamanan siber Bank Indonesia</li>
           <li>UU PDP 27/2022 — Pelindungan data pribadi</li>
         </ul>
-        <p>Hasil evaluasi dapat diekspor dalam format PDF dan Excel untuk keperluan pelaporan kepada manajemen atau regulator.</p>
+        <p>Hasil evaluasi dapat diekspor ke XLSX untuk diisi secara offline, lalu diimpor kembali dan dianalisis dengan AI. Laporan hasil analisis juga dapat dicetak ke PDF atau Word untuk keperluan manajemen dan audit.</p>
       </main>
     `,
   },

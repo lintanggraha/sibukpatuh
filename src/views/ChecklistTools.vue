@@ -8,6 +8,7 @@
           <p class="iso-lede">{{ ui.lede }}</p>
         </div>
       </div>
+      <input ref="checklistFileInput" type="file" accept=".xlsx" class="d-none" @change="handleFileImport" />
 
       <div class="iso-grid" :class="{'two': currentStep === 2}">
         <!-- Step 1: Framework Selection -->
@@ -32,6 +33,9 @@
           </div>
 
           <div class="mt-4 d-flex justify-content-end">
+            <button class="btn btn-outline-primary me-2" type="button" @click="triggerFileImport" :disabled="importing">
+              <i class="fas fa-file-import me-1"></i> {{ importing ? ui.importing : ui.importXlsx }}
+            </button>
             <button class="btn-primary-custom" @click="generateChecklist" :disabled="selectedFrameworks.length === 0 || loading">
               {{ loading ? ui.creating : ui.createNow }} <i class="fas fa-arrow-right ms-2"></i>
             </button>
@@ -46,8 +50,13 @@
               <div>
                 <button class="btn btn-sm btn-outline-secondary me-2" @click="currentStep = 1"><i class="fas fa-arrow-left me-1"></i> {{ ui.back }}</button>
                 <button class="btn btn-sm btn-outline-danger me-2" @click="resetChecklist"><i class="fas fa-trash-alt me-1"></i> {{ ui.clear }}</button>
+                <button class="btn btn-sm btn-outline-primary me-2" @click="triggerFileImport" :disabled="importing"><i class="fas fa-file-import me-1"></i> {{ ui.importXlsx }}</button>
+                <button class="btn btn-sm btn-outline-success me-2" @click="exportChecklist" :disabled="exporting"><i class="fas fa-file-excel me-1"></i> {{ exporting ? ui.exporting : ui.exportXlsx }}</button>
                 <button class="btn btn-sm btn-success" @click="analyzeWithAI" :disabled="aiLoading"><i class="fas fa-robot me-1"></i> {{ aiLoading ? ui.analyzing : ui.analyze }}</button>
               </div>
+            </div>
+            <div v-if="importMessage" class="checklist-import-message" :class="importMessageType === 'error' ? 'is-error' : importMessageType === 'warning' ? 'is-warning' : 'is-success'" role="status">
+              <i :class="importMessageType === 'error' ? 'fas fa-circle-exclamation' : 'fas fa-circle-check'" class="me-1"></i>{{ importMessage }}
             </div>
             
             <div class="checklist-summary mb-3">
@@ -133,6 +142,7 @@
               <button class="btn btn-sm btn-outline-secondary" @click="aiResult = null">{{ ui.close }}</button>
             </div>
           </div>
+          <p v-if="aiScopeNote" class="ai-scope-note"><i class="fas fa-circle-info me-1"></i>{{ aiScopeNote }}</p>
           <div class="ai-report-content" id="ai-report-content" v-html="formattedAiResult"></div>
         </section>
       </div>
@@ -150,8 +160,13 @@ export default {
     return {
       currentStep: 1,
       loading: false,
+      importing: false,
+      exporting: false,
+      importMessage: '',
+      importMessageType: 'success',
       aiLoading: false,
       aiResult: null,
+      aiScopeNote: '',
       availableFrameworks: [
         { id: 'iso27001', name: 'ISO 27001:2022', desc: { id: 'Standar Internasional Keamanan Informasi', en: 'International information security standard' }, icon: 'fa-shield-alt', file: 'iso27001.json' },
         { id: 'iso37001', name: 'ISO 37001:2016', desc: { id: 'Sistem Manajemen Anti-Penyuapan', en: 'Anti-bribery management system' }, icon: 'fa-handshake', file: 'iso37001.json' },
@@ -175,7 +190,7 @@ export default {
       return {
         kicker: en ? 'Audit & Compliance Tool' : 'Alat Audit & Kepatuhan',
         title: 'Checklist Tools & AI Gap Analysis',
-        lede: en ? 'Create a self-assessment checklist from selected regulations, fill in your implementation status, and use AI to analyze gaps instantly. Your data stays in your browser local storage.' : 'Buat checklist mandiri berdasarkan gabungan regulasi yang Anda pilih, isi implementasi Anda, dan gunakan AI untuk menganalisa gap secara instan. Data Anda aman 100% dan hanya disimpan di browser lokal Anda (Local Storage).',
+        lede: en ? 'Create a self-assessment checklist, export it to XLSX for offline completion, import the filled file, and use AI to analyze gaps. Your checklist stays in browser storage unless you explicitly send it for AI analysis.' : 'Buat checklist mandiri, export ke XLSX untuk diisi offline, import kembali hasil pengisian, lalu gunakan AI untuk menganalisa gap. Checklist tersimpan di browser dan hanya dikirim saat Anda menekan tombol analisis AI.',
         chooseRegulations: en ? 'Choose Reference Regulations' : 'Pilih Regulasi Rujukan',
         stepOne: en ? 'Step 1/2' : 'Tahap 1/2',
         chooseCopy: en ? 'Choose the regulations or standards used in your company to merge them into one integrated audit checklist.' : 'Pilih regulasi atau standar yang digunakan di perusahaan Anda untuk digabungkan menjadi satu checklist audit terpadu.',
@@ -186,6 +201,11 @@ export default {
         clear: en ? 'Start Over (Clear)' : 'Mulai Ulang (Clear)',
         analyzing: en ? 'Analyzing...' : 'Menganalisa...',
         analyze: en ? 'Analyze Gap with AI' : 'Analisa Gap dengan AI',
+        importing: en ? 'Importing...' : 'Mengimpor...',
+        importingFile: en ? 'Reading XLSX...' : 'Membaca XLSX...',
+        importXlsx: en ? 'Import XLSX' : 'Import XLSX',
+        exportXlsx: en ? 'Export XLSX' : 'Export XLSX',
+        exporting: en ? 'Exporting...' : 'Mengekspor...',
         totalControls: en ? 'Total Controls' : 'Total Kontrol',
         implemented: en ? 'Implemented' : 'Sudah Implementasi',
         notPartial: en ? 'Not / Partial' : 'Belum / Parsial',
@@ -232,12 +252,59 @@ export default {
     saveToLocal() {
       localStorage.setItem('sibukpatuh_checklist', JSON.stringify(this.checklistData));
     },
+    setImportMessage(message, type = 'success') {
+      this.importMessage = message;
+      this.importMessageType = type;
+    },
+    triggerFileImport() {
+      this.$refs.checklistFileInput?.click();
+    },
+    async handleFileImport(event) {
+      const file = event.target.files?.[0];
+      event.target.value = '';
+      if (!file) return;
+
+      this.importing = true;
+      this.setImportMessage('');
+      try {
+        const { importChecklistExcel } = await import('../services/checklistExcelService.js');
+        const imported = await importChecklistExcel(file);
+        this.checklistData = imported.items;
+        this.selectedFrameworks = [...new Set(imported.items.map((item) => item.source))]
+          .filter((source) => this.availableFrameworks.some((framework) => framework.id === source));
+        this.aiResult = null;
+        this.aiScopeNote = '';
+        this.saveToLocal();
+        this.currentStep = 2;
+        const warning = imported.errors.length > 0 ? ` ${imported.errors.length} baris dilewati karena tidak valid.` : '';
+        this.setImportMessage(`${imported.items.length} baris checklist berhasil diimpor.${warning}`, imported.errors.length > 0 ? 'warning' : 'success');
+      } catch (error) {
+        this.setImportMessage(error.message || 'File XLSX tidak dapat diimpor.', 'error');
+      } finally {
+        this.importing = false;
+      }
+    },
+    async exportChecklist() {
+      if (!this.checklistData.length) return;
+      this.exporting = true;
+      try {
+        const { exportChecklistExcel } = await import('../services/checklistExcelService.js');
+        await exportChecklistExcel({ items: this.checklistData, locale: this.$i18n.locale });
+        this.setImportMessage('Checklist berhasil diekspor ke XLSX. Edit status dan evidens, lalu import kembali file tersebut.', 'success');
+      } catch (error) {
+        this.setImportMessage(error.message || 'Checklist gagal diekspor.', 'error');
+      } finally {
+        this.exporting = false;
+      }
+    },
     resetChecklist() {
       if (confirm('Apakah Anda yakin ingin menghapus seluruh data checklist ini? Data tidak dapat dikembalikan.')) {
         localStorage.removeItem('sibukpatuh_checklist');
         this.checklistData = [];
         this.selectedFrameworks = [];
         this.aiResult = null;
+        this.aiScopeNote = '';
+        this.setImportMessage('');
         this.currentStep = 1;
       }
     },
@@ -310,6 +377,7 @@ export default {
       
       this.aiLoading = true;
       this.aiResult = null;
+      this.aiScopeNote = '';
       
       try {
         // Filter out items that are strictly 'Sudah' if we want to focus on Gaps,
@@ -324,27 +392,27 @@ export default {
           return;
         }
 
-        const promptData = gapItems.map(i => `[${i.source.toUpperCase()}] ${i.id} - ${i.name}\nStatus: ${i.status}\nKondisi Saat Ini (Evidens): ${i.evidence || 'Tidak ada catatan'}`).join('\n\n');
+        const maxAiItems = 80;
+        const itemsForAi = gapItems.slice(0, maxAiItems).map((item) => ({
+          source: item.source,
+          id: item.id,
+          name: item.name,
+          description: item.description,
+          status: item.status,
+          evidence: item.evidence || '',
+        }));
+        const omittedCount = Math.max(0, gapItems.length - itemsForAi.length);
+        if (omittedCount > 0) {
+          this.aiScopeNote = `Analisis AI mencakup ${itemsForAi.length} dari ${gapItems.length} gap. ${omittedCount} gap lainnya perlu dianalisis pada batch berikutnya.`;
+        }
 
-        const promptText = `Tolong bertindak sebagai Senior Auditor IT / Konsultan GRC. 
-Berikut adalah temuan *GAP* (kekurangan implementasi) dari checklist compliance di perusahaan saya.
-Tolong berikan laporan analisa gap yang SANGAT KOMPREHENSIF, MENDALAM, dan TERSTRUKTUR untuk SETIAP poin kontrol yang memiliki gap (Belum/Parsial).
-
-PENTING:
-1. Jangan batasi analisa hanya pada beberapa poin. Berikan pembahasan komprehensif, mencakup dampak risiko dan rekomendasi langkah perbaikan (action plan) yang detail untuk SETIAP gap yang ditemukan.
-2. Jelaskan langkah-langkah implementasi secara teknis maupun administratif.
-3. TIDAK PERLU menawarkan bantuan tambahan (seperti membuat draf kebijakan/policy). Langsung tutup laporan jika analisa sudah selesai.
-4. Gunakan format Markdown yang rapi (heading, bullet points, dan bold).
-5. Laporan ini untuk level eksekutif dan manajerial, gunakan bahasa Indonesia yang profesional.
-
-Data Temuan:
-${promptData}`;
-
-        const response = await fetch('/api/gemini', {
+        const response = await fetch('/api/checklist-analysis', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            messages: [{ role: 'user', text: promptText }]
+            items: itemsForAi,
+            omittedCount,
+            locale: this.$i18n.locale,
           })
         });
 
@@ -445,6 +513,12 @@ ${promptData}`;
 .checklist-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
 .checklist-table tr:last-child td { border-bottom: none; }
 
+.checklist-import-message { margin: -.35rem 0 1rem; padding: .65rem .8rem; border-radius: 10px; font-size: .8rem; font-weight: 650; }
+.checklist-import-message.is-success { color: #166534; background: #f0fdf4; border: 1px solid #bbf7d0; }
+.checklist-import-message.is-warning { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; }
+.checklist-import-message.is-error { color: #991b1b; background: #fef2f2; border: 1px solid #fecaca; }
+.ai-scope-note { margin: 0 0 1rem; padding: .65rem .8rem; border-left: 3px solid #f59e0b; color: #92400e; background: #fffbeb; font-size: .82rem; }
+
 .iso-pill { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 999px; font-size: 0.7rem; font-weight: 700; background: #e2e8f0; color: #334155; text-transform: uppercase; }
 
 .status-options { display: flex; gap: 0.4rem; flex-wrap: wrap; }
@@ -462,4 +536,10 @@ ${promptData}`;
 .ai-report-content :deep(ul), .ai-report-content :deep(ol) { margin-bottom: 1rem; padding-left: 1.5rem; }
 .ai-report-content :deep(li) { margin-bottom: 0.4rem; }
 .ai-report-content :deep(strong) { color: #0f766e; }
+
+@media (max-width: 900px) {
+  .iso-panel-head { align-items: flex-start; gap: .75rem; flex-direction: column; }
+  .iso-panel-head > div { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .iso-panel-head .btn { margin-right: 0 !important; }
+}
 </style>
