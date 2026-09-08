@@ -100,10 +100,12 @@ ${serializedItems}`;
   };
 
   try {
-    const configuredModel = String(process.env.GEMINI_MODEL || '').trim();
-    const model = configuredModel && !/^gemini-2\.0-/i.test(configuredModel)
-      ? configuredModel
-      : 'gemini-2.5-flash';
+    const configuredModel = String(process.env.GEMINI_MODEL || '')
+      .trim()
+      .replace(/^models\//i, '')
+      .replace(/^['"`]+|['"`]+$/g, '');
+    const supportedModels = new Set(['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-pro']);
+    const model = supportedModels.has(configuredModel) ? configuredModel : 'gemini-2.5-flash';
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
