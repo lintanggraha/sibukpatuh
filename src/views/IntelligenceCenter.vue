@@ -750,7 +750,10 @@ export default {
       let impact = 'Kerentanan dapat memengaruhi kerahasiaan, integritas, atau ketersediaan sistem yang menjalankan produk terdampak. Dampak aktual bergantung pada versi, konfigurasi, paparan aset, dan kontrol kompensasi organisasi.';
       let mechanism = 'Secara konseptual, pihak yang tidak tepercaya dapat mengirim input atau permintaan yang diproses secara tidak semestinya oleh komponen terdampak. Jalur risiko dan prasyarat teknis spesifik perlu dikonfirmasi melalui advisory vendor; detail eksploitasi operasional tidak ditampilkan.';
 
-      if (/improper authentication|authentication|unauthenticated|authorization|akses tanpa autentikasi/.test(text)) {
+      if (/request\/response smuggling|request smuggling/.test(text)) {
+        impact = 'Perbedaan interpretasi request antar proxy dan backend dapat menyebabkan bypass kontrol, salah routing, atau paparan request pengguna lain.';
+        mechanism = 'Jalur risikonya adalah komponen jaringan mem-parsing batas request secara tidak konsisten. Detail format request dan teknik pengujian harus dibatasi pada lingkungan uji yang berizin.';
+      } else if (/improper authentication|unauthenticated|authorization|akses tanpa autentikasi/.test(text)) {
         impact = 'Pihak tanpa otorisasi berpotensi memperoleh akses atau membentuk sesi yang seharusnya hanya tersedia bagi pengguna terautentikasi. Dampaknya dapat mencakup akses ke fungsi, data, atau integrasi MCP yang terekspos.';
         mechanism = 'Jalur risikonya adalah endpoint yang dapat dijangkau menerima atau mempercayai atribut autentikasi yang tidak tervalidasi dengan benar. Jika prasyarat paparan terpenuhi, permintaan tidak tepercaya dapat diperlakukan seperti sesi sah; detail token, request, dan langkah serangan harus merujuk advisory vendor.';
       } else if (/command injection|remote code execution|arbitrary code execution|os command/.test(text)) {
@@ -762,9 +765,6 @@ export default {
       } else if (/server-side request forgery|\bssrf\b/.test(text)) {
         impact = 'Server berpotensi dipaksa mengakses sumber daya internal atau layanan lain yang tidak semestinya dapat dijangkau pengguna, termasuk metadata dan endpoint administratif.';
         mechanism = 'Jalur risikonya adalah aplikasi menerima tujuan atau rujukan jaringan yang dapat dikendalikan pihak luar lalu melakukan koneksi dari sisi server. Risiko bergantung pada egress, segmentasi, dan daftar tujuan yang diizinkan.';
-      } else if (/request\/response smuggling|request smuggling/.test(text)) {
-        impact = 'Perbedaan interpretasi request antar proxy dan backend dapat menyebabkan bypass kontrol, salah routing, atau paparan request pengguna lain.';
-        mechanism = 'Jalur risikonya adalah komponen jaringan mem-parsing batas request secara tidak konsisten. Detail format request dan teknik pengujian harus dibatasi pada lingkungan uji yang berizin.';
       } else if (/type confusion/.test(text)) {
         impact = 'Pemrosesan objek dengan tipe yang tidak sesuai dapat menyebabkan crash atau, bila kondisi tertentu terpenuhi, eksekusi kode dalam konteks komponen terdampak.';
         mechanism = 'Jalur risikonya adalah input yang dirancang khusus memicu ketidaksesuaian asumsi tipe pada runtime atau parser. Untuk CVE ini, deskripsi publik menyebut halaman HTML crafted; detail reproduksi tetap harus merujuk advisory vendor.';
