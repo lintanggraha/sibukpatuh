@@ -308,6 +308,7 @@ export default {
       cobitCount,
       seojkCount,
       pojkCount,
+      padkCount,
       pbiCount,
       padgCount,
       pdpCount,
