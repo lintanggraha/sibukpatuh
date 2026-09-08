@@ -350,7 +350,10 @@ Jawab dalam Bahasa Indonesia yang natural. Fokus pada edukasi keamanan siber dan
   };
 
   try {
-    const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+    // Gemini 2.0 Flash sudah shutdown; gunakan model stabil yang dapat diganti
+    // tanpa perubahan kode melalui GEMINI_MODEL bila lifecycle model berubah.
+    const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -368,6 +371,11 @@ Jawab dalam Bahasa Indonesia yang natural. Fokus pada edukasi keamanan siber dan
       let errorMessage = 'Layanan AI sedang tidak tersedia. Silakan coba lagi nanti.';
       if (response.status === 429) {
         errorMessage = 'Batas penggunaan Gemini tercapai. Silakan coba lagi nanti.';
+      } else if (response.status === 404) {
+        console.error('[gemini] Configured model is unavailable:', model);
+        errorMessage = 'Model AI tidak tersedia. Admin perlu memperbarui konfigurasi model.';
+      } else if (response.status === 403) {
+        errorMessage = 'Akses layanan AI ditolak. Admin perlu memeriksa API key Gemini.';
       } else if (response.status === 400) {
         errorMessage = 'Permintaan tidak dapat diproses.';
       }

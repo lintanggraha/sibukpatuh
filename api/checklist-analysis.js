@@ -100,7 +100,8 @@ ${serializedItems}`;
   };
 
   try {
-    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent', {
+    const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
       body: JSON.stringify(payload),
@@ -111,7 +112,11 @@ ${serializedItems}`;
       console.error('[checklist-analysis] Gemini error:', response.status);
       const message = response.status === 429
         ? 'Batas penggunaan AI tercapai. Silakan coba lagi nanti.'
-        : 'Layanan AI sedang tidak tersedia. Silakan coba lagi nanti.';
+        : response.status === 404
+          ? 'Model AI tidak tersedia. Admin perlu memperbarui konfigurasi model.'
+          : response.status === 403
+            ? 'Akses layanan AI ditolak. Admin perlu memeriksa API key Gemini.'
+            : 'Layanan AI sedang tidak tersedia. Silakan coba lagi nanti.';
       return res.status(response.status >= 500 ? 502 : response.status).json({ error: message });
     }
 
