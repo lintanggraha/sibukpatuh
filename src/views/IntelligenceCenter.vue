@@ -333,6 +333,33 @@
                       <div v-if="cve.requiredAction" class="cve-row-action-box">
                         <strong>Required Action:</strong> {{ cve.requiredAction }}
                       </div>
+                      <div class="cve-ai-detail-box" @click.stop>
+                        <div class="cve-ai-detail-header">
+                          <div>
+                            <span class="cve-ai-kicker"><i class="fas fa-robot me-1"></i> AI Vulnerability Brief</span>
+                            <strong>Analisis CVE dalam Bahasa Indonesia</strong>
+                          </div>
+                          <button
+                            v-if="cve.aiAnalysisError"
+                            type="button"
+                            class="btn btn-xs btn-outline-primary"
+                            :disabled="cve.aiAnalysisLoading"
+                            @click="loadCveAnalysis(cve, true)"
+                          >Coba lagi</button>
+                        </div>
+                        <div v-if="cve.aiAnalysisLoading" class="cve-ai-loading">
+                          <span class="spinner-border spinner-border-sm text-primary me-2"></span>
+                          Menyusun analisis dampak, mekanisme eksploitasi, dan mitigasi...
+                        </div>
+                        <div v-else-if="cve.aiAnalysisError" class="cve-ai-error">
+                          <i class="fas fa-circle-exclamation me-1"></i>{{ cve.aiAnalysisError }}
+                        </div>
+                        <div v-else-if="cve.aiAnalysis" class="cve-ai-analysis">{{ cve.aiAnalysis }}</div>
+                        <div v-else class="cve-ai-loading">Analisis belum tersedia.</div>
+                        <small class="cve-ai-disclaimer">
+                          Penjelasan eksploitasi disajikan pada tingkat konseptual untuk defensif; tidak memuat exploit code, payload, atau langkah serangan operasional.
+                        </small>
+                      </div>
                     </div>
                   </transition>
                 </div>
@@ -668,7 +695,10 @@ export default {
           requiredAction: item.requiredAction,
           isRansomware: item.knownRansomwareCampaignUse === 'Known',
           fullDescription: null,
-          isEnriching: false
+          isEnriching: false,
+          aiAnalysis: '',
+          aiAnalysisError: '',
+          aiAnalysisLoading: false
         })).sort((a, b) => b.rawDate - a.rawDate);
         
         if (this.cves.length > 0) this.selectedCve = this.cves[0];
@@ -682,10 +712,10 @@ export default {
     },
     setCisaMockData() {
       this.cves = [
-        { id: "CVE-2026-33827", title: "Windows TCP/IP Remote Code Execution.", shortDescription: "A remote code execution vulnerability exists in Windows TCP/IP.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026", rawDate: new Date("2026-04-14"), requiredAction: "Apply updates per vendor instructions.", isRansomware: true },
-        { id: "CVE-2026-32157", title: "Remote Desktop Client RCE.", shortDescription: "Remote Desktop Client vulnerability allows code execution.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026", rawDate: new Date("2026-04-08"), requiredAction: "Apply updates.", isRansomware: false },
-        { id: "CVE-2025-21298", title: "Windows OLE Remote Code Execution.", shortDescription: "Windows OLE vulnerability allowing remote code execution.", vendor: "Microsoft", product: "Windows", date: "14 Nov 2025", rawDate: new Date("2025-11-14"), requiredAction: "Apply updates.", isRansomware: true },
-        { id: "CVE-2024-38063", title: "Windows TCP/IP IPv6 RCE.", shortDescription: "Critical RCE in Windows TCP/IP IPv6 stack.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024", rawDate: new Date("2024-08-13"), requiredAction: "Apply updates.", isRansomware: false }
+        { id: "CVE-2026-33827", title: "Windows TCP/IP Remote Code Execution.", shortDescription: "A remote code execution vulnerability exists in Windows TCP/IP.", vendor: "Microsoft", product: "Windows", date: "14 Apr 2026", rawDate: new Date("2026-04-14"), requiredAction: "Apply updates per vendor instructions.", isRansomware: true, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false },
+        { id: "CVE-2026-32157", title: "Remote Desktop Client RCE.", shortDescription: "Remote Desktop Client vulnerability allows code execution.", vendor: "Microsoft", product: "RDP", date: "08 Apr 2026", rawDate: new Date("2026-04-08"), requiredAction: "Apply updates.", isRansomware: false, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false },
+        { id: "CVE-2025-21298", title: "Windows OLE Remote Code Execution.", shortDescription: "Windows OLE vulnerability allowing code execution.", vendor: "Microsoft", product: "Windows", date: "14 Nov 2025", rawDate: new Date("2025-11-14"), requiredAction: "Apply updates.", isRansomware: true, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false },
+        { id: "CVE-2024-38063", title: "Windows TCP/IP IPv6 RCE.", shortDescription: "Critical RCE in Windows TCP/IP IPv6 stack.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024", rawDate: new Date("2024-08-13"), requiredAction: "Apply updates.", isRansomware: false, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false }
       ];
       if (this.cves.length > 0) this.selectedCve = this.cves[0];
     },
@@ -695,7 +725,7 @@ export default {
       } else {
         this.expandedCveId = cve.id;
         this.selectedCve = cve;
-        if (!cve.fullDescription) this.enrichCve(cve);
+        this.loadCveAnalysis(cve);
       }
     },
     async enrichCve(cve) {
@@ -709,6 +739,43 @@ export default {
         cve.fullDescription = cve.shortDescription;
       } finally {
         cve.isEnriching = false;
+      }
+    },
+
+    async loadCveAnalysis(cve, force = false) {
+      if (!cve || (cve.aiAnalysisLoading && !force) || (cve.aiAnalysis && !force)) return;
+      cve.aiAnalysisLoading = true;
+      cve.aiAnalysisError = '';
+      try {
+        if (!cve.fullDescription) await this.enrichCve(cve);
+        const cveContext = {
+          id: cve.id,
+          title: cve.title,
+          vendor: cve.vendor,
+          product: cve.product,
+          shortDescription: cve.fullDescription || cve.shortDescription,
+          requiredAction: cve.requiredAction,
+          isRansomware: cve.isRansomware
+        };
+        const response = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            messages: [{
+              role: 'user',
+              text: `Buat analisis defensif untuk ${cve.id} dalam Bahasa Indonesia. Gunakan tiga heading persis: "1. Dampak", "2. Mekanisme Eksploitasi (Konseptual)", dan "3. Mitigasi". Jelaskan bagaimana kerentanan dapat dimanfaatkan hanya pada tingkat konsep dan prasyarat umum, tanpa exploit code, payload, perintah, URL serangan, atau langkah operasional. Kaitkan mitigasi dengan patch, hardening, monitoring, dan verifikasi perbaikan. Jangan mengarang detail yang tidak ada; nyatakan jika informasi CVE terbatas.`
+            }],
+            cveContext
+          })
+        });
+        const data = await response.json();
+        if (!response.ok || data.error) throw new Error(data.error || `Analisis gagal (HTTP ${response.status}).`);
+        cve.aiAnalysis = String(data.response || '').trim();
+        if (!cve.aiAnalysis) throw new Error('Respons analisis AI kosong.');
+      } catch (error) {
+        cve.aiAnalysisError = error instanceof Error ? error.message : 'Analisis CVE gagal dimuat.';
+      } finally {
+        cve.aiAnalysisLoading = false;
       }
     },
 
@@ -889,6 +956,14 @@ export default {
 .cve-row-details { padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(0,0,0,.05); }
 .cve-row-description { font-size: .75rem; color: #475569; line-height: 1.5; margin-bottom: 8px; }
 .cve-row-action-box { background: #fff1f2; border-radius: 6px; padding: 6px 10px; font-size: .7rem; color: #b91c1c; }
+.cve-ai-detail-box { margin-top: 10px; padding: 10px; border: 1px solid #bfdbfe; border-radius: 10px; background: linear-gradient(135deg, #eff6ff, #f8fafc); }
+.cve-ai-detail-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; color: #1e3a8a; font-size: .72rem; }
+.cve-ai-detail-header strong { display: block; margin-top: 2px; color: #0f172a; font-size: .78rem; }
+.cve-ai-kicker { color: #2563eb; font-size: .6rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.cve-ai-analysis { white-space: pre-line; color: #334155; font-size: .73rem; line-height: 1.65; }
+.cve-ai-loading, .cve-ai-error { color: #64748b; font-size: .7rem; line-height: 1.5; }
+.cve-ai-error { color: #b91c1c; }
+.cve-ai-disclaimer { display: block; margin-top: 9px; color: #64748b; font-size: .6rem; line-height: 1.45; }
 
 /* Custom Table Styles for OTX */
 .table-custom { width: 100%; border-collapse: separate; border-spacing: 0; }
