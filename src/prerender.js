@@ -35,6 +35,7 @@ const ROUTE_CONTENT = {
           <li><a href="/frameworks/pbi-02-2024">PBI 02/2024 — Keamanan siber Bank Indonesia</a></li>
           <li><a href="/frameworks/padk-1-2026">PADK 1/2026 — Penyelenggaraan TI bank umum</a></li>
           <li><a href="/frameworks/padg-32-2025">PADG 32/2025 — Sistem pembayaran Bank Indonesia</a></li>
+          <li><a href="/frameworks/padg-24-2024">PADG 24/2024 — Keamanan sistem informasi dan ketahanan siber</a></li>
           <li><a href="/frameworks/uu-pdp-27-2022">UU PDP 27/2022 — Perlindungan data pribadi</a></li>
         </ul>
         <h2>Alat Interaktif</h2>
@@ -255,6 +256,20 @@ const ROUTE_CONTENT = {
         <h1>PADG 32/2025 — Peraturan Anggota Dewan Gubernur BI tentang Sistem Pembayaran</h1>
         <p>PADG 32/2025 adalah Peraturan Anggota Dewan Gubernur Bank Indonesia yang mengatur industri sistem pembayaran, mencakup penyelenggaraan sistem pembayaran, produk pembayaran, inovasi digital, pricing, dan pengawasan.</p>
         <p>Regulasi ini berlaku bagi seluruh penyelenggara sistem pembayaran yang diawasi Bank Indonesia, termasuk perusahaan fintech, e-wallet, dan payment gateway.</p>
+      </main>
+    `,
+  },
+  '/frameworks/padg-24-2024': {
+    title: 'PADG 24/2024 - Keamanan Sistem Informasi dan Ketahanan Siber | SibukPatuh',
+    description: 'Ringkasan PADG 24/2024: ketentuan pelaksanaan PBI 2/2024 tentang tata kelola, pencegahan, penanganan, pelaporan, kolaborasi, dan penerapan keamanan sistem informasi serta ketahanan siber.',
+    h1: 'PADG 24/2024 — Keamanan Sistem Informasi dan Ketahanan Siber',
+    body: `
+      <main>
+        <h1>PADG 24/2024 — Keamanan Sistem Informasi dan Ketahanan Siber</h1>
+        <p>PADG 24/2024 merupakan ketentuan pelaksanaan PBI 2/2024 bagi penyelenggara sistem pembayaran, pelaku pasar uang dan pasar valuta asing, serta pihak lain yang diatur dan diawasi Bank Indonesia.</p>
+        <h2>Ruang Lingkup</h2>
+        <p>Regulasi ini memetakan tata kelola, pencegahan, penanganan dan pemulihan insiden, penyampaian data dan informasi, sanksi administratif, kolaborasi, serta klasifikasi penerapan KKS.</p>
+        <p>Halaman interaktif menyediakan peta 66 pasal, fokus implementasi, contoh evidence, uji kontrol, dan referensi resmi BI. Evidence cue bersifat panduan self-assessment, bukan bukti kepatuhan aktual.</p>
       </main>
     `,
   },

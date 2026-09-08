@@ -26,26 +26,26 @@
       <section class="padg-hero">
         <div>
           <span class="padg-kicker"><i class="fas fa-landmark"></i>Bank Indonesia</span>
-          <h1 class="padg-title">PADG 32/2025 - Pengaturan Industri Sistem Pembayaran</h1>
-          <p class="padg-lede">Halaman ini membedah PADG 32/2025 per kewajiban dan menerjemahkannya menjadi langkah implementasi, contoh evidence, serta uji efektivitas kontrol. Gunakan sebagai working guide; penetapan status comply tetap memerlukan review terhadap teks resmi PADG dan petunjuk teknis BI.</p>
-          <a class="padg-source" href="https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_322025.aspx" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>Sumber resmi BI · berlaku 31 Maret 2026</a>
+          <h1 class="padg-title">{{ regulationTitle }}</h1>
+          <p class="padg-lede">{{ regulationLede }}</p>
+          <a class="padg-source" :href="sourceUrl" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>{{ sourceLabel }}</a>
           <div class="padg-metrics">
-            <div class="padg-metric"><label>Total Bab</label><strong>{{ totalChapters }}</strong><span>BAB I sampai XII yang mengatur berbagai aspek sistem pembayaran.</span></div>
-            <div class="padg-metric"><label>Total Kewajiban</label><strong>{{ totalRequirements }}</strong><span>Pasal-pasal yang dapat ditinjau satu per satu dalam eksplorasi.</span></div>
-            <div class="padg-metric"><label>Lampiran</label><strong>{{ totalAppendices }}</strong><span>Definisi, parameter, dan kerangka implementasi penting.</span></div>
+            <div class="padg-metric"><label>Total Bab</label><strong>{{ totalChapters }}</strong><span>{{ chapterMetricDescription }}</span></div>
+            <div class="padg-metric"><label>Total Kewajiban</label><strong>{{ totalRequirements }}</strong><span>{{ requirementMetricDescription }}</span></div>
+            <div class="padg-metric"><label>{{ referenceTerm }}</label><strong>{{ totalAppendices }}</strong><span>{{ referenceMetricDescription }}</span></div>
             <div class="padg-metric"><label>Panduan Evidence</label><strong>{{ evidenceCoverage }}%</strong><span>{{ totalEvidenceExamples }} kewajiban sudah memiliki contoh evidence.</span></div>
           </div>
         </div>
         <div class="padg-side-stack">
-          <div class="padg-side"><label>Alur Analisa</label><h3>Pendekatan analisa yang terstruktur dan konsisten</h3><p>Analisis dapat dimulai dari peta pilar dan bab untuk memahami cakupan regulasi, kemudian dilanjut ke eksplorasi kewajiban untuk meninjau rinci, dan ditutup dengan board lampiran untuk referensi format, definisi, dan artefak implementasi.</p></div>
-          <div class="padg-side"><label>Catatan Regulasi</label><p>PADG mengatur penyelenggaraan sistem pembayaran, aktivitas, produk, skema harga, inovasi, tata kelola, manajemen risiko, pengawasan, koordinasi, dan ketentuan lainnya. Kepatuhan wajib dipatuhi oleh PSP, PJP, PIP, Peserta, dan pihak terkait lainnya.</p></div>
+          <div class="padg-side"><label>Alur Analisa</label><h3>Pendekatan analisa yang terstruktur dan konsisten</h3><p>{{ analysisFlowDescription }}</p></div>
+          <div class="padg-side"><label>Catatan Regulasi</label><p>{{ scopeDescription }}</p></div>
         </div>
       </section>
 
       <div class="padg-nav nav" role="tablist">
-        <button class="padg-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Regulasi</strong><span>Peta pilar, bab regulasi, dan elemen kewajiban inti.</span></span></button>
-        <button class="padg-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter kewajiban, baca interpretasi, dan telusuri lampiran terkait.</span></span></button>
-        <button class="padg-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>Lampiran & Referensi</strong><span>Board referensi lampiran, definisi, dan format.</span></span></button>
+        <button class="padg-tab" :class="{ active: activeTab === 'overview' }" type="button" role="tab" @click="activeTab = 'overview'"><i class="fas fa-chart-line"></i><span><strong>Ringkasan Regulasi</strong><span>Peta domain, bab, dan elemen kewajiban inti.</span></span></button>
+        <button class="padg-tab" :class="{ active: activeTab === 'explorer' }" type="button" role="tab" @click="activeTab = 'explorer'"><i class="fas fa-sliders-h"></i><span><strong>Eksplorasi</strong><span>Filter kewajiban, baca implementasi, dan telusuri referensi.</span></span></button>
+          <button class="padg-tab" :class="{ active: activeTab === 'reference' }" type="button" role="tab" @click="activeTab = 'reference'"><i class="fas fa-folder-open"></i><span><strong>{{ referenceTerm }} & Referensi</strong><span>Board sumber resmi, FAQ, dan petunjuk teknis.</span></span></button>
         <button class="padg-tab" :class="{ active: activeTab === 'playbook' }" type="button" role="tab" @click="activeTab = 'playbook'"><i class="fas fa-clipboard-check"></i><span><strong>Playbook Implementasi</strong><span>Langkah kerja, evidence minimum, dan uji efektivitas.</span></span></button>
       </div>
 
@@ -55,7 +55,7 @@
           <div class="padg-grid two">
             <article class="padg-panel">
               <div class="padg-head"><h3>Lanskap pilar regulasi</h3><span class="padg-chip">{{ pillarBreakdown.length }} pilar</span></div>
-              <p class="padg-copy">Pilar utama PADG: tata kelola, aktivitas, produk, risiko, harga, inovasi, pengawasan, dan pelaporan. Klik bar untuk filter eksplorasi.</p>
+              <p class="padg-copy">{{ domainDescription }} Klik bar untuk filter eksplorasi.</p>
               <div class="padg-bars">
                 <button v-for="item in pillarBreakdown" :key="item.key" type="button" class="padg-bar" @click="jumpExplorer(item.key)"><span><strong>{{ item.label }}</strong><em>{{ item.summary }}</em></span><span class="padg-track"><b :style="{ width: (item.count / maxPillarCount) * 100 + '%', background: item.color }"></b></span><span class="padg-num">{{ item.count }}</span></button>
               </div>
@@ -63,15 +63,15 @@
 
             <article class="padg-panel">
               <div class="padg-head"><h3>Timeline Kepatuhan</h3><span class="padg-chip">Batas waktu</span></div>
-              <p class="padg-copy">Rencana milestone implementasi PADG 32/2025 untuk memastikan kesiapan operasional tepat waktu.</p>
+              <p class="padg-copy">{{ timelineDescription }}</p>
               <div class="padg-timeline mt-3">
                 <div class="d-flex gap-3 mb-3">
-                  <div class="text-center"><div class="fw-bold text-navy x-small">APR</div><div class="h5 fw-800 mb-0">2026</div></div>
-                  <div class="border-start ps-3"><div class="fw-bold x-small">Fase Persiapan</div><p class="text-muted mb-0 x-small">Analisa gap dan pemetaan kewajiban internal.</p></div>
+                  <div class="text-center"><div class="fw-bold text-navy x-small">{{ padg24Mode ? 'DES' : 'APR' }}</div><div class="h5 fw-800 mb-0">{{ padg24Mode ? '2024' : '2026' }}</div></div>
+                  <div class="border-start ps-3"><div class="fw-bold x-small">Fase Persiapan</div><p class="text-muted mb-0 x-small">{{ padg24Mode ? 'Tetapkan applicability, owner, dan rencana penerapan KKS.' : 'Analisa gap dan pemetaan kewajiban internal.' }}</p></div>
                 </div>
                 <div class="d-flex gap-3">
-                  <div class="text-center"><div class="fw-bold text-danger x-small">DES</div><div class="h5 fw-800 mb-0">2026</div></div>
-                  <div class="border-start ps-3"><div class="fw-bold x-small text-danger">Batas Akhir</div><p class="text-muted mb-0 x-small">Seluruh sistem harus sudah comply 100%.</p></div>
+                  <div class="text-center"><div class="fw-bold text-danger x-small">{{ padg24Mode ? 'JAN' : 'DES' }}</div><div class="h5 fw-800 mb-0">2026</div></div>
+                  <div class="border-start ps-3"><div class="fw-bold x-small text-danger">{{ timelineDeadlineLabel }}</div><p class="text-muted mb-0 x-small">{{ timelineDeadlineDescription }}</p></div>
                 </div>
               </div>
             </article>
@@ -79,21 +79,21 @@
             <article class="padg-panel">
               <div class="padg-head"><h3>Ringkasan PADG</h3><span class="padg-chip">Pemeriksaan cepat</span></div>
               <div class="padg-mini-row">
-                <div class="padg-mini"><label>Ruang Lingkup</label><strong>12 BAB</strong><span>Mencakup seluruh aspek industri sistem pembayaran.</span></div>
-                <div class="padg-mini"><label>Penerapan</label><strong>PSP & Pihak Terkait</strong><span>Bank Indonesia, PSP, PJP, PIP, Peserta, SRO, dan afiliasi.</span></div>
-                <div class="padg-mini"><label>Prioritas</label><strong>Stabilitas & Inovasi</strong><span>Kestabilan sistem pembayaran sambil dorong inovasi digital.</span></div>
-                <div class="padg-mini"><label>Sifat Aturan</label><strong>Mandatory</strong><span>Kepatuhan wajib dengan sanksi administratif bagi pelanggar.</span></div>
+                <div class="padg-mini"><label>Ruang Lingkup</label><strong>{{ totalChapters }} BAB</strong><span>{{ scopeDescription }}</span></div>
+                <div class="padg-mini"><label>Penerapan</label><strong>{{ applicabilityShort }}</strong><span>{{ applicabilityDescription }}</span></div>
+                <div class="padg-mini"><label>Prioritas</label><strong>{{ priorityTitle }}</strong><span>{{ priorityDescription }}</span></div>
+                <div class="padg-mini"><label>Sifat Aturan</label><strong>Mandatory</strong><span>{{ mandatoryDescription }}</span></div>
               </div>
               <div class="padg-note">Contoh evidence di halaman ini adalah evidence cue untuk persiapan audit, bukan bukti kepatuhan aktual. Organisasi tetap perlu melakukan self-assessment, menetapkan owner, dan menyimpan artefak pada repository yang dikendalikan.</div>
             </article>
 
             <article class="padg-panel">
-              <div class="padg-head"><h3>Referensi lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
-              <p class="padg-copy">Daftar lampiran berisi definisi, parameter, dan kerangka teknis PADG. Pilih lampiran untuk melihat detail isi.</p>
+              <div class="padg-head"><h3>{{ referenceTerm }}</h3><span class="padg-chip">{{ totalAppendices }} {{ referenceTerm.toLowerCase() }}</span></div>
+              <p class="padg-copy">{{ referenceDescription }}</p>
               <div class="mt-3 p-3 bg-light rounded-4 border border-dashed text-center">
                 <i class="fas fa-file-pdf fs-3 text-muted mb-2"></i>
-                <div class="x-small fw-bold">10 Dokumen Teknis</div>
-                <div class="x-small text-muted">Tersedia di tab Lampiran</div>
+                <div class="x-small fw-bold">{{ referenceCountLabel }}</div>
+                <div class="x-small text-muted">Tersedia di tab {{ referenceTerm }}</div>
               </div>
             </article>
 
@@ -127,14 +127,14 @@
             <article class="padg-panel">
               <div class="padg-head"><h3>Daftar kewajiban</h3><span class="padg-chip">{{ filteredRequirements.length }} entri</span></div>
               <div class="padg-list">
-                <button v-for="req in filteredRequirements" :data-search-id="req.id" :key="req.id" type="button" class="padg-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="padg-item-top"><span class="padg-item-code">{{ req.id }}</span><span class="padg-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="padg-item-name">{{ req.title || '-' }}</div><div class="padg-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} lampiran</span></div></button>
+                <button v-for="req in filteredRequirements" :data-search-id="req.id" :key="req.id" type="button" class="padg-item" :class="{ active: activeRequirementId === req.id }" :style="{ '--accent': getPillarColor(req.pillar) }" @click="setActiveRequirement(req.id)"><div class="padg-item-top"><span class="padg-item-code">{{ req.id }}</span><span class="padg-pill">{{ getPillarLabel(req.pillar) }}</span></div><div class="padg-item-name">{{ req.title || '-' }}</div><div class="padg-item-meta"><span>{{ getChapterLabel(req.chapter) }}</span><span>{{ (req.appendices || []).length }} {{ referenceTerm.toLowerCase() }}</span></div></button>
                 <div v-if="filteredRequirements.length === 0" class="padg-empty">Tidak ada kewajiban yang cocok dengan filter saat ini.</div>
               </div>
             </article>
             <article class="padg-panel padg-inspector">
               <div class="padg-inspector-head"><small>Kewajiban Detail</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="padg-inspector-body">
-                <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' lampiran' : '0 lampiran' }}</span></div>
+                <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' ' + referenceTerm.toLowerCase() : '0 ' + referenceTerm.toLowerCase() }}</span></div>
                 <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
                 <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="padg-callout padg-implementation-callout"><span class="padg-label">Fokus Implementasi · {{ activeRequirement?.implementation_domain || 'Operational guidance' }}</span><p class="mb-2">{{ activeRequirement?.implementation_focus || 'Tidak ada fokus implementasi tambahan.' }}</p><ol class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.implementation_steps && activeRequirement.implementation_steps.length ? activeRequirement.implementation_steps : (activeRequirement?.focus || []))" :key="idx">{{ item }}</li></ol></div>
@@ -143,7 +143,7 @@
                 <div v-if="activeRequirement?.key_dates?.length" class="padg-callout"><span class="padg-label">Tanggal / Trigger Kunci</span><ul class="padg-plain"><li v-for="date in activeRequirement.key_dates" :key="date">{{ date }}</li></ul></div>
                 <div class="padg-callout"><span class="padg-label">Uji Efektivitas Kontrol</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement?.control_test || [])" :key="idx">{{ item }}</li></ul></div>
                 <p class="padg-disclaimer"><i class="fas fa-info-circle me-1"></i>{{ activeRequirement?.evidence_disclaimer || 'Evidence cue bersifat panduan dan tidak membuktikan kepatuhan aktual.' }}</p>
-                <div class="padg-callout"><span class="padg-label">Lampiran Terkait</span><div class="padg-refs"><span v-for="ref in (activeRequirement?.appendices || [])" :key="ref" class="padg-ref">{{ ref }}</span><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="padg-empty w-100">Kewajiban ini tidak menunjuk lampiran spesifik.</span></div></div>
+                <div class="padg-callout"><span class="padg-label">{{ referenceTerm }} Terkait</span><div class="padg-refs"><span v-for="ref in (activeRequirement?.appendices || [])" :key="ref" class="padg-ref">{{ ref }}</span><span v-if="!activeRequirement || !activeRequirement.appendices || !activeRequirement.appendices.length" class="padg-empty w-100">Kewajiban ini tidak menunjuk {{ referenceTerm.toLowerCase() }} spesifik.</span></div></div>
               </div>
             </article>
           </div>
@@ -153,11 +153,11 @@
         <div v-if="activeTab === 'reference'" key="reference-tab">
           <div class="padg-refspace">
             <article class="padg-panel">
-              <div class="padg-head"><h3>Daftar lampiran</h3><span class="padg-chip">{{ totalAppendices }} lampiran</span></div>
-              <p class="padg-copy">Daftar lampiran PADG berisi definisi, parameter, dan kerangka teknis untuk implementasi regulasi.</p>
+                <div class="padg-head"><h3>Daftar {{ referenceTerm.toLowerCase() }}</h3><span class="padg-chip">{{ totalAppendices }} {{ referenceTerm.toLowerCase() }}</span></div>
+              <p class="padg-copy">{{ referenceDescription }}</p>
             </article>
             <article class="padg-panel">
-              <div class="padg-head"><h3>Board lampiran</h3><span class="padg-chip">{{ appendices.length }} entri</span></div>
+                <div class="padg-head"><h3>Board {{ referenceTerm.toLowerCase() }}</h3><span class="padg-chip">{{ appendices.length }} entri</span></div>
               <div class="padg-list">
                 <button v-for="app in appendices" :key="app.id" type="button" class="padg-item" @click="openAppendixModal(app)"><div class="padg-item-top"><span class="padg-item-code">{{ app.id }}</span><span class="padg-pill">{{ app.type }}</span></div><div class="padg-item-name">{{ app.title || '-' }}</div></button>
               </div>
@@ -168,7 +168,7 @@
         <!-- Tab 4: Playbook Implementasi -->
         <div v-if="activeTab === 'playbook'" key="playbook-tab">
           <div class="padg-panel">
-            <div class="padg-head"><div><h3>Playbook implementasi & evidence</h3><p class="padg-copy mb-0">Paket di bawah adalah pola kerja minimum untuk mengubah kewajiban menjadi kontrol yang dapat diuji. Status evidence selalu dimulai dari “Belum dinilai”.</p></div><span class="padg-chip">{{ totalEvidenceExamples }}/{{ totalRequirements }} terpetakan</span></div>
+            <div class="padg-head"><div><h3>Playbook implementasi & evidence</h3><p class="padg-copy mb-0">Paket di bawah adalah pola kerja minimum untuk mengubah kewajiban {{ regulationShortTitle }} menjadi kontrol yang dapat diuji. Status evidence selalu dimulai dari “Belum dinilai”.</p></div><span class="padg-chip">{{ totalEvidenceExamples }}/{{ totalRequirements }} terpetakan</span></div>
             <div class="padg-domain-grid">
               <button v-for="domain in implementationDomains" :key="domain.key" type="button" class="padg-domain-card" :style="{ '--accent': domain.color }" @click="jumpImplementationDomain(domain.label)">
                 <span class="padg-domain-icon"><i :class="['fas', domain.icon]"></i></span><span><strong>{{ domain.label }}</strong><small>{{ domain.count }} kewajiban · contoh evidence tersedia</small></span><i class="fas fa-arrow-right"></i>
@@ -177,7 +177,7 @@
             <div class="padg-guide-grid mt-4">
               <div class="padg-guide-card"><span class="padg-label">Evidence minimum yang diminta auditor</span><strong>Artefak + metadata + hasil uji</strong><p>Jangan hanya mengunggah kebijakan. Sertakan versi, owner, tanggal berlaku, approval, bukti pelaksanaan, hasil monitoring/pengujian, dan tindak lanjut temuan.</p></div>
               <div class="padg-guide-card"><span class="padg-label">Status yang disarankan</span><strong>Belum dinilai → Sebagian → Efektif</strong><p>Perbarui status setelah evidence direview. Status guidance pada dataset tidak sama dengan status kepatuhan organisasi.</p></div>
-              <div class="padg-guide-card"><span class="padg-label">Sumber dan batas penggunaan</span><strong>PADG + Juknis BI + bukti internal</strong><p>Gunakan <a href="https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_322025.aspx" target="_blank" rel="noopener noreferrer">halaman resmi BI</a> dan petunjuk teknis terbaru sebagai sumber normatif utama.</p></div>
+              <div class="padg-guide-card"><span class="padg-label">Sumber dan batas penggunaan</span><strong>{{ regulationShortTitle }} + Juknis BI + bukti internal</strong><p>Gunakan <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">halaman resmi BI</a> dan petunjuk teknis terbaru sebagai sumber normatif utama.</p></div>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@
             </div>
             <div class="sej-modal-main">
               <div class="sej-modal-header">
-                <h4 class="sej-modal-title">{{ selectedAppendix?.title || 'Detail Lampiran' }}</h4>
+                <h4 class="sej-modal-title">{{ selectedAppendix?.title || `Detail ${referenceTerm}` }}</h4>
               </div>
               <div class="sej-modal-body">
                 <!-- Ringkasan Section -->
@@ -250,7 +250,7 @@
                         <span>{{ reqId }}</span>
                       </button>
                       <div v-if="!selectedAppendix?.used_by || !selectedAppendix.used_by.length" class="sej-modal-empty">
-                        Belum ada kewajiban yang dipetakan ke lampiran ini.
+                        Belum ada kewajiban yang dipetakan ke referensi ini.
                       </div>
                     </div>
                   </div>
@@ -322,6 +322,29 @@ export default {
     };
   },
   computed: {
+    padg24Mode() { return this.$route?.name === 'padg24'; },
+    regulationShortTitle() { return this.padg24Mode ? 'PADG 24/2024' : 'PADG 32/2025'; },
+    regulationTitle() { return this.padg24Mode ? 'PADG 24/2024 — Keamanan Sistem Informasi dan Ketahanan Siber' : 'PADG 32/2025 — Pengaturan Industri Sistem Pembayaran'; },
+    regulationLede() { return this.padg24Mode ? 'Halaman ini memetakan PADG 24/2024 sebagai ketentuan pelaksanaan PBI 2/2024, lalu menerjemahkan 66 pasal ke domain tata kelola, pencegahan, penanganan, pelaporan, kolaborasi, dan penerapan KKS. Gunakan sebagai working guide; status kepatuhan tetap memerlukan review terhadap teks resmi, FAQ, dan petunjuk teknis BI.' : 'Halaman ini membedah PADG 32/2025 per kewajiban dan menerjemahkannya menjadi langkah implementasi, contoh evidence, serta uji efektivitas kontrol. Gunakan sebagai working guide; penetapan status comply tetap memerlukan review terhadap teks resmi PADG dan petunjuk teknis BI.'; },
+    sourceUrl() { return this.padg24Mode ? 'https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_242024.aspx' : 'https://www.bi.go.id/id/publikasi/peraturan/Pages/PADG_322025.aspx'; },
+    sourceLabel() { return this.padg24Mode ? 'Sumber resmi BI · berlaku 31 Desember 2024' : 'Sumber resmi BI · berlaku 31 Maret 2026'; },
+    referenceTerm() { return this.padg24Mode ? 'Referensi' : 'Lampiran'; },
+    chapterMetricDescription() { return this.padg24Mode ? 'BAB I sampai XI yang membentuk kerangka KKS BI.' : 'BAB I sampai XII yang mengatur berbagai aspek sistem pembayaran.'; },
+    requirementMetricDescription() { return this.padg24Mode ? 'Pasal-pasal yang dapat ditinjau per domain KKS.' : 'Pasal-pasal yang dapat ditinjau satu per satu dalam eksplorasi.'; },
+    referenceMetricDescription() { return this.padg24Mode ? 'Sumber resmi, FAQ, dan petunjuk teknis pendukung.' : 'Definisi, parameter, dan kerangka implementasi penting.'; },
+    analysisFlowDescription() { return this.padg24Mode ? 'Mulai dari domain KKS dan bab, lanjutkan ke pasal untuk melihat fokus implementasi, evidence, dan uji kontrol, lalu gunakan referensi BI sebagai sumber normatif pendukung.' : 'Analisis dapat dimulai dari peta pilar dan bab untuk memahami cakupan regulasi, kemudian dilanjut ke eksplorasi kewajiban untuk meninjau rinci, dan ditutup dengan board lampiran untuk referensi format, definisi, dan artefak implementasi.'; },
+    scopeDescription() { return this.padg24Mode ? 'Mengatur keamanan sistem informasi dan ketahanan siber bagi penyelenggara sistem pembayaran, pelaku pasar uang/valuta asing, serta pihak lain yang diatur dan diawasi BI.' : 'PADG mengatur penyelenggaraan sistem pembayaran, aktivitas, produk, skema harga, inovasi, tata kelola, manajemen risiko, pengawasan, koordinasi, dan ketentuan lainnya.'; },
+    domainDescription() { return this.padg24Mode ? 'Domain utama PADG KKS: governance, prevention, response & recovery, reporting, compliance, dan collaboration.' : 'Pilar utama PADG: tata kelola, aktivitas, produk, risiko, harga, inovasi, pengawasan, dan pelaporan.'; },
+    timelineDescription() { return this.padg24Mode ? 'Pastikan kesiapan KKS, laporan tahunan pertama, dan pelaporan insidental mengikuti trigger yang ditetapkan PADG/PBI serta petunjuk teknis BI.' : 'Rencana milestone implementasi PADG 32/2025 untuk memastikan kesiapan operasional tepat waktu.'; },
+    timelineDeadlineLabel() { return this.padg24Mode ? 'Pelaporan pertama' : 'Batas Akhir'; },
+    timelineDeadlineDescription() { return this.padg24Mode ? 'Laporan tahunan pertama disampaikan Januari 2026 untuk periode laporan 2025.' : 'Seluruh sistem harus sudah comply 100%.'; },
+    applicabilityShort() { return this.padg24Mode ? 'Penyelenggara KKS' : 'PSP & Pihak Terkait'; },
+    applicabilityDescription() { return this.padg24Mode ? 'Penyelenggara sistem pembayaran, pelaku pasar uang/valas, dan pihak lain sesuai objek serta klasifikasi penerapan.' : 'Bank Indonesia, PSP, PJP, PIP, Peserta, SRO, dan afiliasi.'; },
+    priorityTitle() { return this.padg24Mode ? 'KKS & Resiliensi' : 'Stabilitas & Inovasi'; },
+    priorityDescription() { return this.padg24Mode ? 'Tata kelola, pencegahan, respons, pemulihan, pelaporan, dan kolaborasi risiko Siber.' : 'Kestabilan sistem pembayaran sambil dorong inovasi digital.'; },
+    mandatoryDescription() { return this.padg24Mode ? 'Kewajiban pelaksanaan KKS dengan sanksi administratif atas pelanggaran tertentu.' : 'Kepatuhan wajib dengan sanksi administratif bagi pelanggar.'; },
+    referenceDescription() { return this.padg24Mode ? 'Referensi mendukung pembacaan PADG 24/2024: halaman resmi BI, FAQ, dan petunjuk teknis pelaporan.' : 'Daftar lampiran PADG berisi definisi, parameter, dan kerangka teknis untuk implementasi regulasi.'; },
+    referenceCountLabel() { return this.padg24Mode ? '3 Sumber Pendukung' : '10 Dokumen Teknis'; },
     totalChapters() {
       const chapters = this.requirements.map(r => r.chapter).filter(Boolean);
       return new Set(chapters).size;
@@ -329,14 +352,28 @@ export default {
     totalRequirements() { return this.requirements.length; },
     totalAppendices() { return this.appendices.length; },
     pillarBreakdown() {
-      return Object.entries(this.pillarMeta)
-        .map(([key, meta]) => ({ key, label: meta.label, color: meta.color, icon: meta.icon, summary: meta.summary, count: this.requirements.filter(r => r.pillar === key).length }))
+      return [...new Set(this.requirements.map(r => r.pillar).filter(Boolean))]
+        .map((key, index) => {
+          const meta = this.pillarMeta[key] || {};
+          return { key, label: this.getPillarLabel(key), color: this.getPillarColor(key) || meta.color || ['#0f766e', '#2563eb', '#7c3aed', '#a16207', '#b91c1c'][index % 5], icon: meta.icon || 'fa-shield-alt', summary: meta.summary || `Kewajiban pada domain ${this.getPillarLabel(key)}.`, count: this.requirements.filter(r => r.pillar === key).length };
+        })
         .filter(item => item.count > 0);
     },
     maxPillarCount() { return Math.max(...this.pillarBreakdown.map(p => p.count), 1); },
     chapterBreakdown() {
-      return Object.entries(this.chapterMeta)
-        .map(([key, meta]) => ({ key, label: meta.label, color: meta.color, icon: meta.icon, summary: meta.summary, count: this.requirements.filter(r => r.chapter === key).length }))
+      return [...new Set(this.requirements.map(r => r.chapter).filter(Boolean))]
+        .map((key) => {
+          const requirement = this.requirements.find(r => r.chapter === key);
+          const meta = this.chapterMeta[key] || {};
+          return {
+            key,
+            label: requirement?.chapter_title || meta.label || key,
+            color: meta.color || '#144e72',
+            icon: meta.icon || 'fa-layer-group',
+            summary: meta.summary || `Ketentuan dalam BAB ${key}.`,
+            count: this.requirements.filter(r => r.chapter === key).length,
+          };
+        })
         .filter(item => item.count > 0);
     },
     maxChapterCount() { return Math.max(...this.chapterBreakdown.map(c => c.count), 1); },
@@ -383,9 +420,18 @@ export default {
     },
   },
   methods: {
-    getPillarColor(p) { return this.pillarMeta[p]?.color || '#144e72'; },
-    getPillarLabel(p) { return this.pillarMeta[p]?.label || p || '-'; },
-    getChapterLabel(c) { return (c || '-') + '. ' + (this.chapterMeta[c]?.label || ''); },
+    getPillarColor(p) {
+      const colors = { 'Applicability & scope': '#7c3aed', Governance: '#0f766e', Prevention: '#2563eb', 'Response & recovery': '#b91c1c', Reporting: '#1d4ed8', Collaboration: '#a16207', 'Compliance & supervision': '#4b5563' };
+      return this.pillarMeta[p]?.color || colors[p] || '#144e72';
+    },
+    getPillarLabel(p) {
+      const labels = { 'Applicability & scope': 'Applicability & Ruang Lingkup', Governance: 'Tata Kelola', Prevention: 'Pencegahan', 'Response & recovery': 'Penanganan & Pemulihan', Reporting: 'Pelaporan', Collaboration: 'Kolaborasi', 'Compliance & supervision': 'Kepatuhan & Pengawasan' };
+      return labels[p] || this.pillarMeta[p]?.label || p || '-';
+    },
+    getChapterLabel(c) {
+      const requirement = this.requirements.find(r => r.chapter === c);
+      return (c || '-') + '. ' + (requirement?.chapter_title || this.chapterMeta[c]?.label || '');
+    },
     togglePillar(p) { this.activePillar = this.activePillar === p ? '' : p; },
     resetRequirementFilters() { this.activePillar = ''; this.chapterFilter = ''; this.requirementSearch = ''; },
     setActiveRequirement(id) { this.activeRequirementId = id; },
@@ -432,8 +478,8 @@ export default {
         this.loading = true;
         this.error = null;
         const [reqRes, appRes] = await Promise.all([
-          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padg_requirements_en.json' : 'padg_requirements.json'}?t=${new Date().getTime()}`),
-          fetch(`/data/${localStorage.getItem('language') === 'en' ? 'padg_appendices_en.json' : 'padg_appendices.json'}?t=${new Date().getTime()}`)
+          fetch(`/data/${this.padg24Mode ? (localStorage.getItem('language') === 'en' ? 'padg24_2024_requirements_en.json' : 'padg24_2024_requirements.json') : (localStorage.getItem('language') === 'en' ? 'padg_requirements_en.json' : 'padg_requirements.json')}?t=${new Date().getTime()}`),
+          fetch(`/data/${this.padg24Mode ? (localStorage.getItem('language') === 'en' ? 'padg24_2024_references_en.json' : 'padg24_2024_references.json') : (localStorage.getItem('language') === 'en' ? 'padg_appendices_en.json' : 'padg_appendices.json')}?t=${new Date().getTime()}`)
         ]);
         if (reqRes.ok) {
           const data = await reqRes.json();

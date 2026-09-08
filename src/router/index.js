@@ -133,6 +133,16 @@ export const routes = [
         }
     },
     {
+        path: '/frameworks/padg-24-2024',
+        name: 'padg24',
+        component: () => import('../views/Padg.vue'),
+        meta: {
+            title: 'PADG 24/2024 - Keamanan Sistem Informasi dan Ketahanan Siber | SibukPatuh',
+            description: 'Peta kewajiban keamanan sistem informasi dan ketahanan siber bagi penyelenggara sistem pembayaran, pelaku pasar uang/valuta asing, serta pihak lain yang diawasi Bank Indonesia.',
+            keywords: 'PADG 24 2024, keamanan sistem informasi, ketahanan siber, KKS BI, Bank Indonesia, PBI 2 2024'
+        }
+    },
+    {
         path: '/frameworks/panduan-resiliensi-ojk',
         name: 'resilience',
         component: () => import('../views/Resilience.vue'),
