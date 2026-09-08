@@ -394,7 +394,7 @@
 
                 <div class="sej-callout">
                   <span class="sej-label">Ringkasan Requirement</span>
-                  <div class="mt-2">{{ activeRequirement ? activeRequirement.summary : "Pilih requirement untuk membaca ringkasan." }}</div>
+                  <RequirementSummary :text="activeRequirement ? activeRequirement.summary : ''" empty-text="Pilih requirement untuk membaca ringkasan." />
                 </div>
                 <div class="sej-note">
                   <span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span>
@@ -566,7 +566,7 @@
                   </div>
                   <div class="modal-section-content">
                     <div class="sej-modal-scope">{{ selectedReference?.timeline || '-' }} — {{ selectedReference?.owner || '-' }}</div>
-                    <p class="sej-modal-summary">{{ selectedReference?.summary || '-' }}</p>
+                    <RequirementSummary :text="selectedReference?.summary || ''" />
                   </div>
                 </div>
 

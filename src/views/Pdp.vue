@@ -121,7 +121,7 @@
                   </div>
                 </div>
 
-                <div class="sej-callout"><span class="sej-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih requirement untuk membaca ringkasan.' }}</div></div>
+                <div class="sej-callout"><span class="sej-label">Ringkasan Requirement</span><RequirementSummary :text="activeRequirement ? activeRequirement.summary : ''" empty-text="Pilih requirement untuk membaca ringkasan." /></div>
                 <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Implementasi</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="sej-callout"><span class="sej-label">Contoh Evidence</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>

@@ -365,7 +365,7 @@
 
                 <div class="sej-callout">
                   <span class="sej-label">Ringkasan Konsep</span>
-                  <div class="mt-2">{{ activeConcept ? activeConcept.summary : "Pilih konsep untuk membaca ringkasan." }}</div>
+                  <RequirementSummary :text="activeConcept ? activeConcept.summary : ''" empty-text="Pilih konsep untuk membaca ringkasan." />
                 </div>
                 <div class="sej-note">
                   <span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span>
@@ -520,7 +520,7 @@
                   </div>
                   <div class="modal-section-content">
                     <div class="sej-modal-scope">{{ selectedDetail?.group || '-' }}</div>
-                    <p class="sej-modal-summary">{{ selectedDetail?.summary || '-' }}</p>
+                    <RequirementSummary :text="selectedDetail?.summary || ''" />
                   </div>
                 </div>
 

@@ -170,7 +170,7 @@
             <div v-if="!conceptState.active" class="iso-empty">Pilih salah satu konsep di atas untuk menampilkan kontrol terkait dan inspector detailnya.</div>
             <div v-else>
               <div class="iso-grid">
-                <div class="iso-selected" :style="{ '--accent': getConceptColor(conceptState.active) }"><div class="iso-selected-mark"><i :class="`fas ${getConceptIcon(conceptState.active)}`"></i></div><div><small>{{ getConceptKey(conceptState.active) }}</small><h3>{{ conceptState.active }}</h3><p>{{ getConceptSummary(conceptState.active) }}</p></div><div class="iso-selected-count"><strong>{{ conceptFilteredControls.length }}</strong><span>mapped items</span></div></div>
+                <div class="iso-selected" :style="{ '--accent': getConceptColor(conceptState.active) }"><div class="iso-selected-mark"><i :class="`fas ${getConceptIcon(conceptState.active)}`"></i></div><div><small>{{ getConceptKey(conceptState.active) }}</small><h3>{{ conceptState.active }}</h3><RequirementSummary :text="getConceptSummary(conceptState.active)" /></div><div class="iso-selected-count"><strong>{{ conceptFilteredControls.length }}</strong><span>mapped items</span></div></div>
                 <div class="iso-concept-workspace">
                   <section class="iso-panel iso-inspector-panel">
                     <div class="iso-panel-head"><h3>Kontrol terkait</h3><span class="iso-chip">Auto-filterd by concept</span></div>
@@ -386,4 +386,3 @@ export default {
 [data-bs-theme="dark"] .skeleton-block { background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.06) 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease infinite; }
 @media (max-width: 767.98px) { .skeleton-hero { grid-template-columns: 1fr; } .skeleton-metrics { grid-template-columns: repeat(2, 1fr); } }
 </style>
-

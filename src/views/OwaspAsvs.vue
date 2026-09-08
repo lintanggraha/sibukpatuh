@@ -121,7 +121,7 @@
                   </div>
                 </div>
 
-                <div class="sej-callout"><span class="sej-label">Ringkasan Konteks</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : 'Pilih kriteria untuk membaca tujuan verifikasi pengujian ini.' }}</div></div>
+                <div class="sej-callout"><span class="sej-label">Ringkasan Konteks</span><RequirementSummary :text="activeRequirement ? activeRequirement.summary : ''" empty-text="Pilih kriteria untuk membaca tujuan verifikasi pengujian ini." /></div>
                 <div class="sej-note"><span class="sej-label"><i class="fas fa-lightbulb me-1"></i>Analogi Verifikasi</span><div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="sej-callout"><span class="sej-label">Aksi Verifikasi Kepatuhan</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : ['Tidak ada instruksi langkah pengujian spesifik.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="sej-callout"><span class="sej-label">Bukti Evidence Validasi</span><ul class="sej-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Bebas dari skenario gagal.'])" :key="idx">{{ item }}</li></ul></div>
@@ -189,7 +189,7 @@
                   </div>
                   <div class="modal-section-content">
                     <div class="sej-modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
-                    <p class="sej-modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
+                    <RequirementSummary :text="selectedAppendix?.summary || ''" />
                   </div>
                 </div>
 

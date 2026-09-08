@@ -309,7 +309,7 @@
                   </div>
                 </div>
 
-                <div class="orj-callout"><span class="orj-label">Ringkasan Requirement</span><div class="mt-2">{{ activeTheme ? activeTheme.summary : 'Pilih tema untuk membaca ringkasan.' }}</div></div>
+                <div class="orj-callout"><span class="orj-label">Ringkasan Requirement</span><RequirementSummary :text="activeTheme ? activeTheme.summary : ''" empty-text="Pilih tema untuk membaca ringkasan." /></div>
                 <div class="orj-note"><span class="orj-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeTheme && activeTheme.analogy ? activeTheme.analogy : '-' }}</div></div>
                 <div class="orj-callout"><span class="orj-label">Fokus Implementasi</span><ul class="orj-plain"><li v-for="(item, idx) in (activeTheme && activeTheme.focus && activeTheme.focus.length ? activeTheme.focus : ['Tidak ada fokus implementasi tambahan.'])" :key="idx">{{ item }}</li></ul></div>
                 <div class="orj-callout"><span class="orj-label">Contoh Evidence</span><ul class="orj-plain"><li v-for="(item, idx) in (activeTheme && activeTheme.evidence && activeTheme.evidence.length ? activeTheme.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>

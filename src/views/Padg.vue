@@ -135,7 +135,7 @@
               <div class="padg-inspector-head"><small>Kewajiban Detail</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="padg-inspector-body">
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' ' + referenceTerm.toLowerCase() : '0 ' + referenceTerm.toLowerCase() }}</span></div>
-                <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2"><template v-if="activeRequirement"><ol v-if="summaryParts(activeRequirement.summary).length > 1" class="padg-plain padg-summary-list"><li v-for="(item, idx) in summaryParts(activeRequirement.summary)" :key="idx">{{ item }}</li></ol><span v-else>{{ activeRequirement.summary || 'Tidak ada ringkasan tersedia.' }}</span></template><span v-else>Pilih kewajiban untuk membaca detail.</span></div></div>
+                <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><RequirementSummary :text="activeRequirement?.summary || ''" empty-text="Pilih kewajiban untuk membaca detail." /></div>
                 <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="padg-callout padg-implementation-callout"><span class="padg-label">Fokus Implementasi · {{ activeRequirement?.implementation_domain || 'Operational guidance' }}</span><p class="mb-2">{{ activeRequirement?.implementation_focus || 'Tidak ada fokus implementasi tambahan.' }}</p><ol class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.implementation_steps && activeRequirement.implementation_steps.length ? activeRequirement.implementation_steps : (activeRequirement?.focus || []))" :key="idx">{{ item }}</li></ol></div>
                 <div class="padg-callout"><span class="padg-label">Contoh Evidence</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
@@ -214,7 +214,7 @@
                   </div>
                   <div class="modal-section-content">
                     <div class="sej-modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
-                    <p class="sej-modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
+                    <RequirementSummary :text="selectedAppendix?.summary || ''" />
                   </div>
                 </div>
 
@@ -431,14 +431,6 @@ export default {
     getChapterLabel(c) {
       const requirement = this.requirements.find(r => r.chapter === c);
       return (c || '-') + '. ' + (requirement?.chapter_title || this.chapterMeta[c]?.label || '');
-    },
-    summaryParts(summary) {
-      if (!summary) return [];
-      const marked = String(summary)
-        .replace(/(?:^|\s)(\(\d+\)|\d+[.)])\s+/g, '\n$1 ')
-        .trim();
-      const parts = marked.split(/\n+/).map(item => item.trim()).filter(Boolean);
-      return parts.length > 1 ? parts : [String(summary).trim()];
     },
     togglePillar(p) { this.activePillar = this.activePillar === p ? '' : p; },
     resetRequirementFilters() { this.activePillar = ''; this.chapterFilter = ''; this.requirementSearch = ''; },
