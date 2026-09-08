@@ -192,6 +192,7 @@ export default {
             },
             { routeName: "pbi", label: "PBI 02/2024", icon: "fa-university" },
             { routeName: "padg", label: "PADG 32/2025", icon: "fa-credit-card" },
+            { routeName: "padg24", label: "PADG 24/2024", icon: "fa-shield-alt" },
             { routeName: "pdp", label: "UU PDP No. 27/2022", icon: "fa-user-shield" },
           ],
         },
@@ -402,6 +403,7 @@ export default {
         route.name === "padk" ||
         route.name === "pbi" ||
         route.name === "padg" ||
+        route.name === "padg24" ||
         route.name === "pdp";
       this.frameworkNavGroups[1].active =
         route.name === "iso27001" ||

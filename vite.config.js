@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => {
           '/frameworks/seojk',
           '/frameworks/padk-1-2026',
           '/frameworks/padg-32-2025',
+          '/frameworks/padg-24-2024',
           '/frameworks/panduan-resiliensi-ojk',
           '/frameworks/pbi-02-2024',
           '/frameworks/owasp-top-10',

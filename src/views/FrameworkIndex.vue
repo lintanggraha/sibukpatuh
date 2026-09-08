@@ -208,6 +208,16 @@ export default {
            icon: "fa-credit-card",
          },
          {
+           routeName: "padg24",
+           name: "PADG 24/2024",
+           subtitle: "Keamanan Sistem Informasi & Ketahanan Siber",
+           summary: { id: "Ketentuan pelaksanaan PBI 2/2024 tentang tata kelola, pencegahan, penanganan, pelaporan, kolaborasi, dan penerapan KKS BI.", en: "Implementing provisions for PBI 2/2024 covering KKS governance, prevention, response, reporting, collaboration, and applicability." },
+           metric_label_key: "home.metric.requirements",
+           metric_value: null,
+           accent: "#7c3aed",
+           icon: "fa-shield-alt",
+         },
+         {
            routeName: "pdp",
            name: "UU PDP 27/2022",
            subtitle: "Pelindungan Data Pribadi",
@@ -311,6 +321,7 @@ export default {
       padkCount,
       pbiCount,
       padgCount,
+      padg24Count,
       pdpCount,
       owaspTop10Count,
       owaspAsvsCount,
@@ -325,6 +336,7 @@ export default {
       loadData("/data/padk_1_2026_requirements.json"),
       loadData("/data/pbi_022024_requirements.json"),
       loadData("/data/padg_requirements.json"),
+      loadData("/data/padg24_2024_requirements.json"),
       loadData("/data/uu_pdp_requirements.json"),
       loadData("/data/owasp_top10_reqs.json"),
       loadData("/data/owasp_asvs_reqs.json"),
@@ -340,10 +352,11 @@ export default {
     this.frameworks[6].metric_value = padkCount || 0;
     this.frameworks[7].metric_value = pbiCount || 0;
     this.frameworks[8].metric_value = padgCount || 0;
-    this.frameworks[9].metric_value = pdpCount || 0;
-    this.frameworks[10].metric_value = owaspTop10Count || 10;
-    this.frameworks[11].metric_value = owaspAsvsCount || 8;
-    this.frameworks[12].metric_value = simulatorCount || 6;
+    this.frameworks[9].metric_value = padg24Count || 0;
+    this.frameworks[10].metric_value = pdpCount || 0;
+    this.frameworks[11].metric_value = owaspTop10Count || 10;
+    this.frameworks[12].metric_value = owaspAsvsCount || 8;
+    this.frameworks[13].metric_value = simulatorCount || 6;
   },
 };
 </script>
