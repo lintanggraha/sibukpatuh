@@ -352,12 +352,14 @@ Jawab dalam Bahasa Indonesia yang natural. Fokus pada edukasi keamanan siber dan
   try {
     // Gemini 2.0 Flash sudah shutdown; gunakan model stabil yang dapat diganti
     // tanpa perubahan kode melalui GEMINI_MODEL bila lifecycle model berubah.
-    const configuredModel = String(process.env.GEMINI_MODEL || '').trim();
-    // Jangan izinkan env lama mengarahkan production ke keluarga Gemini 2.0
-    // yang sudah shutdown, terutama bila deployment masih menyimpan variable lama.
-    const model = configuredModel && !/^gemini-2\.0-/i.test(configuredModel)
-      ? configuredModel
-      : 'gemini-2.5-flash';
+    const configuredModel = String(process.env.GEMINI_MODEL || '')
+      .trim()
+      .replace(/^models\//i, '')
+      .replace(/^['"`]+|['"`]+$/g, '');
+    // Hanya izinkan model resmi yang sengaja diuji. Nilai environment lama,
+    // ber-quote, memakai prefix models/, atau model retired akan diabaikan.
+    const supportedModels = new Set(['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-pro']);
+    const model = supportedModels.has(configuredModel) ? configuredModel : 'gemini-2.5-flash';
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
     const response = await fetch(apiUrl, {
       method: 'POST',
