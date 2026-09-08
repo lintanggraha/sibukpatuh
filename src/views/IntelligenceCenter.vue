@@ -336,7 +336,7 @@
                       <div class="cve-ai-detail-box" @click.stop>
                         <div class="cve-ai-detail-header">
                           <div>
-                            <span class="cve-ai-kicker"><i class="fas fa-robot me-1"></i> AI Vulnerability Brief</span>
+                            <span class="cve-ai-kicker"><i :class="cve.aiAnalysisFallback ? 'fas fa-shield-halved' : 'fas fa-robot'" class="me-1"></i>{{ cve.aiAnalysisFallback ? 'Defensive Vulnerability Brief' : 'AI Vulnerability Brief' }}</span>
                             <strong>Analisis CVE dalam Bahasa Indonesia</strong>
                           </div>
                           <button
@@ -358,6 +358,7 @@
                         <div v-else class="cve-ai-loading">Analisis belum tersedia.</div>
                         <small class="cve-ai-disclaimer">
                           Penjelasan eksploitasi disajikan pada tingkat konseptual untuk defensif; tidak memuat exploit code, payload, atau langkah serangan operasional.
+                          <span v-if="cve.aiAnalysisFallback"> Brief ini memakai fallback terstruktur karena respons AI tidak memenuhi format lengkap.</span>
                         </small>
                       </div>
                     </div>
@@ -698,7 +699,8 @@ export default {
           isEnriching: false,
           aiAnalysis: '',
           aiAnalysisError: '',
-          aiAnalysisLoading: false
+          aiAnalysisLoading: false,
+          aiAnalysisFallback: false
         })).sort((a, b) => b.rawDate - a.rawDate);
         
         if (this.cves.length > 0) this.selectedCve = this.cves[0];
@@ -742,10 +744,45 @@ export default {
       }
     },
 
+    buildFallbackCveBrief(cve) {
+      const text = `${cve?.title || ''} ${cve?.shortDescription || ''} ${cve?.fullDescription || ''}`.toLowerCase();
+      const description = cve?.fullDescription || cve?.shortDescription || 'Detail teknis CVE belum tersedia.';
+      let impact = 'Kerentanan dapat memengaruhi kerahasiaan, integritas, atau ketersediaan sistem yang menjalankan produk terdampak. Dampak aktual bergantung pada versi, konfigurasi, paparan aset, dan kontrol kompensasi organisasi.';
+      let mechanism = 'Secara konseptual, pihak yang tidak tepercaya dapat mengirim input atau permintaan yang diproses secara tidak semestinya oleh komponen terdampak. Jalur risiko dan prasyarat teknis spesifik perlu dikonfirmasi melalui advisory vendor; detail eksploitasi operasional tidak ditampilkan.';
+
+      if (/improper authentication|authentication|unauthenticated|authorization|akses tanpa autentikasi/.test(text)) {
+        impact = 'Pihak tanpa otorisasi berpotensi memperoleh akses atau membentuk sesi yang seharusnya hanya tersedia bagi pengguna terautentikasi. Dampaknya dapat mencakup akses ke fungsi, data, atau integrasi MCP yang terekspos.';
+        mechanism = 'Jalur risikonya adalah endpoint yang dapat dijangkau menerima atau mempercayai atribut autentikasi yang tidak tervalidasi dengan benar. Jika prasyarat paparan terpenuhi, permintaan tidak tepercaya dapat diperlakukan seperti sesi sah; detail token, request, dan langkah serangan harus merujuk advisory vendor.';
+      } else if (/command injection|remote code execution|arbitrary code execution|os command/.test(text)) {
+        impact = 'Pihak tidak tepercaya berpotensi menjalankan tindakan atau kode pada konteks hak akses layanan. Dampaknya dapat berupa pengambilalihan layanan, perubahan data, pencurian informasi, atau pergerakan lanjutan.';
+        mechanism = 'Jalur risikonya adalah input eksternal mencapai interpreter atau fungsi eksekusi tanpa validasi dan pembatasan konteks yang memadai. Penjelasan ini bersifat konseptual; prasyarat dan dampak aktual harus dikonfirmasi pada versi serta konfigurasi terdampak.';
+      } else if (/sql injection|structured query/.test(text)) {
+        impact = 'Data dalam basis data berpotensi dibaca, diubah, atau dihapus, dan fungsi aplikasi dapat disalahgunakan sesuai hak akses akun basis data.';
+        mechanism = 'Jalur risikonya adalah input pengguna memengaruhi pemrosesan query tanpa pemisahan parameter yang memadai. Detail query, payload, dan langkah pengujian tidak ditampilkan; validasi hanya boleh dilakukan dalam lingkungan berizin.';
+      } else if (/server-side request forgery|\bssrf\b/.test(text)) {
+        impact = 'Server berpotensi dipaksa mengakses sumber daya internal atau layanan lain yang tidak semestinya dapat dijangkau pengguna, termasuk metadata dan endpoint administratif.';
+        mechanism = 'Jalur risikonya adalah aplikasi menerima tujuan atau rujukan jaringan yang dapat dikendalikan pihak luar lalu melakukan koneksi dari sisi server. Risiko bergantung pada egress, segmentasi, dan daftar tujuan yang diizinkan.';
+      } else if (/request\/response smuggling|request smuggling/.test(text)) {
+        impact = 'Perbedaan interpretasi request antar proxy dan backend dapat menyebabkan bypass kontrol, salah routing, atau paparan request pengguna lain.';
+        mechanism = 'Jalur risikonya adalah komponen jaringan mem-parsing batas request secara tidak konsisten. Detail format request dan teknik pengujian harus dibatasi pada lingkungan uji yang berizin.';
+      } else if (/type confusion/.test(text)) {
+        impact = 'Pemrosesan objek dengan tipe yang tidak sesuai dapat menyebabkan crash atau, bila kondisi tertentu terpenuhi, eksekusi kode dalam konteks komponen terdampak.';
+        mechanism = 'Jalur risikonya adalah input yang dirancang khusus memicu ketidaksesuaian asumsi tipe pada runtime atau parser. Untuk CVE ini, deskripsi publik menyebut halaman HTML crafted; detail reproduksi tetap harus merujuk advisory vendor.';
+      }
+
+      return `1. Dampak\n${impact}\n\n2. Mekanisme Eksploitasi (Konseptual)\n${mechanism}\n\n3. Mitigasi\n- Perbarui produk ke versi yang direkomendasikan vendor dan ikuti advisory resmi.\n- Batasi paparan endpoint/layanan terdampak melalui autentikasi, allowlist, segmentasi jaringan, dan kontrol egress sesuai kebutuhan.\n- Aktifkan logging dan monitoring untuk akses anomali, kegagalan autentikasi, perubahan konfigurasi, serta aktivitas proses yang tidak wajar.\n- Verifikasi penerapan patch melalui inventaris aset, pemeriksaan versi, pengujian regresi, dan pemantauan pascapatch.\n- Catatan sumber: ${description}`;
+    },
+    isCompleteCveAnalysis(text) {
+      return /1\.\s*dampak/i.test(text)
+        && /2\.\s*(mekanisme eksploitasi|jalur risiko)/i.test(text)
+        && /3\.\s*mitigasi/i.test(text)
+        && text.length >= 240;
+    },
     async loadCveAnalysis(cve, force = false) {
       if (!cve || (cve.aiAnalysisLoading && !force) || (cve.aiAnalysis && !force)) return;
       cve.aiAnalysisLoading = true;
       cve.aiAnalysisError = '';
+      cve.aiAnalysisFallback = false;
       try {
         if (!cve.fullDescription) await this.enrichCve(cve);
         const cveContext = {
@@ -770,10 +807,14 @@ export default {
         });
         const data = await response.json();
         if (!response.ok || data.error) throw new Error(data.error || `Analisis gagal (HTTP ${response.status}).`);
-        cve.aiAnalysis = String(data.response || '').trim();
-        if (!cve.aiAnalysis) throw new Error('Respons analisis AI kosong.');
+        const aiText = String(data.response || '').trim();
+        const complete = this.isCompleteCveAnalysis(aiText);
+        cve.aiAnalysis = complete ? aiText : this.buildFallbackCveBrief(cve);
+        cve.aiAnalysisFallback = !complete;
       } catch (error) {
-        cve.aiAnalysisError = error instanceof Error ? error.message : 'Analisis CVE gagal dimuat.';
+        cve.aiAnalysis = this.buildFallbackCveBrief(cve);
+        cve.aiAnalysisFallback = true;
+        cve.aiAnalysisError = '';
       } finally {
         cve.aiAnalysisLoading = false;
       }
