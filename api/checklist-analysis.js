@@ -104,14 +104,22 @@ ${serializedItems}`;
       .trim()
       .replace(/^models\//i, '')
       .replace(/^['"`]+|['"`]+$/g, '');
-    const supportedModels = new Set(['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-pro']);
-    const model = supportedModels.has(configuredModel) ? configuredModel : 'gemini-2.5-flash';
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(25_000),
-    });
+    const supportedModels = new Set(['gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.5-pro']);
+    const preferredModel = supportedModels.has(configuredModel) ? configuredModel : 'gemini-3.5-flash';
+    const modelCandidates = [...new Set([preferredModel, 'gemini-3.5-flash', 'gemini-2.5-flash'])];
+    let model = modelCandidates[0];
+    let response;
+    for (const candidate of modelCandidates) {
+      model = candidate;
+      response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(candidate)}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(25_000),
+      });
+      if (response.status !== 404) break;
+      console.warn('[checklist-analysis] Model unavailable, trying fallback:', candidate);
+    }
 
     if (!response.ok) {
       console.error('[checklist-analysis] Gemini error:', response.status);
