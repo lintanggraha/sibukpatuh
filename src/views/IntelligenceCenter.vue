@@ -763,7 +763,7 @@ export default {
           body: JSON.stringify({
             messages: [{
               role: 'user',
-              text: `Buat analisis defensif untuk ${cve.id} dalam Bahasa Indonesia. Gunakan tiga heading persis: "1. Dampak", "2. Mekanisme Eksploitasi (Konseptual)", dan "3. Mitigasi". Jelaskan bagaimana kerentanan dapat dimanfaatkan hanya pada tingkat konsep dan prasyarat umum, tanpa exploit code, payload, perintah, URL serangan, atau langkah operasional. Kaitkan mitigasi dengan patch, hardening, monitoring, dan verifikasi perbaikan. Jangan mengarang detail yang tidak ada; nyatakan jika informasi CVE terbatas.`
+              text: `Buat analisis defensif untuk ${cve.id} dalam Bahasa Indonesia. Gunakan tiga heading persis: "1. Dampak", "2. Mekanisme Eksploitasi (Konseptual)", dan "3. Mitigasi". Jelaskan bagian mekanisme hanya pada tingkat konsep, prasyarat umum, dan jalur risiko; jangan berikan instruksi teknis yang dapat langsung digunakan untuk menyerang sistem. Kaitkan mitigasi dengan patch, hardening, monitoring, dan verifikasi perbaikan. Jangan mengarang detail yang tidak ada; nyatakan jika informasi CVE terbatas.`
             }],
             cveContext
           })
