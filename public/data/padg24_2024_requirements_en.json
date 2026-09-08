@@ -27,7 +27,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -39,7 +39,8 @@
       "Pasal 1",
       "BAB I"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 1 as the dictionary and boundary of the rulebook: everyone needs the same meaning before controls can be applied."
   },
   {
     "id": "PADG24-2024-PASAL-02",
@@ -69,7 +70,7 @@
     ],
     "evidence_owner": "Compliance / Process Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri pasal ke kontrol/prosedur internal.",
@@ -80,7 +81,8 @@
       "Pasal 2",
       "BAB II"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 2 as a scope map: it tells the organization what is in scope, who is covered, and where the rule applies."
   },
   {
     "id": "PADG24-2024-PASAL-03",
@@ -110,7 +112,7 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -122,7 +124,8 @@
       "Pasal 3",
       "BAB II"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 3 as a scope map: it tells the organization what is in scope, who is covered, and where the rule applies."
   },
   {
     "id": "PADG24-2024-PASAL-04",
@@ -152,7 +155,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -164,7 +167,8 @@
       "Pasal 4",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 4 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-05",
@@ -194,7 +198,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -206,7 +210,8 @@
       "Pasal 5",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 5 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-06",
@@ -236,7 +241,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -248,7 +253,8 @@
       "Pasal 6",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 6 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-07",
@@ -278,7 +284,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -290,7 +296,8 @@
       "Pasal 7",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 7 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-08",
@@ -320,7 +327,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -332,7 +339,8 @@
       "Pasal 8",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 8 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-09",
@@ -362,7 +370,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -374,7 +382,8 @@
       "Pasal 9",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 9 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-10",
@@ -404,7 +413,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -416,7 +425,8 @@
       "Pasal 10",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 10 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-11",
@@ -446,7 +456,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -458,7 +468,8 @@
       "Pasal 11",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 11 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-12",
@@ -488,7 +499,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -500,7 +511,8 @@
       "Pasal 12",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 12 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-13",
@@ -530,7 +542,7 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -542,7 +554,8 @@
       "Pasal 13",
       "BAB III"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 13 as the steering wheel and operating model: it assigns direction, accountability, policies, and oversight."
   },
   {
     "id": "PADG24-2024-PASAL-14",
@@ -572,7 +585,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -584,7 +597,8 @@
       "Pasal 14",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 14 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-15",
@@ -614,7 +628,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -626,7 +640,8 @@
       "Pasal 15",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 15 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-16",
@@ -656,7 +671,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -668,7 +683,8 @@
       "Pasal 16",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 16 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-17",
@@ -698,7 +714,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -710,7 +726,8 @@
       "Pasal 17",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 17 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-18",
@@ -740,7 +757,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -752,7 +769,8 @@
       "Pasal 18",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 18 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-19",
@@ -782,7 +800,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -794,7 +812,8 @@
       "Pasal 19",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 19 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-20",
@@ -824,7 +843,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap tahapan siklus kerja serta memberikan edukasi KKS sesuai dengan peran dan tanggung jawab"
     ],
@@ -838,7 +857,8 @@
       "Pasal 20",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 20 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-21",
@@ -868,7 +888,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -880,7 +900,8 @@
       "Pasal 21",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 21 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-22",
@@ -910,7 +931,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -922,7 +943,8 @@
       "Pasal 22",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 22 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-23",
@@ -952,7 +974,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap sistem aplikasi"
     ],
@@ -966,7 +988,8 @@
       "Pasal 23",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 23 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-24",
@@ -996,7 +1019,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap tahapan siklus hidup data dan/atau informasi berdasarkan klasifikasi data dan/atau informasi yang ditetapkan oleh Penyelenggara",
       "setiap tahapan siklus hidup data dan/atau informasi sebagaimana dimaksud pada ayat (1) huruf a dilakukan saat data dan/atau informasi: a"
@@ -1011,7 +1034,8 @@
       "Pasal 24",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 24 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-25",
@@ -1041,7 +1065,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1053,7 +1077,8 @@
       "Pasal 25",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 25 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-26",
@@ -1083,7 +1108,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1095,7 +1120,8 @@
       "Pasal 26",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 26 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-27",
@@ -1125,7 +1151,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap perubahan terhadap akses logis dan fisik serta konfigurasi dikelola melalui manajemen perubahan"
     ],
@@ -1139,7 +1165,8 @@
       "Pasal 27",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 27 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-28",
@@ -1169,7 +1196,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1181,7 +1208,8 @@
       "Pasal 28",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 28 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-29",
@@ -1211,7 +1239,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1223,7 +1251,8 @@
       "Pasal 29",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 29 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-30",
@@ -1253,7 +1282,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1265,7 +1294,8 @@
       "Pasal 30",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 30 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-31",
@@ -1295,7 +1325,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1307,7 +1337,8 @@
       "Pasal 31",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 31 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-32",
@@ -1337,7 +1368,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1349,7 +1380,8 @@
       "Pasal 32",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 32 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-33",
@@ -1379,7 +1411,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1391,7 +1423,8 @@
       "Pasal 33",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 33 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-34",
@@ -1421,7 +1454,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1433,7 +1466,8 @@
       "Pasal 34",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 34 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-35",
@@ -1463,7 +1497,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1475,7 +1509,8 @@
       "Pasal 35",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 35 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-36",
@@ -1505,7 +1540,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap kode yang dieksekusi pada sistem aplikasi dan/atau infrastruktur teknologi informasi telah dilakukan otorisasi dan tidak disusupi"
     ],
@@ -1519,7 +1554,8 @@
       "Pasal 36",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 36 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-37",
@@ -1549,7 +1585,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1561,7 +1597,8 @@
       "Pasal 37",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 37 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-38",
@@ -1591,7 +1628,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1603,7 +1640,8 @@
       "Pasal 38",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 38 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-39",
@@ -1633,7 +1671,7 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1645,7 +1683,8 @@
       "Pasal 39",
       "BAB IV"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 39 as layered protection around a critical facility: identify risks, protect assets, detect signals, and test the controls."
   },
   {
     "id": "PADG24-2024-PASAL-40",
@@ -1675,7 +1714,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1687,7 +1726,8 @@
       "Pasal 40",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 40 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-41",
@@ -1717,7 +1757,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap kategori Insiden Siber dengan mempertimbangkan kebutuhan analisis post-mortem",
       "setiap kategori Insiden Siber"
@@ -1732,7 +1772,8 @@
       "Pasal 41",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 41 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-42",
@@ -1762,7 +1803,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1774,7 +1815,8 @@
       "Pasal 42",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 42 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-43",
@@ -1804,7 +1846,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1816,7 +1858,8 @@
       "Pasal 43",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 43 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-44",
@@ -1846,7 +1889,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1858,7 +1901,8 @@
       "Pasal 44",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 44 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-45",
@@ -1888,7 +1932,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1900,7 +1944,8 @@
       "Pasal 45",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 45 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-46",
@@ -1930,7 +1975,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1942,7 +1987,8 @@
       "Pasal 46",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 46 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-47",
@@ -1972,7 +2018,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1984,7 +2030,8 @@
       "Pasal 47",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 47 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-48",
@@ -2014,7 +2061,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2026,7 +2073,8 @@
       "Pasal 48",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 48 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-49",
@@ -2056,7 +2104,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2068,7 +2116,8 @@
       "Pasal 49",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 49 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-50",
@@ -2098,7 +2147,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2110,7 +2159,8 @@
       "Pasal 50",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 50 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-51",
@@ -2140,7 +2190,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2152,7 +2202,8 @@
       "Pasal 51",
       "BAB V"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 51 as an emergency playbook: when a cyber incident occurs, roles, escalation, recovery, communication, and lessons learned must be clear."
   },
   {
     "id": "PADG24-2024-PASAL-52",
@@ -2182,7 +2233,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2194,7 +2245,8 @@
       "Pasal 52",
       "BAB VI"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 52 as a regulator-ready reporting pipeline: information must be accurate, complete, timely, approved, and traceable."
   },
   {
     "id": "PADG24-2024-PASAL-53",
@@ -2224,7 +2276,7 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap Penyelenggara",
       "paling lambat 31 Januari untuk periode pelaporan tahun sebelumnya"
@@ -2239,7 +2291,8 @@
       "Pasal 53",
       "BAB VI"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 53 as a regulator-ready reporting pipeline: information must be accurate, complete, timely, approved, and traceable."
   },
   {
     "id": "PADG24-2024-PASAL-54",
@@ -2269,7 +2322,7 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel angka/data ke sumber dan bukti approval.",
@@ -2281,7 +2334,8 @@
       "Pasal 54",
       "BAB VI"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 54 as a regulator-ready reporting pipeline: information must be accurate, complete, timely, approved, and traceable."
   },
   {
     "id": "PADG24-2024-PASAL-55",
@@ -2311,7 +2365,7 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel angka/data ke sumber dan bukti approval.",
@@ -2323,7 +2377,8 @@
       "Pasal 55",
       "BAB VI"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 55 as a regulator-ready reporting pipeline: information must be accurate, complete, timely, approved, and traceable."
   },
   {
     "id": "PADG24-2024-PASAL-56",
@@ -2353,7 +2408,7 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -2365,7 +2420,8 @@
       "Pasal 56",
       "BAB VII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 56 as the enforcement rulebook: breaches need a documented process, authority, notice, and remediation trail."
   },
   {
     "id": "PADG24-2024-PASAL-57",
@@ -2395,7 +2451,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2407,7 +2463,8 @@
       "Pasal 57",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 57 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-58",
@@ -2437,7 +2494,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2449,7 +2506,8 @@
       "Pasal 58",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 58 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-59",
@@ -2479,7 +2537,7 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2491,7 +2549,8 @@
       "Pasal 59",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 59 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-60",
@@ -2521,7 +2580,7 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2533,7 +2592,8 @@
       "Pasal 60",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 60 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-61",
@@ -2563,7 +2623,7 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2575,7 +2635,8 @@
       "Pasal 61",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 61 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-62",
@@ -2605,7 +2666,7 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2617,7 +2678,8 @@
       "Pasal 62",
       "BAB VIII"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 62 as coordinated neighborhood watch: information and response actions are shared through trusted channels with clear handling rules."
   },
   {
     "id": "PADG24-2024-PASAL-63",
@@ -2647,7 +2709,7 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -2659,7 +2721,8 @@
       "Pasal 63",
       "BAB IX"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 63 as an applicability switch: the required control depth depends on the entity, service, and system interconnection."
   },
   {
     "id": "PADG24-2024-PASAL-64",
@@ -2689,7 +2752,7 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap perubahan terhadap akses logis dan fisik serta konfigurasi dikelola melalui manajemen perubahan sebagaimana dimaksud dalam Pasal 27 huruf d"
     ],
@@ -2703,7 +2766,8 @@
       "Pasal 64",
       "BAB IX"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 64 as an applicability switch: the required control depth depends on the entity, service, and system interconnection."
   },
   {
     "id": "PADG24-2024-PASAL-65",
@@ -2733,7 +2797,7 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "Januari 2026 untuk periode laporan tahun 2025"
     ],
@@ -2747,7 +2811,8 @@
       "Pasal 65",
       "BAB X"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 65 as a transition checkpoint: it sets the first reporting milestone so implementation does not stop at policy publication."
   },
   {
     "id": "PADG24-2024-PASAL-66",
@@ -2777,7 +2842,7 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Belum dinilai",
+    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "tanggal ditetapkan"
     ],
@@ -2791,6 +2856,7 @@
       "Pasal 66",
       "BAB XI"
     ],
-    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan."
+    "applicability": "Penyelenggara Sistem Pembayaran, pelaku Pasar Uang/Valuta Asing, dan/atau pihak lain yang diatur/diawasi BI sesuai objek dan klasifikasi penerapan.",
+    "analogy": "Think of Pasal 66 as the effective-date signpost: it tells the organization when the rule becomes binding."
   }
 ]
