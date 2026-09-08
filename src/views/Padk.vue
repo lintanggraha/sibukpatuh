@@ -169,7 +169,7 @@
                   </div>
                 </div>
                 <div class="sej-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement?.cadence || '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' rujukan' : '0 rujukan' }}</span></div>
-                <div class="sej-callout"><span class="sej-label">Ringkasan</span><div class="mt-2">{{ activeRequirement?.summary || '-' }}</div></div>
+                <div class="sej-callout"><span class="sej-label">Ringkasan</span><RequirementSummary :text="activeRequirement?.summary || ''" /></div>
                 <div class="sej-callout"><span class="sej-label">Fokus Implementasi</span><ul class="sej-plain"><li v-for="(item, idx) in activeRequirement?.focus || []" :key="idx">{{ item }}</li></ul></div>
                 <div class="sej-callout"><span class="sej-label">Contoh Evidence</span><ul class="sej-plain"><li v-for="(item, idx) in activeRequirement?.evidence || []" :key="idx">{{ item }}</li></ul></div>
                 <div class="sej-callout"><span class="sej-label">Lampiran Terkait</span><div class="sej-refs"><button v-for="ref in activeRequirement?.appendices || []" :key="ref" type="button" class="sej-ref" @click="jumpAppendix(ref)">{{ ref }}</button><span v-if="!activeRequirement?.appendices?.length" class="sej-empty w-100">Belum ada rujukan format khusus.</span></div></div>
@@ -237,7 +237,7 @@
               <section class="sej-modal-section">
                 <div class="sej-modal-section-header" :style="{ color: getAppendixColor(selectedAppendix.type) }"><i class="fas fa-info-circle"></i><span>Ringkasan</span></div>
                 <div class="sej-modal-scope">{{ selectedAppendix.scope }}</div>
-                <p class="sej-modal-summary">{{ selectedAppendix.summary }}</p>
+                <RequirementSummary :text="selectedAppendix.summary || ''" />
               </section>
               <section class="sej-modal-section">
                 <div class="sej-modal-section-header" :style="{ color: getAppendixColor(selectedAppendix.type) }"><i class="fas fa-list-check"></i><span>Isi Utama</span></div>

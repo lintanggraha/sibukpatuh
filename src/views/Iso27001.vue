@@ -177,7 +177,7 @@
             <div v-if="!conceptState.active" class="iso-empty">Pilih salah satu konsep di atas untuk menampilkan kontrol terkait dan inspector detailnya.</div>
             <div v-else>
               <div class="iso-grid">
-                <div class="iso-selected" :style="{ '--accent': getConceptColor(conceptState.active) }"><div class="iso-selected-mark"><i :class="`fas ${getConceptIcon(conceptState.active)}`"></i></div><div><small>{{ getConceptKey(conceptState.active) }}</small><h3>{{ conceptState.active }}</h3><p>{{ getConceptSummary(conceptState.active) }}</p></div><div class="iso-selected-count"><strong>{{ conceptFilteredControls.length }}</strong><span>mapped controls</span></div></div>
+                <div class="iso-selected" :style="{ '--accent': getConceptColor(conceptState.active) }"><div class="iso-selected-mark"><i :class="`fas ${getConceptIcon(conceptState.active)}`"></i></div><div><small>{{ getConceptKey(conceptState.active) }}</small><h3>{{ conceptState.active }}</h3><RequirementSummary :text="getConceptSummary(conceptState.active)" /></div><div class="iso-selected-count"><strong>{{ conceptFilteredControls.length }}</strong><span>mapped controls</span></div></div>
                 <div class="iso-concept-workspace">
                   <section class="iso-panel iso-inspector-panel">
                     <div class="iso-panel-head"><h3>Kontrol terkait</h3><span class="iso-chip">Auto-filterd by concept</span></div>

@@ -122,7 +122,7 @@
                 </div>
 
                 <div v-if="activeRequirement" class="pojk-callout"><span class="pojk-label">{{ ui.ownerLabel }}</span><div class="mt-2">{{ activeRequirement.owner || '-' }}</div></div>
-                <div class="pojk-callout"><span class="pojk-label">{{ ui.reqSummaryLabel }}</span><div class="mt-2">{{ activeRequirement ? activeRequirement.summary : ui.reqSummaryEmpty }}</div></div>
+                <div class="pojk-callout"><span class="pojk-label">{{ ui.reqSummaryLabel }}</span><RequirementSummary :text="activeRequirement ? activeRequirement.summary : ''" :empty-text="ui.reqSummaryEmpty" /></div>
                 <div class="pojk-note"><span class="pojk-label"><i class="fas fa-lightbulb me-1"></i>{{ ui.analogyLabel }}</span><div class="mt-2">{{ activeRequirement ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="pojk-callout"><span class="pojk-label">{{ ui.focusLabel }}</span><ul class="pojk-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.focus && activeRequirement.focus.length ? activeRequirement.focus : [ui.focusEmpty])" :key="idx">{{ item }}</li></ul></div>
                 <div class="pojk-callout"><span class="pojk-label">{{ ui.evidenceLabel }}</span><ul class="pojk-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : [ui.evidenceEmpty])" :key="idx">{{ item }}</li></ul></div>
@@ -191,7 +191,7 @@
                   </div>
                   <div class="modal-section-content">
                     <div class="pojk-modal-scope">{{ selectedAppendix?.scope || '-' }}</div>
-                    <p class="pojk-modal-summary">{{ selectedAppendix?.summary || '-' }}</p>
+                    <RequirementSummary :text="selectedAppendix?.summary || ''" />
                   </div>
                 </div>
 

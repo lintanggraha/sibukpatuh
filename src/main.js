@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './components/App.vue';
+import RequirementSummary from './components/RequirementSummary.vue';
 import router from './router/index.js';
 import i18n from './i18n';
 import { installRegulationDataFetchTranslator } from './utils/regulationDataTranslator';
@@ -18,6 +19,7 @@ import './assets/css/framework-shared.css';
 
 const pinia = createPinia();
 const app = createApp(App);
+app.component('RequirementSummary', RequirementSummary);
 
 app.use(router);
 app.use(pinia);
