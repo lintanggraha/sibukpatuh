@@ -27,7 +27,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -70,7 +69,6 @@
     ],
     "evidence_owner": "Compliance / Process Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri pasal ke kontrol/prosedur internal.",
@@ -112,7 +110,6 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -155,7 +152,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -198,7 +194,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -241,7 +236,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -284,7 +278,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -327,7 +320,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -370,7 +362,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -413,7 +404,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -456,7 +446,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -499,7 +488,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -542,7 +530,6 @@
     ],
     "evidence_owner": "Board / Manajemen Tertinggi / CISO",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Periksa approval, tanggal berlaku, owner, dan cakupan dokumen.",
@@ -585,7 +572,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -628,7 +614,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -671,7 +656,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -714,7 +698,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -757,7 +740,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -800,7 +782,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -843,7 +824,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap tahapan siklus kerja serta memberikan edukasi KKS sesuai dengan peran dan tanggung jawab"
     ],
@@ -888,7 +868,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -931,7 +910,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -974,7 +952,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap sistem aplikasi"
     ],
@@ -1019,7 +996,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap tahapan siklus hidup data dan/atau informasi berdasarkan klasifikasi data dan/atau informasi yang ditetapkan oleh Penyelenggara",
       "setiap tahapan siklus hidup data dan/atau informasi sebagaimana dimaksud pada ayat (1) huruf a dilakukan saat data dan/atau informasi: a"
@@ -1065,7 +1041,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1108,7 +1083,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1151,7 +1125,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap perubahan terhadap akses logis dan fisik serta konfigurasi dikelola melalui manajemen perubahan"
     ],
@@ -1196,7 +1169,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1239,7 +1211,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1282,7 +1253,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1325,7 +1295,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1368,7 +1337,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1411,7 +1379,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1454,7 +1421,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1497,7 +1463,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1540,7 +1505,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap kode yang dieksekusi pada sistem aplikasi dan/atau infrastruktur teknologi informasi telah dilakukan otorisasi dan tidak disusupi"
     ],
@@ -1585,7 +1549,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1628,7 +1591,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1671,7 +1633,6 @@
     ],
     "evidence_owner": "Cyber Risk / IT Security / Data Owner",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel aset ke risk register, kontrol, dan evidence.",
@@ -1714,7 +1675,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1757,7 +1717,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap kategori Insiden Siber dengan mempertimbangkan kebutuhan analisis post-mortem",
       "setiap kategori Insiden Siber"
@@ -1803,7 +1762,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1846,7 +1804,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1889,7 +1846,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1932,7 +1888,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -1975,7 +1930,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2018,7 +1972,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2061,7 +2014,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2104,7 +2056,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2147,7 +2098,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2190,7 +2140,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2233,7 +2182,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2276,7 +2224,6 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap Penyelenggara",
       "paling lambat 31 Januari untuk periode pelaporan tahun sebelumnya"
@@ -2322,7 +2269,6 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel angka/data ke sumber dan bukti approval.",
@@ -2365,7 +2311,6 @@
     ],
     "evidence_owner": "Regulatory Reporting / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri sampel angka/data ke sumber dan bukti approval.",
@@ -2408,7 +2353,6 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -2451,7 +2395,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2494,7 +2437,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel insiden terhadap SLA notifikasi.",
@@ -2537,7 +2479,6 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2580,7 +2521,6 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2623,7 +2563,6 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2666,7 +2605,6 @@
     ],
     "evidence_owner": "CISO / Compliance / SRO Liaison",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Uji sampel informasi terhadap klasifikasi dan otorisasi berbagi.",
@@ -2709,7 +2647,6 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [],
     "control_test": [
       "Telusuri kewajiban ke owner, dokumen, status, dan due date.",
@@ -2752,7 +2689,6 @@
     ],
     "evidence_owner": "CSIRT / Compliance / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "setiap perubahan terhadap akses logis dan fisik serta konfigurasi dikelola melalui manajemen perubahan sebagaimana dimaksud dalam Pasal 27 huruf d"
     ],
@@ -2797,7 +2733,6 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "Januari 2026 untuk periode laporan tahun 2025"
     ],
@@ -2842,7 +2777,6 @@
     ],
     "evidence_owner": "Compliance / Legal / Risk",
     "evidence_cadence": "Sesuai periode/trigger pada pasal dan review berkala",
-    "evidence_status": "Organization assessment not performed",
     "key_dates": [
       "tanggal ditetapkan"
     ],

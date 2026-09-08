@@ -135,11 +135,11 @@
               <div class="padg-inspector-head"><small>Kewajiban Detail</small><strong>{{ activeRequirement ? activeRequirement.id : '-' }}</strong><span>{{ activeRequirement ? activeRequirement.title : 'Pilih kewajiban untuk membaca detail.' }}</span></div>
               <div class="padg-inspector-body">
                 <div class="padg-meta"><span>{{ activeRequirement ? getPillarLabel(activeRequirement.pillar) : '-' }}</span><span>{{ activeRequirement ? getChapterLabel(activeRequirement.chapter) : '-' }}</span><span>{{ activeRequirement ? (activeRequirement.appendices || []).length + ' ' + referenceTerm.toLowerCase() : '0 ' + referenceTerm.toLowerCase() }}</span></div>
-                <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2">{{ activeRequirement ? (activeRequirement.summary || 'Tidak ada ringkasan tersedia.') : 'Pilih kewajiban untuk membaca detail.' }}</div></div>
+                <div class="padg-callout"><span class="padg-label">Ringkasan Requirement</span><div class="mt-2"><template v-if="activeRequirement"><ol v-if="summaryParts(activeRequirement.summary).length > 1" class="padg-plain padg-summary-list"><li v-for="(item, idx) in summaryParts(activeRequirement.summary)" :key="idx">{{ item }}</li></ol><span v-else>{{ activeRequirement.summary || 'Tidak ada ringkasan tersedia.' }}</span></template><span v-else>Pilih kewajiban untuk membaca detail.</span></div></div>
                 <div class="padg-note"><span class="padg-label"><i class="fas fa-lightbulb me-1"></i>Analogi</span><div class="mt-2">{{ activeRequirement && activeRequirement.analogy ? activeRequirement.analogy : '-' }}</div></div>
                 <div class="padg-callout padg-implementation-callout"><span class="padg-label">Fokus Implementasi · {{ activeRequirement?.implementation_domain || 'Operational guidance' }}</span><p class="mb-2">{{ activeRequirement?.implementation_focus || 'Tidak ada fokus implementasi tambahan.' }}</p><ol class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.implementation_steps && activeRequirement.implementation_steps.length ? activeRequirement.implementation_steps : (activeRequirement?.focus || []))" :key="idx">{{ item }}</li></ol></div>
                 <div class="padg-callout"><span class="padg-label">Contoh Evidence</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement && activeRequirement.evidence && activeRequirement.evidence.length ? activeRequirement.evidence : ['Tidak ada evidence cue.'])" :key="idx">{{ item }}</li></ul></div>
-                <div class="padg-callout"><span class="padg-label">Evidence Owner, Cadence & Status Assessment</span><div class="padg-owner-grid"><div><strong>{{ activeRequirement?.evidence_owner || '-' }}</strong><small>{{ activeRequirement?.evidence_cadence || '-' }}</small></div><span class="padg-status"><i class="fas fa-hourglass-half"></i>{{ activeRequirement?.evidence_status || 'Assessment organisasi belum dilakukan' }}</span></div></div>
+                <div class="padg-callout"><span class="padg-label">Evidence Owner & Cadence</span><div class="padg-owner-grid"><div><strong>{{ activeRequirement?.evidence_owner || '-' }}</strong><small>{{ activeRequirement?.evidence_cadence || '-' }}</small></div></div></div>
                 <div v-if="activeRequirement?.key_dates?.length" class="padg-callout"><span class="padg-label">Tanggal / Trigger Kunci</span><ul class="padg-plain"><li v-for="date in activeRequirement.key_dates" :key="date">{{ date }}</li></ul></div>
                 <div class="padg-callout"><span class="padg-label">Uji Efektivitas Kontrol</span><ul class="padg-plain"><li v-for="(item, idx) in (activeRequirement?.control_test || [])" :key="idx">{{ item }}</li></ul></div>
                 <p class="padg-disclaimer"><i class="fas fa-info-circle me-1"></i>{{ activeRequirement?.evidence_disclaimer || 'Evidence cue bersifat panduan dan tidak membuktikan kepatuhan aktual.' }}</p>
@@ -168,7 +168,7 @@
         <!-- Tab 4: Playbook Implementasi -->
         <div v-if="activeTab === 'playbook'" key="playbook-tab">
           <div class="padg-panel">
-            <div class="padg-head"><div><h3>Playbook implementasi & evidence</h3><p class="padg-copy mb-0">Paket di bawah adalah pola kerja minimum untuk mengubah kewajiban {{ regulationShortTitle }} menjadi kontrol yang dapat diuji. Label status menunjukkan bahwa assessment organisasi belum dilakukan; status perlu diperbarui setelah evidence direview.</p></div><span class="padg-chip">{{ totalEvidenceExamples }}/{{ totalRequirements }} terpetakan</span></div>
+            <div class="padg-head"><div><h3>Playbook implementasi & evidence</h3><p class="padg-copy mb-0">Paket di bawah adalah pola kerja minimum untuk mengubah kewajiban {{ regulationShortTitle }} menjadi kontrol yang dapat diuji dan ditelusuri.</p></div><span class="padg-chip">{{ totalEvidenceExamples }}/{{ totalRequirements }} terpetakan</span></div>
             <div class="padg-domain-grid">
               <button v-for="domain in implementationDomains" :key="domain.key" type="button" class="padg-domain-card" :style="{ '--accent': domain.color }" @click="jumpImplementationDomain(domain.label)">
                 <span class="padg-domain-icon"><i :class="['fas', domain.icon]"></i></span><span><strong>{{ domain.label }}</strong><small>{{ domain.count }} kewajiban · contoh evidence tersedia</small></span><i class="fas fa-arrow-right"></i>
@@ -176,7 +176,7 @@
             </div>
             <div class="padg-guide-grid mt-4">
               <div class="padg-guide-card"><span class="padg-label">Evidence minimum yang diminta auditor</span><strong>Artefak + metadata + hasil uji</strong><p>Jangan hanya mengunggah kebijakan. Sertakan versi, owner, tanggal berlaku, approval, bukti pelaksanaan, hasil monitoring/pengujian, dan tindak lanjut temuan.</p></div>
-              <div class="padg-guide-card"><span class="padg-label">Status assessment yang disarankan</span><strong>Belum dilakukan → Sebagian → Efektif</strong><p>“Belum dilakukan” berarti organisasi belum mengisi atau mereview evidence pada aplikasi. Perbarui status setelah evidence direview; status ini tidak otomatis menyatakan patuh atau tidak patuh.</p></div>
+              <div class="padg-guide-card"><span class="padg-label">Cara membaca evidence cue</span><strong>Petunjuk kerja, bukan status kepatuhan</strong><p>Evidence cue membantu menentukan artefak, owner, cadence, dan uji yang perlu disiapkan. Organisasi tetap perlu melakukan review dan menyimpan bukti aktual pada repository yang dikendalikan.</p></div>
               <div class="padg-guide-card"><span class="padg-label">Sumber dan batas penggunaan</span><strong>{{ regulationShortTitle }} + Juknis BI + bukti internal</strong><p>Gunakan <a :href="sourceUrl" target="_blank" rel="noopener noreferrer">halaman resmi BI</a> dan petunjuk teknis terbaru sebagai sumber normatif utama.</p></div>
             </div>
           </div>
@@ -431,6 +431,14 @@ export default {
     getChapterLabel(c) {
       const requirement = this.requirements.find(r => r.chapter === c);
       return (c || '-') + '. ' + (requirement?.chapter_title || this.chapterMeta[c]?.label || '');
+    },
+    summaryParts(summary) {
+      if (!summary) return [];
+      const marked = String(summary)
+        .replace(/(?:^|\s)(\(\d+\)|\d+[.)])\s+/g, '\n$1 ')
+        .trim();
+      const parts = marked.split(/\n+/).map(item => item.trim()).filter(Boolean);
+      return parts.length > 1 ? parts : [String(summary).trim()];
     },
     togglePillar(p) { this.activePillar = this.activePillar === p ? '' : p; },
     resetRequirementFilters() { this.activePillar = ''; this.chapterFilter = ''; this.requirementSearch = ''; },
