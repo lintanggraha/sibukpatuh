@@ -57,6 +57,9 @@ export default defineConfig(({ mode }) => {
     build: {
       // Target browser modern — menghilangkan polyfill legacy yang tidak perlu
       target: 'es2020',
+      // Bundle produksi tetap minified; jangan menerbitkan source maps publik.
+      minify: 'esbuild',
+      sourcemap: false,
       // Aktifkan minifikasi CSS
       cssMinify: true,
       // Naikkan limit warning agar tidak noise, tapi kita sudah split manual

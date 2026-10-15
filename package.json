@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-security-regression.mjs",
+    "test:build-security": "node scripts/build-security-regression.mjs",
     "preview": "vite preview",
     "changelog": "node scripts/update-changelog.js"
   },

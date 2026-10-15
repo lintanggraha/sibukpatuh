@@ -272,7 +272,7 @@
       <div v-if="activeTab === 'cve'" class="tab-pane-content animate-fade-in">
         <div class="row g-4">
           <!-- Left Column: CVE List -->
-          <div class="col-lg-7 col-xl-8">
+          <div class="col-12">
             <div class="cve-list-header mb-3">
               <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                 <div class="d-flex align-items-center gap-2">
@@ -321,9 +321,6 @@
                     </div>
                     <div class="cve-row-meta-cell">
                       <span class="cve-row-date">{{ cve.date }}</span>
-                      <div class="cve-row-actions">
-                        <button class="btn btn-ai-mini" @click.stop="askAi(cve)"><i class="fas fa-robot"></i></button>
-                      </div>
                     </div>
                   </div>
 
@@ -337,7 +334,7 @@
                         <div class="cve-ai-detail-header">
                           <div>
                             <span class="cve-ai-kicker"><i :class="cve.aiAnalysisFallback ? 'fas fa-shield-halved' : 'fas fa-robot'" class="me-1"></i>{{ cve.aiAnalysisFallback ? 'Defensive Vulnerability Brief' : 'AI Vulnerability Brief' }}</span>
-                            <strong>Analisis CVE dalam Bahasa Indonesia</strong>
+                            <strong>Analisis AI saat CVE dibuka</strong>
                           </div>
                           <button
                             v-if="cve.aiAnalysisError"
@@ -368,60 +365,6 @@
             </div>
           </div>
 
-          <!-- Right Column: AI Assistant -->
-          <div class="col-lg-5 col-xl-4">
-            <div class="ai-assistant-card shadow-sm">
-              <div class="ai-card-header">
-                <div class="d-flex align-items-center gap-2">
-                  <div class="ai-indicator"></div>
-                  <h5 class="mb-0 fw-bold">CVE AI Analyst</h5>
-                </div>
-                <small class="opacity-50">Gemini Powered</small>
-              </div>
-              
-              <div class="ai-card-body" ref="chatArea">
-                <div v-if="!selectedCve" class="ai-empty-state">
-                  <i class="fas fa-shield-alt mb-3"></i>
-                  <p>Pilih salah satu CVE di daftar untuk memulai analisis kecerdasan buatan.</p>
-                </div>
-                <div v-else class="ai-active-state">
-                  <div class="context-pill mb-3">
-                    <small>Konteks Aktif:</small>
-                    <div class="fw-bold">{{ selectedCve.id }}</div>
-                  </div>
-
-                  <div class="chat-messages mb-3">
-                    <div v-for="(msg, i) in messages" :key="i" :class="['chat-bubble', msg.role]">
-                      {{ msg.text }}
-                    </div>
-                    <div v-if="isTyping" class="chat-bubble assistant typing">
-                      <span>.</span><span>.</span><span>.</span>
-                    </div>
-                  </div>
-
-                  <div class="ai-suggestions">
-                    <button v-for="sug in aiSuggestions" :key="sug" class="btn btn-suggestion" @click="sendAiQuery(sug)">
-                      {{ sug }}
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="ai-card-footer">
-                <div class="input-group">
-                  <input 
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Tanya tentang CVE ini..." 
-                    v-model="userInput" 
-                    @keyup.enter="sendAiQuery(userInput)"
-                    :disabled="!selectedCve || isTyping"
-                  >
-                  <button class="btn btn-primary" @click="sendAiQuery(userInput)" :disabled="!selectedCve || isTyping"><i class="fas fa-paper-plane"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -496,19 +439,6 @@ export default {
       displayLimit: 10,
       limitOptions: [5, 10, 15, 20],
       
-      // AI ASSISTANT
-      userInput: "",
-      isTyping: false,
-      messages: [],
-      aiRequestCount: 0,
-      aiLastRequestTime: 0,
-      aiCooldownUntil: 0,
-      aiSuggestions: [
-        "Apa dampaknya untuk organisasi di Indonesia?",
-        "Bagaimana cara mitigasinya?",
-        "Apakah ada exploit yang sudah beredar?",
-        "Regulasi mana yang terdampak?"
-      ]
     };
   },
   computed: {
@@ -703,7 +633,6 @@ export default {
           aiAnalysisFallback: false
         })).sort((a, b) => b.rawDate - a.rawDate);
         
-        if (this.cves.length > 0) this.selectedCve = this.cves[0];
       } catch (err) {
         console.error("CISA Fetch failed:", err);
         this.showToast("Gagal mengambil data CISA KEV. Menggunakan data cadangan.", "error");
@@ -719,7 +648,6 @@ export default {
         { id: "CVE-2025-21298", title: "Windows OLE Remote Code Execution.", shortDescription: "Windows OLE vulnerability allowing code execution.", vendor: "Microsoft", product: "Windows", date: "14 Nov 2025", rawDate: new Date("2025-11-14"), requiredAction: "Apply updates.", isRansomware: true, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false },
         { id: "CVE-2024-38063", title: "Windows TCP/IP IPv6 RCE.", shortDescription: "Critical RCE in Windows TCP/IP IPv6 stack.", vendor: "Microsoft", product: "Windows", date: "13 Aug 2024", rawDate: new Date("2024-08-13"), requiredAction: "Apply updates.", isRansomware: false, aiAnalysis: '', aiAnalysisError: '', aiAnalysisLoading: false }
       ];
-      if (this.cves.length > 0) this.selectedCve = this.cves[0];
     },
     toggleCveExpand(cve) {
       if (this.expandedCveId === cve.id) {
@@ -820,89 +748,6 @@ export default {
       }
     },
 
-    // --- AI METHODS ---
-    askAi(cve) {
-      this.selectedCve = cve;
-      this.sendAiQuery("Berikan ringkasan eksekutif untuk kerentanan ini.");
-    },
-    async sendAiQuery(text) {
-      if (!text || !text.trim() || this.isTyping || !this.selectedCve) return;
-      const query = text.trim();
-
-      // Client-side rate limit: max 8 request per menit
-      const now = Date.now();
-      if (now < this.aiCooldownUntil) {
-        const secsLeft = Math.ceil((this.aiCooldownUntil - now) / 1000);
-        this.messages.push({ role: 'assistant', text: `⏳ Terlalu banyak permintaan. Tunggu ${secsLeft} detik sebelum mencoba lagi.` });
-        this.scrollToBottom();
-        return;
-      }
-      if (now - this.aiLastRequestTime < 60000) {
-        this.aiRequestCount++;
-      } else {
-        this.aiRequestCount = 1;
-        this.aiLastRequestTime = now;
-      }
-      if (this.aiRequestCount > 8) {
-        this.aiCooldownUntil = now + 60000;
-        this.messages.push({ role: 'assistant', text: '⏳ Batas 8 permintaan per menit tercapai. Tunggu 1 menit sebelum melanjutkan.' });
-        this.scrollToBottom();
-        return;
-      }
-
-      // Input length validation
-      if (query.length > 1500) {
-        this.messages.push({ role: 'assistant', text: '⚠️ Pertanyaan terlalu panjang. Maksimal 1.500 karakter.' });
-        this.scrollToBottom();
-        return;
-      }
-
-      this.userInput = "";
-      this.messages.push({ role: "user", text: query });
-      this.isTyping = true;
-      this.scrollToBottom();
-
-      try {
-        const cveContext = {
-          id: this.selectedCve.id,
-          title: this.selectedCve.title,
-          vendor: this.selectedCve.vendor,
-          product: this.selectedCve.product,
-          shortDescription: this.selectedCve.shortDescription || this.selectedCve.fullDescription,
-          requiredAction: this.selectedCve.requiredAction,
-          isRansomware: this.selectedCve.isRansomware
-        };
-
-        const response = await fetch('/api/gemini', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            messages: this.messages,
-            cveContext: cveContext
-          })
-        });
-
-        const data = await response.json();
-        
-        if (data.error) {
-          this.messages.push({ role: "assistant", text: `Maaf, terjadi kesalahan: ${data.error}` });
-        } else {
-          this.messages.push({ role: "assistant", text: data.response });
-        }
-      } catch (err) {
-        console.error('Gemini API Error:', err);
-        this.messages.push({ role: "assistant", text: "Maaf, gagal terhubung ke layanan AI. Silakan coba lagi." });
-      } finally {
-        this.isTyping = false;
-        this.scrollToBottom();
-      }
-    },
-    scrollToBottom() {
-      this.$nextTick(() => {
-        const chat = this.$refs.chatArea;
-        if (chat) chat.scrollTop = chat.scrollHeight;
-      });
-    },
 
     // --- COMMON HELPERS ---
     showToast(message, type = 'info') {
@@ -991,8 +836,6 @@ export default {
 .cve-row-meta-cell { display: flex; align-items: center; gap: 12px; text-align: right; }
 .cve-row-date { font-size: .65rem; color: #94a3b8; white-space: nowrap; }
 .badge-mini { font-size: .55rem; padding: 1px 4px; border-radius: 3px; font-weight: 800; }
-.btn-ai-mini { width: 24px; height: 24px; border-radius: 6px; border: none; background: #f1f5f9; color: #64748b; font-size: .7rem; display: flex; align-items: center; justify-content: center; transition: all .2s; }
-.btn-ai-mini:hover { background: #0f172a; color: white; }
 
 .cve-row-details { padding-top: 8px; margin-top: 8px; border-top: 1px solid rgba(0,0,0,.05); }
 .cve-row-description { font-size: .75rem; color: #475569; line-height: 1.5; margin-bottom: 8px; }
@@ -1037,22 +880,6 @@ export default {
 .mitigation-box { background: #fff1f2; border-left: 4px solid #f43f5e; padding: .75rem; border-radius: 8px; }
 .info-pill { display: inline-flex; align-items: center; gap: 6px; padding: .3rem .7rem; background: #f1f5f9; border-radius: 8px; font-size: .7rem; font-weight: 700; color: #475569; }
 .info-pill.danger { background: #fef2f2; color: #b91c1c; }
-
-/* AI Assistant */
-.ai-assistant-card { background: #0f172a; border-radius: 24px; height: 600px; display: flex; flex-direction: column; overflow: hidden; position: sticky; top: 1.5rem; }
-.ai-card-header { padding: 1.25rem; background: rgba(255,255,255,.05); border-bottom: 1px solid rgba(255,255,255,.1); color: white; display: flex; justify-content: space-between; align-items: center; }
-.ai-indicator { width: 10px; height: 10px; background: #3b82f6; border-radius: 50%; animation: ai-pulse 2s infinite; }
-@keyframes ai-pulse { 0% { transform: scale(.9); box-shadow: 0 0 0 0 rgba(59,130,246,.7); } 70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(59,130,246,0); } 100% { transform: scale(.9); box-shadow: 0 0 0 0 rgba(59,130,246,0); } }
-.ai-card-body { flex: 1; padding: 1.5rem; overflow-y: auto; color: white; }
-.ai-empty-state { text-align: center; margin-top: 5rem; opacity: .4; }
-.ai-empty-state i { font-size: 3rem; }
-.context-pill { background: rgba(59,130,246,.15); padding: .75rem; border-radius: 12px; border: 1px solid rgba(59,130,246,.2); }
-.chat-bubble { padding: .75rem 1rem; border-radius: 16px; margin-bottom: .75rem; max-width: 90%; font-size: .85rem; line-height: 1.5; }
-.chat-bubble.user { background: #3b82f6; margin-left: auto; border-bottom-right-radius: 4px; }
-.chat-bubble.assistant { background: rgba(255,255,255,.1); border-bottom-left-radius: 4px; }
-.btn-suggestion { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: #cbd5e1; font-size: .75rem; margin-bottom: .5rem; text-align: left; width: 100%; padding: .6rem .8rem; border-radius: 10px; }
-.btn-suggestion:hover { background: rgba(255,255,255,.1); color: white; }
-.ai-card-footer { padding: 1rem; background: rgba(0,0,0,.3); }
 
 .x-small { font-size: .65rem; }
 .sticky-top { top: -1px; z-index: 10; }
